@@ -11,4 +11,4 @@ For developers interested in getting an email for each push to the sem-prov repo
 
 * sem-prov-dev: `List Info`_
 
-.. _List Info: http://lists.dataone.org/mailman/listinfo/rdataone-dev/
+.. _List Info: http://lists.dataone.org/mailman/listinfo/sem-prov-dev/
