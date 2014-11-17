@@ -11,5 +11,5 @@ Candidate ontologies include:
 * Other domain-relevant ontologies
 	* SWEET and others?
 
-	
-[Earth Science related Ontoloiges] (https://docs.google.com/document/d/1YcRiiqNUVZlay3pDR6yQKuKHGe-Q5Mwynx_a0w8zkr0/edit?usp=sharing)
+Earth Science related Ontoloiges: https://docs.google.com/document/d/1YcRiiqNUVZlay3pDR6yQKuKHGe-Q5Mwynx_a0w8zkr0/edit?usp=sharing
+
