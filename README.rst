@@ -9,4 +9,6 @@ Development logs
 ----------------
 For developers interested in getting an email for each push to the sem-prov repositories, you can subscribe to our mailing list:
 
-* sem-prov-dev: [List Info](http://lists.dataone.org/mailman/listinfo/rdataone-dev/)
+* sem-prov-dev: `List Info`_
+
+.. _List Info: http://lists.dataone.org/mailman/listinfo/sem-prov-dev/
