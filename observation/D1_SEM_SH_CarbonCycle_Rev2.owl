@@ -1,0 +1,752 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://CarbonCycle.com"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://CarbonCycle.com">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Creator: Sophie Hou
+Date Created: 2014-11-17
+Date Last Modified: 2014-11-18
+Purpose: The purpose of this onotology is Sophie&apos;s attempt to model the relationships between item number 12 to 25 of the output variables from MSTMiP (http://nacp.ornl.gov/MsTMIP_variables.shtml).</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#AboveGroundWoodyBiomass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AutotrophicRespiration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CarbonCycle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CarbonFluxes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CarbonForm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CarbonPool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Daily"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Decadal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Decomposition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DimensionType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DissolvedOrganicCarbonFlux"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FireEmissions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GrossPrimaryProductivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HetrotrophicRespiration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Hourly"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MeasureSignValue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MeasureSignValuePartition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MeasurementIntervalPartition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MeasurementUnit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MesaurementInterval"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NameOfEachCarbonPool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NamedFluxes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Negative"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NetEcosystemExchange"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NetPrimaryProductivity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Organism"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Plant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Positive"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Senscence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SizeOfEachCarbonPool"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TotalLivingBiomass"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TotalRespiration"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TotalSoilCarbon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Yearly"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCarbonFrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasCarbonLossFrom"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDimensions"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMeasurementIntervalOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasMeasurementUnitOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasValueSign"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isAPartOf"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasNumberOfDimensions"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasVariableType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kg_C_m-2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kg_C_m-2_s-1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#lat"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#lon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#nchar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#npool"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#time"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#DimensionType"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#lat"/>
+            <NamedIndividual IRI="#time"/>
+            <NamedIndividual IRI="#npool"/>
+            <NamedIndividual IRI="#nchar"/>
+            <NamedIndividual IRI="#lon"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MeasureSignValuePartition"/>
+        <ObjectUnionOf>
+            <Class IRI="#Negative"/>
+            <Class IRI="#Positive"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#MeasurementUnit"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#kg_C_m-2"/>
+            <NamedIndividual IRI="#kg_C_m-2_s-1"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#AboveGroundWoodyBiomass"/>
+        <Class IRI="#CarbonPool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AboveGroundWoodyBiomass"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasDimensions"/>
+            <NamedIndividual IRI="#lat"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AboveGroundWoodyBiomass"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasDimensions"/>
+            <NamedIndividual IRI="#lon"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AboveGroundWoodyBiomass"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasDimensions"/>
+            <NamedIndividual IRI="#time"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AboveGroundWoodyBiomass"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasMeasurementUnitOf"/>
+            <NamedIndividual IRI="#kg_C_m-2"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AboveGroundWoodyBiomass"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasVariableType"/>
+            <Datatype abbreviatedIRI="owl:real"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AutotrophicRespiration"/>
+        <Class IRI="#NamedFluxes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AutotrophicRespiration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCarbonLossFrom"/>
+            <Class IRI="#Plant"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AutotrophicRespiration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasValueSign"/>
+            <Class IRI="#Positive"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AutotrophicRespiration"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCarbonLossFrom"/>
+            <Class IRI="#Plant"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CarbonFluxes"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCarbonFrom"/>
+            <Class IRI="#CarbonForm"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CarbonFluxes"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isAPartOf"/>
+            <Class IRI="#CarbonCycle"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CarbonPool"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMeasurementIntervalOf"/>
+            <Class IRI="#MeasurementIntervalPartition"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CarbonPool"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isAPartOf"/>
+            <Class IRI="#CarbonCycle"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CarbonPool"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasNumberOfDimensions"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Daily"/>
+        <Class IRI="#MeasurementIntervalPartition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Decadal"/>
+        <Class IRI="#MeasurementIntervalPartition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Decomposition"/>
+        <Class IRI="#CarbonForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DissolvedOrganicCarbonFlux"/>
+        <Class IRI="#NamedFluxes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FireEmissions"/>
+        <Class IRI="#NamedFluxes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FireEmissions"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasValueSign"/>
+            <Class IRI="#Positive"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GrossPrimaryProductivity"/>
+        <Class IRI="#NamedFluxes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GrossPrimaryProductivity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCarbonLossFrom"/>
+            <Class IRI="#Plant"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GrossPrimaryProductivity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasValueSign"/>
+            <Class IRI="#Positive"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HetrotrophicRespiration"/>
+        <Class IRI="#NamedFluxes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HetrotrophicRespiration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCarbonLossFrom"/>
+            <Class IRI="#Decomposition"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HetrotrophicRespiration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCarbonLossFrom"/>
+            <Class IRI="#Organism"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HetrotrophicRespiration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasValueSign"/>
+            <Class IRI="#Positive"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HetrotrophicRespiration"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#hasCarbonLossFrom"/>
+            <ObjectUnionOf>
+                <Class IRI="#Decomposition"/>
+                <Class IRI="#Organism"/>
+            </ObjectUnionOf>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Hourly"/>
+        <Class IRI="#MeasurementIntervalPartition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MeasureSignValuePartition"/>
+        <Class IRI="#MeasureSignValue"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MeasurementIntervalPartition"/>
+        <Class IRI="#MesaurementInterval"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NameOfEachCarbonPool"/>
+        <Class IRI="#CarbonPool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NameOfEachCarbonPool"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasDimensions"/>
+            <NamedIndividual IRI="#nchar"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NameOfEachCarbonPool"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasDimensions"/>
+            <NamedIndividual IRI="#npool"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NameOfEachCarbonPool"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasVariableType"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NamedFluxes"/>
+        <Class IRI="#CarbonFluxes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NamedFluxes"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMeasurementIntervalOf"/>
+            <Class IRI="#MeasurementIntervalPartition"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NamedFluxes"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasDimensions"/>
+            <NamedIndividual IRI="#lat"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NamedFluxes"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasDimensions"/>
+            <NamedIndividual IRI="#lon"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NamedFluxes"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasDimensions"/>
+            <NamedIndividual IRI="#time"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NamedFluxes"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasMeasurementUnitOf"/>
+            <NamedIndividual IRI="#kg_C_m-2_s-1"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NamedFluxes"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasNumberOfDimensions"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NamedFluxes"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasVariableType"/>
+            <Datatype abbreviatedIRI="owl:real"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Negative"/>
+        <Class IRI="#MeasureSignValuePartition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NetEcosystemExchange"/>
+        <Class IRI="#NamedFluxes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NetPrimaryProductivity"/>
+        <Class IRI="#NamedFluxes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NetPrimaryProductivity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCarbonLossFrom"/>
+            <Class IRI="#Plant"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NetPrimaryProductivity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasCarbonLossFrom"/>
+            <Class IRI="#Senscence"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Organism"/>
+        <Class IRI="#CarbonForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Plant"/>
+        <Class IRI="#CarbonForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Positive"/>
+        <Class IRI="#MeasureSignValuePartition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Senscence"/>
+        <Class IRI="#CarbonForm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SizeOfEachCarbonPool"/>
+        <Class IRI="#CarbonPool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SizeOfEachCarbonPool"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasDimensions"/>
+            <NamedIndividual IRI="#lat"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SizeOfEachCarbonPool"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasDimensions"/>
+            <NamedIndividual IRI="#lon"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SizeOfEachCarbonPool"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasDimensions"/>
+            <NamedIndividual IRI="#npool"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SizeOfEachCarbonPool"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasDimensions"/>
+            <NamedIndividual IRI="#time"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SizeOfEachCarbonPool"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasMeasurementUnitOf"/>
+            <NamedIndividual IRI="#kg_C_m-2"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SizeOfEachCarbonPool"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasVariableType"/>
+            <Datatype abbreviatedIRI="owl:real"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TotalLivingBiomass"/>
+        <Class IRI="#CarbonPool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TotalLivingBiomass"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasDimensions"/>
+            <NamedIndividual IRI="#lat"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TotalLivingBiomass"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasDimensions"/>
+            <NamedIndividual IRI="#lon"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TotalLivingBiomass"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasDimensions"/>
+            <NamedIndividual IRI="#time"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TotalLivingBiomass"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasMeasurementUnitOf"/>
+            <NamedIndividual IRI="#kg_C_m-2"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TotalLivingBiomass"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasVariableType"/>
+            <Datatype abbreviatedIRI="owl:real"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TotalRespiration"/>
+        <Class IRI="#NamedFluxes"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TotalRespiration"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasValueSign"/>
+            <Class IRI="#Positive"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TotalSoilCarbon"/>
+        <Class IRI="#CarbonPool"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TotalSoilCarbon"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasDimensions"/>
+            <NamedIndividual IRI="#lat"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TotalSoilCarbon"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasDimensions"/>
+            <NamedIndividual IRI="#lon"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TotalSoilCarbon"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasDimensions"/>
+            <NamedIndividual IRI="#time"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TotalSoilCarbon"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#hasMeasurementUnitOf"/>
+            <NamedIndividual IRI="#kg_C_m-2"/>
+        </ObjectHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TotalSoilCarbon"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hasVariableType"/>
+            <Datatype abbreviatedIRI="owl:real"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Yearly"/>
+        <Class IRI="#MeasurementIntervalPartition"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#AboveGroundWoodyBiomass"/>
+        <Class IRI="#NameOfEachCarbonPool"/>
+        <Class IRI="#SizeOfEachCarbonPool"/>
+        <Class IRI="#TotalLivingBiomass"/>
+        <Class IRI="#TotalSoilCarbon"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#AutotrophicRespiration"/>
+        <Class IRI="#DissolvedOrganicCarbonFlux"/>
+        <Class IRI="#FireEmissions"/>
+        <Class IRI="#GrossPrimaryProductivity"/>
+        <Class IRI="#HetrotrophicRespiration"/>
+        <Class IRI="#NetEcosystemExchange"/>
+        <Class IRI="#NetPrimaryProductivity"/>
+        <Class IRI="#TotalRespiration"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CarbonCycle"/>
+        <Class IRI="#CarbonFluxes"/>
+        <Class IRI="#CarbonForm"/>
+        <Class IRI="#CarbonPool"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Daily"/>
+        <Class IRI="#Decadal"/>
+        <Class IRI="#Hourly"/>
+        <Class IRI="#Yearly"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Decomposition"/>
+        <Class IRI="#Organism"/>
+        <Class IRI="#Plant"/>
+        <Class IRI="#Senscence"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Negative"/>
+        <Class IRI="#Positive"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#MeasurementUnit"/>
+        <NamedIndividual IRI="#kg_C_m-2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MeasurementUnit"/>
+        <NamedIndividual IRI="#kg_C_m-2_s-1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DimensionType"/>
+        <NamedIndividual IRI="#lat"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DimensionType"/>
+        <NamedIndividual IRI="#lon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DimensionType"/>
+        <NamedIndividual IRI="#nchar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DimensionType"/>
+        <NamedIndividual IRI="#npool"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DimensionType"/>
+        <NamedIndividual IRI="#time"/>
+    </ClassAssertion>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasMeasurementIntervalOf"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#hasMeasurementUnitOf"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasMeasurementIntervalOf"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasMeasurementIntervalOf"/>
+            <Class IRI="#MeasurementIntervalPartition"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#hasCarbonFrom"/>
+        <ObjectProperty IRI="#hasCarbonLossFrom"/>
+        <ObjectProperty IRI="#hasDimensions"/>
+        <ObjectProperty IRI="#hasMeasurementIntervalOf"/>
+        <ObjectProperty IRI="#hasMeasurementUnitOf"/>
+        <ObjectProperty IRI="#hasValueSign"/>
+    </DisjointObjectProperties>
+    <DisjointDataProperties>
+        <DataProperty IRI="#hasNumberOfDimensions"/>
+        <DataProperty IRI="#hasVariableType"/>
+    </DisjointDataProperties>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
