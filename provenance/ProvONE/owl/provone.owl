@@ -1,0 +1,351 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY prov "http://www.w3.org/ns/prov#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://purl.org/provone/ontology#"
+     xml:base="http://purl.org/provone/ontology"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://purl.org/provone/ontology">
+        <rdfs:label>DataONE PROV Extension for Scientific Workflow Provenance</rdfs:label>
+        <rdfs:seeAlso>http://www.w3.org/ns/prov</rdfs:seeAlso>
+        <prov:specializationOf>http://www.w3.org/ns/prov-o</prov:specializationOf>
+        <owl:versionInfo>Development version 1.0</owl:versionInfo>
+        <rdfs:comment>This document describes an extension of the W3C PROV standard for scientific workflow provenance, developed in the context of the DataONE Project. It represents a potential standard published publicly for evaluation and possible adoption. However, it is not associated with or is supported by any standards organisation.</rdfs:comment>
+        <owl:imports rdf:resource="http://www.w3.org/ns/prov#"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/provone/ontology#CLtoDestP -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/provone/ontology#CLtoDestP">
+        <rdfs:label>CLtoDestP</rdfs:label>
+        <prov:category>Relates a SeqCtrlLink to its destination Process.</prov:category>
+        <prov:category>workflow-specification</prov:category>
+        <rdfs:range rdf:resource="http://purl.org/provone/ontology#Process"/>
+        <rdfs:domain rdf:resource="http://purl.org/provone/ontology#SeqCtrlLink"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/provone/ontology#DLToInPort -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/provone/ontology#DLToInPort">
+        <rdfs:label>DLToInPort</rdfs:label>
+        <rdfs:comment>Connects a DataLink to an InputPort of a Process, while the same DataLink can be connected to an OutputPort of another Process.</rdfs:comment>
+        <prov:category>workflow-specification</prov:category>
+        <rdfs:domain rdf:resource="http://purl.org/provone/ontology#DataLink"/>
+        <rdfs:range rdf:resource="http://purl.org/provone/ontology#InputPort"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/provone/ontology#DLToOutPort -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/provone/ontology#DLToOutPort">
+        <rdfs:label>DLToOutPort</rdfs:label>
+        <prov:category>workflow-specification</prov:category>
+        <rdfs:comment>Connects a DataLink to the OutputPort of a Process. In turn, the same DataLink can be linked to the OutputPort of a nested Process.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/provone/ontology#dataOnLink -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/provone/ontology#dataOnLink">
+        <rdfs:label>dataOnLink</rdfs:label>
+        <rdfs:comment>Specifies that a particular Data item was associated with a particular DataLink of a Workflow during its execution. It effectively links the trace information of a workflow to the workflow structure, by capturing the dataflow event.</rdfs:comment>
+        <prov:category>trace-specification</prov:category>
+        <rdfs:domain rdf:resource="http://purl.org/provone/ontology#Data"/>
+        <rdfs:range rdf:resource="http://purl.org/provone/ontology#DataLink"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/provone/ontology#hasDefaultParam -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/provone/ontology#hasDefaultParam">
+        <rdfs:label>hasDefaultParam</rdfs:label>
+        <prov:category>workflow-specification</prov:category>
+        <rdfs:comment>Specifies that a given InputPort has a certain Data item as a default parameter. This enables to specify especially configured Workflow instances.</rdfs:comment>
+        <rdfs:range rdf:resource="http://purl.org/provone/ontology#Data"/>
+        <rdfs:domain rdf:resource="http://purl.org/provone/ontology#InputPort"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/provone/ontology#hasInPort -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/provone/ontology#hasInPort">
+        <rdfs:label>hasInPort</rdfs:label>
+        <rdfs:comment>Enables to specify the InputPorts of a particular Process.</rdfs:comment>
+        <prov:category>workflow-specification</prov:category>
+        <rdfs:range rdf:resource="http://purl.org/provone/ontology#InputPort"/>
+        <rdfs:domain rdf:resource="http://purl.org/provone/ontology#Process"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/provone/ontology#hasOutPort -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/provone/ontology#hasOutPort">
+        <rdfs:label>hasOutPort</rdfs:label>
+        <prov:category>workflow-specification</prov:category>
+        <rdfs:comment>Enables to specify the OutputPorts of a particular Process.</rdfs:comment>
+        <rdfs:range rdf:resource="http://purl.org/provone/ontology#OutputPort"/>
+        <rdfs:domain rdf:resource="http://purl.org/provone/ontology#Process"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/provone/ontology#hasSubProcess -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/provone/ontology#hasSubProcess">
+        <rdfs:label>hasSubProcess</rdfs:label>
+        <prov:category>workflow-specification</prov:category>
+        <rdfs:comment>Specifies the recursive composition of Processes, a parent Process includes a child Process as part of its specification.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://purl.org/provone/ontology#Process"/>
+        <rdfs:range rdf:resource="http://purl.org/provone/ontology#Process"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/provone/ontology#inPortToDL -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/provone/ontology#inPortToDL">
+        <rdfs:label>inPortToDL</rdfs:label>
+        <prov:category>workflow-specification</prov:category>
+        <rdfs:comment>Connects the InputPort of a Process to a DataLink. In turn, the same DataLink can then be connected to the InputPort of a nested Process.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/provone/ontology#isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/provone/ontology#isPartOf">
+        <rdfs:label>isPartOf</rdfs:label>
+        <prov:category>trace-specification</prov:category>
+        <rdfs:comment>Specifies the structure of ProcessExecution instances, a parent ProcessExecution (associated with a Workflow) has child ProcessExecutions (associated with Processes and subworkflows).</rdfs:comment>
+        <rdfs:range rdf:resource="http://purl.org/provone/ontology#ProcessExec"/>
+        <rdfs:domain rdf:resource="http://purl.org/provone/ontology#ProcessExec"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/provone/ontology#outPortToDL -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/provone/ontology#outPortToDL">
+        <rdfs:label>outPortToDL</rdfs:label>
+        <rdfs:comment>Connects an OutputPort of a Process to a DataLink, which then can be linked to an InputPort of another Process.</rdfs:comment>
+        <prov:category>workflow-specification</prov:category>
+        <rdfs:range rdf:resource="http://purl.org/provone/ontology#DataLink"/>
+        <rdfs:domain rdf:resource="http://purl.org/provone/ontology#OutputPort"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/provone/ontology#sourcePToCL -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/provone/ontology#sourcePToCL">
+        <rdfs:label>sourcePToCL</rdfs:label>
+        <prov:category>workflow-specification</prov:category>
+        <rdfs:comment>Relates a SeqCtrlLink to its source Process.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://purl.org/provone/ontology#Process"/>
+        <rdfs:range rdf:resource="http://purl.org/provone/ontology#SeqCtrlLink"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#used -->
+
+    <rdf:Description rdf:about="&prov;used">
+        <rdfs:range rdf:resource="http://purl.org/provone/ontology#Data"/>
+        <rdfs:domain rdf:resource="http://purl.org/provone/ontology#ProcessExec"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasAssociatedWith -->
+
+    <rdf:Description rdf:about="&prov;wasAssociatedWith">
+        <rdfs:range rdf:resource="http://purl.org/provone/ontology#Process"/>
+        <rdfs:domain rdf:resource="http://purl.org/provone/ontology#ProcessExec"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasAttributedTo -->
+
+    <rdf:Description rdf:about="&prov;wasAttributedTo">
+        <rdfs:domain rdf:resource="http://purl.org/provone/ontology#Process"/>
+        <rdfs:range rdf:resource="http://purl.org/provone/ontology#User"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
+
+    <rdf:Description rdf:about="&prov;wasDerivedFrom">
+        <rdfs:range rdf:resource="http://purl.org/provone/ontology#Data"/>
+        <rdfs:domain rdf:resource="http://purl.org/provone/ontology#Data"/>
+        <rdfs:domain rdf:resource="http://purl.org/provone/ontology#Process"/>
+        <rdfs:range rdf:resource="http://purl.org/provone/ontology#Process"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasGeneratedBy -->
+
+    <rdf:Description rdf:about="&prov;wasGeneratedBy">
+        <rdfs:domain rdf:resource="http://purl.org/provone/ontology#Data"/>
+        <rdfs:range rdf:resource="http://purl.org/provone/ontology#ProcessExec"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#wasInformedBy -->
+
+    <rdf:Description rdf:about="&prov;wasInformedBy">
+        <rdfs:domain rdf:resource="http://purl.org/provone/ontology#ProcessExec"/>
+        <rdfs:range rdf:resource="http://purl.org/provone/ontology#ProcessExec"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/provone/ontology#Data -->
+
+    <owl:Class rdf:about="http://purl.org/provone/ontology#Data">
+        <rdfs:label>Data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&prov;Entity"/>
+        <rdfs:comment>A Data item represents the basic unit of information consumed and produced by a Process. Multiple Data items may be grouped into a Collection.</rdfs:comment>
+        <prov:category>data-specification</prov:category>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/provone/ontology#DataLink -->
+
+    <owl:Class rdf:about="http://purl.org/provone/ontology#DataLink">
+        <rdfs:label>DataLink</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&prov;Entity"/>
+        <rdfs:comment>A DataLink enables to send Data items between Processes, always connecting an OutputPort from one Process to the InputPort in another Process. It is possibe for an OutputPort as well as for an InputPort to be the source or destination of multiple DataLinks, respectively.</rdfs:comment>
+        <prov:category>workflow-specification</prov:category>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/provone/ontology#InputPort -->
+
+    <owl:Class rdf:about="http://purl.org/provone/ontology#InputPort">
+        <rdfs:label>InputPort</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&prov;Entity"/>
+        <prov:category>An InputPort enables a Process to receive input Data items, which in turn may be produced by other Processes and sent through DataLinks or specified as default parameters.</prov:category>
+        <prov:category>workflow-structure</prov:category>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/provone/ontology#OutputPort -->
+
+    <owl:Class rdf:about="http://purl.org/provone/ontology#OutputPort">
+        <rdfs:label>OutputPort</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&prov;Entity"/>
+        <prov:category>workflow-specification</prov:category>
+        <prov:category>An OutputPort enables a Process to produce output Data items, which may be forwarded to other Processes via DataLinks.</prov:category>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/provone/ontology#Process -->
+
+    <owl:Class rdf:about="http://purl.org/provone/ontology#Process">
+        <rdfs:label>Process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&prov;Entity"/>
+        <rdfs:subClassOf rdf:resource="&prov;Plan"/>
+        <prov:definition>A Process represents a computational task that consumes and produces data through its input and output ports, respectively. It can be atomic or composite, the latter case represented by a possibly nested Process. It is also subject to versioning by prov:wasDerivedFrom.</prov:definition>
+        <prov:category>workflow-specification</prov:category>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/provone/ontology#ProcessExec -->
+
+    <owl:Class rdf:about="http://purl.org/provone/ontology#ProcessExec">
+        <rdfs:label>ProcessExec</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&prov;Activity"/>
+        <rdfs:comment>A ProcessExec represents the execution of a Process. If the Process in question is a Workflow, then the ProcessExec represents a trace of its execution.</rdfs:comment>
+        <prov:category>trace-specification</prov:category>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/provone/ontology#SeqCtrlLink -->
+
+    <owl:Class rdf:about="http://purl.org/provone/ontology#SeqCtrlLink">
+        <rdfs:label>SeqCtrlLink</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&prov;Entity"/>
+        <prov:category>A SeqCtrlLink specifies a sequential control link between two Processes. A source Process is linked to a destination process, the latter can only begin its execution once the source process sends the respective signal through the link. In case a Process is the destination of multiple sequential control links, all of their activation signals must be received in order for the execution to begin.</prov:category>
+        <prov:category>workflow-specification</prov:category>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/provone/ontology#User -->
+
+    <owl:Class rdf:about="http://purl.org/provone/ontology#User">
+        <rdfs:label>User</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&prov;Agent"/>
+        <prov:category>user-specification</prov:category>
+        <prov:definition>An User is the person responsible for the specification of a Process, which in turn can be a Workflow. Its specification serves attribution and accountability purposes.</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/provone/ontology#Workflow -->
+
+    <owl:Class rdf:about="http://purl.org/provone/ontology#Workflow">
+        <rdfs:label>Workflow</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.org/provone/ontology#Process"/>
+        <prov:category>workflow-specification</prov:category>
+        <prov:definition>A Workflow is a distinguished Process, which indicates that is meant to represent the computational experiment in its entirety. It is also subject to versioning by prov:wasDerivedFrom through its super-class provone:Process.</prov:definition>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+

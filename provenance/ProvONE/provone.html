@@ -1,0 +1,2730 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head> 
+<title>The ProvONE Data Model for Scientific Workflow Provenance</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+
+<!-- javascript for button to hide examples -->
+<script type="text/javascript">
+/*
+	Written by Jonathan Snook, http://www.snook.ca/jonathan
+	Add-ons by Robert Nyman, http://www.robertnyman.com
+	Author says "The credit comment is all it takes, no license. Go crazy "
+	From http://www.robertnyman.com/2005/11/07/the-ultimate-getelementsbyclassname/
+*/
+
+function getElementsByClassName(oElm, strTagName, oClassNames){
+    var arrElements = (! (! (strTagName == "*") || ! (oElm.all)))? oElm.all : oElm.getElementsByTagName(strTagName);
+    var arrReturnElements = new Array();
+    var arrRegExpClassNames = new Array();
+    if(typeof oClassNames == "object"){
+	for(var i=0; !(i>=oClassNames.length); i++){ /*>*/
+	    arrRegExpClassNames.push(new RegExp("(^|\s)" + oClassNames[i].replace(/\-/g, "\-") + "(\s|$)"));
+	}
+    }
+    else{
+	arrRegExpClassNames.push(new RegExp("(^|\s)" + oClassNames.replace(/\-/g, "\-") + "(\s|$)"));
+    }
+    var oElement;
+    var bMatchesAll;
+    for(var j=0; !(j>=arrElements.length); j++){ /*>*/
+	oElement = arrElements[j];
+	bMatchesAll = true;
+	for(var k=0; !(k>=arrRegExpClassNames.length); k++){ /*>*/
+	    if(!arrRegExpClassNames[k].test(oElement.className)){
+		bMatchesAll = false;
+		break;
+	    }
+	}
+	if(bMatchesAll){
+	    arrReturnElements.push(oElement);
+	}
+    }
+    return (arrReturnElements)
+}
+
+function set_display_by_class(el, cls, newValue) {
+    var e = getElementsByClassName(document, el, cls);
+    if (e != null) {
+	for (var i=0; !(i>=e.length); i++) {
+            e[i].style.display = newValue;
+	}
+    }
+}
+
+function set_display_by_id(id, newValue) {
+    var e = document.getElementById(id);
+    if (e != null) {
+	e.style.display = newValue;
+    }
+}
+</script>
+
+
+<style type="text/css">
+.note { font-size:small; margin-left:50px }
+
+.diamond {
+    font-weight: normal;
+    font-style: normal;
+    font-size:100%;
+    font-family: sans-serif;
+}
+
+table.thinborder {
+	border-width: 1px;
+	border-spacing: 0px;
+	border-style: none;
+	border-color: gray;
+	border-collapse: collapse;
+}
+
+table.thinborder th {
+	border-width: 1px;
+	padding: 0px;
+	border-style: solid;
+	border-color: gray;
+}
+
+table.thinborder td {
+	border-width: 1px;
+	padding: 2px;
+	border-style: solid;
+	border-color: gray;
+}
+
+/*****************************************************************
+ * ReSpec CSS
+ * Robin Berjon (robin at berjon dot com)
+ * v0.05 - 2009-07-31
+ *****************************************************************/
+
+
+/* --- INLINES --- */
+em.rfc2119 { 
+    text-transform:     lowercase;
+    font-variant:       small-caps;
+    font-style:         normal;
+    color:              #900;
+}
+
+h1 acronym, h2 acronym, h3 acronym, h4 acronym, h5 acronym, h6 acronym, a acronym,
+h1 abbr, h2 abbr, h3 abbr, h4 abbr, h5 abbr, h6 abbr, a abbr {
+    border: none;
+}
+
+dfn {
+    font-weight:    bold;
+}
+
+a.internalDFN {
+    color:  inherit;
+    border-bottom:  1px solid #99c;
+    text-decoration:    none;
+}
+
+a.externalDFN {
+    color:  inherit;
+    border-bottom:  1px dotted #ccc;
+    text-decoration:    none;
+}
+
+a.bibref {
+    text-decoration:    none;
+}
+
+code {
+    color:  #ff4500;
+}
+
+/* --- TABLE --- */
+table.simple {
+    border-spacing: 0;
+    border-collapse:    collapse;
+    border-bottom:  3px solid #005a9c;
+}
+
+.simple th {
+    background: #005a9c;
+    color:  #fff;
+    padding:    3px 5px;
+    text-align: left;
+}
+
+.simple th[scope="row"] {
+    background: inherit;
+    color:  inherit;
+    border-top: 1px solid #ddd;
+}
+
+.simple td {
+    padding:    3px 10px;
+    border-top: 1px solid #ddd;
+}
+
+.simple tr:nth-child(even) {
+    background: #f0f6ff;
+}
+
+
+@media screen {
+    p.practicedesc {
+        position: relative;
+        top: -2em;
+        padding: 0;
+        margin: 1.5em 0.5em -1em 1em;
+    }
+}
+
+/* --- SYNTAX HIGHLIGHTING --- */
+pre.sh_sourceCode {
+  background-color: white;
+  color: black;
+  font-style: normal;
+  font-weight: normal;
+}
+</style>
+
+<style type="text/css">
+/* --- EDITORIAL NOTES --- */
+.component1-color {
+ background-color: rgba(255,42,42,0.2);
+}
+
+.component3-color {
+ background-color: rgba(0,68,170,0.2);
+}
+
+.component2-color {
+ background-color: rgba(0,170,0,0.2);
+}
+.component4-color {
+ background-color: rgba(244,105,14,0.2);
+}
+
+.component6-color {
+ background-color: rgba(11,40,40,0.2);
+}
+
+.component5-color {
+ background-color: rgba(204,255,0,0.2);
+}
+
+.pending {
+    padding:    1em;
+    margin: 1em 0em 0em;
+    border: 1px solid #f00;
+    background: #BFEFFF;
+}
+
+.pending::before {
+    content:    "Pending Review";
+    display:    block;
+    width:  150px;
+    margin: -1.5em 0 0.5em 0;
+    font-weight:    bold;
+    border: 1px solid #f00;
+    background: #fff;
+    padding:    3px 1em;
+}
+
+
+.resolved {
+    padding:    1em;
+    margin: 1em 0em 0em;
+    border: 1px solid #f00;
+    background: #9BCD9B;
+}
+
+.resolved::before {
+    content:    "Resolved";
+    display:    block;
+    width:  150px;
+    margin: -1.5em 0 0.5em 0;
+    font-weight:    bold;
+    border: 1px solid #f00;
+    background: #fff;
+    padding:    3px 1em;
+}
+
+
+.inference {
+    padding:    1em;
+    margin: 1em 0em 0em;
+    border: 1px solid #f00;
+    background: #fff;
+}
+
+.inference[id]::before {
+    content:    "Inference: " attr(id);
+    width:  380px;  /* How can we compute the length of "Constraint: " attr(id) */
+}
+
+
+.inference::before {
+    content:    "Inference";
+    display:    block;
+    width:  150px;
+    margin: -1.5em 0 0.5em 0;
+    font-weight:    bold;
+    border: 1px solid #f00;
+    background: #fff;
+    padding:    3px 1em;
+}
+
+.syntax {
+    padding:    1em;
+    margin: 1em 0em 0em;
+    border: 1px solid #f00;
+    background: #fff;
+}
+
+.syntax[id]::before {
+    content:    "Syntax: " attr(id);
+    width:  380px;  /* How can we compute the length of "Constraint: " attr(id) */
+}
+
+
+.syntax::before {
+    content:    "Syntax";
+    display:    block;
+    width:  150px;
+    margin: -1.5em 0 0.5em 0;
+    font-weight:    bold;
+    border: 1px solid #f00;
+    background: #fff;
+    padding:    3px 1em;
+}
+
+.unamedconstraint {
+    padding:    1em;
+    margin: 1em 0em 0em;
+    border: 1px solid #00f;
+    background: #fff;
+}
+
+
+.unamedconstraint::before {
+    content:    "Constraint";
+    display:    block;
+    width:  150px;
+    margin: -1.5em 0 0.5em 0;
+    font-weight:    bold;
+    border: 1px solid #00f;
+    background: #fff;
+    padding:    3px 1em;
+}
+
+
+
+.constraint {
+    padding:    1em;
+    margin: 1em 0em 0em;
+    border: 1px solid #00f;
+    background: #fff;
+}
+
+.constraint[id]::before {
+    content:    "Constraint: " attr(id);
+    width:  380px;  /* How can we compute the length of "Constraint: " attr(id) */
+}
+
+
+.constraint::before {
+    content:    "Constraint";
+    display:    block;
+    width:  150px;
+    margin: -1.5em 0 0.5em 0;
+    font-weight:    bold;
+    border: 1px solid #00f;
+    background: #fff;
+    padding:    3px 1em;
+}
+
+
+
+.interpretation {
+    padding:    1em;
+    margin: 1em 0em 0em;
+    border: 1px solid #00f;
+    background: #fff;
+}
+
+.interpretation[id]::before {
+    content:    "Interpretation: " attr(id);
+    width:  380px;  /* How can we compute the length of "Interpretation: " attr(id) */
+}
+
+
+.interpretation::before {
+    content:    "Interpretation";
+    display:    block;
+    width:  150px;
+    margin: -1.5em 0 0.5em 0;
+    font-weight:    bold;
+    border: 1px solid #00f;
+    background: #fff;
+    padding:    3px 1em;
+}
+
+.definition {
+    padding:    1em;
+    margin: 1em 0em 0em;
+    border: 1px solid #777;
+    background: #fff;
+}
+
+.definition[id]::before {
+    content:    "Definition: " attr(id);
+    width:  380px; 
+}
+
+
+.definition::before {
+    content:    "Definition";
+    display:    block;
+    width:  150px;
+    margin: -1.5em 0 0.5em 0;
+    font-weight:    bold;
+    border: 1px solid #000;
+    background: #fff;
+    padding:    3px 1em;
+}
+
+
+.deprecatedconstraint {
+    padding:    1em;
+    margin: 1em 0em 0em;
+    border: 1px solid #00f;
+    background: #fff;
+}
+
+.deprecatedconstraint[id]::before {
+    content:    "Deprecated: " attr(id);
+    width:  380px;  /* How can we compute the length of "Deprecatedconstraint: " attr(id) */
+}
+
+
+.deprecatedconstraint::before {
+    content:    "Deprecated";
+    display:    block;
+    width:  150px;
+    margin: -1.5em 0 0.5em 0;
+    font-weight:    bold;
+    border: 1px solid #00f;
+    background: #fff;
+    padding:    3px 1em;
+}
+
+.glossary-ref {
+    font-style:    italic;
+}
+
+.dfn {
+    font-weight:    bold;
+}
+
+
+.attribute {
+    font-style: italic;
+}
+
+
+.conditional {
+    color: blue;
+}
+
+.grammar {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+    padding-left: 1ex;
+    padding-right: 1ex;
+    padding-top: 1ex;
+    padding-bottom: 0.6ex;
+    border: 1px dashed #2f6fab;
+    font-size: 80%;
+}
+.nonterminal {
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 95%;
+}
+
+.name {
+    font-family: monospace;
+}
+
+
+.xmpl {
+    padding:    1em;
+    margin: 1em 0em 0em;
+    border: 1px solid #f00;
+    background: #fff;
+}
+
+.xmpl::before {
+    content:    "Example";
+    display:    block;
+    width:  150px;
+    margin: -1.5em 0 0.5em 0;
+    font-weight:    bold;
+    border: 1px solid #f00;
+    background: #fff;
+    padding:    3px 1em;
+}
+
+/* 
+generating this through java script now.
+
+.anexample[data-count]::before {
+    content: "Example " attr(data-count) ;
+    font-family: sans-serif;
+    font-size: 1.6ex;
+    font-weight: bold;
+}
+
+
+.anexample:before {
+    content: "Example:";
+    font-family: sans-serif;
+    font-size: 1.6ex;
+    font-weight: bold;
+}
+
+*/
+
+.anexample {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+    padding-left: 1ex;
+    padding-right: 1ex;
+    padding-top: 1ex;
+    padding-bottom: 0.6ex;
+    border: 1px dashed #2f6fab;
+    background-color: #f9f9f9;
+}
+.anexample table {
+    background-color: #f9f9f9;
+}
+
+.anexampleTitle {
+    font-family: sans-serif;
+    font-size: 1.6ex;
+    font-weight: bold;
+}
+
+.anexampleTitle {
+    font-family: sans-serif;
+    font-size: 1.6ex;
+    font-weight: bold;
+}
+
+
+.diamond {
+    font-weight: normal;
+    font-size:100%;
+    font-family: sans-serif;
+}
+
+
+div[class="grammar"] span[class="name"]:before {
+    content: "'";
+}
+
+div[class="grammar"] span[class="name"]:after {
+    content: "'";
+}
+
+
+div[class="grammar"] span[class="optional"]:before {
+    font-weight: normal;
+    font-size:130%;
+    font-family: monospace;
+    content: "(";
+}
+
+div[class="grammar"] span[class="optional"]:after {
+    font-weight: normal;
+    font-size:130%;
+    font-family: monospace;
+    content: ")?";
+}
+
+
+div[class="grammar"] span[class="plus"]:before {
+    font-weight: normal;
+    font-size:130%;
+    font-family: monospace;
+    content: "(";
+}
+
+div[class="grammar"] span[class="plus"]:after {
+    font-weight: normal;
+    font-size:130%;
+    font-family: monospace;
+    content: ")+";
+}
+
+
+div[class="grammar"] span[class="star"]:before {
+    font-weight: normal;
+    font-size:130%;
+    font-family: monospace;
+    content: "(";
+}
+
+div[class="grammar"] span[class="star"]:after {
+    font-weight: normal;
+    font-size:130%;
+    font-family: monospace;
+    content: ")*";
+}
+
+div[class="grammar"] span[class="choice"]:before {
+    font-weight: normal;
+    font-size:130%;
+    font-family: monospace;
+    content: "(";
+}
+
+div[class="grammar"] span[class="choice"]:after {
+    font-weight: normal;
+    font-size:130%;
+    font-family: monospace;
+    content: ")";
+}
+
+div[class="grammar"] span[class="group"]:before {
+    font-weight: normal;
+    font-size:130%;
+    font-family: monospace;
+    content: "(";
+}
+
+div[class="grammar"] span[class="group"]:after {
+    font-weight: normal;
+    font-size:130%;
+    font-family: monospace;
+    content: ")";
+}
+
+table {
+    background-color: #f9f9f9;
+}
+
+
+.interpretation-forward::before {
+    content:    "Interpretation: ";
+    font-weight:    bold;
+}
+
+.structural-forward::before {
+    content:    "Structural constraint: ";
+    font-weight:    bold;
+}
+
+.essential {
+    font-weight: bold;
+}
+
+.provType::before {
+}
+
+.pnExpression {
+    font-weight: normal;
+    font-size:120%;
+    font-family: monospace;
+}
+
+
+</style>
+
+  <style>/*****************************************************************
+ * ReSpec 3 CSS
+ * Robin Berjon - http://berjon.com/
+ *****************************************************************/
+
+/* --- INLINES --- */
+em.rfc2119 { 
+    text-transform:     lowercase;
+    font-variant:       small-caps;
+    font-style:         normal;
+    color:              #900;
+}
+
+h1 acronym, h2 acronym, h3 acronym, h4 acronym, h5 acronym, h6 acronym, a acronym,
+h1 abbr, h2 abbr, h3 abbr, h4 abbr, h5 abbr, h6 abbr, a abbr {
+    border: none;
+}
+
+dfn {
+    font-weight:    bold;
+}
+
+a.internalDFN {
+    color:  inherit;
+    border-bottom:  1px solid #99c;
+    text-decoration:    none;
+}
+
+a.externalDFN {
+    color:  inherit;
+    border-bottom:  1px dotted #ccc;
+    text-decoration:    none;
+}
+
+a.bibref {
+    text-decoration:    none;
+}
+
+cite .bibref {
+    font-style: normal;
+}
+
+code {
+    color:  #ff4500;
+}
+
+/* --- TOC --- */
+.toc a, .tof a {
+    text-decoration:    none;
+}
+
+a .secno, a .figno {
+    color:  #000;
+}
+
+ul.tof, ol.tof {
+    list-style: none outside none;
+}
+
+.caption {
+    margin-top: 0.5em;
+    font-style:   italic;
+}
+
+/* --- TABLE --- */
+table.simple {
+    border-spacing: 0;
+    border-collapse:    collapse;
+    border-bottom:  3px solid #005a9c;
+}
+
+.simple th {
+    background: #005a9c;
+    color:  #fff;
+    padding:    3px 5px;
+    text-align: left;
+}
+
+.simple th[scope="row"] {
+    background: inherit;
+    color:  inherit;
+    border-top: 1px solid #ddd;
+}
+
+.simple td {
+    padding:    3px 10px;
+    border-top: 1px solid #ddd;
+}
+
+.simple tr:nth-child(even) {
+    background: #f0f6ff;
+}
+
+/* --- DL --- */
+.section dd > p:first-child {
+    margin-top: 0;
+}
+
+.section dd > p:last-child {
+    margin-bottom: 0;
+}
+
+.section dd {
+    margin-bottom:  1em;
+}
+
+.section dl.attrs dd, .section dl.eldef dd {
+    margin-bottom:  0;
+}
+
+</style>
+	
+	
+<link rel="stylesheet" href="http://www.w3.org/StyleSheets/TR/W3C-REC">
+<!--[if lt IE 9]>
+<script src='http://www.w3.org/2008/site/js/html5shiv.js'></script>
+<![endif]-->
+	
+<style>
+
+body {
+  background-image: url('');
+}
+
+</style>
+	
+</head> 
+
+
+<body>
+
+<div class="head">
+
+<h1 class="title" id="title">ProvONE: A PROV Extension Data Model for Scientific Workflow Provenance</h1>
+
+<h2 id="">Unofficial draft 27 March 2014</h2>
+
+  <dl>
+    
+<!--  
+    <dt>Editors:</dt>
+    
+<dd><a href="http://www.cs.ncl.ac.uk/people/Paolo.Missier">Paolo Missier</a>, Newcastle University</dd>
+-->
+
+    
+      <dt>Contributors:</dt>
+      
+      <dd><a href="https://sites.google.com/site/victorcuevasv/">V&iacute;ctor Cuevas-Vicentt&iacute;n</a>, UC Davis/University of New Mexico</dd>
+      <dd><a href="http://www.cs.ucdavis.edu/people/faculty/ludaescher.html">Bertram Lud&auml;scher</a>, UC Davis</dd>
+      <dd><a href="http://www.cs.ncl.ac.uk/people/Paolo.Missier">Paolo Missier</a>, Newcastle University</dd>
+      <dd><a href="http://semanticweb.org/wiki/Khalid_Belhajjame">Khalid Belhajjame</a>, PSL, Paris-Dauphine University, LAMSADE</dd>
+      <dd><a href="http://vgc.poly.edu/~fchirigati/">Fernando Chirigati</a>, New York University</dd>
+      <dd><a href="http://www.esd.ornl.gov/edss/people/y_wei.shtml">Yaxing Wei</a>, Oak Ridge National Laboratory</dd>
+      <dd><a href="http://scholar.google.com/citations?user=H2kYg4wAAAAJ&hl=en">Saumen Dey</a>, UC Davis</dd>
+      <dd><a href="http://daks.ucdavis.edu/?page_id=479">Parisa Kianmajd</a>, UC Davis</dd>
+      <dd><a href="http://www.cs.utah.edu/~dakoop/">David Koop</a>, New York University</dd>
+      <dd><a href="http://www.cs.gonzaga.edu/~bowers/">Shawn Bowers</a>, Gonzaga University</dd>
+      <dd><a href="http://swat.sdsc.edu/ilkay/">Ilkay Altintas</a>, UC San Diego</dd>
+
+    
+  </dl>
+  
+<p class="copyright">
+This document is licensed under a <a class="subfoot" rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
+3.0 License</a>.
+</p>
+  
+  <hr>
+</div> 
+
+
+    <section id="abstract" class="introductory"><h2>Abstract</h2>
+<p>
+Provenance describes the origin and processing history of an artifact. Data provenance is an important form of metadata that
+explains how a particular data product was generated, by detailing the steps in the computational process producing it. Provenance
+information brings transparency and helps to audit and interpret data products. The state of the art scientific workflow systems
+(e.g. Kepler, Taverna, VisTrails, etc.) provide environments for specifying and enacting complex computational pipelines
+commonly referred to as scientific workflows. In such systems, provenance information is automatically captured in the form
+of execution traces. However, they often rely on proprietary formats that make the interchange of provenance information
+difficult. Furthermore, the workflow itself, which represents very useful information, may be disregarded in provenance traces.
+The evolution history of the workflow (i.e. its provenance) can likewise be missing. To address these shortcomings we propose ProvONE, a
+standard for scientific workflow provenance representation. ProvONE is defined as an extension of the W3C recommended standard PROV,
+aiming to capture the most relevant information concerning scientific workflow computational processes, and providing extension points to
+accommodate the specificities of particular scientific workflow systems.
+</p>
+
+<p>This document specifies the ProvONE model and details how its constituting parts are related to the W3C PROV standard. The
+description provided is complemented by examples including queries on ProvONE data.</p>
+
+<section id="sotd" class="introductory"><h2>Status of This Document</h2>
+      
+        <p>
+          <em>This document specifies a potential standard published publicly for evaluation and possible adoption. However,
+          it is not associated with or is supported by any standards organisation.</em> 
+        </p>
+        
+  		<h4 id="please-send-comments">Please Send Comments</h4>
+
+        <p>
+          This document was published by the <a href="http://www.dataone.org/working_groups/scientific-workflows-and-provenance-working-group">
+          DataONE Provenance Working Group</a> as a proposal for a standard.         
+          
+          If you wish to make comments regarding this document, please send them to 
+          <a href="dataone-provwg@googlegroups.com">dataone-provwg@googlegroups.com</a>.
+          
+        All comments are welcome.
+        
+        </p>
+
+</section><!-- !!! End subsection: sotd -->
+
+</section><!-- !!! End subsection: abstract -->
+
+<!-- !!! The Table of contents should be added here  -->
+
+
+<section id="introduction"> 
+      <!--OddPage--><h2><span class="secno">1. </span>Introduction<br>
+</h2> 
+
+<p> 
+Historically, one of the main uses of provenance has been to support claims of attribution and authenticity, and therefore of value
+for material objects (e.g. works of art, manuscripts, etc.). In science, provenance is required to provide evidence in support of
+the experimental results that underpin scientific publications. The importance of provenance still applies in e-Science settings,
+where the data is obtained through computational methods. In these cases, the provenance of the experimental outcome is typically a
+graph structured account of the individual computational steps, which is recorded automatically, at the level of detail specified by
+the system instrumentation. This form of provenance, suitably encoded for machine processing, can then be exploited using a variety
+of graph query and analysis tools.
+</p>
+
+<p> 
+This scenario, where each piece of scientific data obtained by a computational method is associated with its provenance, is becoming
+increasingly prevalent. Regarding scientific workflows, detailed execution traces are routinely collected by a number of broadly
+used Workflow Management Systems (WfMSs) including Taverna, Kepler, VisTrails, Galaxy, e-Science Central, Pegasus, and others.
+However, these systems often adopt proprietary models for encoding the provenance traces captured by workflow executions. Moreover,
+they adopt different models to specify the workflows themselves. Such heterogeneity makes it difficult for a scientist to analyze
+and compare provenance traces captured using the same or similar workflows that were specified and enacted using different systems.
+The absence of a standard model for representing workflow provenance also means that opportunities for stitching the traces produced
+by different workflows, and therefore assisting the scientist in her analysis, are likely to be missed.
+</p>
+
+<p>
+This document presents ProvONE, a model for scientific workflow provenance that aims to fulfill the requirements of the desired
+standard. The name originates from its development in the context of the DataONE Project, which is creating a large scale and
+federated data infrastructure serving the Earth sciences community. Nevertheless, ProvONE is designed to support a large variety
+of WfMSs that in turn are used by numerous scientific communities.
+</p>
+
+
+<section id="relation-to-other-standards"> 
+<h3><span class="secno">1.1 </span>Relation to other standards</h3>
+
+
+<p>
+The provenance community has made significant efforts in developing standard models that can be used for capturing and publishing
+provenance of artifacts and resources on the Web. These efforts resulted in, first, the Open Provenance Model (OPM) 
+[<cite><a class="bibref" href="#bib-MCF+11">MCF+11</a></cite>], and more
+recently, the W3C PROV model [<cite><a class="bibref" href="#bib-PROV">PROV</a></cite>]. While such models are useful and are being 
+adopted by academics and industrials alike, as suggested
+by the number of PROV implementations, they do not suffice for encoding scientific workflow provenance. The reason being, that both
+OPM and PROV were developed as minimal models meant to be used for tracking the provenance of resources on the Web regardless of
+their types. As such, they do not provide all the concepts that are necessary for specifying workflows and encoding the provenance
+of data products used and generated as a result of their execution. Consequently, many WfMSs adopt their own provenance models,
+resulting in the aforementioned loss of interoperability opportunities.
+</p>
+
+<p>
+Thus the need arises for a new model that acts as a standard for encoding scientific workflow provenance. Instead of creating
+such a model from scratch, the W3C PROV model can be used as a starting point. A preliminary proposal following this direction
+was published in [<cite><a class="bibref" href="#bib-MDB+13">MDB+13</a></cite>]; an independent extension of PROV for
+scientific workflows is also presented in [<cite><a class="bibref" href="#bib-CSdO+13">CSdO+13</a></cite>], as well as in 
+[<cite><a class="bibref" href="#bib-BKG+13">BKG+13</a></cite>] (focusing on workflow preservation). This document aims
+to incorporate and standardize the ideas of these works, as well as additional contributions, to derive an adequate standard
+that can be used by the scientific workflow community.
+</p>
+
+</section><!-- !!! End subsection: relation-to-other-standards -->
+
+
+<section id="aspects-covered-by-provone"> 
+<h3><span class="secno">1.2 </span>Aspects covered by ProvONE</h3>
+
+
+<p>ProvONE aims to provide the fundamental information required to understand and analyze scientific workflow-based
+computational experiments. Therefore, it covers the main aspects that have been identified as relevant in the provenance
+literature. These correspond to prospective and retrospective provenance [<cite><a class="bibref" href="#bib-ZWF06">ZWF06</a></cite>] as 
+well as process provenance [<cite><a class="bibref" href="#bib-FSC+06">FSC+06</a></cite>]; additionally,
+some essential elements of data structure are also considered. Each of these aspects is described next.
+</p>
+<ul>
+<li>
+<dfn id="dfn-prospective-provenance" class="internalDFN" title="prospective-provenance">Prospective provenance:</dfn>
+captures the procedure or "recipe" required to produce a data artifact. In the case of scientific workflows
+this corresponds to the workflow specification, which details the steps that must be carried out to generate the artifact(s).
+The specification need not be executable, thus enabling a degree of abstraction. This obeys to the fact that an abstract
+specification is still useful to understand the various steps involved in the process, and thus how the artifacts are
+generated if the process is executed as expected.
+</li>
+<li>
+<dfn id="dfn-retrospective-provenance" class="internalDFN" title="retrospective-provenance">Retrospective provenance:</dfn>
+comprises the steps that were executed in the generation of a data artifact, recordings of the base inputs and intermediate data artifacts
+involved, and information about the associated environment.
+For scientific workflows the environment is represented by the WfMSs and the infrastructure that supports it. The execution
+steps correspond to the execution of computational tasks by software agents, tasks that use and generate a series of input and output 
+data items, respectively. This information can be recorded at varying degrees
+of detail and granularity, depending on how the recording is instrumented on the system.
+</li>
+<li>
+<dfn id="dfn-process-provenance" class="internalDFN" title="process-provenance">Process provenance:</dfn>
+is related to the steps, often guided by trial and error, by which the process that is used to create the data product
+is itself defined. This corresponds to the various versions of a workflow specification, as it undergoes changes in a process referred
+to as workflow evolution. With the detailed provenance of the workflow, scientists are able to understand the various changes
+that were carried out to generate the desired data products.
+</li>
+<li>
+<dfn id="dfn-data-structure" class="internalDFN" title="data-structure">Data structure:</dfn>
+addresses the most relevant aspects of how the data both used and produced by a computational process is organized and represented.
+For scientific workflows this implies the inputs and outputs of the various tasks that form part of the workflow.
+</li>
+</ul>
+
+</section><!-- !!! End subsection: aspects-covered-by-provone -->
+
+<section class="informative" id="structure-of-this-document"> 
+<h3><span class="secno">1.3 </span>Structure of this Document</h3>
+
+<p><a href="#section-prov-one-overview">Section 2</a> 
+provides an overview of the ProvONE conceptual model, covering the aspects outlined in <a href="#aspects-covered-by-provone">Section 1.2</a>.
+The conceptual model of ProvONE is given using the Unified Modeling Language [<cite><a class="bibref" href="#bib-UML">UML</a></cite>].
+</p>
+
+<p><a href="#prov-one-model-components">Section 3</a> provides a detailed characterization of the various components of ProvONE,
+which is serialized as an OWL 2 ontology. It clarifies how the ProvONE concepts are related to the W3C PROV concepts, accompanying the
+descriptions with examples.</p>
+
+<p><a href="#additional-resources">Section 4</a> gives references to additional resources that form part of the ProvONE standard.</p>
+
+</section><!-- !!! End subsection: structure-of-this-document -->
+
+<section class="informative" id="namespaces"> 
+<h3><span class="secno">1.4 </span>Namespaces</h3>
+
+<p>
+The following namespaces and prefixes are used throughout this document.
+
+</p><div style="text-align: left;">
+<table class="thinborder" style="margin-left: auto; margin-right: auto;">
+<caption id="namespace-table"><span>Table 1<sup><a class="internalDFN" href="#namespace-table"><span class="diamond"> ◊:</span></a></sup> </span>Prefix and Namespaces used in this specification</caption> <!-- Table 1-->
+<tbody><tr><td><b>prefix</b></td><td><b>namespace IRI</b></td> <td><b>definition</b></td></tr>
+<tr><td>prov</td><td>http://www.w3.org/ns/prov#</td><td>The PROV namespace [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]</td></tr>
+<tr><td>provone</td><td>http://purl.org/provone</td><td>The ProvONE namespace [<cite><a class="bibref" href="#">ProvONE</a></cite>]</td></tr>
+<tr><td>xsd</td><td>http://www.w3.org/2000/10/XMLSchema#</td><td>XML Schema namespace [<cite><a class="bibref" href="#bib-XMLSCHEMA11-2">XMLSCHEMA11-2</a></cite>]</td></tr>
+<tr><td>rdf</td><td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td><td>The RDF namespace [<cite><a class="bibref" href="#bib-RDF-CONCEPTS">RDF-CONCEPTS</a></cite>]</td></tr>
+<tr><td>rdfs</td><td>http://www.w3.org/2000/01/rdf-schema#</td><td>The RDFS namespace [<cite><a class="bibref" href="#bib-RDF-SCHEMA">RDF-SCHEMA</a></cite>]</td></tr>
+<tr><td>owl</td><td>http://www.w3.org/2002/07/owl#</td><td>OWL 2 specification namespace [<cite><a class="bibref" href="#bib-OWL2">OWL2</a></cite>]</td></tr>
+<tr><td>dcterms</td><td>http://purl.org/dc/terms/</td><td>Dublin Core Metadata Elements namespace [<cite><a class="bibref" href="#bib-DC-RDF">DC-RDF</a></cite>]</td></tr>
+<tr><td>wfms</td><td>http://www.wfms.org/registry.xsd</td><td>Placeholder example WfMS namespace</td></tr>
+<tr><td>:</td><td>http://example.com/</td><td>Artificial namespace for examples </td></tr>
+</tbody></table>
+</div>
+
+
+</section><!-- !!! End subsection: namespaces -->
+
+
+</section><!-- !!! End section: introduction -->
+
+<section class="informative" id="section-provone-overview"> 
+<!--OddPage--><h2><span class="secno">2. </span>ProvONE Conceptual Model Overview</h2>
+
+<p>This section introduces ProvONE informally through an UML class diagram representing its conceptual model and brief descriptions of each of
+the aspects covered by the model.
+</p>
+
+<p>The ProvONE conceptual model is illustrated by the UML diagram of <a href="#provone-uml" class="fig-ref">Figure 1</a>.
+All classes have a correspondant PROV type denoted by a UML stereotype (e.g. &laquo;entity&raquo;), whereas this is the case
+for only a subset of the associations (e.g. &laquo;used&raquo;). Each of the aspects covered by ProvONE is briefly described next.
+</p>
+
+
+<div style="text-align: center; ">
+ <span class="figure" id="provone-uml" style="max-width: 70%; ">
+<img src="uml/model.svg" alt="ProvONE Conceptual Model UML Diagram" style="max-width: 100%; "><br>
+<span class="figcaption" id="provone-uml">Figure 1<sup><a class="internalDFN" href="#provone-conceptual-model">
+<span class="diamond"> ◊:</span></a></sup> ProvONE Conceptual Model UML Diagram</span>
+  </span>
+</div>
+
+<p><b>Workflow Representation</b>. The various tasks that form part of a workflow are represented by the <em>Process</em> class. <em>Processes</em> can be either atomic or
+composite, the later case specified through the <em>hasSubProcess</em> self association. A given process can be distinguished as a
+<em>Workflow</em>. Each <em>Process</em> has a series of <em>InputPorts</em> and <em>OutputPorts</em>, while the ports from the various
+<em>Processes</em> are connected through <em>DataLinks</em>. Note that both input and output ports can be associated with multiple
+<em>DataLinks</em>, thus allowing workflow models in which a single output is copied and sent to multiple destinations as well as in which 
+tasks take inputs from different sources through a single input port.
+</p>
+<p>
+In order to specify executable instances of a <em>Workflow</em>, default parameters can be defined for some of its constituting <em>Processes</em>.
+The default parameters are represented by <em>Data</em> elements that will described shortly.
+A sequential control link, denoted by the <em>SeqCtrlLink</em> class, can be used to specify that the execution of a given <em>Process</em>
+can only start once the execution of a preceding <em>Process</em> terminates.
+Finally, a particular <em>Process</em> that specifies a workflow or part of it can be 
+associated with a <em>User</em> that assumes responsibility for its creation.
+</p>
+
+<p>
+<b>Trace Representation</b>. The execution traces associated with a given <em>Workflow</em> are represented in ProvONE through the <em>ProcessExec</em> class. Each
+<em>ProcessExec</em> instance represents the execution of a particular <em>Process</em>, which itself may be a <em>Workflow</em>.
+For the execution of a <em>Process</em>, a series of input <em>Data</em> items are read from the <em>InputPorts</em> and used to generate a series
+of output <em>Data</em> items sent through the <em>OutputPorts</em>. Whenever a <em>Data</em> item is sent from an <em>InputPort</em> to an
+<em>OutputPort</em>, this event is recorded through the <em>dataOnLink</em> association between the <em>Data</em> item and the <em>DataLink</em>
+between the two ports. In this manner, the graph structure that represents the provenance of the workflow results is generated.
+</p>
+
+<p>
+<b>Data Structure Representation</b>. The data elements associated with workflow instances and traces are represented by the <em>Data</em> class. This class is defined to be generic
+and to represent data items of various types (e.g. XML, JSON, CSV files, etc.). In the ProvONE model, each <em>Data</em> instance is uniquely
+identifiable regardless of it sharing the same value as another <em>Data</em> instance. Although specific data types are not covered directly in
+ProvONE, collections of <em>Data</em> items are represented through the <em>Collection</em> class. A <em>Collection</em> may in turn represent
+a set, bag, list or another variant of a group of items.
+</p>
+
+<p>
+<b>Workflow Evolution Representation</b>. The specific changes that are performed during the specification of a <em>Workflow</em> are not modeled directly in ProvONE, since these
+are expected to vary among different WfMSs. However, the different versions of a <em>Workflow</em> form a derivation tree that can be represented
+using PROV's <em>wasDerivedFrom</em> association, as is explained in the next section.
+</p>
+
+<p>
+The ProvONE constructs are summarized in <a href="#overview-provone-constructs">Table 2</a>.
+The first column lists the aspects covered by ProvONE, serving to indicate the various constructs associated with each aspect. The second and
+third columns indicate the type of each construct as presented in the UML class diagram (class or association) and the construct name,
+respectively. The last column contains a link to each construct specification in <a href="#section-provone-specification">Section 3</a>. 
+</p>
+
+<div style="text-align: left;">
+<table class="thinborder" style="margin-left: auto; margin-right: auto;">
+<caption id="overview-provone-constructs"><span>Table 2<sup><a class="internalDFN" href="#overview-provone-constructs"><span class="diamond"> ◊:</span></a></sup> </span>ProvONE Constructs</caption> <!-- Table 2 -->
+<tbody><tr><td><b>ProvONE Aspect</b></td><td style="text-align: center;"><b>Construct type</b></td><td style="text-align: center;"><b>Name</b></td><td><b>Specification</b></td></tr>
+
+<tr><td rowspan="19" style="text-align: center;">Workflow</td><td rowspan="7" style="text-align: center;">Class</td>
+	<td><a title="dfn-Entity" class="internalDFN">Process</a></td><td><a class="section-ref" href="#process-specification"><span>Section 3.1.1</span></a></td></tr>
+	<tr><td><a title="dfn-Activity" class="internalDFN">InputPort</a></td><td><a class="section-ref" href="#inputport-specification"><span>Section 3.1.2</span></a></td></tr>
+	<tr><td><a title="dfn-Entity" class="internalDFN">OutputPort</a></td><td><a class="section-ref" href="#outputport-specification"><span>Section 3.1.3</span></a></td></tr>
+	<tr><td><a title="dfn-Entity" class="internalDFN">DataLink</a></td><td><a class="section-ref" href="#datalink-specification"><span>Section 3.1.4</span></a></td></tr>
+	<tr><td><a title="dfn-Entity" class="internalDFN">SeqCtrlLink</a></td><td><a class="section-ref" href="#seqctrllink-specification"><span>Section 3.1.5</span></a></td></tr>
+	<tr><td><a title="dfn-Entity" class="internalDFN">Workflow</a></td><td><a class="section-ref" href="#workflow-specification"><span>Section 3.1.6</span></a></td></tr>
+	<tr><td><a title="dfn-agent" class="internalDFN">User</a></td><td><a class="section-ref" href="#user-specification"><span>Section 3.1.7</span></a></td></tr>
+	<tr><td rowspan="12" style="text-align: center;">Association</td>
+	<td><a title="dfn-agent" class="internalDFN">hasSubProcess</a></td><td><a class="section-ref" href="#hassubprocess-specification"><span>Section 3.1.8</span></a></td></tr>
+	<tr><td><a title="dfn-agent" class="internalDFN">sourcePToCL</a></td><td><a class="section-ref" href="#sourceptocl-specification"><span>Section 3.1.9</span></a></td></tr>
+	<tr><td><a title="dfn-agent" class="internalDFN">CLtoDestP</a></td><td><a class="section-ref" href="#cltodestp-specification"><span>Section 3.1.10</span></a></td></tr>
+	<tr><td><a title="dfn-agent" class="internalDFN">hasInPort</a></td><td><a class="section-ref" href="#hasinport-specification"><span>Section 3.1.11</span></a></td></tr>
+	<tr><td><a title="dfn-agent" class="internalDFN">hasOutPort</a></td><td><a class="section-ref" href="#hasoutport-specification"><span>Section 3.1.12</span></a></td></tr>
+	<tr><td><a title="dfn-agent" class="internalDFN">hasDefaultParam</a></td><td><a class="section-ref" href="#hasdefaultparam-specification"><span>Section 3.1.13</span></a></td></tr> 
+	<tr><td><a title="dfn-agent" class="internalDFN">DLToInPort</a></td><td><a class="section-ref" href="#dltoinport-specification"><span>Section 3.1.14</span></a></td></tr>
+	<tr><td><a title="dfn-agent" class="internalDFN">outPortToDL</a></td><td><a class="section-ref" href="#outporttodl-specification"><span>Section 3.1.15</span></a></td></tr>
+	<tr><td><a title="dfn-agent" class="internalDFN">inPortToDL</a></td><td><a class="section-ref" href="#inporttodl-specification"><span>Section 3.1.16</span></a></td></tr>
+	<tr><td><a title="dfn-agent" class="internalDFN">DLToOutPort</a></td><td><a class="section-ref" href="#dltooutport-specification"><span>Section 3.1.17</span></a></td></tr>
+	<tr><td><a title="dfn-agent" class="internalDFN">wasAttributedTo</a></td><td><a class="section-ref" href="#wasattributedto-specification"><span>Section 3.1.18</span></a></td></tr>
+	<tr><td><a title="dfn-agent" class="internalDFN">wasDerivedFrom</a></td><td><a class="section-ref" href="#wasderivedfrom-specification"><span>Section 3.1.19</span></a></td></tr>
+
+
+<tr><td rowspan="7" style="text-align: center;">Trace</td><td rowspan="1" style="text-align: center;">Class</td>
+<td><a title="wasGeneratedBy" class="internalDFN">ProcessExec</a></td><td><a class="section-ref" href="#processexec-specification"><span>Section 3.2.1</span></a></td></tr>
+	<tr><td rowspan="6" style="text-align: center;">Association</td>
+	<td><a title="dfn-agent" class="internalDFN">dataOnLink</a></td><td><a class="section-ref" href="#dataonlink-specification"><span>Section 3.2.2</span></a></td></tr>
+	<tr><td><a title="dfn-agent" class="internalDFN">used</a></td><td><a class="section-ref" href="#used-specification"><span>Section 3.2.3</span></a></td></tr>
+	<tr><td><a title="dfn-agent" class="internalDFN">wasGeneratedBy</a></td><td><a class="section-ref" href="#wasgeneratedby-specification"><span>Section 3.2.4</span></a></td></tr>
+	<tr><td><a title="dfn-agent" class="internalDFN">wasAssociatedWith</a></td><td><a class="section-ref" href="#wasassociatedwith-specification"><span>Section 3.2.5</span></a></td></tr> 
+	<tr><td><a title="dfn-agent" class="internalDFN">wasInformedBy</a></td><td><a class="section-ref" href="#wasinformedby-specification"><span>Section 3.2.6</span></a></td></tr> 
+	<tr><td><a title="dfn-agent" class="internalDFN">isPartOf</a></td><td><a class="section-ref" href="#ispartof-specification"><span>Section 3.2.7</span></a></td></tr> 
+
+
+<tr><td rowspan="4" style="text-align: center;">Data Structure</td><td rowspan="2" style="text-align: center;">Class</td>
+<td><a title="wasGeneratedBy" class="internalDFN">Data</a></td><td><a class="section-ref" href="#data-specification"><span>Section 3.3.1</span></a></td></tr>
+<tr><td><a title="wasInformedBy" class="internalDFN">Collection</a></td><td><a class="section-ref" href="#collection-specification"><span>Section 3.3.2</span></a></td></tr>
+	<tr><td rowspan="2" style="text-align: center;">Association</td>
+	<td><a title="dfn-agent" class="internalDFN">wasDerivedFrom</a></td><td><a class="section-ref" href="#wasderivedfrom-specification-data"><span>Section 3.3.3</span></a></td></tr>
+	<tr><td><a title="dfn-agent" class="internalDFN">hadMember</a></td><td><a class="section-ref" href="#hadmember-specification"><span>Section 3.3.4</span></a></td></tr>
+	
+</tbody></table>
+</div>
+
+</section><!-- !!! End section: section-provone-overview -->
+
+<section class="informative" id="section-provone-specification"> 
+<!--OddPage--><h2><span class="secno">3. </span>ProvONE Model Specification</h2>
+
+<p>This section presents the specification of the various components of the ProvONE model outlined in the previous section,
+covering them as presented in <a href="#provone-uml">Figure 1</a> and <a href="#overview-provone-constructs">Table 2</a>. The
+specification takes the form of an OWL 2 [<cite><a class="bibref" href="#bib-OWL2">OWL2</a></cite>] ontology that extends the
+W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>].
+</p>
+
+<p>The namespace for all ProvONE terms is http://purl.org/provone.</p>
+
+<p>The encoding of the ProvONE ontology can be found under this link: <a href="http://vcvcomputing.com/provone/provone.owl">provone.owl</a></p>
+
+<form action="#">
+<p>
+<input id="hide-examples" type="button" value="Hide Examples" onclick="set_display_by_class('div','anexample','none'); set_display_by_id('hide-examples','none'); set_display_by_id('show-examples','');">
+<input id="show-examples" type="button" value="Show Examples" style="display: none" onclick="set_display_by_class('div','anexample',''); set_display_by_id('hide-examples',''); set_display_by_id('show-examples','none');">
+</p>
+</form>
+
+<section id="workflow-constructs-specification"> 
+<h3><span class="secno">3.1 </span>ProvONE Workflow Specification</h3>
+
+<section id="process-specification"> 
+      
+<h4><span class="secno">3.1.1 </span>Process class</h4>
+
+<div class="glossary-ref">   A <dfn id="concept-entity" title="Process" class="internalDFN">Process</dfn>
+<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> represents a computational task that consumes and produces data through its input and output ports, respectively.
+It can be atomic or composite, the latter case represented by a possibly nested Process. </div>
+
+<p><strong>IRI:</strong>http://purl.org/provone/provone#Process</p>
+
+<p></p><b>has super-class</b>
+<ul>
+<li><a title="http://www.w3.org/ns/prov-o#Entity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity</a>,
+<a title="http://www.w3.org/ns/prov-o#Plan" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Plan">prov:Plan</a></li>
+</ul>
+
+<p></p><b>is in domain of</b>
+<ul>
+<li><a title="http://purl.org/provone/provone#hasSubProcess" href="#">provone:hasSubProcess</a>,
+<a title="http://purl.org/provone/provone#sourcePToCL" href="#">provone:sourcePToCL</a>,
+<a title="http://purl.org/provone/provone#hasInPort" href="#">provone:hasInPort</a>,
+<a title="http://purl.org/provone/provone#hasOutPort" href="#">provone:hasOutPort</a>,
+<a title="http://www.w3.org/ns/prov-o#wasAttributedTo" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAttributedTo">prov:wasAttributedTo</a></li>
+</ul>
+
+<p></p><b>is in range of</b>
+<ul>
+<li><a title="http://purl.org/provone/provone#hasSubProcess" href="#">provone:hasSubProcess</a>,
+<a title="http://purl.org/provone/provone#CLtoDestP" href="#">provone:CLtoDestP</a>,
+<a title="http://www.w3.org/ns/prov-o#wasAssociatedWith" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith">prov:wasAssociatedWith</a></li>
+</ul>
+
+<div class="anexample" id="process-example">
+<div class="anexampleTitle">Example 1<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment specifies a <span class="name">Process</span> identified within the RDF document by
+<span class="name">process_1</span>.
+</p>
+<pre class="codeexample">
+1    @prefix rdfs:    &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+2    @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+3    @prefix owl:     &lt;http://www.w3.org/2002/07/owl#&gt; .
+4    @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+5    @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+6    @prefix provone: &lt;http://purl.org/provone&gt; .
+7    @prefix wfms:    &lt;http://www.wfms.org/registry.xsd&gt; .
+8    @prefix :        &lt;http://example.com/&gt; .
+9    
+10   :process_1 
+11   
+12      a provone:Process;
+13      dcterms:identifier "e1"^^xsd:string;
+14      dcterms:title "CDMSBoxfill"^^xsd:string;
+15      wfms:package "gov.llnl.uvcdat.cdms"^^xsd:string;
+16   
+17   .
+</pre>
+Line 12 specifies class membership. In order to specify additional attributes for the <em>Process</em>, we employ first the
+Dublin Core Metadata Elements [<cite><a class="bibref" href="#bib-DC-RDF">DC-RDF</a></cite>]. In particular, we assign
+the string <span class="name">e1</span> as an <span class="name">identifier</span>, thus stating an identifier explicitly, which is independent
+of the RDF node identifier. In addition, a descriptive title is given in line 14. Additional attributes associated with the specific WfMS in
+use, in this case a placeholder example, can also be specified in a similar fashion. In this
+case the software package responsible for the execution of the <em>Process</em> within the WfMS is specified in line 15.
+</div>
+
+</section><!-- !!! End section: process-specification -->
+
+<section id="inputport-specification"> 
+      
+<h4><span class="secno">3.1.2 </span>InputPort class</h4>
+
+<div class="glossary-ref">   An <dfn id="concept-entity" title="InputPort" class="internalDFN">InputPort</dfn>
+<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>enables a Process to receive input Data 
+items, which in turn may be produced by other Processes and sent through DataLinks or specified as default parameters.</div>
+
+<p><strong>IRI:</strong>http://purl.org/provone/provone#InputPort</p>
+
+<p></p><b>has super-class</b>
+<ul>
+<li><a title="http://www.w3.org/ns/prov-o#Entity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity</a></li>
+</ul>
+
+<p></p><b>is in domain of</b>
+<ul>
+<li><a title="http://purl.org/provone/provone#hasDefaultParam" href="#">provone:hasDefaultParam</a></li>
+</ul>
+
+<p></p><b>is in range of</b>
+<ul>
+<li>
+<a title="http://purl.org/provone/provone#hasInPort" href="#">provone:hasInPort</a>,
+<a title="http://purl.org/provone/provone#hasOutPort" href="#">provone:DLToInPort</a></li>
+</ul>
+
+<div class="anexample" id="inputport-example">
+<div class="anexampleTitle">Example 2<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment specifies an <span class="name">InputPort</span> identified within the RDF document by
+<span class="name">p1_ip1</span>.
+</p>
+<pre class="codeexample">   
+1    :p1_ip1 
+2    
+3       a provone:InputPort;
+4       dcterms:identifier "e1_ip1"^^xsd:string;
+5       dcterms:title "input_vars"^^xsd:string;
+6       wfms:signature "gov.llnl.uvcdat.cdms:CDMSVariable"^^xsd:string;
+7    
+8    .
+</pre>
+Again we make use of the Dublin Core Metadata Elements as well as of elements specific to an example placeholder WfMS. The <em>InputPort</em> is
+given an identifier and a descriptive title in lines 4 and 5, respectively. A signature denoting the type of data that the <em>InputPort</em>
+consumes is defined in line 6. 
+</div>
+
+</section><!-- !!! End section: inputport-specification -->
+
+<section id="outputport-specification"> 
+      
+<h4><span class="secno">3.1.3 </span>OutputPort class</h4>
+
+<div class="glossary-ref">   An <dfn id="concept-entity" title="OutputPort" class="internalDFN">OutputPort</dfn>
+<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>enables a Process to produce output Data items,
+which may be forwarded to other Processes via DataLinks.</div>
+
+<p><strong>IRI:</strong>http://purl.org/provone/provone#OutputPort</p>
+
+<p></p><b>has super-class</b>
+<ul>
+<li><a title="http://www.w3.org/ns/prov-o#Entity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity</a></li>
+</ul>
+
+<p></p><b>is in domain of</b>
+<ul>
+<li><a title="http://purl.org/provone/provone#outPortToDL" href="#">provone:outPortToDL</a></li>
+</ul>
+
+<p></p><b>is in range of</b>
+<ul>
+<li>
+<a title="http://purl.org/provone/provone#hasInPort" href="#">provone:hasOutPort</a></li>
+</ul>
+
+<div class="anexample" id="outputport-example">
+<div class="anexampleTitle">Example 3<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment specifies an <span class="name">OutputPort</span> identified within the RDF document by
+<span class="name">p1_op1</span>.
+</p>
+<pre class="codeexample">  
+1    :p1_op1 
+2      
+3       a provone:OutputPort;
+4       dcterms:identifier "e1_op1"^^xsd:string;
+5       dcterms:title "output_vars"^^xsd:string;
+6       wfms:signature "gov.llnl.uvcdat.cdms:CDMSVariable"^^xsd:string;
+7   
+8   .
+</pre>
+The <em>OutputPort</em> is given an identifier and a descriptive title in lines 4 and 5, respectively. A signature denoting the type of data
+that the <em>OutputPort</em> produces is defined in line 6. 
+</div>
+
+</section><!-- !!! End section: outputport-specification -->
+
+<section id="datalink-specification"> 
+      
+<h4><span class="secno">3.1.4 </span>DataLink class</h4>
+
+<div class="glossary-ref">   A <dfn id="concept-entity" title="DataLink" class="internalDFN">DataLink</dfn>
+<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>enables to send Data items between Processes, always
+connecting an OutputPort from one Process to the InputPort in another Process. It is possible for an OutputPort as well as for an InputPort to be
+the source or destination of multiple DataLinks, respectively; that being the case, the workflow execution semantics follows from the workflow and
+communication models as well as from the specification of the Processes involved (e.g. data routing vs. multicasting).</div>
+
+<p><strong>IRI:</strong>http://purl.org/provone/provone#DataLink</p>
+
+<p></p><b>has super-class</b>
+<ul>
+<li><a title="http://www.w3.org/ns/prov-o#Entity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity</a></li>
+</ul>
+
+<p></p><b>is in domain of</b>
+<ul>
+<li><a title="http://purl.org/provone/provone#DLToInPort" href="#">provone:DLToInPort</a></li>
+</ul>
+
+<p></p><b>is in range of</b>
+<ul>
+<li>
+<a title="http://purl.org/provone/provone#outPortToDL" href="#">provone:outPortToDL</a></li>
+</ul>
+
+<div class="anexample" id="datalink-example">
+<div class="anexampleTitle">Example 4<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment specifies a <span class="name">DataLink</span> identified within the RDF document by
+<span class="name">p1_p2DL</span>.
+</p>
+<pre class="codeexample">    
+1    :p1_p2DL 
+2    
+3       a provone:DataLink;
+4       dcterms:identifier "e1_e2DL"^^xsd:string;
+5    
+6    .
+</pre>
+The <em>DataLink</em> is simply specified as such (line 3) given the string <span class="name">e1_e2DL</span> as an 
+<span class="name">identifier</span> (line 4). 
+</div>
+
+</section><!-- !!! End section: datalink-specification -->
+
+<section id="seqctrllink-specification"> 
+      
+<h4><span class="secno">3.1.5 </span>SeqCtrlLink class</h4>
+
+<div class="glossary-ref">   A <dfn id="concept-entity" title="DataLink" class="internalDFN">SeqCtrlLink</dfn>
+<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>specifies a sequential control link between two
+Processes. A source Process is linked to a destination process, the latter can only begin its execution once the source process has terminated.
+In case a Process is the destination of multiple sequential control links, all of these must terminate in order for execution to begin.</div>
+
+<p><strong>IRI:</strong>http://purl.org/provone/provone#SeqCtrlLink</p>
+
+<p></p><b>has super-class</b>
+<ul>
+<li><a title="http://www.w3.org/ns/prov-o#Entity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity</a></li>
+</ul>
+
+<p></p><b>is in domain of</b>
+<ul>
+<li><a title="http://purl.org/provone/provone#CLToDestP" href="#">provone:CLToDestP</a></li>
+</ul>
+
+<p></p><b>is in range of</b>
+<ul>
+<li>
+<a title="http://purl.org/provone/provone#sourcePToCL" href="#">provone:sourcePToCL</a></li>
+</ul>
+
+<div class="anexample" id="seqctrllink-example">
+<div class="anexampleTitle">Example 5<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment specifies a <span class="name">SeqCtrlLink</span> identified within the RDF document by
+<span class="name">p1_p2CL</span>.
+</p>
+<pre class="codeexample">
+1    :p1_p2CL 
+2   
+3       a provone:SeqCtrlLink;
+4       dcterms:identifier "e1_e2CL"^^xsd:string;
+5   
+6    .
+</pre>
+The <em>SeqCtrlLink</em> is given the string <span class="name">e1_e2CL</span> as an <span class="name">identifier</span> (line 4). 
+</div>
+
+</section><!-- !!! End section: seqctrllink-specification -->
+
+<section id="workflow-specification"> 
+      
+<h4><span class="secno">3.1.6 </span>Workflow class</h4>
+
+<div class="glossary-ref">   A <dfn id="concept-entity" title="Process" class="internalDFN">Workflow</dfn>
+<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>is a distinguished Process, which indicates that is
+meant to represent a computational experiment in its entirety. It is also subject to versioning by 
+<a title="http://www.w3.org/ns/prov-o#wasDerivedFrom" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom">prov:wasDerivedFrom</a>
+through its super-class <a title="#process-specification" href="#process-specification">provone:Process</a>. </div>
+
+<p><strong>IRI:</strong>http://purl.org/provone/provone#Workflow</p>
+
+<p></p><b>has super-class</b>
+<ul>
+<li><a title="http://www.w3.org/ns/prov-o#Entity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity</a>,
+<a title="http://www.w3.org/ns/prov-o#Plan" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Plan">prov:Plan</a>,
+<a title="#process-specification" href="#process-specification">provone:Process</a></li>
+</ul>
+
+<p></p><b>is in domain of</b>
+<ul>
+<li><a title="http://purl.org/provone/provone#hasSubProcess" href="#">provone:hasSubProcess</a>,
+<a title="http://purl.org/provone/provone#sourcePToCL" href="#">provone:sourcePToCL</a>,
+<a title="http://purl.org/provone/provone#hasInPort" href="#">provone:hasInPort</a>,
+<a title="http://purl.org/provone/provone#hasOutPort" href="#">provone:hasOutPort</a>,
+<a title="http://www.w3.org/ns/prov-o#wasAttributedTo" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAttributedTo">prov:wasAttributedTo</a>,
+<a title="http://www.w3.org/ns/prov-o#wasDerivedFrom" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom">prov:wasDerivedFrom</a></li>
+</ul>
+
+<p></p><b>is in range of</b>
+<ul>
+<li><a title="http://purl.org/provone/provone#hasSubProcess" href="#">provone:hasSubProcess</a>,
+<a title="http://purl.org/provone/provone#CLtoDestP" href="#">provone:CLtoDestP</a>,
+<a title="http://www.w3.org/ns/prov-o#wasAssociatedWith" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith">prov:wasAssociatedWith</a>,
+<a title="http://www.w3.org/ns/prov-o#wasDerivedFrom" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom">prov:wasDerivedFrom</a></li>
+</ul>
+
+<div class="anexample" id="workflow-example">
+<div class="anexampleTitle">Example 6<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment specifies a <span class="name">Workflow</span> identified within the RDF document by
+<span class="name">workflow_1</span>.
+</p>
+<pre class="codeexample">
+1    :workflow_1 
+2    
+3       a provone:Workflow;
+4       dcterms:identifier "wf1"^^xsd:string;
+5       dcterms:title "ModelComparison"^^xsd:string;
+6    
+7    .
+</pre>
+The <em>Workflow</em> is given the string <span class="name">wf1</span> as an <span class="name">identifier</span> in line 4. In addition, it is given the
+string <span class="name">ModelComparison</span> as a descriptive <span class="name">title</span> in line 5.
+</div>
+
+</section><!-- !!! End section: workflow-specification -->
+
+<section id="user-specification"> 
+      
+<h4><span class="secno">3.1.7 </span>User class</h4>
+
+<div class="glossary-ref">   A <dfn id="concept-entity" title="User" class="internalDFN">User</dfn>
+<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>is the person responsible for the specification of a
+Process, which in turn can be a Workflow. Its specification serves attribution and accountability purposes.</div>
+
+<p><strong>IRI:</strong>http://purl.org/provone/provone#User</p>
+
+<p></p><b>has super-class</b>
+<ul>
+<li><a title="http://www.w3.org/ns/prov-o#Agent" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent">prov:Agent</a></li>
+</ul>
+
+<p></p><b>is in domain of</b>
+<ul>
+<li>none</li>
+</ul>
+
+<p></p><b>is in range of</b>
+<ul>
+<li>
+<a title="http://www.w3.org/ns/prov-o#wasAttributedTo" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAttributedTo">prov:wasAttributedTo</a></li>
+</ul>
+
+<div class="anexample" id="user-example">
+<div class="anexampleTitle">Example 7<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment specifies a <span class="name">User</span> identified within the RDF document by
+<span class="name">u1</span>.
+</p>
+<pre class="codeexample"> 
+1    :u1 
+2    
+3       a provone:User;
+4       dcterms:identifier "John"^^xsd:string;
+5    
+6    .
+</pre>
+The <em>User</em> is given the string <span class="name">John</span> as an <span class="name">identifier</span> (line 4), corresponding
+to his username in the system. 
+</div>
+
+</section><!-- !!! End section: user-specification -->
+
+<section id="hassubprocess-specification"> 
+      
+<h4><span class="secno">3.1.8 </span>hasSubProcess object property</h4>
+
+<div class="glossary-ref"><dfn id="concept-entity" title="User" class="internalDFN">hasSubProcess</dfn>
+<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> specifies the recursive composition of Processes, a
+parent Process includes a child Process as part of its specification.</div>
+
+<p><strong>IRI:</strong>http://purl.org/provone/provone#hasSubProcess</p>
+
+<p></p><b>has domain</b>
+<ul>
+<li><a title="#process-specification" href="#process-specification">provone:Process</a></li>
+</ul>
+
+<p></p><b>has range</b>
+<ul>
+<li>
+<a title="#process-specification" href="#process-specification">provone:Process</a></li>
+</ul>
+
+<div class="anexample" id="hassubprocess-example">
+<div class="anexampleTitle">Example 8<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment illustrates the use of the <span class="name">hasSubProcess</span> object property by extending
+<a href="#process-example">Example 1</a> of the <em>Process</em> class.
+</p>
+<pre class="codeexample">
+18    
+19   :top_process 
+20   
+21      a provone:Process;
+22      dcterms:identifier "main"^^xsd:string;
+23   
+24   .
+25
+26   :top_process provone:hasSubProcess :process_1 .
+</pre>
+A <em>Process</em> identified within the document as <span class="name">top_process</span>, is given the <span class="name">identifier</span>
+value <span class="name">main</span>. Subsequently, in line 26 it is specified that the
+same Process <span class="name">top_process</span> has as a sub-process the Process <span class="name">process_1</span>, defined in
+<a href="#process-example">Example 1</a>.
+</div>
+
+</section><!-- !!! End section: hassubprocess-specification -->
+
+<section id="sourceptocl-specification"> 
+      
+<h4><span class="secno">3.1.9 </span>sourcePToCL object property</h4>
+
+<div class="glossary-ref"><dfn id="concept-entity" title="sourcePToCL" class="internalDFN">sourcePToCL</dfn>
+<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> relates a SeqCtrlLink to its source Process.</div>
+
+<p><strong>IRI:</strong>http://purl.org/provone/provone#sourcePToCL</p>
+
+<p></p><b>has domain</b>
+<ul>
+<li><a title="#process-specification" href="#process-specification">provone:Process</a></li>
+</ul>
+
+<p></p><b>has range</b>
+<ul>
+<li>
+<a title="#seqctrllink-specification" href="#seqctrllink-specification">provone:SeqCtrlLink</a></li>
+</ul>
+
+<div class="anexample" id="sourceptocl-example">
+<div class="anexampleTitle">Example 9<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment illustrates the use of the <span class="name">sourcePToCL</span> object property by complementing
+<a href="#process-example">Example 1</a> of the <em>Process</em> class and <a href="#process-example">Example 5</a> of the <em>SeqCtrlLink</em> class.
+</p>
+<pre class="codeexample">
+1    
+2    :process_1 provone:sourcePToCL :p1_p2CL .
+3
+</pre>
+Line 2 specifies that the <em>Process</em> <span class="name">process_1</span>, defined in <a href="#process-example">Example 1</a>, is the source
+<em>Process</em> of the <em>SeqCtrlLink</em> <span class="name">p1_p2CL</span>, defined in <a href="#process-example">Example 5</a>.
+</div>
+
+</section><!-- !!! End section: sourceptocl-specification -->
+
+<section id="cltodestp-specification"> 
+      
+<h4><span class="secno">3.1.10 </span>CLtoDestP object property</h4>
+
+<div class="glossary-ref"><dfn id="concept-entity" title="CLtoDestP" class="internalDFN">CLtoDestP</dfn>
+<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> relates a SeqCtrlLink to its destination Process.</div>
+
+<p><strong>IRI:</strong>http://purl.org/provone/provone#CLtoDestP</p>
+
+<p></p><b>has domain</b>
+<ul>
+<li><a title="#seqctrllink-specification" href="#seqctrllink-specification">provone:SeqCtrlLink</a></li>
+</ul>
+
+<p></p><b>has range</b>
+<ul>
+<li>
+<a title="#process-specification" href="#process-specification">provone:Process</a>
+</li>
+</ul>
+
+<div class="anexample" id="cltodestp-example">
+<div class="anexampleTitle">Example 10<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment illustrates the use of the <span class="name">CLtoDestP</span> object property by complementing
+<a href="#process-example">Example 5</a> of the <em>SeqCtrlLink</em> class.
+</p>
+<pre class="codeexample">
+1
+2    :process_2 
+3   
+4       a provone:Process;
+5       dcterms:identifier "e2"^^xsd:string;
+6       dcterms:title "TemporalStatistics"^^xsd:string;
+7    .    
+8
+9    :p1_p2CL provone:CLToDestP :process_2 .
+10
+</pre>
+A <em>Process</em> identified within the document as <span class="name">process_2</span>, is given the <span class="name">identifier</span>
+value <span class="name">e2</span> and <span class="name">TemporalStatistics</span> as its <span class="name">title</span>. Line 9 states
+that the <em>SeqCtrlLink</em> <span class="name">p1_p2CL</span>, defined in <a href="#process-example">Example 5</a>, has as its destination
+the <em>Process</em> <span class="name">process_2</span>.
+</div>
+
+</section><!-- !!! End section: cltodestp-specification -->
+
+<section id="hasinport-specification"> 
+      
+<h4><span class="secno">3.1.11 </span>hasInPort object property</h4>
+
+<div class="glossary-ref"><dfn id="concept-entity" title="hasInPort" class="internalDFN">hasInPort</dfn>
+<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> enables to specify the InputPorts of a particular
+Process.</div>
+
+<p><strong>IRI:</strong>http://purl.org/provone/provone#hasInPort</p>
+
+<p></p><b>has domain</b>
+<ul>
+<li><a title="#process-specification" href="#process-specification">provone:Process</a></li>
+</ul>
+
+<p></p><b>has range</b>
+<ul>
+<li>
+<a title="#inputport-specification" href="#inputport-specification">provone:InputPort</a></li>
+</ul>
+
+<div class="anexample" id="hasinport-example">
+<div class="anexampleTitle">Example 11<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment illustrates the use of the <span class="name">hasInPort</span> object property by complementing
+<a href="#process-example">Example 1</a> of the <em>Process</em> class and <a href="#inputport-example">Example 2</a> of the <em>InputPort</em> class.
+</p>
+<pre class="codeexample">
+1    
+2    :process_1 provone:hasInPort :p1_ip1 .
+3
+</pre>
+Line 2 specifies that the <em>Process</em> <span class="name">process_1</span>, defined in <a href="#process-example">Example 1</a>, has an
+<em>InputPort</em> <span class="name">p1_ip1</span>, defined in <a href="#inputport-example">Example 2</a>.
+</div>
+
+</section><!-- !!! End section: hasinport-specification -->
+
+<section id="hasoutport-specification"> 
+      
+<h4><span class="secno">3.1.12 </span>hasOutPort object property</h4>
+
+<div class="glossary-ref"><dfn id="concept-entity" title="hasOutPort" class="internalDFN">hasOutPort</dfn>
+<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> enables to specify the OutputPorts of a particular
+Process.</div>
+
+<p><strong>IRI:</strong>http://purl.org/provone/provone#hasOutPort</p>
+
+<p></p><b>has domain</b>
+<ul>
+<li><a title="#process-specification" href="#process-specification">provone:Process</a></li>
+</ul>
+
+<p></p><b>has range</b>
+<ul>
+<li>
+<a title="#outputport-specification" href="#outputport-specification">provone:OutputPort</a></li>
+</ul>
+
+<div class="anexample" id="hasoutport-example">
+<div class="anexampleTitle">Example 12<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment illustrates the use of the <span class="name">hasOutPort</span> object property by complementing
+<a href="#process-example">Example 1</a> of the <em>Process</em> class and <a href="#outputport-example">Example 3</a> of the <em>OutputPort</em> class.
+</p>
+<pre class="codeexample">
+1    
+2    :process_1 provone:hasOutPort :p1_op1 .
+3
+</pre>
+Line 2 specifies that the <em>Process</em> <span class="name">process_1</span>, defined in <a href="#process-example">Example 1</a>, has an
+<em>OutputPort</em> <span class="name">p1_op1</span>, defined in <a href="#outputport-example">Example 3</a>.
+</div>
+
+</section><!-- !!! End section: hasoutport-specification -->
+
+<section id="hasdefaultparam-specification"> 
+      
+<h4><span class="secno">3.1.13 </span>hasDefaultParam object property</h4>
+
+<div class="glossary-ref"><dfn id="concept-entity" title="hasDefaultParam" class="internalDFN">hasDefaultParam</dfn>
+<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> specifies that a given InputPort has a certain Data
+item as a default parameter. This enables to specify especially configured Workflow instances.</div>
+
+<p><strong>IRI:</strong>http://purl.org/provone/provone#hasDefaultParam</p>
+
+<p></p><b>has domain</b>
+<ul>
+<li><a title="#inputport-specification" href="#inputport-specification">provone:InputPort</a></li>
+</ul>
+
+<p></p><b>has range</b>
+<ul>
+<li>
+<a title="#data-specification" href="#data-specification">provone:Data</a></li>
+</ul>
+
+<div class="anexample" id="hasdefaultparam-example">
+<div class="anexampleTitle">Example 13<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment illustrates the use of the <span class="name">hasDefaultParam</span> object property by complementing
+<a href="#inputport-example">Example 2</a> of the <em>InputPort</em> class and <a href="#data-example">Example 24</a> of the <em>Data</em> class.
+</p>
+<pre class="codeexample">
+1    
+2    :p1_ip1 provone:hasDefaultParam :data1 .
+3
+</pre>
+Line 2 specifies that the <em>InputPort</em> <span class="name">p1_ip1</span>, defined in
+<a href="#inputport-example">Example 2</a> and associated in <a href="#hasinport-example">Example 11</a> with <em>Process</em>
+<span class="name">process_1</span> of <a href="#process-example">Example 1</a>, has as a default parameter the
+<em>Data</em> item <span class="name">data1</span>, defined in <a href="#data-example">Example 24</a>.
+</div>
+
+</section><!-- !!! End section: hasdefaultparam-specification -->
+
+<section id="dltoinport-specification"> 
+      
+<h4><span class="secno">3.1.14 </span>DLToInPort object property</h4>
+
+<div class="glossary-ref"><dfn id="concept-entity" title="DLToInPort" class="internalDFN">DLToInPort</dfn>
+<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> connects a DataLink to an InputPort of a Process,
+while the same DataLink can be connected to an OutputPort of another Process.</div>
+
+<p><strong>IRI:</strong>http://purl.org/provone/provone#DLToInPort</p>
+
+<p></p><b>has domain</b>
+<ul>
+<li><a title="#datalink-specification" href="#datalink-specification">provone:DataLink</a></li>
+</ul>
+
+<p></p><b>has range</b>
+<ul>
+<li>
+<a title="#inputport-specification" href="#inputport-specification">provone:InputPort</a></li>
+</ul>
+
+<div class="anexample" id="dltoinport-example">
+<div class="anexampleTitle">Example 14<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment illustrates the use of the <span class="name">DLToInPort</span> object property by complementing
+<a href="#datalink-example">Example 4</a> of the <em>DataLink</em> class.
+</p>
+<pre class="codeexample">
+1    
+2    :p2_ip1 
+3   
+4       a provone:InputPort;
+5       dcterms:identifier "e2_ip1"^^xsd:string;
+6       dcterms:title "vars"^^xsd:string;
+7       wfms:signature "gov.llnl.uvcdat.cdms:CDMSVariable"^^xsd:string;
+8   
+9    .
+10    
+11   :p1_p2DL provone:DLToInPort :p2_ip1 .
+12
+</pre>
+First, an <em>InputPort</em> <span class="name">p2_ip1</span> is defined beginning at line 2. This <em>InputPort</em> is compatible
+with the <em>OutputPort</em> defined in <a href="#outputport-example">Example 3</a> since it adopts the same <span class="name">signature</span>.
+Line 11 specifies that the <em>DataLink</em> <span class="name">p1_p2DL</span> of <a href="#datalink-example">Example 4</a> is connected to the
+<em>InputPort</em> <span class="name">p2_ip1</span> defined previously. Together with <a href="#datalink-example">Example 15</a>, the previous
+statement links the <em>OutputPort</em> of <a href="#outputport-example">Example 3</a> with the <em>InputPort</em> of another <em>Process</em>.
+</div>
+
+</section><!-- !!! End section: dltoinport-specification -->
+
+<section id="outporttodl-specification"> 
+      
+<h4><span class="secno">3.1.15 </span>outPortToDL object property</h4>
+
+<div class="glossary-ref"><dfn id="concept-entity" title="DLToInPort" class="internalDFN">outPortToDL</dfn>
+<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> connects an OutputPort of a Process to a 
+DataLink, which then can be linked to an InputPort of another Process.</div>
+
+<p><strong>IRI:</strong>http://purl.org/provone/provone#outPortToDL</p>
+
+<p></p><b>has domain</b>
+<ul>
+<li>
+<a title="#outputport-specification" href="#outputport-specification">provone:OutputPort</a>
+</li>
+</ul>
+
+<p></p><b>has range</b>
+<ul>
+<li>
+<a title="#datalink-specification" href="#datalink-specification">provone:DataLink</a>
+</li>
+</ul>
+
+<div class="anexample" id="dltoinport-example">
+<div class="anexampleTitle">Example 15<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment illustrates the use of the <span class="name">outPortToDL</span> object property by complementing
+<a href="#outputport-example">Example 3</a> of the <em>OutputPort</em> class and <a href="#datalink-example">Example 4</a> of the
+<em>DataLink</em> class.
+</p>
+<pre class="codeexample">
+1     
+2    :p1_op1 provone:outPortToDL :p1_p2DL .
+3
+</pre>
+Line 2 specifies that the <em>OutputPort</em> <span class="name">p1_op1</span> of <a href="#outputport-example">Example 3</a> is connected to the
+<em>DataLink</em> <span class="name">p1_p2DL</span> of <a href="#datalink-example">Example 4</a>. Together with 
+<a href="#datalink-example">Example 14</a>, the previous statement links the <em>OutputPort</em> of <a href="#outputport-example">Example 3</a>
+with the <em>InputPort</em> of another <em>Process</em>.
+</div>
+
+</section><!-- !!! End section: outporttodl-specification -->
+
+<section id="inporttodl-specification"> 
+      
+<h4><span class="secno">3.1.16 </span>inPortToDL object property</h4>
+
+<div class="glossary-ref"><dfn id="concept-entity" title="inPortToDL" class="internalDFN">inPortToDL</dfn>
+<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> connects the InputPort of a Process to a DataLink.
+In turn, the same DataLink can then be connected to the InputPort of a nested Process.</div>
+
+<p><strong>IRI:</strong>http://purl.org/provone/provone#inPortToDL</p>
+
+<p></p><b>has domain</b>
+<ul>
+<li><a title="#inputport-specification" href="#inputport-specification">provone:InputPort</a></li>
+</ul>
+
+<p></p><b>has range</b>
+
+<ul>
+<li><a title="#datalink-specification" href="#datalink-specification">provone:DataLink</a></li>
+</ul>
+
+<div class="anexample" id="inporttodl-example">
+<div class="anexampleTitle">Example 16<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment illustrates the use of the <span class="name">inPortToDL</span> object property.
+</p>
+<pre class="codeexample">
+1    :pmain_ip1 
+2       a provone:InputPort;
+3       dcterms:identifier "e1_ip1"^^xsd:string;
+4    .
+5
+6    :pa_ip1 
+7       a provone:InputPort;
+8       dcterms:identifier "a_ip1"^^xsd:string;
+9    .
+10
+11   :spdl1 
+12      a provone:DataLink;
+13      dcterms:identifier "pmain_paDL1"^^xsd:string;
+14   .
+15
+16   :pmain_ip1 provone:inPortToDL :spdl1 .
+17
+18   :spdl1 provone:DLToInPort :pa_ip1 .
+</pre>
+First, two <em>InputPorts</em> <span class="name">pmain_ip1</span> and <span class="name">pa_ip1</span> are defined in lines 1-9, the first
+corresponds to the top process and the second to one of its subprocesses. Lines 11-14 specify the <em>DataLink</em> 
+<span class="name">spdl1</span>, which is then is used to connect the two <em>InputPorts</em> by an <em>inPortToDL</em> statement in line 16
+and a corresponding <em>DLToInPort</em> statement in line 18.
+</div>
+
+</section><!-- !!! End section: inporttodl-specification -->
+
+<section id="dltooutport-specification"> 
+
+<h4><span class="secno">3.1.17 </span>DLToOutPort object property</h4>
+
+<div class="glossary-ref"><dfn id="concept-entity" title="DLToOutPort" class="internalDFN">DLToOutPort</dfn>
+<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> connects a DataLink to the OutputPort of a Process.
+In turn, the same DataLink can be linked to the OutputPort of a nested Process.</div>
+
+<p><strong>IRI:</strong>http://purl.org/provone/provone#DLToOutPort</p>
+
+<p></p><b>has domain</b>
+<ul>
+<li>
+<a title="#datalink-specification" href="#datalink-specification">provone:DataLink</a>
+</li>
+</ul>
+
+<p></p><b>has range</b>
+<ul>
+<li>
+<a title="#outputport-specification" href="#outputport-specification">provone:OutputPort</a>
+</li>
+</ul>
+
+<div class="anexample" id="dltoinport-example">
+<div class="anexampleTitle">Example 17<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment illustrates the use of the <span class="name">DLToOutPort</span> object property.
+</p>
+<pre class="codeexample">
+1    :pmain_op1 
+2       a provone:OutputPort;
+3       dcterms:identifier "e1_op1"^^xsd:string;
+4    .
+5
+6    :pa_op1 
+7       a provone:OutputPort;
+8       dcterms:identifier "a_op1"^^xsd:string;
+9    .
+10
+11   :spdl2 
+12      a provone:DataLink;
+13      dcterms:identifier "pmain_paDL2"^^xsd:string;
+14   .
+15
+16   :pmain_op1 provone:outPortToDL :spdl2 .
+17
+18   :spdl2 provone:DLToInPort :pa_op1 .
+</pre>
+Two <em>OutputPorts</em> <span class="name">pmain_op1</span> and <span class="name">pa_op1</span> are defined in lines 1-9, the first
+corresponds to the top process and the second to one of its subprocesses. Lines 11-14 specify the <em>DataLink</em> 
+<span class="name">spdl2</span>, which is then is used to connect the two <em>OutputPorts</em> by an <em>outPortToDL</em> statement in line 16
+and a corresponding <em>DLToOutPort</em> statement in line 18.
+</div>
+
+</section><!-- !!! End section: dltooutport-specification -->
+
+<section id="wasattributedto-specification"> 
+      
+<h4><span class="secno">3.1.18 </span>wasAttributedTo object property</h4>
+
+<p>
+<a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAttributedTo" title="http://www.w3.org/ns/prov-o#wasAttributedTo">prov:wasAttributedTo</a>
+is adopted in ProvONE to relate a Process to the User who is responsible for its creation.
+</p>
+
+<p><strong>IRI:</strong>http://www.w3.org/ns/prov#wasAttributedTo</p>
+
+<p></p><b>has domain</b>
+<ul>
+<li>
+<a title="#process-specification" href="#process-specification">provone:Process</a>
+</li>
+</ul>
+
+<p></p><b>has range</b>
+<ul>
+<li>
+<a title="#user-specification" href="#user-specification">provone:User</a>
+</li>
+</ul>
+
+<div class="anexample" id="wasattributedto-example">
+<div class="anexampleTitle">Example 18<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment illustrates the use of the <span class="name">wasAttributedTo</span> object property by complementing
+<a href="#process-example">Example 1</a> of the <em>Process</em> class and <a href="#user-example">Example 7</a> of the
+<em>User</em> class.
+</p>
+<pre class="codeexample">
+1     
+2    :process_1 prov:wasAttributedTo :u1 .
+3
+</pre>
+Line 2 specifies that <em>Process</em> <span class="name">process_1</span> of <a href="#process-example">Example 1</a> is attributed to or
+correspondingly was authored by <em>User</em> <span class="name">u1</span> of <a href="#user-example">Example 7</a>.
+</div>
+
+</section><!-- !!! End section: wasattributedto-specification -->
+
+<section id="wasderivedfrom-specification"> 
+      
+<h4><span class="secno">3.1.19 </span>wasDerivedFrom object property</h4>
+
+<p>
+<a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom" title="http://www.w3.org/ns/prov-o#wasDerivedFrom">prov:wasDerivedFrom</a>
+is adopted in ProvONE, in relation to workflow structure, to describe the evolution of processes and
+workflows.
+</p>
+
+<p><strong>IRI:</strong>http://www.w3.org/ns/prov#wasDerivedFrom</p>
+
+<p></p><b>has domain</b>
+<ul>
+<li>
+<a title="#process-specification" href="#process-specification">provone:Process</a>,
+<a title="#workflow-specification" href="#workflow-specification">provone:Workflow</a>
+</li>
+</ul>
+
+<p></p><b>has range</b>
+<ul>
+<li>
+<a title="#process-specification" href="#process-specification">provone:Process</a>,
+<a title="#workflow-specification" href="#workflow-specification">provone:Workflow</a>
+</li>
+</ul>
+
+<div class="anexample" id="wasderivedfrom-example">
+<div class="anexampleTitle">Example 19<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment illustrates the use of the <span class="name">wasDerivedFrom</span> object property by extending
+<a href="#workflow-example">Example 6</a> of the <em>Workflow</em> class.
+</p>
+<pre class="codeexample">
+1     
+2    :workflow_1update1 
+3   
+4       a provone:Workflow;
+5       dcterms:identifier "wf1upd1"^^xsd:string;
+6       dcterms:title "ModelComparison"^^xsd:string;
+7
+8    :workflow_1update1 prov:wasDerivedFrom :workflow_1 .
+9
+</pre>
+First, a <em>Workflow</em> <span class="name">workflow_1update1</span> is defined beginning at line 2. Line 8 specifies that <em>Workflow</em>
+<span class="name">workflow_1update1</span> was derived from <em>Workflow</em> <span class="name">workflow_1</span> of
+<a href="#workflow-example">Example 6</a>, which implies that it is a new version and the result of workflow evolution. Hence it is given the
+same <span class="name">title</span>.
+</div>
+
+</section><!-- !!! End section: wasderivedfrom-specification -->
+
+</section><!-- !!! End section: workflow-constructs-specification -->
+
+<section id="trace-constructs-specification"> 
+<h3><span class="secno">3.1 </span>ProvONE Trace Specification</h3>
+
+<section id="processexec-specification"> 
+
+<h4><span class="secno">3.2.1 </span>ProcessExec class</h4>
+
+<div class="glossary-ref">   A <dfn id="concept-entity" title="Process" class="internalDFN">ProcessExec</dfn>
+<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> represents the execution of a Process. If the Process
+in question is a Workflow, then the ProcessExec represents a trace of its execution. </div>
+
+<p><strong>IRI:</strong>http://purl.org/provone/provone#ProcessExec</p>
+
+<p></p><b>has super-class</b>
+<ul>
+<li><a title="http://www.w3.org/ns/prov-o#Activity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity">prov:Activity</a>
+</ul>
+
+<p></p><b>is in domain of</b>
+<ul>
+<li>
+<a title="http://www.w3.org/ns/prov-o#used" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#used">prov:used</a>,
+<a title="http://www.w3.org/ns/prov-o#wasAssociatedWith" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith">prov:wasAssociatedWith</a>,
+<a title="http://www.w3.org/ns/prov-o#wasInformedBy" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasInformedBy">prov:wasInformedBy</a></li>
+</ul>
+
+<p></p><b>is in range of</b>
+<ul>
+<li>
+<a title="http://www.w3.org/ns/prov-o#wasGeneratedBy" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasGeneratedBy">prov:wasGeneratedBy</a>,
+<a title="http://www.w3.org/ns/prov-o#wasInformedBy" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasInformedBy">prov:wasInformedBy</a></li>
+</ul>
+
+<div class="anexample" id="processexec-example">
+<div class="anexampleTitle">Example 20<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment specifies a <span class="name">ProcessExec</span> identified within the RDF document by
+<span class="name">process_1ex1</span>.
+</p>
+<pre class="codeexample">
+1    :process_1ex1
+2   
+3       a provone:ProcessExec;
+4       dcterms:identifier "e1_ex1"^^xsd:string;
+5       prov:startTime "2013-08-21 13:37:53"^^xsd:string;
+6       prov:endTime "2013-08-21 13:37:53"^^xsd:string;
+7       wfms:cached "0"^^xsd:integer;
+8       wfms:completed "1"^^xsd:integer; 
+9
+10   .
+</pre>
+A <em>ProcessExec</em> is created with the string <span class="name">e1_ex1</span> as an <span class="name">identifier</span>.
+In addition, timestamps denoting the moment in time at which the execution begins, and then is completed, are specified through the
+<a title="http://www.w3.org/ns/prov-o#startedAtTime" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#startedAtTime">prov:startedAtTime</a>
+and <a title="http://www.w3.org/ns/prov-o#endedAtTime" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#endedAtTime">prov:endedAtTime</a>
+data properties, respectively. In addition, the value <span class="name">0</span> in line 7 indicates that the result was not obtained from
+a cache, while the <span class="name">1</span> value in line 8 indicates that the execution was completed successfully.
+</div>
+
+</section><!-- !!! End section: processexec-specification -->
+
+<section id="dataonlink-specification"> 
+      
+<h4><span class="secno">3.2.2 </span>dataOnLink object property</h4>
+
+<div class="glossary-ref"><dfn id="concept-entity" title="DLToInPort" class="internalDFN">dataOnLink</dfn>
+<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> Specifies that a particular Data item was associated
+with a particular DataLink of a Process during its execution. It effectively links the trace information of a workflow to the workflow structure,
+by capturing the dataflow event.</div>
+
+<p><strong>IRI:</strong>http://purl.org/provone/provone#dataOnLink</p>
+
+<p></p><b>has domain</b>
+<ul>
+<li><a title="#data-specification" href="#data-specification">provone:Data</a></li>
+</ul>
+
+<p></p><b>has range</b>
+<ul>
+<li>
+<a title="#datalink-specification" href="#datalink-specification">provone:DataLink</a>
+</li>
+</ul>
+
+<div class="anexample" id="dataonlink-example">
+<div class="anexampleTitle">Example 21<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment illustrates the use of the <span class="name">dataOnLink</span> object property by complementing
+<a href="#datalink-example">Example 4</a> of the <em>DataLink</em> class.
+</p>
+<pre class="codeexample">
+1    
+2    :data2
+3   
+4       a provone:Data;
+5       dcterms:identifier "cdms1"^^xsd:string;
+6       rdfs:label "cdms_data"^^xsd:string;
+7       wfms:type "gov.llnl.uvcdat.cdms:CDMSVariable"^^xsd:string;
+8    
+9    :data2 provone:dataOnLink :p1_p2DL .
+10
+</pre>
+First, a <em>Data</em> item <span class="name">data2</span> is defined beginning at line 2. This <em>Data</em> item is compatible
+with the <span class="name">signature</span> of the <em>InputPort</em> defined in <a href="#dltoinport-example">Example 14</a>.
+Line 9 specifies that the <em>Data</em> item <span class="name">data2</span> previously specified was associated with the <em>DataLink</em>
+of <a href="#datalink-example">Example 4</a>.
+</div>
+
+</section><!-- !!! End section: dataonlink-specification -->
+
+<section id="used-specification"> 
+      
+<h4><span class="secno">3.2.3 </span>used object property</h4>
+
+<p>
+<a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#used" title="http://www.w3.org/ns/prov-o#used">prov:used</a>
+is adopted in ProvONE to state that a ProcessExec made use of a particular Data item as input for its execution.
+</p>
+
+<p><strong>IRI:</strong>http://www.w3.org/ns/prov#used</p>
+
+<p></p><b>has domain</b>
+<ul>
+<li>
+<a title="#processexec-specification" href="#processexec-specification">provone:ProcessExec</a>
+</li>
+</ul>
+
+<p></p><b>has range</b>
+<ul>
+<li>
+<a title="#data-specification" href="#data-specification">provone:Data</a>
+</li>
+</ul>
+
+<div class="anexample" id="used-example">
+<div class="anexampleTitle">Example 22<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment illustrates the use of the <span class="name">used</span> object property by complementing
+<a href="#processexec-example">Example 8</a> of the <em>ProcessExec</em> class and <a href="#data-example">Example 26</a> of the
+<em>Data</em> class.
+</p>
+<pre class="codeexample">
+1     
+2    :process_1ex1 prov:used :data1 .
+3
+</pre>
+Line 2 specifies that <em>ProcessExec</em> <span class="name">process_1ex1</span> of <a href="#processexec-example">Example 8</a> used as an
+input <em>Data</em> item <span class="name">data1</span> of <a href="#data-example">Example 26</a>.
+</div>
+
+</section><!-- !!! End section: used-specification -->
+
+<section id="wasgeneratedby-specification"> 
+      
+<h4><span class="secno">3.2.4 </span>wasGeneratedBy object property</h4>
+
+<p>
+<a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasGeneratedBy" title="http://www.w3.org/ns/prov-o#wasGeneratedBy">prov:wasGeneratedBy</a>
+is adopted in ProvONE to state that a ProcessExec produced a particular Data item as output with its execution.
+</p>
+
+<p><strong>IRI:</strong>http://www.w3.org/ns/prov#wasGeneratedBy</p>
+
+<p></p><b>has domain</b>
+<ul>
+<li>
+<a title="#data-specification" href="#data-specification">provone:Data</a>
+</li>
+</ul>
+
+<p></p><b>has range</b>
+<ul>
+<li>
+<a title="#processexec-specification" href="#processexec-specification">provone:ProcessExec</a>
+</li>
+</ul>
+
+<div class="anexample" id="wasgeneratedby-example">
+<div class="anexampleTitle">Example 23<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment illustrates the use of the <span class="name">wasGeneratedBy</span> object property by complementing
+<a href="#processexec-example">Example 8</a> of the <em>ProcessExec</em> class.
+</p>
+<pre class="codeexample">
+1     
+2    :data2
+3   
+4       a provone:Data;
+5       dcterms:identifier "cdms1"^^xsd:string;
+6       rdfs:label "cdms_data"^^xsd:string;
+7       wfms:type "gov.llnl.uvcdat.cdms:CDMSVariable"^^xsd:string;
+8    
+9    :data2 prov:wasGeneratedBy :process_1_ex1 .
+10
+</pre>
+First, a <em>Data</em> item <span class="name">data2</span> is defined beginning at line 2, which also appears in
+<a href="#dataonlink-example">Example 21</a>. Line 9 specifies that the <em>Data</em> item <span class="name">data2</span>
+was produced as an output of <em>ProcessExec</em> <span class="name">process_1ex1</span> of <a href="#processexec-example">Example 8</a>.
+</div>
+
+</section><!-- !!! End section: wasgeneratedby-specification -->
+
+<section id="wasassociatedwith-specification"> 
+      
+<h4><span class="secno">3.2.5 </span>wasAssociatedWith object property</h4>
+
+<p>
+<a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith" title="http://www.w3.org/ns/prov-o#wasAssociatedWith">prov:wasAssociatedWith</a>
+is adopted in ProvONE to state that a ProcessExec represents the execution of a particular Process.
+</p>
+
+<p><strong>IRI:</strong>http://www.w3.org/ns/prov#wasAssociatedWith</p>
+
+<p></p><b>has domain</b>
+<ul>
+<li>
+<a title="#processexec-specification" href="#processexec-specification">provone:ProcessExec</a>
+</li>
+</ul>
+
+<p></p><b>has range</b>
+<ul>
+<li>
+<a title="#process-specification" href="#process-specification">provone:Process</a>
+</li>
+</ul>
+
+<div class="anexample" id="wasassociatedwith-example">
+<div class="anexampleTitle">Example 24<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment illustrates the use of the <span class="name">wasAssociatedWith</span> object property by complementing
+<a href="#processexec-example">Example 8</a> of the <em>ProcessExec</em> class and <a href="#process-example">Example 1</a> of the
+<em>Process</em> class.
+</p>
+<pre class="codeexample">
+1     
+2     :process_1ex1 prov:wasAssociatedWith :process_1 .
+3
+</pre>
+Line 2 specifies that <em>ProcessExec</em> <span class="name">process_1ex1</span> of <a href="#processexec-example">Example 8</a> is an execution
+of <em>Process</em> <span class="name">process_1</span> of <a href="#process-example">Example 1</a>.
+</div>
+
+</section><!-- !!! End section: wasassociatedwith-specification -->
+
+<section id="wasinformedby-specification"> 
+      
+<h4><span class="secno">3.2.6 </span>wasInformedBy object property</h4>
+
+<p>
+<a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasInformedBy" title="http://www.w3.org/ns/prov-o#wasInformedBy">prov:wasInformedBy</a>
+is adopted in ProvONE to state that a ProcessExec communicates with another ProcessExec through an output-input relation, and thereby
+triggers its execution.
+</p>
+
+<p><strong>IRI:</strong>http://www.w3.org/ns/prov#wasInformedBy</p>
+
+<p></p><b>has domain</b>
+<ul>
+<li>
+<a title="#processexec-specification" href="#processexec-specification">provone:ProcessExec</a>
+</li>
+</ul>
+
+<p></p><b>has range</b>
+<ul>
+<li>
+<a title="#processexec-specification" href="#processexec-specification">provone:ProcessExec</a>
+</li>
+</ul>
+
+<div class="anexample" id="wasinformedby-example">
+<div class="anexampleTitle">Example 25<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment illustrates the use of the <span class="name">wasInformedBy</span> object property by complementing
+<a href="#processexec-example">Example 8</a> of the <em>ProcessExec</em> class.
+</p>
+<pre class="codeexample">
+1     
+2    :process_2ex1
+3   
+4      a provone:ProcessExec;
+5      dcterms:identifier "e2_ex1"^^xsd:string;
+6      prov:startTime "2013-08-21 13:37:54"^^xsd:string;
+7      prov:endTime "2013-08-21 13:37:54"^^xsd:string;
+8      wfms:cached "0"^^xsd:integer;
+9      wfms:completed "1"^^xsd:integer; 
+10
+11   .
+12
+13   :process_2ex1 prov:wasInformedBy :process_1ex1 .
+14
+</pre>
+First, a <em>ProcessExec</em> <span class="name">process_2ex1</span> is defined beginning at line 2.
+Line 13 specifies that <em>ProcessExec</em> <span class="name">process_2ex1</span> defined previously received data from
+<em>ProcessExec</em> <span class="name">process_1ex1</span> of <a href="#processexec-example">Example 8</a>.
+</div>
+
+</section><!-- !!! End section: wasinformedby-specification -->
+
+<section id="ispartof-specification"> 
+      
+<h4><span class="secno">3.2.7 </span>isPartOf object property</h4>
+
+<p>
+Enables to specify the structure of ProcessExecution instances, a parent ProcessExecution (associated with a Workflow) has child ProcessExecutions (associated with Processes and subworkflows).
+</p>
+
+<p><strong>IRI:</strong>http://purl.org/provone/provone#isPartOf</p>
+
+<p></p><b>has domain</b>
+<ul>
+<li>
+<a title="#processexec-specification" href="#processexec-specification">provone:ProcessExec</a>
+</li>
+</ul>
+
+<p></p><b>has range</b>
+<ul>
+<li>
+<a title="#processexec-specification" href="#processexec-specification">provone:ProcessExec</a>
+</li>
+</ul>
+
+<div class="anexample" id="ispartof-example">
+<div class="anexampleTitle">Example 26<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment illustrates the use of the <span class="name">isPartOf</span> object property by complementing
+<a href="#processexec-example">Example 6</a> of the <em>Workflow</em> class and
+<a href="#processexec-example">Example 8</a> of the <em>ProcessExec</em> class.
+</p>
+<pre class="codeexample">
+1     
+2    :workflow_1ex1
+3   
+4      a provone:ProcessExec;
+5      dcterms:identifier "wf1_ex1"^^xsd:string;
+6      prov:startTime "2013-08-21 13:37:54"^^xsd:string;
+7      prov:endTime "2013-08-21 13:37:59"^^xsd:string;
+8      wfms:completed "1"^^xsd:integer; 
+9
+10   .
+11
+12   :workflow_1ex1 prov:wasAssociatedWith :workflow_1  .
+13
+14   :process_1ex1 prov:isPartOf :workflow_1ex1 .
+15
+</pre>
+First, a <em>ProcessExec</em> <span class="name">workflow_1ex1</span> is defined beginning at line 2 and associated with
+<em>Workflow</em> <span class="name">workflow_1</span> of <a href="#workflow-example">Example 6</a> in line 12.
+Line 14 specifies that <em>ProcessExec</em> <span class="name">process_1ex1</span> of <a href="#processexec-example">Example 8</a>
+is part of <em>ProcessExec</em> <span class="name">workflow_1ex1</span>.
+</div>
+
+</section><!-- !!! End section: partof-specification -->
+
+</section><!-- !!! End section: trace-specification -->
+
+<section id="datastructure-constructs-specification"> 
+<h3><span class="secno">3.3 </span>ProvONE Data Structure Specification</h3>
+
+<section id="data-specification"> 
+      
+<h4><span class="secno">3.3.1 </span>Data class</h4>
+
+<div class="glossary-ref">   A <dfn id="concept-entity" title="Data" class="internalDFN">Data</dfn>
+<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>  item represents the basic unit of information
+consumed or produced by a Process. Multiple Data items may be grouped into a Collection. </div>
+
+<p><strong>IRI:</strong>http://purl.org/provone/provone#Data</p>
+
+<p></p><b>has super-class</b>
+<ul>
+<li><a title="http://www.w3.org/ns/prov-o#Entity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity</a>
+</ul>
+
+<p></p><b>is in domain of</b>
+<ul>
+<li>
+<a title="http://www.w3.org/ns/prov-o#wasGeneratedBy" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasGeneratedBy">prov:wasGeneratedBy</a>,
+<a title="http://www.w3.org/ns/prov-o#wasDerivedFrom" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom">prov:wasDerivedFrom</a></li>
+</ul>
+
+<p></p><b>is in range of</b>
+<ul>
+<li>
+<a title="http://www.w3.org/ns/prov-o#used" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#used">prov:used</a>,
+<a title="http://www.w3.org/ns/prov-o#wasDerivedFrom" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom">prov:wasDerivedFrom</a>,
+<a title="http://www.w3.org/ns/prov-o#hadMember" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#hadMember">prov:hadMember</a></li>
+</ul>
+
+<div class="anexample" id="data-example">
+<div class="anexampleTitle">Example 27<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment specifies a <span class="name">Data</span> item identified within the RDF document by
+<span class="name">data1</span>.
+</p>
+<pre class="codeexample">
+1    :data1
+2   
+3       a provone:Data;
+4       dcterms:identifier "defparam1"^^xsd:string;
+5       rdfs:label "filename"^^xsd:string;
+6       prov:value "DLEM_NEE_onedeg_v1.0nc"^^xsd:string;
+7       wfms:type "edu.sci.wfms.basic:File"^^xsd:string; 
+8
+9    .
+10
+</pre>
+A <em>Data</em> item is created with the string <span class="name">defparam1</span> as an <span class="name">identifier</span>.
+It is also given the descriptive string <span class="name">filename</span> through the 
+<a href="http://www.w3.org/TR/rdf-schema/#ch_label"><span class="name">rdfs:label</span></a> data property. 
+The <a title="http://www.w3.org/ns/prov-o#value" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#value">prov:value</a>
+data property specifies the actual value of the data item, namely <span class="name">DLEM_NEE_onedeg_v1.0nc</span>.
+Finally, the type of the data item as defined by the WfMS is specified in line 7 to be <span class="name">edu.sci.wfms.basic:File</span>.
+</div>
+
+</section><!-- !!! End section: data-specification -->
+
+<section id="collection-specification"> 
+      
+<h4><span class="secno">3.3.2 </span>Collection class</h4>
+
+<p>Instead of specifying a new class or subclass, we adopt explicitly as part of the ProvONE model PROV's 
+<a title="http://www.w3.org/ns/prov-o#Collection" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Collection">prov:Collection</a> class,
+whose description we cite below.</p>
+
+<div class="glossary-ref">   A <dfn id="concept-entity" title="Data" class="internalDFN">Collection</dfn>
+<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>  is an entity that provides a structure to some
+constituents, which are themselves entities. These constituents are said to be member of the collections. </div>
+
+<p><strong>IRI:</strong>http://www.w3.org/ns/prov#Collection</p>
+
+<div class="anexample" id="collection-example">
+<div class="anexampleTitle">Example 28<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment specifies a <span class="name">Collection</span> identified within the RDF document by
+<span class="name">col1</span>.
+</p>
+<pre class="codeexample"> 
+1    :col1
+2   
+3       a prov:Collection;
+4       dcterms:identifier "inputset1"^^xsd:string;
+5
+6    .
+7
+</pre>
+A <em>Collection</em> is created with the string <span class="name">inputset1</span> as an <span class="name">identifier</span>.
+</div>
+
+</section><!-- !!! End section: collection-specification -->
+
+<section id="wasderivedfrom-specification-data"> 
+      
+<h4><span class="secno">3.3.3 </span>wasDerivedFrom object property</h4>
+
+<p>
+<a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom" title="http://www.w3.org/ns/prov-o#wasDerivedFrom">prov:wasDerivedFrom</a>
+is adopted in ProvONE, in relation to data structure, to describe dependencies between the Data items produced during workflow execution.
+</p>
+
+<p><strong>IRI:</strong>http://www.w3.org/ns/prov#wasDerivedFrom</p>
+
+<p></p><b>has domain</b>
+<ul>
+<li>
+<a title="#data-specification" href="#data-specification">provone:Data</a>
+</li>
+</ul>
+
+<p></p><b>has range</b>
+<ul>
+<li>
+<a title="#data-specification" href="#data-specification">provone:Data</a>
+</li>
+</ul>
+
+<div class="anexample" id="wasderivedfrom-example">
+<div class="anexampleTitle">Example 29<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment illustrates the use of the <span class="name">wasDerivedFrom</span> object property by extending
+<a href="#data-example">Example 27</a> of the <em>Data</em> class.
+</p>
+<pre class="codeexample">
+1     
+2    :data2
+3   
+4       a provone:Data;
+5       dcterms:identifier "defparam1"^^xsd:string;
+6       rdfs:label "filename"^^xsd:string;
+7       prov:value "DLEM_NEE_onedeg_v1.0nc"^^xsd:string;
+8       wfms:type "edu.sci.wfms.basic:File"^^xsd:string; 
+9
+10   .
+11
+12   :data2 prov:wasDerivedFrom :data1 .
+13
+</pre>
+First, a <em>Data</em> item <span class="name">data2</span> is defined beginning at line 2, which also appears in
+<a href="#dataonlink-example">Example 21</a>. Line 12 specifies that the <em>Data</em> item <span class="name">data2</span>
+was produced from <em>Data</em> item <span class="name">data1</span> of <a href="#data-example">Example 27</a>.
+</div>
+
+</section><!-- !!! End section: wasderivedfrom-specification -->
+
+<section id="hadmember-specification"> 
+      
+<h4><span class="secno">3.3.4 </span>hadMember object property</h4>
+
+<p>
+<a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#hadMember" title="http://www.w3.org/ns/prov-o#hadMember">prov:hadMember</a>
+is adopted in ProvONE, in relation to data structure, to specify the Data items that form part of a Collection.
+</p>
+
+<p><strong>IRI:</strong>http://www.w3.org/ns/prov#hadMember</p>
+
+<p></p><b>has domain</b>
+<ul>
+<li>
+<a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Collection" title="http://www.w3.org/ns/prov-o#Collection">prov:Collection</a>
+</li>
+</ul>
+
+<p></p><b>has range</b>
+<ul>
+<li>
+<a title="#data-specification" href="#data-specification">provone:Data</a>
+</li>
+</ul>
+
+<div class="anexample" id="hadmember-example">
+<div class="anexampleTitle">Example 30<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+<p>
+The following RDF fragment illustrates the use of the <span class="name">hadMember</span> object property by extending
+<a href="#collection-example">Example 28</a> of the <em>Collection</em> class.
+</p>
+<pre class="codeexample">
+1     
+2    :infile1
+3   
+4       a provone:Data;
+5       dcterms:identifier "data_file1"^^xsd:string;
+6       rdfs:label "file1"^^xsd:string;
+7       prov:value "file1.dat"^^xsd:string;
+8       wfms:type "edu.sci.wfms.basic:File"^^xsd:string; 
+9
+10   .
+11
+12   :infile2
+13   
+14       a provone:Data;
+15       dcterms:identifier "data_file2"^^xsd:string;
+16       rdfs:label "file2"^^xsd:string;
+17       prov:value "file2.dat"^^xsd:string;
+18       wfms:type "edu.sci.wfms.basic:File"^^xsd:string; 
+19
+20   .
+21
+22   :col1 prov:hadMember :infile1 .
+23
+24   :col1 prov:hadMember :infile2 .
+25
+</pre>
+Two <em>Data</em> items <span class="name">infile1</span> and <span class="name">infile2</span> are defined in lines 2-20.
+Line 22 specifies that <em>Data</em> item <span class="name">infile1</span> was a member of <em>Collection</em> item 
+<span class="name">col1</span> of <a href="#collection-example">Example 28</a>. Analogously, line 24 specifies
+<em>Data</em> item <span class="name">infile2</span> also as part of <em>Collection</em> item <span class="name">col1</span>.
+</div>
+
+</section><!-- !!! End section: hasmember-specification -->
+
+</section><!-- !!! End section: datastructure-specification -->
+
+</section><!-- !!! End section: section-provone-specification -->
+
+<section id="references" class="appendix"><!--OddPage-->
+
+<h2><span class="secno">A. </span>References</h2>
+
+<dl class="bibliography">
+<dt id="bib-BKG+13">[BKG+13]</dt>
+<dd>
+Khalid Belhajjame, Graham Klyne, Daniel Garijo, Oscar Corcho, Esteban Garc&iacute;a-Cuesta, and Raul Palma.
+<a href="http://wf4ever.github.io/ro/"><cite>Wf4ever Research Object Model</cite></a>.
+20 August 2013.
+URL: <a href="http://wf4ever.github.io/ro/">http://wf4ever.github.io/ro/</a>
+</dd>
+<!--
+<dt id="bib-CFS+06">[CFS+06]</dt>
+<dd>
+Steven P. Callahan, Juliana Freire, Emanuele Santos, Carlos E. Scheidegger, Cl&aacute;udio T. Silva, and Huy T. Vo.
+<cite>Vistrails: Visualization meets data management</cite>.
+In Proceedings of the 2006 ACM SIGMOD International Conference on Management of Data, SIGMOD'06, pages 745-747, New York, NY, USA, 2006. ACM.
+</dd>
+-->
+<dt id="bib-CSdO+13">[CSdO+13]</dt>
+<dd>
+Flavio Costa, V&iacute;tor Silva, Daniel de Oliveira, Kary Oca&ntilde;a, Eduardo Ogasawara, Jonas Dias, and Marta Mattoso.
+<cite>Capturing and Querying Workflow Runtime Provenance with PROV: a Practical Approach</cite>.
+In Proceedings of the Joint EDBT/ICDT 2013 Workshops, EDBT'13, pages 282-289, New York, NY, USA, 2013. ACM.
+</dd>
+<dt id="bib-DC-RDF">[DC-RDF]</dt>
+<dd>Dublin Core Metadata Initiative. <a href="http://dublincore.org/schemas/rdfs/"><cite>DCMI term declarations represented in RDF schema language</cite></a>. 2012 URL: <a href="http://dublincore.org/schemas/rdfs/">http://dublincore.org/schemas/rdfs/</a>
+</dd>
+<dt id="bib-FSC+06">[FSC+06]</dt>
+<dd>
+Juliana Freire, Cl&aacute;udio T. Silva, Steven P. Callahan, Emanuele Santos, Carlos E. Scheidegger, and Huy T. Vo.
+<cite>Managing Rapidly-Evolving Scientific Workflows</cite>.
+In Proceedings of the 2006 international conference on Provenance and Annotation of Data, IPAW'06, pages 10-18, Berlin, Heidelberg, 2006. Springer-Verlag.
+</dd>
+<dt id="bib-MCF+11">[MCF+11]</dt>
+<dd>
+Luc Moreau, Ben Clifford, Juliana Freire, Joe Futrelle, Yolanda Gil, Paul Groth, Natalia Kwasnikowska, Simon Miles, Paolo Missier, Jim Myers, Beth Plale, Yogesh Simmhan, Eric Stephan, and Jan Van den Bussche.  
+<cite>The Open Provenance Model Core Specification (v1.1)</cite>.
+Future Gener. Comput. Syst., 27(6):743-756, June 2011.
+</dd>
+<dt id="bib-MDB+13">[MDB+13]</dt>
+<dd>
+Paolo Missier, Saumen Dey, Khalid Belhajjame, V&iacute;ctor Cuevas-Vicentt&iacute;n, and Bertram Lud&auml;scher.
+<cite>D-PROV: Extending the PROV Provenance Model with Workflow Structure</cite>.
+In Proceedings of the 5th USENIX Workshop on the Theory and Practice of Provenance, TaPP '13, pages 9:1-9:7, Berkeley, CA, USA, 2013. USENIX Association.
+</dd>
+<dt id="bib-OWL2">[OWL2]</dt>
+<dd>World Wide Web Consortium (W3C). <a href="http://www.w3.org/TR/owl2-overview/"><cite>OWL 2 Web Ontology Language Document Overview (Second Edition)</cite></a>. W3C Recommendation 11 December 2012, URL: <a href="http://www.w3.org/TR/owl2-overview/">http://www.w3.org/TR/owl2-overview/</a>
+</dd>
+<dt id="bib-PROVO">[PROV]</dt>
+<dd>World Wide Web Consortium (W3C). <a href="http://www.w3.org/TR/prov-overview/"><cite>PROV-Overview: An Overview of the PROV Family of Documents</cite></a>. W3C Working Group Note 30 April 2013, URL: <a href="http://www.w3.org/TR/prov-overview/">http://www.w3.org/TR/prov-overview/</a>
+</dd>
+<dt id="bib-PROVO">[PROVO]</dt>
+<dd>World Wide Web Consortium (W3C). <a href="http://www.w3.org/TR/prov-o/"><cite>PROV-O: The PROV Ontology</cite></a>. W3C Recommendation 30 April 2013, URL: <a href="http://www.w3.org/TR/prov-o/">http://www.w3.org/TR/prov-o/</a>
+</dd>
+<dt id="bib-RDF-CONCEPTS">[RDF-CONCEPTS]</dt>
+<dd>Graham Klyne; Jeremy J. Carroll.<a href="http://www.w3.org/TR/2004/REC-rdf-concepts-20040210/"><cite>Resource Description Framework (RDF):
+Concepts and Abstract Syntax.</cite></a>10 February 2004. W3C Recommendation. URL:
+<a href="http://www.w3.org/TR/2004/REC-rdf-concepts-20040210/">http://www.w3.org/TR/2004/REC-rdf-concepts-20040210</a>
+</dd>
+<dt id="bib-RDF-SCHEMA">[RDF-SCHEMA]</dt>
+<dd>Dan Brickley; Ramanathan V. Guha. <a href="http://www.w3.org/TR/2004/REC-rdf-schema-20040210/"><cite>RDF Vocabulary Description Language
+1.0: RDF Schema.</cite></a>10 February 2004. W3C Recommendation. URL:
+<a href="http://www.w3.org/TR/2004/REC-rdf-schema-20040210/">http://www.w3.org/TR/2004/REC-rdf-schema-20040210</a>
+</dd>
+<dt id="bib-UML">[UML]</dt>
+<dd>Object Management Group. <a href="http://www.omg.org/spec/UML/2.0/Superstructure/PDF/"><cite>Unified Modeling Language: Superstructure</cite></a>. version 2.0, 2005 URL: <a href="http://www.omg.org/spec/UML/2.0/Superstructure/PDF/">http://www.omg.org/spec/UML/2.0/Superstructure/PDF/</a>
+</dd>
+<dt id="bib-XMLSCHEMA11-2">[XMLSCHEMA11-2]</dt>
+<dd>
+Henry S. Thompson et al. <a href="http://www.w3.org/TR/2012/REC-xmlschema11-2-20120405/"><cite>W3C XML Schema Definition Language (XSD) 1.1 Part 2: Datatypes</cite></a>. 5 April 2012. W3C Recommendation. URL: <a href="http://www.w3.org/TR/2012/REC-xmlschema11-2-20120405/">http://www.w3.org/TR/2012/REC-xmlschema11-2-20120405/</a>
+</dd>
+<dt id="bib-ZWF06">[ZWF06]</dt>
+<dd>
+Yong Zhao, Michael Wilde, and Ian Foster.
+<cite>Applying the Virtual Data Provenance Model</cite>.
+In Proceedings of the 2006 international conference on Provenance and Annotation of Data, IPAW'06, pages 148-161, Berlin, Heidelberg, 2006. Springer-Verlag.
+</dd>
+</dl>
+
+</section><!-- !!! End section: references -->
+
+
+</body>
+</html>
+
+
+
+
+
