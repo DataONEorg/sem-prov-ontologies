@@ -43,10 +43,10 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/provone/v1/ontology#CLtoDestP">
         <rdfs:label>CLtoDestP</rdfs:label>
-        <prov:category>Relates a SeqCtrlLink to its destination Program.</prov:category>
+        <prov:category>Relates a Controller to its destination Program.</prov:category>
         <prov:category>workflow-specification</prov:category>
         <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Program"/>
-        <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#SeqCtrlLink"/>
+        <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Controller"/>
     </owl:ObjectProperty>
     
 
@@ -172,9 +172,9 @@
     <owl:ObjectProperty rdf:about="http://purl.org/provone/v1/ontology#sourcePToCL">
         <rdfs:label>sourcePToCL</rdfs:label>
         <prov:category>workflow-specification</prov:category>
-        <rdfs:comment>Relates a SeqCtrlLink to its source Program.</rdfs:comment>
+        <rdfs:comment>Relates a Controller to its source Program.</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Program"/>
-        <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#SeqCtrlLink"/>
+        <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Controller"/>
     </owl:ObjectProperty>
     
 
@@ -313,12 +313,12 @@
     
 
 
-    <!-- http://purl.org/provone/v1/ontology#SeqCtrlLink -->
+    <!-- http://purl.org/provone/v1/ontology#Controller -->
 
-    <owl:Class rdf:about="http://purl.org/provone/v1/ontology#SeqCtrlLink">
-        <rdfs:label>SeqCtrlLink</rdfs:label>
+    <owl:Class rdf:about="http://purl.org/provone/v1/ontology#Controller">
+        <rdfs:label>Controller</rdfs:label>
         <rdfs:subClassOf rdf:resource="&prov;Entity"/>
-        <prov:category>A SeqCtrlLink specifies a sequential control link between two Programs. A source Program is linked to a destination process, the latter can only begin its execution once the source process sends the respective signal through the link. In case a Program is the destination of multiple sequential control links, all of their activation signals must be received in order for the execution to begin.</prov:category>
+        <prov:category>A Controller specifies a control link between two Programs, and defines the model of computation for the Program.  Some models will implement sequential flow control, others will implement parallel flow control, etc.  Each model of computation can be implemented by subclassing the Controller class.</prov:category>
         <prov:category>workflow-specification</prov:category>
     </owl:Class>
     
