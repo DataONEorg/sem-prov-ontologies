@@ -148,9 +148,9 @@
     <owl:ObjectProperty rdf:about="http://purl.org/provone/v1/ontology#isPartOf">
         <rdfs:label>isPartOf</rdfs:label>
         <prov:category>trace-specification</prov:category>
-        <rdfs:comment>Specifies the structure of ProcessExecution instances, a parent ProcessExecution (associated with a Workflow) has child ProcessExecutions (associated with Programs and subworkflows).</rdfs:comment>
-        <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#ProcessExec"/>
-        <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#ProcessExec"/>
+        <rdfs:comment>Specifies the structure of Execution instances, a parent Execution (associated with a Workflow) has child Executions (associated with Programs and subworkflows).</rdfs:comment>
+        <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Execution"/>
+        <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Execution"/>
     </owl:ObjectProperty>
     
 
@@ -183,7 +183,7 @@
 
     <rdf:Description rdf:about="&prov;used">
         <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Data"/>
-        <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#ProcessExec"/>
+        <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Execution"/>
     </rdf:Description>
     
 
@@ -192,7 +192,7 @@
 
     <rdf:Description rdf:about="&prov;wasAssociatedWith">
         <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Program"/>
-        <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#ProcessExec"/>
+        <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Execution"/>
     </rdf:Description>
     
 
@@ -221,7 +221,7 @@
 
     <rdf:Description rdf:about="&prov;wasGeneratedBy">
         <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Data"/>
-        <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#ProcessExec"/>
+        <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Execution"/>
     </rdf:Description>
     
 
@@ -229,8 +229,8 @@
     <!-- http://www.w3.org/ns/prov#wasInformedBy -->
 
     <rdf:Description rdf:about="&prov;wasInformedBy">
-        <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#ProcessExec"/>
-        <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#ProcessExec"/>
+        <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Execution"/>
+        <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Execution"/>
     </rdf:Description>
     
 
@@ -302,12 +302,12 @@
     
 
 
-    <!-- http://purl.org/provone/v1/ontology#ProcessExec -->
+    <!-- http://purl.org/provone/v1/ontology#Execution -->
 
-    <owl:Class rdf:about="http://purl.org/provone/v1/ontology#ProcessExec">
-        <rdfs:label>ProcessExec</rdfs:label>
+    <owl:Class rdf:about="http://purl.org/provone/v1/ontology#Execution">
+        <rdfs:label>Execution</rdfs:label>
         <rdfs:subClassOf rdf:resource="&prov;Activity"/>
-        <rdfs:comment>A ProcessExec represents the execution of a Program. If the Program in question is a Workflow, then the ProcessExec represents a trace of its execution.</rdfs:comment>
+        <rdfs:comment>An Execution represents the execution of a Program. If the Program in question is a Workflow, then the Execution represents a trace of its execution.</rdfs:comment>
         <prov:category>trace-specification</prov:category>
     </owl:Class>
     
