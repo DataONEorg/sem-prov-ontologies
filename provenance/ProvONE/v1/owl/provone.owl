@@ -160,6 +160,40 @@
     
 
 
+    <!-- http://www.w3.org/ns/prov#qualifiedAssociation -->
+
+    <owl:ObjectProperty rdf:about="&prov;qualifiedAssociation">
+        <rdfs:label>qualifiedAssociation</rdfs:label>
+        <prov:category>trace-specification</prov:category>
+        <rdfs:comment>Enables the specification of a particular Association by a particular Execution. This allows for further qualification of the prov:wasAssociatedWith property in the context of an Execution.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Execution"/>
+        <rdfs:range rdf:resource="&prov;Association"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#agent -->
+    <owl:ObjectProperty rdf:about="&prov;agent">
+        <rdfs:label>agent</rdfs:label>
+        <prov:category>trace-specification</prov:category>
+        <rdfs:comment>Enables the specification of a particular User in a particular Association. This allows for further qualification of the prov:wasAssociatedWith property in the context of an Execution.</rdfs:comment>
+        <rdfs:domain rdfs:resource="&prov;Association"/> 
+        <rdfs:range rdfs:resource="http://purl.org/provone/v1/ontology#User"/> 
+    </owl:ObjectProperty>
+    
+    
+    
+    <!-- http://www.w3.org/ns/prov#hadPlan -->
+    <owl:ObjectProperty rdf:about="&prov;agent">
+        <rdfs:label>hadPlan</rdfs:label>
+        <prov:category>trace-specification</prov:category>
+        <rdfs:comment>Enables the specification of a particular Program as a Plan in a particular Association. This allows for further qualification of the prov:wasAssociatedWith property in the context of an Execution.</rdfs:comment>
+        <rdfs:domain rdfs:resource="&prov;Association"/> 
+        <rdfs:range rdfs:resource="http://purl.org/provone/v1/ontology#Program"/> 
+    </owl:ObjectProperty>
+    
+    
+    
     <!-- http://purl.org/provone/v1/ontology#hadSubProgram -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/provone/v1/ontology#hasSubProgram">
