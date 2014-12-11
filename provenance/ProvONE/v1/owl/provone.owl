@@ -218,7 +218,18 @@
     <owl:Class rdf:about="http://purl.org/provone/v1/ontology#Visualization">
         <rdfs:label>Visualization</rdfs:label>
         <rdfs:subClassOf rdf:resource="&prov;Entity"/>
-        <rdfs:comment>A Visualization item represents a visual product produced by a Program.</rdfs:comment>
+        <rdfs:comment>A Visualization represents a visual product produced by a Program.</rdfs:comment>
+        <prov:category>data-specification</prov:category>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/provone/v1/ontology#Document -->
+
+    <owl:Class rdf:about="http://purl.org/provone/v1/ontology#Document">
+        <rdfs:label>Document</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&prov;Entity"/>
+        <rdfs:comment>A Document represents a scientific work that was created as a result of one or more Executions.  This may be a published journal article, a government report, etc.</rdfs:comment>
         <prov:category>data-specification</prov:category>
     </owl:Class>
     
