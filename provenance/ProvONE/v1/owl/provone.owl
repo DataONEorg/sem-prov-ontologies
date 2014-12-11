@@ -136,59 +136,47 @@
 
 
     <!-- http://www.w3.org/ns/prov#used -->
-    <!-- Shouldn't need to define prov:used here. Commenting it out for deletion. CSJ
     <rdf:Description rdf:about="&prov;used">
-        <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Data"/>
         <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Execution"/>
+        <rdfs:range rdf:resource="&prov;Entity"/>
     </rdf:Description>
-    -->
 
 
     <!-- http://www.w3.org/ns/prov#wasAssociatedWith -->
-    <!-- Shouldn't need to define prov:wasAssociatedWith here. Commenting it out for deletion. CSJ
     <rdf:Description rdf:about="&prov;wasAssociatedWith">
-        <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Program"/>
         <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Execution"/>
+        <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Program"/>
     </rdf:Description>
-    -->
 
 
     <!-- http://www.w3.org/ns/prov#wasAttributedTo -->
-    <!-- Shouldn't need to define prov:wasAttributedTo here. Commenting it out for deletion. CSJ
     <rdf:Description rdf:about="&prov;wasAttributedTo">
         <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Program"/>
         <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#User"/>
     </rdf:Description>
-    -->
 
 
     <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
-    <!-- Shouldn't need to define prov:wasDerivedFrom here. Commenting it out for deletion. CSJ
     <rdf:Description rdf:about="&prov;wasDerivedFrom">
-        <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Data"/>
-        <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Data"/>
+        <rdfs:domain rdf:resource="&prov;Entity"/>
+        <rdfs:range rdf:resource="&prov;Entity"/>
         <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Program"/>
         <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Program"/>
     </rdf:Description>
-    -->
 
 
     <!-- http://www.w3.org/ns/prov#wasGeneratedBy -->
-    <!-- Shouldn't need to define prov:wasDerivedFrom here. Commenting it out for deletion. CSJ
-    <rdf:Description rdf:about="&prov;wasDerivedFrom">
-        <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Data"/>
+    <rdf:Description rdf:about="&prov;wasGeneratedBy">
+        <rdfs:domain rdf:resource="&prov;Entity"/>
         <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Execution"/>
     </rdf:Description>
-    -->
 
 
     <!-- http://www.w3.org/ns/prov#wasInformedBy -->
-    <!-- Shouldn't need to define prov:wasInformedBy here. Commenting it out for deletion. CSJ
     <rdf:Description rdf:about="&prov;wasInformedBy">
         <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Execution"/>
         <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Execution"/>
     </rdf:Description>
-    -->
 
 
     <!-- 
