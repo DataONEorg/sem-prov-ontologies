@@ -136,6 +136,30 @@
     
 
 
+    <!-- http://www.w3.org/ns/prov#qualifiedUsage -->
+
+    <owl:ObjectProperty rdf:about="&prov;qualifiedUsage">
+        <rdfs:label>qualifiedUsage</rdfs:label>
+        <prov:category>trace-specification</prov:category>
+        <rdfs:comment>Enables the specification of a particular Usage by a particular Execution. This allows for further qualification of the prov:used property in the context of an Execution.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Execution"/>
+        <rdfs:range rdf:resource="&prov;Usage"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/prov#qualifiedGeneration -->
+
+    <owl:ObjectProperty rdf:about="&prov;qualifiedGeneration">
+        <rdfs:label>qualifiedGeneration</rdfs:label>
+        <prov:category>trace-specification</prov:category>
+        <rdfs:comment>Enables the specification of a particular Generation by a particular Execution. This allows for further qualification of the prov:wasGeneratedBy property in the context of an Execution.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Execution"/>
+        <rdfs:range rdf:resource="&prov;Generation"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.org/provone/v1/ontology#hadSubProgram -->
 
     <owl:ObjectProperty rdf:about="http://purl.org/provone/v1/ontology#hasSubProgram">
