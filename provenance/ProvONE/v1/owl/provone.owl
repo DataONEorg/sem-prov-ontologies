@@ -285,8 +285,19 @@
     <owl:Class rdf:about="http://purl.org/provone/v1/ontology#User">
         <rdfs:label>User</rdfs:label>
         <rdfs:subClassOf rdf:resource="&prov;Agent"/>
-        <prov:category>user-specification</prov:category>
-        <prov:definition>An User is the person responsible for the specification of a Program, which in turn can be a Workflow. Its specification serves attribution and accountability purposes.</prov:definition>
+        <prov:category>trace-specification</prov:category>
+        <prov:definition>A User is the person responsible for the execution of a Program, which in turn can be a Workflow. Its specification serves attribution and accountability purposes.</prov:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/provone/v1/ontology#Author -->
+
+    <owl:Class rdf:about="http://purl.org/provone/v1/ontology#Author">
+        <rdfs:label>Author</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&prov;Agent"/>
+        <prov:category>workflow-specification</prov:category>
+        <prov:definition>An Author is the person responsible for the specification of a Program, which in turn can be a Workflow. Its specification serves attribution and accountability purposes.</prov:definition>
     </owl:Class>
     
 
