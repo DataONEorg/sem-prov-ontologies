@@ -2,7 +2,7 @@
 
 
 <!DOCTYPE rdf:RDF [
-    <!ENTITY prov "http://www.w3.org/ns/prov#" >
+    <!ENTITY prov "http://www.w3.org/TR/2013/REC-prov-o-20130430/#" >
     <!ENTITY owl  "http://www.w3.org/2002/07/owl#" >
     <!ENTITY xsd  "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
@@ -13,7 +13,7 @@
 <rdf:RDF xmlns="http://purl.org/provone/v1/ontology#"
      xml:base="http://purl.org/provone/v1/ontology"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:prov="http://www.w3.org/TR/2013/REC-prov-o-20130430/#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -39,10 +39,10 @@
     
 
 
-    <!-- http://purl.org/provone/v1/ontology#CLtoDestP -->
+    <!-- http://purl.org/provone/v1/ontology#controls -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/provone/v1/ontology#CLtoDestP">
-        <rdfs:label>CLtoDestP</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://purl.org/provone/v1/ontology#controls">
+        <rdfs:label>controls</rdfs:label>
         <prov:category>Relates a Controller to its destination Program.</prov:category>
         <prov:category>workflow-specification</prov:category>
         <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Program"/>
@@ -51,38 +51,16 @@
     
 
 
-    <!-- http://purl.org/provone/v1/ontology#DLToInPort -->
+    <!-- http://purl.org/provone/v1/ontology#hasLocation -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/provone/v1/ontology#DLToInPort">
-        <rdfs:label>DLToInPort</rdfs:label>
-        <rdfs:comment>Connects a DataLink to an InputPort of a Program, while the same DataLink can be connected to an OutputPort of another Program.</rdfs:comment>
+    <owl:ObjectProperty rdf:about="http://purl.org/provone/v1/ontology#hasLocation">
+        <rdfs:label>hasLocation</rdfs:label>
+        <rdfs:comment>Connects a Location to a Port of a Program. The port may be semantically typed as an input port or an output port, depending on its defined relationship with the Program.</rdfs:comment>
         <prov:category>workflow-specification</prov:category>
-        <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#DataLink"/>
-        <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#InputPort"/>
+        <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Port"/>
+        <rdfs:range rdf:resource="&prov;Location"/>
     </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/provone/v1/ontology#DLToOutPort -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/provone/v1/ontology#DLToOutPort">
-        <rdfs:label>DLToOutPort</rdfs:label>
-        <prov:category>workflow-specification</prov:category>
-        <rdfs:comment>Connects a DataLink to the OutputPort of a Program. In turn, the same DataLink can be linked to the OutputPort of a nested Program.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/provone/v1/ontology#dataOnLink -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/provone/v1/ontology#dataOnLink">
-        <rdfs:label>dataOnLink</rdfs:label>
-        <rdfs:comment>Specifies that a particular Data item was associated with a particular DataLink of a Workflow during its execution. It effectively links the trace information of a workflow to the workflow structure, by capturing the dataflow event.</rdfs:comment>
-        <prov:category>trace-specification</prov:category>
-        <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Data"/>
-        <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#DataLink"/>
-    </owl:ObjectProperty>
-    
+        
 
 
     <!-- http://purl.org/provone/v1/ontology#hasDefaultParam -->
@@ -90,9 +68,9 @@
     <owl:ObjectProperty rdf:about="http://purl.org/provone/v1/ontology#hasDefaultParam">
         <rdfs:label>hasDefaultParam</rdfs:label>
         <prov:category>workflow-specification</prov:category>
-        <rdfs:comment>Specifies that a given InputPort has a certain Data item as a default parameter. This enables to specify especially configured Workflow instances.</rdfs:comment>
-        <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Data"/>
-        <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#InputPort"/>
+        <rdfs:comment>Specifies that a given Port (likely a semantically typed input port via hasInPort) has a certain Entity item (usually Data) as a default parameter. This enables Workflow instances to be configured.</rdfs:comment>
+        <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Port"/>
+        <rdfs:range rdf:resource="&prov;Entity"/>
     </owl:ObjectProperty>
     
 
@@ -101,9 +79,9 @@
 
     <owl:ObjectProperty rdf:about="http://purl.org/provone/v1/ontology#hasInPort">
         <rdfs:label>hasInPort</rdfs:label>
-        <rdfs:comment>Enables to specify the InputPorts of a particular Program.</rdfs:comment>
+        <rdfs:comment>Enables the specification of a Port as an input port of a particular Program.</rdfs:comment>
         <prov:category>workflow-specification</prov:category>
-        <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#InputPort"/>
+        <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Port"/>
         <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Program"/>
     </owl:ObjectProperty>
     
@@ -114,9 +92,9 @@
     <owl:ObjectProperty rdf:about="http://purl.org/provone/v1/ontology#hasOutPort">
         <rdfs:label>hasOutPort</rdfs:label>
         <prov:category>workflow-specification</prov:category>
-        <rdfs:comment>Enables to specify the OutputPorts of a particular Program.</rdfs:comment>
-        <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#OutputPort"/>
+        <rdfs:comment>Enables the specification of a Port as an output port of a particular Program.</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Program"/>
+        <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Port"/>
     </owl:ObjectProperty>
     
 
@@ -126,53 +104,31 @@
     <owl:ObjectProperty rdf:about="http://purl.org/provone/v1/ontology#hasSubProgram">
         <rdfs:label>hasSubProgram</rdfs:label>
         <prov:category>workflow-specification</prov:category>
-        <rdfs:comment>Specifies the recursive composition of Programs, a parent Program includes a child Program as part of its specification.</rdfs:comment>
+        <rdfs:comment>Specifies the recursive composition of Programs, where a parent Program includes a child Program as part of its specification.</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Program"/>
         <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Program"/>
     </owl:ObjectProperty>
-    
+        
 
 
-    <!-- http://purl.org/provone/v1/ontology#inPortToDL -->
+    <!-- http://purl.org/provone/v1/ontology#wasPartOf -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/provone/v1/ontology#inPortToDL">
-        <rdfs:label>inPortToDL</rdfs:label>
-        <prov:category>workflow-specification</prov:category>
-        <rdfs:comment>Connects the InputPort of a Program to a DataLink. In turn, the same DataLink can then be connected to the InputPort of a nested Program.</rdfs:comment>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/provone/v1/ontology#isPartOf -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/provone/v1/ontology#isPartOf">
-        <rdfs:label>isPartOf</rdfs:label>
+    <owl:ObjectProperty rdf:about="http://purl.org/provone/v1/ontology#wasPartOf">
+        <rdfs:label>wasPartOf</rdfs:label>
         <prov:category>trace-specification</prov:category>
-        <rdfs:comment>Specifies the structure of Execution instances, a parent Execution (associated with a Workflow) has child Executions (associated with Programs and subworkflows).</rdfs:comment>
+        <rdfs:comment>Specifies the structure of Execution instances, where a parent Execution (associated with a Workflow) had child Executions (associated with Programs and subworkflows).</rdfs:comment>
         <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Execution"/>
         <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Execution"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/provone/v1/ontology#outPortToDL -->
+    <!-- http://purl.org/provone/v1/ontology#controlledBy -->
 
-    <owl:ObjectProperty rdf:about="http://purl.org/provone/v1/ontology#outPortToDL">
-        <rdfs:label>outPortToDL</rdfs:label>
-        <rdfs:comment>Connects an OutputPort of a Program to a DataLink, which then can be linked to an InputPort of another Program.</rdfs:comment>
+    <owl:ObjectProperty rdf:about="http://purl.org/provone/v1/ontology#controlledBy">
+        <rdfs:label>controlledBy</rdfs:label>
         <prov:category>workflow-specification</prov:category>
-        <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#DataLink"/>
-        <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#OutputPort"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.org/provone/v1/ontology#sourcePToCL -->
-
-    <owl:ObjectProperty rdf:about="http://purl.org/provone/v1/ontology#sourcePToCL">
-        <rdfs:label>sourcePToCL</rdfs:label>
-        <prov:category>workflow-specification</prov:category>
-        <rdfs:comment>Relates a Controller to its source Program.</rdfs:comment>
+        <rdfs:comment>Relates a Program to the controller it is controlled by.</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Program"/>
         <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Controller"/>
     </owl:ObjectProperty>
@@ -180,59 +136,59 @@
 
 
     <!-- http://www.w3.org/ns/prov#used -->
-
+    <!-- Shouldn't need to define prov:used here. Commenting it out for deletion. CSJ
     <rdf:Description rdf:about="&prov;used">
         <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Data"/>
         <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Execution"/>
     </rdf:Description>
-    
+    -->
 
 
     <!-- http://www.w3.org/ns/prov#wasAssociatedWith -->
-
+    <!-- Shouldn't need to define prov:wasAssociatedWith here. Commenting it out for deletion. CSJ
     <rdf:Description rdf:about="&prov;wasAssociatedWith">
         <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Program"/>
         <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Execution"/>
     </rdf:Description>
-    
+    -->
 
 
     <!-- http://www.w3.org/ns/prov#wasAttributedTo -->
-
+    <!-- Shouldn't need to define prov:wasAttributedTo here. Commenting it out for deletion. CSJ
     <rdf:Description rdf:about="&prov;wasAttributedTo">
         <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Program"/>
         <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#User"/>
     </rdf:Description>
-    
+    -->
 
 
     <!-- http://www.w3.org/ns/prov#wasDerivedFrom -->
-
+    <!-- Shouldn't need to define prov:wasDerivedFrom here. Commenting it out for deletion. CSJ
     <rdf:Description rdf:about="&prov;wasDerivedFrom">
         <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Data"/>
         <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Data"/>
         <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Program"/>
         <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Program"/>
     </rdf:Description>
-    
+    -->
 
 
     <!-- http://www.w3.org/ns/prov#wasGeneratedBy -->
-
-    <rdf:Description rdf:about="&prov;wasGeneratedBy">
+    <!-- Shouldn't need to define prov:wasDerivedFrom here. Commenting it out for deletion. CSJ
+    <rdf:Description rdf:about="&prov;wasDerivedFrom">
         <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Data"/>
         <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Execution"/>
     </rdf:Description>
-    
+    -->
 
 
     <!-- http://www.w3.org/ns/prov#wasInformedBy -->
-
+    <!-- Shouldn't need to define prov:wasInformedBy here. Commenting it out for deletion. CSJ
     <rdf:Description rdf:about="&prov;wasInformedBy">
         <rdfs:domain rdf:resource="http://purl.org/provone/v1/ontology#Execution"/>
         <rdfs:range rdf:resource="http://purl.org/provone/v1/ontology#Execution"/>
     </rdf:Description>
-    
+    -->
 
 
     <!-- 
