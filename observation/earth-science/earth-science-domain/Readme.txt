@@ -1,5 +1,9 @@
 Core ontologies used to decribe earth science area concepts, includes:
 
+
+-----------------------------------------------------
+
+
 * SWEET(Semantic Web for Earth and Environmental Terminology)
 * ChEBI (Chemical Entities of Biological Interest)
 * OBO-E (Extension Observation Ontology)
