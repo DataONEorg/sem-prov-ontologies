@@ -639,7 +639,8 @@ table {
 
 </style>
 
-  <style>/*****************************************************************
+<style>
+/*****************************************************************
  * ReSpec 3 CSS
  * Robin Berjon - http://berjon.com/
  *****************************************************************/
@@ -769,361 +770,749 @@ body {
 
 
 <body>
-
-<div class="head">
-
-<h1 class="title" id="title">ProvONE: A PROV Extension Data Model for Scientific Workflow Provenance</h1>
-
-<h2 id="">Unofficial draft 27 March 2014</h2>
-
-  <dl>
-    
-<!--  
-    <dt>Editors:</dt>
-    
-<dd><a href="http://www.cs.ncl.ac.uk/people/Paolo.Missier">Paolo Missier</a>, Newcastle University</dd>
--->
-
-    
+  <div class="head">
+    <h1 class="title" id="title">
+      ProvONE: A PROV Extension Data Model for Scientific Workflow Provenance
+    </h1>
+    <h2 id="">15 January 2015</h2>
+    <dl>    
       <dt>Contributors:</dt>
-      
-      <dd><a href="https://sites.google.com/site/victorcuevasv/">V&iacute;ctor Cuevas-Vicentt&iacute;n</a>, UC Davis/University of New Mexico</dd>
-      <dd><a href="http://www.cs.ucdavis.edu/people/faculty/ludaescher.html">Bertram Lud&auml;scher</a>, UC Davis</dd>
-      <dd><a href="http://www.cs.ncl.ac.uk/people/Paolo.Missier">Paolo Missier</a>, Newcastle University</dd>
-      <dd><a href="http://semanticweb.org/wiki/Khalid_Belhajjame">Khalid Belhajjame</a>, PSL, Paris-Dauphine University, LAMSADE</dd>
-      <dd><a href="http://vgc.poly.edu/~fchirigati/">Fernando Chirigati</a>, New York University</dd>
-      <dd><a href="http://www.esd.ornl.gov/edss/people/y_wei.shtml">Yaxing Wei</a>, Oak Ridge National Laboratory</dd>
-      <dd><a href="http://scholar.google.com/citations?user=H2kYg4wAAAAJ&hl=en">Saumen Dey</a>, UC Davis</dd>
-      <dd><a href="http://daks.ucdavis.edu/?page_id=479">Parisa Kianmajd</a>, UC Davis</dd>
-      <dd><a href="http://www.cs.utah.edu/~dakoop/">David Koop</a>, New York University</dd>
-      <dd><a href="http://www.cs.gonzaga.edu/~bowers/">Shawn Bowers</a>, Gonzaga University</dd>
-      <dd><a href="http://swat.sdsc.edu/ilkay/">Ilkay Altintas</a>, UC San Diego</dd>
+      <dd>
+        <a href="https://sites.google.com/site/victorcuevasv/">
+          V&iacute;ctor Cuevas-Vicentt&iacute;n</a>, UC Davis/University of New Mexico
+      </dd>
+      <dd>
+        <a href="http://www.cs.ucdavis.edu/people/faculty/ludaescher.html">
+          Bertram Lud&auml;scher</a>, UC Davis
+      </dd>
+      <dd>
+        <a href="http://www.cs.ncl.ac.uk/people/Paolo.Missier">
+          Paolo Missier</a>, Newcastle University
+      </dd>
+      <dd>
+        <a href="http://semanticweb.org/wiki/Khalid_Belhajjame">
+        Khalid Belhajjame</a>, PSL, Paris-Dauphine University, LAMSADE
+      </dd>
+      <dd>
+        <a href="http://vgc.poly.edu/~fchirigati/">
+        Fernando Chirigati</a>, New York University
+      </dd>
+      <dd>
+        <a href="http://www.esd.ornl.gov/edss/people/y_wei.shtml">
+        Yaxing Wei</a>, Oak Ridge National Laboratory
+      </dd>
+      <dd>
+        <a href="http://scholar.google.com/citations?user=H2kYg4wAAAAJ&amp;hl=en">
+        Saumen Dey</a>, UC Davis
+      </dd>
+      <dd>
+        <a href="http://daks.ucdavis.edu/?page_id=479">
+          Parisa Kianmajd</a>, UC Davis
+      </dd>
+      <dd>
+        <a href="http://www.cs.utah.edu/~dakoop/">
+          David Koop</a>, New York University
+      </dd>
+      <dd>
+        <a href="http://www.cs.gonzaga.edu/~bowers/">
+          Shawn Bowers</a>, Gonzaga University
+      </dd>
+      <dd>
+        <a href="http://swat.sdsc.edu/ilkay/">
+          Ilkay Altintas</a>, UC San Diego
+      </dd>    
+    </dl>
+  
+    <p class="copyright">
+    This document is licensed under a <a class="subfoot" rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 License</a>.
+    </p>
+  
+    <hr>
+  </div> 
+  <section id="abstract" class="introductory"><h2>Abstract</h2>
+    <p>
+      Provenance describes the origin and processing history of an artifact. Data provenance is an
+      important form of metadata that explains how a particular data product was generated, by
+      detailing the steps in the computational process producing it. Provenance information brings
+      transparency and helps to audit and interpret data products. The state of the art scientific
+      workflow systems (e.g. Kepler, Taverna, VisTrails, etc.) provide environments for specifying
+      and enacting complex computational pipelines commonly referred to as scientific workflows. In
+      such systems, provenance information is automatically captured in the form of execution
+      traces. However, they often rely on proprietary formats that make the interchange of
+      provenance information difficult. Furthermore, the workflow itself, which represents very
+      useful information, may be disregarded in provenance traces. The evolution history of the
+      workflow (i.e. its provenance) can likewise be missing. To address these shortcomings we
+      propose ProvONE, a standard for scientific workflow provenance representation. ProvONE is
+      defined as an extension of the W3C recommended standard PROV, aiming to capture the most
+      relevant information concerning scientific workflow computational processes, and providing
+      extension points to accommodate the specificities of particular scientific workflow systems.
+    </p>
 
+    <p>
+      This document specifies the ProvONE model and details how its constituting parts are related
+      to the W3C PROV standard. The description provided is complemented by examples including
+      queries on ProvONE data.
+    </p>
+
+    <section id="sotd" class="introductory"><h2>Status of This Document</h2>
+          
+      <p>
+        <em>This document specifies a potential standard published publicly for evaluation and
+        possible adoption. However, it is not associated with and is not supported by any standards
+        organization.</em>
+      </p>
+            
+      <h4 id="please-send-comments">Please Send Comments</h4>
     
-  </dl>
-  
-<p class="copyright">
-This document is licensed under a <a class="subfoot" rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution
-3.0 License</a>.
-</p>
-  
-  <hr>
-</div> 
+      <p>
+        This document was published by the <a
+        href="https://www.dataone.org/working_groups/cyberinfrastructure"> DataONE
+        Cyberinfrastructure Working Group</a> as a proposal for a standard. If you wish to make
+        comments regarding this document, please send them to <a
+        href="sem-prov@dataone.org">sem-prov@dataone.org</a>. All comments are welcome.
+      </p>
+    
+    </section><!-- !!! End subsection: sotd -->
+
+  </section><!-- !!! End subsection: abstract -->
+
+  <!-- !!! The Table of contents should be added here  -->
 
 
-    <section id="abstract" class="introductory"><h2>Abstract</h2>
-<p>
-Provenance describes the origin and processing history of an artifact. Data provenance is an important form of metadata that
-explains how a particular data product was generated, by detailing the steps in the computational process producing it. Provenance
-information brings transparency and helps to audit and interpret data products. The state of the art scientific workflow systems
-(e.g. Kepler, Taverna, VisTrails, etc.) provide environments for specifying and enacting complex computational pipelines
-commonly referred to as scientific workflows. In such systems, provenance information is automatically captured in the form
-of execution traces. However, they often rely on proprietary formats that make the interchange of provenance information
-difficult. Furthermore, the workflow itself, which represents very useful information, may be disregarded in provenance traces.
-The evolution history of the workflow (i.e. its provenance) can likewise be missing. To address these shortcomings we propose ProvONE, a
-standard for scientific workflow provenance representation. ProvONE is defined as an extension of the W3C recommended standard PROV,
-aiming to capture the most relevant information concerning scientific workflow computational processes, and providing extension points to
-accommodate the specificities of particular scientific workflow systems.
-</p>
-
-<p>This document specifies the ProvONE model and details how its constituting parts are related to the W3C PROV standard. The
-description provided is complemented by examples including queries on ProvONE data.</p>
-
-<section id="sotd" class="introductory"><h2>Status of This Document</h2>
+  <section id="introduction"> 
+    <!--OddPage-->
+    <h2><span class="secno">1. </span>Introduction<br></h2> 
+    
+    <p> 
+      Historically, one of the main uses of provenance has been to support claims of attribution
+      and authenticity, and therefore of value for material objects (e.g. works of art,
+      manuscripts, etc.). In science, provenance is required to provide evidence in support of the
+      experimental results that underpin scientific publications. The importance of provenance
+      still applies in e-Science settings, where the data is obtained through computational
+      methods. In these cases, the provenance of the experimental outcome is typically a graph
+      structured account of the individual computational steps, which is recorded automatically, at
+      the level of detail specified by the system instrumentation. This form of provenance,
+      suitably encoded for machine processing, can then be exploited using a variety of graph query
+      and analysis tools.
+    </p>
+    
+    <p> 
+      This scenario, where each piece of scientific data obtained by a computational method is
+      associated with its provenance, is becoming increasingly prevalent. Regarding scientific
+      workflows, detailed execution traces are routinely collected by a number of broadly used
+      Workflow Management Systems (WfMSs) including Taverna, Kepler, VisTrails, Galaxy, e-Science
+      Central, Pegasus, and others. However, these systems often adopt proprietary models for
+      encoding the provenance traces captured by workflow executions. Moreover, they adopt
+      different models to specify the workflows themselves. Such heterogeneity makes it difficult
+      for a scientist to analyze and compare provenance traces captured using the same or similar
+      workflows that were specified and enacted using different systems. The absence of a standard
+      model for representing workflow provenance also means that opportunities for stitching the
+      traces produced by different workflows, and therefore assisting the scientist in her
+      analysis, are likely to be missed.
+    </p>
+    
+    <p>
+      This document presents ProvONE, a model for scientific workflow provenance that aims to
+      fulfill the requirements of the desired standard. The name originates from its development in
+      the context of the DataONE Project, which is creating a large scale and federated data
+      infrastructure serving the earth sciences community. Nevertheless, ProvONE is designed to
+      support a large variety of WfMSs that in turn are used by numerous scientific communities.
+    </p>
+    
+    
+    <section id="relation-to-other-standards"> 
+      <h3><span class="secno">1.1 </span>Relation to other standards</h3>
+          
+      <p>
+        The provenance community has made significant efforts in developing standard models that
+        can be used for capturing and publishing provenance of artifacts and resources on the Web.
+        These efforts resulted in, first, the Open Provenance Model (OPM) [<cite><a class="bibref"
+        href="#bib-MCF+11">MCF+11</a></cite>], and more recently, the W3C PROV model [<cite><a
+        class="bibref" href="#bib-PROV">PROV</a></cite>]. While such models are useful and are
+        being adopted by academics and industrials alike, as suggested by the number of PROV
+        implementations, they do not suffice for encoding scientific workflow provenance. The
+        reason being, that both OPM and PROV were developed as minimal models meant to be used for
+        tracking the provenance of resources on the Web regardless of their types. As such, they do
+        not provide all the concepts that are necessary for specifying workflows and encoding the
+        provenance of data products used and generated as a result of their execution.
+        Consequently, many WfMSs adopt their own provenance models, resulting in the aforementioned
+        loss of interoperability opportunities.
+      </p>
       
-        <p>
-          <em>This document specifies a potential standard published publicly for evaluation and possible adoption. However,
-          it is not associated with or is supported by any standards organisation.</em> 
-        </p>
-        
-  		<h4 id="please-send-comments">Please Send Comments</h4>
+      <p>
+        Thus the need arises for a new model that acts as a standard for encoding scientific
+        workflow provenance. Instead of creating such a model from scratch, the W3C PROV model can
+        be used as a starting point. A preliminary proposal following this direction was published
+        in [<cite><a class="bibref" href="#bib-MDB+13">MDB+13</a></cite>]; an independent extension
+        of PROV for scientific workflows is also presented in [<cite><a class="bibref"
+        href="#bib-CSdO+13">CSdO+13</a></cite>], as well as in [<cite><a class="bibref"
+        href="#bib-BKG+13">BKG+13</a></cite>] (focusing on workflow preservation). This document
+        aims to incorporate and standardize the ideas of these works, as well as additional
+        contributions, to derive an adequate standard that can be used by the scientific workflow
+        community.
+      </p>
+    </section><!-- !!! End subsection: relation-to-other-standards -->
 
-        <p>
-          This document was published by the <a href="http://www.dataone.org/working_groups/scientific-workflows-and-provenance-working-group">
-          DataONE Provenance Working Group</a> as a proposal for a standard.         
-          
-          If you wish to make comments regarding this document, please send them to 
-          <a href="dataone-provwg@googlegroups.com">dataone-provwg@googlegroups.com</a>.
-          
-        All comments are welcome.
-        
-        </p>
+    <section id="aspects-covered-by-provone"> 
+      <h3><span class="secno">1.2 </span>Aspects covered by ProvONE</h3>
+      
+      <p>
+        ProvONE aims to provide the fundamental information required to understand and analyze
+        scientific workflow-based computational experiments. Therefore, it covers the main aspects
+        that have been identified as relevant in the provenance literature. These correspond to
+        prospective and retrospective provenance [<cite><a class="bibref"
+        href="#bib-ZWF06">ZWF06</a></cite>] as well as process provenance [<cite><a class="bibref"
+        href="#bib-FSC+06">FSC+06</a></cite>]; additionally, some essential elements of data
+        structure are also considered. Each of these aspects is described next.
+      </p>
+      <ul>
+        <li>
+          <dfn id="dfn-prospective-provenance" class="internalDFN" 
+               title="prospective-provenance">Prospective provenance:</dfn>
+          captures the procedure or "recipe" required to produce a data artifact. In the case of
+          scientific workflows this corresponds to the workflow specification, which details the
+          steps that must be carried out to generate the artifact(s). The specification need not be
+          executable, thus enabling a degree of abstraction. This obeys to the fact that an
+          abstract specification is still useful to understand the various steps involved in the
+          process, and thus how the artifacts are generated if the process is executed as expected.
+        </li>
+        <li>
+        <dfn id="dfn-retrospective-provenance" class="internalDFN" 
+             title="retrospective-provenance">Retrospective provenance:</dfn>
+          comprises the steps that were executed in the generation of a data artifact, recordings
+          of the base inputs and intermediate data artifacts involved, and information about the
+          associated environment. For scientific workflows the environment is represented by the
+          WfMSs and the infrastructure that supports it. The execution steps correspond to the
+          execution of computational tasks by software agents, tasks that use and generate a series
+          of input and output data items, respectively. This information can be recorded at varying
+          degrees of detail and granularity, depending on how the recording is instrumented on the
+          system.
+        </li>
+        <li>
+          <dfn id="dfn-process-provenance" class="internalDFN" 
+               title="process-provenance">Process provenance:</dfn>
+          is related to the steps, often guided by trial and error, by which the process that is
+          used to create the data product is itself defined. This corresponds to the various
+          versions of a workflow specification, as it undergoes changes in a process referred to as
+          workflow evolution. With the detailed provenance of the workflow, scientists are able to
+          understand the various changes that were carried out to generate the desired data
+          products.
+        </li>
+        <li>
+          <dfn id="dfn-data-structure" class="internalDFN" 
+               title="data-structure">Data structure:</dfn>
+          addresses the most relevant aspects of how the data both used and produced by a
+          computational process is organized and represented. For scientific workflows this implies
+          the inputs and outputs of the various tasks that form part of the workflow.
+        </li>
+      </ul>
+    
+    </section><!-- !!! End subsection: aspects-covered-by-provone -->
 
-</section><!-- !!! End subsection: sotd -->
+    <section class="informative" id="structure-of-this-document"> 
+      <h3><span class="secno">1.3 </span>Structure of this Document</h3>
+      
+      <p><a href="#section-prov-one-overview">Section 2</a> 
+        provides an overview of the ProvONE conceptual model, covering the aspects outlined in <a
+        href="#aspects-covered-by-provone">Section 1.2</a>. The conceptual model of ProvONE is
+        given using the Unified Modeling Language [<cite><a class="bibref"
+        href="#bib-UML">UML</a></cite>].
+      </p>
+      
+      <p>
+        <a href="#prov-one-model-components">Section 3</a> provides a detailed characterization of
+        the various components of ProvONE, which is serialized as an OWL 2 ontology. It clarifies
+        how the ProvONE concepts are related to the W3C PROV concepts, accompanying the
+        descriptions with examples.
+      </p>
+      
+      <p>
+        <a href="#additional-resources">Section 4</a> gives references to additional resources that
+        form part of the ProvONE standard.
+      </p>
+      
+    </section><!-- !!! End subsection: structure-of-this-document -->
 
-</section><!-- !!! End subsection: abstract -->
+    <section class="informative" id="namespaces"> 
+      <h3><span class="secno">1.4 </span>Namespaces</h3>
+    
+      <p>
+        The following namespaces and prefixes are used throughout this document.
+      </p>
+      <div style="text-align: left;">
+        <table class="thinborder" style="margin-left: auto; margin-right: auto;">
+          <caption id="namespace-table">
+            <span>Table 1<sup><a class="internalDFN" href="#namespace-table">
+            <span class="diamond"> ◊:</span></a></sup> </span>
+            Prefix and Namespaces used in this specification
+          </caption> <!-- Table 1-->
+          <tbody>
+            <tr>
+              <td><b>prefix</b></td>
+              <td><b>namespace IRI</b></td>
+              <td><b>definition</b></td>
+            </tr>
+            <tr>
+              <td>prov</td>
+              <td>http://www.w3.org/ns/prov#</td>
+              <td>The PROV namespace [
+                <cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
+              </td>
+            </tr>
+            <tr>
+              <td>provone</td>
+              <td>http://purl.org/provone/2015/01/ontology#</td>
+              <td>The ProvONE namespace [<cite><a class="bibref" href="#">ProvONE</a></cite>]</td>
+            </tr>
+            <tr>
+              <td>xsd</td>
+              <td>http://www.w3.org/2000/10/XMLSchema#</td>
+              <td>XML Schema namespace [
+                <cite><a class="bibref" href="#bib-XMLSCHEMA11-2">XMLSCHEMA11-2</a></cite>]
+              </td>
+            </tr>
+            <tr>
+              <td>rdf</td>
+              <td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td>
+              <td>The RDF namespace [
+                <cite><a class="bibref" href="#bib-RDF-CONCEPTS">RDF-CONCEPTS</a></cite>]
+              </td>
+            </tr>
+            <tr>
+              <td>rdfs</td>
+              <td>http://www.w3.org/2000/01/rdf-schema#</td>
+              <td>The RDFS namespace [
+                <cite><a class="bibref" href="#bib-RDF-SCHEMA">RDF-SCHEMA</a></cite>]
+              </td>
+            </tr>
+            <tr>
+              <td>owl</td>
+              <td>http://www.w3.org/2002/07/owl#</td>
+              <td>OWL 2 specification namespace [
+                <cite><a class="bibref" href="#bib-OWL2">OWL2</a></cite>]
+              </td>
+            </tr>
+            <tr>
+              <td>dcterms</td>
+              <td>http://purl.org/dc/terms/</td>
+              <td>Dublin Core Metadata Elements namespace [
+                <cite><a class="bibref" href="#bib-DC-RDF">DC-RDF</a></cite>]
+              </td>
+            </tr>
+            <tr>
+              <td>wfms</td>
+              <td>http://www.wfms.org/registry.xsd</td>
+              <td>Placeholder example WfMS namespace</td>
+            </tr>
+            <tr>
+              <td>:</td>
+              <td>http://example.com/</td>
+              <td>Artificial namespace for examples </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>  
+    </section><!-- !!! End subsection: namespaces -->
 
-<!-- !!! The Table of contents should be added here  -->
+  </section><!-- !!! End section: introduction -->
 
+  <section class="informative" id="section-provone-overview"> 
+    <!--OddPage-->
+    <h2><span class="secno">2. </span>ProvONE Conceptual Model Overview</h2>
 
-<section id="introduction"> 
-      <!--OddPage--><h2><span class="secno">1. </span>Introduction<br>
-</h2> 
-
-<p> 
-Historically, one of the main uses of provenance has been to support claims of attribution and authenticity, and therefore of value
-for material objects (e.g. works of art, manuscripts, etc.). In science, provenance is required to provide evidence in support of
-the experimental results that underpin scientific publications. The importance of provenance still applies in e-Science settings,
-where the data is obtained through computational methods. In these cases, the provenance of the experimental outcome is typically a
-graph structured account of the individual computational steps, which is recorded automatically, at the level of detail specified by
-the system instrumentation. This form of provenance, suitably encoded for machine processing, can then be exploited using a variety
-of graph query and analysis tools.
-</p>
-
-<p> 
-This scenario, where each piece of scientific data obtained by a computational method is associated with its provenance, is becoming
-increasingly prevalent. Regarding scientific workflows, detailed execution traces are routinely collected by a number of broadly
-used Workflow Management Systems (WfMSs) including Taverna, Kepler, VisTrails, Galaxy, e-Science Central, Pegasus, and others.
-However, these systems often adopt proprietary models for encoding the provenance traces captured by workflow executions. Moreover,
-they adopt different models to specify the workflows themselves. Such heterogeneity makes it difficult for a scientist to analyze
-and compare provenance traces captured using the same or similar workflows that were specified and enacted using different systems.
-The absence of a standard model for representing workflow provenance also means that opportunities for stitching the traces produced
-by different workflows, and therefore assisting the scientist in her analysis, are likely to be missed.
-</p>
-
-<p>
-This document presents ProvONE, a model for scientific workflow provenance that aims to fulfill the requirements of the desired
-standard. The name originates from its development in the context of the DataONE Project, which is creating a large scale and
-federated data infrastructure serving the Earth sciences community. Nevertheless, ProvONE is designed to support a large variety
-of WfMSs that in turn are used by numerous scientific communities.
-</p>
-
-
-<section id="relation-to-other-standards"> 
-<h3><span class="secno">1.1 </span>Relation to other standards</h3>
-
-
-<p>
-The provenance community has made significant efforts in developing standard models that can be used for capturing and publishing
-provenance of artifacts and resources on the Web. These efforts resulted in, first, the Open Provenance Model (OPM) 
-[<cite><a class="bibref" href="#bib-MCF+11">MCF+11</a></cite>], and more
-recently, the W3C PROV model [<cite><a class="bibref" href="#bib-PROV">PROV</a></cite>]. While such models are useful and are being 
-adopted by academics and industrials alike, as suggested
-by the number of PROV implementations, they do not suffice for encoding scientific workflow provenance. The reason being, that both
-OPM and PROV were developed as minimal models meant to be used for tracking the provenance of resources on the Web regardless of
-their types. As such, they do not provide all the concepts that are necessary for specifying workflows and encoding the provenance
-of data products used and generated as a result of their execution. Consequently, many WfMSs adopt their own provenance models,
-resulting in the aforementioned loss of interoperability opportunities.
-</p>
-
-<p>
-Thus the need arises for a new model that acts as a standard for encoding scientific workflow provenance. Instead of creating
-such a model from scratch, the W3C PROV model can be used as a starting point. A preliminary proposal following this direction
-was published in [<cite><a class="bibref" href="#bib-MDB+13">MDB+13</a></cite>]; an independent extension of PROV for
-scientific workflows is also presented in [<cite><a class="bibref" href="#bib-CSdO+13">CSdO+13</a></cite>], as well as in 
-[<cite><a class="bibref" href="#bib-BKG+13">BKG+13</a></cite>] (focusing on workflow preservation). This document aims
-to incorporate and standardize the ideas of these works, as well as additional contributions, to derive an adequate standard
-that can be used by the scientific workflow community.
-</p>
-
-</section><!-- !!! End subsection: relation-to-other-standards -->
-
-
-<section id="aspects-covered-by-provone"> 
-<h3><span class="secno">1.2 </span>Aspects covered by ProvONE</h3>
-
-
-<p>ProvONE aims to provide the fundamental information required to understand and analyze scientific workflow-based
-computational experiments. Therefore, it covers the main aspects that have been identified as relevant in the provenance
-literature. These correspond to prospective and retrospective provenance [<cite><a class="bibref" href="#bib-ZWF06">ZWF06</a></cite>] as 
-well as process provenance [<cite><a class="bibref" href="#bib-FSC+06">FSC+06</a></cite>]; additionally,
-some essential elements of data structure are also considered. Each of these aspects is described next.
-</p>
-<ul>
-<li>
-<dfn id="dfn-prospective-provenance" class="internalDFN" title="prospective-provenance">Prospective provenance:</dfn>
-captures the procedure or "recipe" required to produce a data artifact. In the case of scientific workflows
-this corresponds to the workflow specification, which details the steps that must be carried out to generate the artifact(s).
-The specification need not be executable, thus enabling a degree of abstraction. This obeys to the fact that an abstract
-specification is still useful to understand the various steps involved in the process, and thus how the artifacts are
-generated if the process is executed as expected.
-</li>
-<li>
-<dfn id="dfn-retrospective-provenance" class="internalDFN" title="retrospective-provenance">Retrospective provenance:</dfn>
-comprises the steps that were executed in the generation of a data artifact, recordings of the base inputs and intermediate data artifacts
-involved, and information about the associated environment.
-For scientific workflows the environment is represented by the WfMSs and the infrastructure that supports it. The execution
-steps correspond to the execution of computational tasks by software agents, tasks that use and generate a series of input and output 
-data items, respectively. This information can be recorded at varying degrees
-of detail and granularity, depending on how the recording is instrumented on the system.
-</li>
-<li>
-<dfn id="dfn-process-provenance" class="internalDFN" title="process-provenance">Process provenance:</dfn>
-is related to the steps, often guided by trial and error, by which the process that is used to create the data product
-is itself defined. This corresponds to the various versions of a workflow specification, as it undergoes changes in a process referred
-to as workflow evolution. With the detailed provenance of the workflow, scientists are able to understand the various changes
-that were carried out to generate the desired data products.
-</li>
-<li>
-<dfn id="dfn-data-structure" class="internalDFN" title="data-structure">Data structure:</dfn>
-addresses the most relevant aspects of how the data both used and produced by a computational process is organized and represented.
-For scientific workflows this implies the inputs and outputs of the various tasks that form part of the workflow.
-</li>
-</ul>
-
-</section><!-- !!! End subsection: aspects-covered-by-provone -->
-
-<section class="informative" id="structure-of-this-document"> 
-<h3><span class="secno">1.3 </span>Structure of this Document</h3>
-
-<p><a href="#section-prov-one-overview">Section 2</a> 
-provides an overview of the ProvONE conceptual model, covering the aspects outlined in <a href="#aspects-covered-by-provone">Section 1.2</a>.
-The conceptual model of ProvONE is given using the Unified Modeling Language [<cite><a class="bibref" href="#bib-UML">UML</a></cite>].
-</p>
-
-<p><a href="#prov-one-model-components">Section 3</a> provides a detailed characterization of the various components of ProvONE,
-which is serialized as an OWL 2 ontology. It clarifies how the ProvONE concepts are related to the W3C PROV concepts, accompanying the
-descriptions with examples.</p>
-
-<p><a href="#additional-resources">Section 4</a> gives references to additional resources that form part of the ProvONE standard.</p>
-
-</section><!-- !!! End subsection: structure-of-this-document -->
-
-<section class="informative" id="namespaces"> 
-<h3><span class="secno">1.4 </span>Namespaces</h3>
-
-<p>
-The following namespaces and prefixes are used throughout this document.
-
-</p><div style="text-align: left;">
+    <p>
+      This section introduces ProvONE informally through a UML class diagram representing its
+      conceptual model and brief descriptions of each of the aspects covered by the model.
+    </p>
+    
+    <p>
+      The ProvONE conceptual model is illustrated by the UML diagram of <a href="#provone-uml"
+      class="fig-ref">Figure 1</a>. All classes have a correspondent PROV type denoted by a UML
+      stereotype (e.g. &laquo;entity&raquo;), whereas this is the case for only a subset of the
+      associations (e.g. &laquo;used&raquo;). Each of the aspects covered by ProvONE is briefly
+      described next.
+    </p>
+    
+    <div style="text-align: center; ">
+      <span class="figure" id="provone-uml" style="max-width: 70%; ">
+        <img src="uml/model.svg" alt="ProvONE Conceptual Model UML Diagram" 
+             style="max-width: 100%; " /><br>
+        <span class="figcaption" id="provone-uml">Figure 1
+          <sup>
+            <a class="internalDFN" href="#provone-conceptual-model">
+              <span class="diamond"> ◊:</span>
+            </a>
+          </sup>
+          ProvONE Conceptual Model UML Diagram
+        </span>
+      </span>
+    </div>
+    
+    <p>
+      <b>Workflow Representation</b>. The various tasks that form part of a workflow are
+      represented by the <em>Program</em> class. <em>Programs</em> can be either atomic or
+      composite, the later case specified through the <em>hasSubProgram</em> self association. A
+      given program can be distinguished as a <em>Workflow</em>. Each <em>Program</em> may have a
+      series of <em>Ports</em> that function as input or output ports, while the ports from the
+      various <em>Programs</em> are connected through PROV <em>Locations</em>. Note that both input
+      and output ports may be associated with multiple <em>Locations</em>, thus allowing workflow
+      models in which a single output is copied and sent to multiple destinations, as well as in
+      which tasks take inputs from different sources through a single input port.
+    </p>
+    <p>
+      In order to specify executable instances of a <em>Workflow</em>, default parameters can be
+      defined for some of its constituting <em>Programs</em>. The default parameters are
+      represented by <em>Entities</em> that will described shortly. A <em>Controller</em>
+      class can be used to specify that the execution of a given <em>Program</em> is controlled by
+      another Program, which allows for differing models of computation. For instance, in a
+      synchronous dataflow model, a given <em>Program</em> may only start once the execution of a
+      preceding <em>Program</em> terminates. A particular <em>Program</em> that specifies a
+      <em>Workflow</em> or part of it can be attributed to <em>Author(s)</em> that assume
+      responsibility for its creation.
+    </p>    
+    <p>
+      <b>Trace Representation</b>. The execution traces associated with a given <em>Workflow</em>
+      are represented in ProvONE through the <em>Execution</em> class. Each <em>Execution</em>
+      instance represents the execution of a particular <em>Program</em> (its <em>Plan</em>), which
+      itself may be a <em>Workflow</em>, and may also be associated with a <em>User</em>
+      responsible for the execution. For the execution of a <em>Program</em>, a series of input
+      <em>Data</em> items are read from the input <em>Ports</em> and are used to generate a series
+      of output <em>Entity</em> items sent through the output <em>Ports</em>. These outputs may be
+      <em>Data</em>, <em>Visualization</em>, or <em>Document</em> items, depending on the goals of
+      the <em>Workflow</em>. 
+      <!-- Needs clarification CSJ -->
+      <span style="color: #D52114">
+      Whenever an <em>Entity</em> item is sent from an input <em>Port</em>
+      to an output <em>Port</em>, this event is recorded through the <em>atLocation</em> property
+      between the <em>Entity</em> item and the <em>Location</em> between the two ports. In this
+      manner, the graph structure that represents the provenance of the workflow results is
+      generated.
+    </span>
+    </p>    
+    <p>
+      <b>Data Structure Representation</b>. The various entities associated with workflow instances
+      and traces are represented by the <em>Data</em> class, the <em>Visualization</em> class, or
+      the <em>Document</em> class. The <em>Data</em> class is defined to be generic and represents
+      data items of various types (e.g. XML, JSON, CSV files, etc.). <em>Visualizations</em> are a
+      differentiated class intended to represent various visualization items often output from
+      workflows (JPG, PNG, SVG, MP4, etc.). The <em>Document</em> class is a generic representation
+      of a published or unpublished article or report that was created as a result of a given
+      <em>Execution</em> of a <em>Program</em> or <em>Workflow</em>. In the ProvONE model, each
+      <em>Entity</em> subclass instance is uniquely identifiable regardless of it sharing the same
+      value as another <em>Entity</em> instance. Although specific data types are not covered
+      directly in ProvONE, collections of <em>Entity</em> items are represented through the
+      <em>Collection</em> class. A <em>Collection</em> may in turn represent a set, bag, list or
+      another variant of a group of items.
+    </p>    
+    <p>
+      <b>Workflow Evolution Representation</b>. The specific changes that are performed during the
+      specification of a <em>Workflow</em> are not modeled directly in ProvONE, since these are
+      expected to vary among different WfMSs. However, the different versions of a
+      <em>Workflow</em> form a derivation tree that can be represented using PROV's
+      <em>wasDerivedFrom</em> association, as is explained in the next section.
+    </p>    
+    <p>
+      The ProvONE constructs are summarized in <a href="#overview-provone-constructs">Table 2</a>.
+      The first column lists the aspects covered by ProvONE, serving to indicate the various
+      constructs associated with each aspect. The second and third columns indicate the type of
+      each construct as presented in the UML class diagram (class or association) and the construct
+      name, respectively. The last column contains a link to each construct specification in <a
+      href="#section-provone-specification">Section 3</a>.
+    </p>
+    
+    <div style="text-align: left;">
 <table class="thinborder" style="margin-left: auto; margin-right: auto;">
-<caption id="namespace-table"><span>Table 1<sup><a class="internalDFN" href="#namespace-table"><span class="diamond"> ◊:</span></a></sup> </span>Prefix and Namespaces used in this specification</caption> <!-- Table 1-->
-<tbody><tr><td><b>prefix</b></td><td><b>namespace IRI</b></td> <td><b>definition</b></td></tr>
-<tr><td>prov</td><td>http://www.w3.org/ns/prov#</td><td>The PROV namespace [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]</td></tr>
-<tr><td>provone</td><td>http://purl.org/provone</td><td>The ProvONE namespace [<cite><a class="bibref" href="#">ProvONE</a></cite>]</td></tr>
-<tr><td>xsd</td><td>http://www.w3.org/2000/10/XMLSchema#</td><td>XML Schema namespace [<cite><a class="bibref" href="#bib-XMLSCHEMA11-2">XMLSCHEMA11-2</a></cite>]</td></tr>
-<tr><td>rdf</td><td>http://www.w3.org/1999/02/22-rdf-syntax-ns#</td><td>The RDF namespace [<cite><a class="bibref" href="#bib-RDF-CONCEPTS">RDF-CONCEPTS</a></cite>]</td></tr>
-<tr><td>rdfs</td><td>http://www.w3.org/2000/01/rdf-schema#</td><td>The RDFS namespace [<cite><a class="bibref" href="#bib-RDF-SCHEMA">RDF-SCHEMA</a></cite>]</td></tr>
-<tr><td>owl</td><td>http://www.w3.org/2002/07/owl#</td><td>OWL 2 specification namespace [<cite><a class="bibref" href="#bib-OWL2">OWL2</a></cite>]</td></tr>
-<tr><td>dcterms</td><td>http://purl.org/dc/terms/</td><td>Dublin Core Metadata Elements namespace [<cite><a class="bibref" href="#bib-DC-RDF">DC-RDF</a></cite>]</td></tr>
-<tr><td>wfms</td><td>http://www.wfms.org/registry.xsd</td><td>Placeholder example WfMS namespace</td></tr>
-<tr><td>:</td><td>http://example.com/</td><td>Artificial namespace for examples </td></tr>
-</tbody></table>
-</div>
+  <caption id="overview-provone-constructs">
+    <span>Table 2 <sup><a class="internalDFN" href="#overview-provone-constructs"><span class="diamond">◊:</span></a></sup></span> ProvONE Constructs
+  </caption>
+  <!-- Table 2 -->
+  <tbody>
+    <tr>
+      <td>
+        <b>ProvONE Aspect</b>
+      </td>
+      <td style="text-align: center;">
+        <b>Construct type</b>
+      </td>
+      <td style="text-align: center;">
+        <b>Name</b>
+      </td>
+      <td>
+        <b>Specification</b>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="19" style="text-align: center;">
+        Workflow
+      </td>
+      <td rowspan="7" style="text-align: center;">
+        Class
+      </td>
+      <td>
+        <a title="dfn-Program" class="internalDFN">Program</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#program-specification"><span>Section 3.1.1</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a title="dfn-Port" class="internalDFN">Port</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#inputport-specification"><span>Section 3.1.2</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a title="dfn-Entity" class="internalDFN">OutputPort</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#outputport-specification"><span>Section 3.1.3</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a title="dfn-Location" class="internalDFN">Location</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#datalink-specification"><span>Section 3.1.4</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a title="dfn-Entity" class="internalDFN">SeqCtrlLink</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#seqctrllink-specification"><span>Section 3.1.5</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a title="dfn-Entity" class="internalDFN">Workflow</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#workflow-specification"><span>Section 3.1.6</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a title="dfn-agent" class="internalDFN">User</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#user-specification"><span>Section 3.1.7</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="12" style="text-align: center;">
+        Association
+      </td>
+      <td>
+        <a title="dfn-agent" class="internalDFN">hasSubProcess</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#hassubprocess-specification"><span>Section 3.1.8</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a title="dfn-agent" class="internalDFN">sourcePToCL</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#sourceptocl-specification"><span>Section 3.1.9</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a title="dfn-agent" class="internalDFN">CLtoDestP</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#cltodestp-specification"><span>Section 3.1.10</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a title="dfn-agent" class="internalDFN">hasInPort</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#hasinport-specification"><span>Section 3.1.11</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a title="dfn-agent" class="internalDFN">hasOutPort</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#hasoutport-specification"><span>Section 3.1.12</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a title="dfn-agent" class="internalDFN">hasDefaultParam</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#hasdefaultparam-specification"><span>Section 3.1.13</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a title="dfn-agent" class="internalDFN">DLToInPort</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#dltoinport-specification"><span>Section 3.1.14</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a title="dfn-agent" class="internalDFN">outPortToDL</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#outporttodl-specification"><span>Section 3.1.15</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a title="dfn-agent" class="internalDFN">inPortToDL</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#inporttodl-specification"><span>Section 3.1.16</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a title="dfn-agent" class="internalDFN">DLToOutPort</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#dltooutport-specification"><span>Section 3.1.17</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a title="dfn-agent" class="internalDFN">wasAttributedTo</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#wasattributedto-specification"><span>Section 3.1.18</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a title="dfn-agent" class="internalDFN">wasDerivedFrom</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#wasderivedfrom-specification"><span>Section 3.1.19</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="7" style="text-align: center;">
+        Trace
+      </td>
+      <td rowspan="1" style="text-align: center;">
+        Class
+      </td>
+      <td>
+        <a title="wasGeneratedBy" class="internalDFN">ProcessExec</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#processexec-specification"><span>Section 3.2.1</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="6" style="text-align: center;">
+        Association
+      </td>
+      <td>
+        <a title="dfn-agent" class="internalDFN">dataOnLink</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#dataonlink-specification"><span>Section 3.2.2</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a title="dfn-agent" class="internalDFN">used</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#used-specification"><span>Section 3.2.3</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a title="dfn-agent" class="internalDFN">wasGeneratedBy</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#wasgeneratedby-specification"><span>Section 3.2.4</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a title="dfn-agent" class="internalDFN">wasAssociatedWith</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#wasassociatedwith-specification"><span>Section 3.2.5</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a title="dfn-agent" class="internalDFN">wasInformedBy</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#wasinformedby-specification"><span>Section 3.2.6</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a title="dfn-agent" class="internalDFN">isPartOf</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#ispartof-specification"><span>Section 3.2.7</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="4" style="text-align: center;">
+        Data Structure
+      </td>
+      <td rowspan="2" style="text-align: center;">
+        Class
+      </td>
+      <td>
+        <a title="wasGeneratedBy" class="internalDFN">Data</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#data-specification"><span>Section 3.3.1</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a title="wasInformedBy" class="internalDFN">Collection</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#collection-specification"><span>Section 3.3.2</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td rowspan="2" style="text-align: center;">
+        Association
+      </td>
+      <td>
+        <a title="dfn-agent" class="internalDFN">wasDerivedFrom</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#wasderivedfrom-specification-data"><span>Section 3.3.3</span></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a title="dfn-agent" class="internalDFN">hadMember</a>
+      </td>
+      <td>
+        <a class="section-ref" href="#hadmember-specification"><span>Section 3.3.4</span></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    </div>
 
-
-</section><!-- !!! End subsection: namespaces -->
-
-
-</section><!-- !!! End section: introduction -->
-
-<section class="informative" id="section-provone-overview"> 
-<!--OddPage--><h2><span class="secno">2. </span>ProvONE Conceptual Model Overview</h2>
-
-<p>This section introduces ProvONE informally through an UML class diagram representing its conceptual model and brief descriptions of each of
-the aspects covered by the model.
-</p>
-
-<p>The ProvONE conceptual model is illustrated by the UML diagram of <a href="#provone-uml" class="fig-ref">Figure 1</a>.
-All classes have a correspondant PROV type denoted by a UML stereotype (e.g. &laquo;entity&raquo;), whereas this is the case
-for only a subset of the associations (e.g. &laquo;used&raquo;). Each of the aspects covered by ProvONE is briefly described next.
-</p>
-
-
-<div style="text-align: center; ">
- <span class="figure" id="provone-uml" style="max-width: 70%; ">
-<img src="uml/model.svg" alt="ProvONE Conceptual Model UML Diagram" style="max-width: 100%; "><br>
-<span class="figcaption" id="provone-uml">Figure 1<sup><a class="internalDFN" href="#provone-conceptual-model">
-<span class="diamond"> ◊:</span></a></sup> ProvONE Conceptual Model UML Diagram</span>
-  </span>
-</div>
-
-<p><b>Workflow Representation</b>. The various tasks that form part of a workflow are represented by the <em>Process</em> class. <em>Processes</em> can be either atomic or
-composite, the later case specified through the <em>hasSubProcess</em> self association. A given process can be distinguished as a
-<em>Workflow</em>. Each <em>Process</em> has a series of <em>InputPorts</em> and <em>OutputPorts</em>, while the ports from the various
-<em>Processes</em> are connected through <em>DataLinks</em>. Note that both input and output ports can be associated with multiple
-<em>DataLinks</em>, thus allowing workflow models in which a single output is copied and sent to multiple destinations as well as in which 
-tasks take inputs from different sources through a single input port.
-</p>
-<p>
-In order to specify executable instances of a <em>Workflow</em>, default parameters can be defined for some of its constituting <em>Processes</em>.
-The default parameters are represented by <em>Data</em> elements that will described shortly.
-A sequential control link, denoted by the <em>SeqCtrlLink</em> class, can be used to specify that the execution of a given <em>Process</em>
-can only start once the execution of a preceding <em>Process</em> terminates.
-Finally, a particular <em>Process</em> that specifies a workflow or part of it can be 
-associated with a <em>User</em> that assumes responsibility for its creation.
-</p>
-
-<p>
-<b>Trace Representation</b>. The execution traces associated with a given <em>Workflow</em> are represented in ProvONE through the <em>ProcessExec</em> class. Each
-<em>ProcessExec</em> instance represents the execution of a particular <em>Process</em>, which itself may be a <em>Workflow</em>.
-For the execution of a <em>Process</em>, a series of input <em>Data</em> items are read from the <em>InputPorts</em> and used to generate a series
-of output <em>Data</em> items sent through the <em>OutputPorts</em>. Whenever a <em>Data</em> item is sent from an <em>InputPort</em> to an
-<em>OutputPort</em>, this event is recorded through the <em>dataOnLink</em> association between the <em>Data</em> item and the <em>DataLink</em>
-between the two ports. In this manner, the graph structure that represents the provenance of the workflow results is generated.
-</p>
-
-<p>
-<b>Data Structure Representation</b>. The data elements associated with workflow instances and traces are represented by the <em>Data</em> class. This class is defined to be generic
-and to represent data items of various types (e.g. XML, JSON, CSV files, etc.). In the ProvONE model, each <em>Data</em> instance is uniquely
-identifiable regardless of it sharing the same value as another <em>Data</em> instance. Although specific data types are not covered directly in
-ProvONE, collections of <em>Data</em> items are represented through the <em>Collection</em> class. A <em>Collection</em> may in turn represent
-a set, bag, list or another variant of a group of items.
-</p>
-
-<p>
-<b>Workflow Evolution Representation</b>. The specific changes that are performed during the specification of a <em>Workflow</em> are not modeled directly in ProvONE, since these
-are expected to vary among different WfMSs. However, the different versions of a <em>Workflow</em> form a derivation tree that can be represented
-using PROV's <em>wasDerivedFrom</em> association, as is explained in the next section.
-</p>
-
-<p>
-The ProvONE constructs are summarized in <a href="#overview-provone-constructs">Table 2</a>.
-The first column lists the aspects covered by ProvONE, serving to indicate the various constructs associated with each aspect. The second and
-third columns indicate the type of each construct as presented in the UML class diagram (class or association) and the construct name,
-respectively. The last column contains a link to each construct specification in <a href="#section-provone-specification">Section 3</a>. 
-</p>
-
-<div style="text-align: left;">
-<table class="thinborder" style="margin-left: auto; margin-right: auto;">
-<caption id="overview-provone-constructs"><span>Table 2<sup><a class="internalDFN" href="#overview-provone-constructs"><span class="diamond"> ◊:</span></a></sup> </span>ProvONE Constructs</caption> <!-- Table 2 -->
-<tbody><tr><td><b>ProvONE Aspect</b></td><td style="text-align: center;"><b>Construct type</b></td><td style="text-align: center;"><b>Name</b></td><td><b>Specification</b></td></tr>
-
-<tr><td rowspan="19" style="text-align: center;">Workflow</td><td rowspan="7" style="text-align: center;">Class</td>
-	<td><a title="dfn-Entity" class="internalDFN">Process</a></td><td><a class="section-ref" href="#process-specification"><span>Section 3.1.1</span></a></td></tr>
-	<tr><td><a title="dfn-Activity" class="internalDFN">InputPort</a></td><td><a class="section-ref" href="#inputport-specification"><span>Section 3.1.2</span></a></td></tr>
-	<tr><td><a title="dfn-Entity" class="internalDFN">OutputPort</a></td><td><a class="section-ref" href="#outputport-specification"><span>Section 3.1.3</span></a></td></tr>
-	<tr><td><a title="dfn-Entity" class="internalDFN">DataLink</a></td><td><a class="section-ref" href="#datalink-specification"><span>Section 3.1.4</span></a></td></tr>
-	<tr><td><a title="dfn-Entity" class="internalDFN">SeqCtrlLink</a></td><td><a class="section-ref" href="#seqctrllink-specification"><span>Section 3.1.5</span></a></td></tr>
-	<tr><td><a title="dfn-Entity" class="internalDFN">Workflow</a></td><td><a class="section-ref" href="#workflow-specification"><span>Section 3.1.6</span></a></td></tr>
-	<tr><td><a title="dfn-agent" class="internalDFN">User</a></td><td><a class="section-ref" href="#user-specification"><span>Section 3.1.7</span></a></td></tr>
-	<tr><td rowspan="12" style="text-align: center;">Association</td>
-	<td><a title="dfn-agent" class="internalDFN">hasSubProcess</a></td><td><a class="section-ref" href="#hassubprocess-specification"><span>Section 3.1.8</span></a></td></tr>
-	<tr><td><a title="dfn-agent" class="internalDFN">sourcePToCL</a></td><td><a class="section-ref" href="#sourceptocl-specification"><span>Section 3.1.9</span></a></td></tr>
-	<tr><td><a title="dfn-agent" class="internalDFN">CLtoDestP</a></td><td><a class="section-ref" href="#cltodestp-specification"><span>Section 3.1.10</span></a></td></tr>
-	<tr><td><a title="dfn-agent" class="internalDFN">hasInPort</a></td><td><a class="section-ref" href="#hasinport-specification"><span>Section 3.1.11</span></a></td></tr>
-	<tr><td><a title="dfn-agent" class="internalDFN">hasOutPort</a></td><td><a class="section-ref" href="#hasoutport-specification"><span>Section 3.1.12</span></a></td></tr>
-	<tr><td><a title="dfn-agent" class="internalDFN">hasDefaultParam</a></td><td><a class="section-ref" href="#hasdefaultparam-specification"><span>Section 3.1.13</span></a></td></tr> 
-	<tr><td><a title="dfn-agent" class="internalDFN">DLToInPort</a></td><td><a class="section-ref" href="#dltoinport-specification"><span>Section 3.1.14</span></a></td></tr>
-	<tr><td><a title="dfn-agent" class="internalDFN">outPortToDL</a></td><td><a class="section-ref" href="#outporttodl-specification"><span>Section 3.1.15</span></a></td></tr>
-	<tr><td><a title="dfn-agent" class="internalDFN">inPortToDL</a></td><td><a class="section-ref" href="#inporttodl-specification"><span>Section 3.1.16</span></a></td></tr>
-	<tr><td><a title="dfn-agent" class="internalDFN">DLToOutPort</a></td><td><a class="section-ref" href="#dltooutport-specification"><span>Section 3.1.17</span></a></td></tr>
-	<tr><td><a title="dfn-agent" class="internalDFN">wasAttributedTo</a></td><td><a class="section-ref" href="#wasattributedto-specification"><span>Section 3.1.18</span></a></td></tr>
-	<tr><td><a title="dfn-agent" class="internalDFN">wasDerivedFrom</a></td><td><a class="section-ref" href="#wasderivedfrom-specification"><span>Section 3.1.19</span></a></td></tr>
-
-
-<tr><td rowspan="7" style="text-align: center;">Trace</td><td rowspan="1" style="text-align: center;">Class</td>
-<td><a title="wasGeneratedBy" class="internalDFN">ProcessExec</a></td><td><a class="section-ref" href="#processexec-specification"><span>Section 3.2.1</span></a></td></tr>
-	<tr><td rowspan="6" style="text-align: center;">Association</td>
-	<td><a title="dfn-agent" class="internalDFN">dataOnLink</a></td><td><a class="section-ref" href="#dataonlink-specification"><span>Section 3.2.2</span></a></td></tr>
-	<tr><td><a title="dfn-agent" class="internalDFN">used</a></td><td><a class="section-ref" href="#used-specification"><span>Section 3.2.3</span></a></td></tr>
-	<tr><td><a title="dfn-agent" class="internalDFN">wasGeneratedBy</a></td><td><a class="section-ref" href="#wasgeneratedby-specification"><span>Section 3.2.4</span></a></td></tr>
-	<tr><td><a title="dfn-agent" class="internalDFN">wasAssociatedWith</a></td><td><a class="section-ref" href="#wasassociatedwith-specification"><span>Section 3.2.5</span></a></td></tr> 
-	<tr><td><a title="dfn-agent" class="internalDFN">wasInformedBy</a></td><td><a class="section-ref" href="#wasinformedby-specification"><span>Section 3.2.6</span></a></td></tr> 
-	<tr><td><a title="dfn-agent" class="internalDFN">isPartOf</a></td><td><a class="section-ref" href="#ispartof-specification"><span>Section 3.2.7</span></a></td></tr> 
-
-
-<tr><td rowspan="4" style="text-align: center;">Data Structure</td><td rowspan="2" style="text-align: center;">Class</td>
-<td><a title="wasGeneratedBy" class="internalDFN">Data</a></td><td><a class="section-ref" href="#data-specification"><span>Section 3.3.1</span></a></td></tr>
-<tr><td><a title="wasInformedBy" class="internalDFN">Collection</a></td><td><a class="section-ref" href="#collection-specification"><span>Section 3.3.2</span></a></td></tr>
-	<tr><td rowspan="2" style="text-align: center;">Association</td>
-	<td><a title="dfn-agent" class="internalDFN">wasDerivedFrom</a></td><td><a class="section-ref" href="#wasderivedfrom-specification-data"><span>Section 3.3.3</span></a></td></tr>
-	<tr><td><a title="dfn-agent" class="internalDFN">hadMember</a></td><td><a class="section-ref" href="#hadmember-specification"><span>Section 3.3.4</span></a></td></tr>
-	
-</tbody></table>
-</div>
-
-</section><!-- !!! End section: section-provone-overview -->
+  </section><!-- !!! End section: section-provone-overview -->
 
 <section class="informative" id="section-provone-specification"> 
 <!--OddPage--><h2><span class="secno">3. </span>ProvONE Model Specification</h2>
@@ -1148,7 +1537,7 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
 <section id="workflow-constructs-specification"> 
 <h3><span class="secno">3.1 </span>ProvONE Workflow Specification</h3>
 
-<section id="process-specification"> 
+<section id="program-specification"> 
       
 <h4><span class="secno">3.1.1 </span>Process class</h4>
 
@@ -1198,7 +1587,7 @@ The following RDF fragment specifies a <span class="name">Process</span> identif
 9    
 10   :process_1 
 11   
-12      a provone:Process;
+12      a provone:Program;
 13      dcterms:identifier "e1"^^xsd:string;
 14      dcterms:title "CDMSBoxfill"^^xsd:string;
 15      wfms:package "gov.llnl.uvcdat.cdms"^^xsd:string;
@@ -1213,7 +1602,7 @@ use, in this case a placeholder example, can also be specified in a similar fash
 case the software package responsible for the execution of the <em>Process</em> within the WfMS is specified in line 15.
 </div>
 
-</section><!-- !!! End section: process-specification -->
+</section><!-- !!! End section: program-specification -->
 
 <section id="inputport-specification"> 
       
@@ -1415,7 +1804,7 @@ The <em>SeqCtrlLink</em> is given the string <span class="name">e1_e2CL</span> a
 <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>is a distinguished Process, which indicates that is
 meant to represent a computational experiment in its entirety. It is also subject to versioning by 
 <a title="http://www.w3.org/ns/prov-o#wasDerivedFrom" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom">prov:wasDerivedFrom</a>
-through its super-class <a title="#process-specification" href="#process-specification">provone:Process</a>. </div>
+through its super-class <a title="#program-specification" href="#program-specification">provone:Program</a>. </div>
 
 <p><strong>IRI:</strong>http://purl.org/provone/provone#Workflow</p>
 
@@ -1423,7 +1812,7 @@ through its super-class <a title="#process-specification" href="#process-specifi
 <ul>
 <li><a title="http://www.w3.org/ns/prov-o#Entity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity</a>,
 <a title="http://www.w3.org/ns/prov-o#Plan" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Plan">prov:Plan</a>,
-<a title="#process-specification" href="#process-specification">provone:Process</a></li>
+<a title="#program-specification" href="#program-specification">provone:Program</a></li>
 </ul>
 
 <p></p><b>is in domain of</b>
@@ -1523,13 +1912,13 @@ parent Process includes a child Process as part of its specification.</div>
 
 <p></p><b>has domain</b>
 <ul>
-<li><a title="#process-specification" href="#process-specification">provone:Process</a></li>
+<li><a title="#program-specification" href="#program-specification">provone:Program</a></li>
 </ul>
 
 <p></p><b>has range</b>
 <ul>
 <li>
-<a title="#process-specification" href="#process-specification">provone:Process</a></li>
+<a title="#program-specification" href="#program-specification">provone:Program</a></li>
 </ul>
 
 <div class="anexample" id="hassubprocess-example">
@@ -1542,7 +1931,7 @@ The following RDF fragment illustrates the use of the <span class="name">hasSubP
 18    
 19   :top_process 
 20   
-21      a provone:Process;
+21      a provone:Program;
 22      dcterms:identifier "main"^^xsd:string;
 23   
 24   .
@@ -1568,7 +1957,7 @@ same Process <span class="name">top_process</span> has as a sub-process the Proc
 
 <p></p><b>has domain</b>
 <ul>
-<li><a title="#process-specification" href="#process-specification">provone:Process</a></li>
+<li><a title="#program-specification" href="#program-specification">provone:Program</a></li>
 </ul>
 
 <p></p><b>has range</b>
@@ -1611,7 +2000,7 @@ Line 2 specifies that the <em>Process</em> <span class="name">process_1</span>, 
 <p></p><b>has range</b>
 <ul>
 <li>
-<a title="#process-specification" href="#process-specification">provone:Process</a>
+<a title="#program-specification" href="#program-specification">provone:Program</a>
 </li>
 </ul>
 
@@ -1625,7 +2014,7 @@ The following RDF fragment illustrates the use of the <span class="name">CLtoDes
 1
 2    :process_2 
 3   
-4       a provone:Process;
+4       a provone:Program;
 5       dcterms:identifier "e2"^^xsd:string;
 6       dcterms:title "TemporalStatistics"^^xsd:string;
 7    .    
@@ -1653,7 +2042,7 @@ Process.</div>
 
 <p></p><b>has domain</b>
 <ul>
-<li><a title="#process-specification" href="#process-specification">provone:Process</a></li>
+<li><a title="#program-specification" href="#program-specification">provone:Program</a></li>
 </ul>
 
 <p></p><b>has range</b>
@@ -1691,7 +2080,7 @@ Process.</div>
 
 <p></p><b>has domain</b>
 <ul>
-<li><a title="#process-specification" href="#process-specification">provone:Process</a></li>
+<li><a title="#program-specification" href="#program-specification">provone:Program</a></li>
 </ul>
 
 <p></p><b>has range</b>
@@ -1976,7 +2365,7 @@ is adopted in ProvONE to relate a Process to the User who is responsible for its
 <p></p><b>has domain</b>
 <ul>
 <li>
-<a title="#process-specification" href="#process-specification">provone:Process</a>
+<a title="#program-specification" href="#program-specification">provone:Program</a>
 </li>
 </ul>
 
@@ -2020,7 +2409,7 @@ workflows.
 <p></p><b>has domain</b>
 <ul>
 <li>
-<a title="#process-specification" href="#process-specification">provone:Process</a>,
+<a title="#program-specification" href="#program-specification">provone:Program</a>,
 <a title="#workflow-specification" href="#workflow-specification">provone:Workflow</a>
 </li>
 </ul>
@@ -2028,7 +2417,7 @@ workflows.
 <p></p><b>has range</b>
 <ul>
 <li>
-<a title="#process-specification" href="#process-specification">provone:Process</a>,
+<a title="#program-specification" href="#program-specification">provone:Program</a>,
 <a title="#workflow-specification" href="#workflow-specification">provone:Workflow</a>
 </li>
 </ul>
@@ -2284,7 +2673,7 @@ is adopted in ProvONE to state that a ProcessExec represents the execution of a 
 <p></p><b>has range</b>
 <ul>
 <li>
-<a title="#process-specification" href="#process-specification">provone:Process</a>
+<a title="#program-specification" href="#program-specification">provone:Program</a>
 </li>
 </ul>
 
