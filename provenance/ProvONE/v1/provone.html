@@ -1394,17 +1394,52 @@ body {
             </td>
           </tr>
           <tr>
-            <td rowspan="7" style="text-align: center;">
+            <td rowspan="12" style="text-align: center;">
               Trace
             </td>
-            <td rowspan="1" style="text-align: center;">
+            <td rowspan="6" style="text-align: center;">
               Class
             </td>
+          <tr>
             <td>
-              <a title="wasGeneratedBy" class="internalDFN">Execution</a>
+              <a title="Execution" class="internalDFN">Execution</a>
             </td>
             <td>
               <a class="section-ref" href="#execution-specification"><span>Section 3.2.1</span></a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a title="Association" class="internalDFN">Association</a>
+            </td>
+            <td>
+              <a class="section-ref" href="#association-specification">
+                <span>Section 3.2.1</span>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a title="Usage" class="internalDFN">Usage</a>
+            </td>
+            <td>
+              <a class="section-ref" href="#usage-specification"><span>Section 3.2.1</span></a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a title="Generation" class="internalDFN">Generation</a>
+            </td>
+            <td>
+              <a class="section-ref" href="#usage-specification"><span>Section 3.2.1</span></a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a title="User" class="internalDFN">User</a>
+            </td>
+            <td>
+              <a class="section-ref" href="#user-specification"><span>Section 3.2.1</span></a>
             </td>
           </tr>
           <tr>
@@ -1412,7 +1447,7 @@ body {
               Association
             </td>
             <td>
-              <a title="dfn-agent" class="internalDFN">dataOnLink</a>
+              <a title="dfn-agent" class="internalDFN">atLocation</a>
             </td>
             <td>
               <a class="section-ref" href="#dataonlink-specification"><span>Section 3.2.2</span></a>
@@ -2351,14 +2386,14 @@ a cache, while the <span class="name">1</span> value in line 8 indicates that th
 
 <section id="dataonlink-specification"> 
       
-<h4><span class="secno">3.2.2 </span>dataOnLink object property</h4>
+<h4><span class="secno">3.2.2 </span>atLocation object property</h4>
 
-<div class="glossary-ref"><dfn id="concept-entity" title="DLToInPort" class="internalDFN">dataOnLink</dfn>
+<div class="glossary-ref"><dfn id="concept-entity" title="DLToInPort" class="internalDFN">atLocation</dfn>
 <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> Specifies that a particular Data item was associated
 with a particular Location of a Program during its execution. It effectively links the trace information of a workflow to the workflow structure,
 by capturing the dataflow event.</div>
 
-<p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#dataOnLink</p>
+<p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#atLocation</p>
 
 <p></p><b>has domain</b>
 <ul>
@@ -2375,7 +2410,7 @@ by capturing the dataflow event.</div>
 <div class="anexample" id="dataonlink-example">
 <div class="anexampleTitle">Example 21<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
 <p>
-The following RDF fragment illustrates the use of the <span class="name">dataOnLink</span> object property by complementing
+The following RDF fragment illustrates the use of the <span class="name">atLocation</span> object property by complementing
 <a href="#location-example">Example 4</a> of the <em>Location</em> class.
 </p>
 <pre class="codeexample">
@@ -2387,7 +2422,7 @@ The following RDF fragment illustrates the use of the <span class="name">dataOnL
 6       rdfs:label "cdms_data"^^xsd:string;
 7       wfms:type "gov.llnl.uvcdat.cdms:CDMSVariable"^^xsd:string;
 8    
-9    :data2 provone:dataOnLink :p1_p2DL .
+9    :data2 provone:atLocation :p1_p2DL .
 10
 </pre>
 First, a <em>Data</em> item <span class="name">data2</span> is defined beginning at line 2. This <em>Data</em> item is compatible
