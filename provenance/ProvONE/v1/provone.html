@@ -1452,10 +1452,10 @@ body {
           </tr>
           <tr>
             <td>
-              <a title="dfn-agent" class="internalDFN">isPartOf</a>
+              <a title="dfn-agent" class="internalDFN">wasPartOf</a>
             </td>
             <td>
-              <a class="section-ref" href="#ispartof-specification"><span>Section 3.2.7</span></a>
+              <a class="section-ref" href="#waspartof-specification"><span>Section 3.2.7</span></a>
             </td>
           </tr>
           <tr>
@@ -2589,15 +2589,15 @@ Line 13 specifies that <em>Execution</em> <span class="name">program_2ex1</span>
 
 </section><!-- !!! End section: wasinformedby-specification -->
 
-<section id="ispartof-specification"> 
+<section id="waspartof-specification"> 
       
-<h4><span class="secno">3.2.7 </span>isPartOf object property</h4>
+<h4><span class="secno">3.2.7 </span>wasPartOf object property</h4>
 
 <p>
-Enables to specify the structure of Executionution instances, a parent Executionution (associated with a Workflow) has child Executionutions (associated with Programs and subworkflows).
+Enables the specification of the structure of Execution instances in that a parent Execution (associated with a Workflow) has child Executions (associated with Programs and subworkflows).
 </p>
 
-<p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#isPartOf</p>
+<p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#wasPartOf</p>
 
 <p></p><b>has domain</b>
 <ul>
@@ -2613,10 +2613,10 @@ Enables to specify the structure of Executionution instances, a parent Execution
 </li>
 </ul>
 
-<div class="anexample" id="ispartof-example">
+<div class="anexample" id="waspartof-example">
 <div class="anexampleTitle">Example 26<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
 <p>
-The following RDF fragment illustrates the use of the <span class="name">isPartOf</span> object property by complementing
+The following RDF fragment illustrates the use of the <span class="name">wasPartOf</span> object property by complementing
 <a href="#execution-example">Example 6</a> of the <em>Workflow</em> class and
 <a href="#execution-example">Example 8</a> of the <em>Execution</em> class.
 </p>
@@ -2634,7 +2634,7 @@ The following RDF fragment illustrates the use of the <span class="name">isPartO
 11
 12   :workflow_1ex1 prov:wasAssociatedWith :workflow_1  .
 13
-14   :program_1ex1 prov:isPartOf :workflow_1ex1 .
+14   :program_1ex1 prov:wasPartOf :workflow_1ex1 .
 15
 </pre>
 First, a <em>Execution</em> <span class="name">workflow_1ex1</span> is defined beginning at line 2 and associated with
