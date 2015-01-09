@@ -2311,364 +2311,364 @@ same <span class="name">title</span>.
 
 </section><!-- !!! End section: workflow-constructs-specification -->
 
-<section id="trace-constructs-specification"> 
-<h3><span class="secno">3.2</span>ProvONE Trace Specification</h3>
-
-<section id="execution-specification"> 
-
-<h4><span class="secno">3.2.1 </span>Execution class</h4>
-
-<div class="glossary-ref">   A <dfn id="concept-entity" title="Execution" class="internalDFN">Execution</dfn>
-<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> represents the execution of a Program. If the Program
-in question is a Workflow, then the Execution represents a trace of its execution. </div>
-
-<p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#Execution</p>
-
-<p></p><b>has super-class</b>
-<ul>
-<li><a title="http://www.w3.org/ns/prov-o#Activity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity">prov:Activity</a>
-</ul>
-
-<p></p><b>is in domain of</b>
-<ul>
-<li>
-<a title="http://www.w3.org/ns/prov-o#used" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#used">prov:used</a>,
-<a title="http://www.w3.org/ns/prov-o#wasAssociatedWith" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith">prov:wasAssociatedWith</a>,
-<a title="http://www.w3.org/ns/prov-o#wasInformedBy" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasInformedBy">prov:wasInformedBy</a></li>
-</ul>
-
-<p></p><b>is in range of</b>
-<ul>
-<li>
-<a title="http://www.w3.org/ns/prov-o#wasGeneratedBy" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasGeneratedBy">prov:wasGeneratedBy</a>,
-<a title="http://www.w3.org/ns/prov-o#wasInformedBy" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasInformedBy">prov:wasInformedBy</a></li>
-</ul>
-
-<div class="anexample" id="execution-example">
-<div class="anexampleTitle">Example 20<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment specifies a <span class="name">Execution</span> identified within the RDF document by
-<span class="name">program_1ex1</span>.
-</p>
-<pre class="codeexample">
-1    :program_1ex1
-2   
-3       a provone:Execution;
-4       dcterms:identifier "e1_ex1"^^xsd:string;
-5       prov:startTime "2013-08-21 13:37:53"^^xsd:string;
-6       prov:endTime "2013-08-21 13:37:53"^^xsd:string;
-7       wfms:cached "0"^^xsd:integer;
-8       wfms:completed "1"^^xsd:integer; 
-9
-10   .
-</pre>
-A <em>Execution</em> is created with the string <span class="name">e1_ex1</span> as an <span class="name">identifier</span>.
-In addition, timestamps denoting the moment in time at which the execution begins, and then is completed, are specified through the
-<a title="http://www.w3.org/ns/prov-o#startedAtTime" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#startedAtTime">prov:startedAtTime</a>
-and <a title="http://www.w3.org/ns/prov-o#endedAtTime" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#endedAtTime">prov:endedAtTime</a>
-data properties, respectively. In addition, the value <span class="name">0</span> in line 7 indicates that the result was not obtained from
-a cache, while the <span class="name">1</span> value in line 8 indicates that the execution was completed successfully.
-</div>
-
-</section><!-- !!! End section: execution-specification -->
-
-<section id="dataonlink-specification"> 
-      
-<h4><span class="secno">3.2.2 </span>atLocation object property</h4>
-
-<div class="glossary-ref"><dfn id="concept-entity" title="DLToInPort" class="internalDFN">atLocation</dfn>
-<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> Specifies that a particular Data item was associated
-with a particular Location of a Program during its execution. It effectively links the trace information of a workflow to the workflow structure,
-by capturing the dataflow event.</div>
-
-<p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#atLocation</p>
-
-<p></p><b>has domain</b>
-<ul>
-<li><a title="#data-specification" href="#data-specification">provone:Data</a></li>
-</ul>
-
-<p></p><b>has range</b>
-<ul>
-<li>
-<a title="#location-specification" href="#location-specification">prov:Location</a>
-</li>
-</ul>
-
-<div class="anexample" id="dataonlink-example">
-<div class="anexampleTitle">Example 21<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment illustrates the use of the <span class="name">atLocation</span> object property by complementing
-<a href="#location-example">Example 4</a> of the <em>Location</em> class.
-</p>
-<pre class="codeexample">
-1    
-2    :data2
-3   
-4       a provone:Data;
-5       dcterms:identifier "cdms1"^^xsd:string;
-6       rdfs:label "cdms_data"^^xsd:string;
-7       wfms:type "gov.llnl.uvcdat.cdms:CDMSVariable"^^xsd:string;
-8    
-9    :data2 provone:atLocation :p1_p2DL .
-10
-</pre>
-First, a <em>Data</em> item <span class="name">data2</span> is defined beginning at line 2. This <em>Data</em> item is compatible
-with the <span class="name">signature</span> of the <em>InputPort</em> defined in <a href="#dltoinport-example">Example 14</a>.
-Line 9 specifies that the <em>Data</em> item <span class="name">data2</span> previously specified was associated with the <em>Location</em>
-of <a href="#location-example">Example 4</a>.
-</div>
-
-</section><!-- !!! End section: dataonlink-specification -->
-
-<section id="used-specification"> 
-      
-<h4><span class="secno">3.2.3 </span>used object property</h4>
-
-<p>
-<a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#used" title="http://www.w3.org/ns/prov-o#used">prov:used</a>
-is adopted in ProvONE to state that a Execution made use of a particular Data item as input for its execution.
-</p>
-
-<p><strong>IRI:</strong>http://www.w3.org/ns/prov#used</p>
-
-<p></p><b>has domain</b>
-<ul>
-<li>
-<a title="#execution-specification" href="#execution-specification">provone:Execution</a>
-</li>
-</ul>
-
-<p></p><b>has range</b>
-<ul>
-<li>
-<a title="#data-specification" href="#data-specification">provone:Data</a>
-</li>
-</ul>
-
-<div class="anexample" id="used-example">
-<div class="anexampleTitle">Example 22<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment illustrates the use of the <span class="name">used</span> object property by complementing
-<a href="#execution-example">Example 8</a> of the <em>Execution</em> class and <a href="#data-example">Example 26</a> of the
-<em>Data</em> class.
-</p>
-<pre class="codeexample">
-1     
-2    :program_1ex1 prov:used :data1 .
-3
-</pre>
-Line 2 specifies that <em>Execution</em> <span class="name">program_1ex1</span> of <a href="#execution-example">Example 8</a> used as an
-input <em>Data</em> item <span class="name">data1</span> of <a href="#data-example">Example 26</a>.
-</div>
-
-</section><!-- !!! End section: used-specification -->
-
-<section id="wasgeneratedby-specification"> 
-      
-<h4><span class="secno">3.2.4 </span>wasGeneratedBy object property</h4>
-
-<p>
-<a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasGeneratedBy" title="http://www.w3.org/ns/prov-o#wasGeneratedBy">prov:wasGeneratedBy</a>
-is adopted in ProvONE to state that a Execution produced a particular Data item as output with its execution.
-</p>
-
-<p><strong>IRI:</strong>http://www.w3.org/ns/prov#wasGeneratedBy</p>
-
-<p></p><b>has domain</b>
-<ul>
-<li>
-<a title="#data-specification" href="#data-specification">provone:Data</a>
-</li>
-</ul>
-
-<p></p><b>has range</b>
-<ul>
-<li>
-<a title="#execution-specification" href="#execution-specification">provone:Execution</a>
-</li>
-</ul>
-
-<div class="anexample" id="wasgeneratedby-example">
-<div class="anexampleTitle">Example 23<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment illustrates the use of the <span class="name">wasGeneratedBy</span> object property by complementing
-<a href="#execution-example">Example 8</a> of the <em>Execution</em> class.
-</p>
-<pre class="codeexample">
-1     
-2    :data2
-3   
-4       a provone:Data;
-5       dcterms:identifier "cdms1"^^xsd:string;
-6       rdfs:label "cdms_data"^^xsd:string;
-7       wfms:type "gov.llnl.uvcdat.cdms:CDMSVariable"^^xsd:string;
-8    
-9    :data2 prov:wasGeneratedBy :program_1_ex1 .
-10
-</pre>
-First, a <em>Data</em> item <span class="name">data2</span> is defined beginning at line 2, which also appears in
-<a href="#dataonlink-example">Example 21</a>. Line 9 specifies that the <em>Data</em> item <span class="name">data2</span>
-was produced as an output of <em>Execution</em> <span class="name">program_1ex1</span> of <a href="#execution-example">Example 8</a>.
-</div>
-
-</section><!-- !!! End section: wasgeneratedby-specification -->
-
-<section id="wasassociatedwith-specification"> 
-      
-<h4><span class="secno">3.2.5 </span>wasAssociatedWith object property</h4>
-
-<p>
-<a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith" title="http://www.w3.org/ns/prov-o#wasAssociatedWith">prov:wasAssociatedWith</a>
-is adopted in ProvONE to state that a Execution represents the execution of a particular Program.
-</p>
-
-<p><strong>IRI:</strong>http://www.w3.org/ns/prov#wasAssociatedWith</p>
-
-<p></p><b>has domain</b>
-<ul>
-<li>
-<a title="#execution-specification" href="#execution-specification">provone:Execution</a>
-</li>
-</ul>
-
-<p></p><b>has range</b>
-<ul>
-<li>
-<a title="#program-specification" href="#program-specification">provone:Program</a>
-</li>
-</ul>
-
-<div class="anexample" id="wasassociatedwith-example">
-<div class="anexampleTitle">Example 24<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment illustrates the use of the <span class="name">wasAssociatedWith</span> object property by complementing
-<a href="#execution-example">Example 8</a> of the <em>Execution</em> class and <a href="#program-example">Example 1</a> of the
-<em>Program</em> class.
-</p>
-<pre class="codeexample">
-1     
-2     :program_1ex1 prov:wasAssociatedWith :program_1 .
-3
-</pre>
-Line 2 specifies that <em>Execution</em> <span class="name">program_1ex1</span> of <a href="#execution-example">Example 8</a> is an execution
-of <em>Program</em> <span class="name">program_1</span> of <a href="#program-example">Example 1</a>.
-</div>
-
-</section><!-- !!! End section: wasassociatedwith-specification -->
-
-<section id="wasinformedby-specification"> 
-      
-<h4><span class="secno">3.2.6 </span>wasInformedBy object property</h4>
-
-<p>
-<a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasInformedBy" title="http://www.w3.org/ns/prov-o#wasInformedBy">prov:wasInformedBy</a>
-is adopted in ProvONE to state that a Execution communicates with another Execution through an output-input relation, and thereby
-triggers its execution.
-</p>
-
-<p><strong>IRI:</strong>http://www.w3.org/ns/prov#wasInformedBy</p>
-
-<p></p><b>has domain</b>
-<ul>
-<li>
-<a title="#execution-specification" href="#execution-specification">provone:Execution</a>
-</li>
-</ul>
-
-<p></p><b>has range</b>
-<ul>
-<li>
-<a title="#execution-specification" href="#execution-specification">provone:Execution</a>
-</li>
-</ul>
-
-<div class="anexample" id="wasinformedby-example">
-<div class="anexampleTitle">Example 25<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment illustrates the use of the <span class="name">wasInformedBy</span> object property by complementing
-<a href="#execution-example">Example 8</a> of the <em>Execution</em> class.
-</p>
-<pre class="codeexample">
-1     
-2    :program_2ex1
-3   
-4      a provone:Execution;
-5      dcterms:identifier "e2_ex1"^^xsd:string;
-6      prov:startTime "2013-08-21 13:37:54"^^xsd:string;
-7      prov:endTime "2013-08-21 13:37:54"^^xsd:string;
-8      wfms:cached "0"^^xsd:integer;
-9      wfms:completed "1"^^xsd:integer; 
-10
-11   .
-12
-13   :program_2ex1 prov:wasInformedBy :program_1ex1 .
-14
-</pre>
-First, a <em>Execution</em> <span class="name">program_2ex1</span> is defined beginning at line 2.
-Line 13 specifies that <em>Execution</em> <span class="name">program_2ex1</span> defined previously received data from
-<em>Execution</em> <span class="name">program_1ex1</span> of <a href="#execution-example">Example 8</a>.
-</div>
-
-</section><!-- !!! End section: wasinformedby-specification -->
-
-<section id="waspartof-specification"> 
-      
-<h4><span class="secno">3.2.7 </span>wasPartOf object property</h4>
-
-<p>
-Enables the specification of the structure of Execution instances in that a parent Execution (associated with a Workflow) has child Executions (associated with Programs and subworkflows).
-</p>
-
-<p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#wasPartOf</p>
-
-<p></p><b>has domain</b>
-<ul>
-<li>
-<a title="#execution-specification" href="#execution-specification">provone:Execution</a>
-</li>
-</ul>
-
-<p></p><b>has range</b>
-<ul>
-<li>
-<a title="#execution-specification" href="#execution-specification">provone:Execution</a>
-</li>
-</ul>
-
-<div class="anexample" id="waspartof-example">
-<div class="anexampleTitle">Example 26<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment illustrates the use of the <span class="name">wasPartOf</span> object property by complementing
-<a href="#execution-example">Example 6</a> of the <em>Workflow</em> class and
-<a href="#execution-example">Example 8</a> of the <em>Execution</em> class.
-</p>
-<pre class="codeexample">
-1     
-2    :workflow_1ex1
-3   
-4      a provone:Execution;
-5      dcterms:identifier "wf1_ex1"^^xsd:string;
-6      prov:startTime "2013-08-21 13:37:54"^^xsd:string;
-7      prov:endTime "2013-08-21 13:37:59"^^xsd:string;
-8      wfms:completed "1"^^xsd:integer; 
-9
-10   .
-11
-12   :workflow_1ex1 prov:wasAssociatedWith :workflow_1  .
-13
-14   :program_1ex1 prov:wasPartOf :workflow_1ex1 .
-15
-</pre>
-First, a <em>Execution</em> <span class="name">workflow_1ex1</span> is defined beginning at line 2 and associated with
-<em>Workflow</em> <span class="name">workflow_1</span> of <a href="#workflow-example">Example 6</a> in line 12.
-Line 14 specifies that <em>Execution</em> <span class="name">program_1ex1</span> of <a href="#execution-example">Example 8</a>
-is part of <em>Execution</em> <span class="name">workflow_1ex1</span>.
-</div>
-
-</section><!-- !!! End section: partof-specification -->
-
-</section><!-- !!! End section: trace-specification -->
+  <section id="trace-constructs-specification"> 
+    <h3><span class="secno">3.2</span>ProvONE Trace Specification</h3>
+  
+    <section id="execution-specification"> 
+    
+    <h4><span class="secno">3.2.1 </span>Execution class</h4>
+    
+    <div class="glossary-ref">   A <dfn id="concept-entity" title="Execution" class="internalDFN">Execution</dfn>
+    <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> represents the execution of a Program. If the Program
+    in question is a Workflow, then the Execution represents a trace of its execution. </div>
+    
+    <p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#Execution</p>
+    
+    <p></p><b>has super-class</b>
+    <ul>
+    <li><a title="http://www.w3.org/ns/prov-o#Activity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Activity">prov:Activity</a>
+    </ul>
+    
+    <p></p><b>is in domain of</b>
+    <ul>
+    <li>
+    <a title="http://www.w3.org/ns/prov-o#used" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#used">prov:used</a>,
+    <a title="http://www.w3.org/ns/prov-o#wasAssociatedWith" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith">prov:wasAssociatedWith</a>,
+    <a title="http://www.w3.org/ns/prov-o#wasInformedBy" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasInformedBy">prov:wasInformedBy</a></li>
+    </ul>
+    
+    <p></p><b>is in range of</b>
+    <ul>
+    <li>
+    <a title="http://www.w3.org/ns/prov-o#wasGeneratedBy" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasGeneratedBy">prov:wasGeneratedBy</a>,
+    <a title="http://www.w3.org/ns/prov-o#wasInformedBy" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasInformedBy">prov:wasInformedBy</a></li>
+    </ul>
+    
+    <div class="anexample" id="execution-example">
+    <div class="anexampleTitle">Example 20<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <p>
+    The following RDF fragment specifies a <span class="name">Execution</span> identified within the RDF document by
+    <span class="name">program_1ex1</span>.
+    </p>
+    <pre class="codeexample">
+    1    :program_1ex1
+    2   
+    3       a provone:Execution;
+    4       dcterms:identifier "e1_ex1"^^xsd:string;
+    5       prov:startTime "2013-08-21 13:37:53"^^xsd:string;
+    6       prov:endTime "2013-08-21 13:37:53"^^xsd:string;
+    7       wfms:cached "0"^^xsd:integer;
+    8       wfms:completed "1"^^xsd:integer; 
+    9
+    10   .
+    </pre>
+    A <em>Execution</em> is created with the string <span class="name">e1_ex1</span> as an <span class="name">identifier</span>.
+    In addition, timestamps denoting the moment in time at which the execution begins, and then is completed, are specified through the
+    <a title="http://www.w3.org/ns/prov-o#startedAtTime" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#startedAtTime">prov:startedAtTime</a>
+    and <a title="http://www.w3.org/ns/prov-o#endedAtTime" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#endedAtTime">prov:endedAtTime</a>
+    data properties, respectively. In addition, the value <span class="name">0</span> in line 7 indicates that the result was not obtained from
+    a cache, while the <span class="name">1</span> value in line 8 indicates that the execution was completed successfully.
+    </div>
+    
+    </section><!-- !!! End section: execution-specification -->
+  
+    <section id="dataonlink-specification"> 
+          
+    <h4><span class="secno">3.2.2 </span>atLocation object property</h4>
+    
+    <div class="glossary-ref"><dfn id="concept-entity" title="DLToInPort" class="internalDFN">atLocation</dfn>
+    <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> Specifies that a particular Data item was associated
+    with a particular Location of a Program during its execution. It effectively links the trace information of a workflow to the workflow structure,
+    by capturing the dataflow event.</div>
+    
+    <p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#atLocation</p>
+    
+    <p></p><b>has domain</b>
+    <ul>
+    <li><a title="#data-specification" href="#data-specification">provone:Data</a></li>
+    </ul>
+    
+    <p></p><b>has range</b>
+    <ul>
+    <li>
+    <a title="#location-specification" href="#location-specification">prov:Location</a>
+    </li>
+    </ul>
+    
+    <div class="anexample" id="dataonlink-example">
+    <div class="anexampleTitle">Example 21<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <p>
+    The following RDF fragment illustrates the use of the <span class="name">atLocation</span> object property by complementing
+    <a href="#location-example">Example 4</a> of the <em>Location</em> class.
+    </p>
+    <pre class="codeexample">
+    1    
+    2    :data2
+    3   
+    4       a provone:Data;
+    5       dcterms:identifier "cdms1"^^xsd:string;
+    6       rdfs:label "cdms_data"^^xsd:string;
+    7       wfms:type "gov.llnl.uvcdat.cdms:CDMSVariable"^^xsd:string;
+    8    
+    9    :data2 provone:atLocation :p1_p2DL .
+    10
+    </pre>
+    First, a <em>Data</em> item <span class="name">data2</span> is defined beginning at line 2. This <em>Data</em> item is compatible
+    with the <span class="name">signature</span> of the <em>InputPort</em> defined in <a href="#dltoinport-example">Example 14</a>.
+    Line 9 specifies that the <em>Data</em> item <span class="name">data2</span> previously specified was associated with the <em>Location</em>
+    of <a href="#location-example">Example 4</a>.
+    </div>
+    
+    </section><!-- !!! End section: dataonlink-specification -->
+  
+    <section id="used-specification"> 
+          
+    <h4><span class="secno">3.2.3 </span>used object property</h4>
+    
+    <p>
+    <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#used" title="http://www.w3.org/ns/prov-o#used">prov:used</a>
+    is adopted in ProvONE to state that a Execution made use of a particular Data item as input for its execution.
+    </p>
+    
+    <p><strong>IRI:</strong>http://www.w3.org/ns/prov#used</p>
+    
+    <p></p><b>has domain</b>
+    <ul>
+    <li>
+    <a title="#execution-specification" href="#execution-specification">provone:Execution</a>
+    </li>
+    </ul>
+    
+    <p></p><b>has range</b>
+    <ul>
+    <li>
+    <a title="#data-specification" href="#data-specification">provone:Data</a>
+    </li>
+    </ul>
+    
+    <div class="anexample" id="used-example">
+    <div class="anexampleTitle">Example 22<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <p>
+    The following RDF fragment illustrates the use of the <span class="name">used</span> object property by complementing
+    <a href="#execution-example">Example 8</a> of the <em>Execution</em> class and <a href="#data-example">Example 26</a> of the
+    <em>Data</em> class.
+    </p>
+    <pre class="codeexample">
+    1     
+    2    :program_1ex1 prov:used :data1 .
+    3
+    </pre>
+    Line 2 specifies that <em>Execution</em> <span class="name">program_1ex1</span> of <a href="#execution-example">Example 8</a> used as an
+    input <em>Data</em> item <span class="name">data1</span> of <a href="#data-example">Example 26</a>.
+    </div>
+    
+    </section><!-- !!! End section: used-specification -->
+  
+    <section id="wasgeneratedby-specification"> 
+          
+    <h4><span class="secno">3.2.4 </span>wasGeneratedBy object property</h4>
+    
+    <p>
+    <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasGeneratedBy" title="http://www.w3.org/ns/prov-o#wasGeneratedBy">prov:wasGeneratedBy</a>
+    is adopted in ProvONE to state that a Execution produced a particular Data item as output with its execution.
+    </p>
+    
+    <p><strong>IRI:</strong>http://www.w3.org/ns/prov#wasGeneratedBy</p>
+    
+    <p></p><b>has domain</b>
+    <ul>
+    <li>
+    <a title="#data-specification" href="#data-specification">provone:Data</a>
+    </li>
+    </ul>
+    
+    <p></p><b>has range</b>
+    <ul>
+    <li>
+    <a title="#execution-specification" href="#execution-specification">provone:Execution</a>
+    </li>
+    </ul>
+    
+    <div class="anexample" id="wasgeneratedby-example">
+    <div class="anexampleTitle">Example 23<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <p>
+    The following RDF fragment illustrates the use of the <span class="name">wasGeneratedBy</span> object property by complementing
+    <a href="#execution-example">Example 8</a> of the <em>Execution</em> class.
+    </p>
+    <pre class="codeexample">
+    1     
+    2    :data2
+    3   
+    4       a provone:Data;
+    5       dcterms:identifier "cdms1"^^xsd:string;
+    6       rdfs:label "cdms_data"^^xsd:string;
+    7       wfms:type "gov.llnl.uvcdat.cdms:CDMSVariable"^^xsd:string;
+    8    
+    9    :data2 prov:wasGeneratedBy :program_1_ex1 .
+    10
+    </pre>
+    First, a <em>Data</em> item <span class="name">data2</span> is defined beginning at line 2, which also appears in
+    <a href="#dataonlink-example">Example 21</a>. Line 9 specifies that the <em>Data</em> item <span class="name">data2</span>
+    was produced as an output of <em>Execution</em> <span class="name">program_1ex1</span> of <a href="#execution-example">Example 8</a>.
+    </div>
+    
+    </section><!-- !!! End section: wasgeneratedby-specification -->
+  
+    <section id="wasassociatedwith-specification"> 
+          
+    <h4><span class="secno">3.2.5 </span>wasAssociatedWith object property</h4>
+    
+    <p>
+    <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith" title="http://www.w3.org/ns/prov-o#wasAssociatedWith">prov:wasAssociatedWith</a>
+    is adopted in ProvONE to state that a Execution represents the execution of a particular Program.
+    </p>
+    
+    <p><strong>IRI:</strong>http://www.w3.org/ns/prov#wasAssociatedWith</p>
+    
+    <p></p><b>has domain</b>
+    <ul>
+    <li>
+    <a title="#execution-specification" href="#execution-specification">provone:Execution</a>
+    </li>
+    </ul>
+    
+    <p></p><b>has range</b>
+    <ul>
+    <li>
+    <a title="#program-specification" href="#program-specification">provone:Program</a>
+    </li>
+    </ul>
+    
+    <div class="anexample" id="wasassociatedwith-example">
+    <div class="anexampleTitle">Example 24<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <p>
+    The following RDF fragment illustrates the use of the <span class="name">wasAssociatedWith</span> object property by complementing
+    <a href="#execution-example">Example 8</a> of the <em>Execution</em> class and <a href="#program-example">Example 1</a> of the
+    <em>Program</em> class.
+    </p>
+    <pre class="codeexample">
+    1     
+    2     :program_1ex1 prov:wasAssociatedWith :program_1 .
+    3
+    </pre>
+    Line 2 specifies that <em>Execution</em> <span class="name">program_1ex1</span> of <a href="#execution-example">Example 8</a> is an execution
+    of <em>Program</em> <span class="name">program_1</span> of <a href="#program-example">Example 1</a>.
+    </div>
+    
+    </section><!-- !!! End section: wasassociatedwith-specification -->
+  
+    <section id="wasinformedby-specification"> 
+          
+    <h4><span class="secno">3.2.6 </span>wasInformedBy object property</h4>
+    
+    <p>
+    <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasInformedBy" title="http://www.w3.org/ns/prov-o#wasInformedBy">prov:wasInformedBy</a>
+    is adopted in ProvONE to state that a Execution communicates with another Execution through an output-input relation, and thereby
+    triggers its execution.
+    </p>
+    
+    <p><strong>IRI:</strong>http://www.w3.org/ns/prov#wasInformedBy</p>
+    
+    <p></p><b>has domain</b>
+    <ul>
+    <li>
+    <a title="#execution-specification" href="#execution-specification">provone:Execution</a>
+    </li>
+    </ul>
+    
+    <p></p><b>has range</b>
+    <ul>
+    <li>
+    <a title="#execution-specification" href="#execution-specification">provone:Execution</a>
+    </li>
+    </ul>
+    
+    <div class="anexample" id="wasinformedby-example">
+    <div class="anexampleTitle">Example 25<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <p>
+    The following RDF fragment illustrates the use of the <span class="name">wasInformedBy</span> object property by complementing
+    <a href="#execution-example">Example 8</a> of the <em>Execution</em> class.
+    </p>
+    <pre class="codeexample">
+    1     
+    2    :program_2ex1
+    3   
+    4      a provone:Execution;
+    5      dcterms:identifier "e2_ex1"^^xsd:string;
+    6      prov:startTime "2013-08-21 13:37:54"^^xsd:string;
+    7      prov:endTime "2013-08-21 13:37:54"^^xsd:string;
+    8      wfms:cached "0"^^xsd:integer;
+    9      wfms:completed "1"^^xsd:integer; 
+    10
+    11   .
+    12
+    13   :program_2ex1 prov:wasInformedBy :program_1ex1 .
+    14
+    </pre>
+    First, a <em>Execution</em> <span class="name">program_2ex1</span> is defined beginning at line 2.
+    Line 13 specifies that <em>Execution</em> <span class="name">program_2ex1</span> defined previously received data from
+    <em>Execution</em> <span class="name">program_1ex1</span> of <a href="#execution-example">Example 8</a>.
+    </div>
+    
+    </section><!-- !!! End section: wasinformedby-specification -->
+  
+    <section id="waspartof-specification"> 
+          
+    <h4><span class="secno">3.2.7 </span>wasPartOf object property</h4>
+    
+    <p>
+    Enables the specification of the structure of Execution instances in that a parent Execution (associated with a Workflow) has child Executions (associated with Programs and subworkflows).
+    </p>
+    
+    <p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#wasPartOf</p>
+    
+    <p></p><b>has domain</b>
+    <ul>
+    <li>
+    <a title="#execution-specification" href="#execution-specification">provone:Execution</a>
+    </li>
+    </ul>
+    
+    <p></p><b>has range</b>
+    <ul>
+    <li>
+    <a title="#execution-specification" href="#execution-specification">provone:Execution</a>
+    </li>
+    </ul>
+    
+    <div class="anexample" id="waspartof-example">
+    <div class="anexampleTitle">Example 26<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <p>
+    The following RDF fragment illustrates the use of the <span class="name">wasPartOf</span> object property by complementing
+    <a href="#execution-example">Example 6</a> of the <em>Workflow</em> class and
+    <a href="#execution-example">Example 8</a> of the <em>Execution</em> class.
+    </p>
+    <pre class="codeexample">
+    1     
+    2    :workflow_1ex1
+    3   
+    4      a provone:Execution;
+    5      dcterms:identifier "wf1_ex1"^^xsd:string;
+    6      prov:startTime "2013-08-21 13:37:54"^^xsd:string;
+    7      prov:endTime "2013-08-21 13:37:59"^^xsd:string;
+    8      wfms:completed "1"^^xsd:integer; 
+    9
+    10   .
+    11
+    12   :workflow_1ex1 prov:wasAssociatedWith :workflow_1  .
+    13
+    14   :program_1ex1 prov:wasPartOf :workflow_1ex1 .
+    15
+    </pre>
+    First, a <em>Execution</em> <span class="name">workflow_1ex1</span> is defined beginning at line 2 and associated with
+    <em>Workflow</em> <span class="name">workflow_1</span> of <a href="#workflow-example">Example 6</a> in line 12.
+    Line 14 specifies that <em>Execution</em> <span class="name">program_1ex1</span> of <a href="#execution-example">Example 8</a>
+    is part of <em>Execution</em> <span class="name">workflow_1ex1</span>.
+    </div>
+    
+    </section><!-- !!! End section: partof-specification -->
+  
+  </section><!-- !!! End section: trace-specification -->
 
 <section id="datastructure-constructs-specification"> 
 <h3><span class="secno">3.3 </span>ProvONE Data Structure Specification</h3>
