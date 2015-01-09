@@ -1166,9 +1166,7 @@ body {
       class can be used to specify that the execution of a given <em>Program</em> is controlled by
       another Program, which allows for differing models of computation. For instance, in a
       synchronous dataflow model, a given <em>Program</em> may only start once the execution of a
-      preceding <em>Program</em> terminates. A particular <em>Program</em> that specifies a
-      <em>Workflow</em> or part of it can be attributed to <em>Author(s)</em> that assume
-      responsibility for its creation.
+      preceding <em>Program</em> terminates.
     </p>    
     <p>
       <b>Trace Representation</b>. The execution traces associated with a given <em>Workflow</em>
@@ -1245,10 +1243,10 @@ body {
             </td>
           </tr>
           <tr>
-            <td rowspan="15" style="text-align: center;">
+            <td rowspan="14" style="text-align: center;">
               Workflow
             </td>
-            <td rowspan="6" style="text-align: center;">
+            <td rowspan="5" style="text-align: center;">
               Class
             </td>
             <td>
@@ -1293,14 +1291,6 @@ body {
             </td>
           </tr>
           <tr>
-            <td>
-              <a title="dfn-author" class="internalDFN">Author</a>
-            </td>
-            <td>
-              <a class="section-ref" href="#author-specification"><span>Section 3.1.6</span></a>
-            </td>
-          </tr>
-          <tr>
             <td rowspan="9" style="text-align: center;">
               Association
             </td>
@@ -1309,7 +1299,7 @@ body {
             </td>
             <td>
               <a class="section-ref" href="#hassubprogram-specification">
-                <span>Section 3.1.7</span>
+                <span>Section 3.1.6</span>
               </a>
             </td>
           </tr>
@@ -1319,7 +1309,7 @@ body {
             </td>
             <td>
               <a class="section-ref" href="#controlledBy-specification">
-                <span>Section 3.1.8</span>
+                <span>Section 3.1.7</span>
               </a>
             </td>
           </tr>
@@ -1329,7 +1319,7 @@ body {
             </td>
             <td>
               <a class="section-ref" href="#controls-specification">
-                <span>Section 3.1.9</span>
+                <span>Section 3.1.8</span>
               </a>
             </td>
           </tr>
@@ -1339,7 +1329,7 @@ body {
             </td>
             <td>
               <a class="section-ref" href="#hasinport-specification">
-                <span>Section 3.1.10</span>
+                <span>Section 3.1.9</span>
               </a>
             </td>
           </tr>
@@ -1349,7 +1339,7 @@ body {
             </td>
             <td>
               <a class="section-ref" href="#hasoutport-specification">
-                <span>Section 3.1.11</span>
+                <span>Section 3.1.10</span>
               </a>
             </td>
           </tr>
@@ -1359,7 +1349,7 @@ body {
             </td>
             <td>
               <a class="section-ref" href="#hasdefaultparam-specification">
-                <span>Section 3.1.12</span>
+                <span>Section 3.1.11</span>
               </a>
             </td>
           </tr>
@@ -1369,7 +1359,7 @@ body {
             </td>
             <td>
               <a class="section-ref" href="#haslocation-specification">
-                <span>Section 3.1.13</span>
+                <span>Section 3.1.12</span>
               </a>
             </td>
           </tr>
@@ -1379,7 +1369,7 @@ body {
             </td>
             <td>
               <a class="section-ref" href="#wasattributedto-specification">
-                <span>Section 3.1.14</span>
+                <span>Section 3.1.13</span>
               </a>
             </td>
           </tr>
@@ -1389,7 +1379,7 @@ body {
             </td>
             <td>
               <a class="section-ref" href="#wasderivedfrom-specification">
-                <span>Section 3.1.15</span>
+                <span>Section 3.1.14</span>
               </a>
             </td>
           </tr>
@@ -1978,7 +1968,7 @@ to his username in the system.
 
 <section id="hassubprogram-specification"> 
       
-<h4><span class="secno">3.1.7 </span>hasSubProgram object property</h4>
+<h4><span class="secno">3.1.6 </span>hasSubProgram object property</h4>
 
 <div class="glossary-ref"><dfn id="concept-entity" title="hasSubProgram" class="internalDFN">hasSubProgram</dfn>
 <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> specifies the recursive composition of Programs, a
@@ -2024,7 +2014,7 @@ same Program <span class="name">top_program</span> has as a sub-program the Prog
 
 <section id="controlledBy-specification"> 
       
-<h4><span class="secno">3.1.8 </span>controlledBy object property</h4>
+<h4><span class="secno">3.1.7 </span>controlledBy object property</h4>
 
 <div class="glossary-ref"><dfn id="concept-entity" title="controlledBy" class="internalDFN">controlledBy</dfn>
 <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> relates a Controller to its source Program.</div>
@@ -2061,7 +2051,7 @@ Line 2 specifies that the <em>Program</em> <span class="name">program_1</span>, 
 
 <section id="cltodestp-specification"> 
       
-<h4><span class="secno">3.1.9 </span>controls object property</h4>
+<h4><span class="secno">3.1.8 </span>controls object property</h4>
 
 <div class="glossary-ref"><dfn id="concept-entity" title="controls" class="internalDFN">controls</dfn>
 <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> relates a Controller to its destination Program.</div>
@@ -2108,7 +2098,7 @@ the <em>Program</em> <span class="name">program_2</span>.
 
 <section id="hasinport-specification"> 
       
-<h4><span class="secno">3.1.10 </span>hasInPort object property</h4>
+<h4><span class="secno">3.1.9 </span>hasInPort object property</h4>
 
 <div class="glossary-ref"><dfn id="concept-entity" title="hasInPort" class="internalDFN">hasInPort</dfn>
 <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> specifies the Ports of a particular Program that are used as input ports.</div>
@@ -2145,7 +2135,7 @@ Line 2 specifies that the <em>Program</em> <span class="name">program_1</span>, 
 
 <section id="hasoutport-specification"> 
       
-<h4><span class="secno">3.1.11</span>hasOutPort object property</h4>
+<h4><span class="secno">3.1.10</span>hasOutPort object property</h4>
 
 <div class="glossary-ref"><dfn id="concept-entity" title="hasOutPort" class="internalDFN">hasOutPort</dfn>
 <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> specifies the Ports of a particular Program that are used as output ports.</div>
@@ -2182,7 +2172,7 @@ Line 2 specifies that the <em>Program</em> <span class="name">program_1</span>, 
 
 <section id="hasdefaultparam-specification"> 
       
-<h4><span class="secno">3.1.12 </span>hasDefaultParam object property</h4>
+<h4><span class="secno">3.1.11 </span>hasDefaultParam object property</h4>
 
 <div class="glossary-ref"><dfn id="concept-entity" title="hasDefaultParam" class="internalDFN">hasDefaultParam</dfn>
 <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> specifies that a given input Port has a certain Entity item as a default parameter (usually Data). This enables the pre-configuration of executable Workflow instances with zero or more parameters.</div>
@@ -2221,7 +2211,7 @@ Line 2 specifies that the <em>Port</em> <span class="name">p1_ip1</span>, define
 
 <section id="haslocation-specification"> 
       
-<h4><span class="secno">3.1.13 </span>hasLocation object property</h4>
+<h4><span class="secno">3.1.12 </span>hasLocation object property</h4>
 
 <div class="glossary-ref"><dfn id="concept-hasLocation" title="hasLocation" class="internalDFN">hasLocation</dfn>
 <sup><a class="internalDFN" href="#concept-hasLocation"><span class="diamond"> ◊</span></a></sup> specifies the Location of the Entity associated with a given input or output Port.</div>
@@ -2323,7 +2313,7 @@ and a corresponding <em>DLToOutPort</em> statement in line 18.
 
 <section id="wasattributedto-specification"> 
       
-<h4><span class="secno">3.1.14 </span>wasAttributedTo object property</h4>
+<h4><span class="secno">3.1.13 </span>wasAttributedTo object property</h4>
 
 <p>
 <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAttributedTo" title="http://www.w3.org/ns/prov-o#wasAttributedTo">prov:wasAttributedTo</a>
@@ -2366,7 +2356,7 @@ correspondingly was authored by <em>Author</em> <span class="name">a1</span> of 
 
 <section id="wasderivedfrom-specification"> 
       
-<h4><span class="secno">3.1.15</span>wasDerivedFrom object property</h4>
+<h4><span class="secno">3.1.14</span>wasDerivedFrom object property</h4>
 
 <p>
 <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom" title="http://www.w3.org/ns/prov-o#wasDerivedFrom">prov:wasDerivedFrom</a>
