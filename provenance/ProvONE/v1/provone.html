@@ -1243,7 +1243,7 @@ body {
             </td>
           </tr>
           <tr>
-            <td rowspan="14" style="text-align: center;">
+            <td rowspan="13" style="text-align: center;">
               Workflow
             </td>
             <td rowspan="5" style="text-align: center;">
@@ -1291,7 +1291,7 @@ body {
             </td>
           </tr>
           <tr>
-            <td rowspan="9" style="text-align: center;">
+            <td rowspan="8" style="text-align: center;">
               Association
             </td>
             <td>
@@ -1360,16 +1360,6 @@ body {
             <td>
               <a class="section-ref" href="#haslocation-specification">
                 <span>Section 3.1.12</span>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a title="dfn-agent" class="internalDFN">wasAttributedTo</a>
-            </td>
-            <td>
-              <a class="section-ref" href="#wasattributedto-specification">
-                <span>Section 3.1.13</span>
               </a>
             </td>
           </tr>
@@ -1671,7 +1661,7 @@ It can be atomic or composite, the latter case represented by a possibly nested 
 <a title="http://purl.org/provone/provone/2015/01#controlledBy" href="#">provone:controlledBy</a>,
 <a title="http://purl.org/provone/provone/2015/01#hasInPort" href="#">provone:hasInPort</a>,
 <a title="http://purl.org/provone/provone/2015/01#hasOutPort" href="#">provone:hasOutPort</a>,
-<a title="http://www.w3.org/ns/prov-o#wasAttributedTo" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAttributedTo">prov:wasAttributedTo</a></li>
+</li>
 </ul>
 
 <p></p><b>is in range of</b>
@@ -1887,7 +1877,6 @@ through its super-class <a title="#program-specification" href="#program-specifi
 <a title="http://purl.org/provone/provone/2015/01#controlledBy" href="#">provone:controlledBy</a>,
 <a title="http://purl.org/provone/provone/2015/01#hasInPort" href="#">provone:hasInPort</a>,
 <a title="http://purl.org/provone/provone/2015/01#hasOutPort" href="#">provone:hasOutPort</a>,
-<a title="http://www.w3.org/ns/prov-o#wasAttributedTo" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAttributedTo">prov:wasAttributedTo</a>,
 <a title="http://www.w3.org/ns/prov-o#wasDerivedFrom" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom">prov:wasDerivedFrom</a></li>
 </ul>
 
@@ -1919,52 +1908,6 @@ string <span class="name">ModelComparison</span> as a descriptive <span class="n
 </div>
 
 </section><!-- !!! End section: workflow-specification -->
-
-<section id="author-specification"> 
-      
-<h4><span class="secno">3.1.6 </span>Author class</h4>
-
-<div class="glossary-ref">   An <dfn id="concept-entity" title="Author" class="internalDFN">Author</dfn>
-<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>is the person responsible for the specification of a
-Program, which in turn can be a Workflow. Its specification serves attribution and accountability purposes.</div>
-
-<p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#Author</p>
-
-<p></p><b>has super-class</b>
-<ul>
-<li><a title="http://www.w3.org/ns/prov-o#Agent" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Agent">prov:Agent</a></li>
-</ul>
-
-<p></p><b>is in domain of</b>
-<ul>
-<li>none</li>
-</ul>
-
-<p></p><b>is in range of</b>
-<ul>
-<li>
-<a title="http://www.w3.org/ns/prov-o#wasAttributedTo" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAttributedTo">prov:wasAttributedTo</a></li>
-</ul>
-
-<div class="anexample" id="author-example">
-<div class="anexampleTitle">Example 7<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment specifies a <span class="name">Author</span> identified within the RDF document by
-<span class="name">a1</span>.
-</p>
-<pre class="codeexample"> 
-1    :a1 
-2    
-3       a provone:Author;
-4       dcterms:identifier "John"^^xsd:string;
-5    
-6    .
-</pre>
-The <em>Author</em> is given the string <span class="name">John</span> as an <span class="name">identifier</span> (line 4), corresponding
-to his username in the system. 
-</div>
-
-</section><!-- !!! End section: author-specification -->
 
 <section id="hassubprogram-specification"> 
       
@@ -2310,49 +2253,6 @@ and a corresponding <em>DLToOutPort</em> statement in line 18.
 </div>
 
 </section><!-- !!! End section: dltooutport-specification -->
-
-<section id="wasattributedto-specification"> 
-      
-<h4><span class="secno">3.1.13 </span>wasAttributedTo object property</h4>
-
-<p>
-<a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAttributedTo" title="http://www.w3.org/ns/prov-o#wasAttributedTo">prov:wasAttributedTo</a>
-is adopted in ProvONE to relate a Program to the Author who is responsible for its creation.
-</p>
-
-<p><strong>IRI:</strong>http://www.w3.org/ns/prov#wasAttributedTo</p>
-
-<p></p><b>has domain</b>
-<ul>
-<li>
-<a title="#program-specification" href="#program-specification">provone:Program</a>
-</li>
-</ul>
-
-<p></p><b>has range</b>
-<ul>
-<li>
-<a title="#author-specification" href="#author-specification">provone:Author</a>
-</li>
-</ul>
-
-<div class="anexample" id="wasattributedto-example">
-<div class="anexampleTitle">Example 18<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment illustrates the use of the <span class="name">wasAttributedTo</span> object property by complementing
-<a href="#program-example">Example 1</a> of the <em>Program</em> class and <a href="#user-example">Example 7</a> of the
-<em>Author</em> class.
-</p>
-<pre class="codeexample">
-1     
-2    :program_1 prov:wasAttributedTo :a1 .
-3
-</pre>
-Line 2 specifies that <em>Program</em> <span class="name">program_1</span> of <a href="#program-example">Example 1</a> is attributed to or
-correspondingly was authored by <em>Author</em> <span class="name">a1</span> of <a href="#author-example">Example 7</a>.
-</div>
-
-</section><!-- !!! End section: wasattributedto-specification -->
 
 <section id="wasderivedfrom-specification"> 
       
