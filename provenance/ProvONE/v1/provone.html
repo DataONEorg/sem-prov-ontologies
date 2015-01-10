@@ -1638,678 +1638,678 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
 </p>
 </form>
 
-<section id="workflow-constructs-specification"> 
-<h3><span class="secno">3.1 </span>ProvONE Workflow Specification</h3>
-
-<section id="program-specification"> 
-      
-<h4><span class="secno">3.1.1 </span>Program class</h4>
-
-<div class="glossary-ref">   A <dfn id="concept-entity" title="Program" class="internalDFN">Program</dfn>
-<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> represents a computational task that consumes and produces data through its input and output ports, respectively.
-It can be atomic or composite, the latter case represented by a possibly nested Program. </div>
-
-<p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#Program</p>
-
-<p></p><b>has super-class</b>
-<ul>
-<li><a title="http://www.w3.org/ns/prov-o#Entity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity</a>,
-<a title="http://www.w3.org/ns/prov-o#Plan" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Plan">prov:Plan</a></li>
-</ul>
-
-<p></p><b>is in domain of</b>
-<ul>
-<li><a title="http://purl.org/provone/provone/2015/01#hasSubProgram" href="#">provone:hasSubProgram</a>,
-<a title="http://purl.org/provone/provone/2015/01#controlledBy" href="#">provone:controlledBy</a>,
-<a title="http://purl.org/provone/provone/2015/01#hasInPort" href="#">provone:hasInPort</a>,
-<a title="http://purl.org/provone/provone/2015/01#hasOutPort" href="#">provone:hasOutPort</a>,
-</li>
-</ul>
-
-<p></p><b>is in range of</b>
-<ul>
-<li><a title="http://purl.org/provone/provone/2015/01#hasSubProgram" href="#">provone:hasSubProgram</a>,
-<a title="http://purl.org/provone/provone/2015/01#controls" href="#">provone:controls</a>,
-<a title="http://www.w3.org/ns/prov-o#wasAssociatedWith" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith">prov:wasAssociatedWith</a></li>
-</ul>
-
-<div class="anexample" id="program-example">
-<div class="anexampleTitle">Example 1<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment specifies a <span class="name">Program</span> identified within the RDF document by
-<span class="name">program_1</span>.
-</p>
-<pre class="codeexample">
-1    @prefix rdfs:    &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
-2    @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .
-3    @prefix owl:     &lt;http://www.w3.org/2002/07/owl#&gt; .
-4    @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
-5    @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
-6    @prefix provone: &lt;http://purl.org/provone&gt; .
-7    @prefix wfms:    &lt;http://www.wfms.org/registry.xsd&gt; .
-8    @prefix :        &lt;http://example.com/&gt; .
-9    
-10   :program_1 
-11   
-12      a provone:Program;
-13      dcterms:identifier "e1"^^xsd:string;
-14      dcterms:title "CDMSBoxfill"^^xsd:string;
-15      wfms:package "gov.llnl.uvcdat.cdms"^^xsd:string;
-16   
-17   .
-</pre>
-Line 12 specifies class membership. In order to specify additional attributes for the <em>Program</em>, we employ first the
-Dublin Core Metadata Elements [<cite><a class="bibref" href="#bib-DC-RDF">DC-RDF</a></cite>]. In particular, we assign
-the string <span class="name">e1</span> as an <span class="name">identifier</span>, thus stating an identifier explicitly, which is independent
-of the RDF node identifier. In addition, a descriptive title is given in line 14. Additional attributes associated with the specific WfMS in
-use, in this case a placeholder example, can also be specified in a similar fashion. In this
-case the software package responsible for the execution of the <em>Program</em> within the WfMS is specified in line 15.
-</div>
-
-</section><!-- !!! End section: program-specification -->
-
-<section id="port-specification"> 
-      
-<h4><span class="secno">3.1.2 </span>Port class</h4>
-
-<div class="glossary-ref">   A <dfn id="concept-entity" title="InputPort" class="internalDFN">Port</dfn>
-<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>enables a Program to send or receive Entity items (Data, Visualization, or Document instances). When semantically typed as an input port using the <a title="http://purl.org/provone/provone/2015/01#hasInPort" href="#">provone:hasInPort</a> object property, the Port may also be further described with default parameters using the <a title="http://purl.org/provone/provone/2015/01#hasDefaultParam" href="#">provone:hasDefaultParam</a> object property.</div>
-
-<p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#Port</p>
-
-<p></p><b>has super-class</b>
-<ul>
-<li><a title="http://www.w3.org/ns/prov-o#Entity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity</a></li>
-</ul>
-
-<p></p><b>is in domain of</b>
-<ul>
-<li><a title="http://purl.org/provone/provone/2015/01#hasDefaultParam" href="#">provone:hasDefaultParam</a></li>
-</ul>
-
-<p></p><b>is in range of</b>
-<ul>
-<li>
-<a title="http://purl.org/provone/provone/2015/01#hasInPort" href="#">provone:hasInPort</a>,
-<a title="http://purl.org/provone/provone/2015/01#hasOutPort" href="#">provone:DLToInPort</a></li>
-</ul>
-
-<div class="anexample" id="inputport-example">
-<div class="anexampleTitle">Example 2<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment specifies a <span class="name">Port</span> identified within the RDF document by
-<span class="name">p1_ip1</span>.
-</p>
-<pre class="codeexample">   
-1    :p1_ip1 
-2    
-3       a provone:Port;
-4       dcterms:identifier "e1_ip1"^^xsd:string;
-5       dcterms:title "input_vars"^^xsd:string;
-6       wfms:signature "gov.llnl.uvcdat.cdms:CDMSVariable"^^xsd:string;
-7    
-8    .
-</pre>
-Again we make use of the Dublin Core Metadata Elements as well as of elements specific to an example placeholder WfMS. The <em>Port</em> is
-given an identifier and a descriptive title in lines 4 and 5, respectively. A signature denoting the type of data that the <em>Port</em> consumes is defined in line 6. 
-</div>
-
-</section><!-- !!! End section: port-specification -->
-
-<section id="location-specification"> 
-      
-<h4><span class="secno">3.1.3 </span>Location class</h4>
-
-<div class="glossary-ref"> The
-  <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Location"
-     title="http://www.w3.org/ns/prov-o#Location">prov:Location</a>
-  class is adopted directly from the PROV Ontology, and identifies the location of an Entity (Data,
-  Visualization, or Document), enabling these items to be sent between Programs. The Location
-  may be an IRI, a directory or file reference, a database row/column reference, a memory
-  reference, etc.
-</div>
-
-<p><strong>IRI:</strong>http://www.w3.org/ns/prov-o#Location</p>
-
-<p></p><b>has super-class</b>
-<ul>
-<li><a title="http://www.w3.org/ns/prov-o#Entity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity</a></li>
-</ul>
-
-<b>is in range of</b>
-<ul>
-  <li>
-    <a title="http://www.w3.org/ns/prov-o#atLocation" href="#">
-      prov:atLocation
-    </a>
-  </li>
-  <li>
-    <a title="http://purl.org/provone/provone/2015/01#hasLocation" href="#">
-      provone:hasLocation
-    </a>
-  </li>
-</ul>
-
-<div class="anexample" id="location-example">
-<div class="anexampleTitle">Example 4<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment specifies a <span class="name">Location</span> identified within the RDF document by
-<span class="name">p1_p2DL</span>.
-</p>
-<pre class="codeexample">    
-1    :p1_p2DL 
-2    
-3       a prov:Location;
-4       dcterms:identifier "e1_e2DL"^^xsd:string;
-5    
-6    .
-</pre>
-The <em>Location</em> is simply specified as such (line 3) given the string <span class="name">e1_e2DL</span> as an 
-<span class="name">identifier</span> (line 4). 
-</div>
-
-</section><!-- !!! End section: location-specification -->
-
-<section id="controller-specification"> 
-      
-<h4><span class="secno">3.1.4 </span>Controller class</h4>
-
-<div class="glossary-ref">A <dfn id="concept-entity" title="Location" class="internalDFN">Controller</dfn>
-<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>specifies a Program that controls other Programs under a particular model of computation.</div>
-
-<p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#Controller</p>
-
-<p></p><b>has super-class</b>
-<ul>
-<li><a title="http://www.w3.org/ns/prov-o#Entity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity</a></li>
-</ul>
-
-<p></p><b>is in domain of</b>
-<ul>
-<li><a title="http://purl.org/provone/provone/2015/01#controls" href="#">provone:conrols</a></li>
-</ul>
-
-<p></p><b>is in range of</b>
-<ul>
-<li>
-<a title="http://purl.org/provone/provone/2015/01#controlledBy" href="#">provone:controlledBy</a></li>
-</ul>
-
-<div class="anexample" id="controller-example">
-<div class="anexampleTitle">Example 5<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment specifies a <span class="name">Controller</span> identified within the RDF document by
-<span class="name">p1_p2CL</span>.
-</p>
-<pre class="codeexample">
-1    :p1_p2CL 
-2   
-3       a provone:Controller;
-4       dcterms:identifier "e1_e2CL"^^xsd:string;
-5   
-6    .
-</pre>
-The <em>Controller</em> is given the string <span class="name">e1_e2CL</span> as an <span class="name">identifier</span> (line 4). 
-</div>
-
-</section><!-- !!! End section: controller-specification -->
-
-<section id="workflow-specification"> 
-      
-<h4><span class="secno">3.1.5 </span>Workflow class</h4>
-
-<div class="glossary-ref">   A <dfn id="concept-entity" title="Workflow" class="internalDFN">Workflow</dfn>
-<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>is a distinguished Program, which indicates that is
-meant to represent a computational experiment in its entirety. It is also subject to versioning by 
-<a title="http://www.w3.org/ns/prov-o#wasDerivedFrom" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom">prov:wasDerivedFrom</a>
-through its super-class <a title="#program-specification" href="#program-specification">provone:Program</a>. </div>
-
-<p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#Workflow</p>
-
-<p></p><b>has super-class</b>
-<ul>
-<li><a title="http://www.w3.org/ns/prov-o#Entity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity</a>,
-<a title="http://www.w3.org/ns/prov-o#Plan" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Plan">prov:Plan</a>,
-<a title="#program-specification" href="#program-specification">provone:Program</a></li>
-</ul>
-
-<p></p><b>is in domain of</b>
-<ul>
-<li><a title="http://purl.org/provone/provone/2015/01#hasSubProgram" href="#">provone:hasSubProgram</a>,
-<a title="http://purl.org/provone/provone/2015/01#controlledBy" href="#">provone:controlledBy</a>,
-<a title="http://purl.org/provone/provone/2015/01#hasInPort" href="#">provone:hasInPort</a>,
-<a title="http://purl.org/provone/provone/2015/01#hasOutPort" href="#">provone:hasOutPort</a>,
-<a title="http://www.w3.org/ns/prov-o#wasDerivedFrom" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom">prov:wasDerivedFrom</a></li>
-</ul>
-
-<p></p><b>is in range of</b>
-<ul>
-<li><a title="http://purl.org/provone/provone/2015/01#hasSubProgram" href="#">provone:hasSubProgram</a>,
-<a title="http://purl.org/provone/provone/2015/01#controls" href="#">provone:controls</a>,
-<a title="http://www.w3.org/ns/prov-o#wasAssociatedWith" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith">prov:wasAssociatedWith</a>,
-<a title="http://www.w3.org/ns/prov-o#wasDerivedFrom" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom">prov:wasDerivedFrom</a></li>
-</ul>
-
-<div class="anexample" id="workflow-example">
-<div class="anexampleTitle">Example 6<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment specifies a <span class="name">Workflow</span> identified within the RDF document by
-<span class="name">workflow_1</span>.
-</p>
-<pre class="codeexample">
-1    :workflow_1 
-2    
-3       a provone:Workflow;
-4       dcterms:identifier "wf1"^^xsd:string;
-5       dcterms:title "ModelComparison"^^xsd:string;
-6    
-7    .
-</pre>
-The <em>Workflow</em> is given the string <span class="name">wf1</span> as an <span class="name">identifier</span> in line 4. In addition, it is given the
-string <span class="name">ModelComparison</span> as a descriptive <span class="name">title</span> in line 5.
-</div>
-
-</section><!-- !!! End section: workflow-specification -->
-
-<section id="hassubprogram-specification"> 
-      
-<h4><span class="secno">3.1.6 </span>hasSubProgram object property</h4>
-
-<div class="glossary-ref"><dfn id="concept-entity" title="hasSubProgram" class="internalDFN">hasSubProgram</dfn>
-<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> specifies the recursive composition of Programs, a
-parent Program includes a child Program as part of its specification.</div>
-
-<p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#hasSubProgram</p>
-
-<p></p><b>has domain</b>
-<ul>
-<li><a title="#program-specification" href="#program-specification">provone:Program</a></li>
-</ul>
-
-<p></p><b>has range</b>
-<ul>
-<li>
-<a title="#program-specification" href="#program-specification">provone:Program</a></li>
-</ul>
-
-<div class="anexample" id="hassubprogram-example">
-<div class="anexampleTitle">Example 8<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment illustrates the use of the <span class="name">hasSubProgram</span> object property by extending
-<a href="#program-example">Example 1</a> of the <em>Program</em> class.
-</p>
-<pre class="codeexample">
-18    
-19   :top_program 
-20   
-21      a provone:Program;
-22      dcterms:identifier "main"^^xsd:string;
-23   
-24   .
-25
-26   :top_program provone:hasSubProgram :program_1 .
-</pre>
-A <em>Program</em> identified within the document as <span class="name">top_program</span>, is given the <span class="name">identifier</span>
-value <span class="name">main</span>. Subsequently, in line 26 it is specified that the
-same Program <span class="name">top_program</span> has as a sub-program the Program <span class="name">program_1</span>, defined in
-<a href="#program-example">Example 1</a>.
-</div>
-
-</section><!-- !!! End section: hassubprogram-specification -->
-
-<section id="controlledBy-specification"> 
-      
-<h4><span class="secno">3.1.7 </span>controlledBy object property</h4>
-
-<div class="glossary-ref"><dfn id="concept-entity" title="controlledBy" class="internalDFN">controlledBy</dfn>
-<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> relates a Controller to its source Program.</div>
-
-<p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#controlledBy</p>
-
-<p></p><b>has domain</b>
-<ul>
-<li><a title="#program-specification" href="#program-specification">provone:Program</a></li>
-</ul>
-
-<p></p><b>has range</b>
-<ul>
-<li>
-<a title="#controller-specification" href="#controller-specification">provone:Controller</a></li>
-</ul>
-
-<div class="anexample" id="controlledBy-example">
-<div class="anexampleTitle">Example 9<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment illustrates the use of the <span class="name">controlledBy</span> object property by complementing
-<a href="#program-example">Example 1</a> of the <em>Program</em> class and <a href="#program-example">Example 5</a> of the <em>Controller</em> class.
-</p>
-<pre class="codeexample">
-1    
-2    :program_1 provone:controlledBy :p1_p2CL .
-3
-</pre>
-Line 2 specifies that the <em>Program</em> <span class="name">program_1</span>, defined in <a href="#program-example">Example 1</a>, is the source
-<em>Program</em> of the <em>Controller</em> <span class="name">p1_p2CL</span>, defined in <a href="#program-example">Example 5</a>.
-</div>
-
-</section><!-- !!! End section: controlledBy-specification -->
-
-<section id="cltodestp-specification"> 
-      
-<h4><span class="secno">3.1.8 </span>controls object property</h4>
-
-<div class="glossary-ref"><dfn id="concept-entity" title="controls" class="internalDFN">controls</dfn>
-<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> relates a Controller to its destination Program.</div>
-
-<p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#controls</p>
-
-<p></p><b>has domain</b>
-<ul>
-<li><a title="#controller-specification" href="#controller-specification">provone:Controller</a></li>
-</ul>
-
-<p></p><b>has range</b>
-<ul>
-<li>
-<a title="#program-specification" href="#program-specification">provone:Program</a>
-</li>
-</ul>
-
-<div class="anexample" id="controls-example">
-<div class="anexampleTitle">Example 10<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment illustrates the use of the <span class="name">controls</span> object property by complementing
-<a href="#program-example">Example 5</a> of the <em>Controller</em> class.
-</p>
-<pre class="codeexample">
-1
-2    :program_2 
-3   
-4       a provone:Program;
-5       dcterms:identifier "e2"^^xsd:string;
-6       dcterms:title "TemporalStatistics"^^xsd:string;
-7    .    
-8
-9    :p1_p2CL provone:controls :program_2 .
-10
-</pre>
-A <em>Program</em> identified within the document as <span class="name">program_2</span>, is given the <span class="name">identifier</span>
-value <span class="name">e2</span> and <span class="name">TemporalStatistics</span> as its <span class="name">title</span>. Line 9 states
-that the <em>Controller</em> <span class="name">p1_p2CL</span>, defined in <a href="#program-example">Example 5</a>, has as its destination
-the <em>Program</em> <span class="name">program_2</span>.
-</div>
-
-</section><!-- !!! End section: controls-specification -->
-
-<section id="hasinport-specification"> 
-      
-<h4><span class="secno">3.1.9 </span>hasInPort object property</h4>
-
-<div class="glossary-ref"><dfn id="concept-entity" title="hasInPort" class="internalDFN">hasInPort</dfn>
-<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> specifies the Ports of a particular Program that are used as input ports.</div>
-
-<p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#hasInPort</p>
-
-<p></p><b>has domain</b>
-<ul>
-<li><a title="#program-specification" href="#program-specification">provone:Program</a></li>
-</ul>
-
-<p></p><b>has range</b>
-<ul>
-<li>
-<a title="#port-specification" href="#port-specification">provone:Port</a></li>
-</ul>
-
-<div class="anexample" id="hasinport-example">
-<div class="anexampleTitle">Example 11<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment illustrates the use of the <span class="name">hasInPort</span> object property by complementing
-<a href="#program-example">Example 1</a> of the <em>Program</em> class and <a href="#inputport-example">Example 2</a> of the <em>Port</em> class.
-</p>
-<pre class="codeexample">
-1    
-2    :program_1 provone:hasInPort :p1_ip1 .
-3
-</pre>
-Line 2 specifies that the <em>Program</em> <span class="name">program_1</span>, defined in <a href="#program-example">Example 1</a>, has an input
-<em>Port</em> <span class="name">p1_ip1</span>, defined in <a href="#inputport-example">Example 2</a>.
-</div>
-
-</section><!-- !!! End section: hasinport-specification -->
-
-<section id="hasoutport-specification"> 
-      
-<h4><span class="secno">3.1.10</span>hasOutPort object property</h4>
-
-<div class="glossary-ref"><dfn id="concept-entity" title="hasOutPort" class="internalDFN">hasOutPort</dfn>
-<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> specifies the Ports of a particular Program that are used as output ports.</div>
-
-<p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#hasOutPort</p>
-
-<p></p><b>has domain</b>
-<ul>
-<li><a title="#program-specification" href="#program-specification">provone:Program</a></li>
-</ul>
-
-<p></p><b>has range</b>
-<ul>
-<li>
-<a title="#outputport-specification" href="#outputport-specification">provone:Port</a></li>
-</ul>
-
-<div class="anexample" id="hasoutport-example">
-<div class="anexampleTitle">Example 12<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment illustrates the use of the <span class="name">hasOutPort</span> object property by complementing
-<a href="#program-example">Example 1</a> of the <em>Program</em> class and <a href="#outputport-example">Example 2</a> of the <em>Port</em> class.
-</p>
-<pre class="codeexample">
-1    
-2    :program_1 provone:hasOutPort :p1_op1 .
-3
-</pre>
-Line 2 specifies that the <em>Program</em> <span class="name">program_1</span>, defined in <a href="#program-example">Example 1</a>, has a
-<em>Port</em> <span class="name">p1_op1</span>, defined in <a href="#outputport-example">Example 2</a>.
-</div>
-
-</section><!-- !!! End section: hasoutport-specification -->
-
-<section id="hasdefaultparam-specification"> 
-      
-<h4><span class="secno">3.1.11 </span>hasDefaultParam object property</h4>
-
-<div class="glossary-ref"><dfn id="concept-entity" title="hasDefaultParam" class="internalDFN">hasDefaultParam</dfn>
-<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> specifies that a given input Port has a certain Entity item as a default parameter (usually Data). This enables the pre-configuration of executable Workflow instances with zero or more parameters.</div>
-
-<p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#hasDefaultParam</p>
-
-<p></p><b>has domain</b>
-<ul>
-<li><a title="#port-specification" href="#port-specification">provone:Port</a></li>
-</ul>
-
-<p></p><b>has range</b>
-<ul>
-<li>
-<a title="#data-specification" href="#data-specification">provone:Entity</a></li>
-</ul>
-
-<div class="anexample" id="hasdefaultparam-example">
-<div class="anexampleTitle">Example 13<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment illustrates the use of the <span class="name">hasDefaultParam</span> object property by complementing
-<a href="#inputport-example">Example 2</a> of the <em>Port</em> class and <a href="#data-example">Example 24</a> of the <em>Data</em> class.
-</p>
-<pre class="codeexample">
-1    
-2    :p1_ip1 provone:hasDefaultParam :data1 .
-3
-</pre>
-Line 2 specifies that the <em>Port</em> <span class="name">p1_ip1</span>, defined in
-<a href="#inputport-example">Example 2</a> and associated in <a href="#hasinport-example">Example 11</a> with <em>Program</em>
-<span class="name">program_1</span> of <a href="#program-example">Example 1</a>, has as a default parameter the
-<em>Data</em> item <span class="name">data1</span>, defined in <a href="#data-example">Example 24</a>.
-</div>
-
-</section><!-- !!! End section: hasdefaultparam-specification -->
-
-<section id="haslocation-specification"> 
-      
-<h4><span class="secno">3.1.12 </span>hasLocation object property</h4>
-
-<div class="glossary-ref"><dfn id="concept-hasLocation" title="hasLocation" class="internalDFN">hasLocation</dfn>
-<sup><a class="internalDFN" href="#concept-hasLocation"><span class="diamond"> ◊</span></a></sup> specifies the Location of the Entity associated with a given input or output Port.</div>
-
-<p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#hasLocation</p>
-
-<p></p><b>has domain</b>
-<ul>
-<li><a title="#port-specification" href="#port-specification">provone:Port</a></li>
-</ul>
-
-<p></p><b>has range</b>
-
-<ul>
-<li><a title="#location-specification" href="#location-specification">prov:Location</a></li>
-</ul>
-
-<div class="anexample" id="hasLocation-example">
-<div class="anexampleTitle">Example 16<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment illustrates the use of the <span class="name">hasLocation</span> object property.
-</p>
-<pre class="codeexample">
-1    :pmain_ip1 
-2       a provone:Port;
-3       dcterms:identifier "e1_ip1"^^xsd:string;
-4    .
-5
-6    :loc1 
-7       a prov:Location;
-8       dcterms:identifier "pmain_loc1"^^xsd:string;
-9    .
-10 
-11   :pmain_ip1 provone:hasLocation :loc1 .
-
-</pre>
-First, an input <em>Port</em> <span class="name">pmain_ip1</span>is defined in lines 1-4. Lines 6-9 specify the <em>Location</em> 
-<span class="name">loc1</span>, which is then is used to associate the input <em>Port</em> and the <em>Location</em> using the <em>hasLocation</em> statement in line 11.
-</div>
-
-</section><!-- !!! End section: hasLocation-specification -->
-
-<section id="dltooutport-specification"> 
-
-<h4><span class="secno">3.1.17 </span>DLToOutPort object property</h4>
-
-<div class="glossary-ref"><dfn id="concept-entity" title="DLToOutPort" class="internalDFN">DLToOutPort</dfn>
-<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> connects a Location to the OutputPort of a Program.
-In turn, the same Location can be linked to the OutputPort of a nested Program.</div>
-
-<p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#DLToOutPort</p>
-
-<p></p><b>has domain</b>
-<ul>
-<li>
-<a title="#location-specification" href="#location-specification">prov:Location</a>
-</li>
-</ul>
-
-<p></p><b>has range</b>
-<ul>
-<li>
-<a title="#outputport-specification" href="#outputport-specification">provone:OutputPort</a>
-</li>
-</ul>
-
-<div class="anexample" id="dltoinport-example">
-<div class="anexampleTitle">Example 17<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment illustrates the use of the <span class="name">DLToOutPort</span> object property.
-</p>
-<pre class="codeexample">
-1    :pmain_op1 
-2       a provone:OutputPort;
-3       dcterms:identifier "e1_op1"^^xsd:string;
-4    .
-5
-6    :pa_op1 
-7       a provone:OutputPort;
-8       dcterms:identifier "a_op1"^^xsd:string;
-9    .
-10
-11   :spdl2 
-12      a prov:Location;
-13      dcterms:identifier "pmain_paDL2"^^xsd:string;
-14   .
-15
-16   :pmain_op1 provone:outPortToDL :spdl2 .
-17
-18   :spdl2 provone:DLToInPort :pa_op1 .
-</pre>
-Two <em>OutputPorts</em> <span class="name">pmain_op1</span> and <span class="name">pa_op1</span> are defined in lines 1-9, the first
-corresponds to the top program and the second to one of its subprograms. Lines 11-14 specify the <em>Location</em> 
-<span class="name">spdl2</span>, which is then is used to connect the two <em>OutputPorts</em> by an <em>outPortToDL</em> statement in line 16
-and a corresponding <em>DLToOutPort</em> statement in line 18.
-</div>
-
-</section><!-- !!! End section: dltooutport-specification -->
-
-<section id="wasderivedfrom-specification"> 
-      
-<h4><span class="secno">3.1.13</span>wasDerivedFrom object property</h4>
-
-<p>
-<a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom" title="http://www.w3.org/ns/prov-o#wasDerivedFrom">prov:wasDerivedFrom</a>
-is adopted in ProvONE, in relation to workflow structure, to describe the evolution of programs and
-workflows.
-</p>
-
-<p><strong>IRI:</strong>http://www.w3.org/ns/prov#wasDerivedFrom</p>
-
-<p></p><b>has domain</b>
-<ul>
-<li>
-<a title="#program-specification" href="#program-specification">provone:Program</a>,
-<a title="#workflow-specification" href="#workflow-specification">provone:Workflow</a>
-</li>
-</ul>
-
-<p></p><b>has range</b>
-<ul>
-<li>
-<a title="#program-specification" href="#program-specification">provone:Program</a>,
-<a title="#workflow-specification" href="#workflow-specification">provone:Workflow</a>
-</li>
-</ul>
-
-<div class="anexample" id="wasderivedfrom-example">
-<div class="anexampleTitle">Example 19<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment illustrates the use of the <span class="name">wasDerivedFrom</span> object property by extending
-<a href="#workflow-example">Example 6</a> of the <em>Workflow</em> class.
-</p>
-<pre class="codeexample">
-1     
-2    :workflow_1update1 
-3   
-4       a provone:Workflow;
-5       dcterms:identifier "wf1upd1"^^xsd:string;
-6       dcterms:title "ModelComparison"^^xsd:string;
-7
-8    :workflow_1update1 prov:wasDerivedFrom :workflow_1 .
-9
-</pre>
-First, a <em>Workflow</em> <span class="name">workflow_1update1</span> is defined beginning at line 2. Line 8 specifies that <em>Workflow</em>
-<span class="name">workflow_1update1</span> was derived from <em>Workflow</em> <span class="name">workflow_1</span> of
-<a href="#workflow-example">Example 6</a>, which implies that it is a new version and the result of workflow evolution. Hence it is given the
-same <span class="name">title</span>.
-</div>
-
-</section><!-- !!! End section: wasderivedfrom-specification -->
-
-</section><!-- !!! End section: workflow-constructs-specification -->
+  <section id="workflow-constructs-specification"> 
+    <h3><span class="secno">3.1 </span>ProvONE Workflow Specification</h3>
+    
+    <section id="program-specification"> 
+          
+    <h4><span class="secno">3.1.1 </span>Program class</h4>
+    
+    <div class="glossary-ref">   A <dfn id="concept-entity" title="Program" class="internalDFN">Program</dfn>
+    <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> represents a computational task that consumes and produces data through its input and output ports, respectively.
+    It can be atomic or composite, the latter case represented by a possibly nested Program. </div>
+    
+    <p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#Program</p>
+    
+    <p></p><b>has super-class</b>
+    <ul>
+    <li><a title="http://www.w3.org/ns/prov-o#Entity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity</a>,
+    <a title="http://www.w3.org/ns/prov-o#Plan" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Plan">prov:Plan</a></li>
+    </ul>
+    
+    <p></p><b>is in domain of</b>
+    <ul>
+    <li><a title="http://purl.org/provone/provone/2015/01#hasSubProgram" href="#">provone:hasSubProgram</a>,
+    <a title="http://purl.org/provone/provone/2015/01#controlledBy" href="#">provone:controlledBy</a>,
+    <a title="http://purl.org/provone/provone/2015/01#hasInPort" href="#">provone:hasInPort</a>,
+    <a title="http://purl.org/provone/provone/2015/01#hasOutPort" href="#">provone:hasOutPort</a>,
+    </li>
+    </ul>
+    
+    <p></p><b>is in range of</b>
+    <ul>
+    <li><a title="http://purl.org/provone/provone/2015/01#hasSubProgram" href="#">provone:hasSubProgram</a>,
+    <a title="http://purl.org/provone/provone/2015/01#controls" href="#">provone:controls</a>,
+    <a title="http://www.w3.org/ns/prov-o#wasAssociatedWith" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith">prov:wasAssociatedWith</a></li>
+    </ul>
+    
+    <div class="anexample" id="program-example">
+    <div class="anexampleTitle">Example 1<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <p>
+    The following RDF fragment specifies a <span class="name">Program</span> identified within the RDF document by
+    <span class="name">program_1</span>.
+    </p>
+    <pre class="codeexample">
+    1    @prefix rdfs:    &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+    2    @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+    3    @prefix owl:     &lt;http://www.w3.org/2002/07/owl#&gt; .
+    4    @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+    5    @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+    6    @prefix provone: &lt;http://purl.org/provone&gt; .
+    7    @prefix wfms:    &lt;http://www.wfms.org/registry.xsd&gt; .
+    8    @prefix :        &lt;http://example.com/&gt; .
+    9    
+    10   :program_1 
+    11   
+    12      a provone:Program;
+    13      dcterms:identifier "e1"^^xsd:string;
+    14      dcterms:title "CDMSBoxfill"^^xsd:string;
+    15      wfms:package "gov.llnl.uvcdat.cdms"^^xsd:string;
+    16   
+    17   .
+    </pre>
+    Line 12 specifies class membership. In order to specify additional attributes for the <em>Program</em>, we employ first the
+    Dublin Core Metadata Elements [<cite><a class="bibref" href="#bib-DC-RDF">DC-RDF</a></cite>]. In particular, we assign
+    the string <span class="name">e1</span> as an <span class="name">identifier</span>, thus stating an identifier explicitly, which is independent
+    of the RDF node identifier. In addition, a descriptive title is given in line 14. Additional attributes associated with the specific WfMS in
+    use, in this case a placeholder example, can also be specified in a similar fashion. In this
+    case the software package responsible for the execution of the <em>Program</em> within the WfMS is specified in line 15.
+    </div>
+    
+    </section><!-- !!! End section: program-specification -->
+    
+    <section id="port-specification"> 
+          
+    <h4><span class="secno">3.1.2 </span>Port class</h4>
+    
+    <div class="glossary-ref">   A <dfn id="concept-entity" title="InputPort" class="internalDFN">Port</dfn>
+    <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>enables a Program to send or receive Entity items (Data, Visualization, or Document instances). When semantically typed as an input port using the <a title="http://purl.org/provone/provone/2015/01#hasInPort" href="#">provone:hasInPort</a> object property, the Port may also be further described with default parameters using the <a title="http://purl.org/provone/provone/2015/01#hasDefaultParam" href="#">provone:hasDefaultParam</a> object property.</div>
+    
+    <p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#Port</p>
+    
+    <p></p><b>has super-class</b>
+    <ul>
+    <li><a title="http://www.w3.org/ns/prov-o#Entity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity</a></li>
+    </ul>
+    
+    <p></p><b>is in domain of</b>
+    <ul>
+    <li><a title="http://purl.org/provone/provone/2015/01#hasDefaultParam" href="#">provone:hasDefaultParam</a></li>
+    </ul>
+    
+    <p></p><b>is in range of</b>
+    <ul>
+    <li>
+    <a title="http://purl.org/provone/provone/2015/01#hasInPort" href="#">provone:hasInPort</a>,
+    <a title="http://purl.org/provone/provone/2015/01#hasOutPort" href="#">provone:DLToInPort</a></li>
+    </ul>
+    
+    <div class="anexample" id="inputport-example">
+    <div class="anexampleTitle">Example 2<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <p>
+    The following RDF fragment specifies a <span class="name">Port</span> identified within the RDF document by
+    <span class="name">p1_ip1</span>.
+    </p>
+    <pre class="codeexample">   
+    1    :p1_ip1 
+    2    
+    3       a provone:Port;
+    4       dcterms:identifier "e1_ip1"^^xsd:string;
+    5       dcterms:title "input_vars"^^xsd:string;
+    6       wfms:signature "gov.llnl.uvcdat.cdms:CDMSVariable"^^xsd:string;
+    7    
+    8    .
+    </pre>
+    Again we make use of the Dublin Core Metadata Elements as well as of elements specific to an example placeholder WfMS. The <em>Port</em> is
+    given an identifier and a descriptive title in lines 4 and 5, respectively. A signature denoting the type of data that the <em>Port</em> consumes is defined in line 6. 
+    </div>
+    
+    </section><!-- !!! End section: port-specification -->
+    
+    <section id="location-specification"> 
+          
+    <h4><span class="secno">3.1.3 </span>Location class</h4>
+    
+    <div class="glossary-ref"> The
+      <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Location"
+         title="http://www.w3.org/ns/prov-o#Location">prov:Location</a>
+      class is adopted directly from the PROV Ontology, and identifies the location of an Entity (Data,
+      Visualization, or Document), enabling these items to be sent between Programs. The Location
+      may be an IRI, a directory or file reference, a database row/column reference, a memory
+      reference, etc.
+    </div>
+    
+    <p><strong>IRI:</strong>http://www.w3.org/ns/prov-o#Location</p>
+    
+    <p></p><b>has super-class</b>
+    <ul>
+    <li><a title="http://www.w3.org/ns/prov-o#Entity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity</a></li>
+    </ul>
+    
+    <b>is in range of</b>
+    <ul>
+      <li>
+        <a title="http://www.w3.org/ns/prov-o#atLocation" href="#">
+          prov:atLocation
+        </a>
+      </li>
+      <li>
+        <a title="http://purl.org/provone/provone/2015/01#hasLocation" href="#">
+          provone:hasLocation
+        </a>
+      </li>
+    </ul>
+    
+    <div class="anexample" id="location-example">
+    <div class="anexampleTitle">Example 4<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <p>
+    The following RDF fragment specifies a <span class="name">Location</span> identified within the RDF document by
+    <span class="name">p1_p2DL</span>.
+    </p>
+    <pre class="codeexample">    
+    1    :p1_p2DL 
+    2    
+    3       a prov:Location;
+    4       dcterms:identifier "e1_e2DL"^^xsd:string;
+    5    
+    6    .
+    </pre>
+    The <em>Location</em> is simply specified as such (line 3) given the string <span class="name">e1_e2DL</span> as an 
+    <span class="name">identifier</span> (line 4). 
+    </div>
+    
+    </section><!-- !!! End section: location-specification -->
+    
+    <section id="controller-specification"> 
+          
+    <h4><span class="secno">3.1.4 </span>Controller class</h4>
+    
+    <div class="glossary-ref">A <dfn id="concept-entity" title="Location" class="internalDFN">Controller</dfn>
+    <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>specifies a Program that controls other Programs under a particular model of computation.</div>
+    
+    <p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#Controller</p>
+    
+    <p></p><b>has super-class</b>
+    <ul>
+    <li><a title="http://www.w3.org/ns/prov-o#Entity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity</a></li>
+    </ul>
+    
+    <p></p><b>is in domain of</b>
+    <ul>
+    <li><a title="http://purl.org/provone/provone/2015/01#controls" href="#">provone:conrols</a></li>
+    </ul>
+    
+    <p></p><b>is in range of</b>
+    <ul>
+    <li>
+    <a title="http://purl.org/provone/provone/2015/01#controlledBy" href="#">provone:controlledBy</a></li>
+    </ul>
+    
+    <div class="anexample" id="controller-example">
+    <div class="anexampleTitle">Example 5<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <p>
+    The following RDF fragment specifies a <span class="name">Controller</span> identified within the RDF document by
+    <span class="name">p1_p2CL</span>.
+    </p>
+    <pre class="codeexample">
+    1    :p1_p2CL 
+    2   
+    3       a provone:Controller;
+    4       dcterms:identifier "e1_e2CL"^^xsd:string;
+    5   
+    6    .
+    </pre>
+    The <em>Controller</em> is given the string <span class="name">e1_e2CL</span> as an <span class="name">identifier</span> (line 4). 
+    </div>
+    
+    </section><!-- !!! End section: controller-specification -->
+    
+    <section id="workflow-specification"> 
+          
+    <h4><span class="secno">3.1.5 </span>Workflow class</h4>
+    
+    <div class="glossary-ref">   A <dfn id="concept-entity" title="Workflow" class="internalDFN">Workflow</dfn>
+    <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>is a distinguished Program, which indicates that is
+    meant to represent a computational experiment in its entirety. It is also subject to versioning by 
+    <a title="http://www.w3.org/ns/prov-o#wasDerivedFrom" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom">prov:wasDerivedFrom</a>
+    through its super-class <a title="#program-specification" href="#program-specification">provone:Program</a>. </div>
+    
+    <p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#Workflow</p>
+    
+    <p></p><b>has super-class</b>
+    <ul>
+    <li><a title="http://www.w3.org/ns/prov-o#Entity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity</a>,
+    <a title="http://www.w3.org/ns/prov-o#Plan" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Plan">prov:Plan</a>,
+    <a title="#program-specification" href="#program-specification">provone:Program</a></li>
+    </ul>
+    
+    <p></p><b>is in domain of</b>
+    <ul>
+    <li><a title="http://purl.org/provone/provone/2015/01#hasSubProgram" href="#">provone:hasSubProgram</a>,
+    <a title="http://purl.org/provone/provone/2015/01#controlledBy" href="#">provone:controlledBy</a>,
+    <a title="http://purl.org/provone/provone/2015/01#hasInPort" href="#">provone:hasInPort</a>,
+    <a title="http://purl.org/provone/provone/2015/01#hasOutPort" href="#">provone:hasOutPort</a>,
+    <a title="http://www.w3.org/ns/prov-o#wasDerivedFrom" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom">prov:wasDerivedFrom</a></li>
+    </ul>
+    
+    <p></p><b>is in range of</b>
+    <ul>
+    <li><a title="http://purl.org/provone/provone/2015/01#hasSubProgram" href="#">provone:hasSubProgram</a>,
+    <a title="http://purl.org/provone/provone/2015/01#controls" href="#">provone:controls</a>,
+    <a title="http://www.w3.org/ns/prov-o#wasAssociatedWith" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith">prov:wasAssociatedWith</a>,
+    <a title="http://www.w3.org/ns/prov-o#wasDerivedFrom" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom">prov:wasDerivedFrom</a></li>
+    </ul>
+    
+    <div class="anexample" id="workflow-example">
+    <div class="anexampleTitle">Example 6<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <p>
+    The following RDF fragment specifies a <span class="name">Workflow</span> identified within the RDF document by
+    <span class="name">workflow_1</span>.
+    </p>
+    <pre class="codeexample">
+    1    :workflow_1 
+    2    
+    3       a provone:Workflow;
+    4       dcterms:identifier "wf1"^^xsd:string;
+    5       dcterms:title "ModelComparison"^^xsd:string;
+    6    
+    7    .
+    </pre>
+    The <em>Workflow</em> is given the string <span class="name">wf1</span> as an <span class="name">identifier</span> in line 4. In addition, it is given the
+    string <span class="name">ModelComparison</span> as a descriptive <span class="name">title</span> in line 5.
+    </div>
+    
+    </section><!-- !!! End section: workflow-specification -->
+    
+    <section id="hassubprogram-specification"> 
+          
+    <h4><span class="secno">3.1.6 </span>hasSubProgram object property</h4>
+    
+    <div class="glossary-ref"><dfn id="concept-entity" title="hasSubProgram" class="internalDFN">hasSubProgram</dfn>
+    <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> specifies the recursive composition of Programs, a
+    parent Program includes a child Program as part of its specification.</div>
+    
+    <p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#hasSubProgram</p>
+    
+    <p></p><b>has domain</b>
+    <ul>
+    <li><a title="#program-specification" href="#program-specification">provone:Program</a></li>
+    </ul>
+    
+    <p></p><b>has range</b>
+    <ul>
+    <li>
+    <a title="#program-specification" href="#program-specification">provone:Program</a></li>
+    </ul>
+    
+    <div class="anexample" id="hassubprogram-example">
+    <div class="anexampleTitle">Example 8<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <p>
+    The following RDF fragment illustrates the use of the <span class="name">hasSubProgram</span> object property by extending
+    <a href="#program-example">Example 1</a> of the <em>Program</em> class.
+    </p>
+    <pre class="codeexample">
+    18    
+    19   :top_program 
+    20   
+    21      a provone:Program;
+    22      dcterms:identifier "main"^^xsd:string;
+    23   
+    24   .
+    25
+    26   :top_program provone:hasSubProgram :program_1 .
+    </pre>
+    A <em>Program</em> identified within the document as <span class="name">top_program</span>, is given the <span class="name">identifier</span>
+    value <span class="name">main</span>. Subsequently, in line 26 it is specified that the
+    same Program <span class="name">top_program</span> has as a sub-program the Program <span class="name">program_1</span>, defined in
+    <a href="#program-example">Example 1</a>.
+    </div>
+    
+    </section><!-- !!! End section: hassubprogram-specification -->
+    
+    <section id="controlledBy-specification"> 
+          
+    <h4><span class="secno">3.1.7 </span>controlledBy object property</h4>
+    
+    <div class="glossary-ref"><dfn id="concept-entity" title="controlledBy" class="internalDFN">controlledBy</dfn>
+    <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> relates a Controller to its source Program.</div>
+    
+    <p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#controlledBy</p>
+    
+    <p></p><b>has domain</b>
+    <ul>
+    <li><a title="#program-specification" href="#program-specification">provone:Program</a></li>
+    </ul>
+    
+    <p></p><b>has range</b>
+    <ul>
+    <li>
+    <a title="#controller-specification" href="#controller-specification">provone:Controller</a></li>
+    </ul>
+    
+    <div class="anexample" id="controlledBy-example">
+    <div class="anexampleTitle">Example 9<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <p>
+    The following RDF fragment illustrates the use of the <span class="name">controlledBy</span> object property by complementing
+    <a href="#program-example">Example 1</a> of the <em>Program</em> class and <a href="#program-example">Example 5</a> of the <em>Controller</em> class.
+    </p>
+    <pre class="codeexample">
+    1    
+    2    :program_1 provone:controlledBy :p1_p2CL .
+    3
+    </pre>
+    Line 2 specifies that the <em>Program</em> <span class="name">program_1</span>, defined in <a href="#program-example">Example 1</a>, is the source
+    <em>Program</em> of the <em>Controller</em> <span class="name">p1_p2CL</span>, defined in <a href="#program-example">Example 5</a>.
+    </div>
+    
+    </section><!-- !!! End section: controlledBy-specification -->
+    
+    <section id="cltodestp-specification"> 
+          
+    <h4><span class="secno">3.1.8 </span>controls object property</h4>
+    
+    <div class="glossary-ref"><dfn id="concept-entity" title="controls" class="internalDFN">controls</dfn>
+    <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> relates a Controller to its destination Program.</div>
+    
+    <p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#controls</p>
+    
+    <p></p><b>has domain</b>
+    <ul>
+    <li><a title="#controller-specification" href="#controller-specification">provone:Controller</a></li>
+    </ul>
+    
+    <p></p><b>has range</b>
+    <ul>
+    <li>
+    <a title="#program-specification" href="#program-specification">provone:Program</a>
+    </li>
+    </ul>
+    
+    <div class="anexample" id="controls-example">
+    <div class="anexampleTitle">Example 10<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <p>
+    The following RDF fragment illustrates the use of the <span class="name">controls</span> object property by complementing
+    <a href="#program-example">Example 5</a> of the <em>Controller</em> class.
+    </p>
+    <pre class="codeexample">
+    1
+    2    :program_2 
+    3   
+    4       a provone:Program;
+    5       dcterms:identifier "e2"^^xsd:string;
+    6       dcterms:title "TemporalStatistics"^^xsd:string;
+    7    .    
+    8
+    9    :p1_p2CL provone:controls :program_2 .
+    10
+    </pre>
+    A <em>Program</em> identified within the document as <span class="name">program_2</span>, is given the <span class="name">identifier</span>
+    value <span class="name">e2</span> and <span class="name">TemporalStatistics</span> as its <span class="name">title</span>. Line 9 states
+    that the <em>Controller</em> <span class="name">p1_p2CL</span>, defined in <a href="#program-example">Example 5</a>, has as its destination
+    the <em>Program</em> <span class="name">program_2</span>.
+    </div>
+    
+    </section><!-- !!! End section: controls-specification -->
+    
+    <section id="hasinport-specification"> 
+          
+    <h4><span class="secno">3.1.9 </span>hasInPort object property</h4>
+    
+    <div class="glossary-ref"><dfn id="concept-entity" title="hasInPort" class="internalDFN">hasInPort</dfn>
+    <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> specifies the Ports of a particular Program that are used as input ports.</div>
+    
+    <p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#hasInPort</p>
+    
+    <p></p><b>has domain</b>
+    <ul>
+    <li><a title="#program-specification" href="#program-specification">provone:Program</a></li>
+    </ul>
+    
+    <p></p><b>has range</b>
+    <ul>
+    <li>
+    <a title="#port-specification" href="#port-specification">provone:Port</a></li>
+    </ul>
+    
+    <div class="anexample" id="hasinport-example">
+    <div class="anexampleTitle">Example 11<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <p>
+    The following RDF fragment illustrates the use of the <span class="name">hasInPort</span> object property by complementing
+    <a href="#program-example">Example 1</a> of the <em>Program</em> class and <a href="#inputport-example">Example 2</a> of the <em>Port</em> class.
+    </p>
+    <pre class="codeexample">
+    1    
+    2    :program_1 provone:hasInPort :p1_ip1 .
+    3
+    </pre>
+    Line 2 specifies that the <em>Program</em> <span class="name">program_1</span>, defined in <a href="#program-example">Example 1</a>, has an input
+    <em>Port</em> <span class="name">p1_ip1</span>, defined in <a href="#inputport-example">Example 2</a>.
+    </div>
+    
+    </section><!-- !!! End section: hasinport-specification -->
+    
+    <section id="hasoutport-specification"> 
+          
+    <h4><span class="secno">3.1.10</span>hasOutPort object property</h4>
+    
+    <div class="glossary-ref"><dfn id="concept-entity" title="hasOutPort" class="internalDFN">hasOutPort</dfn>
+    <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> specifies the Ports of a particular Program that are used as output ports.</div>
+    
+    <p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#hasOutPort</p>
+    
+    <p></p><b>has domain</b>
+    <ul>
+    <li><a title="#program-specification" href="#program-specification">provone:Program</a></li>
+    </ul>
+    
+    <p></p><b>has range</b>
+    <ul>
+    <li>
+    <a title="#outputport-specification" href="#outputport-specification">provone:Port</a></li>
+    </ul>
+    
+    <div class="anexample" id="hasoutport-example">
+    <div class="anexampleTitle">Example 12<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <p>
+    The following RDF fragment illustrates the use of the <span class="name">hasOutPort</span> object property by complementing
+    <a href="#program-example">Example 1</a> of the <em>Program</em> class and <a href="#outputport-example">Example 2</a> of the <em>Port</em> class.
+    </p>
+    <pre class="codeexample">
+    1    
+    2    :program_1 provone:hasOutPort :p1_op1 .
+    3
+    </pre>
+    Line 2 specifies that the <em>Program</em> <span class="name">program_1</span>, defined in <a href="#program-example">Example 1</a>, has a
+    <em>Port</em> <span class="name">p1_op1</span>, defined in <a href="#outputport-example">Example 2</a>.
+    </div>
+    
+    </section><!-- !!! End section: hasoutport-specification -->
+    
+    <section id="hasdefaultparam-specification"> 
+          
+    <h4><span class="secno">3.1.11 </span>hasDefaultParam object property</h4>
+    
+    <div class="glossary-ref"><dfn id="concept-entity" title="hasDefaultParam" class="internalDFN">hasDefaultParam</dfn>
+    <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> specifies that a given input Port has a certain Entity item as a default parameter (usually Data). This enables the pre-configuration of executable Workflow instances with zero or more parameters.</div>
+    
+    <p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#hasDefaultParam</p>
+    
+    <p></p><b>has domain</b>
+    <ul>
+    <li><a title="#port-specification" href="#port-specification">provone:Port</a></li>
+    </ul>
+    
+    <p></p><b>has range</b>
+    <ul>
+    <li>
+    <a title="#data-specification" href="#data-specification">provone:Entity</a></li>
+    </ul>
+    
+    <div class="anexample" id="hasdefaultparam-example">
+    <div class="anexampleTitle">Example 13<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <p>
+    The following RDF fragment illustrates the use of the <span class="name">hasDefaultParam</span> object property by complementing
+    <a href="#inputport-example">Example 2</a> of the <em>Port</em> class and <a href="#data-example">Example 24</a> of the <em>Data</em> class.
+    </p>
+    <pre class="codeexample">
+    1    
+    2    :p1_ip1 provone:hasDefaultParam :data1 .
+    3
+    </pre>
+    Line 2 specifies that the <em>Port</em> <span class="name">p1_ip1</span>, defined in
+    <a href="#inputport-example">Example 2</a> and associated in <a href="#hasinport-example">Example 11</a> with <em>Program</em>
+    <span class="name">program_1</span> of <a href="#program-example">Example 1</a>, has as a default parameter the
+    <em>Data</em> item <span class="name">data1</span>, defined in <a href="#data-example">Example 24</a>.
+    </div>
+    
+    </section><!-- !!! End section: hasdefaultparam-specification -->
+    
+    <section id="haslocation-specification"> 
+          
+    <h4><span class="secno">3.1.12 </span>hasLocation object property</h4>
+    
+    <div class="glossary-ref"><dfn id="concept-hasLocation" title="hasLocation" class="internalDFN">hasLocation</dfn>
+    <sup><a class="internalDFN" href="#concept-hasLocation"><span class="diamond"> ◊</span></a></sup> specifies the Location of the Entity associated with a given input or output Port.</div>
+    
+    <p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#hasLocation</p>
+    
+    <p></p><b>has domain</b>
+    <ul>
+    <li><a title="#port-specification" href="#port-specification">provone:Port</a></li>
+    </ul>
+    
+    <p></p><b>has range</b>
+    
+    <ul>
+    <li><a title="#location-specification" href="#location-specification">prov:Location</a></li>
+    </ul>
+    
+    <div class="anexample" id="hasLocation-example">
+    <div class="anexampleTitle">Example 16<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <p>
+    The following RDF fragment illustrates the use of the <span class="name">hasLocation</span> object property.
+    </p>
+    <pre class="codeexample">
+    1    :pmain_ip1 
+    2       a provone:Port;
+    3       dcterms:identifier "e1_ip1"^^xsd:string;
+    4    .
+    5
+    6    :loc1 
+    7       a prov:Location;
+    8       dcterms:identifier "pmain_loc1"^^xsd:string;
+    9    .
+    10 
+    11   :pmain_ip1 provone:hasLocation :loc1 .
+    
+    </pre>
+    First, an input <em>Port</em> <span class="name">pmain_ip1</span>is defined in lines 1-4. Lines 6-9 specify the <em>Location</em> 
+    <span class="name">loc1</span>, which is then is used to associate the input <em>Port</em> and the <em>Location</em> using the <em>hasLocation</em> statement in line 11.
+    </div>
+    
+    </section><!-- !!! End section: hasLocation-specification -->
+    
+    <section id="dltooutport-specification"> 
+    
+    <h4><span class="secno">3.1.17 </span>DLToOutPort object property</h4>
+    
+    <div class="glossary-ref"><dfn id="concept-entity" title="DLToOutPort" class="internalDFN">DLToOutPort</dfn>
+    <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> connects a Location to the OutputPort of a Program.
+    In turn, the same Location can be linked to the OutputPort of a nested Program.</div>
+    
+    <p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#DLToOutPort</p>
+    
+    <p></p><b>has domain</b>
+    <ul>
+    <li>
+    <a title="#location-specification" href="#location-specification">prov:Location</a>
+    </li>
+    </ul>
+    
+    <p></p><b>has range</b>
+    <ul>
+    <li>
+    <a title="#outputport-specification" href="#outputport-specification">provone:OutputPort</a>
+    </li>
+    </ul>
+    
+    <div class="anexample" id="dltoinport-example">
+    <div class="anexampleTitle">Example 17<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <p>
+    The following RDF fragment illustrates the use of the <span class="name">DLToOutPort</span> object property.
+    </p>
+    <pre class="codeexample">
+    1    :pmain_op1 
+    2       a provone:OutputPort;
+    3       dcterms:identifier "e1_op1"^^xsd:string;
+    4    .
+    5
+    6    :pa_op1 
+    7       a provone:OutputPort;
+    8       dcterms:identifier "a_op1"^^xsd:string;
+    9    .
+    10
+    11   :spdl2 
+    12      a prov:Location;
+    13      dcterms:identifier "pmain_paDL2"^^xsd:string;
+    14   .
+    15
+    16   :pmain_op1 provone:outPortToDL :spdl2 .
+    17
+    18   :spdl2 provone:DLToInPort :pa_op1 .
+    </pre>
+    Two <em>OutputPorts</em> <span class="name">pmain_op1</span> and <span class="name">pa_op1</span> are defined in lines 1-9, the first
+    corresponds to the top program and the second to one of its subprograms. Lines 11-14 specify the <em>Location</em> 
+    <span class="name">spdl2</span>, which is then is used to connect the two <em>OutputPorts</em> by an <em>outPortToDL</em> statement in line 16
+    and a corresponding <em>DLToOutPort</em> statement in line 18.
+    </div>
+    
+    </section><!-- !!! End section: dltooutport-specification -->
+    
+    <section id="wasderivedfrom-specification"> 
+          
+    <h4><span class="secno">3.1.13</span>wasDerivedFrom object property</h4>
+    
+    <p>
+    <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom" title="http://www.w3.org/ns/prov-o#wasDerivedFrom">prov:wasDerivedFrom</a>
+    is adopted in ProvONE, in relation to workflow structure, to describe the evolution of programs and
+    workflows.
+    </p>
+    
+    <p><strong>IRI:</strong>http://www.w3.org/ns/prov#wasDerivedFrom</p>
+    
+    <p></p><b>has domain</b>
+    <ul>
+    <li>
+    <a title="#program-specification" href="#program-specification">provone:Program</a>,
+    <a title="#workflow-specification" href="#workflow-specification">provone:Workflow</a>
+    </li>
+    </ul>
+    
+    <p></p><b>has range</b>
+    <ul>
+    <li>
+    <a title="#program-specification" href="#program-specification">provone:Program</a>,
+    <a title="#workflow-specification" href="#workflow-specification">provone:Workflow</a>
+    </li>
+    </ul>
+    
+    <div class="anexample" id="wasderivedfrom-example">
+    <div class="anexampleTitle">Example 19<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <p>
+    The following RDF fragment illustrates the use of the <span class="name">wasDerivedFrom</span> object property by extending
+    <a href="#workflow-example">Example 6</a> of the <em>Workflow</em> class.
+    </p>
+    <pre class="codeexample">
+    1     
+    2    :workflow_1update1 
+    3   
+    4       a provone:Workflow;
+    5       dcterms:identifier "wf1upd1"^^xsd:string;
+    6       dcterms:title "ModelComparison"^^xsd:string;
+    7
+    8    :workflow_1update1 prov:wasDerivedFrom :workflow_1 .
+    9
+    </pre>
+    First, a <em>Workflow</em> <span class="name">workflow_1update1</span> is defined beginning at line 2. Line 8 specifies that <em>Workflow</em>
+    <span class="name">workflow_1update1</span> was derived from <em>Workflow</em> <span class="name">workflow_1</span> of
+    <a href="#workflow-example">Example 6</a>, which implies that it is a new version and the result of workflow evolution. Hence it is given the
+    same <span class="name">title</span>.
+    </div>
+    
+    </section><!-- !!! End section: wasderivedfrom-specification -->
+  
+  </section><!-- !!! End section: workflow-constructs-specification -->
 
   <section id="trace-constructs-specification"> 
     <h3><span class="secno">3.2</span>ProvONE Trace Specification</h3>
