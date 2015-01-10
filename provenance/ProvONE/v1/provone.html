@@ -2689,8 +2689,10 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     <h4><span class="secno">3.2.7 </span>used object property</h4>
     
     <p>
-    <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#used" title="http://www.w3.org/ns/prov-o#used">prov:used</a>
-    is adopted in ProvONE to state that a Execution made use of a particular Data item as input for its execution.
+    <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#used"
+       title="http://www.w3.org/ns/prov-o#used">prov:used</a>
+    is adopted in ProvONE to state that an Execution made use of a particular Entity item as input
+    for its execution.
     </p>
     
     <p><strong>IRI:</strong>http://www.w3.org/ns/prov#used</p>
@@ -2705,15 +2707,23 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     <p></p><b>has range</b>
     <ul>
     <li>
-    <a title="#data-specification" href="#data-specification">provone:Data</a>
+    <a title="#data-specification" href="#data-specification">provone:Entity</a>
     </li>
     </ul>
     
     <div class="anexample" id="used-example">
-    <div class="anexampleTitle">Example 22<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <div class="anexampleTitle">Example 22
+      <sup>
+        <a class="internalDFN" href="#anexample-entity">
+          <span class="diamond"> ◊</span>
+        </a>
+      </sup>
+    </div>
     <p>
-    The following RDF fragment illustrates the use of the <span class="name">used</span> object property by complementing
-    <a href="#execution-example">Example 8</a> of the <em>Execution</em> class and <a href="#data-example">Example 26</a> of the
+    The following RDF fragment illustrates the use of the <span class="name">used</span> object
+    property by complementing
+    <a href="#execution-example">Example 8</a> of the <em>Execution</em> class and 
+    <a href="#data-example">Example 26</a> of the
     <em>Data</em> class.
     </p>
     <pre class="codeexample">
@@ -2721,8 +2731,10 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     2    :program_1ex1 prov:used :data1 .
     3
     </pre>
-    Line 2 specifies that <em>Execution</em> <span class="name">program_1ex1</span> of <a href="#execution-example">Example 8</a> used as an
-    input <em>Data</em> item <span class="name">data1</span> of <a href="#data-example">Example 26</a>.
+    Line 2 specifies that <em>Execution</em> <span class="name">program_1ex1</span> of 
+    <a href="#execution-example">Example 8</a> used as an
+    input <em>Data</em> item <span class="name">data1</span> of 
+    <a href="#data-example">Example 26</a>.
     </div>
     
     </section><!-- !!! End section: used-specification -->
@@ -2732,8 +2744,12 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     <h4><span class="secno">3.2.8 </span>wasGeneratedBy object property</h4>
     
     <p>
-    <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasGeneratedBy" title="http://www.w3.org/ns/prov-o#wasGeneratedBy">prov:wasGeneratedBy</a>
-    is adopted in ProvONE to state that a Execution produced a particular Data item as output with its execution.
+    <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasGeneratedBy"
+       title="http://www.w3.org/ns/prov-o#wasGeneratedBy">
+      prov:wasGeneratedBy
+    </a>
+    is adopted in ProvONE to state that an Execution produced a particular Entity item as output
+    with its execution.
     </p>
     
     <p><strong>IRI:</strong>http://www.w3.org/ns/prov#wasGeneratedBy</p>
@@ -2741,7 +2757,7 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     <p></p><b>has domain</b>
     <ul>
     <li>
-    <a title="#data-specification" href="#data-specification">provone:Data</a>
+    <a title="#data-specification" href="#data-specification">provone:Entity</a>
     </li>
     </ul>
     
@@ -2753,9 +2769,16 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     </ul>
     
     <div class="anexample" id="wasgeneratedby-example">
-    <div class="anexampleTitle">Example 23<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <div class="anexampleTitle">Example 23
+      <sup>
+        <a class="internalDFN" href="#anexample-entity">
+          <span class="diamond"> ◊</span>
+        </a>
+      </sup>
+    </div>
     <p>
-    The following RDF fragment illustrates the use of the <span class="name">wasGeneratedBy</span> object property by complementing
+    The following RDF fragment illustrates the use of the <span class="name">wasGeneratedBy</span>
+    object property by complementing
     <a href="#execution-example">Example 8</a> of the <em>Execution</em> class.
     </p>
     <pre class="codeexample">
@@ -2770,9 +2793,11 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     9    :data2 prov:wasGeneratedBy :program_1_ex1 .
     10
     </pre>
-    First, a <em>Data</em> item <span class="name">data2</span> is defined beginning at line 2, which also appears in
-    <a href="#atlocation-example">Example 21</a>. Line 9 specifies that the <em>Data</em> item <span class="name">data2</span>
-    was produced as an output of <em>Execution</em> <span class="name">program_1ex1</span> of <a href="#execution-example">Example 8</a>.
+    First, a <em>Data</em> item <span class="name">data2</span> is defined beginning at line 2,
+    which also appears in <a href="#atlocation-example">Example 21</a>. Line 9 specifies that the
+    <em>Data</em> item <span class="name">data2</span> was produced as an output of
+    <em>Execution</em> <span class="name">program_1ex1</span> of <a
+    href="#execution-example">Example 8</a>.
     </div>
     
     </section><!-- !!! End section: wasgeneratedby-specification -->
@@ -2782,9 +2807,12 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     <h4><span class="secno">3.2.9 </span>wasAssociatedWith object property</h4>
     
     <p>
-    <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith" title="http://www.w3.org/ns/prov-o#wasAssociatedWith">prov:wasAssociatedWith</a>
-    is adopted in ProvONE to state that a Execution represents the execution of a particular Program.
-    </p>
+    <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith"
+       title="http://www.w3.org/ns/prov-o#wasAssociatedWith">
+      prov:wasAssociatedWith
+    </a>
+    is adopted in ProvONE to state that a User was associated with a particular Execution. This
+    serves as an assignment of attribution and responsibility.
     
     <p><strong>IRI:</strong>http://www.w3.org/ns/prov#wasAssociatedWith</p>
     
@@ -2798,26 +2826,10 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     <p></p><b>has range</b>
     <ul>
     <li>
-    <a title="#program-specification" href="#program-specification">provone:Program</a>
+    <a title="#program-specification" href="#program-specification">provone:User</a>
     </li>
     </ul>
-    
-    <div class="anexample" id="wasassociatedwith-example">
-    <div class="anexampleTitle">Example 24<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-    <p>
-    The following RDF fragment illustrates the use of the <span class="name">wasAssociatedWith</span> object property by complementing
-    <a href="#execution-example">Example 8</a> of the <em>Execution</em> class and <a href="#program-example">Example 1</a> of the
-    <em>Program</em> class.
-    </p>
-    <pre class="codeexample">
-    1     
-    2     :program_1ex1 prov:wasAssociatedWith :program_1 .
-    3
-    </pre>
-    Line 2 specifies that <em>Execution</em> <span class="name">program_1ex1</span> of <a href="#execution-example">Example 8</a> is an execution
-    of <em>Program</em> <span class="name">program_1</span> of <a href="#program-example">Example 1</a>.
-    </div>
-    
+        
     </section><!-- !!! End section: wasassociatedwith-specification -->
   
     <section id="wasinformedby-specification"> 
@@ -2825,9 +2837,12 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     <h4><span class="secno">3.2.10 </span>wasInformedBy object property</h4>
     
     <p>
-    <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasInformedBy" title="http://www.w3.org/ns/prov-o#wasInformedBy">prov:wasInformedBy</a>
-    is adopted in ProvONE to state that a Execution communicates with another Execution through an output-input relation, and thereby
-    triggers its execution.
+    <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasInformedBy"
+       title="http://www.w3.org/ns/prov-o#wasInformedBy">
+       prov:wasInformedBy
+    </a>
+    is adopted in ProvONE to state that an Execution communicates with another Execution through an
+    output-input relation, and thereby triggers its execution.
     </p>
     
     <p><strong>IRI:</strong>http://www.w3.org/ns/prov#wasInformedBy</p>
@@ -2847,9 +2862,16 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     </ul>
     
     <div class="anexample" id="wasinformedby-example">
-    <div class="anexampleTitle">Example 25<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <div class="anexampleTitle">Example 25
+      <sup>
+        <a class="internalDFN" href="#anexample-entity">
+          <span class="diamond"> ◊</span>
+        </a>
+      </sup>
+    </div>
     <p>
-    The following RDF fragment illustrates the use of the <span class="name">wasInformedBy</span> object property by complementing
+    The following RDF fragment illustrates the use of the <span class="name">wasInformedBy</span>
+    object property by complementing
     <a href="#execution-example">Example 8</a> of the <em>Execution</em> class.
     </p>
     <pre class="codeexample">
@@ -2868,9 +2890,10 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     13   :program_2ex1 prov:wasInformedBy :program_1ex1 .
     14
     </pre>
-    First, a <em>Execution</em> <span class="name">program_2ex1</span> is defined beginning at line 2.
-    Line 13 specifies that <em>Execution</em> <span class="name">program_2ex1</span> defined previously received data from
-    <em>Execution</em> <span class="name">program_1ex1</span> of <a href="#execution-example">Example 8</a>.
+    First, an <em>Execution</em> <span class="name">program_2ex1</span> is defined beginning at line
+    2. Line 13 specifies that <em>Execution</em> <span class="name">program_2ex1</span> defined
+    previously received data from <em>Execution</em> <span class="name">program_1ex1</span> of <a
+    href="#execution-example">Example 8</a>.
     </div>
     
     </section><!-- !!! End section: wasinformedby-specification -->
@@ -2880,7 +2903,9 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     <h4><span class="secno">3.2.11 </span>wasPartOf object property</h4>
     
     <p>
-    Enables the specification of the structure of Execution instances in that a parent Execution (associated with a Workflow) has child Executions (associated with Programs and subworkflows).
+    wasPartOf nables the specification of the structure of Execution instances in that a parent
+    Execution (associated with a Workflow) has child Executions (associated with Programs and
+    subworkflows).
     </p>
     
     <p><strong>IRI:</strong>http://purl.org/provone/2015/01#wasPartOf</p>
@@ -2900,9 +2925,16 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     </ul>
     
     <div class="anexample" id="waspartof-example">
-    <div class="anexampleTitle">Example 26<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <div class="anexampleTitle">Example 26
+      <sup>
+        <a class="internalDFN" href="#anexample-entity">
+          <span class="diamond"> ◊</span>
+        </a>
+      </sup>
+    </div>
     <p>
-    The following RDF fragment illustrates the use of the <span class="name">wasPartOf</span> object property by complementing
+    The following RDF fragment illustrates the use of the <span class="name">wasPartOf</span>
+    object property by complementing
     <a href="#execution-example">Example 6</a> of the <em>Workflow</em> class and
     <a href="#execution-example">Example 8</a> of the <em>Execution</em> class.
     </p>
@@ -2923,13 +2955,14 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     14   :program_1ex1 prov:wasPartOf :workflow_1ex1 .
     15
     </pre>
-    First, a <em>Execution</em> <span class="name">workflow_1ex1</span> is defined beginning at line 2 and associated with
-    <em>Workflow</em> <span class="name">workflow_1</span> of <a href="#workflow-example">Example 6</a> in line 12.
-    Line 14 specifies that <em>Execution</em> <span class="name">program_1ex1</span> of <a href="#execution-example">Example 8</a>
-    is part of <em>Execution</em> <span class="name">workflow_1ex1</span>.
+    First, an <em>Execution</em> <span class="name">workflow_1ex1</span> is defined beginning at
+    line 2 and associated with <em>Workflow</em> <span class="name">workflow_1</span> of <a
+    href="#workflow-example">Example 6</a> in line 12. Line 14 specifies that <em>Execution</em>
+    <span class="name">program_1ex1</span> of <a href="#execution-example">Example 8</a> is part of
+    <em>Execution</em> <span class="name">workflow_1ex1</span>.
     </div>
     
-    </section><!-- !!! End section: partof-specification -->
+    </section><!-- !!! End section: waspartof-specification -->
   
   </section><!-- !!! End section: trace-specification -->
 
@@ -2998,9 +3031,11 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
           
     <h4><span class="secno">3.3.2 </span>Collection class</h4>
     
-    <p>Instead of specifying a new class or subclass, we adopt explicitly as part of the ProvONE model PROV's 
-    <a title="http://www.w3.org/ns/prov-o#Collection" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Collection">prov:Collection</a> class,
-    whose description we cite below.</p>
+    <p>Instead of specifying a new class or subclass, we adopt explicitly as part of the 
+      ProvONE model PROV's 
+      <a title="http://www.w3.org/ns/prov-o#Collection" 
+         href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Collection">prov:Collection</a> 
+         class, whose description we cite below.</p>
     
     <div class="glossary-ref">   A <dfn id="concept-entity" title="Data" class="internalDFN">Collection</dfn>
     <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>  is an entity that provides a structure to some
