@@ -1643,68 +1643,73 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     
     <section id="program-specification"> 
           
-    <h4><span class="secno">3.1.1 </span>Program class</h4>
-    
-    <div class="glossary-ref">   A <dfn id="concept-entity" title="Program" class="internalDFN">Program</dfn>
-    <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> represents a computational task that consumes and produces data through its input and output ports, respectively.
-    It can be atomic or composite, the latter case represented by a possibly nested Program. </div>
-    
-    <p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#Program</p>
-    
-    <p></p><b>has super-class</b>
-    <ul>
-    <li><a title="http://www.w3.org/ns/prov-o#Entity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity</a>,
-    <a title="http://www.w3.org/ns/prov-o#Plan" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Plan">prov:Plan</a></li>
-    </ul>
-    
-    <p></p><b>is in domain of</b>
-    <ul>
-    <li><a title="http://purl.org/provone/provone/2015/01#hasSubProgram" href="#">provone:hasSubProgram</a>,
-    <a title="http://purl.org/provone/provone/2015/01#controlledBy" href="#">provone:controlledBy</a>,
-    <a title="http://purl.org/provone/provone/2015/01#hasInPort" href="#">provone:hasInPort</a>,
-    <a title="http://purl.org/provone/provone/2015/01#hasOutPort" href="#">provone:hasOutPort</a>,
-    </li>
-    </ul>
-    
-    <p></p><b>is in range of</b>
-    <ul>
-    <li><a title="http://purl.org/provone/provone/2015/01#hasSubProgram" href="#">provone:hasSubProgram</a>,
-    <a title="http://purl.org/provone/provone/2015/01#controls" href="#">provone:controls</a>,
-    <a title="http://www.w3.org/ns/prov-o#wasAssociatedWith" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith">prov:wasAssociatedWith</a></li>
-    </ul>
-    
-    <div class="anexample" id="program-example">
-    <div class="anexampleTitle">Example 1<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-    <p>
-    The following RDF fragment specifies a <span class="name">Program</span> identified within the RDF document by
-    <span class="name">program_1</span>.
-    </p>
-    <pre class="codeexample">
-    1    @prefix rdfs:    &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
-    2    @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .
-    3    @prefix owl:     &lt;http://www.w3.org/2002/07/owl#&gt; .
-    4    @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
-    5    @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
-    6    @prefix provone: &lt;http://purl.org/provone&gt; .
-    7    @prefix wfms:    &lt;http://www.wfms.org/registry.xsd&gt; .
-    8    @prefix :        &lt;http://example.com/&gt; .
-    9    
-    10   :program_1 
-    11   
-    12      a provone:Program;
-    13      dcterms:identifier "e1"^^xsd:string;
-    14      dcterms:title "CDMSBoxfill"^^xsd:string;
-    15      wfms:package "gov.llnl.uvcdat.cdms"^^xsd:string;
-    16   
-    17   .
-    </pre>
-    Line 12 specifies class membership. In order to specify additional attributes for the <em>Program</em>, we employ first the
-    Dublin Core Metadata Elements [<cite><a class="bibref" href="#bib-DC-RDF">DC-RDF</a></cite>]. In particular, we assign
-    the string <span class="name">e1</span> as an <span class="name">identifier</span>, thus stating an identifier explicitly, which is independent
-    of the RDF node identifier. In addition, a descriptive title is given in line 14. Additional attributes associated with the specific WfMS in
-    use, in this case a placeholder example, can also be specified in a similar fashion. In this
-    case the software package responsible for the execution of the <em>Program</em> within the WfMS is specified in line 15.
-    </div>
+      <h4><span class="secno">3.1.1 </span>Program class</h4>
+      
+      <div class="glossary-ref">   A <dfn id="concept-entity" title="Program" class="internalDFN">Program</dfn>
+      <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> represents a computational task that consumes and produces data through its input and output ports, respectively.
+      It can be atomic or composite, the latter case represented by a possibly nested Program. </div>
+      
+      <p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#Program</p>
+      
+      <p></p><b>has super-class</b>
+      <ul>
+      <li><a title="http://www.w3.org/ns/prov-o#Entity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity</a>,
+      <a title="http://www.w3.org/ns/prov-o#Plan" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Plan">prov:Plan</a></li>
+      </ul>
+      
+      <p></p><b>is in domain of</b>
+      <ul>
+      <li><a title="http://purl.org/provone/provone/2015/01#hasSubProgram" href="#">provone:hasSubProgram</a>,
+      <a title="http://purl.org/provone/provone/2015/01#controlledBy" href="#">provone:controlledBy</a>,
+      <a title="http://purl.org/provone/provone/2015/01#hasInPort" href="#">provone:hasInPort</a>,
+      <a title="http://purl.org/provone/provone/2015/01#hasOutPort" href="#">provone:hasOutPort</a>,
+      </li>
+      </ul>
+      
+      <p></p><b>is in range of</b>
+      <ul>
+      <li><a title="http://purl.org/provone/provone/2015/01#hasSubProgram" href="#">provone:hasSubProgram</a>,
+      <a title="http://purl.org/provone/provone/2015/01#controls" href="#">provone:controls</a>,
+      <a title="http://www.w3.org/ns/prov-o#wasAssociatedWith" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasAssociatedWith">prov:wasAssociatedWith</a></li>
+      </ul>
+      
+      <div class="anexample" id="program-example">
+      <div class="anexampleTitle">Example 1<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+      <p>
+      The following RDF fragment specifies a <span class="name">Program</span> identified within
+      the RDF document by
+      <span class="name">program_1</span>.
+      </p>
+      <pre class="codeexample">
+      1    @prefix rdfs:    &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+      2    @prefix xsd:     &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+      3    @prefix owl:     &lt;http://www.w3.org/2002/07/owl#&gt; .
+      4    @prefix dcterms: &lt;http://purl.org/dc/terms/&gt; .
+      5    @prefix prov:    &lt;http://www.w3.org/ns/prov#&gt; .
+      6    @prefix provone: &lt;http://purl.org/provone&gt; .
+      7    @prefix wfms:    &lt;http://www.wfms.org/registry.xsd&gt; .
+      8    @prefix :        &lt;http://example.com/&gt; .
+      9    
+      10   :program_1 
+      11   
+      12      a provone:Program;
+      13      dcterms:identifier "e1"^^xsd:string;
+      14      dcterms:title "CDMSBoxfill"^^xsd:string;
+      15      wfms:package "gov.llnl.uvcdat.cdms"^^xsd:string;
+      16   
+      17   .
+      </pre>
+      Line 12 specifies class membership. In order to specify additional attributes for the
+      <em>Program</em>, we employ first the Dublin Core Metadata Elements [<cite><a
+      class="bibref" href="#bib-DC-RDF">DC-RDF</a></cite>]. In particular, we assign the string
+      <span class="name">e1</span> as an <span class="name">identifier</span>, thus stating an
+      identifier explicitly, which is independent of the RDF node identifier. In addition, a
+      descriptive title is given in line 14. Additional attributes associated with the specific
+      WfMS in use, in this case a placeholder example, can also be specified in a similar
+      fashion. In this case the software package responsible for the execution of the
+      <em>Program</em> within the WfMS is specified in line 15.
+
+      </div>
     
     </section><!-- !!! End section: program-specification -->
     
@@ -2670,221 +2675,221 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
   
   </section><!-- !!! End section: trace-specification -->
 
-<section id="datastructure-constructs-specification"> 
-<h3><span class="secno">3.3 </span>ProvONE Data Structure Specification</h3>
-
-<section id="data-specification"> 
-      
-<h4><span class="secno">3.3.1 </span>Data class</h4>
-
-<div class="glossary-ref">   A <dfn id="concept-entity" title="Data" class="internalDFN">Data</dfn>
-<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>  item represents the basic unit of information
-consumed or produced by a Program. Multiple Data items may be grouped into a Collection. </div>
-
-<p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#Data</p>
-
-<p></p><b>has super-class</b>
-<ul>
-<li><a title="http://www.w3.org/ns/prov-o#Entity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity</a>
-</ul>
-
-<p></p><b>is in domain of</b>
-<ul>
-<li>
-<a title="http://www.w3.org/ns/prov-o#wasGeneratedBy" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasGeneratedBy">prov:wasGeneratedBy</a>,
-<a title="http://www.w3.org/ns/prov-o#wasDerivedFrom" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom">prov:wasDerivedFrom</a></li>
-</ul>
-
-<p></p><b>is in range of</b>
-<ul>
-<li>
-<a title="http://www.w3.org/ns/prov-o#used" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#used">prov:used</a>,
-<a title="http://www.w3.org/ns/prov-o#wasDerivedFrom" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom">prov:wasDerivedFrom</a>,
-<a title="http://www.w3.org/ns/prov-o#hadMember" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#hadMember">prov:hadMember</a></li>
-</ul>
-
-<div class="anexample" id="data-example">
-<div class="anexampleTitle">Example 27<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment specifies a <span class="name">Data</span> item identified within the RDF document by
-<span class="name">data1</span>.
-</p>
-<pre class="codeexample">
-1    :data1
-2   
-3       a provone:Data;
-4       dcterms:identifier "defparam1"^^xsd:string;
-5       rdfs:label "filename"^^xsd:string;
-6       prov:value "DLEM_NEE_onedeg_v1.0nc"^^xsd:string;
-7       wfms:type "edu.sci.wfms.basic:File"^^xsd:string; 
-8
-9    .
-10
-</pre>
-A <em>Data</em> item is created with the string <span class="name">defparam1</span> as an <span class="name">identifier</span>.
-It is also given the descriptive string <span class="name">filename</span> through the 
-<a href="http://www.w3.org/TR/rdf-schema/#ch_label"><span class="name">rdfs:label</span></a> data property. 
-The <a title="http://www.w3.org/ns/prov-o#value" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#value">prov:value</a>
-data property specifies the actual value of the data item, namely <span class="name">DLEM_NEE_onedeg_v1.0nc</span>.
-Finally, the type of the data item as defined by the WfMS is specified in line 7 to be <span class="name">edu.sci.wfms.basic:File</span>.
-</div>
-
-</section><!-- !!! End section: data-specification -->
-
-<section id="collection-specification"> 
-      
-<h4><span class="secno">3.3.2 </span>Collection class</h4>
-
-<p>Instead of specifying a new class or subclass, we adopt explicitly as part of the ProvONE model PROV's 
-<a title="http://www.w3.org/ns/prov-o#Collection" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Collection">prov:Collection</a> class,
-whose description we cite below.</p>
-
-<div class="glossary-ref">   A <dfn id="concept-entity" title="Data" class="internalDFN">Collection</dfn>
-<sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>  is an entity that provides a structure to some
-constituents, which are themselves entities. These constituents are said to be member of the collections. </div>
-
-<p><strong>IRI:</strong>http://www.w3.org/ns/prov#Collection</p>
-
-<div class="anexample" id="collection-example">
-<div class="anexampleTitle">Example 28<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment specifies a <span class="name">Collection</span> identified within the RDF document by
-<span class="name">col1</span>.
-</p>
-<pre class="codeexample"> 
-1    :col1
-2   
-3       a prov:Collection;
-4       dcterms:identifier "inputset1"^^xsd:string;
-5
-6    .
-7
-</pre>
-A <em>Collection</em> is created with the string <span class="name">inputset1</span> as an <span class="name">identifier</span>.
-</div>
-
-</section><!-- !!! End section: collection-specification -->
-
-<section id="wasderivedfrom-specification-data"> 
-      
-<h4><span class="secno">3.3.3 </span>wasDerivedFrom object property</h4>
-
-<p>
-<a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom" title="http://www.w3.org/ns/prov-o#wasDerivedFrom">prov:wasDerivedFrom</a>
-is adopted in ProvONE, in relation to data structure, to describe dependencies between the Data items produced during workflow execution.
-</p>
-
-<p><strong>IRI:</strong>http://www.w3.org/ns/prov#wasDerivedFrom</p>
-
-<p></p><b>has domain</b>
-<ul>
-<li>
-<a title="#data-specification" href="#data-specification">provone:Data</a>
-</li>
-</ul>
-
-<p></p><b>has range</b>
-<ul>
-<li>
-<a title="#data-specification" href="#data-specification">provone:Data</a>
-</li>
-</ul>
-
-<div class="anexample" id="wasderivedfrom-example">
-<div class="anexampleTitle">Example 29<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment illustrates the use of the <span class="name">wasDerivedFrom</span> object property by extending
-<a href="#data-example">Example 27</a> of the <em>Data</em> class.
-</p>
-<pre class="codeexample">
-1     
-2    :data2
-3   
-4       a provone:Data;
-5       dcterms:identifier "defparam1"^^xsd:string;
-6       rdfs:label "filename"^^xsd:string;
-7       prov:value "DLEM_NEE_onedeg_v1.0nc"^^xsd:string;
-8       wfms:type "edu.sci.wfms.basic:File"^^xsd:string; 
-9
-10   .
-11
-12   :data2 prov:wasDerivedFrom :data1 .
-13
-</pre>
-First, a <em>Data</em> item <span class="name">data2</span> is defined beginning at line 2, which also appears in
-<a href="#dataonlink-example">Example 21</a>. Line 12 specifies that the <em>Data</em> item <span class="name">data2</span>
-was produced from <em>Data</em> item <span class="name">data1</span> of <a href="#data-example">Example 27</a>.
-</div>
-
-</section><!-- !!! End section: wasderivedfrom-specification -->
-
-<section id="hadmember-specification"> 
-      
-<h4><span class="secno">3.3.4 </span>hadMember object property</h4>
-
-<p>
-<a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#hadMember" title="http://www.w3.org/ns/prov-o#hadMember">prov:hadMember</a>
-is adopted in ProvONE, in relation to data structure, to specify the Data items that form part of a Collection.
-</p>
-
-<p><strong>IRI:</strong>http://www.w3.org/ns/prov#hadMember</p>
-
-<p></p><b>has domain</b>
-<ul>
-<li>
-<a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Collection" title="http://www.w3.org/ns/prov-o#Collection">prov:Collection</a>
-</li>
-</ul>
-
-<p></p><b>has range</b>
-<ul>
-<li>
-<a title="#data-specification" href="#data-specification">provone:Data</a>
-</li>
-</ul>
-
-<div class="anexample" id="hadmember-example">
-<div class="anexampleTitle">Example 30<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-<p>
-The following RDF fragment illustrates the use of the <span class="name">hadMember</span> object property by extending
-<a href="#collection-example">Example 28</a> of the <em>Collection</em> class.
-</p>
-<pre class="codeexample">
-1     
-2    :infile1
-3   
-4       a provone:Data;
-5       dcterms:identifier "data_file1"^^xsd:string;
-6       rdfs:label "file1"^^xsd:string;
-7       prov:value "file1.dat"^^xsd:string;
-8       wfms:type "edu.sci.wfms.basic:File"^^xsd:string; 
-9
-10   .
-11
-12   :infile2
-13   
-14       a provone:Data;
-15       dcterms:identifier "data_file2"^^xsd:string;
-16       rdfs:label "file2"^^xsd:string;
-17       prov:value "file2.dat"^^xsd:string;
-18       wfms:type "edu.sci.wfms.basic:File"^^xsd:string; 
-19
-20   .
-21
-22   :col1 prov:hadMember :infile1 .
-23
-24   :col1 prov:hadMember :infile2 .
-25
-</pre>
-Two <em>Data</em> items <span class="name">infile1</span> and <span class="name">infile2</span> are defined in lines 2-20.
-Line 22 specifies that <em>Data</em> item <span class="name">infile1</span> was a member of <em>Collection</em> item 
-<span class="name">col1</span> of <a href="#collection-example">Example 28</a>. Analogously, line 24 specifies
-<em>Data</em> item <span class="name">infile2</span> also as part of <em>Collection</em> item <span class="name">col1</span>.
-</div>
-
-</section><!-- !!! End section: hasmember-specification -->
-
-</section><!-- !!! End section: datastructure-specification -->
+  <section id="datastructure-constructs-specification"> 
+    <h3><span class="secno">3.3 </span>ProvONE Data Structure Specification</h3>
+    
+    <section id="data-specification"> 
+          
+    <h4><span class="secno">3.3.1 </span>Data class</h4>
+    
+    <div class="glossary-ref">   A <dfn id="concept-entity" title="Data" class="internalDFN">Data</dfn>
+    <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>  item represents the basic unit of information
+    consumed or produced by a Program. Multiple Data items may be grouped into a Collection. </div>
+    
+    <p><strong>IRI:</strong>http://purl.org/provone/provone/2015/01#Data</p>
+    
+    <p></p><b>has super-class</b>
+    <ul>
+    <li><a title="http://www.w3.org/ns/prov-o#Entity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity</a>
+    </ul>
+    
+    <p></p><b>is in domain of</b>
+    <ul>
+    <li>
+    <a title="http://www.w3.org/ns/prov-o#wasGeneratedBy" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasGeneratedBy">prov:wasGeneratedBy</a>,
+    <a title="http://www.w3.org/ns/prov-o#wasDerivedFrom" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom">prov:wasDerivedFrom</a></li>
+    </ul>
+    
+    <p></p><b>is in range of</b>
+    <ul>
+    <li>
+    <a title="http://www.w3.org/ns/prov-o#used" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#used">prov:used</a>,
+    <a title="http://www.w3.org/ns/prov-o#wasDerivedFrom" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom">prov:wasDerivedFrom</a>,
+    <a title="http://www.w3.org/ns/prov-o#hadMember" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#hadMember">prov:hadMember</a></li>
+    </ul>
+    
+    <div class="anexample" id="data-example">
+    <div class="anexampleTitle">Example 27<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <p>
+    The following RDF fragment specifies a <span class="name">Data</span> item identified within the RDF document by
+    <span class="name">data1</span>.
+    </p>
+    <pre class="codeexample">
+    1    :data1
+    2   
+    3       a provone:Data;
+    4       dcterms:identifier "defparam1"^^xsd:string;
+    5       rdfs:label "filename"^^xsd:string;
+    6       prov:value "DLEM_NEE_onedeg_v1.0nc"^^xsd:string;
+    7       wfms:type "edu.sci.wfms.basic:File"^^xsd:string; 
+    8
+    9    .
+    10
+    </pre>
+    A <em>Data</em> item is created with the string <span class="name">defparam1</span> as an <span class="name">identifier</span>.
+    It is also given the descriptive string <span class="name">filename</span> through the 
+    <a href="http://www.w3.org/TR/rdf-schema/#ch_label"><span class="name">rdfs:label</span></a> data property. 
+    The <a title="http://www.w3.org/ns/prov-o#value" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#value">prov:value</a>
+    data property specifies the actual value of the data item, namely <span class="name">DLEM_NEE_onedeg_v1.0nc</span>.
+    Finally, the type of the data item as defined by the WfMS is specified in line 7 to be <span class="name">edu.sci.wfms.basic:File</span>.
+    </div>
+    
+    </section><!-- !!! End section: data-specification -->
+    
+    <section id="collection-specification"> 
+          
+    <h4><span class="secno">3.3.2 </span>Collection class</h4>
+    
+    <p>Instead of specifying a new class or subclass, we adopt explicitly as part of the ProvONE model PROV's 
+    <a title="http://www.w3.org/ns/prov-o#Collection" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Collection">prov:Collection</a> class,
+    whose description we cite below.</p>
+    
+    <div class="glossary-ref">   A <dfn id="concept-entity" title="Data" class="internalDFN">Collection</dfn>
+    <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>  is an entity that provides a structure to some
+    constituents, which are themselves entities. These constituents are said to be member of the collections. </div>
+    
+    <p><strong>IRI:</strong>http://www.w3.org/ns/prov#Collection</p>
+    
+    <div class="anexample" id="collection-example">
+    <div class="anexampleTitle">Example 28<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <p>
+    The following RDF fragment specifies a <span class="name">Collection</span> identified within the RDF document by
+    <span class="name">col1</span>.
+    </p>
+    <pre class="codeexample"> 
+    1    :col1
+    2   
+    3       a prov:Collection;
+    4       dcterms:identifier "inputset1"^^xsd:string;
+    5
+    6    .
+    7
+    </pre>
+    A <em>Collection</em> is created with the string <span class="name">inputset1</span> as an <span class="name">identifier</span>.
+    </div>
+    
+    </section><!-- !!! End section: collection-specification -->
+    
+    <section id="wasderivedfrom-specification-data"> 
+          
+    <h4><span class="secno">3.3.3 </span>wasDerivedFrom object property</h4>
+    
+    <p>
+    <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom" title="http://www.w3.org/ns/prov-o#wasDerivedFrom">prov:wasDerivedFrom</a>
+    is adopted in ProvONE, in relation to data structure, to describe dependencies between the Data items produced during workflow execution.
+    </p>
+    
+    <p><strong>IRI:</strong>http://www.w3.org/ns/prov#wasDerivedFrom</p>
+    
+    <p></p><b>has domain</b>
+    <ul>
+    <li>
+    <a title="#data-specification" href="#data-specification">provone:Data</a>
+    </li>
+    </ul>
+    
+    <p></p><b>has range</b>
+    <ul>
+    <li>
+    <a title="#data-specification" href="#data-specification">provone:Data</a>
+    </li>
+    </ul>
+    
+    <div class="anexample" id="wasderivedfrom-example">
+    <div class="anexampleTitle">Example 29<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <p>
+    The following RDF fragment illustrates the use of the <span class="name">wasDerivedFrom</span> object property by extending
+    <a href="#data-example">Example 27</a> of the <em>Data</em> class.
+    </p>
+    <pre class="codeexample">
+    1     
+    2    :data2
+    3   
+    4       a provone:Data;
+    5       dcterms:identifier "defparam1"^^xsd:string;
+    6       rdfs:label "filename"^^xsd:string;
+    7       prov:value "DLEM_NEE_onedeg_v1.0nc"^^xsd:string;
+    8       wfms:type "edu.sci.wfms.basic:File"^^xsd:string; 
+    9
+    10   .
+    11
+    12   :data2 prov:wasDerivedFrom :data1 .
+    13
+    </pre>
+    First, a <em>Data</em> item <span class="name">data2</span> is defined beginning at line 2, which also appears in
+    <a href="#dataonlink-example">Example 21</a>. Line 12 specifies that the <em>Data</em> item <span class="name">data2</span>
+    was produced from <em>Data</em> item <span class="name">data1</span> of <a href="#data-example">Example 27</a>.
+    </div>
+    
+    </section><!-- !!! End section: wasderivedfrom-specification -->
+    
+    <section id="hadmember-specification"> 
+          
+    <h4><span class="secno">3.3.4 </span>hadMember object property</h4>
+    
+    <p>
+    <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#hadMember" title="http://www.w3.org/ns/prov-o#hadMember">prov:hadMember</a>
+    is adopted in ProvONE, in relation to data structure, to specify the Data items that form part of a Collection.
+    </p>
+    
+    <p><strong>IRI:</strong>http://www.w3.org/ns/prov#hadMember</p>
+    
+    <p></p><b>has domain</b>
+    <ul>
+    <li>
+    <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Collection" title="http://www.w3.org/ns/prov-o#Collection">prov:Collection</a>
+    </li>
+    </ul>
+    
+    <p></p><b>has range</b>
+    <ul>
+    <li>
+    <a title="#data-specification" href="#data-specification">provone:Data</a>
+    </li>
+    </ul>
+    
+    <div class="anexample" id="hadmember-example">
+    <div class="anexampleTitle">Example 30<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+    <p>
+    The following RDF fragment illustrates the use of the <span class="name">hadMember</span> object property by extending
+    <a href="#collection-example">Example 28</a> of the <em>Collection</em> class.
+    </p>
+    <pre class="codeexample">
+    1     
+    2    :infile1
+    3   
+    4       a provone:Data;
+    5       dcterms:identifier "data_file1"^^xsd:string;
+    6       rdfs:label "file1"^^xsd:string;
+    7       prov:value "file1.dat"^^xsd:string;
+    8       wfms:type "edu.sci.wfms.basic:File"^^xsd:string; 
+    9
+    10   .
+    11
+    12   :infile2
+    13   
+    14       a provone:Data;
+    15       dcterms:identifier "data_file2"^^xsd:string;
+    16       rdfs:label "file2"^^xsd:string;
+    17       prov:value "file2.dat"^^xsd:string;
+    18       wfms:type "edu.sci.wfms.basic:File"^^xsd:string; 
+    19
+    20   .
+    21
+    22   :col1 prov:hadMember :infile1 .
+    23
+    24   :col1 prov:hadMember :infile2 .
+    25
+    </pre>
+    Two <em>Data</em> items <span class="name">infile1</span> and <span class="name">infile2</span> are defined in lines 2-20.
+    Line 22 specifies that <em>Data</em> item <span class="name">infile1</span> was a member of <em>Collection</em> item 
+    <span class="name">col1</span> of <a href="#collection-example">Example 28</a>. Analogously, line 24 specifies
+    <em>Data</em> item <span class="name">infile2</span> also as part of <em>Collection</em> item <span class="name">col1</span>.
+    </div>
+    
+    </section><!-- !!! End section: hasmember-specification -->
+  
+  </section><!-- !!! End section: datastructure-specification -->
 
 </section><!-- !!! End section: section-provone-specification -->
 
