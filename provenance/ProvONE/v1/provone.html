@@ -1411,7 +1411,7 @@ body {
               <a title="Generation" class="internalDFN">Generation</a>
             </td>
             <td>
-              <a class="section-ref" href="#usage-specification"><span>Section 3.2.4</span></a>
+              <a class="section-ref" href="#generation-specification"><span>Section 3.2.4</span></a>
             </td>
           </tr>
           <tr>
@@ -2451,7 +2451,97 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
       </ul>
           
     </section><!-- !!! End section: association-specification -->
-  
+
+    <section id="usage-specification"> 
+    
+      <h4><span class="secno">3.2.3</span> Usage class</h4>
+      
+      <div class="glossary-ref"> The
+        <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Usage"
+           title="http://www.w3.org/ns/prov-o#Usage">prov:Usage
+        </a>
+        class is adopted directly from the PROV Ontology, and is the beginning of utilizing an
+        entity by an activity. Before usage, the activity had not begun to utilize this entity and
+        could not have been affected by the entity.
+      </div>
+      
+      <p><strong>IRI:</strong>http://www.w3.org/ns/prov-o#Usage</p>
+      
+      <p></p><b>has super-class</b>
+      <ul>
+        <li>
+          <a title="http://www.w3.org/ns/prov-o#InstantaneousEvent"
+             href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#InstantaneousEvent">
+            prov:InstantaneousEvent
+          </a>,
+          <a title="http://www.w3.org/ns/prov-o#EntityInfluence"
+             href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#EntityInfluence">
+            prov:EntityInfluence
+          </a>
+        </li>
+      </ul>
+      
+      <p></p><b>is in range of</b>
+      <ul>
+        <li>
+          <a title="http://www.w3.org/ns/prov-o#hadUsage"
+             href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#hadUsage">
+           prov:hadUsage
+          </a>,
+          <a title="http://www.w3.org/ns/prov-o#qualifiedUsage"
+             href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#qualifiedUsage">
+           prov:qualifiedUsage
+          </a>
+        </li>
+      </ul>
+          
+    </section><!-- !!! End section: usage-specification -->
+
+    <section id="generation-specification"> 
+    
+      <h4><span class="secno">3.2.4</span> Generation class</h4>
+      
+      <div class="glossary-ref"> The
+        <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Generation"
+           title="http://www.w3.org/ns/prov-o#Generation">prov:Generation
+        </a>
+        class is adopted directly from the PROV Ontology, and is the completion of production of a
+        new entity by an activity. This entity did not exist before generation and becomes
+        available for usage after this generation.
+      </div>
+      
+      <p><strong>IRI:</strong>http://www.w3.org/ns/prov-o#Generation</p>
+      
+      <p></p><b>has super-class</b>
+      <ul>
+        <li>
+          <a title="http://www.w3.org/ns/prov-o#InstantaneousEvent"
+             href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#InstantaneousEvent">
+            prov:InstantaneousEvent
+          </a>,
+          <a title="http://www.w3.org/ns/prov-o#ActivityInfluence"
+             href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#ActivityInfluence">
+            prov:ActivityInfluence
+          </a>
+        </li>
+      </ul>
+      
+      <p></p><b>is in range of</b>
+      <ul>
+        <li>
+          <a title="http://www.w3.org/ns/prov-o#hadGeneration"
+             href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#hadGeneration">
+           prov:hadGeneration
+          </a>,
+          <a title="http://www.w3.org/ns/prov-o#qualifiedGeneration"
+             href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#qualifiedGeneration">
+           prov:qualifiedGeneration
+          </a>
+        </li>
+      </ul>
+          
+    </section><!-- !!! End section: generation-specification -->
+      
     <section id="atlocation-specification"> 
           
     <h4><span class="secno">3.2.2 </span>atLocation object property</h4>
