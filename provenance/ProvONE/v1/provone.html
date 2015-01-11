@@ -2966,7 +2966,7 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
 
     <section id="qualifiedassociation-specification"> 
           
-    <h4><span class="secno">3.2.12 </span>qualifiedAssociation object property</h4>
+    <h4><span class="secno">3.2.12 </span>prov:qualifiedAssociation object property</h4>
     
     <div class="glossary-ref"> The
       <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#qualifiedAssociation"
@@ -3000,7 +3000,7 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
   
     <section id="agent-specification"> 
           
-    <h4><span class="secno">3.2.13 </span>agent object property</h4>
+    <h4><span class="secno">3.2.13 </span>prov:agent object property</h4>
     
     <div class="glossary-ref"> The
       <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#p_agent"
@@ -3030,6 +3030,38 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     </ul>
         
     </section><!-- !!! End section: agent-specification -->
+
+    <section id="hadplan-specification"> 
+          
+    <h4><span class="secno">3.2.14 </span>prov:hadPlan object property</h4>
+    
+    <div class="glossary-ref"> The
+      <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#hadPlan"
+         title="http://www.w3.org/ns/prov-o#hadPlan">prov:hadPlan
+      </a>
+      object property is adopted directly from the PROV Ontology, and is cited as a property that
+      references an optional Plan adopted by an Agent in Association with some Activity. In
+      ProvONE, a User (Agent) adopts a Plan (Program or Workflow) in Association with an Execution
+      (Activity).
+    </div>
+    
+    <p><strong>IRI:</strong>http://www.w3.org/ns/prov-o#hadPlan</p>
+    
+    <p></p><b>has domain</b>
+    <ul>
+    <li>
+    <a title="#association-specification" href="#association-specification">prov:Association</a>
+    </li>
+    </ul>
+    
+    <p></p><b>has range</b>
+    <ul>
+    <li>
+    <a title="#program-specification" href="#program-specification">provone:Program</a>
+    </li>
+    </ul>
+        
+    </section><!-- !!! End section: hadplan-specification -->
 
   </section><!-- !!! End section: trace-specification -->
 
