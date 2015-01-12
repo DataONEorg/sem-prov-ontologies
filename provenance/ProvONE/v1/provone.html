@@ -3331,6 +3331,51 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
           
     </section><!-- !!! End section: entity-specification -->
 
+    <section id="collection-specification"> 
+          
+      <h4><span class="secno">3.3.2 </span>Collection class</h4>
+    
+      <p>
+        Instead of specifying a new class or subclass, we adopt explicitly as part of the ProvONE
+        model PROV's <a title="http://www.w3.org/ns/prov-o#Collection"
+        href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Collection">prov:Collection</a> class,
+        whose description we cite below.
+      </p>
+    
+      <div class="glossary-ref">A
+        <dfn id="concept-collection" title="Collection" class="internalDFN">Collection</dfn>
+        <sup>
+          <a class="internalDFN" href="#concept-collection">
+            <span class="diamond"> ◊</span>
+          </a>
+        </sup>
+        is an entity that provides a structure to some constituents, which are themselves entities.
+        These constituents are said to be member of the collections.
+      </div>
+    
+      <p><strong>IRI:</strong>http://www.w3.org/ns/prov#Collection</p>
+    
+      <div class="anexample" id="collection-example">
+      <div class="anexampleTitle">Example 28<sup><a class="internalDFN"
+           href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+        <p>
+        The following RDF fragment specifies a <span class="name">Collection</span> identified
+        within the RDF document by <span class="name">col1</span>.
+        </p>
+        <pre class="codeexample"> 
+   1    :col1
+   2   
+   3       a prov:Collection;
+   4       dcterms:identifier "inputset1"^^xsd:string;
+   5
+   6    .
+   7
+        </pre>
+        A <em>Collection</em> is created with the string <span class="name">inputset1</span> as an          <span class="name">identifier</span>.
+      </div>
+    
+    </section><!-- !!! End section: collection-specification -->
+
     <section id="data-specification"> 
           
       <h4><span class="secno">3.3.3 </span>Data class</h4>
@@ -3392,43 +3437,7 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     </div>
     
     </section><!-- !!! End section: data-specification -->
-    
-    <section id="collection-specification"> 
-          
-    <h4><span class="secno">3.3.2 </span>Collection class</h4>
-    
-    <p>Instead of specifying a new class or subclass, we adopt explicitly as part of the 
-      ProvONE model PROV's 
-      <a title="http://www.w3.org/ns/prov-o#Collection" 
-         href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Collection">prov:Collection</a> 
-         class, whose description we cite below.</p>
-    
-    <div class="glossary-ref">   A <dfn id="concept-entity" title="Data" class="internalDFN">Collection</dfn>
-    <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>  is an entity that provides a structure to some
-    constituents, which are themselves entities. These constituents are said to be member of the collections. </div>
-    
-    <p><strong>IRI:</strong>http://www.w3.org/ns/prov#Collection</p>
-    
-    <div class="anexample" id="collection-example">
-    <div class="anexampleTitle">Example 28<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-    <p>
-    The following RDF fragment specifies a <span class="name">Collection</span> identified within the RDF document by
-    <span class="name">col1</span>.
-    </p>
-    <pre class="codeexample"> 
-    1    :col1
-    2   
-    3       a prov:Collection;
-    4       dcterms:identifier "inputset1"^^xsd:string;
-    5
-    6    .
-    7
-    </pre>
-    A <em>Collection</em> is created with the string <span class="name">inputset1</span> as an <span class="name">identifier</span>.
-    </div>
-    
-    </section><!-- !!! End section: collection-specification -->
-    
+        
     <section id="wasderivedfrom-specification-data"> 
           
     <h4><span class="secno">3.3.3 </span>wasDerivedFrom object property</h4>
