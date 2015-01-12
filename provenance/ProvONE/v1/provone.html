@@ -1100,6 +1100,13 @@ body {
               </td>
             </tr>
             <tr>
+              <td>dcterms</td>
+              <td>http://purl.org/ontology/bibo</td>
+              <td>The Bibliographic Ontology namespace [
+                <cite><a class="bibref" href="#bib-DC-RDF">BIBO</a></cite>]
+              </td>
+            </tr>
+            <tr>
               <td>wfms</td>
               <td>http://www.wfms.org/registry.xsd</td>
               <td>Placeholder example WfMS namespace</td>
@@ -3469,6 +3476,38 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
             
     </section><!-- !!! End section: visualization-specification -->
         
+    <section id="document-specification"> 
+          
+      <h4><span class="secno">3.3.5 </span>Document class</h4>
+    
+      <div class="glossary-ref">A 
+        <dfn id="concept-document" title="Document" class="internalDFN">
+          Document
+        </dfn>
+        <sup>
+          <a class="internalDFN" href="#concept-document">
+            <span class="diamond"> ◊</span>
+          </a>
+        </sup>
+        item represents a body of information produced as a result of an Execution, in the form of a
+        communication medium. Multiple Document items may be grouped into a Collection. A Document
+        may, for instance, be a scholarly journal article or government report generated
+        as a result of running a particular Execution of a Program.
+      </div>
+    
+      <p><strong>IRI:</strong>http://purl.org/provone/2015/01/ontology#Document</p>
+    
+      <p></p><b>has super-class</b>
+      <ul>
+        <li>
+          <a title="http://www.w3.org/ns/prov-o#Entity"
+             href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity
+          </a>
+        </li>
+      </ul>
+            
+    </section><!-- !!! End section: document-specification -->
+        
     <section id="wasderivedfrom-specification-data"> 
           
     <h4><span class="secno">3.3.3 </span>wasDerivedFrom object property</h4>
@@ -3620,6 +3659,9 @@ In Proceedings of the Joint EDBT/ICDT 2013 Workshops, EDBT'13, pages 282-289, Ne
 </dd>
 <dt id="bib-DC-RDF">[DC-RDF]</dt>
 <dd>Dublin Core Metadata Initiative. <a href="http://dublincore.org/schemas/rdfs/"><cite>DCMI term declarations represented in RDF schema language</cite></a>. 2012 URL: <a href="http://dublincore.org/schemas/rdfs/">http://dublincore.org/schemas/rdfs/</a>
+</dd>
+<dt id="bib-BIBO">[BIBO]</dt>
+<dd>The Bibliographic Ontology. <a href="http://dublincore.org/schemas/rdfs/"><cite>BIBO term declarations represented in RDF schema language</cite></a>. 2014 URL: <a href="http://bibliontology.com/">http://bibliontology.com/</a>
 </dd>
 <dt id="bib-FSC+06">[FSC+06]</dt>
 <dd>
