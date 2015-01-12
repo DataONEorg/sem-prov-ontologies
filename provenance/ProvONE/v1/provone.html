@@ -3269,6 +3269,68 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
   <section id="datastructure-constructs-specification"> 
     <h3><span class="secno">3.3 </span>ProvONE Data Structure Specification</h3>
     
+    <section id="entity-specification"> 
+    
+      <h4><span class="secno">3.3.1</span> Entity class</h4>
+      
+      <div class="glossary-ref"> The
+        <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity"
+           title="http://www.w3.org/ns/prov-o#Entity">prov:Entity
+        </a>
+        class is adopted directly from the PROV Ontology, and is a physical, digital, 
+        conceptual, or other kind of thing with some fixed aspects; entities may be real 
+        or imaginary. In ProvONE, an Entity may be instances of the Data, Visualization, or
+        Document classes, or other subclasses of the prov:Entity class.
+      </div>
+      
+      <p><strong>IRI:</strong>http://www.w3.org/ns/prov-o#Entity</p>
+      
+      <p></p><b>is in domain of</b>
+      <ul>
+        <li>
+          <a title="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom"
+             href="#wasderivedfrom-specification">
+           prov:wasDerivedFrom
+          </a>,
+          <a title="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasGeneratedBy"
+             href="#wasgeneratedby-specification">
+           prov:wasGeneratedBy
+          </a>,
+          <a title="http://www.w3.org/TR/2013/REC-prov-o-20130430/#atLocation"
+             href="#atlocation-specification">
+           prov:atLocation
+          </a>
+        </li>
+      </ul>
+
+      <p></p><b>is in range of</b>
+      <ul>
+        <li>
+          <a title="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom"
+             href="#wasderivedfrom-specification">
+           prov:wasDerivedFrom
+          </a>,
+          <a title="http://www.w3.org/TR/2013/REC-prov-o-20130430/#hadMember"
+             href="#hadmember-specification">
+           prov:hadMember
+          </a>,
+          <a title="http://www.w3.org/TR/2013/REC-prov-o-20130430/#used"
+             href="#used-specification">
+           prov:used
+          </a>,
+          <a title="http://purl.org/provone/2015/01/ontology#hadEntity"
+             href="#hadentity-specification">
+           hadEntity
+          </a>,
+          <a title="http://purl.org/provone/2015/01/ontology#hasDefaultParam"
+             href="#hasdefaultparam-specification">
+           hasDefaultParam
+          </a>
+        </li>
+      </ul>
+          
+    </section><!-- !!! End section: usage-specification -->
+
     <section id="data-specification"> 
           
     <h4><span class="secno">3.3.2 </span>Data class</h4>
