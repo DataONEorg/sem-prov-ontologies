@@ -3510,54 +3510,65 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
         
     <section id="wasderivedfrom-specification-data"> 
           
-    <h4><span class="secno">3.3.3 </span>wasDerivedFrom object property</h4>
+      <h4><span class="secno">3.3.6 </span>wasDerivedFrom object property</h4>
     
-    <p>
-    <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom" title="http://www.w3.org/ns/prov-o#wasDerivedFrom">prov:wasDerivedFrom</a>
-    is adopted in ProvONE, in relation to data structure, to describe dependencies between the Data items produced during workflow execution.
-    </p>
+      <p>
+        <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom"
+           title="http://www.w3.org/ns/prov-o#wasDerivedFrom">prov:wasDerivedFrom</a>
+        is adopted in ProvONE, in relation to data structure, to describe dependencies between the
+        Data items produced during workflow execution.
+      </p>
     
-    <p><strong>IRI:</strong>http://www.w3.org/ns/prov#wasDerivedFrom</p>
+      <p><strong>IRI:</strong>http://www.w3.org/ns/prov#wasDerivedFrom</p>
     
-    <p></p><b>has domain</b>
-    <ul>
-    <li>
-    <a title="#data-specification" href="#data-specification">provone:Data</a>
-    </li>
-    </ul>
+      <p></p><b>has domain</b>
+      <ul>
+        <li>
+          <a title="http://www.w3.org/ns/prov-o#Entity"
+             href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity
+        </li>
+      </ul>
+      
+      <p></p><b>has range</b>
+      <ul>
+        <li>
+          <a title="http://www.w3.org/ns/prov-o#Entity"
+             href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity
+        </li>
+      </ul>
     
-    <p></p><b>has range</b>
-    <ul>
-    <li>
-    <a title="#data-specification" href="#data-specification">provone:Data</a>
-    </li>
-    </ul>
-    
-    <div class="anexample" id="wasderivedfrom-example">
-    <div class="anexampleTitle">Example 29<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-    <p>
-    The following RDF fragment illustrates the use of the <span class="name">wasDerivedFrom</span> object property by extending
-    <a href="#data-example">Example 27</a> of the <em>Data</em> class.
-    </p>
-    <pre class="codeexample">
-    1     
-    2    :data2
-    3   
-    4       a provone:Data;
-    5       dcterms:identifier "defparam1"^^xsd:string;
-    6       rdfs:label "filename"^^xsd:string;
-    7       prov:value "DLEM_NEE_onedeg_v1.0nc"^^xsd:string;
-    8       wfms:type "edu.sci.wfms.basic:File"^^xsd:string; 
-    9
-    10   .
-    11
-    12   :data2 prov:wasDerivedFrom :data1 .
-    13
-    </pre>
-    First, a <em>Data</em> item <span class="name">data2</span> is defined beginning at line 2, which also appears in
-    <a href="#atlocation-example">Example 21</a>. Line 12 specifies that the <em>Data</em> item <span class="name">data2</span>
-    was produced from <em>Data</em> item <span class="name">data1</span> of <a href="#data-example">Example 27</a>.
-    </div>
+      <div class="anexample" id="wasderivedfrom-example">
+        <div class="anexampleTitle">Example 29
+          <sup>
+            <a class="internalDFN" href="#anexample-entity">
+              <span class="diamond"> ◊</span>
+            </a>
+          </sup>
+        </div>
+        <p>
+        The following RDF fragment illustrates the use of the <span class="name">wasDerivedFrom</span> object property by extending
+        <a href="#data-example">Example 27</a> of the <em>Data</em> class.
+        </p>
+        <pre class="codeexample">
+  1     
+  2    :data2
+  3   
+  4       a provone:Data;
+  5       dcterms:identifier "defparam1"^^xsd:string;
+  6       rdfs:label "filename"^^xsd:string;
+  7       prov:value "DLEM_NEE_onedeg_v1.0nc"^^xsd:string;
+  8       wfms:type "edu.sci.wfms.basic:File"^^xsd:string; 
+  9
+  10   .
+  11
+  12   :data2 prov:wasDerivedFrom :data1 .
+  13
+        </pre>
+        First, a <em>Data</em> item <span class="name">data2</span> is defined beginning at line 2,
+        which also appears in <a href="#atlocation-example">Example 21</a>. Line 12 specifies that
+        the <em>Data</em> item <span class="name">data2</span> was produced from <em>Data</em> item
+        <span class="name">data1</span> of <a href="#data-example">Example 27</a>.
+      </div>
     
     </section><!-- !!! End section: wasderivedfrom-specification -->
     
