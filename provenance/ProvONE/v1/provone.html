@@ -3574,67 +3574,84 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     
     <section id="hadmember-specification"> 
           
-    <h4><span class="secno">3.3.4 </span>hadMember object property</h4>
+      <h4><span class="secno">3.3.4 </span>hadMember object property</h4>
     
-    <p>
-    <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#hadMember" title="http://www.w3.org/ns/prov-o#hadMember">prov:hadMember</a>
-    is adopted in ProvONE, in relation to data structure, to specify the Data items that form part of a Collection.
-    </p>
+      <p>
+      <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#hadMember"
+         title="http://www.w3.org/ns/prov-o#hadMember">prov:hadMember</a>
+        is adopted in ProvONE, in relation to data structure, to specify the Data items that form
+        part of a Collection.
+      </p>
     
-    <p><strong>IRI:</strong>http://www.w3.org/ns/prov#hadMember</p>
+      <p><strong>IRI:</strong>http://www.w3.org/ns/prov#hadMember</p>
     
-    <p></p><b>has domain</b>
-    <ul>
-    <li>
-    <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Collection" title="http://www.w3.org/ns/prov-o#Collection">prov:Collection</a>
-    </li>
-    </ul>
+      <p></p><b>has domain</b>
+      <ul>
+        <li>
+          <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Collection"
+             title="http://www.w3.org/ns/prov-o#Collection">
+             prov:Collection
+          </a>
+          </li>
+      </ul>
     
-    <p></p><b>has range</b>
-    <ul>
-    <li>
-    <a title="#data-specification" href="#data-specification">provone:Data</a>
-    </li>
-    </ul>
+      <p></p><b>has range</b>
+      <ul>
+        <li>
+          <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity"
+             title="http://www.w3.org/ns/prov-o#Entity">
+             prov:Entity
+          </a>
+        </li>
+      </ul>
     
-    <div class="anexample" id="hadmember-example">
-    <div class="anexampleTitle">Example 30<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-    <p>
-    The following RDF fragment illustrates the use of the <span class="name">hadMember</span> object property by extending
-    <a href="#collection-example">Example 28</a> of the <em>Collection</em> class.
-    </p>
-    <pre class="codeexample">
-    1     
-    2    :infile1
-    3   
-    4       a provone:Data;
-    5       dcterms:identifier "data_file1"^^xsd:string;
-    6       rdfs:label "file1"^^xsd:string;
-    7       prov:value "file1.dat"^^xsd:string;
-    8       wfms:type "edu.sci.wfms.basic:File"^^xsd:string; 
-    9
-    10   .
-    11
-    12   :infile2
-    13   
-    14       a provone:Data;
-    15       dcterms:identifier "data_file2"^^xsd:string;
-    16       rdfs:label "file2"^^xsd:string;
-    17       prov:value "file2.dat"^^xsd:string;
-    18       wfms:type "edu.sci.wfms.basic:File"^^xsd:string; 
-    19
-    20   .
-    21
-    22   :col1 prov:hadMember :infile1 .
-    23
-    24   :col1 prov:hadMember :infile2 .
-    25
-    </pre>
-    Two <em>Data</em> items <span class="name">infile1</span> and <span class="name">infile2</span> are defined in lines 2-20.
-    Line 22 specifies that <em>Data</em> item <span class="name">infile1</span> was a member of <em>Collection</em> item 
-    <span class="name">col1</span> of <a href="#collection-example">Example 28</a>. Analogously, line 24 specifies
-    <em>Data</em> item <span class="name">infile2</span> also as part of <em>Collection</em> item <span class="name">col1</span>.
-    </div>
+      <div class="anexample" id="hadmember-example">
+        <div class="anexampleTitle">Example 30
+          <sup>
+            <a class="internalDFN" href="#anexample-entity">
+              <span class="diamond"> ◊</span>
+            </a>
+          </sup>
+        </div>
+        <p>
+          The following RDF fragment illustrates the use of the <span class="name">hadMember</span>
+          object property by extending <a href="#collection-example">Example 28</a> of the
+          <em>Collection</em> class.
+        </p>
+        <pre class="codeexample">
+  1     
+  2    :infile1
+  3   
+  4       a provone:Data;
+  5       dcterms:identifier "data_file1"^^xsd:string;
+  6       rdfs:label "file1"^^xsd:string;
+  7       prov:value "file1.dat"^^xsd:string;
+  8       wfms:type "edu.sci.wfms.basic:File"^^xsd:string; 
+  9
+  10   .
+  11
+  12   :infile2
+  13   
+  14       a provone:Data;
+  15       dcterms:identifier "data_file2"^^xsd:string;
+  16       rdfs:label "file2"^^xsd:string;
+  17       prov:value "file2.dat"^^xsd:string;
+  18       wfms:type "edu.sci.wfms.basic:File"^^xsd:string; 
+  19
+  20   .
+  21
+  22   :col1 prov:hadMember :infile1 .
+  23
+  24   :col1 prov:hadMember :infile2 .
+  25
+        </pre>
+        Two <em>Data</em> items <span class="name">infile1</span> and <span
+        class="name">infile2</span> are defined in lines 2-20. Line 22 specifies that <em>Data</em>
+        item <span class="name">infile1</span> was a member of <em>Collection</em> item <span
+        class="name">col1</span> of <a href="#collection-example">Example 28</a>. Analogously, line
+        24 specifies <em>Data</em> item <span class="name">infile2</span> also as part of
+        <em>Collection</em> item <span class="name">col1</span>.
+      </div>
     
     </section><!-- !!! End section: hasmember-specification -->
   
