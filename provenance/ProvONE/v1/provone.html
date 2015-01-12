@@ -3329,62 +3329,66 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
         </li>
       </ul>
           
-    </section><!-- !!! End section: usage-specification -->
+    </section><!-- !!! End section: entity-specification -->
 
     <section id="data-specification"> 
           
-    <h4><span class="secno">3.3.2 </span>Data class</h4>
+      <h4><span class="secno">3.3.3 </span>Data class</h4>
     
-    <div class="glossary-ref">   A <dfn id="concept-entity" title="Data" class="internalDFN">Data</dfn>
-    <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>  item represents the basic unit of information
-    consumed or produced by a Program. Multiple Data items may be grouped into a Collection. </div>
+      <div class="glossary-ref">A 
+        <dfn id="concept-data" title="Data" class="internalDFN">Data</dfn>
+        <sup>
+          <a class="internalDFN" href="#concept-data">
+            <span class="diamond"> ◊</span>
+          </a>
+        </sup>
+        item represents the basic unit of information consumed or produced by a Program. 
+        Multiple Data items may be grouped into a Collection. </div>
     
     <p><strong>IRI:</strong>http://purl.org/provone/2015/01/ontology#Data</p>
     
     <p></p><b>has super-class</b>
     <ul>
-    <li><a title="http://www.w3.org/ns/prov-o#Entity" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity</a>
+      <li>
+        <a title="http://www.w3.org/ns/prov-o#Entity"
+           href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity
+        </a>
+      </li>
     </ul>
-    
-    <p></p><b>is in domain of</b>
-    <ul>
-    <li>
-    <a title="http://www.w3.org/ns/prov-o#wasGeneratedBy" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasGeneratedBy">prov:wasGeneratedBy</a>,
-    <a title="http://www.w3.org/ns/prov-o#wasDerivedFrom" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom">prov:wasDerivedFrom</a></li>
-    </ul>
-    
-    <p></p><b>is in range of</b>
-    <ul>
-    <li>
-    <a title="http://www.w3.org/ns/prov-o#used" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#used">prov:used</a>,
-    <a title="http://www.w3.org/ns/prov-o#wasDerivedFrom" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#wasDerivedFrom">prov:wasDerivedFrom</a>,
-    <a title="http://www.w3.org/ns/prov-o#hadMember" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#hadMember">prov:hadMember</a></li>
-    </ul>
-    
+        
     <div class="anexample" id="data-example">
-    <div class="anexampleTitle">Example 27<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-    <p>
-    The following RDF fragment specifies a <span class="name">Data</span> item identified within the RDF document by
-    <span class="name">data1</span>.
-    </p>
-    <pre class="codeexample">
-    1    :data1
-    2   
-    3       a provone:Data;
-    4       dcterms:identifier "defparam1"^^xsd:string;
-    5       rdfs:label "filename"^^xsd:string;
-    6       prov:value "DLEM_NEE_onedeg_v1.0nc"^^xsd:string;
-    7       wfms:type "edu.sci.wfms.basic:File"^^xsd:string; 
-    8
-    9    .
-    10
-    </pre>
-    A <em>Data</em> item is created with the string <span class="name">defparam1</span> as an <span class="name">identifier</span>.
-    It is also given the descriptive string <span class="name">filename</span> through the 
-    <a href="http://www.w3.org/TR/rdf-schema/#ch_label"><span class="name">rdfs:label</span></a> data property. 
-    The <a title="http://www.w3.org/ns/prov-o#value" href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#value">prov:value</a>
-    data property specifies the actual value of the data item, namely <span class="name">DLEM_NEE_onedeg_v1.0nc</span>.
-    Finally, the type of the data item as defined by the WfMS is specified in line 7 to be <span class="name">edu.sci.wfms.basic:File</span>.
+      <div class="anexampleTitle">Example 27
+        <sup>
+          <a class="internalDFN" href="#anexample-entity">
+            <span class="diamond"> ◊</span>
+          </a>
+        </sup>
+      </div>
+      <p>
+        The following RDF fragment specifies a <span class="name">Data</span> item identified 
+        within the RDF document by <span class="name">data1</span>.
+      </p>
+      <pre class="codeexample">
+      1    :data1
+      2   
+      3       a provone:Data;
+      4       dcterms:identifier "defparam1"^^xsd:string;
+      5       rdfs:label "filename"^^xsd:string;
+      6       prov:value "DLEM_NEE_onedeg_v1.0nc"^^xsd:string;
+      7       wfms:type "edu.sci.wfms.basic:File"^^xsd:string; 
+      8
+      9    .
+      10
+      </pre>
+      A <em>Data</em> item is created with the string <span class="name">defparam1</span> as an
+      <span class="name">identifier</span>. It is also given the descriptive string <span
+      class="name">filename</span> through the <a
+      href="http://www.w3.org/TR/rdf-schema/#ch_label"><span class="name">rdfs:label</span></a>
+      data property. The <a title="http://www.w3.org/ns/prov-o#value"
+      href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#value">prov:value</a> data property
+      specifies the actual value of the data item, namely <span
+      class="name">DLEM_NEE_onedeg_v1.0nc</span>. Finally, the type of the data item as defined by
+      the WfMS is specified in line 7 to be <span class="name">edu.sci.wfms.basic:File</span>.
     </div>
     
     </section><!-- !!! End section: data-specification -->
