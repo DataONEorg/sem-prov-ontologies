@@ -1,0 +1,5 @@
+select subject, count(*)
+from "public"."metacat_query_audit"
+where subject IS NOT NULL
+group by subject
+order by subject

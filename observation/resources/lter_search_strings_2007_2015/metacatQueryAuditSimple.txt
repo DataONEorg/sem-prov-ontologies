@@ -1,0 +1,5 @@
+select search_term, count(*)
+from "public"."metacat_query_audit"
+where search_term IS NOT NULL
+group by search_term
+order by search_term
