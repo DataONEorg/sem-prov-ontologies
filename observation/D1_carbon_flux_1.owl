@@ -1,1435 +1,897 @@
 <?xml version="1.0"?>
-
-
-<!DOCTYPE Ontology [
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-]>
-
-
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl"
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#"
+     xml:base="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:webprotege="http://webprotege.stanford.edu/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     ontologyIRI="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl">
-    <Prefix name="webprotege" IRI="http://webprotege.stanford.edu/"/>
-    <Prefix name="D1_CarbonFlux" IRI="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="" IRI="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="webprotege2" IRI="http://protege.stanford.edu/webprotege/"/>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal datatypeIRI="&rdfs;Literal">Revised version: DataONE ontology to describe Carbon Flux measurements in the MsTMIP and LTER Use Cases. Collaborative work of: Margaret O&#39;Brien, Sophie Hou, Chase LeCroy, and Mark Schildhauer</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal datatypeIRI="&xsd;string">ontology work in progress for DataONE MSTMip/LTER Carbon cycling use cases</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal datatypeIRI="&rdf;PlainLiteral">ontology to start modeling primary production measurements
+     xmlns:webprotege2="http://protege.stanford.edu/webprotege/"
+     xmlns:D1_CarbonFlux="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux">
+        <webprotege2:revision rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">423</webprotege2:revision>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">Mar 2, 2015 9:39:56 AM</dc:date>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mark Schildhauer</dc:creator>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Revised version: DataONE ontology to describe Carbon Flux measurements in the MsTMIP and LTER Use Cases. Collaborative work of: Margaret O&apos;Brien, Sophie Hou, Chase LeCroy, and Mark Schildhauer</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology was generated from an ontology revision in WebProtege http://webprotege.nceas.ucsb.edu</rdfs:comment>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clecroy</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">guest</dc:creator>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mobb</dc:creator>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ontology work in progress for DataONE MSTMip/LTER Carbon cycling use cases</rdfs:comment>
+        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system</dc:creator>
+        <rdfs:comment xml:lang="en">ontology to start modeling primary production measurements
 margaret
-2014-11-13</Literal>
-    </Annotation>
-    <Annotation>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <Literal datatypeIRI="&xsd;string">This ontology was generated from an ontology revision in WebProtege http://webprotege.nceas.ucsb.edu</Literal>
-    </Annotation>
-    <Declaration>
-        <Class abbreviatedIRI="webprotege:RcScXD6JR0s7GJESttk3li"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":ANPP"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":AboveGroundWoodyBiomassCarbonPool"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":AnnualNetPrimaryProductivity"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":BIOME-BGC_MstmipVersion1ModeledMethod"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":CLASS-CTEMNplus_MstmipVersion1ModeledMethod"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":CLM4VIC_MstmipVersion1ModeledMethod"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":CLM_MstmipVersion1ModeledMethod"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":CarbonCycleComponents"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":DLEM_MstmipVersion1ModeledMethod"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":FieldMethod"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":GPP"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":GTEC_MstmipVersion1ModeledMethod"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":GrossPrimaryProductivity"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":ISAM_MstmipVersion1ModeledMethod"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":LPJ-wsl_MstmipVersion1ModeledMethod"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":ModeledMethod"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":NPP"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":NetPrimaryProductivity"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":ORCHIDEE-LSCE_MstmipVersion1ModeledMethod"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_01d8d3c8_8b34_4af9_9737_819614bbcca4"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_0b4f701d_c569_4e5d_bc20_1373772e0f2a"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_11084be3_bf03_4f0c_ae1b_77b660161b13"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_186f7e04_ce52_4ffd_8967_ee5f637751ef"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_1a9b59a0_d424_41c6_afe0_0a1f46378d5f"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_4b723dcd_6360_4408_a8e8_04b8bd8fa93a"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_59b6b12a_c40c_4b55_865e_193041110d55"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_5df2ffa1_81e6_46b1_a90a_f6d3017c750e"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_5f512300_5a54_48bc_ba7a_2e6e6fad6928"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_63b9a880_87cd_475e_b516_a3f9f05be67c"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_67517a5b_588b_4712_a428_0b0102aad2ee"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_76b459c6_1fa9_4274_9ba8_c089405d82f9"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_871a1c9f_9e5b_40cd_bf33_b73a3b8f378a"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_890d1d72_22ab_4798_9fbc_ffbcbeceb204"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_8a465c8f_561e_43cd_8aea_cd32c4903b4e"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_903806ae_a331_4bea_8b44_9ca38b64ef75"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_98ad8beb_35ce_4acf_a7ee_2aba473b961d"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_a7850169_750d_4930_a8c3_13c295a08e76"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_aba733a3_3622_46aa_8b7f_1a4ed7cb666e"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_ca6f170c_c1a8_49f8_b030_4384d006f359"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_cd5f0ef4_2990_4d4d_914a_30b6f8985b5b"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_d4cc57a9_1c01_4403_b016_7c6132b1ed48"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_e23ed688_e186_4b59_aabb_d3f398aeb820"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":OWLClass_e59004ab_0324_43e5_9a7d_7aee15f2c479"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":SIB3-JPL_MstmipVersion1ModeledMethod"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":SIBCASA_MstmipVersion1ModeledMethod"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":TEM6_MstmipVersion1ModeledMethod"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":TRIPLEX-GHG_MstmipVersion1ModeledMethod"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":VEGAS2.1_MstmipVersion1ModeledMethod"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI=":VISIT_MstmipVersion1ModeledMethod"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty abbreviatedIRI=":hasNearSynonym"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual abbreviatedIRI=":32_tons"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="webprotege:R7PCOQs0acF1dKpGTw9ttCN"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="webprotege:R7rpAQzzBYGT0EFKKvWgnho"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="webprotege:RDnGK5ztaWzUjD2heWfxaau"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI=":description"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI=":descriptionSource"/>
-    </Declaration>
-    <EquivalentClasses>
-        <Class abbreviatedIRI=":GPP"/>
-        <Class abbreviatedIRI=":GrossPrimaryProductivity"/>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI=":GrossPrimaryProductivity"/>
-        <Class abbreviatedIRI=":OWLClass_4b723dcd_6360_4408_a8e8_04b8bd8fa93a"/>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI=":NPP"/>
-        <Class abbreviatedIRI=":NetPrimaryProductivity"/>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class abbreviatedIRI=":NetPrimaryProductivity"/>
-        <Class abbreviatedIRI=":OWLClass_01d8d3c8_8b34_4af9_9737_819614bbcca4"/>
-    </EquivalentClasses>
-    <SubClassOf>
-        <Class abbreviatedIRI="webprotege:RcScXD6JR0s7GJESttk3li"/>
-        <Class abbreviatedIRI=":ModeledMethod"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":ANPP"/>
-        <Class abbreviatedIRI=":OWLClass_01d8d3c8_8b34_4af9_9737_819614bbcca4"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":AboveGroundWoodyBiomassCarbonPool"/>
-        <Class abbreviatedIRI=":OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":AnnualNetPrimaryProductivity"/>
-        <Class abbreviatedIRI=":OWLClass_01d8d3c8_8b34_4af9_9737_819614bbcca4"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":BIOME-BGC_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI="webprotege:RcScXD6JR0s7GJESttk3li"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":CLASS-CTEMNplus_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI="webprotege:RcScXD6JR0s7GJESttk3li"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":CLM4VIC_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI="webprotege:RcScXD6JR0s7GJESttk3li"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":CLM_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI="webprotege:RcScXD6JR0s7GJESttk3li"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":DLEM_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI="webprotege:RcScXD6JR0s7GJESttk3li"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":FieldMethod"/>
-        <Class abbreviatedIRI=":OWLClass_59b6b12a_c40c_4b55_865e_193041110d55"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":GPP"/>
-        <Class abbreviatedIRI=":OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":GTEC_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI="webprotege:RcScXD6JR0s7GJESttk3li"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":GrossPrimaryProductivity"/>
-        <Class abbreviatedIRI=":OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":ISAM_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI="webprotege:RcScXD6JR0s7GJESttk3li"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":LPJ-wsl_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI="webprotege:RcScXD6JR0s7GJESttk3li"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":ModeledMethod"/>
-        <Class abbreviatedIRI=":OWLClass_59b6b12a_c40c_4b55_865e_193041110d55"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":NPP"/>
-        <Class abbreviatedIRI=":OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":NetPrimaryProductivity"/>
-        <Class abbreviatedIRI=":OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":ORCHIDEE-LSCE_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI="webprotege:RcScXD6JR0s7GJESttk3li"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":OWLClass_01d8d3c8_8b34_4af9_9737_819614bbcca4"/>
-        <Class abbreviatedIRI=":OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":OWLClass_0b4f701d_c569_4e5d_bc20_1373772e0f2a"/>
-        <Class abbreviatedIRI=":OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":OWLClass_186f7e04_ce52_4ffd_8967_ee5f637751ef"/>
-        <Class abbreviatedIRI=":CarbonCycleComponents"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":OWLClass_1a9b59a0_d424_41c6_afe0_0a1f46378d5f"/>
-        <Class abbreviatedIRI=":OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
-        <Class abbreviatedIRI=":CarbonCycleComponents"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":OWLClass_4b723dcd_6360_4408_a8e8_04b8bd8fa93a"/>
-        <Class abbreviatedIRI=":OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":OWLClass_5df2ffa1_81e6_46b1_a90a_f6d3017c750e"/>
-        <Class abbreviatedIRI=":FieldMethod"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":OWLClass_5f512300_5a54_48bc_ba7a_2e6e6fad6928"/>
-        <Class abbreviatedIRI=":FieldMethod"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":OWLClass_63b9a880_87cd_475e_b516_a3f9f05be67c"/>
-        <Class abbreviatedIRI=":OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":OWLClass_67517a5b_588b_4712_a428_0b0102aad2ee"/>
-        <Class abbreviatedIRI=":OWLClass_d4cc57a9_1c01_4403_b016_7c6132b1ed48"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":OWLClass_76b459c6_1fa9_4274_9ba8_c089405d82f9"/>
-        <Class abbreviatedIRI=":OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":OWLClass_871a1c9f_9e5b_40cd_bf33_b73a3b8f378a"/>
-        <Class abbreviatedIRI=":FieldMethod"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":OWLClass_890d1d72_22ab_4798_9fbc_ffbcbeceb204"/>
-        <Class abbreviatedIRI=":OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":OWLClass_8a465c8f_561e_43cd_8aea_cd32c4903b4e"/>
-        <Class abbreviatedIRI=":OWLClass_186f7e04_ce52_4ffd_8967_ee5f637751ef"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":OWLClass_903806ae_a331_4bea_8b44_9ca38b64ef75"/>
-        <Class abbreviatedIRI=":OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f"/>
-        <Class abbreviatedIRI=":OWLClass_186f7e04_ce52_4ffd_8967_ee5f637751ef"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":OWLClass_98ad8beb_35ce_4acf_a7ee_2aba473b961d"/>
-        <Class abbreviatedIRI=":OWLClass_186f7e04_ce52_4ffd_8967_ee5f637751ef"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":OWLClass_a7850169_750d_4930_a8c3_13c295a08e76"/>
-        <Class abbreviatedIRI=":FieldMethod"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":OWLClass_aba733a3_3622_46aa_8b7f_1a4ed7cb666e"/>
-        <Class abbreviatedIRI=":FieldMethod"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":OWLClass_ca6f170c_c1a8_49f8_b030_4384d006f359"/>
-        <Class abbreviatedIRI=":OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":OWLClass_cd5f0ef4_2990_4d4d_914a_30b6f8985b5b"/>
-        <Class abbreviatedIRI=":OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":OWLClass_d4cc57a9_1c01_4403_b016_7c6132b1ed48"/>
-        <Class abbreviatedIRI=":OWLClass_186f7e04_ce52_4ffd_8967_ee5f637751ef"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":OWLClass_e23ed688_e186_4b59_aabb_d3f398aeb820"/>
-        <Class abbreviatedIRI=":OWLClass_186f7e04_ce52_4ffd_8967_ee5f637751ef"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":OWLClass_e59004ab_0324_43e5_9a7d_7aee15f2c479"/>
-        <Class abbreviatedIRI=":OWLClass_d4cc57a9_1c01_4403_b016_7c6132b1ed48"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":SIB3-JPL_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI="webprotege:RcScXD6JR0s7GJESttk3li"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":SIBCASA_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI="webprotege:RcScXD6JR0s7GJESttk3li"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":TEM6_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI="webprotege:RcScXD6JR0s7GJESttk3li"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":TRIPLEX-GHG_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI="webprotege:RcScXD6JR0s7GJESttk3li"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":VEGAS2.1_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI="webprotege:RcScXD6JR0s7GJESttk3li"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI=":VISIT_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI="webprotege:RcScXD6JR0s7GJESttk3li"/>
-    </SubClassOf>
-    <DisjointClasses>
-        <Class abbreviatedIRI=":BIOME-BGC_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI=":CLASS-CTEMNplus_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI=":CLM4VIC_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI=":CLM_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI=":DLEM_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI=":GTEC_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI=":ISAM_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI=":LPJ-wsl_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI=":ORCHIDEE-LSCE_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI=":SIB3-JPL_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI=":SIBCASA_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI=":TEM6_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI=":TRIPLEX-GHG_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI=":VEGAS2.1_MstmipVersion1ModeledMethod"/>
-        <Class abbreviatedIRI=":VISIT_MstmipVersion1ModeledMethod"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class abbreviatedIRI=":OWLClass_01d8d3c8_8b34_4af9_9737_819614bbcca4"/>
-        <Class abbreviatedIRI=":OWLClass_4b723dcd_6360_4408_a8e8_04b8bd8fa93a"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class abbreviatedIRI=":OWLClass_67517a5b_588b_4712_a428_0b0102aad2ee"/>
-        <Class abbreviatedIRI=":OWLClass_e59004ab_0324_43e5_9a7d_7aee15f2c479"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class abbreviatedIRI=":OWLClass_8a465c8f_561e_43cd_8aea_cd32c4903b4e"/>
-        <Class abbreviatedIRI=":OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f"/>
-        <Class abbreviatedIRI=":OWLClass_98ad8beb_35ce_4acf_a7ee_2aba473b961d"/>
-        <Class abbreviatedIRI=":OWLClass_d4cc57a9_1c01_4403_b016_7c6132b1ed48"/>
-        <Class abbreviatedIRI=":OWLClass_e23ed688_e186_4b59_aabb_d3f398aeb820"/>
-    </DisjointClasses>
-    <SymmetricObjectProperty>
-        <ObjectProperty abbreviatedIRI=":hasNearSynonym"/>
-    </SymmetricObjectProperty>
-    <TransitiveObjectProperty>
-        <ObjectProperty abbreviatedIRI=":hasNearSynonym"/>
-    </TransitiveObjectProperty>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>webprotege:R7PCOQs0acF1dKpGTw9ttCN</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">examples</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="webprotege:R7rpAQzzBYGT0EFKKvWgnho"/>
-        <AbbreviatedIRI>webprotege:R7rpAQzzBYGT0EFKKvWgnho</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322, Shild</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q"/>
-        <AbbreviatedIRI>webprotege:R7rpAQzzBYGT0EFKKvWgnho</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="webprotege:RDnGK5ztaWzUjD2heWfxaau"/>
-        <AbbreviatedIRI>webprotege:R7rpAQzzBYGT0EFKKvWgnho</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Contributor</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>webprotege:R7rpAQzzBYGT0EFKKvWgnho</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">definition_Contributor</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>webprotege:R7rpAQzzBYGT0EFKKvWgnho</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">defintion_Contributor</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>webprotege:R7rpAQzzBYGT0EFKKvWgnho</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">&quot;contributor&quot; is an OWL &quot;Annotation property&quot; that names the person contributing the content, so s/he can be contacted, especially during development.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>webprotege:R7rpAQzzBYGT0EFKKvWgnho</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">O&#39;Brien, pers comm. 2015-02-15</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":description"/>
-        <AbbreviatedIRI>webprotege:R7rpAQzzBYGT0EFKKvWgnho</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The &quot;contributor&quot; Annotation Property&quot; is to record the name of the those contributing to the resource. 
+2014-11-13</rdfs:comment>
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux/1.0.0"/>
+    </owl:Ontology>
+    
 
-If there is any potential ambiguity, an identifier should be added, including the system to which it belongs.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="webprotege:R7rpAQzzBYGT0EFKKvWgnho"/>
-        <AbbreviatedIRI>webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="webprotege:RDnGK5ztaWzUjD2heWfxaau"/>
-        <AbbreviatedIRI>webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Example of Usage</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">example_Of_Usage</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">&quot;example_Of_Usage&quot; is an OWL annotation property to record examples of how the concept or property should be used.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">O&#39;Brien, pers comm, 2015-02-19</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":description"/>
-        <AbbreviatedIRI>webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">&quot;example_Of_Usage&quot; is for providing examples. It should contain actual sample strings for the resource it applies to. longer, text descriptions of good practice for the resource belong in the &quot;description&quot; annotation.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":descriptionSource"/>
-        <AbbreviatedIRI>webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">O&#39;Brien, pers comm, 2015-02-19</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="webprotege:R7rpAQzzBYGT0EFKKvWgnho"/>
-        <AbbreviatedIRI>webprotege:RDnGK5ztaWzUjD2heWfxaau</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q"/>
-        <AbbreviatedIRI>webprotege:RDnGK5ztaWzUjD2heWfxaau</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Carbon Flux</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="webprotege:RDnGK5ztaWzUjD2heWfxaau"/>
-        <AbbreviatedIRI>webprotege:RDnGK5ztaWzUjD2heWfxaau</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Presentation Label</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>webprotege:RDnGK5ztaWzUjD2heWfxaau</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">presentation_Label</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>webprotege:RDnGK5ztaWzUjD2heWfxaau</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">&quot;presentation_Label&quot; is an OWL &quot;Annotation property&quot; that contains a label suitable for presentation to general audiences, such as with graph bubbles. Title case capitalization is acceptable.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>webprotege:RDnGK5ztaWzUjD2heWfxaau</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">&quot;presentation_Label&quot; is an OWL &quot;Annotation property&quot; that contains a label suitable for presentation to general audiences, such as with graph bubbles. Usually this will be the same as &quot;rdfs:label&quot;, and it should initially be auto-populated with the contents of the &quot;rdfs:label&quot; field, if that property is not empty.  But in special cases, an application might prefer differentiating the &quot;presentation:label&quot; from the default &quot;rdfs:label&quot;, in which case it can be customized.  Title case capitalization is acceptable.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>webprotege:RDnGK5ztaWzUjD2heWfxaau</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">O&#39;Brien, 2015-02-16</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":description"/>
-        <AbbreviatedIRI>webprotege:RDnGK5ztaWzUjD2heWfxaau</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">This field may be deprecated.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>webprotege:RcScXD6JR0s7GJESttk3li</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">MsTMIP_Simulation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>webprotege:RcScXD6JR0s7GJESttk3li</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Simulation is the imitation of the operation of a real-world process or system over time. (wikipedia). A MsTMIP Simulation is a simulation carried out by the MsTMIP project (margaret)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="webprotege:R7rpAQzzBYGT0EFKKvWgnho"/>
-        <AbbreviatedIRI>rdfs:label</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q"/>
-        <AbbreviatedIRI>rdfs:label</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Carbon_Flux_NASA, definition_Source, rdfs:label</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>rdfs:label</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">rdfs:label</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>rdfs:label</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">rdfs:label is an instance of rdf:Property that may be used to provide a human-readable version of a resource&#39;s name</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>rdfs:label</AbbreviatedIRI>
-        <IRI>http://www.w3.org/TR/rdf-schema/#ch_label</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":description"/>
-        <AbbreviatedIRI>rdfs:label</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">rdfs:label is a built in annotation property, and W3C does not give guidelines beyond the definition. In the DataONe Carbon Flux ontology, we use rdfs:label for a human-readable version of the resource&#39;s name, but adhere to a particular pattern. Our goal is that content of rdfs:label are not broken into individual terms arbitrarily.
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7PCOQs0acF1dKpGTw9ttCN -->
+
+    <owl:AnnotationProperty rdf:about="http://webprotege.stanford.edu/R7PCOQs0acF1dKpGTw9ttCN">
+        <rdfs:label>examples</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7rpAQzzBYGT0EFKKvWgnho -->
+
+    <owl:AnnotationProperty rdf:about="http://webprotege.stanford.edu/R7rpAQzzBYGT0EFKKvWgnho">
+        <rdfs:label>definition_Contributor</rdfs:label>
+        <rdfs:label>defintion_Contributor</rdfs:label>
+        <description>The &quot;contributor&quot; Annotation Property&quot; is to record the name of the those contributing to the resource. 
+
+If there is any potential ambiguity, an identifier should be added, including the system to which it belongs.</description>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322, Shild</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <webprotege:RDnGK5ztaWzUjD2heWfxaau>Contributor</webprotege:RDnGK5ztaWzUjD2heWfxaau>
+        <definition>&quot;contributor&quot; is an OWL &quot;Annotation property&quot; that names the person contributing the content, so s/he can be contacted, especially during development.</definition>
+        <definitionSource>O&apos;Brien, pers comm. 2015-02-15</definitionSource>
+        <webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RB1iJB2AOLc3FlQ6wxIAp5Q -->
+
+    <owl:AnnotationProperty rdf:about="http://webprotege.stanford.edu/RB1iJB2AOLc3FlQ6wxIAp5Q">
+        <rdfs:label>example_Of_Usage</rdfs:label>
+        <definition>&quot;example_Of_Usage&quot; is an OWL annotation property to record examples of how the concept or property should be used.</definition>
+        <definitionSource>O&apos;Brien, pers comm, 2015-02-19</definitionSource>
+        <description>&quot;example_Of_Usage&quot; is for providing examples. It should contain actual sample strings for the resource it applies to. longer, text descriptions of good practice for the resource belong in the &quot;description&quot; annotation.</description>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <webprotege:RDnGK5ztaWzUjD2heWfxaau>Example of Usage</webprotege:RDnGK5ztaWzUjD2heWfxaau>
+        <descriptionSource>O&apos;Brien, pers comm, 2015-02-19</descriptionSource>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RDnGK5ztaWzUjD2heWfxaau -->
+
+    <owl:AnnotationProperty rdf:about="http://webprotege.stanford.edu/RDnGK5ztaWzUjD2heWfxaau">
+        <rdfs:label>presentation_Label</rdfs:label>
+        <webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q>Carbon Flux</webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q>
+        <definition>&quot;presentation_Label&quot; is an OWL &quot;Annotation property&quot; that contains a label suitable for presentation to general audiences, such as with graph bubbles. Usually this will be the same as &quot;rdfs:label&quot;, and it should initially be auto-populated with the contents of the &quot;rdfs:label&quot; field, if that property is not empty.  But in special cases, an application might prefer differentiating the &quot;presentation:label&quot; from the default &quot;rdfs:label&quot;, in which case it can be customized.  Title case capitalization is acceptable.</definition>
+        <description>This field may be deprecated.</description>
+        <definitionSource>O&apos;Brien, 2015-02-16</definitionSource>
+        <webprotege:RDnGK5ztaWzUjD2heWfxaau>Presentation Label</webprotege:RDnGK5ztaWzUjD2heWfxaau>
+        <definition>&quot;presentation_Label&quot; is an OWL &quot;Annotation property&quot; that contains a label suitable for presentation to general audiences, such as with graph bubbles. Title case capitalization is acceptable.</definition>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#definition">
+        <rdfs:label>definition</rdfs:label>
+        <webprotege:RDnGK5ztaWzUjD2heWfxaau>Definition</webprotege:RDnGK5ztaWzUjD2heWfxaau>
+        <definitionSource>Schildhauer, pers comm, Feb 9, 2015,</definitionSource>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Schildhauer, O&apos;Brien</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definition>&quot;definition&quot; is an OWL &quot;Annotation property&quot; that contains a concise, often abstract, but ideally precise natural language &quot;description&quot; of the concept to which it is attached (or annotated).  
+
+In scientific contexts, the &quot;definition&quot; Annotation property is preferred over a &quot;description&quot; Annotation property, because &quot;description&quot; is typically a more verbose, less prescriptive natural language explication of the concept to which it is attached (or applied, or annotated).</definition>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#definitionSource -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#definitionSource">
+        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">definition_Source</rdfs:label>
+        <definition>&quot;definitionSource&quot; is the Annotation property that can be used to provide the reference source or Authority for the &quot;definition&quot; (of interest), as an ISBN,DOI, bibliographic citation, etc. to the source of the &quot;definition&quot; contained in an associated &quot;definition&quot; Annotation property that is attached (annotated) to the concept.  
+
+Ideally a defintion Source is structured in a well-known and accepted format, that provides an unambiguous pointer to a source reference, but often even some accurate indication of a reference source is better than nothing at all.</definition>
+        <definitionSource>Schildhauer, pers comm, 05Feb2015</definitionSource>
+        <webprotege:RDnGK5ztaWzUjD2heWfxaau>Definition Source</webprotege:RDnGK5ztaWzUjD2heWfxaau>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Schildhauer</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#description -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#description">
+        <rdfs:label>description</rdfs:label>
+        <definition rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">&quot;description&quot; is an OWL &quot;Annotation property&quot; that contains a a more verbose, less prescriptive natural language explication of the concept to which it is attached (or applied, or annotated) in contrast to a &quot;definition&quot; Annotation property.
+
+Use the  &quot;definition&quot; Annotation property for scientific concepts when possible, as opposed to the &quot;description&quot; Annotation property</definition>
+        <webprotege:RDnGK5ztaWzUjD2heWfxaau>Description</webprotege:RDnGK5ztaWzUjD2heWfxaau>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Schildhauer</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definitionSource>Schildhauer, pers comm, 05Feb2014</definitionSource>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#descriptionSource -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#descriptionSource">
+        <rdfs:label>description_Source</rdfs:label>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Schildauer</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <descriptionSource>Schildhauer, pers comm, 05Feb2015</descriptionSource>
+        <webprotege:RDnGK5ztaWzUjD2heWfxaau>Description Source</webprotege:RDnGK5ztaWzUjD2heWfxaau>
+        <definition>&quot;description_Source&quot; is the Annotation property that can be used to provide the reference source or Authority, as an ISBN,DOI, bibliographic citation, etc. to the source of the &quot;description&quot; contained in an associated &quot;description&quot; Annotation property that is attached (annotated) to some concept.  
+
+Ideally a descriptionSource is structured in a well-known and accepted format, that provides an unambiguous pointer to a source reference, but often even some accurate indication of a reference source is better than nothing at all.
+
+As description Annotation properties are often not as rigorous, and hence looser and more verbose than definition Annotation properties, these fields may be more readily used for informal pedagogical advice and direction rather than being proscriptive</definition>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+        <rdfs:label>rdfs:label</rdfs:label>
+        <description>rdfs:label is a built in annotation property, and W3C does not give guidelines beyond the definition. In the DataONe Carbon Flux ontology, we use rdfs:label for a human-readable version of the resource&apos;s name, but adhere to a particular pattern. Our goal is that content of rdfs:label are not broken into individual terms arbitrarily.
 
 1. Our practice is to separate individual words in the rdfs:label with underscores, but maintain capitalization consistent with the conventions of the resources type (e.g., camel case for properties, capitalized words for classes, capitalized abbreviations and acronyms). 
 
 2. include namespace in the label, if resource is imported.
 
-See example_Of_Usage, presentation_Label</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":descriptionSource"/>
-        <AbbreviatedIRI>rdfs:label</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">O&#39;Brien, 2015-02-19</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:ANPP</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">ANPP</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:ANPP</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Gross primary production (GPP) minus autotrophic respiration (AR) over one year.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:ANPP</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:AboveGroundWoodyBiomassCarbonPool</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Above_Ground_Woody_Biomass_Carbon_Pool</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:AboveGroundWoodyBiomassCarbonPool</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The mass of any or all woody organic components within an ecosystem.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:AboveGroundWoodyBiomassCarbonPool</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Litton, C.M. et al. Carbon allocation in forest ecosystems. Global Change Biology. V 13 I 10. pp. 2089 - 2109. July 2007.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:AnnualNetPrimaryProductivity</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Annual_Net_Primary_Productivity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:AnnualNetPrimaryProductivity</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Gross primary production (GPP) minus autotrophic respiration (AR) over one year.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:AnnualNetPrimaryProductivity</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:BIOME-BGC_MstmipVersion1ModeledMethod</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">BIOME-BGC_Mstmip_Version1_Modeled_Method</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:CLASS-CTEMNplus_MstmipVersion1ModeledMethod</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">CLASS-CTEMNplus_Mstmip_Version1_Modeled_Method</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:CLM4VIC_MstmipVersion1ModeledMethod</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">CLM4VIC_MstmipVersion1_Modeled_Method</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:CLM_MstmipVersion1ModeledMethod</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">CLM_Mstmip_Version1_Modeled_Method</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:CarbonCycleComponents</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Carbon_Cycle_Components</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:CarbonCycleComponents</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The parts that make up the combined processes that cycle carbon, (including photosynthesis, decomposition, and respiration)  between its major reservoirs (the atmosphere, oceans, and living organisms).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:DLEM_MstmipVersion1ModeledMethod</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">DLEM_Mstmip_Version1_Modeled_Method</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:FieldMethod</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Field_Method</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:FieldMethod</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">strawman definition from margaret:
-a Field_Method is a method for determining a component of primary production that involves observations or measurements of the real world. A field method may have steps which could be considered &#39;modeling&#39; (such as development of an allometric model of tree growth based on height), but measurements &quot;in the field&quot; (eg, of trees) are always involved. compare to Modeled_Method.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:GPP</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">GPP</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:GPP</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The sum of gross carbon fixation by autotrophic carbon-fixing tissues per unit ground or water area and time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:GPP</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:GTEC_MstmipVersion1ModeledMethod</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">GTEC_Mstmip_Version1_Modeled_Method</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:GrossPrimaryProductivity</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Gross_Primary_Productivity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:GrossPrimaryProductivity</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The sum of gross carbon fixation by autotrophic carbon-fixing tissues per unit ground or water area and time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:GrossPrimaryProductivity</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:ISAM_MstmipVersion1ModeledMethod</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">ISAM_Mstmip_Version1_Modeled_Method</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:LPJ-wsl_MstmipVersion1ModeledMethod</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">LPJ-wsl_Mstmip_Version1_Modeled_Method</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:ModeledMethod</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Modeled_Method</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:ModeledMethod</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">strawman definition from Margaret
-a Modeled_Method (is Simulated_Method better?) uses only data obtained from some source. It does not directly measure any real phenomenon.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:NPP</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">NPP</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:NPP</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Gross primary production (GPP) minus autotrophic respiration (AR).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:NPP</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:NetPrimaryProductivity</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Net_Primary_Productivity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:NetPrimaryProductivity</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Gross primary production (GPP) minus autotrophic respiration (AR).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:NetPrimaryProductivity</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:OWLClass_01d8d3c8_8b34_4af9_9737_819614bbcca4</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">the amount of primary production available for export (ie, gross, minus losses, like the autotropys own respirateion, or other loss (exudation) not used by the carbon-fixing organism itself)
+See example_Of_Usage, presentation_Label</description>
+        <definition>rdfs:label is an instance of rdf:Property that may be used to provide a human-readable version of a resource&apos;s name</definition>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q>Carbon_Flux_NASA, definition_Source, rdfs:label</webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q>
+        <descriptionSource>O&apos;Brien, 2015-02-19</descriptionSource>
+        <definitionSource rdf:resource="http://www.w3.org/TR/rdf-schema/#ch_label"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#hasNearSynonym -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#hasNearSynonym">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:label>has_Near_Synonym</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li">
+        <rdfs:label>MsTMIP_Simulation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#ModeledMethod"/>
+        <definition>Simulation is the imitation of the operation of a real-world process or system over time. (wikipedia). A MsTMIP Simulation is a simulation carried out by the MsTMIP project (margaret)</definition>
+        <definitionSource>adapted from wikipedia, Simulation</definitionSource>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#ANPP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#ANPP">
+        <rdfs:label>ANPP</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_01d8d3c8_8b34_4af9_9737_819614bbcca4"/>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definition>Gross primary production (GPP) minus autotrophic respiration (AR) over one year.</definition>
+        <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#AboveGroundWoodyBiomassCarbonPool -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#AboveGroundWoodyBiomassCarbonPool">
+        <rdfs:label>Above_Ground_Woody_Biomass_Carbon_Pool</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
+        <definition>The mass of any or all woody organic components within an ecosystem.</definition>
+        <definitionSource>Litton, C.M. et al. Carbon allocation in forest ecosystems. Global Change Biology. V 13 I 10. pp. 2089 - 2109. July 2007.</definitionSource>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#AnnualNetPrimaryProductivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#AnnualNetPrimaryProductivity">
+        <rdfs:label>Annual_Net_Primary_Productivity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_01d8d3c8_8b34_4af9_9737_819614bbcca4"/>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definition>Gross primary production (GPP) minus autotrophic respiration (AR) over one year.</definition>
+        <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#BIOME-BGC_MstmipVersion1ModeledMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#BIOME-BGC_MstmipVersion1ModeledMethod">
+        <rdfs:label>BIOME-BGC_Mstmip_Version1_Modeled_Method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#CLASS-CTEMNplus_MstmipVersion1ModeledMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#CLASS-CTEMNplus_MstmipVersion1ModeledMethod">
+        <rdfs:label>CLASS-CTEMNplus_Mstmip_Version1_Modeled_Method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#CLM4VIC_MstmipVersion1ModeledMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#CLM4VIC_MstmipVersion1ModeledMethod">
+        <rdfs:label>CLM4VIC_MstmipVersion1_Modeled_Method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#CLM_MstmipVersion1ModeledMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#CLM_MstmipVersion1ModeledMethod">
+        <rdfs:label>CLM_Mstmip_Version1_Modeled_Method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#CarbonCycleComponents -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#CarbonCycleComponents">
+        <rdfs:label>Carbon_Cycle_Components</rdfs:label>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definition>The parts that make up the combined processes that cycle carbon, (including photosynthesis, decomposition, and respiration)  between its major reservoirs (the atmosphere, oceans, and living organisms).</definition>
+        
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#DLEM_MstmipVersion1ModeledMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#DLEM_MstmipVersion1ModeledMethod">
+        <rdfs:label>DLEM_Mstmip_Version1_Modeled_Method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#FieldMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#FieldMethod">
+        <rdfs:label>Field_Method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_59b6b12a_c40c_4b55_865e_193041110d55"/>
+        <definition>strawman definition from margaret:
+a Field_Method is a method for determining a component of primary production that involves observations or measurements of the real world. A field method may have steps which could be considered &apos;modeling&apos; (such as development of an allometric model of tree growth based on height), but measurements &quot;in the field&quot; (eg, of trees) are always involved. compare to Modeled_Method.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#GPP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#GPP">
+        <rdfs:label>GPP</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#GrossPrimaryProductivity"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f"/>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definition>The sum of gross carbon fixation by autotrophic carbon-fixing tissues per unit ground or water area and time.</definition>
+        <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#GTEC_MstmipVersion1ModeledMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#GTEC_MstmipVersion1ModeledMethod">
+        <rdfs:label>GTEC_Mstmip_Version1_Modeled_Method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#GrossPrimaryProductivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#GrossPrimaryProductivity">
+        <rdfs:label>Gross_Primary_Productivity</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_4b723dcd_6360_4408_a8e8_04b8bd8fa93a"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f"/>
+        <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
+        <definition>The sum of gross carbon fixation by autotrophic carbon-fixing tissues per unit ground or water area and time.</definition>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#ISAM_MstmipVersion1ModeledMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#ISAM_MstmipVersion1ModeledMethod">
+        <rdfs:label>ISAM_Mstmip_Version1_Modeled_Method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#LPJ-wsl_MstmipVersion1ModeledMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#LPJ-wsl_MstmipVersion1ModeledMethod">
+        <rdfs:label>LPJ-wsl_Mstmip_Version1_Modeled_Method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#ModeledMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#ModeledMethod">
+        <rdfs:label>Modeled_Method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_59b6b12a_c40c_4b55_865e_193041110d55"/>
+        <definition>strawman definition from Margaret
+a Modeled_Method (is Simulated_Method better?) uses only data obtained from some source. It does not directly measure any real phenomenon.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#NPP -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#NPP">
+        <rdfs:label>NPP</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#NetPrimaryProductivity"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f"/>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
+        <definition>Gross primary production (GPP) minus autotrophic respiration (AR).</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#NetPrimaryProductivity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#NetPrimaryProductivity">
+        <rdfs:label>Net_Primary_Productivity</rdfs:label>
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_01d8d3c8_8b34_4af9_9737_819614bbcca4"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f"/>
+        <definition>Gross primary production (GPP) minus autotrophic respiration (AR).</definition>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#ORCHIDEE-LSCE_MstmipVersion1ModeledMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#ORCHIDEE-LSCE_MstmipVersion1ModeledMethod">
+        <rdfs:label>ORCHIDEE-LSCE_MstmipVersion1_Modeled_Method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_01d8d3c8_8b34_4af9_9737_819614bbcca4 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_01d8d3c8_8b34_4af9_9737_819614bbcca4">
+        <rdfs:label>Net_Primary_Production_Carbon_Flux</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_4b723dcd_6360_4408_a8e8_04b8bd8fa93a"/>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definition>Gross primary production (GPP) minus autotrophic respiration (AR) per unit ground or water area and time.</definition>
+        <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
+        <rdfs:comment>the amount of primary production available for export (ie, gross, minus losses, like the autotropys own respirateion, or other loss (exudation) not used by the carbon-fixing organism itself)
 = gross primary production - autotrophic respiration
 
 synonyms: NPP
 
 
-</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_01d8d3c8_8b34_4af9_9737_819614bbcca4</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Net_Primary_Production_Carbon_Flux</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:OWLClass_01d8d3c8_8b34_4af9_9737_819614bbcca4</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Gross primary production (GPP) minus autotrophic respiration (AR) per unit ground or water area and time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:OWLClass_01d8d3c8_8b34_4af9_9737_819614bbcca4</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_0b4f701d_c569_4e5d_bc20_1373772e0f2a</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Soil_Carbon_Pool</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:OWLClass_0b4f701d_c569_4e5d_bc20_1373772e0f2a</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The mass of carbon contained within the top layer of the earth&#39;s surface in which plants can grow, consisting of rock and mineral particles mixed with decaying organic matter and having the capability of retaining water.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_11084be3_bf03_4f0c_ae1b_77b660161b13</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Measurement</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:OWLClass_11084be3_bf03_4f0c_ae1b_77b660161b13</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A determination of the magnitude of a quantity by comparison with a standard for that quantity.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_186f7e04_ce52_4ffd_8967_ee5f637751ef</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Carbon_Flux</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:OWLClass_186f7e04_ce52_4ffd_8967_ee5f637751ef</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The rate at which a mass of carbon moves to or from a particular component of the ecosystem per unit time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:OWLClass_186f7e04_ce52_4ffd_8967_ee5f637751ef</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Litton, C.M. et al. Carbon allocation in forest ecosystems. Global Change Biology. V 13 I 10. pp. 2089 - 2109. July 2007.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":description"/>
-        <AbbreviatedIRI>:OWLClass_186f7e04_ce52_4ffd_8967_ee5f637751ef</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Carbon fluxes are the movement of Carbon from one place (Source) to another (Sink).  Carbon fluxes all have dimensions of {mass or amount of} Carbon per area (or volume) per time
+</rdfs:comment>
+    </owl:Class>
+    
 
-biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than kg to quantify the amount of Carbon, whereas Climate-oriented projects use kg</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":descriptionSource"/>
-        <AbbreviatedIRI>:OWLClass_186f7e04_ce52_4ffd_8967_ee5f637751ef</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">unknown.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_1a9b59a0_d424_41c6_afe0_0a1f46378d5f</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Plankton_Carbon_Pool</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:OWLClass_1a9b59a0_d424_41c6_afe0_0a1f46378d5f</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The mass of carbon contained in free-floating organisms of the sea and fresh water that for the most part move passively with the water currents and consist mostly of microorganisms and small plants and animals.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:OWLClass_1a9b59a0_d424_41c6_afe0_0a1f46378d5f</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Carbon Pools are amounts of carbon in the system. diimensions are mass Carbon per area (eg, kg per m2
-(can these be moles?)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Carbon_Pool</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Carbon Pools are amounts of carbon in the system. dimensions are mass Carbon per area (eg, kg per m2
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_0b4f701d_c569_4e5d_bc20_1373772e0f2a -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_0b4f701d_c569_4e5d_bc20_1373772e0f2a">
+        <rdfs:label>Soil_Carbon_Pool</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definition>The mass of carbon contained within the top layer of the earth&apos;s surface in which plants can grow, consisting of rock and mineral particles mixed with decaying organic matter and having the capability of retaining water.</definition>
+        
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_11084be3_bf03_4f0c_ae1b_77b660161b13 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_11084be3_bf03_4f0c_ae1b_77b660161b13">
+        <rdfs:label>Measurement</rdfs:label>
+        <definition>A determination of the magnitude of a quantity by comparison with a standard for that quantity.</definition>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_186f7e04_ce52_4ffd_8967_ee5f637751ef -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_186f7e04_ce52_4ffd_8967_ee5f637751ef">
+        <rdfs:label>Carbon_Flux</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#CarbonCycleComponents"/>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <description>Carbon fluxes are the movement of Carbon from one place (Source) to another (Sink).  Carbon fluxes all have dimensions of {mass or amount of} Carbon per area (or volume) per time
+
+biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than kg to quantify the amount of Carbon, whereas Climate-oriented projects use kg</description>
+        <definition>The rate at which a mass of carbon moves to or from a particular component of the ecosystem per unit time.</definition>
+        <descriptionSource>unknown.</descriptionSource>
+        <definitionSource>Litton, C.M. et al. Carbon allocation in forest ecosystems. Global Change Biology. V 13 I 10. pp. 2089 - 2109. July 2007.</definitionSource>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_1a9b59a0_d424_41c6_afe0_0a1f46378d5f -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_1a9b59a0_d424_41c6_afe0_0a1f46378d5f">
+        <rdfs:label>Plankton_Carbon_Pool</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definition>The mass of carbon contained in free-floating organisms of the sea and fresh water that for the most part move passively with the water currents and consist mostly of microorganisms and small plants and animals.</definition>
+        <definitionSource>Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</definitionSource>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6">
+        <rdfs:label>Carbon_Pool</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#CarbonCycleComponents"/>
+        <definition>A reservoir with the capacity to store and release carbon, such as soil, terrestrial vegetation, the ocean, and the atmosphere {contributed by margaret, from</definition>
+        <definition>Carbon Pools are amounts of carbon in the system. dimensions are mass Carbon per area (eg, kg per m2
 (can these be moles?) 
-{contributor, citation unkknown}</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A reservoir with the capacity to store and release carbon, such as soil, terrestrial vegetation, the ocean, and the atmosphere {contributed by margaret, from
-    &amp;quot;carbon pool.&amp;quot; McGraw-Hill Dictionary of Scientific &amp;amp; Technical Terms, 6E. 2003. The McGraw-Hill Companies, Inc. 20 Feb. 2015 http://encyclopedia2.thefreedictionary.com/carbon+pool}</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":description"/>
-        <AbbreviatedIRI>:OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Carbon Pools are reservoirs in the system with the capacity to exchange carbon. Usually scientists are interested in the size of pools, and the movement of carbon between pools. The dimensions of a carbon pool are likely to be mass or moles Carbon per area or volume (eg, kg per m2).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":description"/>
-        <AbbreviatedIRI>:OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Carbon Pools are reservoirs in the system with the capacity to exchange. Usually scientists are interested in the size of carbon pools, and the movement of carbon between pools. Carbon pools can vary widely in scale, from an ecosystem to an species functional level. The dimensions are likely to be mass or moles Carbon per area (eg, kg per m2).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":descriptionSource"/>
-        <AbbreviatedIRI>:OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">O&#39;Brien, pers comm. 2015-02-20</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:OWLClass_4b723dcd_6360_4408_a8e8_04b8bd8fa93a</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">pprod before the autotrphs own respiration is subtracted.
+{contributor, citation unkknown}</definition>
+        <descriptionSource>O&apos;Brien, pers comm. 2015-02-20</descriptionSource>
+        <description>Carbon Pools are reservoirs in the system with the capacity to exchange. Usually scientists are interested in the size of carbon pools, and the movement of carbon between pools. Carbon pools can vary widely in scale, from an ecosystem to an species functional level. The dimensions are likely to be mass or moles Carbon per area (eg, kg per m2).</description>
+        <rdfs:comment>Carbon Pools are amounts of carbon in the system. diimensions are mass Carbon per area (eg, kg per m2
+(can these be moles?)</rdfs:comment>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <description>Carbon Pools are reservoirs in the system with the capacity to exchange carbon. Usually scientists are interested in the size of pools, and the movement of carbon between pools. The dimensions of a carbon pool are likely to be mass or moles Carbon per area or volume (eg, kg per m2).</description>
+        <definitionSource>&quot;carbon pool.&quot; McGraw-Hill Dictionary of Scientific &amp; Technical Terms, 6E. 2003. The McGraw-Hill Companies, Inc. 20 Feb. 2015 http-colon-slash-slash-encyclopedia2.thefreedictionary.com/carbon+pool</definitionSource>
+        <definitionSource>this is a test to see if I can hide a URL from web-protege: http-colon-slash-slash-my/url/here.</definitionSource>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_4b723dcd_6360_4408_a8e8_04b8bd8fa93a -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_4b723dcd_6360_4408_a8e8_04b8bd8fa93a">
+        <rdfs:label>Gross_Primary_Production_Carbon_Flux</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f"/>
+        <rdfs:comment>pprod before the autotrphs own respiration is subtracted.
 also called photosynthetic rate, or carbon fixation rate.
 
-Synonyms: GPP</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_4b723dcd_6360_4408_a8e8_04b8bd8fa93a</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Gross_Primary_Production_Carbon_Flux</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:OWLClass_4b723dcd_6360_4408_a8e8_04b8bd8fa93a</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The sum of gross carbon fixation by autotrophic carbon-fixing tissues per unit ground or water area and time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:OWLClass_4b723dcd_6360_4408_a8e8_04b8bd8fa93a</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:OWLClass_59b6b12a_c40c_4b55_865e_193041110d55</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The methods that can be used for measurements. I don&#39;t think its the place of this ontology to model all the differences and assumptions between methods. 
+Synonyms: GPP</rdfs:comment>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
+        <definition>The sum of gross carbon fixation by autotrophic carbon-fixing tissues per unit ground or water area and time.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_59b6b12a_c40c_4b55_865e_193041110d55 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_59b6b12a_c40c_4b55_865e_193041110d55">
+        <rdfs:label>Method</rdfs:label>
+        <definition>A regular and systematic way of accomplishing something, characteristic of a particular discipline or field of knowledge.</definition>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <rdfs:comment>The methods that can be used for measurements. I don&apos;t think its the place of this ontology to model all the differences and assumptions between methods. 
 Reasons:
 1. That would get very complicated and is probably out of scope.
 2. we should assume some level of knowledge of the user. People using pprod data should know enough to evaluate basic diifferences between methods. eg, an ecologist ought to know that &quot;allometrics&quot; are an average for a species or population, not a community. or an oceanographer ought to know the difference between light-dark O2 and light-dark C14 inclubations. 
 
-So if you want &quot;community NPP&quot;, and you see the method used was allometric -- you&#39;d know you had to understand the community composition to know if prod of one or a few groups is enough.
+So if you want &quot;community NPP&quot;, and you see the method used was allometric -- you&apos;d know you had to understand the community composition to know if prod of one or a few groups is enough.
 
-if you wanted &quot;community NPP&quot;,in ocean data, you would know that O2 light-dark was OK, but that C14 update might actually be GPP</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_59b6b12a_c40c_4b55_865e_193041110d55</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Method</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:OWLClass_59b6b12a_c40c_4b55_865e_193041110d55</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A regular and systematic way of accomplishing something, characteristic of a particular discipline or field of knowledge.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_5df2ffa1_81e6_46b1_a90a_f6d3017c750e</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Peak_Biomass_Harvest_Method</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:OWLClass_5df2ffa1_81e6_46b1_a90a_f6d3017c750e</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Peak_Biomass_Harvest_Method is an estimate of above ground NPP based on the above ground biomass harvested once, usually near the end of the growing season, at or just after the time of peak biomass</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:OWLClass_5df2ffa1_81e6_46b1_a90a_f6d3017c750e</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Fahey and Knapp, 2007, p33</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":description"/>
-        <AbbreviatedIRI>:OWLClass_5df2ffa1_81e6_46b1_a90a_f6d3017c750e</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The &quot;Peak Standing Biomass Harvest&quot; method is recommended for grasslands that meet the following criteria:
-1) there is little carryover of living biomass from previous years due to distinct dormant season or fire during the dormant season or the previous year&#39;s biomass can be easily recognized and separated from the current year&#39;s biomass (living and dead)
+if you wanted &quot;community NPP&quot;,in ocean data, you would know that O2 light-dark was OK, but that C14 update might actually be GPP</rdfs:comment>
+        
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_5df2ffa1_81e6_46b1_a90a_f6d3017c750e -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_5df2ffa1_81e6_46b1_a90a_f6d3017c750e">
+        <rdfs:label>Peak_Biomass_Harvest_Method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#FieldMethod"/>
+        <definition>Peak_Biomass_Harvest_Method is an estimate of above ground NPP based on the above ground biomass harvested once, usually near the end of the growing season, at or just after the time of peak biomass</definition>
+        <descriptionSource>Fahey and Knapp, 2007, p33</descriptionSource>
+        <description>The &quot;Peak Standing Biomass Harvest&quot; method is recommended for grasslands that meet the following criteria:
+1) there is little carryover of living biomass from previous years due to distinct dormant season or fire during the dormant season or the previous year&apos;s biomass can be easily recognized and separated from the current year&apos;s biomass (living and dead)
 2) the growing season is sufficiently short or plant material is of such low quality that decomposition of biomass produced  can be ignored 
-3) consumption of plants by herbivores is minimal (i.e., large grazers are absent and small vertebrates and invertebrates can be ignored).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":descriptionSource"/>
-        <AbbreviatedIRI>:OWLClass_5df2ffa1_81e6_46b1_a90a_f6d3017c750e</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Fahey and Knapp, 2007, p33</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:OWLClass_5f512300_5a54_48bc_ba7a_2e6e6fad6928</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">add these synonyms (near? exact?):  also known as eddy correlation and eddy flux</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_5f512300_5a54_48bc_ba7a_2e6e6fad6928</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Eddy_Covariance_Method</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:OWLClass_5f512300_5a54_48bc_ba7a_2e6e6fad6928</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The eddy covariance method is an atmospheric measurement technique to measure and calculate vertical turbulent fluxes within atmospheric boundary layers, and analyzes high-frequency wind and scalar atmospheric data series, to yield exchange rates (fluxes) of trace gasses.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":description"/>
-        <AbbreviatedIRI>:OWLClass_5f512300_5a54_48bc_ba7a_2e6e6fad6928</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">It is frequently used to estimate momentum, heat, water vapor, carbon dioxide and methane fluxes. The technique is mathematically complex, and requires significant care in setting up and processing data. To date, there is no uniform terminology or a single methodology for the Eddy Covariance technique.
+3) consumption of plants by herbivores is minimal (i.e., large grazers are absent and small vertebrates and invertebrates can be ignored).</description>
+        <definitionSource>Fahey and Knapp, 2007, p33</definitionSource>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_5f512300_5a54_48bc_ba7a_2e6e6fad6928 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_5f512300_5a54_48bc_ba7a_2e6e6fad6928">
+        <rdfs:label>Eddy_Covariance_Method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#FieldMethod"/>
+        <rdfs:comment>add these synonyms (near? exact?):  also known as eddy correlation and eddy flux</rdfs:comment>
+        <definition>The eddy covariance method is an atmospheric measurement technique to measure and calculate vertical turbulent fluxes within atmospheric boundary layers, and analyzes high-frequency wind and scalar atmospheric data series, to yield exchange rates (fluxes) of trace gasses.</definition>
+        <description>It is frequently used to estimate momentum, heat, water vapor, carbon dioxide and methane fluxes. The technique is mathematically complex, and requires significant care in setting up and processing data. To date, there is no uniform terminology or a single methodology for the Eddy Covariance technique.
 
 The technique has additionally proven applicable under water to the benthic zone for measuring oxygen fluxes between seafloor and overlying water.[6] In these environments, the technique is generally known as the eddy correlation technique, or just eddy correlation. 
-For CO2.... tbd</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":descriptionSource"/>
-        <AbbreviatedIRI>:OWLClass_5f512300_5a54_48bc_ba7a_2e6e6fad6928</AbbreviatedIRI>
-        <IRI>http://en.wikipedia.org/wiki/Eddy_covariance</IRI>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_63b9a880_87cd_475e_b516_a3f9f05be67c</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Total_Living_Carbon_Pool</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:OWLClass_63b9a880_87cd_475e_b516_a3f9f05be67c</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The mass of carbon contained within all living organisms or a designated group of living organisms in a designated area.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:OWLClass_63b9a880_87cd_475e_b516_a3f9f05be67c</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_67517a5b_588b_4712_a428_0b0102aad2ee</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Heterotrophic_Respiration_Carbon_Flux</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:OWLClass_67517a5b_588b_4712_a428_0b0102aad2ee</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The respiration rate of heterotrophic organisms (animals and microbes) summed per unit ground or water area and time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:OWLClass_67517a5b_588b_4712_a428_0b0102aad2ee</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_76b459c6_1fa9_4274_9ba8_c089405d82f9</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Leaf_Carbon_Pool</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:OWLClass_76b459c6_1fa9_4274_9ba8_c089405d82f9</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The mass of carbon contained within flattened photosynthetic structures emerging laterally from a main axis or stem and possessing true vascular tissue.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:OWLClass_76b459c6_1fa9_4274_9ba8_c089405d82f9</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_871a1c9f_9e5b_40cd_bf33_b73a3b8f378a</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Carbon14_Uptake_Method</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":description"/>
-        <AbbreviatedIRI>:OWLClass_871a1c9f_9e5b_40cd_bf33_b73a3b8f378a</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A C14 uptake method is typically used in aquatic environments, for microscopic autotrophs (phytoplankton). C14 is a radioactive tracer added as bicarbonate, and its concentration determined in the plankton after removed by filtration. Measurement scales tend to be small (hours and liters) relative to the scales of other field methods. Photosynthetic and heterotrophic activity are tightly coupled in planktonic systems (Fahey and Knapp, 2007). If the incubation is short enough, the result will be GPP (gross), because presumably, no labeled c14 was recycled (or respired) by the cells. 
+For CO2.... tbd</description>
+        <descriptionSource rdf:resource="http://en.wikipedia.org/wiki/Eddy_covariance"/>
+        <definitionSource rdf:resource="http://en.wikipedia.org/wiki/Eddy_covariance"/>
+    </owl:Class>
+    
 
-Sometimes researchers conduct &quot;light-dark bottle&quot;, but the dark bottle tells you something different than in o2 light-dark. It gives you dark CO2 uptake, so subtract this from light CO2 uptake if you want autotrophic GPP.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":descriptionSource"/>
-        <AbbreviatedIRI>:OWLClass_871a1c9f_9e5b_40cd_bf33_b73a3b8f378a</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">O&#39;Brien, pers comm 2015-02-15
-Fahey and Knapp, 2007</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_890d1d72_22ab_4798_9fbc_ffbcbeceb204</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Benthic_Algae_Carbon_Pool</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:OWLClass_890d1d72_22ab_4798_9fbc_ffbcbeceb204</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The mass of carbon present in algae on the seafloor.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:OWLClass_890d1d72_22ab_4798_9fbc_ffbcbeceb204</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_8a465c8f_561e_43cd_8aea_cd32c4903b4e</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Net_Ecosystem_Exchange_Carbon_Flux</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:OWLClass_8a465c8f_561e_43cd_8aea_cd32c4903b4e</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The magnitude of carbon sources and sinks is defined as the vertical exchange of CO2&#160;between the surface (land or ocean) and the atmosphere.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:OWLClass_8a465c8f_561e_43cd_8aea_cd32c4903b4e</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Hayes, D.J. et al. Reconciling estimates of the contemporary North American carbon balance among terrestrial biosphere models, atmospheric inversions, and a new approach for estimating net ecosystem exchange from inventory-based data. Global Change Biology. V 8, i 4. pp. 1282-1299. April 2012. DOI:&#160;10.1111/j.1365-2486.2011.02627.x</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_903806ae_a331_4bea_8b44_9ca38b64ef75</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Grass_Carbon_Pool</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:OWLClass_903806ae_a331_4bea_8b44_9ca38b64ef75</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The mass of carbon contained within monocotyledonous plants of the family Poaceae, having jointed stems sheathed by long, narrow leaves, flowers in spikes, and seedlike fruits.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <AbbreviatedIRI>:OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">http://en.wikipedia.org/wiki/Primary_production
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_63b9a880_87cd_475e_b516_a3f9f05be67c -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_63b9a880_87cd_475e_b516_a3f9f05be67c">
+        <rdfs:label>Total_Living_Carbon_Pool</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
+        <definition>The mass of carbon contained within all living organisms or a designated group of living organisms in a designated area.</definition>
+        <definitionSource>Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</definitionSource>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_67517a5b_588b_4712_a428_0b0102aad2ee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_67517a5b_588b_4712_a428_0b0102aad2ee">
+        <rdfs:label>Heterotrophic_Respiration_Carbon_Flux</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_d4cc57a9_1c01_4403_b016_7c6132b1ed48"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_e59004ab_0324_43e5_9a7d_7aee15f2c479"/>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definition>The respiration rate of heterotrophic organisms (animals and microbes) summed per unit ground or water area and time.</definition>
+        <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_76b459c6_1fa9_4274_9ba8_c089405d82f9 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_76b459c6_1fa9_4274_9ba8_c089405d82f9">
+        <rdfs:label>Leaf_Carbon_Pool</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definitionSource>Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</definitionSource>
+        <definition>The mass of carbon contained within flattened photosynthetic structures emerging laterally from a main axis or stem and possessing true vascular tissue.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_871a1c9f_9e5b_40cd_bf33_b73a3b8f378a -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_871a1c9f_9e5b_40cd_bf33_b73a3b8f378a">
+        <rdfs:label>Carbon14_Uptake_Method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#FieldMethod"/>
+        <description>A C14 uptake method is typically used in aquatic environments, for microscopic autotrophs (phytoplankton). C14 is a radioactive tracer added as bicarbonate, and its concentration determined in the plankton after removed by filtration. Measurement scales tend to be small (hours and liters) relative to the scales of other field methods. Photosynthetic and heterotrophic activity are tightly coupled in planktonic systems (Fahey and Knapp, 2007). If the incubation is short enough, the result will be GPP (gross), because presumably, no labeled c14 was recycled (or respired) by the cells. 
+
+Sometimes researchers conduct &quot;light-dark bottle&quot;, but the dark bottle tells you something different than in o2 light-dark. It gives you dark CO2 uptake, so subtract this from light CO2 uptake if you want autotrophic GPP.</description>
+        <descriptionSource>O&apos;Brien, pers comm 2015-02-15
+Fahey and Knapp, 2007</descriptionSource>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_890d1d72_22ab_4798_9fbc_ffbcbeceb204 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_890d1d72_22ab_4798_9fbc_ffbcbeceb204">
+        <rdfs:label>Benthic_Algae_Carbon_Pool</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
+        <definitionSource>Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</definitionSource>
+        <definition>The mass of carbon present in algae on the seafloor.</definition>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_8a465c8f_561e_43cd_8aea_cd32c4903b4e -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_8a465c8f_561e_43cd_8aea_cd32c4903b4e">
+        <rdfs:label>Net_Ecosystem_Exchange_Carbon_Flux</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_186f7e04_ce52_4ffd_8967_ee5f637751ef"/>
+        <definitionSource>Hayes, D.J. et al. Reconciling estimates of the contemporary North American carbon balance among terrestrial biosphere models, atmospheric inversions, and a new approach for estimating net ecosystem exchange from inventory-based data. Global Change Biology. V 8, i 4. pp. 1282-1299. April 2012. DOI: 10.1111/j.1365-2486.2011.02627.x</definitionSource>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definition>The magnitude of carbon sources and sinks is defined as the vertical exchange of CO2 between the surface (land or ocean) and the atmosphere.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_903806ae_a331_4bea_8b44_9ca38b64ef75 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_903806ae_a331_4bea_8b44_9ca38b64ef75">
+        <rdfs:label>Grass_Carbon_Pool</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
+        <definition>The mass of carbon contained within monocotyledonous plants of the family Poaceae, having jointed stems sheathed by long, narrow leaves, flowers in spikes, and seedlike fruits.</definition>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f">
+        <rdfs:label>Primary_Production_Carbon_Flux</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_186f7e04_ce52_4ffd_8967_ee5f637751ef"/>
+        <definition>The process of carbon fixation by autotrophic carbon-fixing tissues per unit ground or water area and time.</definition>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definitionSource>Inferred from: Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
+        <rdfs:comment>http://en.wikipedia.org/wiki/Primary_production
 Gross primary production (GPP) is the amount of chemical energy as biomass that primary producers create in a given length of time. (GPP is sometimes confused with Gross Primary productivity, which is the rate at which photosynthesis or chemosynthesis occurs.)
 
-For most purposes (including this one) the two can be the same. It&#39;s most practical to measure production over a given time interval and area, and that amounts to an areal rate.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Primary_Production_Carbon_Flux</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The process of carbon fixation by autotrophic carbon-fixing tissues per unit ground or water area and time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Inferred from: Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_98ad8beb_35ce_4acf_a7ee_2aba473b961d</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Dissolved_Organic_Carbon_Flux</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:OWLClass_98ad8beb_35ce_4acf_a7ee_2aba473b961d</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The rate at which a mass of dissolved organic carbon moves to or from a particular component of an ecosystem per unit time. Dissolved organic cabon is defined as the fraction of organic matter which is neither excluded nor adsorbed by the filter used to remove particulate organic carbon, and which is not volatile enough to be lost by the acidification and purging technique used to remove inorganic carbon.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:OWLClass_98ad8beb_35ce_4acf_a7ee_2aba473b961d</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Wangersky, P.J. Dissolved organic carbon methods: a critical review. Marine Chemistry. V 41 I 1-3. pp. 61-74. 1993.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_a7850169_750d_4930_a8c3_13c295a08e76</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Oxygen_Evolution_LightDark_Method</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:OWLClass_a7850169_750d_4930_a8c3_13c295a08e76</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The stoichiometry of phtotsynthesis is well known. So you can measure O2 evolution, and back calculate to CO2 use.
+For most purposes (including this one) the two can be the same. It&apos;s most practical to measure production over a given time interval and area, and that amounts to an areal rate.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_98ad8beb_35ce_4acf_a7ee_2aba473b961d -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_98ad8beb_35ce_4acf_a7ee_2aba473b961d">
+        <rdfs:label>Dissolved_Organic_Carbon_Flux</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_186f7e04_ce52_4ffd_8967_ee5f637751ef"/>
+        <definition>The rate at which a mass of dissolved organic carbon moves to or from a particular component of an ecosystem per unit time. Dissolved organic cabon is defined as the fraction of organic matter which is neither excluded nor adsorbed by the filter used to remove particulate organic carbon, and which is not volatile enough to be lost by the acidification and purging technique used to remove inorganic carbon.</definition>
+        <definitionSource>Wangersky, P.J. Dissolved organic carbon methods: a critical review. Marine Chemistry. V 41 I 1-3. pp. 61-74. 1993.</definitionSource>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_a7850169_750d_4930_a8c3_13c295a08e76 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_a7850169_750d_4930_a8c3_13c295a08e76">
+        <rdfs:label>Oxygen_Evolution_LightDark_Method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#FieldMethod"/>
+        <definition>The stoichiometry of phtotsynthesis is well known. So you can measure O2 evolution, and back calculate to CO2 use.
 usually, there is a &quot;iight bottle&quot; and &quot;dark bottle&quot;. O2 evolution in the Light bottle is the net result, or sum, of all processes (GPP, Autotrophic resp, and probably some heterotrophic respiration too, because heterotrophs are hard to exclude).  So Light bottle = NPP. 
 
 Dark bottle is respiration, probably total, eg, autotrophs + heterotrophs.
-So light + dark = GPP (or about as close as you can get with a field measurement, and assume that heterotrophs aren&#39;t respiring much.)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_aba733a3_3622_46aa_8b7f_1a4ed7cb666e</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Allometric_Method</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:OWLClass_aba733a3_3622_46aa_8b7f_1a4ed7cb666e</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A method determining the relationship between a physical or physiological property of an organism relative to the size of the organism.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:OWLClass_aba733a3_3622_46aa_8b7f_1a4ed7cb666e</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Begon, M., Harper, J.L., Townsend, C.R. Ecology: Individuals, Populations, and Communities. Third Edition. Blackwell Science. 1996.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:OWLClass_aba733a3_3622_46aa_8b7f_1a4ed7cb666e</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">O&#39;Brien, pers comm, 2014-10-15</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":description"/>
-        <AbbreviatedIRI>:OWLClass_aba733a3_3622_46aa_8b7f_1a4ed7cb666e</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">an allometric method is usually accomplished with a combination of measurements that are tailored to the organism, e.g, size, growth rate, carbon content, plus some loss terms. SBC&#39;s dataset 21 has a good example of an allometric method for kelp.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_ca6f170c_c1a8_49f8_b030_4384d006f359</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Wood_Carbon_Pool</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:OWLClass_ca6f170c_c1a8_49f8_b030_4384d006f359</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The mass of carbon contained in the tough, fibrous substance lying beneath the bark of trees and shrubs, consisting of the vascular tissue known as xylem and composed chiefly of cellulose and lignin.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_cd5f0ef4_2990_4d4d_914a_30b6f8985b5b</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Leaf_Litter_Carbon_Pool</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:OWLClass_cd5f0ef4_2990_4d4d_914a_30b6f8985b5b</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The mass of carbon contained in the partly decomposed remains of plants on the surface and in the upper layers of the soil.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:OWLClass_cd5f0ef4_2990_4d4d_914a_30b6f8985b5b</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_d4cc57a9_1c01_4403_b016_7c6132b1ed48</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Respiration_Carbon_Flux</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:OWLClass_d4cc57a9_1c01_4403_b016_7c6132b1ed48</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">CO2 produced by organisms and emitted to the environment per unit ground or water area and time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:OWLClass_d4cc57a9_1c01_4403_b016_7c6132b1ed48</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_e23ed688_e186_4b59_aabb_d3f398aeb820</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Fire_Carbon_Flux</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:OWLClass_e23ed688_e186_4b59_aabb_d3f398aeb820</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The mass of carbon released from burning vegetation per unit time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:OWLClass_e23ed688_e186_4b59_aabb_d3f398aeb820</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Johnson, E.A. and Miyanishi, K. Forest Fires: Behavior and Ecological Effects. Academic Press. 2001</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":description"/>
-        <AbbreviatedIRI>:OWLClass_e23ed688_e186_4b59_aabb_d3f398aeb820</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Fire Carbon Flux is a measure of carbon released into the atmosphere due to fire (MPS, 2015)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:OWLClass_e59004ab_0324_43e5_9a7d_7aee15f2c479</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Autotrophic_Respiration_Carbon_Flux</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:OWLClass_e59004ab_0324_43e5_9a7d_7aee15f2c479</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">The sum of respiration (CO2&#160;production) by all living parts of primary producers per unit ground or water area and time.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:OWLClass_e59004ab_0324_43e5_9a7d_7aee15f2c479</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="webprotege:R7rpAQzzBYGT0EFKKvWgnho"/>
-        <AbbreviatedIRI>:definition</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Schildhauer, O&#39;Brien</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="webprotege:RDnGK5ztaWzUjD2heWfxaau"/>
-        <AbbreviatedIRI>:definition</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Definition</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:definition</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">definition</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:definition</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">&quot;definition&quot; is an OWL &quot;Annotation property&quot; that contains a concise, often abstract, but ideally precise natural language &quot;description&quot; of the concept to which it is attached (or annotated).  
+So light + dark = GPP (or about as close as you can get with a field measurement, and assume that heterotrophs aren&apos;t respiring much.)</definition>
+    </owl:Class>
+    
 
-In scientific contexts, the &quot;definition&quot; Annotation property is preferred over a &quot;description&quot; Annotation property, because &quot;description&quot; is typically a more verbose, less prescriptive natural language explication of the concept to which it is attached (or applied, or annotated).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:definition</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Schildhauer, pers comm, Feb 9, 2015,</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="webprotege:R7rpAQzzBYGT0EFKKvWgnho"/>
-        <AbbreviatedIRI>:definitionSource</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Schildhauer</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="webprotege:RDnGK5ztaWzUjD2heWfxaau"/>
-        <AbbreviatedIRI>:definitionSource</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Definition Source</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:definitionSource</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdfs;Literal">definition_Source</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:definitionSource</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">&quot;definitionSource&quot; is the Annotation property that can be used to provide the reference source or Authority for the &quot;definition&quot; (of interest), as an ISBN,DOI, bibliographic citation, etc. to the source of the &quot;definition&quot; contained in an associated &quot;definition&quot; Annotation property that is attached (annotated) to the concept.  
 
-Ideally a defintion Source is structured in a well-known and accepted format, that provides an unambiguous pointer to a source reference, but often even some accurate indication of a reference source is better than nothing at all.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:definitionSource</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Schildhauer, pers comm, 05Feb2015</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="webprotege:R7rpAQzzBYGT0EFKKvWgnho"/>
-        <AbbreviatedIRI>:description</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Schildhauer</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="webprotege:RDnGK5ztaWzUjD2heWfxaau"/>
-        <AbbreviatedIRI>:description</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Description</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:description</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">description</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:description</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdfs;Literal">&quot;description&quot; is an OWL &quot;Annotation property&quot; that contains a a more verbose, less prescriptive natural language explication of the concept to which it is attached (or applied, or annotated) in contrast to a &quot;definition&quot; Annotation property.
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_aba733a3_3622_46aa_8b7f_1a4ed7cb666e -->
 
-Use the  &quot;definition&quot; Annotation property for scientific concepts when possible, as opposed to the &quot;description&quot; Annotation property</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definitionSource"/>
-        <AbbreviatedIRI>:description</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Schildhauer, pers comm, 05Feb2014</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="webprotege:R7rpAQzzBYGT0EFKKvWgnho"/>
-        <AbbreviatedIRI>:descriptionSource</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Schildauer</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="webprotege:RDnGK5ztaWzUjD2heWfxaau"/>
-        <AbbreviatedIRI>:descriptionSource</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Description Source</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:descriptionSource</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">description_Source</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":definition"/>
-        <AbbreviatedIRI>:descriptionSource</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">&quot;description_Source&quot; is the Annotation property that can be used to provide the reference source or Authority, as an ISBN,DOI, bibliographic citation, etc. to the source of the &quot;description&quot; contained in an associated &quot;description&quot; Annotation property that is attached (annotated) to some concept.  
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_aba733a3_3622_46aa_8b7f_1a4ed7cb666e">
+        <rdfs:label>Allometric_Method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#FieldMethod"/>
+        <description>an allometric method is usually accomplished with a combination of measurements that are tailored to the organism, e.g, size, growth rate, carbon content, plus some loss terms. SBC&apos;s dataset 21 has a good example of an allometric method for kelp.</description>
+        <definitionSource>Begon, M., Harper, J.L., Townsend, C.R. Ecology: Individuals, Populations, and Communities. Third Edition. Blackwell Science. 1996.</definitionSource>
+        <definition>A method determining the relationship between a physical or physiological property of an organism relative to the size of the organism.</definition>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definitionSource>O&apos;Brien, pers comm, 2014-10-15</definitionSource>
+    </owl:Class>
+    
 
-Ideally a descriptionSource is structured in a well-known and accepted format, that provides an unambiguous pointer to a source reference, but often even some accurate indication of a reference source is better than nothing at all.
 
-As description Annotation properties are often not as rigorous, and hence looser and more verbose than definition Annotation properties, these fields may be more readily used for informal pedagogical advice and direction rather than being proscriptive</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI=":descriptionSource"/>
-        <AbbreviatedIRI>:descriptionSource</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Schildhauer, pers comm, 05Feb2015</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>:hasNearSynonym</AbbreviatedIRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">has_Near_Synonym</Literal>
-    </AnnotationAssertion>
-</Ontology>
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_ca6f170c_c1a8_49f8_b030_4384d006f359 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_ca6f170c_c1a8_49f8_b030_4384d006f359">
+        <rdfs:label>Wood_Carbon_Pool</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
+        <definition>The mass of carbon contained in the tough, fibrous substance lying beneath the bark of trees and shrubs, consisting of the vascular tissue known as xylem and composed chiefly of cellulose and lignin.</definition>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_cd5f0ef4_2990_4d4d_914a_30b6f8985b5b -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_cd5f0ef4_2990_4d4d_914a_30b6f8985b5b">
+        <rdfs:label>Leaf_Litter_Carbon_Pool</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definitionSource>Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</definitionSource>
+        <definition>The mass of carbon contained in the partly decomposed remains of plants on the surface and in the upper layers of the soil.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_d4cc57a9_1c01_4403_b016_7c6132b1ed48 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_d4cc57a9_1c01_4403_b016_7c6132b1ed48">
+        <rdfs:label>Respiration_Carbon_Flux</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_186f7e04_ce52_4ffd_8967_ee5f637751ef"/>
+        <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definition>CO2 produced by organisms and emitted to the environment per unit ground or water area and time.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_e23ed688_e186_4b59_aabb_d3f398aeb820 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_e23ed688_e186_4b59_aabb_d3f398aeb820">
+        <rdfs:label>Fire_Carbon_Flux</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_186f7e04_ce52_4ffd_8967_ee5f637751ef"/>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <description>Fire Carbon Flux is a measure of carbon released into the atmosphere due to fire (MPS, 2015)</description>
+        <definitionSource>Johnson, E.A. and Miyanishi, K. Forest Fires: Behavior and Ecological Effects. Academic Press. 2001</definitionSource>
+        <definition>The mass of carbon released from burning vegetation per unit time.</definition>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_e59004ab_0324_43e5_9a7d_7aee15f2c479 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_e59004ab_0324_43e5_9a7d_7aee15f2c479">
+        <rdfs:label>Autotrophic_Respiration_Carbon_Flux</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_d4cc57a9_1c01_4403_b016_7c6132b1ed48"/>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definition>The sum of respiration (CO2 production) by all living parts of primary producers per unit ground or water area and time.</definition>
+        <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#SIB3-JPL_MstmipVersion1ModeledMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#SIB3-JPL_MstmipVersion1ModeledMethod">
+        <rdfs:label>SIB3-JPL_MstmipVersion1_Modeled_Method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#SIBCASA_MstmipVersion1ModeledMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#SIBCASA_MstmipVersion1ModeledMethod">
+        <rdfs:label>SIBCASA_MstmipVersion1_Modeled_Method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#TEM6_MstmipVersion1ModeledMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#TEM6_MstmipVersion1ModeledMethod">
+        <rdfs:label>TEM6_MstmipVersion1_Modeled_Method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#TRIPLEX-GHG_MstmipVersion1ModeledMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#TRIPLEX-GHG_MstmipVersion1ModeledMethod">
+        <rdfs:label>TRIPLEX-GHG_MstmipVersion1_Modeled_Method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#VEGAS2.1_MstmipVersion1ModeledMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#VEGAS2.1_MstmipVersion1ModeledMethod">
+        <rdfs:label>VEGAS2.1_MstmipVersion1_Modeled_Method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#VISIT_MstmipVersion1ModeledMethod -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#VISIT_MstmipVersion1ModeledMethod">
+        <rdfs:label>VISIT_MstmipVersion1_Modeled_Method</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#32_tons -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#32_tons"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_8a465c8f_561e_43cd_8aea_cd32c4903b4e"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_98ad8beb_35ce_4acf_a7ee_2aba473b961d"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_d4cc57a9_1c01_4403_b016_7c6132b1ed48"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#OWLClass_e23ed688_e186_4b59_aabb_d3f398aeb820"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#BIOME-BGC_MstmipVersion1ModeledMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#CLASS-CTEMNplus_MstmipVersion1ModeledMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#CLM4VIC_MstmipVersion1ModeledMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#CLM_MstmipVersion1ModeledMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#DLEM_MstmipVersion1ModeledMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#GTEC_MstmipVersion1ModeledMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#ISAM_MstmipVersion1ModeledMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#LPJ-wsl_MstmipVersion1ModeledMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#ORCHIDEE-LSCE_MstmipVersion1ModeledMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#SIB3-JPL_MstmipVersion1ModeledMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#SIBCASA_MstmipVersion1ModeledMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#TEM6_MstmipVersion1ModeledMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#TRIPLEX-GHG_MstmipVersion1ModeledMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#VEGAS2.1_MstmipVersion1ModeledMethod"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/2014/10/D1_CarbonFlux#VISIT_MstmipVersion1ModeledMethod"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 3.0.0.1469) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
 
