@@ -1,0 +1,33 @@
+---
+output: html_document
+---
+###DataONE SEM Group Ontology Annotation Test Procedure
+ 
+####Purpose
+
+Semantic search capabilities need to show a quantifiable improvement in the effectiveness of dataset discovery and understandability relative to the current system of string matching. To this end, the group has selected the topic of “Net Primary Production (NPP)” as the initial semantic concept and The LTER member nodes as the initial database. Improvement to the search function will be assessed in two stages: string search vs. manual annotation search and manual annotation search vs. automated annotation search. Precision and recall (see below for definitions) will be used as the main indicators of data discoverability; others may be pursued later. This document outlines the evaluation metrics that will be applied to the manual annotation of datasets.
+
+>Definition of Recall: A/(A+B), where A = # of relevant records retrieved and B = # of relevant records NOT retrieved
+
+>Definition of Precision: A/(A+C), where A = # of relevant records retrieved and C = # of irrelevant records retrieved
+ 
+####Manual Annotation Process
+
+LTER datasets are first compiled into a stable corpus and then compared against likely scientific searches or use cases of interest. Each dataset ID, link and title is recorded before being compared to a set of test queries. For each query, a dataset is given a relatedness score of 0 - 4 and a justification for the score. 
+
+#####Process as Applied to Current Test Corpus
+
+Test corpus C is a list of 23 datasets from the SBC LTER site. Each of the datasets from the group was evaluated against the natural language queries found [here](https://github.com/DataONEorg/sem-prov-design/blob/master/docs/use-cases/semantics/use-case-52-Semantic-Search.rst).
+Evaluation criteria are below. After the preliminary tests are run for this limited corpus and methods are finalized, more LTER sites will be added to form a more representative sample of potential datasets.
+
+Relatedness Score | Description 
+----------------- | ------------- 
+1                 | Exact match
+2                 | Near match, not immediately obvious
+3                 | Related, possible to calculate or infer a match
+4                 | Loosely related to domain
+5                 | No relation
+
+
+
+
