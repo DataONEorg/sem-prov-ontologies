@@ -1,4 +1,5 @@
-Created On: 2015-04-09                                                   	Created By: Sophie Hou
+Created On: 2015-04-09                                                   	
+Created By: Sophie Hou
 
 #####Change Revisions:
 Last Modified Date | Last Modified Person|Changes
@@ -25,9 +26,27 @@ DataONE SEM group is currently developing an ontology to model the knowledge in 
 >b) The number for each types of datasets (relevant and irrelevant) cannot be too “small”, so that the query result becomes trivial.
 
 >c) It is preferable that the test corpus contains real datasets from the current DataONE database and not “mark-up” or made-up datasets.
-Based on the requirements for the baseline test corpus, define the datasets that can be used for a specific test corpus.
+
+2) Based on the requirements for the baseline test corpus, define the datasets that can be used for a specific test corpus.
 
 ###Results
 As a result of considering the requirements for the baseline corpus, the DataONE SEM group defined different test corpora summarized in the following table.  Each successive test corpus adds an additional, specific set of datasets to the previous test corpus, so that the size of the test corpus is increased systematically.
 
 ###Test Corpus Index
+Test Corpus ID | Purpose                                                                           | Totl Number of Datasets in the Test Corpus (N) | Definitions/Description                                                                                                                                                                                   | Relevant Queries (from Use Case 52) | URL Ref | SOLR Query Ref (optional)
+-------------- | --------------------------------------------------------------------------------  | ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- | ------- | -------------------------
+A              | Testing of annotation algorithms to ensure correct positives (requested by Xixi). | 45                                             | - Selected datasets that were contributed by three Long Term Ecological Research (LTER): Andrews Forest (AND), Konza Prairie (KNZ), and Santa Barbara Coastal (SBC) in DataONE as of YYYY-MM-DD.          |                                     |         |
+               |                                                                                   |                                                | - These selected datasets are known to be relevant to carbon cycling and have been manually reviewed and evaluated.                                                                                       |                                     |         |           
+B              | Expansion of Test Corpus A                                                        | 201                                            | - This test corpus is constructed just like Test Corpus A, but with selected datasets from more LTER sites.                                                                                               |                                     |         |
+               |                                                                                   |                                                | - Selected Datasets were contributed by a total of 14 site (only the acronyms are provides as follows): HFR, KBS, GCE, BNZ, SEV, VCR, CDR, CAP CCE, CWT, FCE, MCR, NTL, PAL in DataONE as of YYYY-MM-DD.  |                                     |         |
+               |                                                                                   |                                                | - These selected datasets are also known to be relevant to carbon cycling and have been manually reviewed and evaluated.                                                                                  |                                     |         |               
+C              | Query code development                                                            | 156                                            | - **All** the datasets that were contributed by Long Term Ecological Research (LTER) Santa Barbara Coastal (SBC) in DataONE as of YYYY-MM-DD.                                                             |                                     |         |          
+               |                                                                                   |                                                | - LTER SBC datasets are selected because DataONE SEM group leader has worked intimately with and in depth knowledge of these datasets.  These datasets will be annotated manually.                        |                                     |         |          
+Ca             |                                                                                   |                                                | - Corpus C plus datasets derived by EcoTrends project in DataONE as of YYYY-MM-DD                                                                                                                         |                                     |         |   
+D              | Query code vetting                                                                | est 500                                        | - **All** the datasets that were contributed by three Long Term Ecological Research (LTER) sites: Andrews Forest (AND), Konza Prairie (KNZ), and Santa Barbara Coastal (SBC) in DataONE as of YYYY-MM-DD. |                                     |         |                                
+               |                                                                                   |                                                | - These datasets will be the extension of Test Corpus C in order to help determine if there are further issues that need to be resolved with the query code.                                              |                                     |         |                                                             
+E              | First run of query code, precision and recall analysis                            | est 4000                                       | - All datasets contributed by ~13 LTER sites (see corpus B)                                                                                                                                               |                                     |         |                                                                            
+
+###Footnotes
+1.     Definition of Recall: can be found under the “SEM-DISCO Test Procedure” (https://docs.google.com/document/d/1EmR58pgzoNirsHxdOjVGLvjBHkklpG0yC1Ttmy2K7Y0/edit?usp=sharing).
+2.     Definition of Precision: can be found under the “SEM-DISCO Test Procedure” (https://docs.google.com/document/d/1EmR58pgzoNirsHxdOjVGLvjBHkklpG0yC1Ttmy2K7Y0/edit?usp=sharing).
