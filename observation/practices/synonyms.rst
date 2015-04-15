@@ -2,13 +2,17 @@ Created On: 2015-04-08                                                   	Create
 
 Change Revisions:
 -----------------
-===== ===== =====
-Last Modified Date        Last Modified Person            Changes
-------------------        --------------------            -------
-2015-04-08                Sophie Hou                      Initial creation of the document
-2015-04-13                Sophie Hou                      Updated the document based on Margaret’s feedback posted on 2015-04-10.
-2015-04-14                Margaret O’Brien and Sophie Hou Editorial updates.
-===== ===== =====
+
++------------------+--------------------+------------------------------------------------------------------------+
+|Last Modified Date|Last Modified Person|Changes                                                                 |
++==================+====================+========================================================================+
+|2015-04-08        |Sophie Hou          |Initial creation of the document                                        |
++------------------+--------------------+------------------------------------------------------------------------+
+|2015-04-13        |Sophie Hou          |Updated the document based on Margaret’s feedback posted on 2015-04-10. | 
++------------------+--------------------+------------------------------------------------------------------------+
+|2015-04-14        |Margaret O’Brien    |Editorial updates.                                                      |                  
+|                  |Sophie Hou          |                                                                        |
++------------------+--------------------+------------------------------------------------------------------------+
 
 DataONE SEM Group - Ontological Synonyms 
 ========================================
