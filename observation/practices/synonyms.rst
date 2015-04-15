@@ -2,10 +2,13 @@ Created On: 2015-04-08                                                   	Create
 
 Change Revisions:
 -----------------
+===== ===== =====
 Last Modified Date        Last Modified Person            Changes
+------------------        --------------------            -------
 2015-04-08                Sophie Hou                      Initial creation of the document
 2015-04-13                Sophie Hou                      Updated the document based on Margaret’s feedback posted on 2015-04-10.
 2015-04-14                Margaret O’Brien and Sophie Hou Editorial updates.
+===== ===== =====
 
 DataONE SEM Group - Ontological Synonyms 
 ========================================
@@ -17,6 +20,7 @@ This document outlines the objectives and describes the procedures for examining
 Background
 ----------
 DataONE is developing an ontology to model the knowledge related to primary production research in order to demonstrate improvement to understandability and discoverability of DataONE datasets through measuring recall (see footnote 1) and precision (see footnote 2).  In particular, enhancing the coverage of knowledge with synonymy relationships is expected to improve the query recall.   
+
 Identification of synonymous terms needs to be conducted as the first step.  While many sources of terms are available, the first group of terms examined is comprised of  user-input to search forms in the LTER data catalog from 2007 to 2015.  These terms were actual user queries, and, reflected what the users were interested in searching.  The synonym rules in this document were developed with the  LTER Search Form input terms, and we anticipate that the overall approach could be applied to terms from other sources as well.
  
 Objectives
