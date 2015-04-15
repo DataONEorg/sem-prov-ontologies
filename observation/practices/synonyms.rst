@@ -8,7 +8,7 @@ Last Modified Date        Last Modified Person            Changes
 2015-04-14                Margaret O’Brien and Sophie Hou Editorial updates.
 
 DataONE SEM Group - Ontological Synonyms 
-==============
+========================================
  
 Purpose
 -------
@@ -21,30 +21,30 @@ Identification of synonymous terms needs to be conducted as the first step.  Whi
  
 Objectives
 ----------
-Determine which of these terms in the LTER Search Form could be considered as synonyms to the terms defined in the DataONE carbon cycle ontology (“candidate” terms).
-Evaluate candidate terms and add to the carbon cycle ontology either as new classes or with annotations using one of the following four relationship: hasExactSynonym, hasBroadSynonym, hasNarrowSynonym, and hasRelatedSynonym
+  - Determine which of these terms in the LTER Search Form could be considered as synonyms to the terms defined in the DataONE carbon cycle ontology (“candidate” terms).
+  - Evaluate candidate terms and add to the carbon cycle ontology either as new classes or with annotations using one of the following four relationship: hasExactSynonym, hasBroadSynonym, hasNarrowSynonym, and hasRelatedSynonym
 
 Methodology/Process
 -------------------
-Archive the source list of LTER data catalog search terms (2007 and 2015, Metacat).
-The list has been generated and checked into GitHub (https://raw.githubusercontent.com/DataONEorg/sem-prov-ontologies/master/observation/resources/lter_search_strings_2007_2015/metacatQueryAuditSimple.lis).
-There is a total of 7610 terms.  
-Split the list roughly in half for by the two graduate research student assistants to generate candidate terms for the carbon cycle ontology.
-The evaluation criteria for candidates was purposely lenient in order to highlight as many terms as possible as candidate synonyms.  The following is the summary of the evaluation criteria:
-Include:
-A term that refers to an primary producer (e.g. plant, tree, algae.
-A term that indicates a community or ecosystem (e.g. marsh, New York, Shark Slough).
-A term that is an acronym of an identifiable identity (e.g. LTER for Long Term Ecological Research).
-A term that has been already recognized as being equivalent to a term that is currently in the carbon cycle ontology (e.g. NPP and Net Primary Production).
-Disregard:
-Misspelling
-Plural form of a singular term
-Acronym whose full identity cannot be determined for certain.
-Exclude:
-Any term that is not considered to meet the “Include” or “Disregard” criteria.
-If the term is a potential to be a synonym (regardless of the type of synonymous relationship the term might have), it is labeled with “Y” in the adjacent column.
-Otherwise, the term is labeled with “N” in the adjacent column.
-Evaluate the candidates in a larger group, to provide discussion and broad scientific expertise. Entry into the ontology can be simultaneous. 
+1) Archive the source list of LTER data catalog search terms (2007 and 2015, Metacat).
+  a) The list has been generated and checked into GitHub (https://raw.githubusercontent.com/DataONEorg/sem-prov-ontologies/master/observation/resources/lter_search_strings_2007_2015/metacatQueryAuditSimple.lis).
+  b) There is a total of 7610 terms.  
+2) Split the list roughly in half for by the two graduate research student assistants to generate candidate terms for the carbon cycle ontology.
+  a) The evaluation criteria for candidates was purposely lenient in order to highlight as many terms as possible as candidate synonyms.  The following is the summary of the evaluation criteria:
+    i) Include:
+      - A term that refers to an primary producer (e.g. plant, tree, algae.
+      - A term that indicates a community or ecosystem (e.g. marsh, New York, Shark Slough).
+      - A term that is an acronym of an identifiable identity (e.g. LTER for Long Term Ecological Research).
+      - A term that has been already recognized as being equivalent to a term that is currently in the carbon cycle ontology (e.g. NPP and Net Primary Production).
+    ii) Disregard:
+      - Misspelling
+      - Plural form of a singular term
+      - Acronym whose full identity cannot be determined for certain.
+    iii) Exclude:
+      - Any term that is not considered to meet the “Include” or “Disregard” criteria.
+  b) If the term is a potential to be a synonym (regardless of the type of synonymous relationship the term might have), it is labeled with “Y” in the adjacent column.
+  c) Otherwise, the term is labeled with “N” in the adjacent column.
+3) Evaluate the candidates in a larger group, to provide discussion and broad scientific expertise. Entry into the ontology can be simultaneous. 
 
 Results
 -------
