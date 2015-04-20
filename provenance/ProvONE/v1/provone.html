@@ -1297,7 +1297,7 @@ body {
               <a title="dfn-Channel" class="internalDFN">Channel</a>
             </td>
             <td>
-              <a class="section-ref" href="#location-specification"><span>Section 3.1.3</span></a>
+              <a class="section-ref" href="#channel-specification"><span>Section 3.1.3</span></a>
             </td>
           </tr>
           <tr>
@@ -1402,7 +1402,7 @@ body {
             </td>
           </tr>
           <tr>
-            <td rowspan="20" style="text-align: center;">
+            <td rowspan="19" style="text-align: center;">
               Trace
             </td>
             <td rowspan="6" style="text-align: center;">
@@ -1451,14 +1451,8 @@ body {
             </td>
           </tr>
           <tr>
-            <td rowspan="14" style="text-align: center;">
+            <td rowspan="13" style="text-align: center;">
               Association
-            </td>
-            <td>
-              <a title="dfn-agent" class="internalDFN">atLocation</a>
-            </td>
-            <td>
-              <a class="section-ref" href="#atlocation-specification"><span>Section 3.2.6</span></a>
             </td>
           </tr>
           <tr>
@@ -1831,13 +1825,13 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     
     </section><!-- !!! End section: port-specification -->
     
-    <section id="location-specification"> 
+    <section id="channel-specification"> 
           
     <h4><span class="secno">3.1.3 </span>Channel class</h4>
     
     <div class="glossary-ref"> The
       <a href="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#Channel"
-         title="http://www.w3.org/ns/prov-o#Location">prov:Location</a>
+         title="http://www.w3.org/ns/prov-o#Location">provone:Channel</a>
       class is adopted directly from the PROV Ontology, and identifies the location of an Entity (Data,
       Visualization, or Document), enabling these items to be sent between Programs. The Location
       may be an IRI, a directory or file reference, a database row/column reference, a memory
@@ -1875,7 +1869,7 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     <pre class="codeexample">    
     1    :p1_p2DL 
     2    
-    3       a prov:Location;
+    3       a provone:Channel;
     4       dcterms:identifier "e1_e2DL"^^xsd:string;
     5    
     6    .
@@ -1884,7 +1878,7 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     <span class="name">identifier</span> (line 4). 
     </div>
     
-    </section><!-- !!! End section: location-specification -->
+    </section><!-- !!! End section: channel-specification -->
     
     <section id="controller-specification"> 
           
@@ -2265,7 +2259,7 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     <p></p><b>has range</b>
     
     <ul>
-    <li><a title="#location-specification" href="#location-specification">prov:Location</a></li>
+    <li><a title="#channel-specification" href="#channel-specification">provone:Channel</a></li>
     </ul>
     
     <div class="anexample" id="hasLocation-example">
@@ -2280,7 +2274,7 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     4    .
     5
     6    :loc1 
-    7       a prov:Location;
+    7       a provone:Channel;
     8       dcterms:identifier "pmain_loc1"^^xsd:string;
     9    .
     10 
@@ -2306,7 +2300,7 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     <p></p><b>has domain</b>
     <ul>
     <li>
-    <a title="#location-specification" href="#location-specification">prov:Location</a>
+    <a title="#channel-specification" href="#channel-specification">provone:Channel</a>
     </li>
     </ul>
     
@@ -2334,7 +2328,7 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     9    .
     10
     11   :spdl2 
-    12      a prov:Location;
+    12      a provone:Channel;
     13      dcterms:identifier "pmain_paDL2"^^xsd:string;
     14   .
     15
@@ -2716,55 +2710,6 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
           
     </section><!-- !!! End section: user-specification -->
       
-    <section id="atlocation-specification"> 
-          
-    <h4><span class="secno">3.2.6 </span>atLocation object property</h4>
-    
-    <div class="glossary-ref"><dfn id="concept-entity" title="DLToInPort" class="internalDFN">atLocation</dfn>
-    <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> Specifies that a particular Data item was associated
-    with a particular Location of a Program during its execution. It effectively links the trace information of a workflow to the workflow structure,
-    by capturing the dataflow event.</div>
-    
-    <p><strong>IRI:</strong>https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#atLocation</p>
-    
-    <p></p><b>has domain</b>
-    <ul>
-    <li><a title="#data-specification" href="#data-specification">provone:Data</a></li>
-    </ul>
-    
-    <p></p><b>has range</b>
-    <ul>
-    <li>
-    <a title="#location-specification" href="#location-specification">prov:Location</a>
-    </li>
-    </ul>
-    
-    <div class="anexample" id="atlocation-example">
-    <div class="anexampleTitle">Example 21<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-    <p>
-    The following RDF fragment illustrates the use of the <span class="name">atLocation</span> object property by complementing
-    <a href="#location-example">Example 4</a> of the <em>Location</em> class.
-    </p>
-    <pre class="codeexample">
-    1    
-    2    :data2
-    3   
-    4       a provone:Data;
-    5       dcterms:identifier "cdms1"^^xsd:string;
-    6       rdfs:label "cdms_data"^^xsd:string;
-    7       wfms:type "gov.llnl.uvcdat.cdms:CDMSVariable"^^xsd:string;
-    8    
-    9    :data2 provone:atLocation :p1_p2DL .
-    10
-    </pre>
-    First, a <em>Data</em> item <span class="name">data2</span> is defined beginning at line 2. This <em>Data</em> item is compatible
-    with the <span class="name">signature</span> of the <em>InputPort</em> defined in <a href="#dltoinport-example">Example 14</a>.
-    Line 9 specifies that the <em>Data</em> item <span class="name">data2</span> previously specified was associated with the <em>Location</em>
-    of <a href="#location-example">Example 4</a>.
-    </div>
-    
-    </section><!-- !!! End section: atlocation-specification -->
-  
     <section id="used-specification"> 
           
     <h4><span class="secno">3.2.7 </span>used object property</h4>
