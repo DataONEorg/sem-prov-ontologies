@@ -774,7 +774,7 @@ body {
     <h1 class="title" id="title">
       ProvONE: A PROV Extension Data Model for Scientific Workflow Provenance
     </h1>
-    <h2 id="">Draft 15 January 2015</h2>
+    <h2 id="">Draft 01 May 2015</h2>
     <dl>    
       <dt>Contributors:</dt>
       <dd>
@@ -996,9 +996,9 @@ body {
           captures the procedure or "recipe" required to produce a data artifact. In the case of
           scientific workflows this corresponds to the workflow specification, which details the
           steps that must be carried out to generate the artifact(s). The specification need not be
-          executable, thus enabling a degree of abstraction. This obeys to the fact that an
+          executable, thus enabling a degree of abstraction. This underscores the fact that an
           abstract specification is still useful to understand the various steps involved in the
-          program, and thus how the artifacts are generated if the program is executed as expected.
+          program, and how the artifacts are generated if the program is executed as expected.
         </li>
         <li>
         <dfn id="dfn-retrospective-provenance" class="internalDFN" 
@@ -1182,17 +1182,17 @@ body {
     <p>
       <b>Workflow Representation</b>. The various tasks that form part of a workflow are
       represented by the <em>Program</em> class. <em>Programs</em> can be either atomic or
-      composite, the later case specified through the <em>hasSubProgram</em> self association. A
+      composite, the latter case specified through the <em>hasSubProgram</em> self association. A
       given program can be distinguished as a <em>Workflow</em>. Each <em>Program</em> may have a
-      series of <em>Ports</em> that function as input or output ports, while the ports from the
-      various <em>Programs</em> are connected through PROV <em>Locations</em>. Note that both input
-      and output ports may be associated with multiple <em>Locations</em>, thus allowing workflow
+      series of <em>Ports</em> that function as input or output ports. <em>Ports</em> from the
+      various <em>Programs</em> are connected through <em>Channels</em>. Note that both input
+      and output ports may be associated with multiple <em>Channels</em>, thus allowing workflow
       models in which a single output is copied and sent to multiple destinations, as well as in
       which tasks take inputs from different sources through a single input port.
     </p>
     <p>
       In order to specify executable instances of a <em>Workflow</em>, default parameters can be
-      defined for some of its constituting <em>Programs</em>. The default parameters are
+      defined for some of its constituent <em>Programs</em>. The default parameters are
       represented by <em>Entities</em> that will described shortly. A <em>Controller</em>
       class can be used to specify that the execution of a given <em>Program</em> is controlled by
       another Program, which allows for differing models of computation. For instance, in a
@@ -1205,16 +1205,15 @@ body {
       instance represents the execution of a particular <em>Program</em> (its <em>Plan</em>), which
       itself may be a <em>Workflow</em>, and may also be associated with a <em>User</em>
       responsible for the execution. For the execution of a <em>Program</em>, a series of input
-      <em>Data</em> items are read from the input <em>Ports</em> and are used to generate a series
+      <em>Entity</em> items are read from the input <em>Ports</em> and are used to generate a series
       of output <em>Entity</em> items sent through the output <em>Ports</em>. These outputs may be
       <em>Data</em>, <em>Visualization</em>, or <em>Document</em> items, depending on the goals of
       the <em>Workflow</em>. 
-      <!-- Needs clarification CSJ -->
-      Whenever an <em>Entity</em> item is sent from an input <em>Port</em>
-      to an output <em>Port</em>, this event is recorded through the <em>atLocation</em> property
-      between the <em>Entity</em> item and the <em>Location</em> between the two ports. In this
-      manner, the graph structure that represents the provenance of the workflow results is
-      generated.
+      Through the use of the <em>Usage</em> and <em>Generation</em> classes, whenever an
+      <em>Entity</em> item is sent from an output <em>Port</em> to an input <em>Port</em>, this
+      event is recorded through the <em>hadEntity</em>, <em>hadInPort</em> and <em>hadOutPort</em>
+      properties between the <em>Entity</em> item and the associated <em>Ports</em>. In this manner,
+      the graph structure that represents the provenance of the workflow results is generated.
     </p>    
     <p>
       <b>Data Structure Representation</b>. The various entities associated with workflow instances
@@ -1295,7 +1294,7 @@ body {
           </tr>
           <tr>
             <td>
-              <a title="dfn-Location" class="internalDFN">Location</a>
+              <a title="dfn-Channel" class="internalDFN">Channel</a>
             </td>
             <td>
               <a class="section-ref" href="#location-specification"><span>Section 3.1.3</span></a>
@@ -1769,8 +1768,8 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
           
     <h4><span class="secno">3.1.2 </span>Port class</h4>
     
-    <div class="glossary-ref">   A <dfn id="concept-entity" title="InputPort" class="internalDFN">Port</dfn>
-    <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>enables a Program to send or receive Entity items (Data, Visualization, or Document instances). When semantically typed as an input port using the <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasInPort" href="#">provone:hasInPort</a> object property, the Port may also be further described with default parameters using the <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasDefaultParam" href="#">provone:hasDefaultParam</a> object property.</div>
+    <div class="glossary-ref">   A <dfn id="concept-entity" title="Port" class="internalDFN">Port</dfn>
+    <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>enables a Program to send or receive Entity items (Data, Visualization, or Document instances). When semantically typed as an input port using the <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasInPort" href="#">provone:hasInPort</a> object property, the Port may also be further described with default parameters using the <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasDefaultParam" href="#">provone:hasDefaultParam</a> object property. Ports that are semantically typed as output ports using the <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasOutPort" href="#">provone:hasOutPort</a> object property may be connected to input ports using the <a href="#Channel">Channel</a> class.</div>
     
     <p><strong>IRI:</strong>https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#Port</p>
     
@@ -1782,16 +1781,32 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     
     <p></p><b>is in domain of</b>
     <ul>
-    <li><a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasDefaultParam"
-           href="#">provone:hasDefaultParam</a></li>
+      <li>
+        <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasDefaultParam"
+             href="#">provone:hasDefaultParam</a>
+      </li>
+      <li>
+        <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#connectsTo"
+             href="#">provone:connectsTo</a>
+      </li>
     </ul>
     
     <p></p><b>is in range of</b>
     <ul>
-    <li>
-    <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasInPort" href="#">provone:hasInPort</a>,
-    <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasOutPort"
-       href="#">provone:DLToInPort</a></li>
+      <li>
+        <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasInPort" href="#">provone:hasInPort</a>
+      </li>
+      <li>
+        <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasOutPort"
+         href="#">provone:hasOutPort</a>
+      </li>
+      <li>
+        <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hadInPort" href="#">provone:hadInPort</a>
+      </li>
+      <li>
+        <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hadOutPort"
+         href="#">provone:hadOutPort</a>
+      </li>
     </ul>
     
     <div class="anexample" id="inputport-example">
@@ -1818,10 +1833,10 @@ W3C PROV-O ontology [<cite><a class="bibref" href="#bib-PROVO">PROVO</a></cite>]
     
     <section id="location-specification"> 
           
-    <h4><span class="secno">3.1.3 </span>Location class</h4>
+    <h4><span class="secno">3.1.3 </span>Channel class</h4>
     
     <div class="glossary-ref"> The
-      <a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Location"
+      <a href="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#Channel"
          title="http://www.w3.org/ns/prov-o#Location">prov:Location</a>
       class is adopted directly from the PROV Ontology, and identifies the location of an Entity (Data,
       Visualization, or Document), enabling these items to be sent between Programs. The Location
