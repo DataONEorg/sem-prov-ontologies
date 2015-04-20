@@ -1382,10 +1382,10 @@
             </tr>
             <tr>
               <td>
-                <a title="dfn-agent" class="internalDFN">hasLocation</a>
+                <a title="dfn-agent" class="internalDFN">connectsTo</a>
               </td>
               <td>
-                <a class="section-ref" href="#haslocation-specification">
+                <a class="section-ref" href="#connectsto-specification">
                   <span>Section 3.1.12</span>
                 </a>
               </td>
@@ -1853,8 +1853,8 @@
             </a>
           </li>
           <li>
-            <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasLocation" href="#">
-              provone:hasLocation
+            <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#connectsTo" href="#">
+              provone:connectsTo
             </a>
           </li>
         </ul>
@@ -2241,50 +2241,51 @@
         
         </section><!-- !!! End section: hasdefaultparam-specification -->
         
-        <section id="haslocation-specification"> 
+        <section id="connectsto-specification"> 
               
-        <h4><span class="secno">3.1.12 </span>hasLocation object property</h4>
+          <h4><span class="secno">3.1.12 </span>connectsTo object property</h4>
+          
+          <div class="glossary-ref"><dfn id="concept-connectsTo" title="connectsTo" class="internalDFN">connectsTo</dfn>
+          <sup><a class="internalDFN" href="#concept-connectsTo"><span class="diamond"> ◊</span></a></sup> specifies the Channel that the given Port(s) connect to, 
+          typically with an output Port connected to an input Port.</div>
+          
+          <p><strong>IRI:</strong>https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#connectsTo</p>
+          
+          <p></p><b>has domain</b>
+          <ul>
+          <li><a title="#port-specification" href="#port-specification">provone:Port</a></li>
+          </ul>
+          
+          <p></p><b>has range</b>
+          
+          <ul>
+          <li><a title="#channel-specification" href="#">provone:Channel</a></li>
+          </ul>
+          
+          <div class="anexample" id="connectsTo-example">
+          <div class="anexampleTitle">Example 16<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+          <p>
+          The following RDF fragment illustrates the use of the <span class="name">connectsTo</span> object property.
+          </p>
+          <pre class="codeexample">
+          1    :pmain_ip1 
+          2       a provone:Port;
+          3       dcterms:identifier "e1_ip1"^^xsd:string;
+          4    .
+          5
+          6    :ch1 
+          7       a provone:Channel;
+          8       dcterms:identifier "pmain_ch1"^^xsd:string;
+          9    .
+          10 
+          11   :pmain_ip1 provone:connectsTo :ch1 .
+          
+          </pre>
+          First, an input <em>Port</em> <span class="name">pmain_ip1</span>is defined in lines 1-4. Lines 6-9 specify the <em>Channel</em> 
+          <span class="name">ch1</span>, which is then is used to associate the input <em>Port</em> and the <em>Channel</em> using the <em>connectsTo</em> statement in line 11.
+          </div>
         
-        <div class="glossary-ref"><dfn id="concept-hasLocation" title="hasLocation" class="internalDFN">hasLocation</dfn>
-        <sup><a class="internalDFN" href="#concept-hasLocation"><span class="diamond"> ◊</span></a></sup> specifies the Location of the Entity associated with a given input or output Port.</div>
-        
-        <p><strong>IRI:</strong>https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasLocation</p>
-        
-        <p></p><b>has domain</b>
-        <ul>
-        <li><a title="#port-specification" href="#port-specification">provone:Port</a></li>
-        </ul>
-        
-        <p></p><b>has range</b>
-        
-        <ul>
-        <li><a title="#channel-specification" href="#channel-specification">provone:Channel</a></li>
-        </ul>
-        
-        <div class="anexample" id="hasLocation-example">
-        <div class="anexampleTitle">Example 16<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-        <p>
-        The following RDF fragment illustrates the use of the <span class="name">hasLocation</span> object property.
-        </p>
-        <pre class="codeexample">
-        1    :pmain_ip1 
-        2       a provone:Port;
-        3       dcterms:identifier "e1_ip1"^^xsd:string;
-        4    .
-        5
-        6    :loc1 
-        7       a provone:Channel;
-        8       dcterms:identifier "pmain_loc1"^^xsd:string;
-        9    .
-        10 
-        11   :pmain_ip1 provone:hasLocation :loc1 .
-        
-        </pre>
-        First, an input <em>Port</em> <span class="name">pmain_ip1</span>is defined in lines 1-4. Lines 6-9 specify the <em>Location</em> 
-        <span class="name">loc1</span>, which is then is used to associate the input <em>Port</em> and the <em>Location</em> using the <em>hasLocation</em> statement in line 11.
-        </div>
-        
-        </section><!-- !!! End section: hasLocation-specification -->
+        </section><!-- !!! End section: connectsto-specification -->
         
         <section id="dltooutport-specification"> 
         
