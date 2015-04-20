@@ -2286,64 +2286,7 @@
           </div>
         
         </section><!-- !!! End section: connectsto-specification -->
-        
-        <section id="dltooutport-specification"> 
-        
-        <h4><span class="secno">3.1.17 </span>DLToOutPort object property</h4>
-        
-        <div class="glossary-ref"><dfn id="concept-entity" title="DLToOutPort" class="internalDFN">DLToOutPort</dfn>
-        <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup> connects a Location to the OutputPort of a Program.
-        In turn, the same Location can be linked to the OutputPort of a nested Program.</div>
-        
-        <p><strong>IRI:</strong>https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#DLToOutPort</p>
-        
-        <p></p><b>has domain</b>
-        <ul>
-        <li>
-        <a title="#channel-specification" href="#channel-specification">provone:Channel</a>
-        </li>
-        </ul>
-        
-        <p></p><b>has range</b>
-        <ul>
-        <li>
-        <a title="#outputport-specification" href="#outputport-specification">provone:OutputPort</a>
-        </li>
-        </ul>
-        
-        <div class="anexample" id="dltoinport-example">
-        <div class="anexampleTitle">Example 17<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
-        <p>
-        The following RDF fragment illustrates the use of the <span class="name">DLToOutPort</span> object property.
-        </p>
-        <pre class="codeexample">
-        1    :pmain_op1 
-        2       a provone:OutputPort;
-        3       dcterms:identifier "e1_op1"^^xsd:string;
-        4    .
-        5
-        6    :pa_op1 
-        7       a provone:OutputPort;
-        8       dcterms:identifier "a_op1"^^xsd:string;
-        9    .
-        10
-        11   :spdl2 
-        12      a provone:Channel;
-        13      dcterms:identifier "pmain_paDL2"^^xsd:string;
-        14   .
-        15
-        16   :pmain_op1 provone:outPortToDL :spdl2 .
-        17
-        18   :spdl2 provone:DLToInPort :pa_op1 .
-        </pre>
-        Two <em>OutputPorts</em> <span class="name">pmain_op1</span> and <span class="name">pa_op1</span> are defined in lines 1-9, the first
-        corresponds to the top program and the second to one of its subprograms. Lines 11-14 specify the <em>Location</em> 
-        <span class="name">spdl2</span>, which is then is used to connect the two <em>OutputPorts</em> by an <em>outPortToDL</em> statement in line 16
-        and a corresponding <em>DLToOutPort</em> statement in line 18.
-        </div>
-        
-        </section><!-- !!! End section: dltooutport-specification -->
-        
+
         <section id="wasderivedfrom-specification"> 
               
         <h4><span class="secno">3.1.13</span>wasDerivedFrom object property</h4>
