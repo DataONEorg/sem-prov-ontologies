@@ -1,29 +1,45 @@
 <?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY skos2 "http://www.w3.org/2008/05/skos#" >
+    <!ENTITY webprotege "http://webprotege.stanford.edu/" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY webprotege2 "http://protege.stanford.edu/webprotege/" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY D1_carbon_flux_1 "https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#32" >
+]>
+
+
 <rdf:RDF xmlns="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#"
      xml:base="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:webprotege="http://webprotege.stanford.edu/"
+     xmlns:skos2="http://www.w3.org/2008/05/skos#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:webprotege2="http://protege.stanford.edu/webprotege/"
-     xmlns:D1_CarbonFlux="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#">
+     xmlns:D1_carbon_flux_1="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#32">
     <owl:Ontology rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl">
-        <webprotege2:revision rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">857</webprotege2:revision>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">Mar 31, 2015 2:04:13 PM</dc:date>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mark Schildhauer</dc:creator>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Revised version: DataONE ontology to describe Carbon Flux measurements in the MsTMIP and LTER Use Cases. Collaborative work of: Margaret O&apos;Brien, Sophie Hou, Chase LeCroy, and Mark Schildhauer</rdfs:comment>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SophieHou</dc:creator>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology was generated from an ontology revision in WebProtege http://webprotege.nceas.ucsb.edu</rdfs:comment>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clecroy</dc:creator>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">guest</dc:creator>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mobb</dc:creator>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ontology work in progress for DataONE MSTMip/LTER Carbon cycling use cases</rdfs:comment>
-        <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system</dc:creator>
+        <dc:date rdf:datatype="&xsd;dateTime">Mar 31, 2015 2:04:13 PM</dc:date>
+        <dc:creator rdf:datatype="&xsd;string">Mark Schildhauer</dc:creator>
+        <rdfs:comment rdf:datatype="&rdfs;Literal">Revised version: DataONE ontology to describe Carbon Flux measurements in the MsTMIP and LTER Use Cases. Collaborative work of: Margaret O&#39;Brien, Sophie Hou, Chase LeCroy, and Mark Schildhauer</rdfs:comment>
+        <dc:creator rdf:datatype="&xsd;string">SophieHou</dc:creator>
+        <rdfs:comment rdf:datatype="&xsd;string">This ontology was generated from an ontology revision in WebProtege http://webprotege.nceas.ucsb.edu</rdfs:comment>
+        <dc:creator rdf:datatype="&xsd;string">clecroy</dc:creator>
+        <dc:creator rdf:datatype="&xsd;string">guest</dc:creator>
+        <dc:creator rdf:datatype="&xsd;string">mobb</dc:creator>
+        <rdfs:comment rdf:datatype="&xsd;string">ontology work in progress for DataONE MSTMip/LTER Carbon cycling use cases</rdfs:comment>
+        <dc:creator rdf:datatype="&xsd;string">system</dc:creator>
         <rdfs:comment xml:lang="en">ontology to start modeling primary production measurements
 margaret
 2014-11-13</rdfs:comment>
+        <owl:imports rdf:resource="http://www.w3.org/2008/05/skos"/>
     </owl:Ontology>
     
 
@@ -36,167 +52,139 @@ margaret
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://webprotege.stanford.edu/R7PCOQs0acF1dKpGTw9ttCN -->
-
-    <owl:AnnotationProperty rdf:about="http://webprotege.stanford.edu/R7PCOQs0acF1dKpGTw9ttCN">
-        <rdfs:label>examples</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://webprotege.stanford.edu/R7rpAQzzBYGT0EFKKvWgnho -->
-
-    <owl:AnnotationProperty rdf:about="http://webprotege.stanford.edu/R7rpAQzzBYGT0EFKKvWgnho">
-        <rdfs:label>definition_Contributor</rdfs:label>
-        <rdfs:label>defintion_Contributor</rdfs:label>
-        <description>The &quot;contributor&quot; Annotation Property&quot; is to record the name of the those contributing to the resource. 
-
-If there is any potential ambiguity, an identifier should be added, including the system to which it belongs.</description>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322, Shild</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <webprotege:RDnGK5ztaWzUjD2heWfxaau>Contributor</webprotege:RDnGK5ztaWzUjD2heWfxaau>
-        <definition>&quot;contributor&quot; is an OWL &quot;Annotation property&quot; that names the person contributing the content, so s/he can be contacted, especially during development.</definition>
-        <definitionSource>O&apos;Brien, pers comm. 2015-02-15</definitionSource>
-        <webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://webprotege.stanford.edu/R7unHEEqjfrbhwNktTnb1cB -->
-
-    <owl:AnnotationProperty rdf:about="http://webprotege.stanford.edu/R7unHEEqjfrbhwNktTnb1cB">
-        <rdfs:label>has_Exact_Synonym</rdfs:label>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>mobb</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definition>has_Exact_Synonym is an OWL annotation property that holds an alternate name or lexical variant of an owl class.</definition>
-        <definitionSource>ad hoc</definitionSource>
-        <rdfs:comment>We are not planning to use has_Broad_Synonym or has_Narrow_Synonym at this time. although other ontologies do. the concepts of &quot;broad&quot; and &quot;narrow&quot; imply relationships that could be better described with the class hierarchy.</rdfs:comment>
-        <rdfs:seeAlso>has_Related_Synonym</rdfs:seeAlso>
-        <description>The DataONE carbon flux ontology uses synonyms for terms that may not be well defined. But we know that they are used, and refer to an owl class.  I.e., a concept can have a synonym, but a concept should not be a synonym.</description>
-        <descriptionSource>Margaret O&apos;Brien, 2015-03-18</descriptionSource>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://webprotege.stanford.edu/RB1iJB2AOLc3FlQ6wxIAp5Q -->
-
-    <owl:AnnotationProperty rdf:about="http://webprotege.stanford.edu/RB1iJB2AOLc3FlQ6wxIAp5Q">
-        <rdfs:label>example_Of_Usage</rdfs:label>
-        <definition>&quot;example_Of_Usage&quot; is an OWL annotation property to record examples of how the concept or property should be used.</definition>
-        <definitionSource>O&apos;Brien, pers comm, 2015-02-19</definitionSource>
-        <description>&quot;example_Of_Usage&quot; is for providing examples. It should contain actual sample strings for the resource it applies to. longer, text descriptions of good practice for the resource belong in the &quot;description&quot; annotation.</description>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <webprotege:RDnGK5ztaWzUjD2heWfxaau>Example of Usage</webprotege:RDnGK5ztaWzUjD2heWfxaau>
-        <descriptionSource>O&apos;Brien, pers comm, 2015-02-19</descriptionSource>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://webprotege.stanford.edu/RDPR2w0tyuMjcOslIygEemk -->
-
-    <owl:AnnotationProperty rdf:about="http://webprotege.stanford.edu/RDPR2w0tyuMjcOslIygEemk">
-        <rdfs:label>has_Related_Synonym</rdfs:label>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>mobb</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definitionSource>ad hoc!</definitionSource>
-        <rdfs:seeAlso>has_Exact_Synonym</rdfs:seeAlso>
-        <descriptionSource>Margaret O&apos;Brien, 2015-03-18</descriptionSource>
-        <description>The DataONE carbon flux ontology uses synonyms for terms that may not be well defined. But we know that they are used, and refer to an owl class.  I.e., a concept can have a synonym, but a concept should not be a synonym.</description>
-        <definition>has_Related_Synonym is an owl annotation property to hold a term that is not an owl class, but is a primary term found in the literature but is not necessarily correct.</definition>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://webprotege.stanford.edu/RDnGK5ztaWzUjD2heWfxaau -->
-
-    <owl:AnnotationProperty rdf:about="http://webprotege.stanford.edu/RDnGK5ztaWzUjD2heWfxaau">
-        <rdfs:label>presentation_Label</rdfs:label>
-        <webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q>Carbon Flux</webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q>
-        <definition>&quot;presentation_Label&quot; is an OWL &quot;Annotation property&quot; that contains a label suitable for presentation to general audiences, such as with graph bubbles. Usually this will be the same as &quot;rdfs:label&quot;, and it should initially be auto-populated with the contents of the &quot;rdfs:label&quot; field, if that property is not empty.  But in special cases, an application might prefer differentiating the &quot;presentation:label&quot; from the default &quot;rdfs:label&quot;, in which case it can be customized.  Title case capitalization is acceptable.</definition>
-        <description>This field may be deprecated.</description>
-        <definitionSource>O&apos;Brien, 2015-02-16</definitionSource>
-        <webprotege:RDnGK5ztaWzUjD2heWfxaau>Presentation Label</webprotege:RDnGK5ztaWzUjD2heWfxaau>
-        <definition>&quot;presentation_Label&quot; is an OWL &quot;Annotation property&quot; that contains a label suitable for presentation to general audiences, such as with graph bubbles. Title case capitalization is acceptable.</definition>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#definition -->
-
-    <owl:AnnotationProperty rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#definition">
-        <rdfs:label>definition</rdfs:label>
-        <webprotege:RDnGK5ztaWzUjD2heWfxaau>Definition</webprotege:RDnGK5ztaWzUjD2heWfxaau>
-        <definitionSource>Schildhauer, pers comm, Feb 9, 2015,</definitionSource>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Schildhauer, O&apos;Brien</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definition>&quot;definition&quot; is an OWL &quot;Annotation property&quot; that contains a concise, often abstract, but ideally precise natural language &quot;description&quot; of the concept to which it is attached (or annotated).  
-
-In scientific contexts, the &quot;definition&quot; Annotation property is preferred over a &quot;description&quot; Annotation property, because &quot;description&quot; is typically a more verbose, less prescriptive natural language explication of the concept to which it is attached (or applied, or annotated).</definition>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#definitionSource -->
-
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
     <owl:AnnotationProperty rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#definitionSource">
-        <rdfs:label rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">definition_Source</rdfs:label>
+        <rdfs:label rdf:datatype="&rdfs;Literal">definition_Source</rdfs:label>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Schildhauer</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definitionSource>Schildhauer, pers comm, 05Feb2015</definitionSource>
+        <webprotege:RDnGK5ztaWzUjD2heWfxaau>Definition Source</webprotege:RDnGK5ztaWzUjD2heWfxaau>
         <definition>&quot;definitionSource&quot; is the Annotation property that can be used to provide the reference source or Authority for the &quot;definition&quot; (of interest), as an ISBN,DOI, bibliographic citation, etc. to the source of the &quot;definition&quot; contained in an associated &quot;definition&quot; Annotation property that is attached (annotated) to the concept.  
 
 Ideally a defintion Source is structured in a well-known and accepted format, that provides an unambiguous pointer to a source reference, but often even some accurate indication of a reference source is better than nothing at all.</definition>
-        <definitionSource>Schildhauer, pers comm, 05Feb2015</definitionSource>
-        <webprotege:RDnGK5ztaWzUjD2heWfxaau>Definition Source</webprotege:RDnGK5ztaWzUjD2heWfxaau>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Schildhauer</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#description -->
-
-    <owl:AnnotationProperty rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#description">
-        <rdfs:label>description</rdfs:label>
-        <definition rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">&quot;description&quot; is an OWL &quot;Annotation property&quot; that contains a a more verbose, less prescriptive natural language explication of the concept to which it is attached (or applied, or annotated) in contrast to a &quot;definition&quot; Annotation property.
-
-Use the  &quot;definition&quot; Annotation property for scientific concepts when possible, as opposed to the &quot;description&quot; Annotation property</definition>
-        <webprotege:RDnGK5ztaWzUjD2heWfxaau>Description</webprotege:RDnGK5ztaWzUjD2heWfxaau>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Schildhauer</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definitionSource>Schildhauer, pers comm, 05Feb2014</definitionSource>
+    <owl:AnnotationProperty rdf:about="&webprotege;RB1iJB2AOLc3FlQ6wxIAp5Q">
+        <rdfs:label>example_Of_Usage</rdfs:label>
+        <definition>&quot;example_Of_Usage&quot; is an OWL annotation property to record examples of how the concept or property should be used.</definition>
+        <definitionSource>O&#39;Brien, pers comm, 2015-02-19</definitionSource>
+        <descriptionSource>O&#39;Brien, pers comm, 2015-02-19</descriptionSource>
+        <description>&quot;example_Of_Usage&quot; is for providing examples. It should contain actual sample strings for the resource it applies to. longer, text descriptions of good practice for the resource belong in the &quot;description&quot; annotation.</description>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <webprotege:RDnGK5ztaWzUjD2heWfxaau>Example of Usage</webprotege:RDnGK5ztaWzUjD2heWfxaau>
     </owl:AnnotationProperty>
-    
+    <owl:AnnotationProperty rdf:about="&webprotege;RDnGK5ztaWzUjD2heWfxaau">
+        <rdfs:label>presentation_Label</rdfs:label>
+        <definitionSource>O&#39;Brien, 2015-02-16</definitionSource>
+        <webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q>Carbon Flux</webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q>
+        <description>This field may be deprecated.</description>
+        <webprotege:RDnGK5ztaWzUjD2heWfxaau>Presentation Label</webprotege:RDnGK5ztaWzUjD2heWfxaau>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definition>&quot;presentation_Label&quot; is an OWL &quot;Annotation property&quot; that contains a label suitable for presentation to general audiences, such as with graph bubbles. Usually this will be the same as &quot;rdfs:label&quot;, and it should initially be auto-populated with the contents of the &quot;rdfs:label&quot; field, if that property is not empty.  But in special cases, an application might prefer differentiating the &quot;presentation:label&quot; from the default &quot;rdfs:label&quot;, in which case it can be customized.  Title case capitalization is acceptable.</definition>
+        <definition>&quot;presentation_Label&quot; is an OWL &quot;Annotation property&quot; that contains a label suitable for presentation to general audiences, such as with graph bubbles. Title case capitalization is acceptable.</definition>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&webprotege;R7rpAQzzBYGT0EFKKvWgnho">
+        <rdfs:label>definition_Contributor</rdfs:label>
+        <rdfs:label>defintion_Contributor</rdfs:label>
+        <webprotege:RDnGK5ztaWzUjD2heWfxaau>Contributor</webprotege:RDnGK5ztaWzUjD2heWfxaau>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322, Shild</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definition>&quot;contributor&quot; is an OWL &quot;Annotation property&quot; that names the person contributing the content, so s/he can be contacted, especially during development.</definition>
+        <description>The &quot;contributor&quot; Annotation Property&quot; is to record the name of the those contributing to the resource. 
 
-
-    <!-- https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#descriptionSource -->
-
+If there is any potential ambiguity, an identifier should be added, including the system to which it belongs.</description>
+        <definitionSource>O&#39;Brien, pers comm. 2015-02-15</definitionSource>
+        <webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q>
+    </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#descriptionSource">
         <rdfs:label>description_Source</rdfs:label>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Schildauer</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <descriptionSource>Schildhauer, pers comm, 05Feb2015</descriptionSource>
         <webprotege:RDnGK5ztaWzUjD2heWfxaau>Description Source</webprotege:RDnGK5ztaWzUjD2heWfxaau>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Schildauer</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definition>&quot;description_Source&quot; is the Annotation property that can be used to provide the reference source or Authority, as an ISBN,DOI, bibliographic citation, etc. to the source of the &quot;description&quot; contained in an associated &quot;description&quot; Annotation property that is attached (annotated) to some concept.  
 
 Ideally a descriptionSource is structured in a well-known and accepted format, that provides an unambiguous pointer to a source reference, but often even some accurate indication of a reference source is better than nothing at all.
 
 As description Annotation properties are often not as rigorous, and hence looser and more verbose than definition Annotation properties, these fields may be more readily used for informal pedagogical advice and direction rather than being proscriptive</definition>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
-
-    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+    <owl:AnnotationProperty rdf:about="&rdfs;label">
         <rdfs:label>rdfs:label</rdfs:label>
-        <description>rdfs:label is a built in annotation property, and W3C does not give guidelines beyond the definition. In the DataONe Carbon Flux ontology, we use rdfs:label for a human-readable version of the resource&apos;s name, but adhere to a particular pattern. Our goal is that content of rdfs:label are not broken into individual terms arbitrarily.
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <description>rdfs:label is a built in annotation property, and W3C does not give guidelines beyond the definition. In the DataONe Carbon Flux ontology, we use rdfs:label for a human-readable version of the resource&#39;s name, but adhere to a particular pattern. Our goal is that content of rdfs:label are not broken into individual terms arbitrarily.
 
 1. Our practice is to separate individual words in the rdfs:label with underscores, but maintain capitalization consistent with the conventions of the resources type (e.g., camel case for properties, capitalized words for classes, capitalized abbreviations and acronyms). 
 
 2. include namespace in the label, if resource is imported.
 
 See example_Of_Usage, presentation_Label</description>
-        <definition>rdfs:label is an instance of rdf:Property that may be used to provide a human-readable version of a resource&apos;s name</definition>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q>Carbon_Flux_NASA, definition_Source, rdfs:label</webprotege:RB1iJB2AOLc3FlQ6wxIAp5Q>
-        <descriptionSource>O&apos;Brien, 2015-02-19</descriptionSource>
+        <definition>rdfs:label is an instance of rdf:Property that may be used to provide a human-readable version of a resource&#39;s name</definition>
+        <descriptionSource>O&#39;Brien, 2015-02-19</descriptionSource>
         <definitionSource rdf:resource="http://www.w3.org/TR/rdf-schema/#ch_label"/>
-    </rdf:Description>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    <owl:AnnotationProperty rdf:about="&webprotege;R7PCOQs0acF1dKpGTw9ttCN">
+        <rdfs:label>examples</rdfs:label>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&rdfs;seeAlso"/>
+    <owl:AnnotationProperty rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#definition">
+        <rdfs:label>definition</rdfs:label>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Schildhauer, O&#39;Brien</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <webprotege:RDnGK5ztaWzUjD2heWfxaau>Definition</webprotege:RDnGK5ztaWzUjD2heWfxaau>
+        <definition>&quot;definition&quot; is an OWL &quot;Annotation property&quot; that contains a concise, often abstract, but ideally precise natural language &quot;description&quot; of the concept to which it is attached (or annotated).  
+
+In scientific contexts, the &quot;definition&quot; Annotation property is preferred over a &quot;description&quot; Annotation property, because &quot;description&quot; is typically a more verbose, less prescriptive natural language explication of the concept to which it is attached (or applied, or annotated).</definition>
+        <definitionSource>Schildhauer, pers comm, Feb 9, 2015,</definitionSource>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#description">
+        <rdfs:label>description</rdfs:label>
+        <definition rdf:datatype="&rdfs;Literal">&quot;description&quot; is an OWL &quot;Annotation property&quot; that contains a a more verbose, less prescriptive natural language explication of the concept to which it is attached (or applied, or annotated) in contrast to a &quot;definition&quot; Annotation property.
+
+Use the  &quot;definition&quot; Annotation property for scientific concepts when possible, as opposed to the &quot;description&quot; Annotation property</definition>
+        <webprotege:RDnGK5ztaWzUjD2heWfxaau>Description</webprotege:RDnGK5ztaWzUjD2heWfxaau>
+        <definitionSource>Schildhauer, pers comm, 05Feb2014</definitionSource>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Schildhauer</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&dc;date"/>
+    <owl:AnnotationProperty rdf:about="&webprotege;RDPR2w0tyuMjcOslIygEemk">
+        <rdfs:label>has_Related_Synonym</rdfs:label>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>mobb</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <rdfs:seeAlso>has_Exact_Synonym</rdfs:seeAlso>
+        <descriptionSource>Margaret O&#39;Brien, 2015-03-18</descriptionSource>
+        <description>The DataONE carbon flux ontology uses synonyms for terms that may not be well defined. But we know that they are used, and refer to an owl class.  I.e., a concept can have a synonym, but a concept should not be a synonym.</description>
+        <definitionSource>ad hoc!</definitionSource>
+        <definition>has_Related_Synonym is an owl annotation property to hold a term that is not an owl class, but is a primary term found in the literature but is not necessarily correct.</definition>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&webprotege;R7unHEEqjfrbhwNktTnb1cB">
+        <rdfs:label>has_Exact_Synonym</rdfs:label>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>mobb</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definition>has_Exact_Synonym is an OWL annotation property that holds an alternate name or lexical variant of an owl class.</definition>
+        <description>The DataONE carbon flux ontology uses synonyms for terms that may not be well defined. But we know that they are used, and refer to an owl class.  I.e., a concept can have a synonym, but a concept should not be a synonym.</description>
+        <rdfs:comment>We are not planning to use has_Broad_Synonym or has_Narrow_Synonym at this time. although other ontologies do. the concepts of &quot;broad&quot; and &quot;narrow&quot; imply relationships that could be better described with the class hierarchy.</rdfs:comment>
+        <rdfs:seeAlso>has_Related_Synonym</rdfs:seeAlso>
+        <descriptionSource>Margaret O&#39;Brien, 2015-03-18</descriptionSource>
+        <definitionSource>ad hoc</definitionSource>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2008/05/skos#related -->
+
+    <owl:ObjectProperty rdf:about="&skos2;related"/>
+    
+
+
+    <!-- http://www.w3.org/2008/05/skos#relatedMatch -->
+
+    <owl:ObjectProperty rdf:about="&skos2;relatedMatch"/>
     
 
 
@@ -213,9 +201,9 @@ See example_Of_Usage, presentation_Label</description>
 
     <!-- http://webprotege.stanford.edu/R6yXcB698OXhBteKApiJVs -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R6yXcB698OXhBteKApiJVs">
+    <owl:Class rdf:about="&webprotege;R6yXcB698OXhBteKApiJVs">
         <rdfs:label>Total_Living_Biomass_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <definition>Total carbon content of the living biomass (leaves+roots+wood)</definition>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
@@ -225,21 +213,21 @@ See example_Of_Usage, presentation_Label</description>
 
     <!-- http://webprotege.stanford.edu/R70SHrvW3fcHm2642YtpFdV -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R70SHrvW3fcHm2642YtpFdV">
+    <owl:Class rdf:about="&webprotege;R70SHrvW3fcHm2642YtpFdV">
         <rdfs:label>Net_Longwave_Radiation_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definition>Incident longwave radiation minus simulated outgoing longwave radiation (positive into grnd)</definition>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
+        <definition>Incident longwave radiation minus simulated outgoing longwave radiation (positive into grnd)</definition>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/R7IcjlW0oT2R1tzFBob7BL8 -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R7IcjlW0oT2R1tzFBob7BL8">
+    <owl:Class rdf:about="&webprotege;R7IcjlW0oT2R1tzFBob7BL8">
         <rdfs:label>Total_Soil_Wetness_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <definition>Vertically integrated soil moisture divided by maximum allowable soil moisture above wilting point</definition>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
@@ -249,21 +237,21 @@ See example_Of_Usage, presentation_Label</description>
 
     <!-- http://webprotege.stanford.edu/R7LS46HzVbBGeA4fPNcibVk -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R7LS46HzVbBGeA4fPNcibVk">
+    <owl:Class rdf:about="&webprotege;R7LS46HzVbBGeA4fPNcibVk">
         <rdfs:label>Absorbed_Fraction_Incoming_PAR_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
         <definition>Absorbed fraction incoming photosyntetically active radiation</definition>
+        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/R7N7KBSIOFQ9uy9cGvvYEHl -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R7N7KBSIOFQ9uy9cGvvYEHl">
+    <owl:Class rdf:about="&webprotege;R7N7KBSIOFQ9uy9cGvvYEHl">
         <rdfs:label>Near_Surface_Air_Temperature_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
         <definition>Near surface air temperature</definition>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
@@ -273,9 +261,9 @@ See example_Of_Usage, presentation_Label</description>
 
     <!-- http://webprotege.stanford.edu/R7iHTO92bm4cySs8Ax2GZcR -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R7iHTO92bm4cySs8Ax2GZcR">
+    <owl:Class rdf:about="&webprotege;R7iHTO92bm4cySs8Ax2GZcR">
         <rdfs:label>Near_Surface_CO2_Concentration_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
         <definition>Near surface dry air CO2 mole fraction</definition>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
@@ -285,9 +273,9 @@ See example_Of_Usage, presentation_Label</description>
 
     <!-- http://webprotege.stanford.edu/R7l2xEuaK5SjSGgCvFX7rqw -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R7l2xEuaK5SjSGgCvFX7rqw">
+    <owl:Class rdf:about="&webprotege;R7l2xEuaK5SjSGgCvFX7rqw">
         <rdfs:label>Total_Respiration_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definition>Total respiration (TotalResp=AutoResp+heteroResp, always positive)</definition>
@@ -297,11 +285,11 @@ See example_Of_Usage, presentation_Label</description>
 
     <!-- http://webprotege.stanford.edu/R8NCbU17uitQGiBAjYysAvx -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R8NCbU17uitQGiBAjYysAvx">
+    <owl:Class rdf:about="&webprotege;R8NCbU17uitQGiBAjYysAvx">
         <rdfs:label>Leaf_Area_Index_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
-        <definition>Area of leaves per area ground</definition>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
+        <definition>Area of leaves per area ground</definition>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
     </owl:Class>
     
@@ -309,23 +297,23 @@ See example_Of_Usage, presentation_Label</description>
 
     <!-- http://webprotege.stanford.edu/R8NE4WE9nmKbQfyY6TkjwVA -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R8NE4WE9nmKbQfyY6TkjwVA">
+    <owl:Class rdf:about="&webprotege;R8NE4WE9nmKbQfyY6TkjwVA">
         <rdfs:label>Surface_Pressure_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
         <definition>Surface pressure</definition>
+        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/R8YxkV4GpM90kyVqOh2x3UZ -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R8YxkV4GpM90kyVqOh2x3UZ">
+    <owl:Class rdf:about="&webprotege;R8YxkV4GpM90kyVqOh2x3UZ">
         <rdfs:label>Near_Surface_Specific_Humidity_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <definition>Near surface specific humidity</definition>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
     </owl:Class>
     
@@ -333,9 +321,9 @@ See example_Of_Usage, presentation_Label</description>
 
     <!-- http://webprotege.stanford.edu/R8viQViRy0pCE12fEsukdfw -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R8viQViRy0pCE12fEsukdfw">
+    <owl:Class rdf:about="&webprotege;R8viQViRy0pCE12fEsukdfw">
         <rdfs:label>MsTMIP_Measurement</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBbVnuifJgohQBPPpqCEwa7"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RBbVnuifJgohQBPPpqCEwa7"/>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>mob</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definition>Parent class for all MsTMIP variables</definition>
     </owl:Class>
@@ -344,23 +332,23 @@ See example_Of_Usage, presentation_Label</description>
 
     <!-- http://webprotege.stanford.edu/R99jisgToZawajdVE44b8nU -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R99jisgToZawajdVE44b8nU">
+    <owl:Class rdf:about="&webprotege;R99jisgToZawajdVE44b8nU">
         <rdfs:label>Average_Layer_Soil_Moisture_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definition>Soil water content in each soil layer, including liquid, vapor and ice</definition>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/R9DfJnSf9XAj8uI7hBQQjwt -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R9DfJnSf9XAj8uI7hBQQjwt">
+    <owl:Class rdf:about="&webprotege;R9DfJnSf9XAj8uI7hBQQjwt">
         <rdfs:label>Average_Layer_Soil_Temperature_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
-        <definition>Average soil temperature in each soil layer</definition>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
+        <definition>Average soil temperature in each soil layer</definition>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
     </owl:Class>
     
@@ -368,103 +356,103 @@ See example_Of_Usage, presentation_Label</description>
 
     <!-- http://webprotege.stanford.edu/R9QJSPaQBe0pTavOmypZru7 -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R9QJSPaQBe0pTavOmypZru7">
+    <owl:Class rdf:about="&webprotege;R9QJSPaQBe0pTavOmypZru7">
         <rdfs:label>Size_Of_Each_Carbon_Pool_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <definition>Total size of each carbon pool vertically integrated over the entire soil column</definition>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definition>Total size of each carbon pool vertically integrated over the entire soil column</definition>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/R9g0VMAS7wxrENZ51WXZVUO -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R9g0VMAS7wxrENZ51WXZVUO">
+    <owl:Class rdf:about="&webprotege;R9g0VMAS7wxrENZ51WXZVUO">
         <rdfs:label>Surface_Runoff_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
-        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <definition>Runoff from the landsurface and/or subsurface stormflow</definition>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/R9hfCSwbGmMu20yyhyHhd2x -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R9hfCSwbGmMu20yyhyHhd2x">
+    <owl:Class rdf:about="&webprotege;R9hfCSwbGmMu20yyhyHhd2x">
         <rdfs:label>Soil_Layer_Top_Depth_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <definition>Depth from soil surface to top of soil layer</definition>
-        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/R9ixYMr3teE7FsnevSbeB8H -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R9ixYMr3teE7FsnevSbeB8H">
+    <owl:Class rdf:about="&webprotege;R9ixYMr3teE7FsnevSbeB8H">
         <rdfs:label>Near_Surface_Module_Of_The_Wind_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
         <definition>Near surface wind magnitude</definition>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/R9sEJlHIzvmuwWRMsvB1rfQ -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R9sEJlHIzvmuwWRMsvB1rfQ">
+    <owl:Class rdf:about="&webprotege;R9sEJlHIzvmuwWRMsvB1rfQ">
         <rdfs:label>Soil_Layer_Node_Depth_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <definition>Depth from soil surface to layer prognostic variables; typically center of soil layer</definition>
-        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/R9tdcxrKyFCt6k4nbnaJsLY -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R9tdcxrKyFCt6k4nbnaJsLY">
+    <owl:Class rdf:about="&webprotege;R9tdcxrKyFCt6k4nbnaJsLY">
         <rdfs:label>Snow_Water_Equivalent_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definition>Total water mass of snow pack, including ice and liquid water</definition>
-        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/R9zGDAA2yTIgNaG50b88HZW -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R9zGDAA2yTIgNaG50b88HZW">
+    <owl:Class rdf:about="&webprotege;R9zGDAA2yTIgNaG50b88HZW">
         <rdfs:label>MsTMIP_Driver_Variable</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8viQViRy0pCE12fEsukdfw"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;R8viQViRy0pCE12fEsukdfw"/>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/RB7Rpv9kXup2F74BunSuCFa -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RB7Rpv9kXup2F74BunSuCFa">
+    <owl:Class rdf:about="&webprotege;RB7Rpv9kXup2F74BunSuCFa">
         <rdfs:label>Dissolved_Organic_Carbon_Carbon_Pool</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
-        <definition>TO DO, Margaret</definition>
         <definitionSource>TO DO, Margaret</definitionSource>
+        <definition>TO DO, Margaret</definition>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/RBMwwuULyaBKlWfs5nQ2ZSV -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RBMwwuULyaBKlWfs5nQ2ZSV">
+    <owl:Class rdf:about="&webprotege;RBMwwuULyaBKlWfs5nQ2ZSV">
         <rdfs:label>Longwave_Albedo_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <definition>Longwave Albedo</definition>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
     </owl:Class>
     
@@ -472,23 +460,23 @@ See example_Of_Usage, presentation_Label</description>
 
     <!-- http://webprotege.stanford.edu/RBbVnuifJgohQBPPpqCEwa7 -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RBbVnuifJgohQBPPpqCEwa7">
+    <owl:Class rdf:about="&webprotege;RBbVnuifJgohQBPPpqCEwa7">
         <rdfs:label>Measurement</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#CarbonCycleComponents"/>
-        <definition>A determination of the magnitude of a quantity by comparison with a standard for that quantity.</definition>
-        <definitionSource>&quot;measurement.&quot; The Columbia Electronic Encyclopedia®. 2013. Columbia University Press 20 Feb. 2015 http-encyclopedia2.thefreedictionary.com/Measurement</definitionSource>
+        <definitionSource>&quot;measurement.&quot; The Columbia Electronic Encyclopedia&#174;. 2013. Columbia University Press 20 Feb. 2015 http-encyclopedia2.thefreedictionary.com/Measurement</definitionSource>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definition>A determination of the magnitude of a quantity by comparison with a standard for that quantity.</definition>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/RBlYtuo1eQZOGSBY1MIJFOD -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RBlYtuo1eQZOGSBY1MIJFOD">
+    <owl:Class rdf:about="&webprotege;RBlYtuo1eQZOGSBY1MIJFOD">
         <rdfs:label>Total_Soil_Carbon_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definition>Total soil and litter carbon content vertically integrated over the enire soil column</definition>
     </owl:Class>
     
@@ -496,21 +484,21 @@ See example_Of_Usage, presentation_Label</description>
 
     <!-- http://webprotege.stanford.edu/RBlZSl2a5DBHXGOm7H2Qis7 -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RBlZSl2a5DBHXGOm7H2Qis7">
+    <owl:Class rdf:about="&webprotege;RBlZSl2a5DBHXGOm7H2Qis7">
         <rdfs:label>Autotrophic_Respiration_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definition>Autotrophic respiration rate (always positive)</definition>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
+        <definition>Autotrophic respiration rate (always positive)</definition>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/RBm8goohf32P7Z51FnDczLG -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RBm8goohf32P7Z51FnDczLG">
+    <owl:Class rdf:about="&webprotege;RBm8goohf32P7Z51FnDczLG">
         <rdfs:label>Rainfall_Rate_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
         <definition>Rainfall rate</definition>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
@@ -520,66 +508,66 @@ See example_Of_Usage, presentation_Label</description>
 
     <!-- http://webprotege.stanford.edu/RBtIMUHovaHEiIrgBKwzqiO -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RBtIMUHovaHEiIrgBKwzqiO">
+    <owl:Class rdf:about="&webprotege;RBtIMUHovaHEiIrgBKwzqiO">
         <rdfs:label>Gross_Primary_Productivity_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
         <definition>MsTMIP Output: Rate of photosynthesis (always positive)</definition>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>mob</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/RC9wwAHIMKilfdbFDXJltNm -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RC9wwAHIMKilfdbFDXJltNm">
+    <owl:Class rdf:about="&webprotege;RC9wwAHIMKilfdbFDXJltNm">
         <rdfs:label>Name_Of_Each_Carbon_Pool_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definition>Name of each carbon pool (i.e., &quot;wood,&quot; or &quot;Coarse Woody Debris&quot;)</definition>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
+        <definition>Name of each carbon pool (i.e., &quot;wood,&quot; or &quot;Coarse Woody Debris&quot;)</definition>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/RCR3umGVIR9jwzmhyKDnle3 -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RCR3umGVIR9jwzmhyKDnle3">
+    <owl:Class rdf:about="&webprotege;RCR3umGVIR9jwzmhyKDnle3">
         <rdfs:label>Soil_Layer_Bottom_Depth_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
         <definition>Depth from soil surface to bottom of soil layer</definition>
+        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/RDDSCGIcLqGu9owKt9WhL1s -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RDDSCGIcLqGu9owKt9WhL1s">
+    <owl:Class rdf:about="&webprotege;RDDSCGIcLqGu9owKt9WhL1s">
         <rdfs:label>Heterotrophic_Respiration_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definition>Heterotrophic respiration rate (always positive)</definition>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n">
+    <owl:Class rdf:about="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n">
         <rdfs:label>MsTMIP_Output_Variable</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8viQViRy0pCE12fEsukdfw"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;R8viQViRy0pCE12fEsukdfw"/>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/RDP6wlhmHV0ZrRId9ci8JW2 -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RDP6wlhmHV0ZrRId9ci8JW2">
+    <owl:Class rdf:about="&webprotege;RDP6wlhmHV0ZrRId9ci8JW2">
         <rdfs:label>Net_Shortwave_Radiation_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
         <definition>Incident shortwave radiation minus simulated outgoing shortwave radiation (positive into grnd)</definition>
@@ -589,20 +577,27 @@ See example_Of_Usage, presentation_Label</description>
 
     <!-- http://webprotege.stanford.edu/RDehBe1KCPQ9euRmi0fvx4S -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RDehBe1KCPQ9euRmi0fvx4S">
+    <owl:Class rdf:about="&webprotege;RDehBe1KCPQ9euRmi0fvx4S">
         <rdfs:label>Active_Layer_Thickness_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definition>Thaw depth; depth to zero centigrade isotherm in permafrost</definition>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
+        <definition>Thaw depth; depth to zero centigrade isotherm in permafrost</definition>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/RDet5LHJXs7bH2kkokaChpg -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RDet5LHJXs7bH2kkokaChpg">
+    <owl:Class rdf:about="&webprotege;RDet5LHJXs7bH2kkokaChpg">
         <rdfs:label>LIDAR_Method</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&skos2;related"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#LIDAR"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&skos2;Concept"/>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#FieldMethod"/>
         <webprotege:RDPR2w0tyuMjcOslIygEemk>LIDAR</webprotege:RDPR2w0tyuMjcOslIygEemk>
         <definitionSource>Available from: https-www.researchgate.net/publication/233137060_Use_of_ground_and_LiDAR_data_to_model_the_NPP_of_a_Mediterranean_pine_forest [accessed Mar 25, 2015].</definitionSource>
@@ -614,9 +609,9 @@ See example_Of_Usage, presentation_Label</description>
 
     <!-- http://webprotege.stanford.edu/RDxMx6XlHrvE2zRHD3oCQXT -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RDxMx6XlHrvE2zRHD3oCQXT">
+    <owl:Class rdf:about="&webprotege;RDxMx6XlHrvE2zRHD3oCQXT">
         <rdfs:label>Total_Snow_Depth_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
         <definition>Total snow depth</definition>
@@ -626,9 +621,9 @@ See example_Of_Usage, presentation_Label</description>
 
     <!-- http://webprotege.stanford.edu/RDxQDXDdUbXbZIBOMY1aeKQ -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RDxQDXDdUbXbZIBOMY1aeKQ">
+    <owl:Class rdf:about="&webprotege;RDxQDXDdUbXbZIBOMY1aeKQ">
         <rdfs:label>Fire_Emissions_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definition>Flux of carbon due to fires (always positive)</definition>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
@@ -638,9 +633,9 @@ See example_Of_Usage, presentation_Label</description>
 
     <!-- http://webprotege.stanford.edu/RGdIZKLOpGnUDGwTnjh9l2 -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RGdIZKLOpGnUDGwTnjh9l2">
+    <owl:Class rdf:about="&webprotege;RGdIZKLOpGnUDGwTnjh9l2">
         <rdfs:label>Surface_Incident_Longwave_Radiation_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
         <definition>Surface incident longwave radiation</definition>
@@ -650,43 +645,43 @@ See example_Of_Usage, presentation_Label</description>
 
     <!-- http://webprotege.stanford.edu/RJaoq71QaJlk4ZctxYPaVh -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RJaoq71QaJlk4ZctxYPaVh">
+    <owl:Class rdf:about="&webprotege;RJaoq71QaJlk4ZctxYPaVh">
         <rdfs:label>Sensible_Heat_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
         <definition>Sensible heat flux into the boundary layer (positive into atmosphere)</definition>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/RJfTb8QUWwoS88K11N23Rc -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RJfTb8QUWwoS88K11N23Rc">
+    <owl:Class rdf:about="&webprotege;RJfTb8QUWwoS88K11N23Rc">
         <rdfs:label>Net_Ecosystem_Exchange_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
-        <definition>Net Ecosystem Exchange (NEE=HeteroResp+AutoResp-GPP, positive into atmosphere)</definition>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definition>Net Ecosystem Exchange (NEE=HeteroResp+AutoResp-GPP, positive into atmosphere)</definition>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/RPTjrTr4IFEyMDke0PnaDK -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RPTjrTr4IFEyMDke0PnaDK">
+    <owl:Class rdf:about="&webprotege;RPTjrTr4IFEyMDke0PnaDK">
         <rdfs:label>Surface_Incident_Shortwave_Radiation_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definition>Surface incident shortwave radiation</definition>
-        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li">
+    <owl:Class rdf:about="&webprotege;RcScXD6JR0s7GJESttk3li">
         <rdfs:label>MsTMIP_Simulation</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#ModeledMethod"/>
         <definition>Simulation is the imitation of the operation of a real-world process or system over time. (wikipedia). A MsTMIP Simulation is a simulation carried out by the MsTMIP project (margaret)</definition>
@@ -697,9 +692,9 @@ See example_Of_Usage, presentation_Label</description>
 
     <!-- http://webprotege.stanford.edu/RgPzg1b7bUIiMKyj49Ztx5 -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RgPzg1b7bUIiMKyj49Ztx5">
+    <owl:Class rdf:about="&webprotege;RgPzg1b7bUIiMKyj49Ztx5">
         <rdfs:label>Above_Ground_Woody_Biomass_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definition>Total above ground wood biomass</definition>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
@@ -709,23 +704,23 @@ See example_Of_Usage, presentation_Label</description>
 
     <!-- http://webprotege.stanford.edu/RhWLgIpHQr3KOKoVdzXEUK -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RhWLgIpHQr3KOKoVdzXEUK">
+    <owl:Class rdf:about="&webprotege;RhWLgIpHQr3KOKoVdzXEUK">
         <rdfs:label>Subsurface_Runoff_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
         <definition>Gravity soil water drainage and/or soil water lateral flow</definition>
+        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/RkHHD2nSZa0sbLCAAxEvBd -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RkHHD2nSZa0sbLCAAxEvBd">
+    <owl:Class rdf:about="&webprotege;RkHHD2nSZa0sbLCAAxEvBd">
         <rdfs:label>Shortwave_Albedo_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
-        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
         <definition>Shortwave albedo</definition>
     </owl:Class>
     
@@ -733,21 +728,21 @@ See example_Of_Usage, presentation_Label</description>
 
     <!-- http://webprotege.stanford.edu/RliFJswOPw6hzz9LDgQX90 -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RliFJswOPw6hzz9LDgQX90">
+    <owl:Class rdf:about="&webprotege;RliFJswOPw6hzz9LDgQX90">
         <rdfs:label>Net_Primary_Productivity_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
-        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <definition>Net Primary Productivity (NPP=GPP-AutoResp, positive into plants)</definition>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
     </owl:Class>
     
 
 
     <!-- http://webprotege.stanford.edu/Rt9RfAsRSLC7RgCig0wqOX -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/Rt9RfAsRSLC7RgCig0wqOX">
+    <owl:Class rdf:about="&webprotege;Rt9RfAsRSLC7RgCig0wqOX">
         <rdfs:label>Total_Evaporation_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <definition>Sum of all evaporation sources (positive into atmosphere)</definition>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
@@ -757,13 +752,19 @@ See example_Of_Usage, presentation_Label</description>
 
     <!-- http://webprotege.stanford.edu/RtZgQ2VsKUXn8D4MUITNqP -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RtZgQ2VsKUXn8D4MUITNqP">
+    <owl:Class rdf:about="&webprotege;RtZgQ2VsKUXn8D4MUITNqP">
         <rdfs:label>Latent_Heat_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RDL1Cc71zeE7p6ol2V7gT0n"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RDL1Cc71zeE7p6ol2V7gT0n"/>
         <definition>Latent heat flux into the boundary layer (positive into atmosphere)</definition>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definitionSource>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</definitionSource>
     </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2008/05/skos#Concept -->
+
+    <owl:Class rdf:about="&skos2;Concept"/>
     
 
 
@@ -784,8 +785,8 @@ See example_Of_Usage, presentation_Label</description>
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#AboveGroundWoodyBiomassCarbonPool">
         <rdfs:label>Above_Ground_Woody_Biomass_Carbon_Pool</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
-        <definition>The mass of any or all woody organic components within an ecosystem.</definition>
         <definitionSource>Litton, C.M. et al. Carbon allocation in forest ecosystems. Global Change Biology. V 13 I 10. pp. 2089 - 2109. July 2007.</definitionSource>
+        <definition>The mass of any or all woody organic components within an ecosystem.</definition>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
     </owl:Class>
     
@@ -796,9 +797,9 @@ See example_Of_Usage, presentation_Label</description>
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#AnnualNetPrimaryProductivity">
         <rdfs:label>Annual_Net_Primary_Productivity</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_01d8d3c8_8b34_4af9_9737_819614bbcca4"/>
+        <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definition>Gross primary production (GPP) minus autotrophic respiration (AR) over one year.</definition>
-        <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
     </owl:Class>
     
 
@@ -807,7 +808,7 @@ See example_Of_Usage, presentation_Label</description>
 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#BIOME-BGC_MstmipVersion1ModeledMethod">
         <rdfs:label>BIOME-BGC_Mstmip_Version1_Modeled_Method</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RcScXD6JR0s7GJESttk3li"/>
         <description>Biome-BGC is an ecosystem process model that estimates storage and flux of carbon, nitrogen and water. Biome-BGC is a computer program that estimates fluxes and storage of energy, water, carbon, and nitrogen for the vegetation and soil components of terrestrial ecosystems.
 
 We call it a process model because its algorithms represent physical and biological processes that control fluxes of energy and mass.
@@ -816,10 +817,7 @@ The model uses a daily time-step. This means that each flux is estimated for a o
 Weather is the most important control on vegetation processes. Flux estimates in Biome-BGC depend strongly on daily weather conditions. Model behavior over time depends on the history of these weather conditions, the climate.</description>
         <descriptionSource>http-www.ntsg.umt.edu/project/biome-bgc</descriptionSource>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definitionSource xml:lang="gmail.com)
-
-Citations:
-1. Thornton et al. (2002) Modeling and measuring the effects of disburbance history and climate on carbon and water budgets in evergreen needleleaf forests. Agriculture and Forest Meteorology, 113, 185-222.">http-nacp.ornl.gov/mstmipdata/
+        <definitionSource xml:lang="gmail.com)  Citations: 1. Thornton et al. (2002) Modeling and measuring the effects of disburbance history and climate on carbon and water budgets in evergreen needleleaf forests. Agriculture and Forest Meteorology, 113, 185-222.">http-nacp.ornl.gov/mstmipdata/
 Contacts:
 Weile Wang (weile.wang</definitionSource>
     </owl:Class>
@@ -830,18 +828,15 @@ Weile Wang (weile.wang</definitionSource>
 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#CLASS-CTEMNplus_MstmipVersion1ModeledMethod">
         <rdfs:label>CLASS-CTEMNplus_Mstmip_Version1_Modeled_Method</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RcScXD6JR0s7GJESttk3li"/>
+        <descriptionSource>http-www.cccma.ec.gc.ca/ctem/</descriptionSource>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <description>The Canadian Terrestrial Ecosystem Model (CTEM) is designed to serve as the terrestrial carbon cycle component in the coupled Canadian Centre for Climate Modelling and Analysis (CCCma) atmosphere-ocean general circulation model (GCM). CTEM is a dynamic vegetation model that is able to grow vegetation from bare ground and provides time-varying vegetation structural attributes (e.g., leaf area index (LAI), vegetation height, rooting depth and distribution, and canopy mass) to the land surface scheme it is coupled with. Other than simulating vegetation biomass and its structural attributes CTEM also simulates amount of carbon in its dead pools (litter and soil organic matter), and thus is able to provide net fluxes of CO2 between the land and the atmosphere.
 
-This documentation provides a brief description of CTEM 1.0/1.1 and the manner in which CTEM is coupled to Canadian Land Surface Scheme (CLASS, version 2.7) [Verseghy et al. 1993; Verseghy, 1991]. Coupled CLASS 2.7/CTEM 1.0 are implemented in CCCma&apos;s coupled carbon climate model.</description>
-        <definitionSource xml:lang="mcmaster.ca)
-
-Citations:
-1. S. Huang, M. A. Arain, V. Arora, F. Yuan, J. Brodeur, M. Peichl, 2011. Analysis of nitrogen controls on carbon and water exchanges in a conifer forest using the CLASS-CTEMN+ model, Ecological Modeling, 222(20–22): 3743–3760, http-dx.doi.org/10.1016/j.ecolmodel.2011.09.008.">http-nacp.ornl.gov/mstmipdata/
+This documentation provides a brief description of CTEM 1.0/1.1 and the manner in which CTEM is coupled to Canadian Land Surface Scheme (CLASS, version 2.7) [Verseghy et al. 1993; Verseghy, 1991]. Coupled CLASS 2.7/CTEM 1.0 are implemented in CCCma&#39;s coupled carbon climate model.</description>
+        <definitionSource xml:lang="mcmaster.ca)  Citations: 1. S. Huang, M. A. Arain, V. Arora, F. Yuan, J. Brodeur, M. Peichl, 2011. Analysis of nitrogen controls on carbon and water exchanges in a conifer forest using the CLASS-CTEMN+ model, Ecological Modeling, 222(20&#8211;22): 3743&#8211;3760, http-dx.doi.org/10.1016/j.ecolmodel.2011.09.008.">http-nacp.ornl.gov/mstmipdata/
 Contacts:
 Altaf Arain (arainm</definitionSource>
-        <descriptionSource>http-www.cccma.ec.gc.ca/ctem/</descriptionSource>
     </owl:Class>
     
 
@@ -850,17 +845,14 @@ Altaf Arain (arainm</definitionSource>
 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#CLM4VIC_MstmipVersion1ModeledMethod">
         <rdfs:label>CLM4VIC_MstmipVersion1_Modeled_Method</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RcScXD6JR0s7GJESttk3li"/>
         <description>Incorporating parameterizations from the Variable Infiltration
 Capacity (VIC) land surface model into CLM.</description>
-        <descriptionSource>http-www.cesm.ucar.edu/working_groups/Land/Presentations/2012/huang.pdf</descriptionSource>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definitionSource xml:lang="pnnl.gov)
-
-Citations:
-1. Li, H., M. Huang, M. S. Wigmosta, et al. 2011, Evaluating runoff simulations from the Community Land Model 4.0 using observations from flux towers and a mountainous watershed, J. Geophys. Res., 116, D24120, doi:10.1029/2011JD016276.">http-nacp.ornl.gov/mstmipdata/
+        <definitionSource xml:lang="pnnl.gov)  Citations: 1. Li, H., M. Huang, M. S. Wigmosta, et al. 2011, Evaluating runoff simulations from the Community Land Model 4.0 using observations from flux towers and a mountainous watershed, J. Geophys. Res., 116, D24120, doi:10.1029/2011JD016276.">http-nacp.ornl.gov/mstmipdata/
 Contacts:
 Maoyi Huang (maoyi.huang</definitionSource>
+        <descriptionSource>http-www.cesm.ucar.edu/working_groups/Land/Presentations/2012/huang.pdf</descriptionSource>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
     </owl:Class>
     
 
@@ -869,18 +861,13 @@ Maoyi Huang (maoyi.huang</definitionSource>
 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#CLM_MstmipVersion1ModeledMethod">
         <rdfs:label>CLM_Mstmip_Version1_Modeled_Method</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
-        <description>The Community Land Model version 4.0 (CLM4.0) is the land model used in the CCSM4.0. CLM4.0 is the latest in a series of land models developed through the CCSM project.</description>
-        <descriptionSource>http-www.cesm.ucar.edu/models/ccsm4.0/clm/</descriptionSource>
+        <rdfs:subClassOf rdf:resource="&webprotege;RcScXD6JR0s7GJESttk3li"/>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definitionSource xml:lang="ornl.gov)
-
-Citations:
-1. Mao, Jiafu, Peter E. Thornton, Xiaoying Shi, Maosheng Zhao, Wilfred M. Post, 2012: Remote Sensing Evaluation of CLM4 GPP for the Period 2000–09. J. Climate, 25, 5327–5342. doi: http-dx.doi.org/10.1175/JCLI-D-11-00401.1
-2. Shi, X., Mao J., Thornton P. E., HOFFMAN F. O. R. R. E. S. T. M., &amp; Post W. M. (2011).  The impact of climate, CO2, nitrogen deposition and land use change on simulated contemporary global river flow. Geophysical Research Letters. 38(8). doi: 10.1029/2011GL046773
-3. Mao, Jiafu; Shi, Xiaoying; Thornton, Peter E.; Hoffman, Forrest M.; Zhu, Zaichun; Myneni, Ranga B. 2013. &quot;Global Latitudinal-Asymmetric Vegetation Growth Trends and Their Driving Mechanisms: 1982–2009.&quot; Remote Sens. 5, no. 3: 1484-1497.">http-nacp.ornl.gov/mstmipdata/
+        <description>The Community Land Model version 4.0 (CLM4.0) is the land model used in the CCSM4.0. CLM4.0 is the latest in a series of land models developed through the CCSM project.</description>
+        <definitionSource xml:lang="ornl.gov)  Citations: 1. Mao, Jiafu, Peter E. Thornton, Xiaoying Shi, Maosheng Zhao, Wilfred M. Post, 2012: Remote Sensing Evaluation of CLM4 GPP for the Period 2000&#8211;09. J. Climate, 25, 5327&#8211;5342. doi: http-dx.doi.org/10.1175/JCLI-D-11-00401.1 2. Shi, X., Mao J., Thornton P. E., HOFFMAN F. O. R. R. E. S. T. M., &amp; Post W. M. (2011).  The impact of climate, CO2, nitrogen deposition and land use change on simulated contemporary global river flow. Geophysical Research Letters. 38(8). doi: 10.1029/2011GL046773 3. Mao, Jiafu; Shi, Xiaoying; Thornton, Peter E.; Hoffman, Forrest M.; Zhu, Zaichun; Myneni, Ranga B. 2013. &quot;Global Latitudinal-Asymmetric Vegetation Growth Trends and Their Driving Mechanisms: 1982&#8211;2009.&quot; Remote Sens. 5, no. 3: 1484-1497.">http-nacp.ornl.gov/mstmipdata/
 Contacts:
 Daniel J. Hayes (hayesdj</definitionSource>
+        <descriptionSource>http-www.cesm.ucar.edu/models/ccsm4.0/clm/</descriptionSource>
     </owl:Class>
     
 
@@ -889,9 +876,9 @@ Daniel J. Hayes (hayesdj</definitionSource>
 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#CarbonCycleComponents">
         <rdfs:label>Carbon_Cycle_Components</rdfs:label>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definition>The parts that make up the combined processes that cycle carbon, (including photosynthesis, decomposition, and respiration)  between its major reservoirs (the atmosphere, oceans, and living organisms).</definition>
-        <definitionSource>&quot;carbon cycle.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Feb. 2015 http-www.thefreedictionary.com/carbon+cycle</definitionSource>
+        <definitionSource>&quot;carbon cycle.&quot;&#160;American Heritage&#174; Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Feb. 2015&#160;http-www.thefreedictionary.com/carbon+cycle</definitionSource>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
     </owl:Class>
     
 
@@ -900,17 +887,21 @@ Daniel J. Hayes (hayesdj</definitionSource>
 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#DLEM_MstmipVersion1ModeledMethod">
         <rdfs:label>DLEM_Mstmip_Version1_Modeled_Method</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <description>The Dynamic Land Ecosystem Model (DLEM) represents the state-of-the-art in terrestrial ecosystem modeling, which couples biophysical, hydrological, major biogeochemical processes (C, N,  and P cycling) including trace gases emissions such as CO2, N2O, CH4 , vegetation dynamics, disturbances including natural and anthropogenic aspects (e.g. land-use/land-cover change, intensive management on crops and forests, wild fire, insect and disease etc.) ,  and works at multiple scales in time from daily to yearly and space from meters to kilometers, from region to globe across Earth’s land surface and in adjacent ocean regions.</description>
+        <rdfs:subClassOf rdf:resource="&webprotege;RcScXD6JR0s7GJESttk3li"/>
+        <description>The Dynamic Land Ecosystem Model (DLEM) represents the state-of-the-art in terrestrial ecosystem modeling, which couples biophysical, hydrological, major biogeochemical processes (C, N,  and P cycling) including trace gases emissions such as CO2, N2O, CH4 , vegetation dynamics, disturbances including natural and anthropogenic aspects (e.g. land-use/land-cover change, intensive management on crops and forests, wild fire, insect and disease etc.) ,  and works at multiple scales in time from daily to yearly and space from meters to kilometers, from region to globe across Earth&#8217;s land surface and in adjacent ocean regions.</description>
         <descriptionSource>https-scisoc.confex.com/crops/2013am/webprogram/Paper78258.html</descriptionSource>
-        <definitionSource xml:lang="auburn.edu)
-
-Citations:
-1. Tian, H., X. Xu, C. Lu, M. Liu, W. Ren, G. Chen, J. Melillo, and J. Liu (2011), Net exchanges of CO2, CH4, and N2O between China&apos;s terrestrial ecosystems and the atmosphere and their contributions to global climate warming, J. Geophys. Res., 116, G02011, doi:10.1029/2010JG001393.
-2. Tian, HQ, G. Chen, C. Zhang, M. Liu, G. Sun, A. Chappelka, W. Ren, X. Xu, C. Lu, S. Pan, H. Chen, D. Hui, S. McNulty, G. Lockaby and E. Vance. 2012. Century-scale response of ecosystem carbon storage to multifactorial global change in the Southern United States. Ecosystems 15(4): 674-694, DOI: 10.1007/s10021-012-9539-x">http-nacp.ornl.gov/mstmipdata/
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definitionSource xml:lang="auburn.edu)  Citations: 1. Tian, H., X. Xu, C. Lu, M. Liu, W. Ren, G. Chen, J. Melillo, and J. Liu (2011), Net exchanges of CO2, CH4, and N2O between China&#39;s terrestrial ecosystems and the atmosphere and their contributions to global climate warming, J. Geophys. Res., 116, G02011, doi:10.1029/2010JG001393. 2. Tian, HQ, G. Chen, C. Zhang, M. Liu, G. Sun, A. Chappelka, W. Ren, X. Xu, C. Lu, S. Pan, H. Chen, D. Hui, S. McNulty, G. Lockaby and E. Vance. 2012. Century-scale response of ecosystem carbon storage to multifactorial global change in the Southern United States. Ecosystems 15(4): 674-694, DOI: 10.1007/s10021-012-9539-x">http-nacp.ornl.gov/mstmipdata/
 Contacts:
 Hanqin Tian (tianhan</definitionSource>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#DOC_Flux -->
+
+    <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#DOC_Flux">
+        <rdfs:subClassOf rdf:resource="&skos2;Concept"/>
     </owl:Class>
     
 
@@ -921,7 +912,7 @@ Hanqin Tian (tianhan</definitionSource>
         <rdfs:label>Field_Method</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_59b6b12a_c40c_4b55_865e_193041110d55"/>
         <definition>strawman definition from margaret:
-a Field_Method is a method for determining a component of primary production that involves observations or measurements of the real world. A field method may have steps which could be considered &apos;modeling&apos; (such as development of an allometric model of tree growth based on height), but measurements &quot;in the field&quot; (eg, of trees) are always involved. compare to Modeled_Method.</definition>
+a Field_Method is a method for determining a component of primary production that involves observations or measurements of the real world. A field method may have steps which could be considered &#39;modeling&#39; (such as development of an allometric model of tree growth based on height), but measurements &quot;in the field&quot; (eg, of trees) are always involved. compare to Modeled_Method.</definition>
     </owl:Class>
     
 
@@ -931,9 +922,9 @@ a Field_Method is a method for determining a component of primary production tha
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#GPP">
         <rdfs:label>GPP</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f"/>
+        <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definition>The sum of gross carbon fixation by autotrophic carbon-fixing tissues per unit ground or water area and time.</definition>
-        <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
     </owl:Class>
     
 
@@ -942,12 +933,12 @@ a Field_Method is a method for determining a component of primary production tha
 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#GTEC_MstmipVersion1ModeledMethod">
         <rdfs:label>GTEC_Mstmip_Version1_Modeled_Method</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RcScXD6JR0s7GJESttk3li"/>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definitionSource>http-www.esd.ornl.gov/~wmp/GTEC/pgtec.html</definitionSource>
         <description>GTEC = Global Terrestrial Ecosystem Carbon Model
 
 GTEC - global model contains 21,600 1 degree terrestrial cells. The carbon dynamics of each vegetated land cell (1.0 degree latitude X 1.0 degree longitude resolution) is described by a mechanistic soil-plant-atmosphere model (LoTEC) of ecosystem carbon storage and CO2 and H2O flux. Each grid cell is assigned to one of 15 ecosystem types and one of 105 soil types.</description>
-        <definitionSource>http-www.esd.ornl.gov/~wmp/GTEC/pgtec.html</definitionSource>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definitionSource xml:lang="ornl.gov)">http-nacp.ornl.gov/mstmipdata/
 Contacts:
 Daniel Ricciuto (ricciutodm</definitionSource>
@@ -959,15 +950,23 @@ Daniel Ricciuto (ricciutodm</definitionSource>
 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#ISAM_MstmipVersion1ModeledMethod">
         <rdfs:label>ISAM_Mstmip_Version1_Modeled_Method</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RcScXD6JR0s7GJESttk3li"/>
+        <descriptionSource>http-climate.atmos.uiuc.edu/isam2/descript.html</descriptionSource>
         <description>Integrated Assessment Modeling (IAM) is a new important research methodology for examining the complex interactions among physical, and human systems. Rather than actually using many of the multi-dimensional and complicated expert models, IAM build on the knowledge achieved by each individual scientific discipline. The uses of such tools need to explicitly recognize and address the existence of considerable uncertainty and scientific debate surrounding climate issues.
 
 Our existing Integrated Science Assessment Model (ISAM) for assessment of climate change (Jain et al., 1994) consists of coupled modules for representation of the carbon cycle, effects of greenhouse gas emissions and aerosols on atmospheric composition, effects on global temperatures using an energy balance model, and processes affecting sea level change. This model has been used to estimate the relation between the time-dependent rate of greenhouse gas emissions and quantitative features of climate global temperature, the rate of temperature change, and sea level that are thought to be indicators of human impact on climate and ecosystems (Wigley et al., 1998). This model has also been applied to studies of Global Warming Potential (GWP, Wuebbles, et al., 1995), and the Economic-Damage Index (EDI, Hammitt et al., 1996) concepts.</description>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <descriptionSource>http-climate.atmos.uiuc.edu/isam2/descript.html</descriptionSource>
         <definitionSource xml:lang="illinois.edu)">http-nacp.ornl.gov/mstmipdata/
 Contacts:
 Atul Jain (jain1</definitionSource>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#LIDAR -->
+
+    <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#LIDAR">
+        <rdfs:subClassOf rdf:resource="&skos2;Concept"/>
     </owl:Class>
     
 
@@ -976,20 +975,36 @@ Atul Jain (jain1</definitionSource>
 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#LPJ-wsl_MstmipVersion1ModeledMethod">
         <rdfs:label>LPJ-wsl_Mstmip_Version1_Modeled_Method</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <rdfs:subClassOf rdf:resource="&webprotege;RcScXD6JR0s7GJESttk3li"/>
+        <descriptionSource>http-digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1132&amp;context=nasapub</descriptionSource>
         <description>LPJ-wsl is a dynamic global vegetation model that simulates
 coupled biogeography and biogeochemical responses to climate,
 CO2, and disturbance (Sitch et al., 2003).</description>
-        <descriptionSource>http-digitalcommons.unl.edu/cgi/viewcontent.cgi?article=1132&amp;context=nasapub</descriptionSource>
-        <definitionSource xml:lang="lsce.ipsl.fr)citations:sitch s, smith b, prentice ic, arneth a, bondeau a, cramer w, kaplan j, levis s, lucht, w, sykes m, thonicke k, venevsky s 2003. evaluation of ecosystem dynamics, plant geography and terrestrial carbon cycling in the lpj dynamic vegetation model. global change biology 9: 161–185.bondeau a, smith pc, zaehle s, schaphoff s, lucht w, cramer w, gerten d, lotze-campen h, müller c, reichstein m &amp; smith b (2007) modelling the role of agriculture for the 20th century global terrestrial carbon balance. gl ch biol 13:679-706,poulter, b, l aragao, u heyder, gumpenberger, m, f langerwisch, a rammig, k thonicke and w cramer. 2010. net biome production of the amazon basin in the 21st century. global change biology, 16(7):2062-2075.">http-nacp.ornl.gov/mstmipdata/
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definitionSource xml:lang="lsce.ipsl.fr)citations:sitch s, smith b, prentice ic, arneth a, bondeau a, cramer w, kaplan j, levis s, lucht, w, sykes m, thonicke k, venevsky s 2003. evaluation of ecosystem dynamics, plant geography and terrestrial carbon cycling in the lpj dynamic vegetation model. global change biology 9: 161&#8211;185.bondeau a, smith pc, zaehle s, schaphoff s, lucht w, cramer w, gerten d, lotze-campen h, m&#252;ller c, reichstein m &amp; smith b (2007) modelling the role of agriculture for the 20th century global terrestrial carbon balance. gl ch biol 13:679-706,poulter, b, l aragao, u heyder, gumpenberger, m, f langerwisch, a rammig, k thonicke and w cramer. 2010. net biome production of the amazon basin in the 21st century. global change biology, 16(7):2062-2075.">http-nacp.ornl.gov/mstmipdata/
 Contacts:
 Benjamin Poulter (benjamin.poulter@lsce.ipsl.fr)
 
 Citations:
-1. Sitch S, Smith B, Prentice IC, Arneth A, Bondeau A, Cramer W, Kaplan J, Levis S, Lucht, W, Sykes M, Thonicke K, Venevsky S 2003. Evaluation of ecosystem dynamics, plant geography and terrestrial carbon cycling in the LPJ Dynamic Vegetation Model. Global Change Biology 9: 161–185.
-2. Bondeau A, Smith PC, Zaehle S, Schaphoff S, Lucht W, Cramer W, Gerten D, Lotze-Campen H, Müller C, Reichstein M &amp; Smith B (2007) Modelling the role of agriculture for the 20th century global terrestrial carbon balance. Gl Ch Biol 13:679-706,
+1. Sitch S, Smith B, Prentice IC, Arneth A, Bondeau A, Cramer W, Kaplan J, Levis S, Lucht, W, Sykes M, Thonicke K, Venevsky S 2003. Evaluation of ecosystem dynamics, plant geography and terrestrial carbon cycling in the LPJ Dynamic Vegetation Model. Global Change Biology 9: 161&#8211;185.
+2. Bondeau A, Smith PC, Zaehle S, Schaphoff S, Lucht W, Cramer W, Gerten D, Lotze-Campen H, M&#252;ller C, Reichstein M &amp; Smith B (2007) Modelling the role of agriculture for the 20th century global terrestrial carbon balance. Gl Ch Biol 13:679-706,
 3. Poulter, B, L Aragao, U Heyder, Gumpenberger, M, F Langerwisch, A Rammig, K Thonicke and W Cramer. 2010. Net biome production of the Amazon Basin in the 21st century. Global Change Biology, 16(7):2062-2075.</definitionSource>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#Leaf_Decomposition -->
+
+    <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#Leaf_Decomposition">
+        <rdfs:subClassOf rdf:resource="&skos2;Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#Leaves -->
+
+    <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#Leaves">
+        <rdfs:subClassOf rdf:resource="&skos2;Concept"/>
     </owl:Class>
     
 
@@ -1005,15 +1020,23 @@ a Modeled_Method (is Simulated_Method better?) uses only data obtained from some
     
 
 
+    <!-- https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#NEE -->
+
+    <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#NEE">
+        <rdfs:subClassOf rdf:resource="&skos2;Concept"/>
+    </owl:Class>
+    
+
+
     <!-- https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#NPP -->
 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#NPP">
         <rdfs:label>NPP</rdfs:label>
         <owl:equivalentClass rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#NetPrimaryProductivity"/>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f"/>
+        <definition>Gross primary production (GPP) minus autotrophic respiration (AR).</definition>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
-        <definition>Gross primary production (GPP) minus autotrophic respiration (AR).</definition>
     </owl:Class>
     
 
@@ -1024,9 +1047,9 @@ a Modeled_Method (is Simulated_Method better?) uses only data obtained from some
         <rdfs:label>Net_Primary_Productivity</rdfs:label>
         <owl:equivalentClass rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_01d8d3c8_8b34_4af9_9737_819614bbcca4"/>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f"/>
+        <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
         <definition>Gross primary production (GPP) minus autotrophic respiration (AR).</definition>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
     </owl:Class>
     
 
@@ -1035,19 +1058,16 @@ a Modeled_Method (is Simulated_Method better?) uses only data obtained from some
 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#ORCHIDEE-LSCE_MstmipVersion1ModeledMethod">
         <rdfs:label>ORCHIDEE-LSCE_MstmipVersion1_Modeled_Method</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
-        <descriptionSource>http-unfccc.int/adaptation/nairobi_work_programme/knowledge_resources_and_publications/items/7382.php</descriptionSource>
+        <rdfs:subClassOf rdf:resource="&webprotege;RcScXD6JR0s7GJESttk3li"/>
         <description>The ORCHIDEE dynamic global vegetation model represents the land surface features of the IPSL coupled atmosphere-ocean-vegetation model. ORCHIDEE has been developed using first order ecophysiological principles to represent both natural ecosystem and managed land carbon, water, and energy dynamics across multiple spatial (site to globe) and temporal (sub-daily to centennial) scales.
 
-lsce = Laboratoire des Sciences du Climat et l&apos;Environnement</description>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definitionSource xml:lang="lsce.ipsl.fr)
-
-Citations:
-1. Krinner, G., Viovy, N., Noblet-Ducoudre, N. de, Ogee, J., Polcher, J., Friedlingstein, P., Ciais, P., Sitch, S., and Prentice, I. C (2005). A dynamic global vegetation model for studies of the coupled atmosphere-biosphere system. Global Biogeochem. Cycles, 19, GB1015.">http-nacp.ornl.gov/mstmipdata/
+lsce = Laboratoire des Sciences du Climat et l&#39;Environnement</description>
+        <definitionSource xml:lang="lsce.ipsl.fr)  Citations: 1. Krinner, G., Viovy, N., Noblet-Ducoudre, N. de, Ogee, J., Polcher, J., Friedlingstein, P., Ciais, P., Sitch, S., and Prentice, I. C (2005). A dynamic global vegetation model for studies of the coupled atmosphere-biosphere system. Global Biogeochem. Cycles, 19, GB1015.">http-nacp.ornl.gov/mstmipdata/
 Contacts:
 Shushi Peng (Shushi.Peng@lsce.ipsl.fr)
-Gwena‰lle Berthier (Gwenaelle.Berthier</definitionSource>
+Gwena&#8240;lle Berthier (Gwenaelle.Berthier</definitionSource>
+        <descriptionSource>http-unfccc.int/adaptation/nairobi_work_programme/knowledge_resources_and_publications/items/7382.php</descriptionSource>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
     </owl:Class>
     
 
@@ -1058,13 +1078,13 @@ Gwena‰lle Berthier (Gwenaelle.Berthier</definitionSource>
         <rdfs:label>Net_Primary_Production_Carbon_Flux</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f"/>
         <owl:disjointWith rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_4b723dcd_6360_4408_a8e8_04b8bd8fa93a"/>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definition>Gross primary production (GPP) minus autotrophic respiration (AR) per unit ground or water area and time.</definition>
-        <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
-        <rdfs:comment>the amount of primary production available for export (ie, gross, minus losses, like the autotrophs&apos; own respiration, or other loss (exudation) not used by the carbon-fixing organism itself)
+        <rdfs:comment>the amount of primary production available for export (ie, gross, minus losses, like the autotrophs&#39; own respiration, or other loss (exudation) not used by the carbon-fixing organism itself)
 = gross primary production - autotrophic respiration
 
 synonyms: NPP</rdfs:comment>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
     </owl:Class>
     
 
@@ -1075,8 +1095,8 @@ synonyms: NPP</rdfs:comment>
         <rdfs:label>Soil_Carbon_Pool</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definitionSource>&quot;soil.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Feb. 2015 http-www.thefreedictionary.com/soil</definitionSource>
-        <definition>The mass of carbon contained within the top layer of the earth&apos;s surface in which plants can grow, consisting of rock and mineral particles mixed with decaying organic matter and having the capability of retaining water.</definition>
+        <definitionSource>&quot;soil.&quot;&#160;American Heritage&#174; Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Feb. 2015&#160;http-www.thefreedictionary.com/soil</definitionSource>
+        <definition>The mass of carbon contained within the top layer of the earth&#39;s surface in which plants can grow, consisting of rock and mineral particles mixed with decaying organic matter and having the capability of retaining water.</definition>
     </owl:Class>
     
 
@@ -1086,13 +1106,13 @@ synonyms: NPP</rdfs:comment>
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_186f7e04_ce52_4ffd_8967_ee5f637751ef">
         <rdfs:label>Carbon_Flux</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#CarbonCycleComponents"/>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definitionSource>Litton, C.M. et al. Carbon allocation in forest ecosystems. Global Change Biology. V 13 I 10. pp. 2089 - 2109. July 2007.</definitionSource>
+        <descriptionSource>unknown.</descriptionSource>
+        <definition>The rate at which a mass of carbon moves to or from a particular component of the ecosystem per unit time.</definition>
         <description>Carbon fluxes are the movement of Carbon from one place (Source) to another (Sink).  Carbon fluxes all have dimensions of {mass or amount of} Carbon per area (or volume) per time
 
 biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than kg to quantify the amount of Carbon, whereas Climate-oriented projects use kg</description>
-        <definition>The rate at which a mass of carbon moves to or from a particular component of the ecosystem per unit time.</definition>
-        <descriptionSource>unknown.</descriptionSource>
-        <definitionSource>Litton, C.M. et al. Carbon allocation in forest ecosystems. Global Change Biology. V 13 I 10. pp. 2089 - 2109. July 2007.</definitionSource>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
     </owl:Class>
     
 
@@ -1102,9 +1122,9 @@ biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_1a9b59a0_d424_41c6_afe0_0a1f46378d5f">
         <rdfs:label>Plankton_Carbon_Pool</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definition>The mass of carbon contained in free-floating organisms of the sea and fresh water that for the most part move passively with the water currents and consist mostly of microorganisms and small plants and animals.</definition>
         <definitionSource>Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</definitionSource>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
     </owl:Class>
     
 
@@ -1114,17 +1134,17 @@ biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6">
         <rdfs:label>Carbon_Pool</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#CarbonCycleComponents"/>
-        <definition>A reservoir with the capacity to store and release carbon, such as soil, terrestrial vegetation, the ocean, and the atmosphere {contributed by margaret, from</definition>
+        <description>Carbon Pools are reservoirs in the system with the capacity to exchange. Usually scientists are interested in the size of carbon pools, and the movement of carbon between pools. Carbon pools can vary widely in scale, from an ecosystem to an species functional level. The dimensions are likely to be mass or moles Carbon per area (eg, kg per m2).</description>
         <definition>Carbon Pools are amounts of carbon in the system. dimensions are mass Carbon per area (eg, kg per m2
 (can these be moles?) 
 {contributor, citation unkknown}</definition>
-        <descriptionSource>O&apos;Brien, pers comm. 2015-02-20</descriptionSource>
-        <description>Carbon Pools are reservoirs in the system with the capacity to exchange. Usually scientists are interested in the size of carbon pools, and the movement of carbon between pools. Carbon pools can vary widely in scale, from an ecosystem to an species functional level. The dimensions are likely to be mass or moles Carbon per area (eg, kg per m2).</description>
+        <description>Carbon Pools are reservoirs in the system with the capacity to exchange carbon. Usually scientists are interested in the size of pools, and the movement of carbon between pools. The dimensions of a carbon pool are likely to be mass or moles Carbon per area or volume (eg, kg per m2).</description>
         <rdfs:comment>Carbon Pools are amounts of carbon in the system. diimensions are mass Carbon per area (eg, kg per m2
 (can these be moles?)</rdfs:comment>
+        <descriptionSource>O&#39;Brien, pers comm. 2015-02-20</descriptionSource>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <description>Carbon Pools are reservoirs in the system with the capacity to exchange carbon. Usually scientists are interested in the size of pools, and the movement of carbon between pools. The dimensions of a carbon pool are likely to be mass or moles Carbon per area or volume (eg, kg per m2).</description>
         <definitionSource>&quot;carbon pool.&quot; McGraw-Hill Dictionary of Scientific &amp; Technical Terms, 6E. 2003. The McGraw-Hill Companies, Inc. 20 Feb. 2015 http-encyclopedia2.thefreedictionary.com/carbon+pool</definitionSource>
+        <definition>A reservoir with the capacity to store and release carbon, such as soil, terrestrial vegetation, the ocean, and the atmosphere {contributed by margaret, from</definition>
     </owl:Class>
     
 
@@ -1134,13 +1154,13 @@ biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_4b723dcd_6360_4408_a8e8_04b8bd8fa93a">
         <rdfs:label>Gross_Primary_Production_Carbon_Flux</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f"/>
+        <definition>The sum of gross carbon fixation by autotrophic carbon-fixing tissues per unit ground or water area and time.</definition>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
-        <rdfs:comment>primary production before the autotrphs&apos; own respiration is subtracted.
+        <rdfs:comment>primary production before the autotrphs&#39; own respiration is subtracted.
 also called photosynthetic rate, or carbon fixation rate.
 
 Synonyms: GPP</rdfs:comment>
-        <definition>The sum of gross carbon fixation by autotrophic carbon-fixing tissues per unit ground or water area and time.</definition>
+        <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
     </owl:Class>
     
 
@@ -1149,17 +1169,17 @@ Synonyms: GPP</rdfs:comment>
 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_59b6b12a_c40c_4b55_865e_193041110d55">
         <rdfs:label>Method</rdfs:label>
-        <definitionSource>&quot;method.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Feb. 2015 http-www.thefreedictionary.com/method</definitionSource>
         <definition>A regular and systematic way of accomplishing something, characteristic of a particular discipline or field of knowledge.</definition>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <rdfs:comment>The methods that can be used for measurements. I don&apos;t think its the place of this ontology to model all the differences and assumptions between methods. 
+        <rdfs:comment>The methods that can be used for measurements. I don&#39;t think its the place of this ontology to model all the differences and assumptions between methods. 
 Reasons:
 1. That would get very complicated and is probably out of scope.
 2. we should assume some level of knowledge of the user. People using pprod data should know enough to evaluate basic diifferences between methods. eg, an ecologist ought to know that &quot;allometrics&quot; are an average for a species or population, not a community. or an oceanographer ought to know the difference between light-dark O2 and light-dark C14 inclubations. 
 
-So if you want &quot;community NPP&quot;, and you see the method used was allometric -- you&apos;d know you had to understand the community composition to know if prod of one or a few groups is enough.
+So if you want &quot;community NPP&quot;, and you see the method used was allometric -- you&#39;d know you had to understand the community composition to know if prod of one or a few groups is enough.
 
 if you wanted &quot;community NPP&quot;,in ocean data, you would know that O2 light-dark was OK, but that C14 update might actually be GPP</rdfs:comment>
+        <definitionSource>&quot;method.&quot;&#160;American Heritage&#174; Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Feb. 2015&#160;http-www.thefreedictionary.com/method</definitionSource>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
     </owl:Class>
     
 
@@ -1169,13 +1189,13 @@ if you wanted &quot;community NPP&quot;,in ocean data, you would know that O2 li
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_5df2ffa1_81e6_46b1_a90a_f6d3017c750e">
         <rdfs:label>Peak_Biomass_Harvest_Method</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#FieldMethod"/>
-        <definition>Peak_Biomass_Harvest_Method is an estimate of above ground NPP based on the above ground biomass harvested once, usually near the end of the growing season, at or just after the time of peak biomass</definition>
-        <descriptionSource>Fahey and Knapp, 2007, p33</descriptionSource>
+        <definitionSource>Fahey and Knapp, 2007, p33</definitionSource>
         <description>The &quot;Peak Standing Biomass Harvest&quot; method is recommended for grasslands that meet the following criteria:
-1) there is little carryover of living biomass from previous years due to distinct dormant season or fire during the dormant season or the previous year&apos;s biomass can be easily recognized and separated from the current year&apos;s biomass (living and dead)
+1) there is little carryover of living biomass from previous years due to distinct dormant season or fire during the dormant season or the previous year&#39;s biomass can be easily recognized and separated from the current year&#39;s biomass (living and dead)
 2) the growing season is sufficiently short or plant material is of such low quality that decomposition of biomass produced  can be ignored 
 3) consumption of plants by herbivores is minimal (i.e., large grazers are absent and small vertebrates and invertebrates can be ignored).</description>
-        <definitionSource>Fahey and Knapp, 2007, p33</definitionSource>
+        <descriptionSource>Fahey and Knapp, 2007, p33</descriptionSource>
+        <definition>Peak_Biomass_Harvest_Method is an estimate of above ground NPP based on the above ground biomass harvested once, usually near the end of the growing season, at or just after the time of peak biomass</definition>
     </owl:Class>
     
 
@@ -1186,13 +1206,13 @@ if you wanted &quot;community NPP&quot;,in ocean data, you would know that O2 li
         <rdfs:label>Eddy_Covariance_Method</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#FieldMethod"/>
         <rdfs:comment>add these synonyms (near? exact?):  also known as eddy correlation and eddy flux</rdfs:comment>
-        <definition>The eddy covariance method is an atmospheric measurement technique to measure and calculate vertical turbulent fluxes within atmospheric boundary layers, and analyzes high-frequency wind and scalar atmospheric data series, to yield exchange rates (fluxes) of trace gasses.</definition>
-        <descriptionSource>http-en.wikipedia.org/wiki/Eddy_covariance</descriptionSource>
-        <definitionSource>http-en.wikipedia.org/wiki/Eddy_covariance</definitionSource>
         <description>It is frequently used to estimate momentum, heat, water vapor, carbon dioxide and methane fluxes. The technique is mathematically complex, and requires significant care in setting up and processing data. To date, there is no uniform terminology or a single methodology for the Eddy Covariance technique.
 
 The technique has additionally proven applicable under water to the benthic zone for measuring oxygen fluxes between seafloor and overlying water.[6] In these environments, the technique is generally known as the eddy correlation technique, or just eddy correlation. 
 For CO2.... tbd</description>
+        <definition>The eddy covariance method is an atmospheric measurement technique to measure and calculate vertical turbulent fluxes within atmospheric boundary layers, and analyzes high-frequency wind and scalar atmospheric data series, to yield exchange rates (fluxes) of trace gasses.</definition>
+        <definitionSource>http-en.wikipedia.org/wiki/Eddy_covariance</definitionSource>
+        <descriptionSource>http-en.wikipedia.org/wiki/Eddy_covariance</descriptionSource>
     </owl:Class>
     
 
@@ -1202,8 +1222,8 @@ For CO2.... tbd</description>
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_63b9a880_87cd_475e_b516_a3f9f05be67c">
         <rdfs:label>Total_Living_Carbon_Pool</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
-        <definition>The mass of carbon contained within all living organisms or a designated group of living organisms in a designated area.</definition>
         <definitionSource>Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</definitionSource>
+        <definition>The mass of carbon contained within all living organisms or a designated group of living organisms in a designated area.</definition>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
     </owl:Class>
     
@@ -1215,8 +1235,8 @@ For CO2.... tbd</description>
         <rdfs:label>Heterotrophic_Respiration_Carbon_Flux</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_d4cc57a9_1c01_4403_b016_7c6132b1ed48"/>
         <owl:disjointWith rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_e59004ab_0324_43e5_9a7d_7aee15f2c479"/>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definition>The respiration rate of heterotrophic organisms (animals and microbes) summed per unit ground or water area and time.</definition>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
     </owl:Class>
     
@@ -1226,11 +1246,18 @@ For CO2.... tbd</description>
 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_76b459c6_1fa9_4274_9ba8_c089405d82f9">
         <rdfs:label>Leaf_Carbon_Pool</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&skos2;related"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#Leaves"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&skos2;Concept"/>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definitionSource>Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</definitionSource>
         <definition>The mass of carbon contained within flattened photosynthetic structures emerging laterally from a main axis or stem and possessing true vascular tissue.</definition>
         <webprotege:RDPR2w0tyuMjcOslIygEemk>leaves</webprotege:RDPR2w0tyuMjcOslIygEemk>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
     </owl:Class>
     
 
@@ -1240,11 +1267,11 @@ For CO2.... tbd</description>
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_871a1c9f_9e5b_40cd_bf33_b73a3b8f378a">
         <rdfs:label>Carbon14_Uptake_Method</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#FieldMethod"/>
+        <descriptionSource>O&#39;Brien, pers comm 2015-02-15
+Fahey and Knapp, 2007</descriptionSource>
         <description>A C14 uptake method is typically used in aquatic environments, for microscopic autotrophs (phytoplankton). C14 is a radioactive tracer added as bicarbonate, and its concentration determined in the plankton after removed by filtration. Measurement scales tend to be small (hours and liters) relative to the scales of other field methods. Photosynthetic and heterotrophic activity are tightly coupled in planktonic systems (Fahey and Knapp, 2007). If the incubation is short enough, the result will be GPP (gross), because presumably, no labeled c14 was recycled (or respired) by the cells. 
 
 Sometimes researchers conduct &quot;light-dark bottle&quot;, but the dark bottle tells you something different than in o2 light-dark. It gives you dark CO2 uptake, so subtract this from light CO2 uptake if you want autotrophic GPP.</description>
-        <descriptionSource>O&apos;Brien, pers comm 2015-02-15
-Fahey and Knapp, 2007</descriptionSource>
     </owl:Class>
     
 
@@ -1254,9 +1281,9 @@ Fahey and Knapp, 2007</descriptionSource>
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_890d1d72_22ab_4798_9fbc_ffbcbeceb204">
         <rdfs:label>Benthic_Algae_Carbon_Pool</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definitionSource>Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</definitionSource>
         <definition>The mass of carbon present in algae on the seafloor.</definition>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
     </owl:Class>
     
 
@@ -1265,11 +1292,18 @@ Fahey and Knapp, 2007</descriptionSource>
 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_8a465c8f_561e_43cd_8aea_cd32c4903b4e">
         <rdfs:label>Net_Ecosystem_Exchange_Carbon_Flux</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&skos2;relatedMatch"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#NEE"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&skos2;Concept"/>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_186f7e04_ce52_4ffd_8967_ee5f637751ef"/>
-        <definitionSource>Hayes, D.J. et al. Reconciling estimates of the contemporary North American carbon balance among terrestrial biosphere models, atmospheric inversions, and a new approach for estimating net ecosystem exchange from inventory-based data. Global Change Biology. V 8, i 4. pp. 1282-1299. April 2012. DOI: 10.1111/j.1365-2486.2011.02627.x</definitionSource>
-        <webprotege:R7unHEEqjfrbhwNktTnb1cB>NEE</webprotege:R7unHEEqjfrbhwNktTnb1cB>
+        <definitionSource>Hayes, D.J. et al. Reconciling estimates of the contemporary North American carbon balance among terrestrial biosphere models, atmospheric inversions, and a new approach for estimating net ecosystem exchange from inventory-based data. Global Change Biology. V 8, i 4. pp. 1282-1299. April 2012. DOI:&#160;10.1111/j.1365-2486.2011.02627.x</definitionSource>
+        <definition>The magnitude of carbon sources and sinks is defined as the vertical exchange of CO2&#160;between the surface (land or ocean) and the atmosphere.</definition>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definition>The magnitude of carbon sources and sinks is defined as the vertical exchange of CO2 between the surface (land or ocean) and the atmosphere.</definition>
+        <webprotege:R7unHEEqjfrbhwNktTnb1cB>NEE</webprotege:R7unHEEqjfrbhwNktTnb1cB>
     </owl:Class>
     
 
@@ -1279,7 +1313,7 @@ Fahey and Knapp, 2007</descriptionSource>
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_903806ae_a331_4bea_8b44_9ca38b64ef75">
         <rdfs:label>Grass_Carbon_Pool</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
-        <definitionSource>&quot;grass.&quot; Collins English Dictionary – Complete and Unabridged. 1991, 1994, 1998, 2000, 2003. HarperCollins Publishers 24 Feb. 2015 http-www.thefreedictionary.com/grass</definitionSource>
+        <definitionSource>&quot;grass.&quot;&#160;Collins English Dictionary &#8211; Complete and Unabridged. 1991, 1994, 1998, 2000, 2003. HarperCollins Publishers 24 Feb. 2015&#160;http-www.thefreedictionary.com/grass</definitionSource>
         <definition>The mass of carbon contained within monocotyledonous plants of the family Poaceae, having jointed stems sheathed by long, narrow leaves, flowers in spikes, and seedlike fruits.</definition>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
     </owl:Class>
@@ -1291,13 +1325,13 @@ Fahey and Knapp, 2007</descriptionSource>
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f">
         <rdfs:label>Primary_Production_Carbon_Flux</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_186f7e04_ce52_4ffd_8967_ee5f637751ef"/>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definitionSource>Inferred from: Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
         <definition>The process of carbon fixation by autotrophic carbon-fixing tissues per unit ground or water area and time.</definition>
         <rdfs:comment>http-en.wikipedia.org/wiki/Primary_production
 Gross primary production (GPP) is the amount of chemical energy as biomass that primary producers create in a given length of time. (GPP is sometimes confused with Gross Primary productivity, which is the rate at which photosynthesis or chemosynthesis occurs.)
 
-For most purposes (including this one) the two can be the same. It&apos;s most practical to measure production over a given time interval and area, and that amounts to an areal rate.</rdfs:comment>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definitionSource>Inferred from: Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
+For most purposes (including this one) the two can be the same. It&#39;s most practical to measure production over a given time interval and area, and that amounts to an areal rate.</rdfs:comment>
     </owl:Class>
     
 
@@ -1306,11 +1340,18 @@ For most purposes (including this one) the two can be the same. It&apos;s most p
 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_98ad8beb_35ce_4acf_a7ee_2aba473b961d">
         <rdfs:label>Dissolved_Organic_Carbon_Flux</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&skos2;relatedMatch"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#DOC_Flux"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&skos2;Concept"/>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_186f7e04_ce52_4ffd_8967_ee5f637751ef"/>
-        <webprotege:R7unHEEqjfrbhwNktTnb1cB>DOC flux</webprotege:R7unHEEqjfrbhwNktTnb1cB>
         <definition>The rate at which a mass of dissolved organic carbon moves to or from a particular component of an ecosystem per unit time. Dissolved organic cabon is defined as the fraction of organic matter which is neither excluded nor adsorbed by the filter used to remove particulate organic carbon, and which is not volatile enough to be lost by the acidification and purging technique used to remove inorganic carbon.</definition>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definitionSource>Wangersky, P.J. Dissolved organic carbon methods: a critical review. Marine Chemistry. V 41 I 1-3. pp. 61-74. 1993.</definitionSource>
+        <webprotege:R7unHEEqjfrbhwNktTnb1cB>DOC flux</webprotege:R7unHEEqjfrbhwNktTnb1cB>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
     </owl:Class>
     
 
@@ -1324,7 +1365,7 @@ For most purposes (including this one) the two can be the same. It&apos;s most p
 usually, there is a &quot;iight bottle&quot; and &quot;dark bottle&quot;. O2 evolution in the Light bottle is the net result, or sum, of all processes (GPP, Autotrophic resp, and probably some heterotrophic respiration too, because heterotrophs are hard to exclude).  So Light bottle = NPP. 
 
 Dark bottle is respiration, probably total, eg, autotrophs + heterotrophs.
-So light + dark = GPP (or about as close as you can get with a field measurement, and assume that heterotrophs aren&apos;t respiring much.)</definition>
+So light + dark = GPP (or about as close as you can get with a field measurement, and assume that heterotrophs aren&#39;t respiring much.)</definition>
     </owl:Class>
     
 
@@ -1334,11 +1375,11 @@ So light + dark = GPP (or about as close as you can get with a field measurement
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_aba733a3_3622_46aa_8b7f_1a4ed7cb666e">
         <rdfs:label>Allometric_Method</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#FieldMethod"/>
-        <description>an allometric method is usually accomplished with a combination of measurements that are tailored to the organism, e.g, size, growth rate, carbon content, plus some loss terms. SBC&apos;s dataset 21 has a good example of an allometric method for kelp.</description>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <description>an allometric method is usually accomplished with a combination of measurements that are tailored to the organism, e.g, size, growth rate, carbon content, plus some loss terms. SBC&#39;s dataset 21 has a good example of an allometric method for kelp.</description>
         <definitionSource>Begon, M., Harper, J.L., Townsend, C.R. Ecology: Individuals, Populations, and Communities. Third Edition. Blackwell Science. 1996.</definitionSource>
         <definition>A method determining the relationship between a physical or physiological property of an organism relative to the size of the organism.</definition>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definitionSource>O&apos;Brien, pers comm, 2014-10-15</definitionSource>
+        <definitionSource>O&#39;Brien, pers comm, 2014-10-15</definitionSource>
     </owl:Class>
     
 
@@ -1348,8 +1389,8 @@ So light + dark = GPP (or about as close as you can get with a field measurement
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_ca6f170c_c1a8_49f8_b030_4384d006f359">
         <rdfs:label>Wood_Carbon_Pool</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
+        <definitionSource>&quot;wood.&quot;&#160;American Heritage&#174; Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Feb. 2015&#160;http-www.thefreedictionary.com/wood</definitionSource>
         <definition>The mass of carbon contained in the tough, fibrous substance lying beneath the bark of trees and shrubs, consisting of the vascular tissue known as xylem and composed chiefly of cellulose and lignin.</definition>
-        <definitionSource>&quot;wood.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Feb. 2015 http-www.thefreedictionary.com/wood</definitionSource>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
     </owl:Class>
     
@@ -1359,13 +1400,26 @@ So light + dark = GPP (or about as close as you can get with a field measurement
 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_cd5f0ef4_2990_4d4d_914a_30b6f8985b5b">
         <rdfs:label>Leaf_Litter_Carbon_Pool</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&skos2;related"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#Leaves"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&skos2;related"/>
+                <owl:someValuesFrom rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#Leaf_Decomposition"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&skos2;Concept"/>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_49ad0bd6_ecb1_47ea_8b21_150be66fcfe6"/>
-        <webprotege:RDPR2w0tyuMjcOslIygEemk>leaves</webprotege:RDPR2w0tyuMjcOslIygEemk>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definitionSource>Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</definitionSource>
         <webprotege:RDPR2w0tyuMjcOslIygEemk>leaf decomposition</webprotege:RDPR2w0tyuMjcOslIygEemk>
         <rdfs:comment>synonyms from LTER searched terms (mob, 2015-03-24)</rdfs:comment>
         <definition>The mass of carbon contained in the partly decomposed remains of plants on the surface and in the upper layers of the soil.</definition>
+        <definitionSource>Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</definitionSource>
+        <webprotege:RDPR2w0tyuMjcOslIygEemk>leaves</webprotege:RDPR2w0tyuMjcOslIygEemk>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
     </owl:Class>
     
 
@@ -1375,9 +1429,9 @@ So light + dark = GPP (or about as close as you can get with a field measurement
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_d4cc57a9_1c01_4403_b016_7c6132b1ed48">
         <rdfs:label>Respiration_Carbon_Flux</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_186f7e04_ce52_4ffd_8967_ee5f637751ef"/>
-        <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definition>CO2 produced by organisms and emitted to the environment per unit ground or water area and time.</definition>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
     </owl:Class>
     
 
@@ -1387,10 +1441,10 @@ So light + dark = GPP (or about as close as you can get with a field measurement
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_e23ed688_e186_4b59_aabb_d3f398aeb820">
         <rdfs:label>Fire_Carbon_Flux</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_186f7e04_ce52_4ffd_8967_ee5f637751ef"/>
+        <definition>The mass of carbon released from burning vegetation per unit time.</definition>
+        <definitionSource>Johnson, E.A. and Miyanishi, K. Forest Fires: Behavior and Ecological Effects. Academic Press. 2001</definitionSource>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <description>Fire Carbon Flux is a measure of carbon released into the atmosphere due to fire (MPS, 2015)</description>
-        <definitionSource>Johnson, E.A. and Miyanishi, K. Forest Fires: Behavior and Ecological Effects. Academic Press. 2001</definitionSource>
-        <definition>The mass of carbon released from burning vegetation per unit time.</definition>
     </owl:Class>
     
 
@@ -1400,9 +1454,9 @@ So light + dark = GPP (or about as close as you can get with a field measurement
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_e59004ab_0324_43e5_9a7d_7aee15f2c479">
         <rdfs:label>Autotrophic_Respiration_Carbon_Flux</rdfs:label>
         <rdfs:subClassOf rdf:resource="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_d4cc57a9_1c01_4403_b016_7c6132b1ed48"/>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definition>The sum of respiration (CO2 production) by all living parts of primary producers per unit ground or water area and time.</definition>
         <definitionSource>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</definitionSource>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chase LeCroy, orcid.org/0000-0002-1338-9436</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definition>The sum of respiration (CO2&#160;production) by all living parts of primary producers per unit ground or water area and time.</definition>
     </owl:Class>
     
 
@@ -1411,18 +1465,15 @@ So light + dark = GPP (or about as close as you can get with a field measurement
 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#SIB3-JPL_MstmipVersion1ModeledMethod">
         <rdfs:label>SIB3-JPL_MstmipVersion1_Modeled_Method</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RcScXD6JR0s7GJESttk3li"/>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <descriptionSource>http-biocycle.atmos.colostate.edu/research/models/sib3/</descriptionSource>
-        <description>The Simple Biosphere (SiB) Model was originally developed by Piers Sellers in the mid-1980’s as an internally-consistent module to surface-atmosphere exchanges of radiation, heat, moisture, and momentum over land.
+        <description>The Simple Biosphere (SiB) Model was originally developed by Piers Sellers in the mid-1980&#8217;s as an internally-consistent module to surface-atmosphere exchanges of radiation, heat, moisture, and momentum over land.
 
-It was extended in the mid-1990’s by a team of interdisciplinary scientists to include mechanistic linkages to photosynthesis, stomatal physiology, and satellite remote sensing.
+It was extended in the mid-1990&#8217;s by a team of interdisciplinary scientists to include mechanistic linkages to photosynthesis, stomatal physiology, and satellite remote sensing.
 
 Since that time it has been extended to include improved treatment of carbon cycling, soils, snow, hydrology, stable isotopes, phenology, and crops.</description>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definitionSource xml:lang="jpl.nasa.gov)
-
-Citations:
-1. Baker, I. T., L. Prihodko, A. S. Denning, M. Goulden, S. Miller, and H. R. da Rocha (2008), Seasonal drought stress in the Amazon: Reconciling models and observations, J. Geophys. Res., 113(G1), G00B01.">http-nacp.ornl.gov/mstmipdata/
+        <definitionSource xml:lang="jpl.nasa.gov)  Citations: 1. Baker, I. T., L. Prihodko, A. S. Denning, M. Goulden, S. Miller, and H. R. da Rocha (2008), Seasonal drought stress in the Amazon: Reconciling models and observations, J. Geophys. Res., 113(G1), G00B01.">http-nacp.ornl.gov/mstmipdata/
 Contacts:
 Nicholas C. Parazoo (nicholas.c.parazoo</definitionSource>
     </owl:Class>
@@ -1433,19 +1484,15 @@ Nicholas C. Parazoo (nicholas.c.parazoo</definitionSource>
 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#SIBCASA_MstmipVersion1ModeledMethod">
         <rdfs:label>SIBCASA_MstmipVersion1_Modeled_Method</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <descriptionSource>http-biocycle.atmos.colostate.edu/Documents/SiB/Schaefer_2008_J._Geophys._Res.pdf</descriptionSource>
+        <rdfs:subClassOf rdf:resource="&webprotege;RcScXD6JR0s7GJESttk3li"/>
         <description>We combine the photosynthesis and biophysical
 calculations in the Simple Biosphere model, Version 2.5 (SiB2.5) with the
 biogeochemistry from the Carnegie-Ames-Stanford Approach (CASA) model to create
 SiBCASA, a hybrid capable of estimating terrestrial carbon fluxes and biomass from diurnal
 to decadal timescales.</description>
-        <definitionSource xml:lang="nsidc.org)
-
-Citations:
-1. Schaefer, K., G. J. Collatz, P. Tans, A. S. Denning, I. Baker, J. Berry, L. Prihodko, N. Suits, and A. Philpott (2008), Combined Simple Biosphere/Carnegie-Ames-Stanford Approach terrestrial carbon cycle model, J. Geophys. Res., 113, G03034, doi:10.1029/2007JG000603.
-2. Schaefer, K., T. Zhang, A. G. Slater, L. Lu, A. Etringer, and I. Baker (2009), Improving simulated soil temperatures and soil freeze/thaw at high-latitude regions in the Simple Biosphere/Carnegie-Ames-Stanford Approach model, J. Geophys. Res., 114, F02021, doi:10.1029/2008JF001125.">http-nacp.ornl.gov/mstmipdata/
+        <descriptionSource>http-biocycle.atmos.colostate.edu/Documents/SiB/Schaefer_2008_J._Geophys._Res.pdf</descriptionSource>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definitionSource xml:lang="nsidc.org)  Citations: 1. Schaefer, K., G. J. Collatz, P. Tans, A. S. Denning, I. Baker, J. Berry, L. Prihodko, N. Suits, and A. Philpott (2008), Combined Simple Biosphere/Carnegie-Ames-Stanford Approach terrestrial carbon cycle model, J. Geophys. Res., 113, G03034, doi:10.1029/2007JG000603. 2. Schaefer, K., T. Zhang, A. G. Slater, L. Lu, A. Etringer, and I. Baker (2009), Improving simulated soil temperatures and soil freeze/thaw at high-latitude regions in the Simple Biosphere/Carnegie-Ames-Stanford Approach model, J. Geophys. Res., 114, F02021, doi:10.1029/2008JF001125.">http-nacp.ornl.gov/mstmipdata/
 Contacts:
 Kevin Schaefer (kevin.schaefer</definitionSource>
     </owl:Class>
@@ -1456,14 +1503,11 @@ Kevin Schaefer (kevin.schaefer</definitionSource>
 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#TEM6_MstmipVersion1ModeledMethod">
         <rdfs:label>TEM6_MstmipVersion1_Modeled_Method</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RcScXD6JR0s7GJESttk3li"/>
         <description>The Terrestrial Ecosystem Model (TEM) is a process-based ecosystem model that describes carbon, nitrogen and water dynamics of plants and soils for terrestrial ecosystems of the globe. The TEM uses spatially referenced information on climate, elevation, soils and vegetation as well as soil- and vegetation-specific parameters to make estimates of important carbon, nitrogen and water fluxes and pool sizes of terrestrial ecosystems. The TEM normally operates on a monthly time step and at a 0.5 degrees latitude/longitude spatial resolution, but the model has been applied at finer spatial resolutions (down to 1 hectare).</description>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <descriptionSource>http-ecosystems.mbl.edu/TEM/</descriptionSource>
-        <definitionSource xml:lang="ornl.gov)
-
-Citations:
-1. Hayes, D.J., A.D. McGuire, D.W. Kicklighter, K.R. Gurney, T.J. Burnside, and J.M. Melillo (2011), Is the northern high latitude land-based CO2 sink weakening? Global Biogeochemical Cycles, 25(3), GB3018, doi:10.1029/2010gb003813.">http-nacp.ornl.gov/mstmipdata/
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <definitionSource xml:lang="ornl.gov)  Citations: 1. Hayes, D.J., A.D. McGuire, D.W. Kicklighter, K.R. Gurney, T.J. Burnside, and J.M. Melillo (2011), Is the northern high latitude land-based CO2 sink weakening? Global Biogeochemical Cycles, 25(3), GB3018, doi:10.1029/2010gb003813.">http-nacp.ornl.gov/mstmipdata/
 Contacts:
 Dan Hayes (hayesdj</definitionSource>
     </owl:Class>
@@ -1474,17 +1518,13 @@ Dan Hayes (hayesdj</definitionSource>
 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#TRIPLEX-GHG_MstmipVersion1ModeledMethod">
         <rdfs:label>TRIPLEX-GHG_MstmipVersion1_Modeled_Method</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
-        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
+        <rdfs:subClassOf rdf:resource="&webprotege;RcScXD6JR0s7GJESttk3li"/>
         <descriptionSource>http-www.researchgate.net/publication/260724890_Modelling_methane_emissions_from_natural_wetlands_TRIPLEX-GHG_model_integration_sensitivity_analysis_and_calibration</descriptionSource>
+        <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <description>TRIPLEX-GHG is a process-based model framework used to quantify terrestrial ecosystem greenhouse gas dynamics by incorporating both ecological drivers and biogeochemical processes. 
 
 TRIPLEX-GHG was developed from the Integrated Biosphere Simulator (IBIS), a dynamic global vegetation model, coupled with a new methane (CH4) biogeochemistry module (incorporating CH4 production, oxidation, and transportation processes) and a water table module to investigate CH4 emission processes that occur in natural wetlands.</description>
-        <definitionSource xml:lang="uqam.ca)
-
-Citations:
-1. Peng, C.H., Zhu, Q.A and H. Chen, 2011. Integrating greenhouse gas emission processes into a dynamic global vegetation model: TRIPLEX-GHG model development and testing, In: procceding of ISEM 2011 Conference, pp76
-2. Peng et al (2013), in preparation">http-nacp.ornl.gov/mstmipdata/
+        <definitionSource xml:lang="uqam.ca)  Citations: 1. Peng, C.H., Zhu, Q.A and H. Chen, 2011. Integrating greenhouse gas emission processes into a dynamic global vegetation model: TRIPLEX-GHG model development and testing, In: procceding of ISEM 2011 Conference, pp76 2. Peng et al (2013), in preparation">http-nacp.ornl.gov/mstmipdata/
 Contacts:
 Changhui Peng (peng.changhui</definitionSource>
     </owl:Class>
@@ -1495,13 +1535,13 @@ Changhui Peng (peng.changhui</definitionSource>
 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#VEGAS2.1_MstmipVersion1ModeledMethod">
         <rdfs:label>VEGAS2.1_MstmipVersion1_Modeled_Method</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
+        <rdfs:subClassOf rdf:resource="&webprotege;RcScXD6JR0s7GJESttk3li"/>
         <description>The VEgetation-Global Atmosphere-Soil Model (VEGAS)</description>
+        <descriptionSource>http-www.ldeo.columbia.edu/~biasutti/Workshop/ppts/Zeng.pdf</descriptionSource>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
         <definitionSource xml:lang="atmos.umd.edu)">http-nacp.ornl.gov/mstmipdata/
 Contacts:
 Ning Zeng (zeng</definitionSource>
-        <descriptionSource>http-www.ldeo.columbia.edu/~biasutti/Workshop/ppts/Zeng.pdf</descriptionSource>
     </owl:Class>
     
 
@@ -1510,18 +1550,14 @@ Ning Zeng (zeng</definitionSource>
 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#VISIT_MstmipVersion1ModeledMethod">
         <rdfs:label>VISIT_MstmipVersion1_Modeled_Method</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RcScXD6JR0s7GJESttk3li"/>
-        <description>VISIT: Vegetation Integrative Simulator for Trace gases by A.Ito (NIES) 
-=&gt; ecophysiological, biogeochemical model: cf. Biome‐BGC, Century
-
-NIES = National Institute for Environmental Studies, Japan</description>
+        <rdfs:subClassOf rdf:resource="&webprotege;RcScXD6JR0s7GJESttk3li"/>
         <descriptionSource>http-www.fluxdata.org/DataInfo/AsilomarPresentations/090210_asilomar_aito.pdf</descriptionSource>
         <webprotege:R7rpAQzzBYGT0EFKKvWgnho>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</webprotege:R7rpAQzzBYGT0EFKKvWgnho>
-        <definitionSource xml:lang="gmail.com)
+        <description>VISIT:&#8233;Vegetation&#8233;Integrative&#8233;Simulator&#8233;for&#8233;Trace&#8233;gases&#8233;by&#8233;A.Ito&#8233;(NIES)&#8233;
+=&gt;&#8233;ecophysiological,&#8233;biogeochemical&#8233;model:&#8233;cf.&#8233;Biome&#8208;BGC,&#8233;Century
 
-Citations:
-1. Ito, A. (2010), Changing ecophysiological processes and carbon budget in East Asian ecosystems under near-future changes in climate: Implications for long-term monitoring from a process-based model, J.Plant Res., 123, 577-588, doi:10.1007/s10265-009-0305-x.
-2. Ito, A. (2008), The regional carbon budget of East Asia simulated with a terrestrial ecosystem model and validated using AsiaFlux data, Agricultural and Forest Meteorology, 148(5), 738-747, doi:10.1016/j.agrformet.2007.12.007.">http-nacp.ornl.gov/mstmipdata/
+NIES = National Institute for Environmental Studies, Japan</description>
+        <definitionSource xml:lang="gmail.com)  Citations: 1. Ito, A. (2010), Changing ecophysiological processes and carbon budget in East Asian ecosystems under near-future changes in climate: Implications for long-term monitoring from a process-based model, J.Plant Res., 123, 577-588, doi:10.1007/s10265-009-0305-x. 2. Ito, A. (2008), The regional carbon budget of East Asia simulated with a terrestrial ecosystem model and validated using AsiaFlux data, Agricultural and Forest Meteorology, 148(5), 738-747, doi:10.1016/j.agrformet.2007.12.007.">http-nacp.ornl.gov/mstmipdata/
 Contacts:
 Akihiko Ito (z060507</definitionSource>
     </owl:Class>
@@ -1541,7 +1577,7 @@ Akihiko Ito (z060507</definitionSource>
 
     <!-- https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#32_tons -->
 
-    <owl:NamedIndividual rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#32_tons"/>
+    <owl:NamedIndividual rdf:about="&D1_carbon_flux_1;_tons"/>
     
 
 
@@ -1554,7 +1590,7 @@ Akihiko Ito (z060507</definitionSource>
      -->
 
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_8a465c8f_561e_43cd_8aea_cd32c4903b4e"/>
             <rdf:Description rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#OWLClass_91289aef_e3f5_4a35_ba36_6cbf996d746f"/>
@@ -1564,7 +1600,7 @@ Akihiko Ito (z060507</definitionSource>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#BIOME-BGC_MstmipVersion1ModeledMethod"/>
             <rdf:Description rdf:about="https://purl.org/dataone/ontologies/observation/D1_carbon_flux_1.owl#CLASS-CTEMNplus_MstmipVersion1ModeledMethod"/>
@@ -1587,5 +1623,5 @@ Akihiko Ito (z060507</definitionSource>
 
 
 
-<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.0.0.1469) http://owlapi.sourceforge.net -->
 
