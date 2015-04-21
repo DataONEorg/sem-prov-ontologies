@@ -120,7 +120,7 @@
     
     a.internalDFN {
         color:  inherit;
-        border-bottom:  1px solid #99c;
+        /*border-bottom:  1px solid #99c;*/
         text-decoration:    none;
     }
     
@@ -665,7 +665,7 @@
     
     a.internalDFN {
         color:  inherit;
-        border-bottom:  1px solid #99c;
+        /*border-bottom:  1px solid #99c;*/
         text-decoration:    none;
     }
     
@@ -1759,51 +1759,58 @@
         
         <section id="port-specification"> 
               
-        <h4><span class="secno">3.1.2 </span>Port class</h4>
-        
-        <div class="glossary-ref">   A <dfn id="concept-entity" title="Port" class="internalDFN">Port</dfn>
-        <sup><a class="internalDFN" href="#concept-entity"><span class="diamond"> ◊</span></a></sup>enables a Program to send or receive Entity items (Data, Visualization, or Document instances). When semantically typed as an input port using the <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasInPort" href="#">provone:hasInPort</a> object property, the Port may also be further described with default parameters using the <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasDefaultParam" href="#">provone:hasDefaultParam</a> object property. Ports that are semantically typed as output ports using the <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasOutPort" href="#">provone:hasOutPort</a> object property may be connected to input ports using the <a href="#Channel">Channel</a> class.</div>
-        
-        <p><strong>IRI:</strong>https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#Port</p>
-        
-        <p></p><b>has super-class</b>
-        <ul>
-        <li><a title="http://www.w3.org/ns/prov-o#Entity"
-               href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity</a></li>
-        </ul>
-        
-        <p></p><b>is in domain of</b>
-        <ul>
-          <li>
-            <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasDefaultParam"
-                 href="#">provone:hasDefaultParam</a>
-          </li>
-          <li>
-            <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#connectsTo"
-                 href="#">provone:connectsTo</a>
-          </li>
-        </ul>
-        
-        <p></p><b>is in range of</b>
-        <ul>
-          <li>
-            <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasInPort" href="#">provone:hasInPort</a>
-          </li>
-          <li>
-            <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasOutPort"
-             href="#">provone:hasOutPort</a>
-          </li>
-          <li>
-            <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hadInPort" href="#">provone:hadInPort</a>
-          </li>
-          <li>
-            <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hadOutPort"
-             href="#">provone:hadOutPort</a>
-          </li>
-        </ul>
-        
-        <div class="anexample" id="inputport-example">
-        <div class="anexampleTitle">Example 2<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+          <h4><span class="secno">3.1.2 </span>Port class</h4>
+          
+          <div class="glossary-ref">   A <dfn id="concept-entity" title="Port" class="internalDFN">Port</dfn>
+            <sup>
+              <a class="internalDFN" href="#concept-entity">
+                <span class="diamond"> ◊</span>
+              </a>
+            </sup>
+            enables a Program to send or receive Entity items (Data, Visualization, or Document instances). When semantically typed as an input port using the <a
+            title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasInPort" href="#">provone:hasInPort</a> object property, the Port may
+            also be further described with default parameters using the <a
+            title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasDefaultParam" href="#">provone:hasDefaultParam</a> object property.
+            Ports that are semantically typed as output ports using the <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasOutPort"
+            href="#">provone:hasOutPort</a> object property may be connected to input ports using the <a href="#Channel">Channel</a> class.
+          </div>
+          
+          <p><strong>IRI:</strong>https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#Port</p>
+          
+          <p></p><b>has super-class</b>
+          <ul>
+          <li><a title="http://www.w3.org/ns/prov-o#Entity"
+                 href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Entity">prov:Entity</a></li>
+          </ul>
+          
+          <p></p><b>is in domain of</b>
+          <ul>
+            <li>
+              <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasDefaultParam",
+                   href="#">provone:hasDefaultParam</a>
+              <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#connectsTo"
+                   href="#">provone:connectsTo</a>
+            </li>
+          </ul>
+          
+          <p></p><b>is in range of</b>
+          <ul>
+            <li>
+              <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasInPort" href="#">provone:hasInPort</a>,
+              <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasOutPort",
+               href="#">provone:hasOutPort</a>
+              <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hadInPort" href="#">provone:hadInPort</a>,
+              <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hadOutPort"
+               href="#">provone:hadOutPort</a>
+            </li>
+          </ul>
+          
+          <div class="anexample" id="inputport-example">
+            <div class="anexampleTitle">Example 2
+              <sup>
+                <a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a>
+              </sup>
+            </div>
         <p>
         The following RDF fragment specifies a <span class="name">Port</span> identified within the RDF document by
         <span class="name">p1_ip1</span>.
