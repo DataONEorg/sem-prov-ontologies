@@ -1837,14 +1837,13 @@
         
         <div class="glossary-ref"> The
           <a href="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#Channel"
-             title="http://www.w3.org/ns/prov-o#Location">provone:Channel</a>
-          class is adopted directly from the PROV Ontology, and identifies the location of an Entity (Data,
-          Visualization, or Document), enabling these items to be sent between Programs. The Location
-          may be an IRI, a directory or file reference, a database row/column reference, a memory
-          reference, etc.
+             title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#Channel">provone:Channel</a>
+          class provides a connection between Ports that are defined for Programs.  Typically, a Program with an output 
+          Port defined using the provone:hasOutPort object property connects to a Program with an input Port defined using the 
+          provone:hasInPort object property.  The two Ports are connected using a Channel with the provone:connectsTo object property.
         </div>
         
-        <p><strong>IRI:</strong>http://www.w3.org/ns/prov-o#Location</p>
+        <p><strong>IRI:</strong>https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#Channel</p>
         
         <p></p><b>has super-class</b>
         <ul>
@@ -1855,32 +1854,34 @@
         <b>is in range of</b>
         <ul>
           <li>
-            <a title="http://www.w3.org/ns/prov-o#atLocation" href="#">
-              prov:atLocation
-            </a>
-          </li>
-          <li>
             <a title="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#connectsTo" href="#">
               provone:connectsTo
             </a>
           </li>
         </ul>
         
-        <div class="anexample" id="location-example">
-        <div class="anexampleTitle">Example 4<sup><a class="internalDFN" href="#anexample-entity"><span class="diamond"> ◊</span></a></sup></div>
+        <div class="anexample" id="channel-example">
+        <div class="anexampleTitle">
+          Example 4
+          <sup>
+            <a class="internalDFN" href="#anexample-entity">
+              <span class="diamond"> ◊</span>
+            </a>
+          </sup>
+        </div>
         <p>
-        The following RDF fragment specifies a <span class="name">Location</span> identified within the RDF document by
-        <span class="name">p1_p2DL</span>.
+        The following RDF fragment specifies a <span class="name">Channel</span> identified within the RDF document by
+        <span class="name">p1_p2Ch</span>.
         </p>
         <pre class="codeexample">    
-        1    :p1_p2DL 
+        1    :p1_p2Ch 
         2    
         3       a provone:Channel;
-        4       dcterms:identifier "e1_e2DL"^^xsd:string;
+        4       dcterms:identifier "e1_e2Ch"^^xsd:string;
         5    
         6    .
         </pre>
-        The <em>Location</em> is simply specified as such (line 3) given the string <span class="name">e1_e2DL</span> as an 
+        The <em>Channel</em> is simply specified as such (line 3) given the string <span class="name">e1_e2Ch</span> as an 
         <span class="name">identifier</span> (line 4). 
         </div>
         
