@@ -53,14 +53,15 @@
     
 
 
-    <!-- https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasLocation -->
+    <!-- https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#connectsTo -->
 
-    <owl:ObjectProperty rdf:about="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#hasLocation">
-        <rdfs:label>hasLocation</rdfs:label>
-        <rdfs:comment>Connects a Location to a Port of a Program. The port may be semantically typed as an input port or an output port, depending on its defined relationship with the Program.</rdfs:comment>
+    <owl:ObjectProperty rdf:about="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#connectsTo">
+        <rdfs:label>connectsTo</rdfs:label>
+        <rdfs:comment>Specifies the Channel that the given Port connects to, 
+          typically with an output Port connected to an input Port.</rdfs:comment>
         <prov:category>workflow-specification</prov:category>
         <rdfs:domain rdf:resource="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#Port"/>
-        <rdfs:range rdf:resource="&prov;Location"/>
+        <rdfs:range rdf:resource="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#Channel"/>
     </owl:ObjectProperty>
         
 
