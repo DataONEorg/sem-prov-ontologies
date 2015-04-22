@@ -337,6 +337,18 @@
     
 
 
+    <!-- https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#Channel -->    
+    <owl:Class rdf:about="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#Channel">
+        <rdfs:label>Channel</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&prov;Entity" />
+        <rdfs:comment>A Channel provides a connection between Ports that are defined for Programs. Typically, a Program
+        with an output Port defined using the provone:hasOutPort object property connects to a Program with an input
+        Port defined using the provone:hasInPort object property. The two Ports are connected using a Channel with the
+        provone:connectsTo object property.</rdfs:comment>
+    </owl:Class>
+    
+    
+
     <!-- https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#Execution -->
 
     <owl:Class rdf:about="https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#Execution">
