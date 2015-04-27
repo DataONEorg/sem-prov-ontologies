@@ -35,7 +35,7 @@ Objectives
 ----------
  - Summarize the unique identifier format and URI syntax used for the terms defined in the selected ontologies.
  - Propose a unique identifier format and URI syntax for DataONE SEM group’s ontology based on the current format used by the selected ontologies.
- - Summarize the methods used by the selected ontologies for the following: adding a new ontological concept, adding an alternative term, and changing/modifying an existing term.
+ - Summarize the methods used by the selected ontologies for the following: adding a new ontological concept, adding an alternative concept, and changing/modifying an existing concept.
 
 Methodology/Process
 -------------------
@@ -44,10 +44,10 @@ Methodology/Process
   b) Gene Ontology (GO) - http://geneontology.org/
   c) The Open Biological and Biomedical Ontology (OBO) Foundry - http://www.obofoundry.org/
   d) Environment Ontology (ENVO) - http://environmentontology.org/
-2) Using the home pages for these ontologies as the starting point, search for the documentations of identifier format guidelines  and of “terms and conditions” for adding and/or modifying terms. 
+2) Using the home pages for these ontologies as the starting point, search for the documentations of identifier format guidelines  and of “terms and conditions” for adding and/or modifying concepts. 
 3) Record any information found on the home pages and any additional information discovered regarding the identifier format in the Notes section of this document.
-4) Record under Supplementary Notes section any additional information relating to the identifier format and URI syntax from sources other than the 4 selected ontologies.
-5) Record under the Notes on Defining New Concepts section for information regarding the following: adding a new ontological concept, adding an alternative term, and changing/modifying an existing term.
+4) Record under Supplementary Notes section any additional information relating to the identifier format and URI syntax from sources other than the four selected ontologies.
+5) Record under the Notes on Defining New or Modifying Existing Concepts section for information regarding the following: adding a new ontological concept, adding an alternative concept, and changing/modifying an existing concept.
 
 Result Summary
 --------------
@@ -64,6 +64,10 @@ where: 	namespace for the OBO Foundry-compliant ontologies = OBO
 IDspace = short name for the ontology
 
 localID = unique identifier (7-digit, zero padded numeric string).
+
+
+
+In terms of the defining new, adding alternative, or modifying existing concepts, all four ontologies welcome suggestions to be submitted for adding new terms (when a term describing the concept currently does not exist), adding alternative terms (for synonyms), and for changing/modifying existing terms.  There are also format and minimal required information that are specified for each submission.  However, the submissions all seem to be reviewed by certain ontologies' editors/curators whose further information is not publicly available (there are Help Desk or Contact Us information, but these are not specific for the terms reviews).   
 
 Notes
 -----
