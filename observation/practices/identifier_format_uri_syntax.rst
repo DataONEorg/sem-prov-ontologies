@@ -14,13 +14,18 @@ Change Revisions:
 |2015-04-21        |Sophie Hou          |Addition of information regarding URI syntax used by DataONE PROV group |                  
 |                  |                    |(under the Supplementary Notes section).                                |
 +------------------+--------------------+------------------------------------------------------------------------+
+|2015-04-27	   |Sophie Hou		|Addition of information regarding terms and conditions required when 	 |	
+|		   |			|defining a new ontology concept or changning an existing concept	 |
+|		   |			|(under the Notes - Defining New or Modifying Existing Concepts section).|
++------------------+--------------------+------------------------------------------------------------------------+
 
 DataONE SEM Group - ID Format URI Syntax for Ontological Terms
 ==============================================================
 
 Purpose
 -------
-The purpose of this document is to summarize the identifier formats as well as  uniform resource identifier (URI) syntax assigned to the ontological terms of the following sources: Ontology for Biomedical Investigations (OBI), Gene Ontology (GO), the Open Biological and Biomedical Ontology (OBO) Foundry, and Environment Ontology (ENVO), and to propose a possible identifier format for DataONE SEM group’s ontology.
+The purpose of this document is to summarize the identifier formats as well as the uniform resource identifier (URI) syntax assigned to the ontological terms of the following sources: Ontology for Biomedical Investigations (OBI), Gene Ontology (GO), the Open Biological and Biomedical Ontology (OBO) Foundry, and Environment Ontology (ENVO), and to propose a possible identifier format for DataONE SEM group’s ontology.
+The document also provides the summary of the methods proposed by these four ontologies for adding new terms (when a term describing the concept currently does not exist), adding alternative terms (for synonyms), and for changing/modifying existing terms.
 
 Background
 ----------
@@ -30,6 +35,7 @@ Objectives
 ----------
  - Summarize the unique identifier format and URI syntax used for the terms defined in the selected ontologies.
  - Propose a unique identifier format and URI syntax for DataONE SEM group’s ontology based on the current format used by the selected ontologies.
+ - Summarize the methods used by the selected ontologies for the following: adding a new ontological concept, adding an alternative term, and changing/modifying an existing term.
 
 Methodology/Process
 -------------------
@@ -38,9 +44,10 @@ Methodology/Process
   b) Gene Ontology (GO) - http://geneontology.org/
   c) The Open Biological and Biomedical Ontology (OBO) Foundry - http://www.obofoundry.org/
   d) Environment Ontology (ENVO) - http://environmentontology.org/
-2) Using the home pages for these ontologies as the starting point, search for the documentations of identifier format guidelines. 
+2) Using the home pages for these ontologies as the starting point, search for the documentations of identifier format guidelines  and of “terms and conditions” for adding and/or modifying terms. 
 3) Record any information found on the home pages and any additional information discovered regarding the identifier format in the Notes section of this document.
 4) Record under Supplementary Notes section any additional information relating to the identifier format and URI syntax from sources other than the 4 selected ontologies.
+5) Record under the Notes on Defining New Concepts section for information regarding the following: adding a new ontological concept, adding an alternative term, and changing/modifying an existing term.
 
 Result Summary
 --------------
@@ -88,6 +95,47 @@ Example: https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.o
 
  a) This format is similar to the OBO legacy URI syntax shown in the OBO Foundry Identifier Policy page (http://www.obofoundry.org/id-policy.shtml):
   i) http://purl.org/obo/owl/" IDSPACE "#" IDSPACE "_" LOCALID
+
+Notes on Defining New or Modifying Existing Concepts
+----------------------------------------------------
+1) OBI: 
+ a) OBI Term Guidelines - http://obi-ontology.org/page/OBI_term_guidelines
+  i) Categories: Existing Terms and New Terms
+   1) Existing Terms: If a term is close enough but would like to make additions or changes to is, a new ticket needs to be submitted via the following link (a SourceForge account is required): https://sourceforge.net/auth/?return_to=%2Fp%2Fobi%2Fobi-terms%2Fnew%2F
+   2) New Terms: If a term cannot be located but is within OBI’s scope of biomedical investigation, a new term can be suggested also via the same link as indicated in item a.i.1.
+ b) OBI Adding New Term Policy - http://obi-ontology.org/page/OBI_Adding_New_Term_Policy
+  i) Add new term: the following are the minimal required metadata that need to be provided with the new term:
+   1) Definition
+   2) Definition Source
+   3) Definition Editor
+   4) Editor Preferred Term
+   5) Curation Status
+  ii) Add definition taken or modified from an external ontology term:
+   1) Recommended to provide the external ontology term ID. 
+  iii) Add synonym:
+   1) Use “alternative term”.
+    a) “There can be many alternative term annotations for a given term in OBI.” (http://obi-ontology.org/page/OBI_term_guidelines)
+ c) Rules from OBO Foundry should also be followed.
+ d) OBI Term Tracker: http://sourceforge.net/p/obi/obi-terms/
+2) GO:
+ a) Submitting Term Suggestions to GO - http://geneontology.org/page/submitting-term-suggestions-go
+  i) “If you find that the term you would like to use for searching or annotation is not in GO, try using TermGenie to add it to our resource. If the template you need is not available, please enter your request using Sourceforge (SF).”
+ b) Obsolete Terms:
+  i) “Occasionally, a term is added to GO that is out of scope, misleadingly named or defined, or describes a concept that would be better represented in another way and needs to be removed from the published ontology. In these cases, the term and ID still persist in the ontology, but the term is tagged as obsolete, and all relationships to other terms are removed. A comment is added to the term, detailing the reason for the obsoletion and tags are also added that specify replacement terms. See the OBO file format specification for more information.” (http://geneontology.org/page/ontology-structure#obs).
+ c) Annotation Tools, Downloads, Contributing to the GO - http://geneontology.org/page/annotation-tools-downloads-contributing-go
+  i) Contributing to GO:
+   1) “Corrections and alterations are suggested by, and solicited from, members of the research and annotation communities, as well as by those directly involved in the GO project.” 
+   2) “Suggested edits are reviewed by the ontology editors, and implemented where appropriate.”
+3) OBO Foundry:
+ a) No specific terms and conditions were found.  However, the following web page shows the “Naming Conventions for the OBO Foundry”.
+  i) http://wiki.obofoundry.org/wiki/index.php/Naming#New_conventions_under_investigation
+4) ENVO:
+ a) If you would like to request new terms and synonyms, suggest an enhancement, or report a defect, please use our GitHub issue tracker.
+  i) GitHub issue tracker - https://github.com/EnvironmentOntology/envo/issues/
+ b) “Unlike biomes, ecoregions are geographically defined entities. ENVO's sister project, GAZ, contains terms for instances of ecoregions (e.g. Beringia lowland tundra). Requests for new terms should be directed to GAZ. ENVO will only contain this top-level class.” (http://bioportal.bioontology.org/ontologies/ENVO?p=classes&conceptid=root)
+  i) Could not find any information on project GAZ.
+ c) ENVO Term Tracker: http://sourceforge.net/p/obo/environmental-ontology-envo-term-requests/
+ d) Annotation guidelines - http://environmentontology.org/annotation-guidelines
 
 Footnotes
 ---------
