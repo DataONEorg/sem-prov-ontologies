@@ -542,15 +542,23 @@ synonyms: NPP</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&odo;ECSO_00000025"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&odo;ECSO_00000319"/>
-                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000307"/>
-                    </owl:Restriction>
+                    <rdf:Description rdf:about="&odo;ECSO_00000334"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002030"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000317"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000025"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000334"/>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <odo:ECSO_01000003>Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</odo:ECSO_01000003>
         <skos:definition>The mass of carbon contained in free-floating organisms of the sea and fresh water that for the most part move passively with the water currents and consist mostly of microorganisms and small plants and animals.</skos:definition>
@@ -579,11 +587,19 @@ synonyms: NPP</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&odo;ECSO_00000025"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&odo;ECSO_00000319"/>
-                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000307"/>
-                    </owl:Restriction>
+                    <rdf:Description rdf:about="&odo;ECSO_00000334"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000320"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000024"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -611,7 +627,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000033">
         <rdfs:label>Wood Carbon Pool</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000334"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000338"/>
         <odo:ECSO_01000003>&quot;wood.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Feb. 2015 http-www.thefreedictionary.com/wood</odo:ECSO_01000003>
         <skos:definition>The mass of carbon contained in the tough, fibrous substance lying beneath the bark of trees and shrubs, consisting of the vascular tissue known as xylem and composed chiefly of cellulose and lignin.</skos:definition>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
@@ -623,7 +639,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000034">
         <rdfs:label>Leaf Litter Carbon Pool</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000334"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000338"/>
         <odo:ECSO_01000003>Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</odo:ECSO_01000003>
         <odo:ECSO_01000008>leaf decomposition</odo:ECSO_01000008>
         <rdfs:comment>synonyms from LTER searched terms (mob, 2015-03-24)</rdfs:comment>
@@ -645,6 +661,10 @@ synonyms: NPP</rdfs:comment>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&odo;ECSO_00000318"/>
                         <owl:allValuesFrom rdf:resource="&odo;ECSO_00000321"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
+                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002006"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1721,6 +1741,10 @@ Akihiko Ito (z060507</odo:ECSO_01000003>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000203"/>
                     <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
+                        <owl:someValuesFrom rdf:resource="&odo;ECSO_00000016"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
                         <owl:onProperty rdf:resource="&odo;ECSO_00000318"/>
                         <owl:allValuesFrom rdf:resource="&odo;ECSO_00000315"/>
                     </owl:Restriction>
@@ -2064,7 +2088,7 @@ no ref today.</skos:definition>
     <!-- http://purl.dataone.org/odo/ECSO_00000334 -->
 
     <owl:Class rdf:about="&odo;ECSO_00000334">
-        <rdfs:label>Biotic Carbon Pool</rdfs:label>
+        <rdfs:label>Living Carbon Pool</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000025"/>
     </owl:Class>
     
@@ -2077,9 +2101,9 @@ no ref today.</skos:definition>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&odo;ECSO_00000025"/>
+                    <rdf:Description rdf:about="&odo;ECSO_00000334"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&odo;ECSO_00000319"/>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
                         <owl:allValuesFrom>
                             <owl:Class>
                                 <owl:complementOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
@@ -2108,6 +2132,15 @@ no ref today.</skos:definition>
     <owl:Class rdf:about="&odo;ECSO_00000337">
         <rdfs:label>Inorganic Carbon</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24835"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000338 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000338">
+        <rdfs:label>Dead Carbon Pool</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000025"/>
     </owl:Class>
     
 
