@@ -36,6 +36,7 @@
         <rdfs:comment rdf:datatype="&xsd;string">This ontology was generated from an ontology revision in WebProtege http://odo.nceas.ucsb.edu</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">ontology in progress for DataONE MSTMip/LTER Carbon cycling use cases</rdfs:comment>
         <dc:contributor rdf:datatype="&xsd;string">system</dc:contributor>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/uo.owl"/>
         <owl:imports rdf:resource="http://purl.org/dataone/odo/ecso/imports/envo_import.owl"/>
         <owl:imports rdf:resource="http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf"/>
     </owl:Ontology>
@@ -440,12 +441,12 @@ For most purposes (including this one) the two can be the same. It&apos;s most p
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000011"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&odo;ECSO_00000340"/>
+                        <owl:onProperty rdf:resource="&odo;ECSO_00000339"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&odo;ECSO_00000323"/>
-                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33582"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000327"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000329"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
@@ -458,12 +459,12 @@ For most purposes (including this one) the two can be the same. It&apos;s most p
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000011"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&odo;ECSO_00000339"/>
+                        <owl:onProperty rdf:resource="&odo;ECSO_00000340"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&odo;ECSO_00000327"/>
-                                    <rdf:Description rdf:about="&odo;ECSO_00000329"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000323"/>
+                                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33582"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
@@ -570,7 +571,7 @@ synonyms: NPP</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&odo;ECSO_00000331"/>
+                    <rdf:Description rdf:about="&odo;ECSO_00000341"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&odo;ECSO_00000319"/>
                         <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
@@ -581,7 +582,7 @@ synonyms: NPP</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&odo;ECSO_00000341"/>
+                    <rdf:Description rdf:about="&odo;ECSO_00000331"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&odo;ECSO_00000319"/>
                         <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
