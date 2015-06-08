@@ -355,6 +355,7 @@ biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than 
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000011"/>
+        <skos:altLabel>Fire Emissions</skos:altLabel>
         <odo:ECSO_01000004>Fire Carbon Flux is a measure of carbon released into the atmosphere due to fire (MPS, 2015)</odo:ECSO_01000004>
         <odo:ECSO_01000003>Johnson, E.A. and Miyanishi, K. Forest Fires: Behavior and Ecological Effects. Academic Press. 2001</odo:ECSO_01000003>
         <skos:definition>The mass of carbon released from burning vegetation per unit time.</skos:definition>
@@ -441,24 +442,6 @@ For most purposes (including this one) the two can be the same. It&apos;s most p
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000011"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&odo;ECSO_00000339"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&odo;ECSO_00000327"/>
-                                    <rdf:Description rdf:about="&odo;ECSO_00000329"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&odo;ECSO_00000011"/>
-                    <owl:Restriction>
                         <owl:onProperty rdf:resource="&odo;ECSO_00000340"/>
                         <owl:someValuesFrom>
                             <owl:Class>
@@ -472,10 +455,29 @@ For most purposes (including this one) the two can be the same. It&apos;s most p
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&odo;ECSO_00000011"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&odo;ECSO_00000339"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&odo;ECSO_00000327"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000329"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000011"/>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
-        <skos:definition>CO2 produced by organisms and emitted to the environment per unit ground or water area and time.</skos:definition>
+        <skos:definition>CO2 produced by organisms and emitted to the environment per unit ground or water area and time. Equivalent to the sum of autotrophic and heterotrophic respiration.</skos:definition>
         <odo:ECSO_01000003>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</odo:ECSO_01000003>
+        <skos:altLabel>Total Respiration</skos:altLabel>
     </owl:Class>
     
 
@@ -486,6 +488,7 @@ For most purposes (including this one) the two can be the same. It&apos;s most p
         <rdfs:label>Autotrophic Respiration Carbon Flux</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000016"/>
         <owl:disjointWith rdf:resource="&odo;ECSO_00000018"/>
+        <skos:altLabel>Autotrophic Respiration</skos:altLabel>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <skos:definition>The sum of respiration (CO2 production) by all living parts of primary producers per unit ground or water area and time.</skos:definition>
         <odo:ECSO_01000003>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</odo:ECSO_01000003>
@@ -500,6 +503,7 @@ For most purposes (including this one) the two can be the same. It&apos;s most p
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000016"/>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <odo:ECSO_01000003>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</odo:ECSO_01000003>
+        <skos:altLabel>Heterotrophic Respiration</skos:altLabel>
         <skos:definition>The respiration rate of heterotrophic organisms (animals and microbes) summed per unit ground or water area and time.</skos:definition>
     </owl:Class>
     
@@ -512,13 +516,11 @@ For most purposes (including this one) the two can be the same. It&apos;s most p
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000015"/>
         <owl:disjointWith rdf:resource="&odo;ECSO_00000021"/>
         <skos:altLabel>Gross Primary Productivity</skos:altLabel>
+        <rdfs:comment>Primary production before the autotrophs&apos; own respiration is subtracted.
+Also called photosynthetic rate, or carbon fixation rate.</rdfs:comment>
         <odo:ECSO_01000003>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</odo:ECSO_01000003>
         <skos:definition>The sum of gross carbon fixation by autotrophic carbon-fixing tissues per unit ground or water area and time.</skos:definition>
         <skos:altLabel>Gross Primary Production</skos:altLabel>
-        <rdfs:comment>primary production before the autotrphs&apos; own respiration is subtracted.
-also called photosynthetic rate, or carbon fixation rate.
-
-Synonyms: GPP</rdfs:comment>
         <skos:altLabel>GPP</skos:altLabel>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
     </owl:Class>
@@ -554,6 +556,7 @@ synonyms: NPP</rdfs:comment>
         <odo:ECSO_01000005>O&apos;Brien, pers comm. 2015-02-20</odo:ECSO_01000005>
         <odo:ECSO_01000003>&quot;carbon pool.&quot; McGraw-Hill Dictionary of Scientific &amp; Technical Terms, 6E. 2003. The McGraw-Hill Companies, Inc. 20 Feb. 2015 http-encyclopedia2.thefreedictionary.com/carbon+pool</odo:ECSO_01000003>
         <odo:ECSO_01000004>Carbon Pools are reservoirs in the system with the capacity to exchange carbon. Usually scientists are interested in the size of pools, and the movement of carbon between pools. The dimensions of a carbon pool are likely to be mass or moles Carbon per area or volume (eg, kg per m2).</odo:ECSO_01000004>
+        <skos:altLabel>Name of Each Carbon Pool</skos:altLabel>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <skos:definition>A reservoir with the capacity to store and release carbon, such as soil, terrestrial vegetation, the ocean, and the atmosphere {contributed by margaret, from</skos:definition>
         <odo:ECSO_01000004>Carbon Pools are reservoirs in the system with the capacity to exchange. Usually scientists are interested in the size of carbon pools, and the movement of carbon between pools. Carbon pools can vary widely in scale, from an ecosystem to an species functional level. The dimensions are likely to be mass or moles Carbon per area (eg, kg per m2).</odo:ECSO_01000004>
@@ -571,7 +574,7 @@ synonyms: NPP</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&odo;ECSO_00000341"/>
+                    <rdf:Description rdf:about="&odo;ECSO_00000331"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&odo;ECSO_00000319"/>
                         <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
@@ -582,7 +585,7 @@ synonyms: NPP</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&odo;ECSO_00000331"/>
+                    <rdf:Description rdf:about="&odo;ECSO_00000341"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&odo;ECSO_00000319"/>
                         <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
@@ -593,6 +596,7 @@ synonyms: NPP</rdfs:comment>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000331"/>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000341"/>
         <odo:ECSO_01000003>&quot;soil.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Feb. 2015 http-www.thefreedictionary.com/soil</odo:ECSO_01000003>
+        <skos:altLabel>Total Soil Carbon</skos:altLabel>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <skos:definition>The mass of carbon contained within the top layer of the earth&apos;s surface in which plants can grow, consisting of rock and mineral particles mixed with decaying organic matter and having the capability of retaining water.</skos:definition>
     </owl:Class>
@@ -604,18 +608,7 @@ synonyms: NPP</rdfs:comment>
     <owl:Class rdf:about="&odo;ECSO_00000028">
         <rdfs:label>Plankton Carbon Pool
 </rdfs:label>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&odo;ECSO_00000206"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&odo;ECSO_00000319"/>
-                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000307"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000206"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000343"/>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <odo:ECSO_01000003>Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</odo:ECSO_01000003>
         <skos:definition>The mass of carbon contained in free-floating organisms of the sea and fresh water that for the most part move passively with the water currents and consist mostly of microorganisms and small plants and animals.</skos:definition>
@@ -627,7 +620,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000030">
         <rdfs:label>Leaf Carbon Pool</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000206"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000343"/>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <skos:definition>The mass of carbon contained within flattened photosynthetic structures emerging laterally from a main axis or stem and possessing true vascular tissue.</skos:definition>
         <rdfs:comment>&apos;leaf carbon pool&apos; and &apos;leaf litter carbon pool&apos; also had associated with them the concepts &apos;leaves&apos; and &apos;leaf decomposition&apos; as related terms.  These latter two concepts have been removed at this time as too general (leaves) or too processual (leaf decomposition as opposed to &apos;leaf decompositional pool&apos;).  Might consider adding these back in as skos:alLabel.</rdfs:comment>
@@ -641,7 +634,18 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000031">
         <rdfs:label>Benthic Algae Carbon Pool</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000206"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&odo;ECSO_00000343"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&odo;ECSO_00000319"/>
+                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000321"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000343"/>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <skos:definition>The mass of carbon present in algae on the seafloor.</skos:definition>
         <odo:ECSO_01000003>Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</odo:ECSO_01000003>
@@ -653,7 +657,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000032">
         <rdfs:label>Grass Carbon Pool</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000206"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000343"/>
         <skos:definition>The mass of carbon contained within monocotyledonous plants of the family Poaceae, having jointed stems sheathed by long, narrow leaves, flowers in spikes, and seedlike fruits.</skos:definition>
         <odo:ECSO_01000003>&quot;grass.&quot; Collins English Dictionary – Complete and Unabridged. 1991, 1994, 1998, 2000, 2003. HarperCollins Publishers 24 Feb. 2015 http-www.thefreedictionary.com/grass</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
@@ -665,7 +669,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000033">
         <rdfs:label>Wood Carbon Pool</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000206"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000343"/>
         <odo:ECSO_01000003>&quot;wood.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Feb. 2015 http-www.thefreedictionary.com/wood</odo:ECSO_01000003>
         <skos:definition>The mass of carbon contained in the tough, fibrous substance lying beneath the bark of trees and shrubs, consisting of the vascular tissue known as xylem and composed chiefly of cellulose and lignin.</skos:definition>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
@@ -2120,6 +2124,9 @@ no ref today.</skos:definition>
     <owl:Class rdf:about="&odo;ECSO_00000335">
         <rdfs:label>Aboveground Woody Biomass Carbon Pool</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000033"/>
+        <odo:ECSO_01000003>&quot;wood.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Feb. 2015 http-www.thefreedictionary.com/wood</odo:ECSO_01000003>
+        <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
+        <skos:definition>The total sum of the mass of carbon contained in the tough, fibrous substance lying beneath the bark of trees and shrubs, consisting of the vascular tissue known as xylem and composed chiefly of cellulose and lignin.</skos:definition>
     </owl:Class>
     
 
@@ -2147,6 +2154,26 @@ no ref today.</skos:definition>
     <owl:Class rdf:about="&odo;ECSO_00000341">
         <rdfs:label>Inorganic Carbon Pool</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000025"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000342 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000342">
+        <rdfs:label>Carbon Pool Size</rdfs:label>
+        <rdfs:comment>MsTMIP variable #22</rdfs:comment>
+        <skos:altLabel>Size of Each Carbon Pool</skos:altLabel>
+        <skos:definition>Total mass of carbon per meter squared in each pool.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000343 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000343">
+        <rdfs:label>Total Living Biomass Carbon Pool</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000206"/>
     </owl:Class>
     
 
