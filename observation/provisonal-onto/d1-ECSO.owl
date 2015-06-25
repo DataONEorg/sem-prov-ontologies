@@ -374,10 +374,18 @@ biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than 
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000011"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;ENVO_01001309"/>
-                        <owl:allValuesFrom rdf:resource="&odo;ECSO_00000035"/>
-                    </owl:Restriction>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&obo;RO_0000086"/>
+                                <owl:someValuesFrom rdf:resource="&odo;ECSO_00000321"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&obo;ENVO_01001309"/>
+                                <owl:allValuesFrom rdf:resource="&odo;ECSO_00000329"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -423,10 +431,27 @@ biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than 
 
     <owl:Class rdf:about="&odo;ECSO_00000014">
         <rdfs:label>Net Ecosystem Exchange Carbon Flux</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&odo;ECSO_00000011"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;ENVO_01001309"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&odo;ECSO_00000323"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000329"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000011"/>
         <skos:altLabel>NEE</skos:altLabel>
         <skos:altLabel>Net Ecosystem Exchange</skos:altLabel>
-        <odo:ECSO_01000006>NEE</odo:ECSO_01000006>
         <skos:definition>The magnitude of carbon sources and sinks is defined as the vertical exchange of CO2 between the surface (land or ocean) and the atmosphere.</skos:definition>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <odo:ECSO_01000003>Hayes, D.J. et al. Reconciling estimates of the contemporary North American carbon balance among terrestrial biosphere models, atmospheric inversions, and a new approach for estimating net ecosystem exchange from inventory-based data. Global Change Biology. V 8, i 4. pp. 1282-1299. April 2012. DOI: 10.1111/j.1365-2486.2011.02627.x</odo:ECSO_01000003>
@@ -443,12 +468,12 @@ biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than 
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000011"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&odo;ECSO_00000340"/>
+                        <owl:onProperty rdf:resource="&odo;ECSO_00000339"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&odo;ECSO_00000327"/>
-                                    <rdf:Description rdf:about="&obo;CHEBI_33582"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000323"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000337"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
@@ -461,12 +486,12 @@ biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than 
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000011"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&odo;ECSO_00000339"/>
+                        <owl:onProperty rdf:resource="&odo;ECSO_00000340"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&odo;ECSO_00000323"/>
-                                    <rdf:Description rdf:about="&odo;ECSO_00000337"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000327"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000329"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
@@ -497,24 +522,6 @@ For most purposes (including this one) the two can be the same. It&apos;s most p
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000011"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&odo;ECSO_00000340"/>
-                        <owl:someValuesFrom>
-                            <owl:Class>
-                                <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&odo;ECSO_00000323"/>
-                                    <rdf:Description rdf:about="&obo;CHEBI_33582"/>
-                                </owl:unionOf>
-                            </owl:Class>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&odo;ECSO_00000011"/>
-                    <owl:Restriction>
                         <owl:onProperty rdf:resource="&odo;ECSO_00000339"/>
                         <owl:someValuesFrom>
                             <owl:Class>
@@ -528,7 +535,26 @@ For most purposes (including this one) the two can be the same. It&apos;s most p
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&odo;ECSO_00000011"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&odo;ECSO_00000340"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&odo;ECSO_00000323"/>
+                                    <rdf:Description rdf:about="&obo;CHEBI_33582"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000011"/>
+        <skos:altLabel>Respiration</skos:altLabel>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <skos:definition>CO2 produced by organisms and emitted to the environment per unit ground or water area and time. Equivalent to the sum of autotrophic and heterotrophic respiration.</skos:definition>
         <skos:definition>CO2 produced by organisms and emitted to the environment per unit ground or water area and time.</skos:definition>
@@ -650,9 +676,9 @@ synonyms: NPP</rdfs:comment>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000331"/>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000341"/>
-        <odo:ECSO_01000003>&quot;soil.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Feb. 2015 http-www.thefreedictionary.com/soil</odo:ECSO_01000003>
         <skos:altLabel>Total Soil Carbon</skos:altLabel>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
+        <odo:ECSO_01000003>&quot;soil.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company. 24 Feb. 2015 http-www.thefreedictionary.com/soil</odo:ECSO_01000003>
         <skos:definition>The mass of carbon contained within the top layer of the earth&apos;s surface in which plants can grow, consisting of rock and mineral particles mixed with decaying organic matter and having the capability of retaining water.</skos:definition>
     </owl:Class>
     
@@ -736,7 +762,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000034">
         <rdfs:label>Leaf Litter Carbon Pool</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000206"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000331"/>
         <odo:ECSO_01000003>Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</odo:ECSO_01000003>
         <odo:ECSO_01000008>leaf decomposition</odo:ECSO_01000008>
         <rdfs:comment>synonyms from LTER searched terms (mob, 2015-03-24)</rdfs:comment>
@@ -766,7 +792,9 @@ synonyms: NPP</rdfs:comment>
         <owl:disjointWith rdf:resource="&odo;ECSO_00000336"/>
         <odo:ECSO_01000003>Fiedler, S. et al. 2008. Particulate organic carbon (POC) in relation to other pore water carbon fractions in drained and rewetted fens in Southern Germany. Biogeosciences, 5, 1615–1623, 2008.
 </odo:ECSO_01000003>
+        <skos:altLabel>DOC</skos:altLabel>
         <skos:definition>The pool of organic carbon made up of particles smaller than 0.45 um.</skos:definition>
+        <skos:altLabel>Total Dissolved Organic Carbon</skos:altLabel>
     </owl:Class>
     
 
@@ -775,6 +803,17 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000037">
         <rdfs:label>Annual Net Primary Productivity Flux</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&odo;ECSO_00000021"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;ENVO_2100001"/>
+                        <owl:someValuesFrom rdf:resource="&obo;UO_0000036"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000021"/>
         <skos:definition>Gross primary production (GPP) minus autotrophic respiration (AR) over one year.</skos:definition>
         <skos:altLabel>Annual Net Primary Production</skos:altLabel>
@@ -1733,7 +1772,7 @@ Akihiko Ito (z060507@gmail.com)  citations: 1. ito, a. (2010), changing ecophysi
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&odo;ECSO_00000011"/>
+                    <rdf:Description rdf:about="&odo;ECSO_00000320"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;ENVO_01001309"/>
                         <owl:allValuesFrom rdf:resource="&odo;ECSO_00000323"/>
@@ -1741,7 +1780,8 @@ Akihiko Ito (z060507@gmail.com)  citations: 1. ito, a. (2010), changing ecophysi
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000011"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000320"/>
+        <skos:altLabel>Carbon Dioxide Diffusion</skos:altLabel>
         <skos:definition>The process by which carbon dioxide in the atmosphere moves across a phase boundary and into the ocean. This is a major sink of atmospheric carbon dioxide. Dissolved carbon dioxide subsequently reacts to form carbonic acid, bicarbonate ions, and carbonate ions, leading to ocean acidification.</skos:definition>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <odo:ECSO_01000003>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000003>
@@ -1767,6 +1807,7 @@ Akihiko Ito (z060507@gmail.com)  citations: 1. ito, a. (2010), changing ecophysi
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000341"/>
         <odo:ECSO_01000003>http://purl.obolibrary.org/obo/CHEBI_17544</odo:ECSO_01000003>
         <skos:definition>The pool of carbon oxoanions that are the result of the removal of a proton from carbonic acid.</skos:definition>
+        <skos:altLabel>HCO3 Pool</skos:altLabel>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
     </owl:Class>
     
@@ -1788,9 +1829,10 @@ Akihiko Ito (z060507@gmail.com)  citations: 1. ito, a. (2010), changing ecophysi
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000341"/>
+        <skos:altLabel>CO2 Pool</skos:altLabel>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
+        <skos:definition>The pool of carbon dioxide within a carbon cycle.</skos:definition>
         <odo:ECSO_01000003>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000003>
-        <skos:definition>The pool of dioxide within a carbon cycle.</skos:definition>
     </owl:Class>
     
 
@@ -1812,6 +1854,7 @@ Akihiko Ito (z060507@gmail.com)  citations: 1. ito, a. (2010), changing ecophysi
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000341"/>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
+        <skos:altLabel>CO3 Pool</skos:altLabel>
         <skos:definition>The pool of carbon oxoanions that have formula CO3.
 </skos:definition>
         <odo:ECSO_01000003> http://purl.obolibrary.org/obo/CHEBI_41609
@@ -1824,35 +1867,23 @@ Akihiko Ito (z060507@gmail.com)  citations: 1. ito, a. (2010), changing ecophysi
 
     <owl:Class rdf:about="&odo;ECSO_00000205">
         <rdfs:label>Methane Pool</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000341"/>
-        <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
-        <skos:definition>A one-carbon compound in which the carbon is attached by single bonds to four hydrogen atoms. It is a colourless, odourless, non-toxic but flammable gas (b.p. -161degreeC).
-</skos:definition>
-        <odo:ECSO_01000003> http://purl.obolibrary.org/obo/CHEBI_16183</odo:ECSO_01000003>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ECSO_00000206 -->
-
-    <owl:Class rdf:about="&odo;ECSO_00000206">
-        <rdfs:label>Fixed Carbon Pool</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&odo;ECSO_00000331"/>
+                    <rdf:Description rdf:about="&odo;ECSO_00000341"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;ENVO_01001309"/>
-                        <owl:someValuesFrom rdf:resource="&odo;ECSO_00000327"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;RO_0001000"/>
-                        <owl:someValuesFrom rdf:resource="&odo;ECSO_00000015"/>
+                        <owl:allValuesFrom rdf:resource="&odo;ECSO_00000324"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000331"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000341"/>
+        <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
+        <skos:definition>A one-carbon compound in which the carbon is attached by single bonds to four hydrogen atoms. It is a colourless, odourless, non-toxic but flammable gas (b.p. -161degreeC).
+</skos:definition>
+        <skos:altLabel>CH4 Pool</skos:altLabel>
+        <odo:ECSO_01000003> http://purl.obolibrary.org/obo/CHEBI_16183</odo:ECSO_01000003>
     </owl:Class>
     
 
@@ -1872,6 +1903,7 @@ Akihiko Ito (z060507@gmail.com)  citations: 1. ito, a. (2010), changing ecophysi
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <skos:altLabel>Atmospheric CO2 Pool</skos:altLabel>
         <odo:ECSO_01000003>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000003>
         <skos:definition>Gas phase carbon dioxide molecules in the air surrounding Earth. A principle contributor to climate change and the main source of carbon used by photoautotrophs to store energy during primary production.</skos:definition>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
@@ -1894,6 +1926,7 @@ Akihiko Ito (z060507@gmail.com)  citations: 1. ito, a. (2010), changing ecophysi
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <skos:altLabel>Dissolved CO2 Pool</skos:altLabel>
         <skos:definition>Carbon dioxide that has passed from the gas phase into the dissolved phase, with the the ocean begin the largest component of this pool. This process contributes to acidification by forming carbonic acid with water molecules.</skos:definition>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <odo:ECSO_01000003>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000003>
@@ -1933,6 +1966,8 @@ Akihiko Ito (z060507@gmail.com)  citations: 1. ito, a. (2010), changing ecophysi
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000021"/>
+        <skos:altLabel>Aboveground Net Primary Productivity</skos:altLabel>
+        <skos:altLabel>Aboveground Net Primary Production</skos:altLabel>
         <skos:definition>Gross primary productivity (GPP) minus autotrophic respiration (AR) in plant segments other than the roots, e.g. leaves and shoots.</skos:definition>
         <odo:ECSO_01000003>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
@@ -1947,7 +1982,7 @@ Akihiko Ito (z060507@gmail.com)  citations: 1. ito, a. (2010), changing ecophysi
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000010"/>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <skos:definition>An individual form of life, such as a bacterium, protist, fungus, plant, or animal, composed of a single cell or a complex of cells in which organelles or organs work together to carry out the various processes of life.</skos:definition>
-        <odo:ECSO_01000003>organism. (n.d.) American Heritage® Dictionary of the English Language, Fifth Edition. (2011). Retrieved June 23 2015 from http://www.thefreedictionary.com/organism</odo:ECSO_01000003>
+        <odo:ECSO_01000003>&quot;organism.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. (2011). Houghton Mifflin Harcourt Publishing Company. 23 June 2015. http-www.thefreedictionary.com/soil </odo:ECSO_01000003>
     </owl:Class>
     
 
@@ -1970,6 +2005,9 @@ Akihiko Ito (z060507@gmail.com)  citations: 1. ito, a. (2010), changing ecophysi
     <owl:Class rdf:about="&odo;ECSO_00000306">
         <rdfs:label>Multi-Celled Organism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000304"/>
+        <odo:ECSO_01000003>&quot;organism.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Jun. 2015 http://www.thefreedictionary.com/organism</odo:ECSO_01000003>
+        <skos:definition>An individual form of life composed of a complex of cells in which organelles or organs work together to carry out the various processes of life.</skos:definition>
+        <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
     </owl:Class>
     
 
@@ -1979,8 +2017,8 @@ Akihiko Ito (z060507@gmail.com)  citations: 1. ito, a. (2010), changing ecophysi
     <owl:Class rdf:about="&odo;ECSO_00000307">
         <rdfs:label>Microbe</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000305"/>
-        <odo:ECSO_01000003>Adapted from: microbe. (n.d.) American Heritage® Dictionary of the English Language, Fifth Edition. (2011). Retrieved June 23 2015 from http://www.thefreedictionary.com/microbe</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
+        <odo:ECSO_01000003>Adapted from: &quot;microbe.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company. 24 June 2015. http-www.thefreedictionary.com/soil</odo:ECSO_01000003>
         <skos:definition>A minute life form, such as a bacterium or phytoplankton.</skos:definition>
     </owl:Class>
     
@@ -2060,6 +2098,9 @@ maybe others.
 
     <owl:Class rdf:about="&odo;ECSO_00000314">
         <rdfs:label>Physical State</rdfs:label>
+        <odo:ECSO_01000003>Adapted from: &quot;Physical state.&quot; The American Heritage® Dictionary of Student Science, Second Edition. 2014. Houghton Mifflin Harcourt Publishing Company 24 Jun. 2015 http://www.thefreedictionary.com/Physical+stat</odo:ECSO_01000003>
+        <skos:definition>One of the principal conditions in which matter exists; traditionally divided into three states—solid, liquid, and gas.</skos:definition>
+        <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
     </owl:Class>
     
 
@@ -2067,8 +2108,14 @@ maybe others.
     <!-- http://purl.dataone.org/odo/ECSO_00000315 -->
 
     <owl:Class rdf:about="&odo;ECSO_00000315">
-        <rdfs:label>Gas</rdfs:label>
+        <rdfs:label>Gas State</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000314"/>
+        <owl:disjointWith rdf:resource="&odo;ECSO_00000316"/>
+        <owl:disjointWith rdf:resource="&odo;ECSO_00000317"/>
+        <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
+        <odo:ECSO_01000003>&quot;gas.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Jun. 2015 http://www.thefreedictionary.com/gas</odo:ECSO_01000003>
+        <skos:altLabel>Gas</skos:altLabel>
+        <skos:definition>The state of matter distinguished from the solid and liquid states by relatively low density and viscosity, relatively great expansion and contraction with changes in pressure and temperature, the ability to diffuse readily, and the spontaneous tendency to become distributed uniformly throughout any container.</skos:definition>
     </owl:Class>
     
 
@@ -2076,8 +2123,13 @@ maybe others.
     <!-- http://purl.dataone.org/odo/ECSO_00000316 -->
 
     <owl:Class rdf:about="&odo;ECSO_00000316">
-        <rdfs:label>Liquid</rdfs:label>
+        <rdfs:label>Liquid State</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000314"/>
+        <owl:disjointWith rdf:resource="&odo;ECSO_00000317"/>
+        <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
+        <skos:definition>The state of matter in which a substance exhibits a characteristic readiness to flow and little or no tendency to disperse, and is amorphous but has a fixed volume and is difficult to compress.</skos:definition>
+        <odo:ECSO_01000003>&quot;liquid.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Jun. 2015 http://www.thefreedictionary.com/liquid</odo:ECSO_01000003>
+        <skos:altLabel>Liquid</skos:altLabel>
     </owl:Class>
     
 
@@ -2085,8 +2137,12 @@ maybe others.
     <!-- http://purl.dataone.org/odo/ECSO_00000317 -->
 
     <owl:Class rdf:about="&odo;ECSO_00000317">
-        <rdfs:label>Solid</rdfs:label>
+        <rdfs:label>Solid State</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000314"/>
+        <odo:ECSO_01000003>&quot;solid.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Jun. 2015 http://www.thefreedictionary.com/solid</odo:ECSO_01000003>
+        <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
+        <skos:definition>A substance having a definite shape and volume; one that is neither liquid nor gaseous.</skos:definition>
+        <skos:altLabel>Solid</skos:altLabel>
     </owl:Class>
     
 
@@ -2100,7 +2156,7 @@ maybe others.
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000011"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;RO_0000086"/>
+                        <owl:onProperty rdf:resource="&odo;ECSO_00000333"/>
                         <owl:someValuesFrom rdf:resource="&odo;ECSO_00000321"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -2108,6 +2164,7 @@ maybe others.
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000011"/>
         <skos:definition>The process by which carbon dissolves, moving from one pool to another. For example, the dissolution of atmospheric carbon dioxide into the ocean or the dissolution of organic carbon into dissolved organic carbon.</skos:definition>
+        <skos:altLabel>Carbon Dissolution</skos:altLabel>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <odo:ECSO_01000003>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000003>
     </owl:Class>
@@ -2117,8 +2174,13 @@ maybe others.
     <!-- http://purl.dataone.org/odo/ECSO_00000321 -->
 
     <owl:Class rdf:about="&odo;ECSO_00000321">
-        <rdfs:label>Dissolved</rdfs:label>
+        <rdfs:label>Dissolved State</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000314"/>
+        <skos:altLabel>In Solution</skos:altLabel>
+        <skos:definition>A homogeneous mixture of two or more substances, which may be solids, liquids, gases, or a combination of these.</skos:definition>
+        <odo:ECSO_01000003>&quot;solution.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Jun. 2015 http://www.thefreedictionary.com/solution</odo:ECSO_01000003>
+        <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
+        <skos:altLabel>Dissolved</skos:altLabel>
     </owl:Class>
     
 
@@ -2131,6 +2193,7 @@ maybe others.
         <odo:ECSO_01000003>carbon dioxide. (n.d.) American Heritage® Dictionary of the English Language, Fifth Edition. (2011). Retrieved June 23 2015 from http://www.thefreedictionary.com/carbon+dioxide</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <skos:definition>A colorless, odorless, incombustible gas, CO2, that is formed during respiration, combustion, and organic decomposition, is an essential component in photosynthesis, and is used in food refrigeration, carbonated beverages, inert atmospheres, fire extinguishers, and aerosols.</skos:definition>
+        <skos:altLabel>CO2</skos:altLabel>
     </owl:Class>
     
 
@@ -2142,6 +2205,7 @@ maybe others.
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000329"/>
         <skos:definition>An odorless, colorless, flammable gas, CH4, the major constituent of natural gas, that is used as a fuel and is an important source of hydrogen and a wide variety of organic compounds.</skos:definition>
         <odo:ECSO_01000003>&quot;methane.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 23 Jun. 2015 http://www.thefreedictionary.com/methane</odo:ECSO_01000003>
+        <skos:altLabel>CH4</skos:altLabel>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
     </owl:Class>
     
@@ -2155,6 +2219,7 @@ maybe others.
         <skos:definition>Carbon oxoanions that have formula CO3.</skos:definition>
         <odo:ECSO_01000003> http://purl.obolibrary.org/obo/CHEBI_41609
 </odo:ECSO_01000003>
+        <skos:altLabel>CO3</skos:altLabel>
     </owl:Class>
     
 
@@ -2165,6 +2230,7 @@ maybe others.
         <rdfs:label>Bicarbonate</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000337"/>
         <skos:definition>Carbon oxoanions resulting from the removal of a proton from carbonic acid.</skos:definition>
+        <skos:altLabel>HCO3</skos:altLabel>
         <odo:ECSO_01000003>http://purl.obolibrary.org/obo/CHEBI_17544</odo:ECSO_01000003>
     </owl:Class>
     
@@ -2175,8 +2241,10 @@ maybe others.
     <owl:Class rdf:about="&odo;ECSO_00000327">
         <rdfs:label>Carbohydrate</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000329"/>
+        <skos:altLabel>Fixed Carbon</skos:altLabel>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <odo:ECSO_01000003>http://purl.obolibrary.org/obo/CHEBI_16646</odo:ECSO_01000003>
+        <skos:altLabel>CnH2nOn</skos:altLabel>
         <skos:definition>Any member of the class of organooxygen compounds that is a polyhydroxy-aldehyde or -ketone or a lactol resulting from their intramolecular condensation (monosaccharides); substances derived from these by reduction of the carbonyl group (alditols), by oxidation of one or more hydroxy groups to afford the corresponding aldehydes, ketones, or carboxylic acids, or by replacement of one or more hydroxy group(s) by a hydrogen atom; and polymeric products arising by intermolecular acetal formation between two or more such molecules (disaccharides, polysaccharides and oligosaccharides). Carbohydrates contain only carbon, hydrogen and oxygen atoms; prior to any oxidation or reduction, most have the empirical formula Cm(H2O)n. Compounds obtained from carbohydrates by substitution, etc., are known as carbohydrate derivatives and may contain other elements. Cyclitols are generally not regarded as carbohydrates.</skos:definition>
     </owl:Class>
     
@@ -2188,6 +2256,7 @@ maybe others.
         <rdfs:label>Carbon Monoxide</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000337"/>
         <odo:ECSO_01000003>carbon monoxide. (n.d.) American Heritage® Dictionary of the English Language, Fifth Edition. (2011). Retrieved June 23 2015 from http://www.thefreedictionary.com/carbon+monoxide</odo:ECSO_01000003>
+        <skos:altLabel>CO</skos:altLabel>
         <skos:definition>A colorless, odorless, highly poisonous gas, CO, formed by the incomplete combustion of carbon or a carbonaceous material, such as gasoline.</skos:definition>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
     </owl:Class>
@@ -2199,9 +2268,9 @@ maybe others.
     <owl:Class rdf:about="&odo;ECSO_00000329">
         <rdfs:label>Organic Carbon</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;CHEBI_50860"/>
-        <skos:definition>Carbon derived from the decomposition of plants and animals, ranging from freshly deposited litter to highly decomposed forms such as humus.</skos:definition>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
-        <odo:ECSO_01000003>U.S. EPA. 2002. Methods for the Determination of Total Organic Carbon (TOC) in Soils and Sediments. U.S. Environmental Protection Agency, Ecological Risk Assessment Support Center.</odo:ECSO_01000003>
+        <odo:ECSO_01000003>Adapted from: U.S. EPA. 2002. Methods for the Determination of Total Organic Carbon (TOC) in Soils and Sediments. U.S. Environmental Protection Agency, Ecological Risk Assessment Support Center.</odo:ECSO_01000003>
+        <skos:definition>Carbon derived initially from primary production or from the decomposition of biological materials, ranging from freshly deposited litter to highly decomposed forms such as humus.</skos:definition>
     </owl:Class>
     
 
@@ -2213,7 +2282,11 @@ maybe others.
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&odo;ECSO_00000025"/>
+                    <rdf:Description rdf:about="&odo;ECSO_00000331"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;RO_0001000"/>
+                        <owl:someValuesFrom rdf:resource="&odo;ECSO_00000015"/>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;ENVO_01001309"/>
                         <owl:allValuesFrom rdf:resource="&odo;ECSO_00000329"/>
@@ -2224,7 +2297,11 @@ maybe others.
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000025"/>
         <odo:ECSO_01000003>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
-        <skos:definition>The pool of all types of organic carbon in a carbon cycle.</skos:definition>
+        <skos:altLabel>Total Organic Carbon</skos:altLabel>
+        <skos:definition>The pool of all forms of organic carbon in a carbon cycle.</skos:definition>
+        <skos:altLabel>Fixed Carbon Pool</skos:altLabel>
+        <skos:altLabel>Fixed Carbon</skos:altLabel>
+        <skos:altLabel>TOC</skos:altLabel>
     </owl:Class>
     
 
@@ -2233,6 +2310,21 @@ maybe others.
 
     <owl:Class rdf:about="&odo;ECSO_00000335">
         <rdfs:label>Aboveground Woody Biomass Carbon Pool</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&odo;ECSO_00000033"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&odo;ECSO_00000319"/>
+                        <owl:allValuesFrom>
+                            <owl:Class>
+                                <owl:complementOf rdf:resource="&obo;ENVO_00001998"/>
+                            </owl:Class>
+                        </owl:allValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000033"/>
         <odo:ECSO_01000003>&quot;wood.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Feb. 2015 http-www.thefreedictionary.com/wood</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
@@ -2245,8 +2337,21 @@ maybe others.
 
     <owl:Class rdf:about="&odo;ECSO_00000336">
         <rdfs:label>Particulate Organic Carbon Pool</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&odo;ECSO_00000331"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&odo;ECSO_00000318"/>
+                        <owl:allValuesFrom rdf:resource="&odo;ECSO_00000317"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000331"/>
+        <skos:altLabel>Total Particulate Organic Carbon</skos:altLabel>
         <skos:definition>The pool of organic carbon made up of particles larger than 0.45 um.</skos:definition>
+        <skos:altLabel>POC</skos:altLabel>
         <odo:ECSO_01000003>Fiedler, S. et al. 2008. Particulate organic carbon (POC) in relation to other pore water carbon fractions in drained and rewetted fens in Southern Germany. Biogeosciences, 5, 1615–1623, 2008.
 </odo:ECSO_01000003>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-943</odo:ECSO_01000001>
@@ -2270,7 +2375,23 @@ maybe others.
 
     <owl:Class rdf:about="&odo;ECSO_00000341">
         <rdfs:label>Inorganic Carbon Pool</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&odo;ECSO_00000025"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;ENVO_01001309"/>
+                        <owl:allValuesFrom rdf:resource="&odo;ECSO_00000337"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000025"/>
+        <skos:altLabel>Total Inorganic Carbon</skos:altLabel>
+        <skos:altLabel>TIC</skos:altLabel>
+        <odo:ECSO_01000003>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000003>
+        <skos:definition>The pool of all forms of inorganic carbon in a carbon cycle.</skos:definition>
+        <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
     </owl:Class>
     
 
@@ -2291,10 +2412,10 @@ maybe others.
     <!-- http://purl.dataone.org/odo/ECSO_00000343 -->
 
     <owl:Class rdf:about="&odo;ECSO_00000343">
-        <rdfs:label>Total Living Biomass Carbon Pool</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000206"/>
+        <rdfs:label>Biomass Carbon Pool</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000331"/>
         <odo:ECSO_01000003>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000003>
-        <skos:definition>The total mass of all carbon contained within live organisms fro a defined space and time.</skos:definition>
+        <skos:definition>The mass of all carbon contained within live organisms for a defined space and time.</skos:definition>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
     </owl:Class>
     
@@ -2323,7 +2444,7 @@ maybe others.
     <!-- http://purl.obolibrary.org/obo/CHEBI_24835 -->
 
     <owl:Class rdf:about="&obo;CHEBI_24835">
-        <rdfs:subClassOf rdf:resource="&obo;CHEBI_33675"/>
+        <rdfs:subClassOf rdf:resource="&obo;CHEBI_33582"/>
     </owl:Class>
     
 
@@ -3063,6 +3184,15 @@ See example_Of_Usage, presentation_Label</odo:ECSO_01000004>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&odo;ECSO_00000309"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000310"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000311"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000313"/>
+        </owl:members>
+    </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
