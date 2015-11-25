@@ -74,9 +74,8 @@ See example_Of_Usage, presentation_Label</odo:ECSO_01000004>
         <odo:ECSO_01000001>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
         <odo:ECSO_01000003 rdf:resource="http://www.w3.org/TR/rdf-schema/#ch_label"/>
     </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
     <owl:AnnotationProperty rdf:about="&owl;deprecated"/>
-    <owl:AnnotationProperty rdf:about="&rdfs;seeAlso"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
     <owl:AnnotationProperty rdf:about="&odo;ECSO_01000001">
         <rdfs:label>definition_Contributor</rdfs:label>
         <skos:definition>&quot;contributor&quot; is an OWL &quot;Annotation property&quot; that names the person contributing the content, so s/he can be contacted, especially during development.</skos:definition>
@@ -87,7 +86,9 @@ If there is any potential ambiguity, an identifier should be added, including th
         <odo:ECSO_01000003>O&#39;Brien, pers comm. 2015-02-15</odo:ECSO_01000003>
         <odo:ECSO_01000001>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322, Shild</odo:ECSO_01000001>
     </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&rdfs;seeAlso"/>
     <owl:AnnotationProperty rdf:about="&dc;contributor"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;isDefinedBy"/>
     <owl:AnnotationProperty rdf:about="&odo;ECSO_01000005">
         <rdfs:label>description_Source</rdfs:label>
         <skos:definition>&quot;description_Source&quot; is the Annotation property that can be used to provide the reference source or Authority, as an ISBN,DOI, bibliographic citation, etc. to the source of the &quot;description&quot; contained in an associated &quot;description&quot; Annotation property that is attached (annotated) to some concept.  
@@ -98,7 +99,6 @@ As description Annotation properties are often not as rigorous, and hence looser
         <odo:ECSO_01000001>Schildhauer, orcid.org/0000-0003-0632-7576</odo:ECSO_01000001>
         <odo:ECSO_01000005>Schildhauer, pers comm, 05Feb2015, orcid.org/0000-0003-0632-7576</odo:ECSO_01000005>
     </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="&rdfs;isDefinedBy"/>
     <owl:AnnotationProperty rdf:about="&odo;ECSO_01000004">
         <rdfs:label>description</rdfs:label>
         <skos:definition rdf:datatype="&rdfs;Literal">&quot;description&quot; is an OWL &quot;Annotation property&quot; that contains a a more verbose, less prescriptive natural language explication of the concept to which it is attached (or applied, or annotated) in contrast to a &quot;definition&quot; Annotation property.
@@ -385,12 +385,12 @@ biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than 
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000011"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&odo;ECSO_00000340"/>
+                        <owl:onProperty rdf:resource="&odo;ECSO_00000339"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&odo;ECSO_00000327"/>
-                                    <rdf:Description rdf:about="&obo;CHEBI_33582"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000323"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000337"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
@@ -403,12 +403,12 @@ biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than 
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000011"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&odo;ECSO_00000339"/>
+                        <owl:onProperty rdf:resource="&odo;ECSO_00000340"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&odo;ECSO_00000323"/>
-                                    <rdf:Description rdf:about="&odo;ECSO_00000337"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000327"/>
+                                    <rdf:Description rdf:about="&obo;CHEBI_33582"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
@@ -439,12 +439,12 @@ For most purposes (including this one) the two can be the same. It&#39;s most pr
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000011"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&odo;ECSO_00000340"/>
+                        <owl:onProperty rdf:resource="&odo;ECSO_00000339"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&odo;ECSO_00000323"/>
-                                    <rdf:Description rdf:about="&obo;CHEBI_33582"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000327"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000329"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
@@ -457,12 +457,12 @@ For most purposes (including this one) the two can be the same. It&#39;s most pr
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000011"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&odo;ECSO_00000339"/>
+                        <owl:onProperty rdf:resource="&odo;ECSO_00000340"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&odo;ECSO_00000327"/>
-                                    <rdf:Description rdf:about="&odo;ECSO_00000329"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000323"/>
+                                    <rdf:Description rdf:about="&obo;CHEBI_33582"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
@@ -576,7 +576,7 @@ synonyms: NPP</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&odo;ECSO_00000341"/>
+                    <rdf:Description rdf:about="&odo;ECSO_00000331"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&odo;ECSO_00000319"/>
                         <owl:allValuesFrom rdf:resource="&obo;ENVO_00001998"/>
@@ -587,7 +587,7 @@ synonyms: NPP</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&odo;ECSO_00000331"/>
+                    <rdf:Description rdf:about="&odo;ECSO_00000341"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&odo;ECSO_00000319"/>
                         <owl:allValuesFrom rdf:resource="&obo;ENVO_00001998"/>
@@ -2246,10 +2246,10 @@ Adapted from oceanservice.noaa.gov/facts/phyto.html, https://en.wikipedia.org/wi
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000505"/>
         <skos:definition>Observation of an ecological system of interest under specific, controllable circumstances in an effort to evaluate system response. Fundamentally, manipulative or comarative experments (Hurlbert 1984) require 1) random allocation of treatments (ncluding controls) to experimental units from the population under study and 2) replication of each tratment over several experimental units (Fisher 1925).
 </skos:definition>
-        <odo:ECSO_01000003>http://everything2.com/title/Manipulative+experiment</odo:ECSO_01000003>
         <rdfs:comment>also see the below, from everything2.com
 
 A manipulative experiment is one in which the experimenter manipulates the system of study in order to attempt to uncover causal relationships. Such experiments can either be rigidly or loosely controlled. In the former case, investigator may create an artificial system in a laboratory setting and control all confounding variables so as to eliminate ambiguity in the interpretation of results. In the latter case, the investigator may simply modify one or two variables of interest in order to determine how the natural system will respond. The statistical methods used to analyse the data are generally of the analysis of variance type, but there are exceptions (especially in the case of loosely controlled manipulations). Two examples follow, one where rigid control was exercised, and one where loose control was used. </rdfs:comment>
+        <odo:ECSO_01000003>http://everything2.com/title/Manipulative+experiment</odo:ECSO_01000003>
         <odo:ECSO_01000001>Margaret O&amp;apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
         <odo:ECSO_01000003>Morrison, M. L., W.M. Block, M. D Strickland, B. A. Collier, M. J. Peterson. 2008 Wildlife Study Design. Springer Science &amp; Business Media, 
 (via google books, sect 2.4.1, p 42)
@@ -2301,6 +2301,7 @@ Dawes, Cl J. 1978. Marine Botany, John Wiley and Sons., p 113</odo:ECSO_01000003
     <owl:Class rdf:about="&odo;ECSO_00000509">
         <rdfs:label>diameter</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000039"/>
+        <odo:ECSO_01000003>PATO:0001334</odo:ECSO_01000003>
         <odo:ECSO_01000001>Margaret O&amp;apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
     </owl:Class>
     
@@ -2311,6 +2312,7 @@ Dawes, Cl J. 1978. Marine Botany, John Wiley and Sons., p 113</odo:ECSO_01000003
     <owl:Class rdf:about="&odo;ECSO_00000510">
         <rdfs:label>circumference</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000039"/>
+        <odo:ECSO_01000003>PATO:0001648</odo:ECSO_01000003>
         <odo:ECSO_01000001>Margaret O&amp;apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
     </owl:Class>
     
@@ -2321,9 +2323,22 @@ Dawes, Cl J. 1978. Marine Botany, John Wiley and Sons., p 113</odo:ECSO_01000003
     <owl:Class rdf:about="&odo;ECSO_00000511">
         <rdfs:label>height</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000039"/>
-        <odo:ECSO_01000003>www.thefreedictionary.com/height</odo:ECSO_01000003>
+        <odo:ECSO_01000003>www.thefreedictionary.com/height
+
+ALso see PATO:0000119</odo:ECSO_01000003>
         <odo:ECSO_01000001>Margaret O&amp;apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
         <skos:definition>the measurement from base of something to top, or to a fixed point.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000512 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000512">
+        <rdfs:label>concentration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000506"/>
+        <skos:definition>See PATO:0000033, concentration of</skos:definition>
+        <rdfs:comment>EquivalentClass: Measurement and ofCharacteristic only (AmountOfSubstanceConcentration or MassDensity)</rdfs:comment>
     </owl:Class>
     
 
@@ -2384,21 +2399,11 @@ Dawes, Cl J. 1978. Marine Botany, John Wiley and Sons., p 113</odo:ECSO_01000003
     
 
 
-    <!-- http://purl.dataone.org/odo/ecso.owl/ECSO_00000507 -->
-
-    <owl:Class rdf:about="&odo;ecso.owl/ECSO_00000507">
-        <rdfs:label>concentration</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000506"/>
-        <rdfs:comment>EquivalentClass: Measurement and ofCharacteristic only (AmountOfSubstanceConcentration or MassDensity)</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://purl.dataone.org/odo/ecso.owl/ECSO_00000508 -->
 
     <owl:Class rdf:about="&odo;ecso.owl/ECSO_00000508">
         <rdfs:label>moisture</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000507"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000512"/>
     </owl:Class>
     
 
@@ -2473,7 +2478,7 @@ Dawes, Cl J. 1978. Marine Botany, John Wiley and Sons., p 113</odo:ECSO_01000003
 
     <owl:Class rdf:about="&odo;ecso.owl/ECSO_00000516">
         <rdfs:label>CO2 Concentration</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000507"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000512"/>
         <rdfs:comment>EquivalentTo: concentration and measurementFor only Observation and ofEntity only CO2</rdfs:comment>
     </owl:Class>
     
