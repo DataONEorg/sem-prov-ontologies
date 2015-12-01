@@ -2,6 +2,7 @@
 
 
 <!DOCTYPE rdf:RDF [
+    <!ENTITY odo "http://purl.dataone.org/odo/" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY obo "http://purl.obolibrary.org/obo/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
@@ -16,6 +17,7 @@
      xml:base="https://purl.org/dataone/ontologies/observation/ENVO_import.owl"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:odo="http://purl.dataone.org/odo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -33,153 +35,69 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
-
-    <owl:AnnotationProperty rdf:about="&obo;IAO_0000115">
-        <rdfs:label rdf:datatype="&xsd;string">definition</rdfs:label>
+    <owl:AnnotationProperty rdf:about="&oboInOwl;creation_date"/>
+    <owl:AnnotationProperty rdf:about="&oboInOwl;inSubset">
+        <rdfs:label rdf:datatype="&xsd;string">in_subset</rdfs:label>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000412 -->
-
-    <owl:AnnotationProperty rdf:about="&obo;IAO_0000412">
-        <rdfs:label xml:lang="en">imported from</rdfs:label>
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasExactSynonym">
+        <rdfs:label rdf:datatype="&xsd;string">has_exact_synonym</rdfs:label>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000425 -->
-
-    <owl:AnnotationProperty rdf:about="&obo;IAO_0000425">
-        <rdfs:label rdf:datatype="&xsd;string">expand assertion to</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0100001 -->
-
+    <owl:AnnotationProperty rdf:about="&oboInOwl;created_by"/>
+    <owl:AnnotationProperty rdf:about="&owl;deprecated"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0100001">
         <rdfs:label rdf:datatype="&xsd;string">term replaced by</rdfs:label>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/envo#disconnected_from -->
-
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000115">
+        <rdfs:label rdf:datatype="&xsd;string">definition</rdfs:label>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasRelatedSynonym">
+        <rdfs:label rdf:datatype="&xsd;string">has_related_synonym</rdfs:label>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasDbXref">
+        <rdfs:label rdf:datatype="&xsd;string">database_cross_reference</rdfs:label>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000412">
+        <rdfs:label xml:lang="en">imported from</rdfs:label>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000425">
+        <rdfs:label rdf:datatype="&xsd;string">expand assertion to</rdfs:label>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&oboInOwl;is_metadata_tag"/>
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasAlternativeId">
+        <rdfs:label rdf:datatype="&xsd;string">has_alternative_id</rdfs:label>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasOBONamespace">
+        <rdfs:label rdf:datatype="&xsd;string">has_obo_namespace</rdfs:label>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasNarrowSynonym">
+        <rdfs:label rdf:datatype="&xsd;string">has_narrow_synonym</rdfs:label>
+    </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&obo;envo#disconnected_from">
         <rdfs:label rdf:datatype="&xsd;string">disconnected_from</rdfs:label>
-        <oboInOwl:is_class_level rdf:datatype="&xsd;integer">1</oboInOwl:is_class_level>
         <oboInOwl:is_metadata_tag rdf:datatype="&xsd;integer">1</oboInOwl:is_metadata_tag>
+        <oboInOwl:is_class_level rdf:datatype="&xsd;integer">1</oboInOwl:is_class_level>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">A is disconnected_from B if they have no parts in common.</obo:IAO_0000115>
         <obo:IAO_0000425 rdf:datatype="&xsd;string">Class: &lt;http://www.w3.org/2002/07/owl#Nothing&gt; EquivalentTo: (BFO_0000050 some ?X) and (BFO_0000050 some ?Y)</obo:IAO_0000425>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">disconnected_from</oboInOwl:id>
         <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">non_overlapping_with</oboInOwl:hasExactSynonym>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#created_by -->
-
-    <owl:AnnotationProperty rdf:about="&oboInOwl;created_by"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#creation_date -->
-
-    <owl:AnnotationProperty rdf:about="&oboInOwl;creation_date"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasAlternativeId -->
-
-    <owl:AnnotationProperty rdf:about="&oboInOwl;hasAlternativeId">
-        <rdfs:label rdf:datatype="&xsd;string">has_alternative_id</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym -->
-
+    <owl:AnnotationProperty rdf:about="&oboInOwl;is_class_level"/>
     <owl:AnnotationProperty rdf:about="&oboInOwl;hasBroadSynonym">
         <rdfs:label rdf:datatype="&xsd;string">has_broad_synonym</rdfs:label>
     </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasDbXref -->
-
-    <owl:AnnotationProperty rdf:about="&oboInOwl;hasDbXref">
-        <rdfs:label rdf:datatype="&xsd;string">database_cross_reference</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasExactSynonym -->
-
-    <owl:AnnotationProperty rdf:about="&oboInOwl;hasExactSynonym">
-        <rdfs:label rdf:datatype="&xsd;string">has_exact_synonym</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym -->
-
-    <owl:AnnotationProperty rdf:about="&oboInOwl;hasNarrowSynonym">
-        <rdfs:label rdf:datatype="&xsd;string">has_narrow_synonym</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasOBONamespace -->
-
-    <owl:AnnotationProperty rdf:about="&oboInOwl;hasOBONamespace">
-        <rdfs:label rdf:datatype="&xsd;string">has_obo_namespace</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym -->
-
-    <owl:AnnotationProperty rdf:about="&oboInOwl;hasRelatedSynonym">
-        <rdfs:label rdf:datatype="&xsd;string">has_related_synonym</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#id -->
-
     <owl:AnnotationProperty rdf:about="&oboInOwl;id"/>
     
 
 
-    <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-    <owl:AnnotationProperty rdf:about="&oboInOwl;inSubset">
-        <rdfs:label rdf:datatype="&xsd;string">in_subset</rdfs:label>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#is_class_level -->
-
-    <owl:AnnotationProperty rdf:about="&oboInOwl;is_class_level"/>
-    
-
-
-    <!-- http://www.geneontology.org/formats/oboInOwl#is_metadata_tag -->
-
-    <owl:AnnotationProperty rdf:about="&oboInOwl;is_metadata_tag"/>
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#deprecated -->
-
-    <owl:AnnotationProperty rdf:about="&owl;deprecated"/>
     
 
 
@@ -315,6 +233,15 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000518 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000518">
+        <rdfs:subClassOf rdf:resource="&obo;PATO_0001018"/>
+        <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
+    </owl:Class>
     
 
 
@@ -2640,7 +2567,7 @@
     <owl:Class rdf:about="&obo;ENVO_00000015">
         <rdfs:label rdf:datatype="&xsd;string">ocean</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00001999"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">Continuous saline-water bodies that surround the continents and fill the Earth&apos;s great depressions.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Continuous saline-water bodies that surround the continents and fill the Earth&#39;s great depressions.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00000015</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">EcoLexicon:ocean</oboInOwl:hasDbXref>
@@ -2718,14 +2645,14 @@
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00000278"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;RO_0001025"/>
-                <owl:someValuesFrom rdf:resource="&obo;ENVO_0010163"/>
+                <owl:onProperty rdf:resource="&obo;RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="&obo;PATO_0001824"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;RO_0000086"/>
-                <owl:someValuesFrom rdf:resource="&obo;PATO_0001824"/>
+                <owl:onProperty rdf:resource="&obo;RO_0001025"/>
+                <owl:someValuesFrom rdf:resource="&obo;ENVO_0010163"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">A river that has either permanently or temporally lost its water.</obo:IAO_0000115>
@@ -2753,9 +2680,9 @@
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Saline_lake</oboInOwl:hasDbXref>
         <oboInOwl:hasBroadSynonym rdf:datatype="&xsd;string">lake</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">salina</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">salt lake</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">salt lake</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">salt lake</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">salt lake</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">salt lake</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">salt lakes</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">soda lake</oboInOwl:hasRelatedSynonym>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
@@ -2860,7 +2787,7 @@
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">FTT:721</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Geonames:H.STM</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Geonames:H.STMS</oboInOwl:hasDbXref>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">Linear body of water flowing on the Earth&apos;s surface.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Linear body of water flowing on the Earth&#39;s surface.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">SWEETRealm:Stream</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">Stream</oboInOwl:hasExactSynonym>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">TGN:21106</oboInOwl:hasDbXref>
@@ -3022,8 +2949,8 @@
         <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">kill</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">lode</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">moat</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">narrows</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">narrows</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">narrows</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">narrows (hydrographic)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">overflow channel</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">passage</oboInOwl:hasNarrowSynonym>
@@ -3187,8 +3114,8 @@
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">pond</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">ponds</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">pool</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">pool (water body)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">pool (water body)</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">pool (water body)</oboInOwl:hasRelatedSynonym>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
     
@@ -3616,10 +3543,10 @@
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Geonames:H.CHNN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Geonames:H.CNLN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">TGN:51257</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">navigation canal</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">navigation canal</oboInOwl:hasNarrowSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">navigation channel</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">navigation canal</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">navigation channel</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">navigation channel</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">ship cannal</oboInOwl:hasRelatedSynonym>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
@@ -3652,7 +3579,7 @@
     <owl:Class rdf:about="&obo;ENVO_00000051">
         <rdfs:label rdf:datatype="&xsd;string">hot spring</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00000027"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A spring that is produced by the emergence of geothermally-heated groundwater from the Earth&apos;s crust.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A spring that is produced by the emergence of geothermally-heated groundwater from the Earth&#39;s crust.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00000051</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">EcoLexicon:thermal_spring</oboInOwl:hasDbXref>
@@ -3778,8 +3705,8 @@
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Geonames:H.MRSHN</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">TGN:21323</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Saline_marsh</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">salt marsh</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">salt marsh</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">salt marsh</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">salting</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">tidal marsh</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasBroadSynonym rdf:datatype="&xsd;string">wetland</oboInOwl:hasBroadSynonym>
@@ -4564,8 +4491,8 @@
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">defile</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">gap</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">notch</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">pass</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">pass</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">pass</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">saddle</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">saddle (physiographic)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">sill (physiographic)</oboInOwl:hasRelatedSynonym>
@@ -4855,7 +4782,7 @@
     <owl:Class rdf:about="&obo;ENVO_00000094">
         <rdfs:label rdf:datatype="&xsd;string">volcanic feature</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00000191"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A feature associated with a volcano, an opening, or rupture, in the Earth&apos;s surface or crust, which allows hot, molten rock, ash and gases to escape from deep below the surface.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A feature associated with a volcano, an opening, or rupture, in the Earth&#39;s surface or crust, which allows hot, molten rock, ash and gases to escape from deep below the surface.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00000094</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">FTT:591</oboInOwl:hasDbXref>
@@ -5014,7 +4941,7 @@
     <owl:Class rdf:about="&obo;ENVO_00000100">
         <rdfs:label rdf:datatype="&xsd;string">valley</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00000309"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A depression caused by erosion by water or ice. Low-lying land bordered by higher ground; especially elongate, relatively large gently sloping depressions of the Earth&apos;s surface, commonly situated between two mountains or between ranges of hills or mountains, and often containing a stream with an outlet.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A depression caused by erosion by water or ice. Low-lying land bordered by higher ground; especially elongate, relatively large gently sloping depressions of the Earth&#39;s surface, commonly situated between two mountains or between ranges of hills or mountains, and often containing a stream with an outlet.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00000100</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">EcoLexicon:valley</oboInOwl:hasDbXref>
@@ -6220,8 +6147,8 @@
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">SnowField</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">TGN:21146</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Snow_field</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">snowfield</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">snowfield</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">snowfield</oboInOwl:hasExactSynonym>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
     
@@ -6247,7 +6174,7 @@
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Geonames:H.CRNT</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">SWEETRealm:OceanCurrent</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">TGN:21169</oboInOwl:hasDbXref>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">The region occupied by any more or less continuous, directed movement of ocean water that flows in one of the Earth&apos;s oceans. Ocean Currents are rivers of hot or cold water within the ocean. The currents are generated from the forces acting upon the water like the earth&apos;s rotation, the wind, the temperature and salinity differences and the gravitation of the moon. The depth contours, the shoreline and other movements influence the direction and strength of the movements of water that forms a given current.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">The region occupied by any more or less continuous, directed movement of ocean water that flows in one of the Earth&#39;s oceans. Ocean Currents are rivers of hot or cold water within the ocean. The currents are generated from the forces acting upon the water like the earth&#39;s rotation, the wind, the temperature and salinity differences and the gravitation of the moon. The depth contours, the shoreline and other movements influence the direction and strength of the movements of water that forms a given current.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Ocean_current</oboInOwl:hasDbXref>
         <oboInOwl:hasBroadSynonym rdf:datatype="&xsd;string">current</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">ocean current</oboInOwl:hasExactSynonym>
@@ -6450,13 +6377,13 @@
         <rdfs:subClassOf rdf:resource="&obo;ENVO_01001304"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
+                <owl:onProperty rdf:resource="&obo;RO_0001025"/>
                 <owl:someValuesFrom rdf:resource="&obo;ENVO_00000097"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;RO_0001025"/>
+                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
                 <owl:someValuesFrom rdf:resource="&obo;ENVO_00000097"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -6657,8 +6584,8 @@
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">SWEETRealm:Atoll</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">TGN:21472</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Atoll</oboInOwl:hasDbXref>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">atoll</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">atoll</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">atoll</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">coral atoll</oboInOwl:hasExactSynonym>
         <oboInOwl:hasBroadSynonym rdf:datatype="&xsd;string">island</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">reef</oboInOwl:hasRelatedSynonym>
@@ -7308,8 +7235,8 @@
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">SPIRE:Mudflat</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">SWEETRealm:MudFlat</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Mudflat</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">mud flat</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">mud flat</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">mud flat</oboInOwl:hasExactSynonym>
         <oboInOwl:hasBroadSynonym rdf:datatype="&xsd;string">wetland</oboInOwl:hasBroadSynonym>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
@@ -7533,7 +7460,7 @@
     <owl:Class rdf:about="&obo;ENVO_00000203">
         <rdfs:label rdf:datatype="&xsd;string">rift lake</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00000020"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A lake which forms as a result of subsidence along a geological fault in the Earth&apos;s tectonic plates.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A lake which forms as a result of subsidence along a geological fault in the Earth&#39;s tectonic plates.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00000203</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Rift_lake</oboInOwl:hasDbXref>
@@ -7722,7 +7649,7 @@
     <owl:Class rdf:about="&obo;ENVO_00000215">
         <rdfs:label rdf:datatype="&xsd;string">hydrothermal vent</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00000027"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A fissure in the Earths&apos;s surface from which geothermally heated water issues.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A fissure in the Earths&#39;s surface from which geothermally heated water issues.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00000215</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">EcoLexicon:hydrothermal_vent</oboInOwl:hasDbXref>
@@ -7740,7 +7667,7 @@
     <owl:Class rdf:about="&obo;ENVO_00000216">
         <rdfs:label rdf:datatype="&xsd;string">fumarole</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00000215"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A hole in the Earth&apos;s crust from which steam and gases are emitted.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A hole in the Earth&#39;s crust from which steam and gases are emitted.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00000216</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">EcoLexicon:fumarole</oboInOwl:hasDbXref>
@@ -7774,7 +7701,7 @@
     <owl:Class rdf:about="&obo;ENVO_00000218">
         <rdfs:label rdf:datatype="&xsd;string">black smoker</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_01000122"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A hydrothermal vent found on the ocean floor. The vents are formed in fields hundreds of meters wide when superheated water from below the Earth&apos;s crust comes through the ocean floor. The superheated water is rich in dissolved minerals from the crust, most notably sulfides, which crystallize to create a chimney-like structure around each vent. When the superheated water in the vent comes in contact with the cold ocean water, many minerals are precipitated, creating the distinctive black color. The metal sulfides that are deposited can become massive sulfide ore deposits in time.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A hydrothermal vent found on the ocean floor. The vents are formed in fields hundreds of meters wide when superheated water from below the Earth&#39;s crust comes through the ocean floor. The superheated water is rich in dissolved minerals from the crust, most notably sulfides, which crystallize to create a chimney-like structure around each vent. When the superheated water in the vent comes in contact with the cold ocean water, many minerals are precipitated, creating the distinctive black color. The metal sulfides that are deposited can become massive sulfide ore deposits in time.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00000218</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">SPIRE:Oceanic_vent</oboInOwl:hasDbXref>
@@ -8122,8 +8049,8 @@
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Bayou</oboInOwl:hasDbXref>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">bahia</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">embayment</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasBroadSynonym rdf:datatype="&xsd;string">lake</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">lake</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasBroadSynonym rdf:datatype="&xsd;string">lake</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">slough</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasBroadSynonym rdf:datatype="&xsd;string">watercourse</oboInOwl:hasBroadSynonym>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
@@ -8355,7 +8282,7 @@
     <owl:Class rdf:about="&obo;ENVO_00000247">
         <rdfs:label rdf:datatype="&xsd;string">volcano</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00000094"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">An opening, or rupture, in the Earth&apos;s surface or crust, which allows hot, molten rock, ash and gases to escape from deep below the surface.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">An opening, or rupture, in the Earth&#39;s surface or crust, which allows hot, molten rock, ash and gases to escape from deep below the surface.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00000247</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">EcoLexicon:volcano</oboInOwl:hasDbXref>
@@ -8439,7 +8366,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00000252</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">EcoLexicon:terminal_moraine</oboInOwl:hasDbXref>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">Ridges of unconsolidated debris deposited at the snout or end of the glacier. They usually reflect the shape of the glacier&apos;s terminus.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Ridges of unconsolidated debris deposited at the snout or end of the glacier. They usually reflect the shape of the glacier&#39;s terminus.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Terminal_moraine</oboInOwl:hasDbXref>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">delta moraine</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">end moraine</oboInOwl:hasExactSynonym>
@@ -8654,7 +8581,7 @@
     <owl:Class rdf:about="&obo;ENVO_00000264">
         <rdfs:label rdf:datatype="&xsd;string">seamount</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00000081"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A mountain rising from the ocean seafloor that does not reach to the water&apos;s surface (sea level), and thus is not an island. Typically formed from volcanoes that rise abruptly and are usually found rising from a seafloor of 1,000 - 4,000 meters depth. Independent features that rise to at least 1,000 meters above the seafloor.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A mountain rising from the ocean seafloor that does not reach to the water&#39;s surface (sea level), and thus is not an island. Typically formed from volcanoes that rise abruptly and are usually found rising from a seafloor of 1,000 - 4,000 meters depth. Independent features that rise to at least 1,000 meters above the seafloor.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00000264</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">EcoLexicon:mountain</oboInOwl:hasDbXref>
@@ -8687,8 +8614,8 @@
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">knolls</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">mesa</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">mound</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasBroadSynonym rdf:datatype="&xsd;string">mount</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">mount</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasBroadSynonym rdf:datatype="&xsd;string">mount</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">mountain</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">mountains</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">peak</oboInOwl:hasRelatedSynonym>
@@ -8762,13 +8689,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;RO_0002220"/>
-                <owl:someValuesFrom rdf:resource="&obo;ENVO_00000482"/>
+                <owl:someValuesFrom rdf:resource="&obo;ENVO_00000426"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;RO_0002220"/>
-                <owl:someValuesFrom rdf:resource="&obo;ENVO_00000426"/>
+                <owl:someValuesFrom rdf:resource="&obo;ENVO_00000482"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">A steep-sided valley on the sea floor of the continental slope. Many submarine canyons are found as extensions to large rivers; however there are many that have no such association. Canyons cutting the continental slopes have been found at depths greater than 2 km below sea level. Many submarine canyons continue as submarine channels across continental rise areas and may extend for hundreds of kilometers.</obo:IAO_0000115>
@@ -9246,8 +9173,8 @@
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">TGN:21503</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Quicksand</oboInOwl:hasDbXref>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">bar</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">quicksand</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">quicksand</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">quicksand</oboInOwl:hasExactSynonym>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
     
@@ -9319,7 +9246,7 @@
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00000176"/>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00000289</oboInOwl:id>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">The raised fault block bounded by normal faults. The raised block is a portion of the Earth&apos;s crust that has remained stationary while the land has sunk on either side of it or has been crushed by a mountain range against it.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">The raised fault block bounded by normal faults. The raised block is a portion of the Earth&#39;s crust that has remained stationary while the land has sunk on either side of it or has been crushed by a mountain range against it.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
     
@@ -9385,8 +9312,8 @@
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">TGN:21440</oboInOwl:hasDbXref>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">The separation between neighbouring drainage basins (catchments). In hilly country, the divide lies along topographical peaks and ridges, but in flat country or on a high plateau (especially where the ground is marshy) the divide may be invisible - just a more or less notional line on the ground on either side of which falling raindrops will start a journey to different rivers, and even to different sides of a country or continent.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Watershed</oboInOwl:hasDbXref>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">divide</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">divide</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">divide</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">drainage basin</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">water divide</oboInOwl:hasExactSynonym>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
@@ -9612,7 +9539,7 @@
     <owl:Class rdf:about="&obo;ENVO_00000302">
         <rdfs:label rdf:datatype="&xsd;string">rift valley</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00000100"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A valley created by the formation of a rift, i.e. place where the Earth&apos;s crust and lithosphere are being pulled apart by tectonic forces.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A valley created by the formation of a rift, i.e. place where the Earth&#39;s crust and lithosphere are being pulled apart by tectonic forces.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00000302</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">FTT:684</oboInOwl:hasDbXref>
@@ -9954,13 +9881,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="&obo;ENVO_00000303"/>
+                <owl:someValuesFrom rdf:resource="&obo;ENVO_00000304"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="&obo;ENVO_00000304"/>
+                <owl:someValuesFrom rdf:resource="&obo;ENVO_00000303"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
@@ -10417,8 +10344,8 @@
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Geonames:H.DOMG</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">TGN:21144</oboInOwl:hasDbXref>
         <oboInOwl:hasBroadSynonym rdf:datatype="&xsd;string">ice mass</oboInOwl:hasBroadSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">icecap dome</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">icecap dome</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">icecap dome</oboInOwl:hasExactSynonym>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
     
@@ -10657,7 +10584,7 @@
     <owl:Class rdf:about="&obo;ENVO_00000354">
         <rdfs:label rdf:datatype="&xsd;string">volcanic field</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00000094"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A region of the earth&apos;s crust that is prone to localized volcanic activity.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A region of the earth&#39;s crust that is prone to localized volcanic activity.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00000354</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Volcanic_field</oboInOwl:hasDbXref>
@@ -10759,7 +10686,7 @@
     <owl:Class rdf:about="&obo;ENVO_00000361">
         <rdfs:label rdf:datatype="&xsd;string">site of special scientific interest</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00000358"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A conservation designation denoting a protected area in the United Kingdom. SSSIs are the basic &apos;building block&apos; of nature conservation legislation and most other legal nature/geological conservation designations are based upon them, including National Nature Reserves, Ramsar Sites, Special Protection Areas, and Special Areas of Conservation.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A conservation designation denoting a protected area in the United Kingdom. SSSIs are the basic &#39;building block&#39; of nature conservation legislation and most other legal nature/geological conservation designations are based upon them, including National Nature Reserves, Ramsar Sites, Special Protection Areas, and Special Areas of Conservation.</obo:IAO_0000115>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">Area of Special Scientific Interest</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00000361</oboInOwl:id>
@@ -10910,7 +10837,7 @@
     <owl:Class rdf:about="&obo;ENVO_00000371">
         <rdfs:label rdf:datatype="&xsd;string">complex volcano</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00000247"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A volcano with more than one feature. They form because changes of their eruptive characteristics or the location of multiple vents in an area. Stratovolcanoes may form complex volcanoes, because they may overlap another from explosive eruptions, lava flows, pyroclastic flows and by repeated eruptions, to make multiple summits and vents. Stratovolcanoes could also form a large caldera that gets filled in by multiple small cinder cones, lava domes and craters may also develop on the caldera&apos;s rim.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A volcano with more than one feature. They form because changes of their eruptive characteristics or the location of multiple vents in an area. Stratovolcanoes may form complex volcanoes, because they may overlap another from explosive eruptions, lava flows, pyroclastic flows and by repeated eruptions, to make multiple summits and vents. Stratovolcanoes could also form a large caldera that gets filled in by multiple small cinder cones, lava domes and craters may also develop on the caldera&#39;s rim.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00000371</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Complex_volcano</oboInOwl:hasDbXref>
@@ -11036,7 +10963,7 @@
     <owl:Class rdf:about="&obo;ENVO_00000381">
         <rdfs:label rdf:datatype="&xsd;string">massif</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00000176"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A section of the Earths&apos;s crust that is demarcated by faults or flexures. In the movement of the crust, a massif tends to retain its internal structure while being displaced as a whole.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A section of the Earths&#39;s crust that is demarcated by faults or flexures. In the movement of the crust, a massif tends to retain its internal structure while being displaced as a whole.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00000381</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">EcoLexicon:massif</oboInOwl:hasDbXref>
@@ -11407,8 +11334,8 @@
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">improved channel</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">inlet (hydrographic)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">reach (hydrographic)</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">sea channel</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">sea channel</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">sea channel</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">sea channels</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">seachannel (seafloor)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">sound (bodies of water)</oboInOwl:hasRelatedSynonym>
@@ -12192,7 +12119,7 @@
     <owl:Class rdf:about="&obo;ENVO_00000436">
         <rdfs:label rdf:datatype="&xsd;string">tunnel valley</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00000248"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A deep but narrow valley with a &apos;U&apos; shaped cross-section and frequently a &apos;U&apos; shaped plan which is usually found filled with glacial till. It is formed when the edge of an ice mass advances up a slope. Its length may be appropriately measured in centimetres or kilometres, depending on the circumstances of formation.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A deep but narrow valley with a &#39;U&#39; shaped cross-section and frequently a &#39;U&#39; shaped plan which is usually found filled with glacial till. It is formed when the edge of an ice mass advances up a slope. Its length may be appropriately measured in centimetres or kilometres, depending on the circumstances of formation.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00000436</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Tunnel_valley</oboInOwl:hasDbXref>
@@ -12343,8 +12270,8 @@
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Clearing</oboInOwl:hasDbXref>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">burn</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">burnt over area</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">clearing</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">clearing</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">clearing</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">cut line</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">fire break</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">forest clearing</oboInOwl:hasNarrowSynonym>
@@ -12802,7 +12729,7 @@
     <owl:Class rdf:about="&obo;ENVO_00000474">
         <rdfs:label rdf:datatype="&xsd;string">cut</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00000002"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">An excavation of the Earth&apos;s surface to provide passage for a road, railway, canal, etc.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">An excavation of the Earth&#39;s surface to provide passage for a road, railway, canal, etc.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">CUT</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00000474</oboInOwl:id>
@@ -13490,9 +13417,9 @@
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Geonames:H.POOLI</oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">intermittent pond</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">intermittent ponds</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">intermittent pool</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">intermittent pool</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">intermittent pool</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">intermittent pool</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">intermittent pool</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasBroadSynonym rdf:datatype="&xsd;string">lake</oboInOwl:hasBroadSynonym>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
@@ -13595,8 +13522,8 @@
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">TGN:21498</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">TGN:21513</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Terrace</oboInOwl:hasDbXref>
-        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">bench</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">bench</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">bench</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">bench (natural)</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">ledge</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">rock terrace</oboInOwl:hasNarrowSynonym>
@@ -13809,8 +13736,8 @@
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">FTT:931</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Geonames:H.STMSB</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">TGN:21112</oboInOwl:hasDbXref>
-        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">lost river</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasBroadSynonym rdf:datatype="&xsd;string">lost river</oboInOwl:hasBroadSynonym>
+        <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">lost river</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasBroadSynonym rdf:datatype="&xsd;string">lost watercourse</oboInOwl:hasBroadSynonym>
         <oboInOwl:hasBroadSynonym rdf:datatype="&xsd;string">stream</oboInOwl:hasBroadSynonym>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
@@ -14147,8 +14074,8 @@
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">FTT:839</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Geonames:H.DPRG</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">TGN:21145</oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">icecap depression</oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">icecap depression</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">icecap depression</oboInOwl:hasExactSynonym>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
     
@@ -14436,8 +14363,8 @@
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Geonames:H.WTRH</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">TGN:21184</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Waterhole</oboInOwl:hasDbXref>
-        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">water hole</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">water hole</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">water hole</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">waterhole</oboInOwl:hasRelatedSynonym>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
@@ -14980,7 +14907,7 @@
     <owl:Class rdf:about="&obo;ENVO_00001998">
         <rdfs:label rdf:datatype="&xsd;string">soil</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00010483"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">Any material within 2 m from the Earth&apos;s surface that is in contact with the atmosphere, with the exclusion of living organisms, areas with continuous ice not covered by other material, and water bodies deeper than 2 m.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Any material within 2 m from the Earth&#39;s surface that is in contact with the atmosphere, with the exclusion of living organisms, areas with continuous ice not covered by other material, and water bodies deeper than 2 m.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00001998</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">SPIRE:Soil</oboInOwl:hasDbXref>
@@ -15075,7 +15002,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00002003</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">EcoLexicon:drop</oboInOwl:hasDbXref>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">Feces is an excreta consisting of waste products expelled from an animal&apos;s digestive tract through the anus (or cloaca) during defecation.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Feces is an excreta consisting of waste products expelled from an animal&#39;s digestive tract through the anus (or cloaca) during defecation.</obo:IAO_0000115>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">SPIRE:Dung</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">SWEETRealm:Drop</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Feces</oboInOwl:hasDbXref>
@@ -15322,7 +15249,7 @@
     <owl:Class rdf:about="&obo;ENVO_00002017">
         <rdfs:label rdf:datatype="&xsd;string">metamorphic rock</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00001995"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A rock formed by subjecting any rock type (including previously-formed metamorphic rock) to different temperature and pressure conditions than those in which the original rock was formed. These temperatures and pressures are always higher than those at the Earth&apos;s surface and must be sufficiently high so as to change the original minerals into other mineral types or else into other forms of the same minerals (e.g. by recrystallisation).</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A rock formed by subjecting any rock type (including previously-formed metamorphic rock) to different temperature and pressure conditions than those in which the original rock was formed. These temperatures and pressures are always higher than those at the Earth&#39;s surface and must be sufficiently high so as to change the original minerals into other mineral types or else into other forms of the same minerals (e.g. by recrystallisation).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00002017</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">EcoLexicon:metamorphic_rock</oboInOwl:hasDbXref>
@@ -15427,7 +15354,7 @@
     <owl:Class rdf:about="&obo;ENVO_00002035">
         <rdfs:label rdf:datatype="&xsd;string">meteorite</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_01000010"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A natural object originating in outer space that survives an impact with the Earth&apos;s surface without being destroyed.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A natural object originating in outer space that survives an impact with the Earth&#39;s surface without being destroyed.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00002035</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">SWEETRealm:Meteorite</oboInOwl:hasDbXref>
@@ -15447,7 +15374,7 @@
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00002036</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">EcoLexicon:habitat</oboInOwl:hasDbXref>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">SWEETRealm:Habitat</oboInOwl:hasDbXref>
-        <rdfs:comment rdf:datatype="&xsd;string">This class is under development and its definition will be revised and its subclasses may be made obsolete. A habitat&apos;s specificity to a species or population will differentiate it from other environment classes.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">This class is under development and its definition will be revised and its subclasses may be made obsolete. A habitat&#39;s specificity to a species or population will differentiate it from other environment classes.</rdfs:comment>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Habitat</oboInOwl:hasDbXref>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">biotope</oboInOwl:hasRelatedSynonym>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
@@ -16222,14 +16149,14 @@
         <rdfs:subClassOf rdf:resource="&obo;ENVO_01000283"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="&obo;ENVO_00000199"/>
+                <owl:onProperty rdf:resource="&obo;RO_0002220"/>
+                <owl:someValuesFrom rdf:resource="&obo;ENVO_00002132"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;RO_0002220"/>
-                <owl:someValuesFrom rdf:resource="&obo;ENVO_00002132"/>
+                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="&obo;ENVO_00000199"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
@@ -16637,6 +16564,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="&obo;ENVO_00000016"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:unionOf rdf:parseType="Collection">
@@ -16645,12 +16578,6 @@
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="&obo;ENVO_00000016"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
@@ -16765,7 +16692,7 @@
     <owl:Class rdf:about="&obo;ENVO_00002156">
         <rdfs:label rdf:datatype="&xsd;string">Superfund site</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00002204"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A highly contaminated site designated by the United States of America&apos;s Comprehensive Environmental Response, Compensation, and Liability Act.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A highly contaminated site designated by the United States of America&#39;s Comprehensive Environmental Response, Compensation, and Liability Act.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00002156</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Superfund_Site</oboInOwl:hasDbXref>
@@ -17281,7 +17208,7 @@
         <rdfs:subClassOf rdf:resource="&obo;ENVO_01000009"/>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00002191</oboInOwl:id>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">Straw or other material strewn in an animal&apos;s enclosure (e.g. a stable) for it to sleep on and to absorb its faeces and urine.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Straw or other material strewn in an animal&#39;s enclosure (e.g. a stable) for it to sleep on and to absorb its faeces and urine.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
     
@@ -17930,8 +17857,8 @@
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00002241</oboInOwl:id>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">Leptosols are very shallow soils over continuous rock and soils that are extremely gravelly and/or stony. Leptosols are azonal soils and particularly common in mountainous regions.</obo:IAO_0000115>
-        <oboInOwl:hasNarrowSynonym>gravelly soil</oboInOwl:hasNarrowSynonym>
         <oboInOwl:hasNarrowSynonym>stony soil</oboInOwl:hasNarrowSynonym>
+        <oboInOwl:hasNarrowSynonym>gravelly soil</oboInOwl:hasNarrowSynonym>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
     
@@ -18472,7 +18399,7 @@
                 <owl:someValuesFrom rdf:resource="&obo;ENVO_00000426"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A depression in the sea floor that results from the collision of continental plates; the weight of the sinking plate causes the overlying plate to stretch and thin, causing a basin in the overlying plate. Sometimes, the Earth&apos;s crust in these basins stretches so much it cracks, allowing magma through from the mantle beneath. Hence, basins often contain active volcanoes and hydrothermal vents.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A depression in the sea floor that results from the collision of continental plates; the weight of the sinking plate causes the overlying plate to stretch and thin, causing a basin in the overlying plate. Sometimes, the Earth&#39;s crust in these basins stretches so much it cracks, allowing magma through from the mantle beneath. Hence, basins often contain active volcanoes and hydrothermal vents.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00002277</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">EcoLexicon:basin</oboInOwl:hasDbXref>
@@ -18490,7 +18417,7 @@
 
     <owl:Class rdf:about="&obo;ENVO_00002297">
         <rdfs:label rdf:datatype="&xsd;string">environmental feature</rdfs:label>
-        <rdfs:comment rdf:datatype="&xsd;string">A material entity determines an environmental system when its removal would cause the collapse of that system. For example, a seamount determines a seamount environment, acting as its &apos;hub&apos;. This class is currently being aligned to the Basic Formal Ontology. Following this alignment, its definition and the definitions of its subclasses will be revised.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">A material entity determines an environmental system when its removal would cause the collapse of that system. For example, a seamount determines a seamount environment, acting as its &#39;hub&#39;. This class is currently being aligned to the Basic Formal Ontology. Following this alignment, its definition and the definitions of its subclasses will be revised.</rdfs:comment>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">A material entity which determines an environmental system.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00002297</oboInOwl:id>
@@ -18542,13 +18469,13 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="&obo;ENVO_00002982"/>
+                <owl:someValuesFrom rdf:resource="&obo;ENVO_01000017"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="&obo;ENVO_01000017"/>
+                <owl:someValuesFrom rdf:resource="&obo;ENVO_00002982"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">A natural building material mode from sand, clay, water, and some kind of fibrous or organic material (sticks, straw, and/or manure).</obo:IAO_0000115>
@@ -18696,7 +18623,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00002984</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Petroleum</oboInOwl:hasDbXref>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">a naturally occurring flammable liquid consisting of a complex mixture of hydrocarbons of various molecular weights and other liquid organic compounds, that are found in geologic formations beneath the Earth&apos;s surface.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">a naturally occurring flammable liquid consisting of a complex mixture of hydrocarbons of various molecular weights and other liquid organic compounds, that are found in geologic formations beneath the Earth&#39;s surface.</obo:IAO_0000115>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">crude oil</oboInOwl:hasRelatedSynonym>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
@@ -18892,7 +18819,7 @@
         <rdfs:label rdf:datatype="&xsd;string">Bleu  de Bresse</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00003887"/>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_0010039"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A short cylinder of soft to semisoft blue cheese made with cow&apos;s milk.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A short cylinder of soft to semisoft blue cheese made with cow&#39;s milk.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">Bresse Blue</oboInOwl:hasExactSynonym>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00003046</oboInOwl:id>
@@ -18972,7 +18899,7 @@
     <owl:Class rdf:about="&obo;ENVO_00003052">
         <rdfs:label rdf:datatype="&xsd;string">Brie</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_0010039"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A large disc of smooth, soft, even runny cheese made with cow&apos;s milk.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A large disc of smooth, soft, even runny cheese made with cow&#39;s milk.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00003052</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Brie</oboInOwl:hasDbXref>
@@ -18986,7 +18913,7 @@
     <owl:Class rdf:about="&obo;ENVO_00003053">
         <rdfs:label rdf:datatype="&xsd;string">Gouda</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_0010039"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A hard cow&apos;s milk cheese with an almost orange yellow paste. Older cheeses are coated in black wax.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A hard cow&#39;s milk cheese with an almost orange yellow paste. Older cheeses are coated in black wax.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00003053</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Gouda</oboInOwl:hasDbXref>
@@ -19001,7 +18928,7 @@
         <rdfs:label rdf:datatype="&xsd;string">halloumi</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_0010041"/>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_0010042"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A soft to semihard cheese made with sheep or goat&apos;s milk. It has a white paste and is made with raw, whole milk. The curds are heated to boiling point in whey and then drained and kept in salted whey.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A soft to semihard cheese made with sheep or goat&#39;s milk. It has a white paste and is made with raw, whole milk. The curds are heated to boiling point in whey and then drained and kept in salted whey.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00003054</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Halloumi</oboInOwl:hasDbXref>
@@ -19016,7 +18943,7 @@
         <rdfs:label rdf:datatype="&xsd;string">Gorgonzola</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00003887"/>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_0010039"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A drum of very rich, creamy, pungent blue-veined cow&apos;s milk cheese. It has a white paste with blue veining and a brined rind. It is made in Gorgonzola, near Milan.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A drum of very rich, creamy, pungent blue-veined cow&#39;s milk cheese. It has a white paste with blue veining and a brined rind. It is made in Gorgonzola, near Milan.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00003055</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Gorgonzola</oboInOwl:hasDbXref>
@@ -19044,7 +18971,7 @@
     <owl:Class rdf:about="&obo;ENVO_00003057">
         <rdfs:label rdf:datatype="&xsd;string">Emmenthal</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_0010039"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A mild, large, yellow, waxy cow&apos;s milk cheese with many holes.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A mild, large, yellow, waxy cow&#39;s milk cheese with many holes.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00003057</oboInOwl:id>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
@@ -19081,12 +19008,12 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_00003060 -->
 
     <owl:Class rdf:about="&obo;ENVO_00003060">
-        <rdfs:label rdf:datatype="&xsd;string">Pont l&apos;Eveque</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">Pont l&#39;Eveque</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_0010039"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A small, sweetish, soft, square cow&apos;s milk cheese from Normandy with a yellowish-orange rind.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A small, sweetish, soft, square cow&#39;s milk cheese from Normandy with a yellowish-orange rind.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00003060</oboInOwl:id>
-        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Pont_l&apos;Eveque</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Pont_l&#39;Eveque</oboInOwl:hasDbXref>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
     
@@ -19095,12 +19022,12 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_00003061 -->
 
     <owl:Class rdf:about="&obo;ENVO_00003061">
-        <rdfs:label rdf:datatype="&xsd;string">Vacherin Mont d&apos;Or</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">Vacherin Mont d&#39;Or</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_0010039"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A disc of soft cheese made with cow&apos;s milk. It has a soft to runny paste and a smooth, pink rind.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A disc of soft cheese made with cow&#39;s milk. It has a soft to runny paste and a smooth, pink rind.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00003061</oboInOwl:id>
-        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Vacherin_Mont_d&apos;Or</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Vacherin_Mont_d&#39;Or</oboInOwl:hasDbXref>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
     
@@ -20117,7 +20044,7 @@
     <owl:Class rdf:about="&obo;ENVO_00003887">
         <rdfs:label rdf:datatype="&xsd;string">blue cheese</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00002189"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A class of cow&apos;s milk, sheep&apos;s milk, or goat&apos;s milk cheeses that have had Penicillium cultures added so that the final product is spotted or veined throughout with blue, blue-gray or blue-green mould, and carries a distinct smell.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A class of cow&#39;s milk, sheep&#39;s milk, or goat&#39;s milk cheeses that have had Penicillium cultures added so that the final product is spotted or veined throughout with blue, blue-gray or blue-green mould, and carries a distinct smell.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00003887</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Blue_cheese</oboInOwl:hasDbXref>
@@ -20533,7 +20460,7 @@
     <owl:Class rdf:about="&obo;ENVO_00003966">
         <rdfs:label rdf:datatype="&xsd;string">Bondon cheese</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_0010039"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A soft cheese made with cow&apos;s milk. It has a creamy paste and a greyish-red and downy white penicillin rind and is sometimes foil-wrapped.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A soft cheese made with cow&#39;s milk. It has a creamy paste and a greyish-red and downy white penicillin rind and is sometimes foil-wrapped.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00003966</oboInOwl:id>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
@@ -20629,7 +20556,7 @@
     <owl:Class rdf:about="&obo;ENVO_00003973">
         <rdfs:label rdf:datatype="&xsd;string">kefir</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00002190"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A fermented milk drink made from  milk. It is prepared by inoculating cow, goat, or sheep&apos;s milk with kefir grains, a combination of bacteria and yeasts in a matrix of proteins, lipids, and sugars. This symbiotic matrix forms &quot;grains&quot; that resemble cauliflower. Many different bacteria and yeasts are found in the kefir grains, which are a complex and highly variable community of micro-organisms termed probiotics.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A fermented milk drink made from  milk. It is prepared by inoculating cow, goat, or sheep&#39;s milk with kefir grains, a combination of bacteria and yeasts in a matrix of proteins, lipids, and sugars. This symbiotic matrix forms &quot;grains&quot; that resemble cauliflower. Many different bacteria and yeasts are found in the kefir grains, which are a complex and highly variable community of micro-organisms termed probiotics.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00003973</oboInOwl:id>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
@@ -21963,7 +21890,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00005804</oboInOwl:id>
         <oboInOwl:hasRelatedSynonym rdf:datatype="&xsd;string">ant hill</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">ant&apos;s nest	</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">ant&#39;s nest	</oboInOwl:hasExactSynonym>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
     
@@ -21978,7 +21905,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:00005805</oboInOwl:id>
         <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">bird nest</oboInOwl:hasExactSynonym>
-        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">bird&apos;s nest</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">bird&#39;s nest</oboInOwl:hasExactSynonym>
         <oboInOwl:hasNarrowSynonym rdf:datatype="&xsd;string">eyrie</oboInOwl:hasNarrowSynonym>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
@@ -22725,7 +22652,7 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_0010035 -->
 
     <owl:Class rdf:about="&obo;ENVO_0010035">
-        <rdfs:label rdf:datatype="&xsd;string">cow&apos;s milk</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">cow&#39;s milk</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00003068"/>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_0010030"/>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
@@ -22774,7 +22701,7 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_0010039 -->
 
     <owl:Class rdf:about="&obo;ENVO_0010039">
-        <rdfs:label rdf:datatype="&xsd;string">cow&apos;s milk cheese</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">cow&#39;s milk cheese</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_0010038"/>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:0010039</oboInOwl:id>
@@ -22788,7 +22715,7 @@
     <owl:Class rdf:about="&obo;ENVO_0010040">
         <rdfs:label rdf:datatype="&xsd;string">Limburger</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_0010039"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A very strong smelling, brick-shaped, soft cow&apos;s milk cheese.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A very strong smelling, brick-shaped, soft cow&#39;s milk cheese.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:0010040</oboInOwl:id>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
@@ -22799,7 +22726,7 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_0010041 -->
 
     <owl:Class rdf:about="&obo;ENVO_0010041">
-        <rdfs:label rdf:datatype="&xsd;string">goat&apos;s milk cheese</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">goat&#39;s milk cheese</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_0010036"/>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:0010041</oboInOwl:id>
@@ -22811,7 +22738,7 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_0010042 -->
 
     <owl:Class rdf:about="&obo;ENVO_0010042">
-        <rdfs:label rdf:datatype="&xsd;string">sheep&apos;s milk cheese</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">sheep&#39;s milk cheese</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_0010037"/>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:0010042</oboInOwl:id>
@@ -24168,7 +24095,7 @@
         <rdfs:label rdf:datatype="&xsd;string">natural rennet</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_0010000"/>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_0010140"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A natural complex of enzymes produced in any mammalian stomach  to digest the mother&apos;s milk, and is often used in the production of cheese. Rennet contains many enzymes, including a proteolytic enzyme (protease) that coagulates the milk, causing it to separate into solids (curds) and liquid (whey).</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A natural complex of enzymes produced in any mammalian stomach  to digest the mother&#39;s milk, and is often used in the production of cheese. Rennet contains many enzymes, including a proteolytic enzyme (protease) that coagulates the milk, causing it to separate into solids (curds) and liquid (whey).</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:0010150</oboInOwl:id>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
@@ -24748,13 +24675,13 @@
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00010483"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
+                <owl:onProperty rdf:resource="&obo;ENVO_01001309"/>
                 <owl:someValuesFrom rdf:resource="&obo;ENVO_00000341"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;ENVO_01001309"/>
+                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
                 <owl:someValuesFrom rdf:resource="&obo;ENVO_00000341"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -24850,7 +24777,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:01000024</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">SPIRE:Benthic</oboInOwl:hasDbXref>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">The marine benthic biome (benthic meaning &apos;bottom&apos;) encompasses the seafloor and includes such areas as shores, littoral or intertidal areas, marine coral reefs, and the deep seabed.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">The marine benthic biome (benthic meaning &#39;bottom&#39;) encompasses the seafloor and includes such areas as shores, littoral or intertidal areas, marine coral reefs, and the deep seabed.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="&xsd;string">pbuttigieg</oboInOwl:created_by>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
@@ -24940,7 +24867,7 @@
         <oboInOwl:creation_date rdf:datatype="&xsd;string">2010-03-15T11:18:40Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:01000030</oboInOwl:id>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">The marine hydrothermal vent biome comprises regions of the marine benthic biome where heat generated due to tectonic activity, either at divergent plate boundaries or convergent ocean plates where back-arc spreading occurs, is released or &apos;vented&apos; to the surface. The resultant high temperature water jets are laden with dissolved metals and minerals.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">The marine hydrothermal vent biome comprises regions of the marine benthic biome where heat generated due to tectonic activity, either at divergent plate boundaries or convergent ocean plates where back-arc spreading occurs, is released or &#39;vented&#39; to the surface. The resultant high temperature water jets are laden with dissolved metals and minerals.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="&xsd;string">pbuttigieg</oboInOwl:created_by>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
@@ -25208,7 +25135,7 @@
         <oboInOwl:creation_date rdf:datatype="&xsd;string">2010-03-15T11:23:23Z</oboInOwl:creation_date>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:01000048</oboInOwl:id>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">The ocean biome comprises major bodies of saline water, principal components of the hydrosphere. Approximately 71% of the Earth&apos;s surface is covered by ocean, a continuous body of water that is customarily divided into several principal oceans and smaller seas. More than half of this area is over 3,000 metres (9,800 ft) deep. Average oceanic salinity is around 35 parts per thousand (ppt) (3.5%), and nearly all seawater has a salinity in the range of 30 to 38 ppt.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">The ocean biome comprises major bodies of saline water, principal components of the hydrosphere. Approximately 71% of the Earth&#39;s surface is covered by ocean, a continuous body of water that is customarily divided into several principal oceans and smaller seas. More than half of this area is over 3,000 metres (9,800 ft) deep. Average oceanic salinity is around 35 parts per thousand (ppt) (3.5%), and nearly all seawater has a salinity in the range of 30 to 38 ppt.</obo:IAO_0000115>
         <oboInOwl:created_by rdf:datatype="&xsd;string">pbuttigieg</oboInOwl:created_by>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
@@ -25281,7 +25208,7 @@
         <rdfs:label rdf:datatype="&xsd;string">marine ultramafic hydrothermal vent biome</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_01000030"/>
         <oboInOwl:creation_date rdf:datatype="&xsd;string">2010-03-15T11:29:37Z</oboInOwl:creation_date>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A marine ultramafic hydrothermal vent biome comprises regions of themarine  hydrothermal vent biome hosted on ultramafic (also referred to as ultrabasic) rocks. Ultramafic rocks are igneous and meta-igneous rocks with very low silica content (less than 45%), generally &gt;18% MgO, high FeO, low potassium, and are composed of usually greater than 90% mafic minerals  (dark colored, high magnesium and iron content). The Earth&apos;s mantle is composed of ultramafic rocks.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A marine ultramafic hydrothermal vent biome comprises regions of themarine  hydrothermal vent biome hosted on ultramafic (also referred to as ultrabasic) rocks. Ultramafic rocks are igneous and meta-igneous rocks with very low silica content (less than 45%), generally &gt;18% MgO, high FeO, low potassium, and are composed of usually greater than 90% mafic minerals  (dark colored, high magnesium and iron content). The Earth&#39;s mantle is composed of ultramafic rocks.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:01000053</oboInOwl:id>
         <oboInOwl:created_by rdf:datatype="&xsd;string">pbuttigieg</oboInOwl:created_by>
@@ -25460,7 +25387,7 @@
         <rdfs:label rdf:datatype="&xsd;string">marine current</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_01000044"/>
         <oboInOwl:creation_date rdf:datatype="&xsd;string">2010-03-16T12:16:11Z</oboInOwl:creation_date>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A marine current is a continuous, directed movement of marine water generated by the forces acting upon this mean flow, such as breaking waves, wind, Coriolis force, temperature and salinity differences and tides caused by the gravitational pull of the Moon and the Sun. Depth contours, shoreline configurations and interaction with other currents influence a current&apos;s direction and strength.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A marine current is a continuous, directed movement of marine water generated by the forces acting upon this mean flow, such as breaking waves, wind, Coriolis force, temperature and salinity differences and tides caused by the gravitational pull of the Moon and the Sun. Depth contours, shoreline configurations and interaction with other currents influence a current&#39;s direction and strength.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:01000067</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">EcoLexicon:marine_current</oboInOwl:hasDbXref>
@@ -26425,7 +26352,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:creation_date rdf:datatype="&xsd;string">2010-03-17T02:13:33Z</oboInOwl:creation_date>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">A marine hydrothermal vent is a marine benthic feature where heat generated due to tectonic activity, either at divergent plate boundaries or convergent ocean plates where back-arc spreading occurs, is released or &apos;vented&apos; to the surface. The resultant high temperature water jets are laden with dissolved metals and minerals.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">A marine hydrothermal vent is a marine benthic feature where heat generated due to tectonic activity, either at divergent plate boundaries or convergent ocean plates where back-arc spreading occurs, is released or &#39;vented&#39; to the surface. The resultant high temperature water jets are laden with dissolved metals and minerals.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:01000122</oboInOwl:id>
         <oboInOwl:created_by rdf:datatype="&xsd;string">pbuttigieg</oboInOwl:created_by>
@@ -28743,7 +28670,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:01000254</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">EcoLexicon:environment</oboInOwl:hasDbXref>
-        <rdfs:comment rdf:datatype="&xsd;string">In ENVO&apos;s alignment with the Basic Formal Ontology, this class is being considered as a subclass of a proposed BFO class &quot;system&quot;. The relation &quot;environed_by&quot; is also under development. Roughly, a system which includes a material entity (at least partially) within its site and causally influences that entity may be considered to environ it. Following the completion of this alignment, this class&apos; definition and the definitions of its subclasses will be revised.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">In ENVO&#39;s alignment with the Basic Formal Ontology, this class is being considered as a subclass of a proposed BFO class &quot;system&quot;. The relation &quot;environed_by&quot; is also under development. Roughly, a system which includes a material entity (at least partially) within its site and causally influences that entity may be considered to environ it. Following the completion of this alignment, this class&#39; definition and the definitions of its subclasses will be revised.</rdfs:comment>
         <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">environment</oboInOwl:hasExactSynonym>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
@@ -29093,7 +29020,7 @@
         <obo:IAO_0000115 rdf:datatype="&xsd;string">A mudstone is a clastic sedimentary rock which contains a mixture of at least one third of silt- and one third of clay-sized particles.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:01000272</oboInOwl:id>
-        <rdfs:comment rdf:datatype="&xsd;string">There is debate on the usage of mudstone and mudrock, and some ambiguity is to be expected. Wikipedia: The terminology of &quot;mudstone&quot; is not to be confused with the Dunham classification scheme for limestones. In Dunham&apos;s classification, a mudstone is any limestone containing less than ten percent carbonate grains. Note, a siliciclastic mudstone does not deal with carbonate grains. Friedman, Sanders, and Kopaska-Merkel (1992) suggest the use of &quot;lime mudstone&quot; to avoid confusion with siliciclastic rocks.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">There is debate on the usage of mudstone and mudrock, and some ambiguity is to be expected. Wikipedia: The terminology of &quot;mudstone&quot; is not to be confused with the Dunham classification scheme for limestones. In Dunham&#39;s classification, a mudstone is any limestone containing less than ten percent carbonate grains. Note, a siliciclastic mudstone does not deal with carbonate grains. Friedman, Sanders, and Kopaska-Merkel (1992) suggest the use of &quot;lime mudstone&quot; to avoid confusion with siliciclastic rocks.</rdfs:comment>
         <oboInOwl:created_by rdf:datatype="&xsd;string">pbuttigieg</oboInOwl:created_by>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
@@ -29109,7 +29036,7 @@
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:01000273</oboInOwl:id>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">Lime mudstone is a limestone which is primarily composed of either clay-size or both silt-size and clay-size detrital (transported) carbonate grains.</obo:IAO_0000115>
-        <rdfs:comment rdf:datatype="&xsd;string">Wikipedia: The terminology of &quot;mudstone&quot; is not to be confused with the Dunham classification scheme for limestones. In Dunham&apos;s classification, a mudstone is any limestone containing less than ten percent carbonate grains. Note, a siliciclastic mudstone does not deal with carbonate grains. Friedman, Sanders, and Kopaska-Merkel (1992) suggest the use of &quot;lime mudstone&quot; to avoid confusion with siliciclastic rocks.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">Wikipedia: The terminology of &quot;mudstone&quot; is not to be confused with the Dunham classification scheme for limestones. In Dunham&#39;s classification, a mudstone is any limestone containing less than ten percent carbonate grains. Note, a siliciclastic mudstone does not deal with carbonate grains. Friedman, Sanders, and Kopaska-Merkel (1992) suggest the use of &quot;lime mudstone&quot; to avoid confusion with siliciclastic rocks.</rdfs:comment>
         <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">calcilutite</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="&xsd;string">cementstone</oboInOwl:hasExactSynonym>
         <oboInOwl:created_by rdf:datatype="&xsd;string">pbuttigieg</oboInOwl:created_by>
@@ -29494,14 +29421,14 @@
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00000268"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;RO_0000086"/>
-                <owl:someValuesFrom rdf:resource="&obo;PATO_0001824"/>
+                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
+                <owl:someValuesFrom rdf:resource="&obo;ENVO_00000277"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                <owl:someValuesFrom rdf:resource="&obo;ENVO_00000277"/>
+                <owl:onProperty rdf:resource="&obo;RO_0000086"/>
+                <owl:someValuesFrom rdf:resource="&obo;PATO_0001824"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <oboInOwl:creation_date rdf:datatype="&xsd;string">2013-10-16T12:12:53Z</oboInOwl:creation_date>
@@ -29573,7 +29500,7 @@
         <obo:IAO_0000115 rdf:datatype="&xsd;string">A Taylor column is a column of deflected fluid flow which is formed in a perturbed, rotating fluid, is parallel to the axis of rotation, and extends above the obstacle perturbing the fluid in a rigid manner.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:01000299</oboInOwl:id>
-        <rdfs:comment rdf:datatype="&xsd;string">This is an interesting class. It&apos;s not really a column in the sense of a water column, nor is it a current, exactly. It may also occur in any fluid, gaseous or liquid.</rdfs:comment>
+        <rdfs:comment rdf:datatype="&xsd;string">This is an interesting class. It&#39;s not really a column in the sense of a water column, nor is it a current, exactly. It may also occur in any fluid, gaseous or liquid.</rdfs:comment>
         <oboInOwl:created_by rdf:datatype="&xsd;string">pbuttigieg</oboInOwl:created_by>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
@@ -29815,8 +29742,8 @@
     <owl:Class rdf:about="&obo;ENVO_01000309">
         <rdfs:label>cold environment</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_01000254"/>
+        <rdfs:comment>The definition of the deprecated &#39;cold temperature habitat&#39; class, which this class was derived from, quotes an upper threshold of 15 degrees Celsius for &#39;coldness&#39;.</rdfs:comment>
         <obo:IAO_0000115>A cold environment is an environment in which entities are exposed to low temperatures.</obo:IAO_0000115>
-        <rdfs:comment>The definition of the deprecated &apos;cold temperature habitat&apos; class, which this class was derived from, quotes an upper threshold of 15 degrees Celsius for &apos;coldness&apos;.</rdfs:comment>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
     
@@ -30001,8 +29928,8 @@
     <owl:Class rdf:about="&obo;ENVO_01000318">
         <rdfs:label>extreme high temperature environment</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_01000305"/>
-        <obo:IAO_0000115>An extreme high temperature environment is a high temperature environment in which entities are exposed to temperatures above 80 degrees Celsius. </obo:IAO_0000115>
         <rdfs:comment>The lower threshold, 80 degrees Celsius, is derived from the definition of the obsolete class &quot;extreme high temperature habitat&quot; which this class replaces.</rdfs:comment>
+        <obo:IAO_0000115>An extreme high temperature environment is a high temperature environment in which entities are exposed to temperatures above 80 degrees Celsius. </obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
     
@@ -30183,8 +30110,8 @@
     <owl:Class rdf:about="&obo;ENVO_01000324">
         <rdfs:label>planetary surface</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00010504"/>
-        <rdfs:comment>a useful class: this can be used to define sub-terrestrial and sub-marine</rdfs:comment>
         <obo:IAO_0000115>A planetary surface is a surface layer where the solid or liquid material of a planet comes into contact with atmosphere or outer space.</obo:IAO_0000115>
+        <rdfs:comment>a useful class: this can be used to define sub-terrestrial and sub-marine</rdfs:comment>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
     
@@ -30254,8 +30181,8 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>A deep chlorophyll maximum layer is a subsurface layer in an ocean or lake in which the concentration of chlorophyll is at its maximum. </obo:IAO_0000115>
         <oboInOwl:hasRelatedSynonym>subsurface chlorophyll maximum layer</oboInOwl:hasRelatedSynonym>
+        <obo:IAO_0000115>A deep chlorophyll maximum layer is a subsurface layer in an ocean or lake in which the concentration of chlorophyll is at its maximum. </obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
     
@@ -30294,8 +30221,8 @@
                 <owl:someValuesFrom rdf:resource="&obo;ENVO_00000309"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>A dome swamp is a swamp which occurs in a depression where deeper waters at the centre of the swamp allow  trees to grow taller relative to those in shallower regions of the depression. This creates a dome-like shape.</obo:IAO_0000115>
         <rdfs:comment>The logical def should be improved with the idea of a vegetation unit growing in a depression expressed.</rdfs:comment>
+        <obo:IAO_0000115>A dome swamp is a swamp which occurs in a depression where deeper waters at the centre of the swamp allow  trees to grow taller relative to those in shallower regions of the depression. This creates a dome-like shape.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
     
@@ -30306,9 +30233,9 @@
     <owl:Class rdf:about="&obo;ENVO_01000329">
         <rdfs:label>cypress dome</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_01000328"/>
-        <oboInOwl:hasExactSynonym>cypress dome swamp</oboInOwl:hasExactSynonym>
-        <rdfs:comment>Requires import of some taxonomy for differentia</rdfs:comment>
         <obo:IAO_0000115>A cypress dome swamp is a dome swamp which has a plant community dominated by Cupressaceae, often swamp cypresses. Swamp cypresses typically belong to the genus Taxodium or the species Glyptostrobus pensilis and Actinostrobus pyramidalis.</obo:IAO_0000115>
+        <rdfs:comment>Requires import of some taxonomy for differentia</rdfs:comment>
+        <oboInOwl:hasExactSynonym>cypress dome swamp</oboInOwl:hasExactSynonym>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
     
@@ -30319,9 +30246,9 @@
     <owl:Class rdf:about="&obo;ENVO_01000330">
         <rdfs:label>cypress strand swamp</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_01000327"/>
-        <obo:IAO_0000115>A cypress strand swamp is a strand swamp which has a plant community dominated by Cupressaceae, often swamp cypresses. Swamp cypresses typically belong to the genus Taxodium or the species Glyptostrobus pensilis and Actinostrobus pyramidalis.</obo:IAO_0000115>
-        <rdfs:comment>Requires import of some taxonomy for differentia</rdfs:comment>
         <oboInOwl:hasExactSynonym>cypress strand</oboInOwl:hasExactSynonym>
+        <rdfs:comment>Requires import of some taxonomy for differentia</rdfs:comment>
+        <obo:IAO_0000115>A cypress strand swamp is a strand swamp which has a plant community dominated by Cupressaceae, often swamp cypresses. Swamp cypresses typically belong to the genus Taxodium or the species Glyptostrobus pensilis and Actinostrobus pyramidalis.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
     
@@ -30332,8 +30259,8 @@
     <owl:Class rdf:about="&obo;ENVO_01000331">
         <rdfs:label>cypress swamp</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00000233"/>
-        <obo:IAO_0000115>A cypress swamp is a swamp which has a plant community dominated by Cupressaceae, often swamp cypresses. Swamp cypresses typically belong to the genus Taxodium or the species Glyptostrobus pensilis and Actinostrobus pyramidalis.</obo:IAO_0000115>
         <rdfs:comment>Requires import of some taxonomy for differentia</rdfs:comment>
+        <obo:IAO_0000115>A cypress swamp is a swamp which has a plant community dominated by Cupressaceae, often swamp cypresses. Swamp cypresses typically belong to the genus Taxodium or the species Glyptostrobus pensilis and Actinostrobus pyramidalis.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
     
@@ -30409,8 +30336,8 @@
                 <owl:someValuesFrom rdf:resource="&obo;ENVO_00000083"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>A hillside is a slope that is part of a hill.</obo:IAO_0000115>
         <oboInOwl:hasRelatedSynonym>brae</oboInOwl:hasRelatedSynonym>
+        <obo:IAO_0000115>A hillside is a slope that is part of a hill.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
     
@@ -30458,8 +30385,8 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>A talus slope is a slope which has a surface layer composed of scree.</obo:IAO_0000115>
         <oboInOwl:hasExactSynonym>scree slope</oboInOwl:hasExactSynonym>
+        <obo:IAO_0000115>A talus slope is a slope which has a surface layer composed of scree.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
     
@@ -30529,10 +30456,10 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>An oasis is a vegetated area located in a desert, supplied with water from a water source which it surrounds, and surrounded by arid soil, sand, or rock.</obo:IAO_0000115>
-        <oboInOwl:hasRelatedSynonym>cienaga</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasDbXref>Wikipedia:Oasis</oboInOwl:hasDbXref>
         <oboInOwl:created_by>ORCID:0000-0002-4366-3088</oboInOwl:created_by>
+        <oboInOwl:hasDbXref>Wikipedia:Oasis</oboInOwl:hasDbXref>
+        <oboInOwl:hasRelatedSynonym>cienaga</oboInOwl:hasRelatedSynonym>
+        <obo:IAO_0000115>An oasis is a vegetated area located in a desert, supplied with water from a water source which it surrounds, and surrounded by arid soil, sand, or rock.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
     
@@ -30543,8 +30470,8 @@
     <owl:Class rdf:about="&obo;ENVO_01001305">
         <rdfs:label>vegetated area</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_00000000"/>
-        <obo:IAO_0000115>A vegetated area is a geographic feature which has ground cover dominated by plant communities.</obo:IAO_0000115>
         <oboInOwl:created_by>ORCID:0000-0002-4366-3088</oboInOwl:created_by>
+        <obo:IAO_0000115>A vegetated area is a geographic feature which has ground cover dominated by plant communities.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
     
@@ -30582,8 +30509,8 @@
                 <owl:someValuesFrom rdf:resource="&obo;ENVO_00002006"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>A hydroform is a geographic feature which is primarily composed of water held in shape by an environmental process.</obo:IAO_0000115>
         <rdfs:comment>Should create links to envrionmental process with new relation like &quot;sustained_by&quot;</rdfs:comment>
+        <obo:IAO_0000115>A hydroform is a geographic feature which is primarily composed of water held in shape by an environmental process.</obo:IAO_0000115>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
     
@@ -30879,7 +30806,7 @@
     <owl:Class rdf:about="&obo;ENVO_02000020">
         <rdfs:label rdf:datatype="&xsd;string">blood</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_02000019"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">Blood is a bodily fluid composed of blood plasma and blood cells suspended within the plasma that circulates around the organism&apos;s body. Blood performs may important functions including the supplying of oxygen and nutrients, removal of waste, circulation of white blood cells, detection of antibodes, coagulation, transportation of antibodies and the regulation of pH and body temperature.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Blood is a bodily fluid composed of blood plasma and blood cells suspended within the plasma that circulates around the organism&#39;s body. Blood performs may important functions including the supplying of oxygen and nutrients, removal of waste, circulation of white blood cells, detection of antibodes, coagulation, transportation of antibodies and the regulation of pH and body temperature.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:02000020</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Blood</oboInOwl:hasDbXref>
@@ -31038,7 +30965,7 @@
     <owl:Class rdf:about="&obo;ENVO_02000031">
         <rdfs:label rdf:datatype="&xsd;string">breast milk</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_02000019"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">Breast milk is a bodily fluid produced that is secreted from two milk-secreting glandular organs on a female&apos;s chest.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Breast milk is a bodily fluid produced that is secreted from two milk-secreting glandular organs on a female&#39;s chest.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:02000031</oboInOwl:id>
         <oboInOwl:hasDbXref rdf:datatype="&xsd;string">Wikipedia:Breast_milk</oboInOwl:hasDbXref>
@@ -31250,7 +31177,7 @@
     <owl:Class rdf:about="&obo;ENVO_02000046">
         <rdfs:label rdf:datatype="&xsd;string">calcareous ooze</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_01000082"/>
-        <obo:IAO_0000115 rdf:datatype="&xsd;string">Calcareous ooze is a marine sediment composed primarily of the shells--also known as tests--of foraminifera, coccolithophores, and pteropods. This is the most common pelagic sediment by area, covering 48% of the world ocean&apos;s floor. This type of ooze is limited to depths above the Carbonate Compensation Depth at time of burial. It accumulates more rapidly than any other pelagic sediment type, with a rate that varies from 0.3 - 5 cm / 1000 yr.</obo:IAO_0000115>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Calcareous ooze is a marine sediment composed primarily of the shells--also known as tests--of foraminifera, coccolithophores, and pteropods. This is the most common pelagic sediment by area, covering 48% of the world ocean&#39;s floor. This type of ooze is limited to depths above the Carbonate Compensation Depth at time of burial. It accumulates more rapidly than any other pelagic sediment type, with a rate that varies from 0.3 - 5 cm / 1000 yr.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
         <oboInOwl:id rdf:datatype="&xsd;string">ENVO:02000046</oboInOwl:id>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
@@ -31400,7 +31327,7 @@
     <!-- http://purl.obolibrary.org/obo/ENVO_02000057 -->
 
     <owl:Class rdf:about="&obo;ENVO_02000057">
-        <rdfs:label rdf:datatype="&xsd;string">hen&apos;s egg product</rdfs:label>
+        <rdfs:label rdf:datatype="&xsd;string">hen&#39;s egg product</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;ENVO_0010017"/>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">An egg produced by a female chicken.</obo:IAO_0000115>
         <oboInOwl:hasOBONamespace rdf:datatype="&xsd;string">ENVO</oboInOwl:hasOBONamespace>
@@ -32064,16 +31991,6 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PATO_0000146 -->
-
-    <owl:Class rdf:about="&obo;PATO_0000146">
-        <rdfs:label rdf:datatype="&xsd;string">temperature</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;PATO_0001018"/>
-        <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/PATO_0000274 -->
 
     <owl:Class rdf:about="&obo;PATO_0000274">
@@ -32128,7 +32045,6 @@
 
     <owl:Class rdf:about="&obo;PATO_0001305">
         <rdfs:label rdf:datatype="&xsd;string">increased temperature</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;PATO_0000146"/>
         <rdfs:subClassOf rdf:resource="&obo;PATO_0002305"/>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
@@ -32321,7 +32237,6 @@
 
     <owl:Class rdf:about="&obo;PATO_0001985">
         <rdfs:label rdf:datatype="&xsd;string">frozen</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;PATO_0000146"/>
         <obo:IAO_0000412 rdf:resource="&obo;envo.owl"/>
     </owl:Class>
     
@@ -32369,5 +32284,5 @@
 
 
 
-<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.2.2.1785) http://owlapi.sourceforge.net -->
 

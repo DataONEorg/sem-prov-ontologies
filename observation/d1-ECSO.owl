@@ -74,8 +74,9 @@ See example_Of_Usage, presentation_Label</odo:ECSO_01000004>
         <odo:ECSO_01000001>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
         <odo:ECSO_01000003 rdf:resource="http://www.w3.org/TR/rdf-schema/#ch_label"/>
     </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="&owl;deprecated"/>
     <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    <owl:AnnotationProperty rdf:about="&owl;deprecated"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;seeAlso"/>
     <owl:AnnotationProperty rdf:about="&odo;ECSO_01000001">
         <rdfs:label>definition_Contributor</rdfs:label>
         <skos:definition>&quot;contributor&quot; is an OWL &quot;Annotation property&quot; that names the person contributing the content, so s/he can be contacted, especially during development.</skos:definition>
@@ -86,9 +87,7 @@ If there is any potential ambiguity, an identifier should be added, including th
         <odo:ECSO_01000003>O&#39;Brien, pers comm. 2015-02-15</odo:ECSO_01000003>
         <odo:ECSO_01000001>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322, Shild</odo:ECSO_01000001>
     </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="&rdfs;seeAlso"/>
     <owl:AnnotationProperty rdf:about="&dc;contributor"/>
-    <owl:AnnotationProperty rdf:about="&rdfs;isDefinedBy"/>
     <owl:AnnotationProperty rdf:about="&odo;ECSO_01000005">
         <rdfs:label>description_Source</rdfs:label>
         <skos:definition>&quot;description_Source&quot; is the Annotation property that can be used to provide the reference source or Authority, as an ISBN,DOI, bibliographic citation, etc. to the source of the &quot;description&quot; contained in an associated &quot;description&quot; Annotation property that is attached (annotated) to some concept.  
@@ -99,6 +98,7 @@ As description Annotation properties are often not as rigorous, and hence looser
         <odo:ECSO_01000001>Schildhauer, orcid.org/0000-0003-0632-7576</odo:ECSO_01000001>
         <odo:ECSO_01000005>Schildhauer, pers comm, 05Feb2015, orcid.org/0000-0003-0632-7576</odo:ECSO_01000005>
     </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&rdfs;isDefinedBy"/>
     <owl:AnnotationProperty rdf:about="&odo;ECSO_01000004">
         <rdfs:label>description</rdfs:label>
         <skos:definition rdf:datatype="&rdfs;Literal">&quot;description&quot; is an OWL &quot;Annotation property&quot; that contains a a more verbose, less prescriptive natural language explication of the concept to which it is attached (or applied, or annotated) in contrast to a &quot;definition&quot; Annotation property.
@@ -296,7 +296,7 @@ Ideally a definition Source is structured in a well-known and accepted format, t
 
     <owl:Class rdf:about="&odo;ECSO_00000011">
         <rdfs:label>Carbon Flux</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000503"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000514"/>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <odo:ECSO_01000004>Carbon fluxes are the movement of Carbon from one place (Source) to another (Sink).  Carbon fluxes all have dimensions of {mass or amount of} Carbon per area (or volume) per time
 
@@ -385,12 +385,12 @@ biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than 
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000011"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&odo;ECSO_00000339"/>
+                        <owl:onProperty rdf:resource="&odo;ECSO_00000340"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&odo;ECSO_00000323"/>
-                                    <rdf:Description rdf:about="&odo;ECSO_00000337"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000327"/>
+                                    <rdf:Description rdf:about="&obo;CHEBI_33582"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
@@ -403,12 +403,12 @@ biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than 
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000011"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&odo;ECSO_00000340"/>
+                        <owl:onProperty rdf:resource="&odo;ECSO_00000339"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&odo;ECSO_00000327"/>
-                                    <rdf:Description rdf:about="&obo;CHEBI_33582"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000323"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000337"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
@@ -439,12 +439,12 @@ For most purposes (including this one) the two can be the same. It&#39;s most pr
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000011"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&odo;ECSO_00000339"/>
+                        <owl:onProperty rdf:resource="&odo;ECSO_00000340"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&odo;ECSO_00000327"/>
-                                    <rdf:Description rdf:about="&odo;ECSO_00000329"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000323"/>
+                                    <rdf:Description rdf:about="&obo;CHEBI_33582"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
@@ -457,12 +457,12 @@ For most purposes (including this one) the two can be the same. It&#39;s most pr
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000011"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&odo;ECSO_00000340"/>
+                        <owl:onProperty rdf:resource="&odo;ECSO_00000339"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&odo;ECSO_00000323"/>
-                                    <rdf:Description rdf:about="&obo;CHEBI_33582"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000327"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000329"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
@@ -552,7 +552,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000025">
         <rdfs:label>Carbon Pool</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000517"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000525"/>
         <skos:altLabel>Name of Each Carbon Pool</skos:altLabel>
         <odo:ECSO_01000005>O&#39;Brien, pers comm. 2015-02-20</odo:ECSO_01000005>
         <skos:definition>Carbon Pools are amounts of carbon in the system. dimensions are mass Carbon per area (eg, kg per m2
@@ -775,7 +775,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000043">
         <rdfs:label>Total_Living_Biomass_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000502"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000513"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Total carbon content of the living biomass (leaves+roots+wood)</skos:definition>
@@ -787,7 +787,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000044">
         <rdfs:label>Net_Longwave_Radiation_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000503"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000514"/>
         <skos:definition>Incident longwave radiation minus simulated outgoing longwave radiation (positive into grnd)</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -799,7 +799,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000045">
         <rdfs:label>Total_Soil_Wetness_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000506"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000516"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Vertically integrated soil moisture divided by maximum allowable soil moisture above wilting point</skos:definition>
@@ -836,7 +836,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000048">
         <rdfs:label>Absorbed_Fraction_Incoming_PAR_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000506"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000516"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Absorbed fraction incoming photosyntetically active radiation</skos:definition>
@@ -860,7 +860,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000050">
         <rdfs:label>Leaf_Area_Index_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000506"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000516"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Area of leaves per area ground</skos:definition>
@@ -872,7 +872,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000051">
         <rdfs:label>Surface_Pressure_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000515"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000523"/>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Surface pressure</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
@@ -884,7 +884,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000052">
         <rdfs:label>Average_Layer_Soil_Moisture_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000508"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000517"/>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Soil water content in each soil layer, including liquid, vapor and ice</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
@@ -909,7 +909,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000054">
         <rdfs:label>Surface_Runoff_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000511"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000520"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Runoff from the landsurface and/or subsurface stormflow</skos:definition>
@@ -921,7 +921,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000055">
         <rdfs:label>Soil_Layer_Top_Depth_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000504"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000515"/>
         <skos:definition>Depth from soil surface to top of soil layer</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -933,7 +933,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000056">
         <rdfs:label>Near_Surface_Module_Of_The_Wind_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000511"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000520"/>
         <skos:definition>Near surface wind magnitude</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -945,7 +945,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000057">
         <rdfs:label>Size_Of_Each_Carbon_Pool_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000513"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000522"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Total size of each carbon pool vertically integrated over the entire soil column</skos:definition>
@@ -957,7 +957,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000058">
         <rdfs:label>Soil_Layer_Node_Depth_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000504"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000515"/>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <skos:definition>Depth from soil surface to layer prognostic variables; typically center of soil layer</skos:definition>
@@ -969,7 +969,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000059">
         <rdfs:label>Snow_Water_Equivalent_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000513"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000522"/>
         <skos:definition>Total water mass of snow pack, including ice and liquid water</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -981,7 +981,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000060">
         <rdfs:label>Total_Soil_Carbon_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000513"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000522"/>
         <skos:definition>Total soil and litter carbon content vertically integrated over the enire soil column</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
@@ -1005,7 +1005,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000062">
         <rdfs:label>Rainfall_Rate_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000511"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000520"/>
         <skos:definition>Rainfall rate</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
@@ -1017,7 +1017,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000063">
         <rdfs:label>Longwave_Albedo_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000506"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000516"/>
         <skos:definition>Longwave Albedo</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
@@ -1041,7 +1041,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000065">
         <rdfs:label>Name_Of_Each_Carbon_Pool_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000510"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000519"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <skos:definition>Name of each carbon pool (i.e., &quot;wood,&quot; or &quot;Coarse Woody Debris&quot;)</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -1053,7 +1053,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000066">
         <rdfs:label>Soil_Layer_Bottom_Depth_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000504"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000515"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <skos:definition>Depth from soil surface to bottom of soil layer</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -1077,7 +1077,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000068">
         <rdfs:label>Active_Layer_Thickness_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000504"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000515"/>
         <skos:definition>Thaw depth; depth to zero centigrade isotherm in permafrost</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -1089,7 +1089,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000069">
         <rdfs:label>Net_Shortwave_Radiation_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000503"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000514"/>
         <skos:definition>Incident shortwave radiation minus simulated outgoing shortwave radiation (positive into grnd)</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
@@ -1101,7 +1101,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000070">
         <rdfs:label>Total_Snow_Depth_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000504"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000515"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <skos:definition>Total snow depth</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -1125,7 +1125,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000072">
         <rdfs:label>Surface_Incident_Longwave_Radiation_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000503"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000514"/>
         <skos:definition>Surface incident longwave radiation</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
@@ -1137,7 +1137,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000073">
         <rdfs:label>Above_Ground_Woody_Biomass_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000502"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000513"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Total above ground wood biomass</skos:definition>
@@ -1149,7 +1149,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000074">
         <rdfs:label>Subsurface_Runoff_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000511"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000520"/>
         <skos:definition>Gravity soil water drainage and/or soil water lateral flow</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -1161,7 +1161,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000075">
         <rdfs:label>Sensible_Heat_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000503"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000514"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Sensible heat flux into the boundary layer (positive into atmosphere)</skos:definition>
@@ -1200,7 +1200,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000078">
         <rdfs:label>Surface_Incident_Shortwave_Radiation_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000503"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000514"/>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Surface incident shortwave radiation</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
@@ -1212,7 +1212,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000079">
         <rdfs:label>Total_Evaporation_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000503"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000514"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <skos:definition>Sum of all evaporation sources (positive into atmosphere)</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -1224,7 +1224,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000080">
         <rdfs:label>Latent_Heat_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000503"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000514"/>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <skos:definition>Latent heat flux into the boundary layer (positive into atmosphere)</skos:definition>
@@ -1904,7 +1904,7 @@ maybe others.
 
     <owl:Class rdf:about="&odo;ECSO_00000309">
         <rdfs:label>Ecosystem</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000518"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000526"/>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <rdfs:comment>This class should be incorporated into ENVO.</rdfs:comment>
         <odo:ECSO_01000003>http://www.physicalgeography.net/fundamentals/9d.html</odo:ECSO_01000003>
@@ -1918,7 +1918,7 @@ maybe others.
 
     <owl:Class rdf:about="&odo;ECSO_00000310">
         <rdfs:label>Community</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000518"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000526"/>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <skos:definition>In ecology, a community is an assemblage of two or more populations of different species occupying the same geographical area. (wikipedia) An ecological unit composed of a group of organisms or a population of different species occupying a particular area, usually interacting with each other and their environment. (biology-online.org)</skos:definition>
         <odo:ECSO_01000003>http://ecoinformatics.org/oboe/oboe.1.0/oboe-ecology.owl#EcologicalCommunity</odo:ECSO_01000003>
@@ -1931,7 +1931,7 @@ maybe others.
 
     <owl:Class rdf:about="&odo;ECSO_00000311">
         <rdfs:label>Population</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000518"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000526"/>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <rdfs:comment>This class should be incorporated into ENVO.</rdfs:comment>
         <skos:definition>A population comprises all the individuals of a given species in a specific area or region at a certain time.
@@ -1945,7 +1945,7 @@ maybe others.
 
     <owl:Class rdf:about="&odo;ECSO_00000312">
         <rdfs:label>Organism</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000517"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000525"/>
         <rdfs:comment>This class should be incorporated into ENVO.</rdfs:comment>
         <skos:definition>An organism is a single indivual. do we really have any carbon cycle data for a single organism? maybe not.
 no ref today.</skos:definition>
@@ -1958,7 +1958,7 @@ no ref today.</skos:definition>
 
     <owl:Class rdf:about="&odo;ECSO_00000313">
         <rdfs:label>Species</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000518"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000526"/>
         <odo:ECSO_01000001>Margaret O&#39;brien</odo:ECSO_01000001>
         <rdfs:comment>This class should be incorporated into ENVO.</rdfs:comment>
         <odo:ECSO_01000003>http://www.physicalgeography.net/fundamentals/9d.html</odo:ECSO_01000003>
@@ -2184,7 +2184,7 @@ no ref today.</skos:definition>
 
     <owl:Class rdf:about="&odo;ECSO_00000502">
         <rdfs:label>Ground</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000517"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000525"/>
         <odo:ECSO_01000003>http://dictionary.reference.com/browse/ground</odo:ECSO_01000003>
         <skos:definition>The solid surface of the earth; firm or dry land. 
 </skos:definition>
@@ -2336,9 +2336,146 @@ ALso see PATO:0000119</odo:ECSO_01000003>
 
     <owl:Class rdf:about="&odo;ECSO_00000512">
         <rdfs:label>concentration</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000506"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000516"/>
         <skos:definition>See PATO:0000033, concentration of</skos:definition>
         <rdfs:comment>EquivalentClass: Measurement and ofCharacteristic only (AmountOfSubstanceConcentration or MassDensity)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000513 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000513">
+        <rdfs:label>biomass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000522"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000514 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000514">
+        <rdfs:label>flux</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000039"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000515 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000515">
+        <rdfs:label>depth</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000039"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000516 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000516">
+        <rdfs:label>ratio</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000039"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000517 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000517">
+        <rdfs:label>moisture</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000512"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000518 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000518">
+        <rdfs:label>temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000519 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000519">
+        <rdfs:label>label</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000039"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000520 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000520">
+        <rdfs:label>rate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000039"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000521 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000521">
+        <rdfs:label>quantity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000039"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000522 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000522">
+        <rdfs:label>mass</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000521"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000523 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000523">
+        <rdfs:label>pressure</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000039"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000525 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000525">
+        <rdfs:label>entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000526 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000526">
+        <rdfs:label>group</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000525"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000527 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000527">
+        <rdfs:label>&#39;ecosystem component entity&#39;</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
+                <owl:allValuesFrom rdf:resource="&odo;ECSO_00000525"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
+                <owl:onClass rdf:resource="&odo;ECSO_00000525"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000525"/>
     </owl:Class>
     
 
@@ -2363,92 +2500,11 @@ ALso see PATO:0000119</odo:ECSO_01000003>
     
 
 
-    <!-- http://purl.dataone.org/odo/ecso.owl/ECSO_00000502 -->
-
-    <owl:Class rdf:about="&odo;ecso.owl/ECSO_00000502">
-        <rdfs:label>biomass</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000513"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ecso.owl/ECSO_00000503 -->
-
-    <owl:Class rdf:about="&odo;ecso.owl/ECSO_00000503">
-        <rdfs:label>flux</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000039"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ecso.owl/ECSO_00000504 -->
-
-    <owl:Class rdf:about="&odo;ecso.owl/ECSO_00000504">
-        <rdfs:label>depth</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000039"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ecso.owl/ECSO_00000506 -->
-
-    <owl:Class rdf:about="&odo;ecso.owl/ECSO_00000506">
-        <rdfs:label>ratio</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000039"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ecso.owl/ECSO_00000508 -->
-
-    <owl:Class rdf:about="&odo;ecso.owl/ECSO_00000508">
-        <rdfs:label>moisture</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000512"/>
-    </owl:Class>
-    
-
-
     <!-- http://purl.dataone.org/odo/ecso.owl/ECSO_00000509 -->
 
     <owl:Class rdf:about="&odo;ecso.owl/ECSO_00000509">
         <rdfs:label>temperature</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000512"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ecso.owl/ECSO_00000510 -->
-
-    <owl:Class rdf:about="&odo;ecso.owl/ECSO_00000510">
-        <rdfs:label>label</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000039"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ecso.owl/ECSO_00000511 -->
-
-    <owl:Class rdf:about="&odo;ecso.owl/ECSO_00000511">
-        <rdfs:label>rate</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000039"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ecso.owl/ECSO_00000512 -->
-
-    <owl:Class rdf:about="&odo;ecso.owl/ECSO_00000512">
-        <rdfs:label>quantity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000039"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ecso.owl/ECSO_00000513 -->
-
-    <owl:Class rdf:about="&odo;ecso.owl/ECSO_00000513">
-        <rdfs:label>mass</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000512"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000521"/>
     </owl:Class>
     
 
@@ -2457,19 +2513,10 @@ ALso see PATO:0000119</odo:ECSO_01000003>
 
     <owl:Class rdf:about="&odo;ecso.owl/ECSO_00000514">
         <rdfs:label>Near_Surface_Specific_Humidity_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000506"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000516"/>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Near surface specific humidity</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ecso.owl/ECSO_00000515 -->
-
-    <owl:Class rdf:about="&odo;ecso.owl/ECSO_00000515">
-        <rdfs:label>pressure</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000039"/>
     </owl:Class>
     
 
@@ -2484,49 +2531,10 @@ ALso see PATO:0000119</odo:ECSO_01000003>
     
 
 
-    <!-- http://purl.dataone.org/odo/ecso.owl/ECSO_00000517 -->
-
-    <owl:Class rdf:about="&odo;ecso.owl/ECSO_00000517">
-        <rdfs:label>entity</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ecso.owl/ECSO_00000518 -->
-
-    <owl:Class rdf:about="&odo;ecso.owl/ECSO_00000518">
-        <rdfs:label>group</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000517"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ecso.owl/ECSO_00000519 -->
-
-    <owl:Class rdf:about="&odo;ecso.owl/ECSO_00000519">
-        <rdfs:label>ecosystem component entity</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                <owl:onClass rdf:resource="&odo;ecso.owl/ECSO_00000517"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                <owl:allValuesFrom rdf:resource="&odo;ecso.owl/ECSO_00000517"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000517"/>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/CHEBI_24431 -->
 
     <rdf:Description rdf:about="&obo;CHEBI_24431">
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000519"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000527"/>
     </rdf:Description>
     
 
@@ -2564,7 +2572,7 @@ ALso see PATO:0000119</odo:ECSO_01000003>
     <!-- http://purl.obolibrary.org/obo/ENVO_00002297 -->
 
     <rdf:Description rdf:about="&obo;ENVO_00002297">
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000517"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000525"/>
     </rdf:Description>
     
 
@@ -2572,7 +2580,7 @@ ALso see PATO:0000119</odo:ECSO_01000003>
     <!-- http://purl.obolibrary.org/obo/ENVO_00010483 -->
 
     <rdf:Description rdf:about="&obo;ENVO_00010483">
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000517"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000525"/>
     </rdf:Description>
     
 
@@ -2580,7 +2588,7 @@ ALso see PATO:0000119</odo:ECSO_01000003>
     <!-- http://purl.obolibrary.org/obo/ENVO_01000254 -->
 
     <rdf:Description rdf:about="&obo;ENVO_01000254">
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000517"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000525"/>
     </rdf:Description>
     
 
@@ -2588,6 +2596,22 @@ ALso see PATO:0000119</odo:ECSO_01000003>
     <!-- http://purl.obolibrary.org/obo/ENVO_01000307 -->
 
     <owl:Class rdf:about="&obo;ENVO_01000307"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001305 -->
+
+    <rdf:Description rdf:about="&obo;PATO_0001305">
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000518"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001985 -->
+
+    <rdf:Description rdf:about="&obo;PATO_0001985">
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000518"/>
+    </rdf:Description>
     
 
 
@@ -3867,16 +3891,6 @@ note: ENVO also references LTER:41</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&odo;ECSO_00000012"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000013"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000014"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000015"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000016"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&odo;ECSO_00000097"/>
             <rdf:Description rdf:about="&odo;ECSO_00000098"/>
             <rdf:Description rdf:about="&odo;ECSO_00000099"/>
@@ -3892,6 +3906,16 @@ note: ENVO also references LTER:41</rdfs:comment>
             <rdf:Description rdf:about="&odo;ECSO_00000109"/>
             <rdf:Description rdf:about="&odo;ECSO_00000110"/>
             <rdf:Description rdf:about="&odo;ECSO_00000111"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&odo;ECSO_00000012"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000013"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000014"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000015"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000016"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
