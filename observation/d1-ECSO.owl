@@ -811,7 +811,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000046">
         <rdfs:label>Near_Surface_CO2_Concentration_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000516"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000530"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <rdfs:comment>EquivalentTo: concentration and measurementFor only ofEntity only partOf only Air</rdfs:comment>
         <skos:definition>Near surface dry air CO2 mole fraction</skos:definition>
@@ -848,7 +848,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000049">
         <rdfs:label>Near_Surface_Air_Temperature_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000509"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000529"/>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <skos:definition>Near surface air temperature</skos:definition>
@@ -897,7 +897,7 @@ synonyms: NPP</rdfs:comment>
     <owl:Class rdf:about="&odo;ECSO_00000053">
         <rdfs:label>Average_Layer_Soil_Temperature_MOV</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
-        <rdfs:subClassOf rdf:resource="&odo;ecso.owl/ECSO_00000509"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000529"/>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Average soil temperature in each soil layer</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
@@ -2480,6 +2480,37 @@ ALso see PATO:0000119</odo:ECSO_01000003>
     
 
 
+    <!-- http://purl.dataone.org/odo/ECSO_00000528 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000528">
+        <rdfs:label>Near_Surface_Specific_Humidity_MOV</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000516"/>
+        <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
+        <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
+        <skos:definition>Near surface specific humidity</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000529 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000529">
+        <rdfs:label>temperature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000521"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000530 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000530">
+        <rdfs:label>&#39;CO2 Concentration&#39;</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000512"/>
+        <rdfs:comment>EquivalentTo: concentration and measurementFor only Observation and ofEntity only CO2</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://purl.dataone.org/odo/ECSO_Leaf_Decomposition -->
 
     <owl:Class rdf:about="&odo;ECSO_Leaf_Decomposition">
@@ -2496,37 +2527,6 @@ ALso see PATO:0000119</odo:ECSO_01000003>
         <rdfs:subClassOf rdf:resource="&skosdl;Concept"/>
         <owl:deprecated rdf:datatype="&xsd;boolean">true</owl:deprecated>
         <rdfs:comment>this concept was used as a related term for &#39;leaf carbon pool&#39; and does not merit class status (although we coud leave it here as a SKOS concept if we want all potential &quot;labels&quot; to show up in our class hierarchy that is now a &quot;class/concept&quot; hierarchy due to importing SKOS-dl {MPS, 28APR15}</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ecso.owl/ECSO_00000509 -->
-
-    <owl:Class rdf:about="&odo;ecso.owl/ECSO_00000509">
-        <rdfs:label>temperature</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000521"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ecso.owl/ECSO_00000514 -->
-
-    <owl:Class rdf:about="&odo;ecso.owl/ECSO_00000514">
-        <rdfs:label>Near_Surface_Specific_Humidity_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000516"/>
-        <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
-        <skos:definition>Near surface specific humidity</skos:definition>
-        <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ecso.owl/ECSO_00000516 -->
-
-    <owl:Class rdf:about="&odo;ecso.owl/ECSO_00000516">
-        <rdfs:label>CO2 Concentration</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000512"/>
-        <rdfs:comment>EquivalentTo: concentration and measurementFor only Observation and ofEntity only CO2</rdfs:comment>
     </owl:Class>
     
 
