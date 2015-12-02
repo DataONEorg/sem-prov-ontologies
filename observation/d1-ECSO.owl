@@ -981,7 +981,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000060">
         <rdfs:label>Total_Soil_Carbon_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000522"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000531"/>
         <skos:definition>Total soil and litter carbon content vertically integrated over the enire soil column</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
@@ -1832,7 +1832,7 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
     <!-- http://purl.dataone.org/odo/ECSO_00000301 -->
 
     <owl:Class rdf:about="&odo;ECSO_00000301">
-        <rdfs:label>Aboveground Net Primary Productivity Flux</rdfs:label>
+        <rdfs:label>Aboveground Net Primary Production Carbon Flux</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -2507,6 +2507,108 @@ ALso see PATO:0000119</odo:ECSO_01000003>
         <rdfs:label>&#39;CO2 Concentration&#39;</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000512"/>
         <rdfs:comment>EquivalentTo: concentration and measurementFor only Observation and ofEntity only CO2</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000531 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000531">
+        <rdfs:label>Total_Soil_Carbon</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000522"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000532 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000532">
+        <rdfs:label>Soil_Heterotrophic_Respiration_Carbon_Flux</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000018"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000533 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000533">
+        <rdfs:label>Grassland Above Ground NPP Carbon Flux</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000301"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000534 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000534">
+        <rdfs:label>Phytoplankton Primary Production Carbon Flux</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000015"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000535 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000535">
+        <rdfs:label>Oceanic total inorganic carbon concentration</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000512"/>
+        <rdfs:comment>This might be a subclass of CO2 concentration (rather than it&#39;s sibling). Margaret needs to talk to her local CO2 system experts.
+
+generally, CO2 that enters the ocean dissociates into bicarbonate, carbonate, (and some stays as CO2). but not sure what people in that domain call the total. (or if this is actually what they would search for! will confirm that, too, this week.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000536 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000536">
+        <rdfs:label>CO2 Carbon Flux</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000011"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000537 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000537">
+        <rdfs:label>CO2 flux under manipulated conditions</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000536"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000540 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000540">
+        <rdfs:label>Growth</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000039"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000541 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000541">
+        <rdfs:label>Tree Growth</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000540"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000542 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000542">
+        <rdfs:label>Macroalgae NPP Carbon Flux</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000021"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000543 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000543">
+        <rdfs:label>Oceanic CO2 Carbon Flux</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000536"/>
     </owl:Class>
     
 
@@ -3562,7 +3664,7 @@ So light + dark = GPP (or about as close as you can get with a field measurement
     <!-- http://purl.dataone.org/odo/ECSO_00000301 -->
 
     <owl:NamedIndividual rdf:about="&odo;ECSO_00000301">
-        <rdfs:label>Aboveground Net Primary Productivity Flux</rdfs:label>
+        <rdfs:label>Aboveground Net Primary Production Carbon Flux</rdfs:label>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <skos:definition>Gross primary productivity (GPP) minus autotrophic respiration (AR) in plant segments other than the roots, e.g. leaves and shoots.</skos:definition>
         <odo:ECSO_01000003>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000003>
