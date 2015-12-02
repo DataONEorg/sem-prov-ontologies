@@ -420,9 +420,9 @@ biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than 
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <skos:definition>The process of carbon fixation by autotrophic carbon-fixing tissues per unit ground or water area and time.</skos:definition>
         <rdfs:comment>http-en.wikipedia.org/wiki/Primary_production
-Gross primary production (GPP) is the amount of chemical energy as biomass that primary producers create in a given length of time. (GPP is sometimes confused with Gross Primary productivity, which is the rate at which photosynthesis or chemosynthesis occurs.)
+Gross primary production (GPP) is the _amount_ of chemical energy as biomass that primary producers create in a given length of time. (GPP is sometimes confused with Gross Primary productivity, which is the _rate_ at which photosynthesis or chemosynthesis occurs.)
 
-For most purposes (including this one) the two can be the same. It&#39;s most practical to measure production over a given time interval and area, and that amounts to an areal rate.</rdfs:comment>
+For most purposes (including this one) the two can be the same. It&#39;s most practical to measure production over a given time interval and area (or volume), and that amounts to an areal (or volumetric) rate.</rdfs:comment>
         <odo:ECSO_01000003>Inferred from: Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</odo:ECSO_01000003>
         <skos:altLabel>Primary productivity</skos:altLabel>
         <skos:altLabel>Primary production</skos:altLabel>
@@ -2525,6 +2525,9 @@ ALso see PATO:0000119</odo:ECSO_01000003>
     <owl:Class rdf:about="&odo;ECSO_00000532">
         <rdfs:label>Soil_Heterotrophic_Respiration_Carbon_Flux</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000018"/>
+        <skos:definition>The respiration rate of heterotrophic organisms (animals and microbes) summed per unit area and time, and occuring in soil.</skos:definition>
+        <odo:ECSO_01000003>Adapted from ECSO_00000018, Heterotrophic Respiration Carbon Flux</odo:ECSO_01000003>
+        <odo:ECSO_01000001>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
     </owl:Class>
     
 
@@ -2534,6 +2537,10 @@ ALso see PATO:0000119</odo:ECSO_01000003>
     <owl:Class rdf:about="&odo;ECSO_00000533">
         <rdfs:label>Grassland Above Ground NPP Carbon Flux</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000301"/>
+        <odo:ECSO_01000001>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
+        <skos:definition>Gross primary productivity (GPP) minus autotrophic respiration (AR) in a GRASSLAND of plant segments other than the roots, e.g. leaves and shoots.
+Often abbreviated to ANPP, and in grasslands, measured by peak biomass.</skos:definition>
+        <odo:ECSO_01000003>Adapted form ECSO_00000021 (Net Primary Production Carbon FLux) and ECSO_00000301 (Above Ground Net Primary Production Carbon Flux)</odo:ECSO_01000003>
     </owl:Class>
     
 
@@ -2543,6 +2550,17 @@ ALso see PATO:0000119</odo:ECSO_01000003>
     <owl:Class rdf:about="&odo;ECSO_00000534">
         <rdfs:label>Phytoplankton Primary Production Carbon Flux</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000015"/>
+        <skos:definition>The process of carbon fixation by autotrophic phytoplankton per unit area or volume and time. May occur in aquatic environments of all types.</skos:definition>
+        <odo:ECSO_01000003>Adapted from
+https://en.wikipedia.org/wiki/Primary_production</odo:ECSO_01000003>
+        <odo:ECSO_01000001>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
+        <rdfs:comment>http-en.wikipedia.org/wiki/Primary_production
+Gross primary production (GPP) is the _amount_ of chemical energy as biomass that primary producers create in a given length of time. (GPP is sometimes confused with Gross Primary productivity, which is the _rate_ at which photosynthesis or chemosynthesis occurs.)
+
+For most purposes (including this one) the two can be the same. It&#39;s most practical to measure production over a given time interval and area (or volume), and that amounts to an areal (or volumetric) rate.</rdfs:comment>
+        <rdfs:comment>From Moigis and Gocke, 2003, 10.1093/plankt/fbg089 
+
+The primary production of phytoplankton has been estimated for decades by the 14C (Steemann-Nielsen, 1952) and O2 (Gaarder and Gran, 1927) methods. </rdfs:comment>
     </owl:Class>
     
 
@@ -2552,6 +2570,7 @@ ALso see PATO:0000119</odo:ECSO_01000003>
     <owl:Class rdf:about="&odo;ECSO_00000535">
         <rdfs:label>Oceanic total inorganic carbon concentration</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000512"/>
+        <odo:ECSO_01000001>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
         <rdfs:comment>This might be a subclass of CO2 concentration (rather than it&#39;s sibling). Margaret needs to talk to her local CO2 system experts.
 
 generally, CO2 that enters the ocean dissociates into bicarbonate, carbonate, (and some stays as CO2). but not sure what people in that domain call the total. (or if this is actually what they would search for! will confirm that, too, this week.</rdfs:comment>
@@ -2564,6 +2583,9 @@ generally, CO2 that enters the ocean dissociates into bicarbonate, carbonate, (a
     <owl:Class rdf:about="&odo;ECSO_00000536">
         <rdfs:label>CO2 Carbon Flux</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000011"/>
+        <skos:definition>The rate at which a Carbon Dioxide (CO2) moves to or from a particular component of the ecosystem per unit time.</skos:definition>
+        <odo:ECSO_01000001>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
+        <odo:ECSO_01000003>ECSO_00000011 (Carbon Flux), adapted for CO2</odo:ECSO_01000003>
     </owl:Class>
     
 
@@ -2573,6 +2595,9 @@ generally, CO2 that enters the ocean dissociates into bicarbonate, carbonate, (a
     <owl:Class rdf:about="&odo;ECSO_00000537">
         <rdfs:label>CO2 flux under manipulated conditions</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000536"/>
+        <odo:ECSO_01000003>ECSO_00000011 (Carbon Flux), adapted for (a) CO2 and (b) a manipulated experiment</odo:ECSO_01000003>
+        <odo:ECSO_01000001>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
+        <skos:definition>The rate at which a Carbon Dioxide (CO2) moves to or from a particular component of the ecosystem per unit time, during a experiment in which some condition has been manipulated or altered to understand its effect.</skos:definition>
     </owl:Class>
     
 
@@ -2581,7 +2606,16 @@ generally, CO2 that enters the ocean dissociates into bicarbonate, carbonate, (a
 
     <owl:Class rdf:about="&odo;ECSO_00000540">
         <rdfs:label>Growth</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000039"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000546"/>
+        <odo:ECSO_01000001>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
+        <odo:ECSO_01000003>adapted from:
+http://www.bbc.co.uk/bitesize/higher/biology/control_regulation/growth/revision/1/
+http://www.biology-online.org/dictionary/Growth
+Google (no ref to src material)</odo:ECSO_01000003>
+        <skos:definition>The process of increasing in physical size, mass or number, gradually and irreversibly. the process of developing or maturing. the increase in number and spread of small or microscopic organisms.
+
+potential synonyms: development, maturation, growing, germination, sprouting; blooming, expansion, extension, development, progress, advance, advancement
+</skos:definition>
     </owl:Class>
     
 
@@ -2589,8 +2623,11 @@ generally, CO2 that enters the ocean dissociates into bicarbonate, carbonate, (a
     <!-- http://purl.dataone.org/odo/ECSO_00000541 -->
 
     <owl:Class rdf:about="&odo;ECSO_00000541">
-        <rdfs:label>Tree Growth</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000540"/>
+        <rdfs:label>Tree Height</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000511"/>
+        <skos:definition>Height of a tree, by various methods.</skos:definition>
+        <odo:ECSO_01000003>https://en.wikipedia.org/wiki/Tree_height_measurement</odo:ECSO_01000003>
+        <odo:ECSO_01000001>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
     </owl:Class>
     
 
@@ -2598,8 +2635,11 @@ generally, CO2 that enters the ocean dissociates into bicarbonate, carbonate, (a
     <!-- http://purl.dataone.org/odo/ECSO_00000542 -->
 
     <owl:Class rdf:about="&odo;ECSO_00000542">
-        <rdfs:label>Macroalgae NPP Carbon Flux</rdfs:label>
+        <rdfs:label>Marine Macroalgae NPP Carbon Flux</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000021"/>
+        <odo:ECSO_01000003>adapted from ECSO_00000021 (Net Primary Production Carbon FLux)</odo:ECSO_01000003>
+        <skos:definition>Gross primary production (GPP) minus autotrophic respiration (AR) by marine macroalgae. Usually expressed per unit area (substrate or water surface) and time. Marine macroalgae occur in oceanic or estuarine environments.</skos:definition>
+        <odo:ECSO_01000001>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
     </owl:Class>
     
 
@@ -2608,7 +2648,43 @@ generally, CO2 that enters the ocean dissociates into bicarbonate, carbonate, (a
 
     <owl:Class rdf:about="&odo;ECSO_00000543">
         <rdfs:label>Oceanic CO2 Carbon Flux</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000536"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000200"/>
+        <odo:ECSO_01000003>ECSO_00000200,  Areal Carbon Flux, adapted for the ocean.</odo:ECSO_01000003>
+        <odo:ECSO_01000001>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
+        <skos:definition>A flux of carbon across the surface of the ocean, per unit area.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000544 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000544">
+        <rdfs:label>&#39;Tree Diameter&#39;</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000509"/>
+        <odo:ECSO_01000001>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
+        <odo:ECSO_01000003>http://www.fs.usda.gov/Internet/FSE_DOCUMENTS/stelprdb5202838.pdf</odo:ECSO_01000003>
+        <skos:definition>Diameter of a tree. Often measured at a specified, average distance from the ground, eg 4.5 ft (or average person&#39;s breast height). May be measured as circumference, then divided by pi.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000545 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000545">
+        <rdfs:label>&#39;&#39;Tree Circumference&#39;&#39;</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000510"/>
+        <skos:definition>Girth. Distance around the tree, often a specified, average distance from the ground, eg 4.5 ft (or average person&#39;s breast height). </skos:definition>
+        <odo:ECSO_01000001>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
+        <odo:ECSO_01000003>http://www.fs.usda.gov/Internet/FSE_DOCUMENTS/stelprdb5202838.pdf</odo:ECSO_01000003>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000546 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000546">
+        <rdfs:label>Process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000525"/>
     </owl:Class>
     
 
@@ -2810,9 +2886,9 @@ biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than 
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <skos:definition>The process of carbon fixation by autotrophic carbon-fixing tissues per unit ground or water area and time.</skos:definition>
         <rdfs:comment>http-en.wikipedia.org/wiki/Primary_production
-Gross primary production (GPP) is the amount of chemical energy as biomass that primary producers create in a given length of time. (GPP is sometimes confused with Gross Primary productivity, which is the rate at which photosynthesis or chemosynthesis occurs.)
+Gross primary production (GPP) is the _amount_ of chemical energy as biomass that primary producers create in a given length of time. (GPP is sometimes confused with Gross Primary productivity, which is the _rate_ at which photosynthesis or chemosynthesis occurs.)
 
-For most purposes (including this one) the two can be the same. It&#39;s most practical to measure production over a given time interval and area, and that amounts to an areal rate.</rdfs:comment>
+For most purposes (including this one) the two can be the same. It&#39;s most practical to measure production over a given time interval and area (or volume), and that amounts to an areal (or volumetric) rate.</rdfs:comment>
         <odo:ECSO_01000003>Inferred from: Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</odo:ECSO_01000003>
         <skos:altLabel>Primary productivity</skos:altLabel>
         <skos:altLabel>Primary production</skos:altLabel>
