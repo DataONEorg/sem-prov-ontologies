@@ -576,7 +576,7 @@ synonyms: NPP</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&odo;ECSO_00000331"/>
+                    <rdf:Description rdf:about="&odo;ECSO_00000341"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&odo;ECSO_00000319"/>
                         <owl:allValuesFrom rdf:resource="&obo;ENVO_00001998"/>
@@ -587,7 +587,7 @@ synonyms: NPP</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&odo;ECSO_00000341"/>
+                    <rdf:Description rdf:about="&odo;ECSO_00000331"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&odo;ECSO_00000319"/>
                         <owl:allValuesFrom rdf:resource="&obo;ENVO_00001998"/>
@@ -767,6 +767,7 @@ synonyms: NPP</rdfs:comment>
     <owl:Class rdf:about="&odo;ECSO_00000042">
         <rdfs:label>MsTMIP_Output_Variable</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000040"/>
+        <rdfs:comment>All MsTMIP output variables are global in scope, but the &#39;T&#39; refers to terrestrial. Presumably, there are no output vars for the ocean. MsTMIP output vars should be for the entity &quot;Earth_terrestrial&quot;</rdfs:comment>
     </owl:Class>
     
 
@@ -2441,6 +2442,19 @@ ALso see PATO:0000119</odo:ECSO_01000003>
     
 
 
+    <!-- http://purl.dataone.org/odo/ECSO_00000524 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000524">
+        <rdfs:label>Earth</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000525"/>
+        <odo:ECSO_01000003>Merriam-Webster:
+http://www.merriam-webster.com/dictionary/earth</odo:ECSO_01000003>
+        <skos:definition>The planet on which which we live</skos:definition>
+        <odo:ECSO_01000001>Margaret O&amp;apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
+    </owl:Class>
+    
+
+
     <!-- http://purl.dataone.org/odo/ECSO_00000525 -->
 
     <owl:Class rdf:about="&odo;ECSO_00000525">
@@ -2569,7 +2583,7 @@ The primary production of phytoplankton has been estimated for decades by the 14
 
     <owl:Class rdf:about="&odo;ECSO_00000535">
         <rdfs:label>Oceanic total inorganic carbon concentration</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000512"/>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000539"/>
         <odo:ECSO_01000001>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
         <rdfs:comment>This might be a subclass of CO2 concentration (rather than it&#39;s sibling). Margaret needs to talk to her local CO2 system experts.
 
@@ -2598,6 +2612,37 @@ generally, CO2 that enters the ocean dissociates into bicarbonate, carbonate, (a
         <odo:ECSO_01000003>ECSO_00000011 (Carbon Flux), adapted for (a) CO2 and (b) a manipulated experiment</odo:ECSO_01000003>
         <odo:ECSO_01000001>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
         <skos:definition>The rate at which a Carbon Dioxide (CO2) moves to or from a particular component of the ecosystem per unit time, during a experiment in which some condition has been manipulated or altered to understand its effect.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000538 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000538">
+        <rdfs:label>Earth_terrestrial</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000524"/>
+        <odo:ECSO_01000001>Margaret O&amp;apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
+        <skos:definition> areas of land as distinguished from sea and air</skos:definition>
+        <odo:ECSO_01000003>Merriam-Webster:
+http://www.merriam-webster.com/dictionary/earth
+definition 3a</odo:ECSO_01000003>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000539 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000539">
+        <rdfs:label>&#39;Aquatic total inorganic carbon concentration&#39;</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000512"/>
+        <rdfs:comment>This class is an analog to &quot;Oceanic total inorganic Carbon&quot;, for any aquatic environment. 
+
+The class for &#39;Oceanic ...&#39; should be a subclass of this one.
+ 
+This might be a subclass of CO2 concentration (rather than it&#39;s sibling). Margaret needs to talk to her local CO2 system experts.
+
+generally, CO2 that enters water dissociates into bicarbonate, carbonate, (and some stays as CO2). but not sure what people in that domain call the total.</rdfs:comment>
+        <odo:ECSO_01000001>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
     </owl:Class>
     
 
@@ -2685,6 +2730,31 @@ potential synonyms: development, maturation, growing, germination, sprouting; bl
     <owl:Class rdf:about="&odo;ECSO_00000546">
         <rdfs:label>Process</rdfs:label>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000525"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000547 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000547">
+        <rdfs:label>Tree growth</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000540"/>
+        <skos:definition>Tree growth is computed from sequential measurements of a tree that often depend on the species and its form. Measurements include (but are not limited to) height, circumference and diamater, eg, diameter at breast height, or DBH.</skos:definition>
+        <odo:ECSO_01000001>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
+        <odo:ECSO_01000003>http://www.fia.fs.fed.us/library/fact-sheets/p3-factsheets/tree-growth.pdf
+https://en.wikipedia.org/wiki/Tree_measurement</odo:ECSO_01000003>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000549 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000549">
+        <rdfs:label>DBH Tree diameter at breast height</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000544"/>
+        <odo:ECSO_01000001>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
+        <odo:ECSO_01000003>http://www.fs.usda.gov/Internet/FSE_DOCUMENTS/stelprdb5202838.pdf</odo:ECSO_01000003>
+        <skos:definition>Domain protocol for measuring the diameter of a tree. Measured at a specified, average distance from the ground, eg 4.5 ft (or average person&#39;s breast height). May be measured as circumference, then divided by pi.</skos:definition>
     </owl:Class>
     
 
@@ -4089,21 +4159,21 @@ note: ENVO also references LTER:41</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&odo;ECSO_00000012"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000013"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000014"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000015"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000016"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&odo;ECSO_00000309"/>
             <rdf:Description rdf:about="&odo;ECSO_00000310"/>
             <rdf:Description rdf:about="&odo;ECSO_00000311"/>
             <rdf:Description rdf:about="&odo;ECSO_00000312"/>
             <rdf:Description rdf:about="&odo;ECSO_00000313"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&odo;ECSO_00000012"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000013"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000014"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000015"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000016"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
