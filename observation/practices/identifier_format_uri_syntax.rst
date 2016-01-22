@@ -93,9 +93,9 @@ Supplementary Notes
 -------------------
 1) For the DataONE PROV group (https://github.com/DataONEorg/sem-prov-ontologies/blob/master/provenance/ProvONE/v1/owl/provone.owl), the following is the URI syntax that is assigned to the ontological terms:
 
-	https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#termname
+	http://purl.dataone.org/provone/2015/01/15/ontology#termname
 	
-Example: https://purl.org/dataone/ontologies/provenance/ProvONE/v1/owl/provone.owl#Program
+Example: http://purl.dataone.org/provone/2015/01/15/ontology#Program
 
  a) This format is similar to the OBO legacy URI syntax shown in the OBO Foundry Identifier Policy page (http://www.obofoundry.org/id-policy.shtml):
   i) http://purl.org/obo/owl/" IDSPACE "#" IDSPACE "_" LOCALID
