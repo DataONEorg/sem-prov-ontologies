@@ -15,6 +15,7 @@
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
     <!ENTITY skosdl "http://www.w3.org/TR/skos-reference/skos-owl1-dl#" >
+    <!ENTITY oboe-core "http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#" >
 ]>
 
 
@@ -27,9 +28,10 @@
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:ecso3="&odo;ecso.owl/"
+     xmlns:oboe-core="http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#"
      xmlns:ecso2="&odo;ecso.owl#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
@@ -553,7 +555,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000025">
         <rdfs:label>Carbon Pool</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000525"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
         <skos:altLabel>Name of Each Carbon Pool</skos:altLabel>
         <odo:ECSO_01000005>O&#39;Brien, pers comm. 2015-02-20</odo:ECSO_01000005>
         <skos:definition>Carbon Pools are amounts of carbon in the system. dimensions are mass Carbon per area (eg, kg per m2
@@ -1947,7 +1949,7 @@ maybe others.
 
     <owl:Class rdf:about="&odo;ECSO_00000312">
         <rdfs:label>Organism</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000525"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
         <rdfs:comment>This class should be incorporated into ENVO.</rdfs:comment>
         <skos:definition>An organism is a single indivual. do we really have any carbon cycle data for a single organism? maybe not.
 no ref today.</skos:definition>
@@ -2186,7 +2188,7 @@ no ref today.</skos:definition>
 
     <owl:Class rdf:about="&odo;ECSO_00000502">
         <rdfs:label>Ground</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000525"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
         <odo:ECSO_01000003>http://dictionary.reference.com/browse/ground</odo:ECSO_01000003>
         <skos:definition>The solid surface of the earth; firm or dry land. 
 </skos:definition>
@@ -2447,7 +2449,7 @@ ALso see PATO:0000119</odo:ECSO_01000003>
 
     <owl:Class rdf:about="&odo;ECSO_00000524">
         <rdfs:label>Earth</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000525"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
         <odo:ECSO_01000003>Merriam-Webster:
 http://www.merriam-webster.com/dictionary/earth</odo:ECSO_01000003>
         <skos:definition>The planet on which which we live</skos:definition>
@@ -2456,19 +2458,11 @@ http://www.merriam-webster.com/dictionary/earth</odo:ECSO_01000003>
     
 
 
-    <!-- http://purl.dataone.org/odo/ECSO_00000525 -->
-
-    <owl:Class rdf:about="&odo;ECSO_00000525">
-        <rdfs:label>entity</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.dataone.org/odo/ECSO_00000526 -->
 
     <owl:Class rdf:about="&odo;ECSO_00000526">
         <rdfs:label>group</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000525"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
     </owl:Class>
     
 
@@ -2477,20 +2471,7 @@ http://www.merriam-webster.com/dictionary/earth</odo:ECSO_01000003>
 
     <owl:Class rdf:about="&odo;ECSO_00000527">
         <rdfs:label>&#39;ecosystem component entity&#39;</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                <owl:allValuesFrom rdf:resource="&odo;ECSO_00000525"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
-                <owl:onClass rdf:resource="&odo;ECSO_00000525"/>
-                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000525"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
     </owl:Class>
     
 
@@ -2730,7 +2711,7 @@ potential synonyms: development, maturation, growing, germination, sprouting; bl
 
     <owl:Class rdf:about="&odo;ECSO_00000546">
         <rdfs:label>Process</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000525"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
     </owl:Class>
     
 
@@ -2821,7 +2802,7 @@ https://en.wikipedia.org/wiki/Tree_measurement</odo:ECSO_01000003>
     <!-- http://purl.obolibrary.org/obo/ENVO_00002297 -->
 
     <rdf:Description rdf:about="&obo;ENVO_00002297">
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000525"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
     </rdf:Description>
     
 
@@ -2829,7 +2810,7 @@ https://en.wikipedia.org/wiki/Tree_measurement</odo:ECSO_01000003>
     <!-- http://purl.obolibrary.org/obo/ENVO_00010483 -->
 
     <rdf:Description rdf:about="&obo;ENVO_00010483">
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000525"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
     </rdf:Description>
     
 
@@ -2837,7 +2818,7 @@ https://en.wikipedia.org/wiki/Tree_measurement</odo:ECSO_01000003>
     <!-- http://purl.obolibrary.org/obo/ENVO_01000254 -->
 
     <rdf:Description rdf:about="&obo;ENVO_01000254">
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000525"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;Entity"/>
     </rdf:Description>
     
 
