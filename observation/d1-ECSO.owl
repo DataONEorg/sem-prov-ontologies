@@ -44,6 +44,7 @@
         <rdfs:comment rdf:datatype="&xsd;string">This ontology was generated from an ontology revision in WebProtege http://odo.nceas.ucsb.edu</rdfs:comment>
         <rdfs:comment rdf:datatype="&xsd;string">ontology in progress for DataONE MSTMip/LTER Carbon cycling use cases</rdfs:comment>
         <dc:contributor rdf:datatype="&xsd;string">system</dc:contributor>
+        <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.1/oboe.owl"/>
         <owl:imports rdf:resource="http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf"/>
         <owl:imports rdf:resource="https://purl.org/dataone/ontologies/observation/ENVO_import.owl"/>
         <owl:imports rdf:resource="https://purl.org/dataone/ontologies/observation/UO_import.owl"/>
@@ -74,9 +75,8 @@ See example_Of_Usage, presentation_Label</odo:ECSO_01000004>
         <odo:ECSO_01000001>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
         <odo:ECSO_01000003 rdf:resource="http://www.w3.org/TR/rdf-schema/#ch_label"/>
     </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
     <owl:AnnotationProperty rdf:about="&owl;deprecated"/>
-    <owl:AnnotationProperty rdf:about="&rdfs;seeAlso"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
     <owl:AnnotationProperty rdf:about="&odo;ECSO_01000001">
         <rdfs:label>definition_Contributor</rdfs:label>
         <skos:definition>&quot;contributor&quot; is an OWL &quot;Annotation property&quot; that names the person contributing the content, so s/he can be contacted, especially during development.</skos:definition>
@@ -87,7 +87,9 @@ If there is any potential ambiguity, an identifier should be added, including th
         <odo:ECSO_01000003>O&#39;Brien, pers comm. 2015-02-15</odo:ECSO_01000003>
         <odo:ECSO_01000001>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322, Shild</odo:ECSO_01000001>
     </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&rdfs;seeAlso"/>
     <owl:AnnotationProperty rdf:about="&dc;contributor"/>
+    <owl:AnnotationProperty rdf:about="&rdfs;isDefinedBy"/>
     <owl:AnnotationProperty rdf:about="&odo;ECSO_01000005">
         <rdfs:label>description_Source</rdfs:label>
         <skos:definition>&quot;description_Source&quot; is the Annotation property that can be used to provide the reference source or Authority, as an ISBN,DOI, bibliographic citation, etc. to the source of the &quot;description&quot; contained in an associated &quot;description&quot; Annotation property that is attached (annotated) to some concept.  
@@ -98,7 +100,6 @@ As description Annotation properties are often not as rigorous, and hence looser
         <odo:ECSO_01000001>Schildhauer, orcid.org/0000-0003-0632-7576</odo:ECSO_01000001>
         <odo:ECSO_01000005>Schildhauer, pers comm, 05Feb2015, orcid.org/0000-0003-0632-7576</odo:ECSO_01000005>
     </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="&rdfs;isDefinedBy"/>
     <owl:AnnotationProperty rdf:about="&odo;ECSO_01000004">
         <rdfs:label>description</rdfs:label>
         <skos:definition rdf:datatype="&rdfs;Literal">&quot;description&quot; is an OWL &quot;Annotation property&quot; that contains a a more verbose, less prescriptive natural language explication of the concept to which it is attached (or applied, or annotated) in contrast to a &quot;definition&quot; Annotation property.
@@ -576,7 +577,7 @@ synonyms: NPP</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&odo;ECSO_00000341"/>
+                    <rdf:Description rdf:about="&odo;ECSO_00000331"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&odo;ECSO_00000319"/>
                         <owl:allValuesFrom rdf:resource="&obo;ENVO_00001998"/>
@@ -587,7 +588,7 @@ synonyms: NPP</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&odo;ECSO_00000331"/>
+                    <rdf:Description rdf:about="&odo;ECSO_00000341"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&odo;ECSO_00000319"/>
                         <owl:allValuesFrom rdf:resource="&obo;ENVO_00001998"/>
@@ -4139,6 +4140,16 @@ note: ENVO also references LTER:41</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&odo;ECSO_00000012"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000013"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000014"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000015"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000016"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&odo;ECSO_00000097"/>
             <rdf:Description rdf:about="&odo;ECSO_00000098"/>
             <rdf:Description rdf:about="&odo;ECSO_00000099"/>
@@ -4164,16 +4175,6 @@ note: ENVO also references LTER:41</rdfs:comment>
             <rdf:Description rdf:about="&odo;ECSO_00000311"/>
             <rdf:Description rdf:about="&odo;ECSO_00000312"/>
             <rdf:Description rdf:about="&odo;ECSO_00000313"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&odo;ECSO_00000012"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000013"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000014"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000015"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000016"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
