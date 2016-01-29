@@ -510,12 +510,12 @@ For most purposes (including this one) the two can be the same. It&apos;s most p
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000011"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&odo;ECSO_00000339"/>
+                        <owl:onProperty rdf:resource="&odo;ECSO_00000340"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&odo;ECSO_00000327"/>
-                                    <rdf:Description rdf:about="&odo;ECSO_00000329"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000323"/>
+                                    <rdf:Description rdf:about="&obo;CHEBI_33582"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
@@ -528,12 +528,12 @@ For most purposes (including this one) the two can be the same. It&apos;s most p
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000011"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&odo;ECSO_00000340"/>
+                        <owl:onProperty rdf:resource="&odo;ECSO_00000339"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&odo;ECSO_00000323"/>
-                                    <rdf:Description rdf:about="&obo;CHEBI_33582"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000327"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000329"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
@@ -802,41 +802,11 @@ synonyms: NPP</rdfs:comment>
     
 
 
-    <!-- http://purl.dataone.org/odo/ECSO_00000040 -->
-
-    <owl:Class rdf:about="&odo;ECSO_00000040">
-        <rdfs:label>MsTMIP_Measurement</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
-        <skos:definition>Parent class for all MsTMIP variables</skos:definition>
-        <odo:ECSO_01000001>mob</odo:ECSO_01000001>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ECSO_00000041 -->
-
-    <owl:Class rdf:about="&odo;ECSO_00000041">
-        <rdfs:label>MsTMIP_Driver_Variable</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000040"/>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ECSO_00000042 -->
-
-    <owl:Class rdf:about="&odo;ECSO_00000042">
-        <rdfs:label>MsTMIP_Output_Variable</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000040"/>
-        <rdfs:comment>All MsTMIP output variables are global in scope, but the &apos;T&apos; refers to terrestrial. Presumably, there are no output vars for the ocean. MsTMIP output vars should be for the entity &quot;Earth_terrestrial&quot;</rdfs:comment>
-    </owl:Class>
-    
-
-
     <!-- http://purl.dataone.org/odo/ECSO_00000043 -->
 
     <owl:Class rdf:about="&odo;ECSO_00000043">
         <rdfs:label>Total_Living_Biomass_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Total carbon content of the living biomass (leaves+roots+wood)</skos:definition>
@@ -848,7 +818,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000044">
         <rdfs:label>Net_Longwave_Radiation_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <skos:definition>Incident longwave radiation minus simulated outgoing longwave radiation (positive into grnd)</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -860,7 +830,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000045">
         <rdfs:label>Total_Soil_Wetness_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Vertically integrated soil moisture divided by maximum allowable soil moisture above wilting point</skos:definition>
@@ -872,7 +842,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000046">
         <rdfs:label>Near_Surface_CO2_Concentration_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <rdfs:comment>EquivalentTo: concentration and measurementFor only ofEntity only partOf only Air</rdfs:comment>
         <skos:definition>Near surface dry air CO2 mole fraction</skos:definition>
@@ -897,7 +867,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000048">
         <rdfs:label>Absorbed_Fraction_Incoming_PAR_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Absorbed fraction incoming photosyntetically active radiation</skos:definition>
@@ -909,7 +879,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000049">
         <rdfs:label>Near_Surface_Air_Temperature_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <skos:definition>Near surface air temperature</skos:definition>
@@ -921,7 +891,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000050">
         <rdfs:label>Leaf_Area_Index_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Area of leaves per area ground</skos:definition>
@@ -933,7 +903,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000051">
         <rdfs:label>Surface_Pressure_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Surface pressure</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
@@ -945,7 +915,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000052">
         <rdfs:label>Average_Layer_Soil_Moisture_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Soil water content in each soil layer, including liquid, vapor and ice</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
@@ -957,7 +927,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000053">
         <rdfs:label>Average_Layer_Soil_Temperature_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Average soil temperature in each soil layer</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
@@ -969,7 +939,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000054">
         <rdfs:label>Surface_Runoff_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Runoff from the landsurface and/or subsurface stormflow</skos:definition>
@@ -981,7 +951,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000055">
         <rdfs:label>Soil_Layer_Top_Depth_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <skos:definition>Depth from soil surface to top of soil layer</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -993,7 +963,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000056">
         <rdfs:label>Near_Surface_Module_Of_The_Wind_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <skos:definition>Near surface wind magnitude</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -1005,7 +975,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000057">
         <rdfs:label>Size_Of_Each_Carbon_Pool_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Total size of each carbon pool vertically integrated over the entire soil column</skos:definition>
@@ -1017,7 +987,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000058">
         <rdfs:label>Soil_Layer_Node_Depth_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <skos:definition>Depth from soil surface to layer prognostic variables; typically center of soil layer</skos:definition>
@@ -1029,7 +999,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000059">
         <rdfs:label>Snow_Water_Equivalent_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <skos:definition>Total water mass of snow pack, including ice and liquid water</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -1041,7 +1011,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000060">
         <rdfs:label>Total_Soil_Carbon_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <skos:definition>Total soil and litter carbon content vertically integrated over the enire soil column</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
@@ -1065,7 +1035,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000062">
         <rdfs:label>Rainfall_Rate_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <skos:definition>Rainfall rate</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
@@ -1077,7 +1047,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000063">
         <rdfs:label>Longwave_Albedo_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <skos:definition>Longwave Albedo</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
@@ -1089,7 +1059,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000064">
         <rdfs:label>Gross_Primary_Productivity_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>MsTMIP Output: Rate of photosynthesis (always positive)</skos:definition>
         <odo:ECSO_01000001>mob</odo:ECSO_01000001>
@@ -1101,7 +1071,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000065">
         <rdfs:label>Name_Of_Each_Carbon_Pool_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <skos:definition>Name of each carbon pool (i.e., &quot;wood,&quot; or &quot;Coarse Woody Debris&quot;)</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -1113,7 +1083,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000066">
         <rdfs:label>Soil_Layer_Bottom_Depth_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <skos:definition>Depth from soil surface to bottom of soil layer</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -1137,7 +1107,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000068">
         <rdfs:label>Active_Layer_Thickness_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <skos:definition>Thaw depth; depth to zero centigrade isotherm in permafrost</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -1149,7 +1119,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000069">
         <rdfs:label>Net_Shortwave_Radiation_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <skos:definition>Incident shortwave radiation minus simulated outgoing shortwave radiation (positive into grnd)</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
@@ -1161,7 +1131,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000070">
         <rdfs:label>Total_Snow_Depth_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <skos:definition>Total snow depth</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -1173,7 +1143,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000071">
         <rdfs:label>Fire_Emissions_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <skos:definition>Flux of carbon due to fires (always positive)</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -1185,7 +1155,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000072">
         <rdfs:label>Surface_Incident_Longwave_Radiation_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <skos:definition>Surface incident longwave radiation</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
@@ -1197,7 +1167,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000073">
         <rdfs:label>Above_Ground_Woody_Biomass_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Total above ground wood biomass</skos:definition>
@@ -1209,7 +1179,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000074">
         <rdfs:label>Subsurface_Runoff_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <skos:definition>Gravity soil water drainage and/or soil water lateral flow</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -1221,7 +1191,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000075">
         <rdfs:label>Sensible_Heat_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Sensible heat flux into the boundary layer (positive into atmosphere)</skos:definition>
@@ -1233,7 +1203,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000076">
         <rdfs:label>Net_Ecosystem_Exchange_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <skos:definition>Net Ecosystem Exchange (NEE=HeteroResp+AutoResp-GPP, positive into atmosphere)</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -1246,7 +1216,6 @@ synonyms: NPP</rdfs:comment>
     <owl:Class rdf:about="&odo;ECSO_00000077">
         <rdfs:label>Net_Primary_Productivity_MOV</rdfs:label>
         <rdfs:label>Shortwave_Albedo_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000200"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <skos:definition>Net Primary Productivity (NPP=GPP-AutoResp, positive into plants)</skos:definition>
@@ -1260,7 +1229,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000078">
         <rdfs:label>Surface_Incident_Shortwave_Radiation_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Surface incident shortwave radiation</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
@@ -1272,7 +1241,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000079">
         <rdfs:label>Total_Evaporation_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <skos:definition>Sum of all evaporation sources (positive into atmosphere)</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -1284,7 +1253,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000080">
         <rdfs:label>Latent_Heat_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <skos:definition>Latent heat flux into the boundary layer (positive into atmosphere)</skos:definition>
@@ -2463,7 +2432,7 @@ http://www.merriam-webster.com/dictionary/earth</odo:ECSO_01000003>
 
     <owl:Class rdf:about="&odo;ECSO_00000528">
         <rdfs:label>Near_Surface_Specific_Humidity_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000042"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Near surface specific humidity</skos:definition>
@@ -2628,14 +2597,14 @@ Google (no ref to src material)</odo:ECSO_01000003>
         <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;measuresCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="&odo;ECSO_00000511"/>
+                <owl:onProperty rdf:resource="&oboe-core;measuresEntity"/>
+                <owl:someValuesFrom rdf:resource="&odo;ECSO_00000501"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;measuresEntity"/>
-                <owl:someValuesFrom rdf:resource="&odo;ECSO_00000501"/>
+                <owl:onProperty rdf:resource="&oboe-core;measuresCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="&odo;ECSO_00000511"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:definition>Height of a tree, by various methods.</skos:definition>
@@ -3588,21 +3557,21 @@ note: ENVO also references LTER:41</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&odo;ECSO_00000309"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000310"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000311"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000312"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000313"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&odo;ECSO_00000012"/>
             <rdf:Description rdf:about="&odo;ECSO_00000013"/>
             <rdf:Description rdf:about="&odo;ECSO_00000014"/>
             <rdf:Description rdf:about="&odo;ECSO_00000015"/>
             <rdf:Description rdf:about="&odo;ECSO_00000016"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&odo;ECSO_00000309"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000310"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000311"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000312"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000313"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
