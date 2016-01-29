@@ -43,6 +43,7 @@
         <dc:date rdf:datatype="&xsd;dateTime">Mar 31, 2015 2:04:13 PM</dc:date>
         <dc:contributor rdf:datatype="&xsd;string">Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</dc:contributor>
         <dc:contributor rdf:datatype="&xsd;string">Mark Schildhauer, orcid.org/0000-0003-0632-7576</dc:contributor>
+        <dc:contributor rdf:datatype="&xsd;string">Matthew B. Jones, http://orcid.org/0000-0003-0077-4738</dc:contributor>
         <rdfs:comment rdf:datatype="&rdfs;Literal">Revised version: DataONE ontology of Carbon Flux measurements for MsTMIP and LTER Use Cases. Collaborative work of: Margaret O&apos;Brien, Sophie Hou, Chase LeCroy, and Mark Schildhauer</rdfs:comment>
         <dc:contributor rdf:datatype="&xsd;string">SophieHou, orcid.org/0000-0002-8087-1775</dc:contributor>
         <rdfs:comment rdf:datatype="&xsd;string">This ontology was generated from an ontology revision in WebProtege http://odo.nceas.ucsb.edu</rdfs:comment>
@@ -2627,14 +2628,14 @@ Google (no ref to src material)</odo:ECSO_01000003>
         <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;measuresEntity"/>
-                <owl:someValuesFrom rdf:resource="&odo;ECSO_00000501"/>
+                <owl:onProperty rdf:resource="&oboe-core;measuresCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="&odo;ECSO_00000511"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;measuresCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="&odo;ECSO_00000511"/>
+                <owl:onProperty rdf:resource="&oboe-core;measuresEntity"/>
+                <owl:someValuesFrom rdf:resource="&odo;ECSO_00000501"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:definition>Height of a tree, by various methods.</skos:definition>
@@ -3587,6 +3588,16 @@ note: ENVO also references LTER:41</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&odo;ECSO_00000309"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000310"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000311"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000312"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000313"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&odo;ECSO_00000012"/>
             <rdf:Description rdf:about="&odo;ECSO_00000013"/>
             <rdf:Description rdf:about="&odo;ECSO_00000014"/>
@@ -3612,16 +3623,6 @@ note: ENVO also references LTER:41</rdfs:comment>
             <rdf:Description rdf:about="&odo;ECSO_00000109"/>
             <rdf:Description rdf:about="&odo;ECSO_00000110"/>
             <rdf:Description rdf:about="&odo;ECSO_00000111"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&odo;ECSO_00000309"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000310"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000311"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000312"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000313"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
