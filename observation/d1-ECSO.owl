@@ -388,7 +388,7 @@ biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than 
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000011"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;ENVO_01001309"/>
+                        <owl:onProperty rdf:resource="&oboe-core;measuresEntity"/>
                         <owl:allValuesFrom rdf:resource="&odo;ECSO_00000035"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -412,11 +412,11 @@ biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than 
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000011"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;ENVO_01001309"/>
+                        <owl:onProperty rdf:resource="&oboe-core;measuresEntity"/>
                         <owl:someValuesFrom rdf:resource="&odo;ECSO_00000323"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;ENVO_01001309"/>
+                        <owl:onProperty rdf:resource="&oboe-core;measuresEntity"/>
                         <owl:someValuesFrom rdf:resource="&odo;ECSO_00000328"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -510,12 +510,12 @@ For most purposes (including this one) the two can be the same. It&apos;s most p
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000011"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&odo;ECSO_00000340"/>
+                        <owl:onProperty rdf:resource="&odo;ECSO_00000339"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&odo;ECSO_00000323"/>
-                                    <rdf:Description rdf:about="&obo;CHEBI_33582"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000327"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000329"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
@@ -528,12 +528,12 @@ For most purposes (including this one) the two can be the same. It&apos;s most p
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000011"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&odo;ECSO_00000339"/>
+                        <owl:onProperty rdf:resource="&odo;ECSO_00000340"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&odo;ECSO_00000327"/>
-                                    <rdf:Description rdf:about="&odo;ECSO_00000329"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000323"/>
+                                    <rdf:Description rdf:about="&obo;CHEBI_33582"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
@@ -647,7 +647,7 @@ synonyms: NPP</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&odo;ECSO_00000331"/>
+                    <rdf:Description rdf:about="&odo;ECSO_00000341"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&odo;ECSO_00000319"/>
                         <owl:allValuesFrom rdf:resource="&obo;ENVO_00001998"/>
@@ -658,7 +658,7 @@ synonyms: NPP</rdfs:comment>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&odo;ECSO_00000341"/>
+                    <rdf:Description rdf:about="&odo;ECSO_00000331"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&odo;ECSO_00000319"/>
                         <owl:allValuesFrom rdf:resource="&obo;ENVO_00001998"/>
@@ -1659,18 +1659,13 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
 
     <owl:Class rdf:about="&odo;ECSO_00000201">
         <rdfs:label>Carbon Dioxide Diffusion Flux</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&odo;ECSO_00000011"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;ENVO_01001309"/>
-                        <owl:allValuesFrom rdf:resource="&odo;ECSO_00000323"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&odo;ECSO_00000011"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&oboe-core;measuresEntity"/>
+                <owl:someValuesFrom rdf:resource="&odo;ECSO_00000323"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <odo:ECSO_01000003>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <skos:definition>The process by which carbon dioxide in the atmosphere moves across a phase boundary and into the ocean. This is a major sink of atmospheric carbon dioxide. Dissolved carbon dioxide subsequently reacts to form carbonic acid, bicarbonate ions, and carbonate ions, leading to ocean acidification.</skos:definition>
@@ -1687,7 +1682,7 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000341"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;ENVO_01001309"/>
+                        <owl:onProperty rdf:resource="&oboe-core;measuresEntity"/>
                         <owl:allValuesFrom rdf:resource="&odo;ECSO_00000326"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1710,7 +1705,7 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000341"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;ENVO_01001309"/>
+                        <owl:onProperty rdf:resource="&oboe-core;measuresEntity"/>
                         <owl:allValuesFrom rdf:resource="&odo;ECSO_00000323"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1730,7 +1725,7 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000341"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;ENVO_01001309"/>
+                        <owl:onProperty rdf:resource="&oboe-core;measuresEntity"/>
                         <owl:allValuesFrom rdf:resource="&odo;ECSO_00000325"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1768,7 +1763,7 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000331"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;ENVO_01001309"/>
+                        <owl:onProperty rdf:resource="&oboe-core;measuresEntity"/>
                         <owl:someValuesFrom rdf:resource="&odo;ECSO_00000327"/>
                     </owl:Restriction>
                     <owl:Restriction>
@@ -3557,26 +3552,6 @@ note: ENVO also references LTER:41</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&odo;ECSO_00000012"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000013"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000014"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000015"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000016"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&odo;ECSO_00000309"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000310"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000311"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000312"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000313"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&odo;ECSO_00000097"/>
             <rdf:Description rdf:about="&odo;ECSO_00000098"/>
             <rdf:Description rdf:about="&odo;ECSO_00000099"/>
@@ -3592,6 +3567,26 @@ note: ENVO also references LTER:41</rdfs:comment>
             <rdf:Description rdf:about="&odo;ECSO_00000109"/>
             <rdf:Description rdf:about="&odo;ECSO_00000110"/>
             <rdf:Description rdf:about="&odo;ECSO_00000111"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&odo;ECSO_00000309"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000310"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000311"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000312"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000313"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&odo;ECSO_00000012"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000013"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000014"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000015"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000016"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
