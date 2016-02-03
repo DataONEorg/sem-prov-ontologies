@@ -53,6 +53,7 @@
         <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.1/oboe.owl"/>
         <owl:imports rdf:resource="http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf"/>
         <owl:imports rdf:resource="https://purl.org/dataone/ontologies/observation/ENVO_import.owl"/>
+        <owl:imports rdf:resource="https://purl.org/dataone/ontologies/observation/PATO_import.owl"/>
         <owl:imports rdf:resource="https://purl.org/dataone/ontologies/observation/UO_import.owl"/>
     </owl:Ontology>
     
@@ -349,6 +350,14 @@ See example_Of_Usage, presentation_Label</odo:ECSO_01000004>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#Characteristic -->
+
+    <rdf:Description rdf:about="&oboe-core;Characteristic">
+        <owl:equivalentClass rdf:resource="&obo;PATO_0000001"/>
+    </rdf:Description>
     
 
 
@@ -2592,14 +2601,14 @@ Google (no ref to src material)</odo:ECSO_01000003>
         <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;measuresEntity"/>
-                <owl:someValuesFrom rdf:resource="&odo;ECSO_00000501"/>
+                <owl:onProperty rdf:resource="&oboe-core;measuresCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="&odo;ECSO_00000511"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;measuresCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="&odo;ECSO_00000511"/>
+                <owl:onProperty rdf:resource="&oboe-core;measuresEntity"/>
+                <owl:someValuesFrom rdf:resource="&odo;ECSO_00000501"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:definition>Height of a tree, by various methods.</skos:definition>
@@ -2640,14 +2649,14 @@ Google (no ref to src material)</odo:ECSO_01000003>
         <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;measuresEntity"/>
-                <owl:someValuesFrom rdf:resource="&odo;ECSO_00000501"/>
+                <owl:onProperty rdf:resource="&oboe-core;measuresCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="&odo;ECSO_00000509"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;measuresCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="&odo;ECSO_00000509"/>
+                <owl:onProperty rdf:resource="&oboe-core;measuresEntity"/>
+                <owl:someValuesFrom rdf:resource="&odo;ECSO_00000501"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <odo:ECSO_01000001>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
@@ -2788,6 +2797,12 @@ https://en.wikipedia.org/wiki/Tree_measurement</odo:ECSO_01000003>
     <!-- http://purl.obolibrary.org/obo/ENVO_01000307 -->
 
     <owl:Class rdf:about="&obo;ENVO_01000307"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000001 -->
+
+    <rdf:Description rdf:about="&obo;PATO_0000001"/>
     
 
 
@@ -3572,21 +3587,21 @@ note: ENVO also references LTER:41</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&odo;ECSO_00000309"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000310"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000311"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000312"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000313"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&odo;ECSO_00000012"/>
             <rdf:Description rdf:about="&odo;ECSO_00000013"/>
             <rdf:Description rdf:about="&odo;ECSO_00000014"/>
             <rdf:Description rdf:about="&odo;ECSO_00000015"/>
             <rdf:Description rdf:about="&odo;ECSO_00000016"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&odo;ECSO_00000309"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000310"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000311"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000312"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000313"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
