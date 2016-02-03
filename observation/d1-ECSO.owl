@@ -53,6 +53,7 @@
         <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.1/oboe.owl"/>
         <owl:imports rdf:resource="http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf"/>
         <owl:imports rdf:resource="https://purl.org/dataone/ontologies/observation/ENVO_import.owl"/>
+        <owl:imports rdf:resource="https://purl.org/dataone/ontologies/observation/PATO_import.owl"/>
         <owl:imports rdf:resource="https://purl.org/dataone/ontologies/observation/UO_import.owl"/>
     </owl:Ontology>
     
@@ -285,6 +286,14 @@ Ideally a definition Source is structured in a well-known and accepted format, t
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#Characteristic -->
+
+    <rdf:Description rdf:about="&oboe-core;Characteristic">
+        <owl:equivalentClass rdf:resource="&obo;PATO_0000001"/>
+    </rdf:Description>
     
 
 
@@ -2727,6 +2736,12 @@ https://en.wikipedia.org/wiki/Tree_measurement</odo:ECSO_01000003>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/PATO_0000001 -->
+
+    <rdf:Description rdf:about="&obo;PATO_0000001"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/PATO_0001305 -->
 
     <rdf:Description rdf:about="&obo;PATO_0001305">
@@ -4017,21 +4032,21 @@ note: ENVO also references LTER:41</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&odo;ECSO_00000309"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000310"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000311"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000312"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000313"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&odo;ECSO_00000012"/>
             <rdf:Description rdf:about="&odo;ECSO_00000013"/>
             <rdf:Description rdf:about="&odo;ECSO_00000014"/>
             <rdf:Description rdf:about="&odo;ECSO_00000015"/>
             <rdf:Description rdf:about="&odo;ECSO_00000016"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&odo;ECSO_00000309"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000310"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000311"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000312"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000313"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
