@@ -6,8 +6,8 @@
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY obo "http://purl.obolibrary.org/obo/" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY ecso "http://purl.dataone.org/odo/ECSO_" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
@@ -22,14 +22,14 @@
      xml:base="&odo;ECSO_"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:skosdl="http://www.w3.org/TR/skos-reference/skos-owl1-dl#"
-     xmlns:ecso="http://purl.dataone.org/odo/ECSO_"
+     xmlns:ecso="&odo;ECSO_"
      xmlns:oboe-characteristics="http://ecoinformatics.org/oboe/oboe.1.1/oboe-characteristics.owl#"
      xmlns:odo="http://purl.dataone.org/odo/"
-     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:oboe-core="http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#">
@@ -47,10 +47,10 @@
         <dc:contributor rdf:datatype="&xsd;string">system</dc:contributor>
         <owl:versionInfo>0.9</owl:versionInfo>
         <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.1/oboe.owl"/>
-        <owl:imports rdf:resource="http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf"/>
         <owl:imports rdf:resource="http://purl.dataone.org/obo/ENVO_import.owl"/>
         <owl:imports rdf:resource="http://purl.dataone.org/obo/PATO_import.owl"/>
         <owl:imports rdf:resource="http://purl.dataone.org/obo/UO_import.owl"/>
+        <owl:imports rdf:resource="http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf"/>
     </owl:Ontology>
     
 
@@ -451,12 +451,12 @@ For most purposes (including this one) the two can be the same. It&#39;s most pr
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000011"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&odo;ECSO_00000339"/>
+                        <owl:onProperty rdf:resource="&odo;ECSO_00000340"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&odo;ECSO_00000327"/>
-                                    <rdf:Description rdf:about="&odo;ECSO_00000329"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000323"/>
+                                    <rdf:Description rdf:about="&obo;CHEBI_33582"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
@@ -469,12 +469,12 @@ For most purposes (including this one) the two can be the same. It&#39;s most pr
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&odo;ECSO_00000011"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&odo;ECSO_00000340"/>
+                        <owl:onProperty rdf:resource="&odo;ECSO_00000339"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&odo;ECSO_00000323"/>
-                                    <rdf:Description rdf:about="&obo;CHEBI_33582"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000327"/>
+                                    <rdf:Description rdf:about="&odo;ECSO_00000329"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
@@ -747,7 +747,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000043">
         <rdfs:label>Total_Living_Biomass_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000513"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Total carbon content of the living biomass (leaves+roots+wood)</skos:definition>
@@ -916,7 +916,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000057">
         <rdfs:label>Size_Of_Each_Carbon_Pool_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000513"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Total size of each carbon pool vertically integrated over the entire soil column</skos:definition>
@@ -952,7 +952,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000060">
         <rdfs:label>Total_Soil_Carbon_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000513"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <skos:definition>Total soil and litter carbon content vertically integrated over the enire soil column</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
@@ -1000,7 +1000,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000064">
         <rdfs:label>Gross_Primary_Productivity_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000200"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>MsTMIP Output: Rate of photosynthesis (always positive)</skos:definition>
         <odo:ECSO_01000001>mob</odo:ECSO_01000001>
@@ -1108,7 +1108,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000073">
         <rdfs:label>Above_Ground_Woody_Biomass_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000513"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Total above ground wood biomass</skos:definition>
@@ -1144,7 +1144,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000076">
         <rdfs:label>Net_Ecosystem_Exchange_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000200"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <skos:definition>Net Ecosystem Exchange (NEE=HeteroResp+AutoResp-GPP, positive into atmosphere)</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -1182,7 +1182,7 @@ synonyms: NPP</rdfs:comment>
 
     <owl:Class rdf:about="&odo;ECSO_00000079">
         <rdfs:label>Total_Evaporation_MOV</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000514"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <skos:definition>Sum of all evaporation sources (positive into atmosphere)</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -2292,7 +2292,7 @@ ALso see PATO:0000119</odo:ECSO_01000003>
     <!-- http://purl.dataone.org/odo/ECSO_00000513 -->
 
     <owl:Class rdf:about="&odo;ECSO_00000513">
-        <rdfs:label>biomass_MeasurementType</rdfs:label>
+        <rdfs:label>biomass</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
     </owl:Class>
     
@@ -2312,6 +2312,18 @@ ALso see PATO:0000119</odo:ECSO_01000003>
     <owl:Class rdf:about="&odo;ECSO_00000515">
         <rdfs:label>depth</rdfs:label>
         <rdfs:subClassOf rdf:resource="&oboe-characteristics;Length"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000516 -->
+
+    <owl:Class rdf:about="&odo;ECSO_00000516">
+        <rdfs:label>&#39;Soil heterotrophic respiration under manipulated conditions&#39;</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000532"/>
+        <skos:definition>The respiration rate of heterotrophic organisms (animals and microbes) summed per unit area and time, occuring in soil, and during a experiment in which some condition has been manipulated or altered to understand its effect.</skos:definition>
+        <odo:ECSO_01000001>Margaret O&#39;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
+        <odo:ECSO_01000003>ECSO_00000011 (Carbon Flux), adapted for (a) CO2 and (b) a manipulated experiment</odo:ECSO_01000003>
     </owl:Class>
     
 
@@ -2390,7 +2402,7 @@ http://www.merriam-webster.com/dictionary/earth</odo:ECSO_01000003>
 
     <owl:Class rdf:about="&odo;ECSO_00000531">
         <rdfs:label>Total_Soil_Carbon</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&odo;ECSO_00000513"/>
+        <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
     </owl:Class>
     
 
@@ -2533,14 +2545,14 @@ potential synonyms: development, maturation, growing, germination, sprouting; bl
         <rdfs:subClassOf rdf:resource="&oboe-core;MeasurementType"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;measuresCharacteristic"/>
-                <owl:someValuesFrom rdf:resource="&odo;ECSO_00000511"/>
+                <owl:onProperty rdf:resource="&oboe-core;measuresEntity"/>
+                <owl:someValuesFrom rdf:resource="&odo;ECSO_00000501"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&oboe-core;measuresEntity"/>
-                <owl:someValuesFrom rdf:resource="&odo;ECSO_00000501"/>
+                <owl:onProperty rdf:resource="&oboe-core;measuresCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="&odo;ECSO_00000511"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <skos:definition>Height of a tree, by various methods.</skos:definition>
@@ -4008,6 +4020,16 @@ note: ENVO also references LTER:41</rdfs:comment>
     <rdf:Description>
         <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="&odo;ECSO_00000012"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000013"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000014"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000015"/>
+            <rdf:Description rdf:about="&odo;ECSO_00000016"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="&odo;ECSO_00000097"/>
             <rdf:Description rdf:about="&odo;ECSO_00000098"/>
             <rdf:Description rdf:about="&odo;ECSO_00000099"/>
@@ -4023,16 +4045,6 @@ note: ENVO also references LTER:41</rdfs:comment>
             <rdf:Description rdf:about="&odo;ECSO_00000109"/>
             <rdf:Description rdf:about="&odo;ECSO_00000110"/>
             <rdf:Description rdf:about="&odo;ECSO_00000111"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="&odo;ECSO_00000012"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000013"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000014"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000015"/>
-            <rdf:Description rdf:about="&odo;ECSO_00000016"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
