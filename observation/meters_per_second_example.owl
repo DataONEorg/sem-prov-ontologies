@@ -1,0 +1,408 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/jimmccusker/ontologies/2016/4/untitled-ontology-7#"
+     xml:base="http://www.semanticweb.org/jimmccusker/ontologies/2016/4/untitled-ontology-7"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:ns="http://creativecommons.org/ns#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:envo="http://purl.obolibrary.org/obo/envo#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:oboe-core="http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:pato="http://purl.obolibrary.org/obo/pato#"
+     xmlns:uo="http://purl.obolibrary.org/obo/uo#"
+     xmlns:odo="http://purl.dataone.org/odo/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/jimmccusker/ontologies/2016/4/untitled-ontology-7">
+        <owl:imports rdf:resource="http://purl.dataone.org/odo/ECSO_"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.1/oboe-characteristics.owl#Length -->
+
+    <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.1/oboe-characteristics.owl#Length">
+        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/PATO_0001708"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.1/oboe-characteristics.owl#Mass -->
+
+    <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.1/oboe-characteristics.owl#Mass">
+        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/PATO_0000125"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.1/oboe-characteristics.owl#Speed -->
+
+    <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.1/oboe-characteristics.owl#Speed">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000008"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002242"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#BaseUnit -->
+
+    <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#BaseUnit">
+        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/UO_0000045"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#Unit -->
+
+    <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#Unit">
+        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/UO_0000000"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.1/oboe-standards.owl#Ampere -->
+
+    <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.1/oboe-standards.owl#Ampere">
+        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/UO_0000011"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.1/oboe-standards.owl#Candela -->
+
+    <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.1/oboe-standards.owl#Candela">
+        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/UO_0000014"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.1/oboe-standards.owl#Kelvin -->
+
+    <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.1/oboe-standards.owl#Kelvin">
+        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/UO_0000012"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.1/oboe-standards.owl#Kilogram -->
+
+    <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.1/oboe-standards.owl#Kilogram">
+        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/UO_0000009"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.1/oboe-standards.owl#Meter -->
+
+    <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.1/oboe-standards.owl#Meter">
+        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/UO_0000008"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.1/oboe-standards.owl#MicromolePerLiter -->
+
+    <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.1/oboe-standards.owl#MicromolePerLiter">
+        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/UO_0000064"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.1/oboe-standards.owl#MillimolePerLiter -->
+
+    <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.1/oboe-standards.owl#MillimolePerLiter">
+        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/UO_0000063"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.1/oboe-standards.owl#Mole -->
+
+    <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.1/oboe-standards.owl#Mole">
+        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/UO_0000013"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.1/oboe-standards.owl#MolePerLiter -->
+
+    <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.1/oboe-standards.owl#MolePerLiter">
+        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/UO_0000062"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.1/oboe-standards.owl#Second -->
+
+    <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.1/oboe-standards.owl#Second">
+        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/UO_0000010"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000511 -->
+
+    <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000511">
+        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/PATO_0000119"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000515 -->
+
+    <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000515">
+        <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/PATO_0001595"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000119 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000119"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0000125 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000125"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001595 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001595"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001708 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001708"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000000 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000000"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000002 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000002">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#standardFor"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#Measurement"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#ofCharacteristic"/>
+                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.1/oboe-characteristics.owl#Mass"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000003 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000003">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#standardFor"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#Measurement"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#ofCharacteristic"/>
+                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.1/oboe-characteristics.owl#Time"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000008 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000008"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000009 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000009"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000010 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000010"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000011 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000011"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000012 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000012"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000013 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000013"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000014 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000014"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000045 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000045"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000047 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000047">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#standardFor"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#Measurement"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#ofCharacteristic"/>
+                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.1/oboe-characteristics.owl#Area"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000051 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000051">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#standardFor"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#Measurement"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#ofCharacteristic"/>
+                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.1/oboe-characteristics.owl#AmountOfSubstanceConcentration"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000062 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000062"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000063 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000063"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000064 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000064"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/UO_0000095 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000095">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#standardFor"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#Measurement"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#ofCharacteristic"/>
+                                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.1/oboe-characteristics.owl#Volume"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.1/oboe-standards.owl#MeterPerSecond">
+        <skos:altLabel>m/s</skos:altLabel>
+        <rdfs:label>Meter Per Second</rdfs:label>
+        <skos:altLabel>metre per second</skos:altLabel>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.1.20160306-0033) https://github.com/owlcs/owlapi -->
+
