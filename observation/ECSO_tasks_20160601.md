@@ -48,4 +48,5 @@ Algorithm tasks
 5. Integrate and evaluate the following ontology matching algorithms: **Booma and Jim**
 	1. AgreementMaker
 	2. Custom cosine similarity and edit distance comparison matching
+6. Improve the ontology generation capability around units **Bryce and Jim**
 
