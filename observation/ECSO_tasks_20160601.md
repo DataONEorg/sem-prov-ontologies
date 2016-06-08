@@ -41,4 +41,11 @@ ECSO tasks
 
 Algorithm tasks
 ---------------
-1. task 1
+1. Create a script that uses the EML files to extract annotations. **Jim** Partly complete, need to reproduce what Ben was sending to the ESOR service.
+2. Integrate a Named Entity Recognition (NER) algorithm into ESOR as a preprocessing step to the entity linking service. **Sabita**
+3. Create an ontological representation of the dataset descriptions in EML to use as the input to ontology matching algorithms. ** Booma and Jim** (Done)
+4. Investigate other suggested improvements from Jin Zheng **Zhen**
+5. Integrate and evaluate the following ontology matching algorithms: ** Booma and Jim**
+	1. AgreementMaker
+	2. Custom cosine similarity and edit distance comparison matching
+
