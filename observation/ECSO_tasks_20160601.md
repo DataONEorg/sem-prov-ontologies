@@ -53,6 +53,7 @@ Algorithm tasks
 Status at 6/15/2016
 ----------------
 What we got done last week:
+
 1. Create a script that uses the EML files to extract annotations. (COMPLETE)
 2. Integrate and evaluate the following ontology matching algorithms: Booma and Jim
 	1. AgreementMaker Lite
