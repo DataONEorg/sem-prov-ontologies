@@ -50,3 +50,20 @@ Algorithm tasks
 	2. Custom cosine similarity and edit distance comparison matching
 6. Improve the ontology generation capability around units **Bryce and Jim**
 
+Status at 6/15/2016
+----------------
+What we got done last week:
+1. Create a script that uses the EML files to extract annotations. (COMPLETE)
+2. Integrate and evaluate the following ontology matching algorithms: Booma and Jim
+	1. AgreementMaker Lite
+	2. Similarity Matcher (complete except for a weighting function to combine all of the different scoring strategies)
+3. Found a NER that works well to integrate with Linkipedia
+
+Our goals for this coming week:
+
+1. Finish writing the weighting function for SimilarityMatcher.
+2. Write evaluation scripts for AgreementMaker Lite and SimilarityMatcher (and run them).
+3. Integrate the named entity recogniser (NER) into the annotate web service on linkipedia.
+4. Improve the ontology generation capability around units Bryce and Jim
+5. Come up with a proposed RDF annotation format for ESOR to return. 
+	1. repeatable attribute identifer should be something like: datatable_1/attribute_1
