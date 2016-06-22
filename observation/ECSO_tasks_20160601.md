@@ -42,10 +42,10 @@ ECSO tasks
 Algorithm tasks
 ---------------
 1. Create a script that uses the EML files to extract annotations. **Jim** Partly complete, need to reproduce what Ben was sending to the ESOR service.
-2. Integrate a Named Entity Recognition (NER) algorithm into ESOR as a preprocessing step to the entity linking service. **Sabita**
+2. Integrate a Named Entity Recognition (NER) algorithm into ESOR as a preprocessing step to the entity linking service. **Zhen** (done except debugging and evaluation) 
 3. Create an ontological representation of the dataset descriptions in EML to use as the input to ontology matching algorithms. **Booma and Jim** (Done)
 4. Investigate other suggested improvements from Jin Zheng **Zhen**
-5. Integrate and evaluate the following ontology matching algorithms: **Booma and Jim**
+5. Integrate and evaluate the following ontology matching algorithms: **Booma, Sabita, and Jim** (complete except for evaluation)
 	1. AgreementMaker
 	2. Custom cosine similarity and edit distance comparison matching
 6. Improve the ontology generation capability around units **Bryce and Jim**
@@ -68,3 +68,23 @@ Our goals for this coming week:
 4. Improve the ontology generation capability around units Bryce and Jim
 5. Come up with a proposed RDF annotation format for ESOR to return. 
 	1. repeatable attribute identifer should be something like: datatable_1/attribute_1
+
+Present: Jim, Ben, Bryce, Booma, Sabita, Zhen
+
+Existing roadmap: https://github.com/DataONEorg/sem-prov-ontologies/blob/master/observation/ECSO_tasks_20160601.md
+
+Status at 6/22/2016
+----------------
+
+
+What we got done last week:
+
+1. Finish writing the weighting function for SimilarityMatcher.
+
+Our goals for this coming week:
+
+1. Come up with a proposed RDF annotation format for ESOR to return. 
+  1. repeatable attribute identifer should be something like: datatable_1/attribute_1
+2. Write evaluation scripts for AgreementMaker Lite and SimilarityMatcher (and run them). ---I could start looking into this (Sabita)
+3. Integrate the named entity recogniser (NER) into the annotate web service on linkipedia (and evaluate using dataone_entity_linking_eml.py). (almost complete)
+4. Improve the ontology generation capability around units Bryce and Jim
