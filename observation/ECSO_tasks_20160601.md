@@ -37,7 +37,11 @@ ECSO tasks
 	
 
 
-
+Annotation tasks
+--------------
+1. Reannotate test corpus F as needed, with new classes. **STUDENT, BRYCE, MARGARET**
+	1. Describe annotation process **MARGARET** 
+	
 
 Algorithm tasks
 ---------------
