@@ -1194,7 +1194,7 @@
     <!-- http://purl.dataone.org/odo/ECSO_00000090 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000090">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000082"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000555"/>
     </owl:Class>
     
 
@@ -2171,6 +2171,18 @@ There are variants for both the numerator and denominator. In oceanography, conc
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000555"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000002"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <odo:ECSO_01000003>https://en.wikipedia.org/wiki/Biomass_(ecology)
 
 IUPAC, Compendium of Chemical Terminology, 2nd ed. (the &quot;Gold Book&quot;) (1997). Online corrected version:  (2006–) &quot;biomass&quot;.</odo:ECSO_01000003>
@@ -2225,6 +2237,22 @@ In transport phenomena (heat transfer, mass transfer and fluid dynamics), flux i
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000517">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00002006"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label>moisture</rdfs:label>
     </owl:Class>
     
@@ -2261,6 +2289,22 @@ In transport phenomena (heat transfer, mass transfer and fluid dynamics), flux i
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000521">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000329"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:label>Total_Soil_Carbon_concentration</rdfs:label>
         <skos:definition>total amount of carbon (usually mass) per volume of soil</skos:definition>
     </owl:Class>
@@ -2355,6 +2399,22 @@ this probably should be in OBOE, and is a synomym of AmountOfSubstanceConcentrat
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000530">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000323"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment>EquivalentTo: concentration and measurementFor only Observation and ofEntity only CO2</rdfs:comment>
         <rdfs:label>CO2 Concentration</rdfs:label>
     </owl:Class>
@@ -2773,6 +2833,16 @@ mass per area.</skos:definition>
         <odo:ECSO_01000003>http://www.ontobee.org/ontology/PATO?iri=http://purl.obolibrary.org/obo/PATO_0002390</odo:ECSO_01000003>
         <rdfs:label>radius</rdfs:label>
         <skos:definition>A length quality which is equal to the length of any straight line segment that passes from the center of a circle to any endpoint on the circular boundary. The radius is half of the diameter</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000555 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000555">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000082"/>
+        <rdfs:comment>This class is a grouping for all protocols that measure the biomass of something. These might include total weight of (e.g.) a sample of grass or fish, or total carbon in a sample, where the size of the sample is not part of the observation. Hence, unit should be a mass unit only.</rdfs:comment>
+        <rdfs:label>Biomass Method</rdfs:label>
     </owl:Class>
     
 
@@ -3725,8 +3795,8 @@ mass per area.</skos:definition>
         <odo:ECSO_01000004>Carbon fluxes are the movement of Carbon from one place (Source) to another (Sink).  Carbon fluxes all have dimensions of {mass or amount of} Carbon per area (or volume) per time
 
 biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than kg to quantify the amount of Carbon, whereas Climate-oriented projects use kg</odo:ECSO_01000004>
-        <skos:definition>The rate at which a mass of carbon moves to or from a particular component of the ecosystem per unit time.</skos:definition>
         <odo:ECSO_01000003>Litton, C.M. et al. Carbon allocation in forest ecosystems. Global Change Biology. V 13 I 10. pp. 2089 - 2109. July 2007.</odo:ECSO_01000003>
+        <skos:definition>The rate at which a mass of carbon moves to or from a particular component of the ecosystem per unit time.</skos:definition>
         <odo:ECSO_01000005>unknown.</odo:ECSO_01000005>
         <rdfs:label>Carbon Flux</rdfs:label>
     </rdf:Description>
@@ -3740,8 +3810,8 @@ biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than 
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000013">
         <odo:ECSO_01000003>Johnson, E.A. and Miyanishi, K. Forest Fires: Behavior and Ecological Effects. Academic Press. 2001</odo:ECSO_01000003>
         <skos:definition>The mass of carbon released from burning vegetation per unit time.</skos:definition>
-        <odo:ECSO_01000004>Fire Carbon Flux is a measure of carbon released into the atmosphere due to fire (MPS, 2015)</odo:ECSO_01000004>
         <rdfs:label>Fire Carbon Flux</rdfs:label>
+        <odo:ECSO_01000004>Fire Carbon Flux is a measure of carbon released into the atmosphere due to fire (MPS, 2015)</odo:ECSO_01000004>
         <skos:altLabel>Fire Emissions</skos:altLabel>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
     </rdf:Description>
@@ -3750,8 +3820,8 @@ biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than 
         <rdfs:label>Net Ecosystem Exchange Carbon Flux</rdfs:label>
         <skos:altLabel>NEE</skos:altLabel>
         <skos:definition>The magnitude of carbon sources and sinks is defined as the vertical exchange of CO2 between the surface (land or ocean) and the atmosphere.</skos:definition>
-        <odo:ECSO_01000003>Hayes, D.J. et al. Reconciling estimates of the contemporary North American carbon balance among terrestrial biosphere models, atmospheric inversions, and a new approach for estimating net ecosystem exchange from inventory-based data. Global Change Biology. V 8, i 4. pp. 1282-1299. April 2012. DOI: 10.1111/j.1365-2486.2011.02627.x</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
+        <odo:ECSO_01000003>Hayes, D.J. et al. Reconciling estimates of the contemporary North American carbon balance among terrestrial biosphere models, atmospheric inversions, and a new approach for estimating net ecosystem exchange from inventory-based data. Global Change Biology. V 8, i 4. pp. 1282-1299. April 2012. DOI: 10.1111/j.1365-2486.2011.02627.x</odo:ECSO_01000003>
         <skos:altLabel>Net Ecosystem Exchange</skos:altLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000015">
@@ -3759,8 +3829,8 @@ biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than 
 Gross primary production (GPP) is the _amount_ of chemical energy as biomass that primary producers create in a given length of time. (GPP is sometimes confused with Gross Primary productivity, which is the _rate_ at which photosynthesis or chemosynthesis occurs.)
 
 For most purposes (including this one) the two can be the same. It&apos;s most practical to measure production over a given time interval and area (or volume), and that amounts to an areal (or volumetric) rate.</rdfs:comment>
-        <rdfs:label>Primary Production Carbon Flux</rdfs:label>
         <skos:definition>The process of carbon fixation by autotrophic carbon-fixing tissues per unit ground or water area and time.</skos:definition>
+        <rdfs:label>Primary Production Carbon Flux</rdfs:label>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <skos:altLabel>Primary productivity</skos:altLabel>
         <skos:altLabel>Primary production</skos:altLabel>
@@ -3794,11 +3864,11 @@ For most purposes (including this one) the two can be the same. It&apos;s most p
 Also called photosynthetic rate, or carbon fixation rate.</rdfs:comment>
         <skos:altLabel>Gross Primary Production</skos:altLabel>
         <skos:altLabel>Gross Primary Productivity</skos:altLabel>
-        <odo:ECSO_01000003>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</odo:ECSO_01000003>
         <rdfs:comment>primary production before the autotrphs&apos; own respiration is subtracted.
 also called photosynthetic rate, or carbon fixation rate.
 
 Synonyms: GPP</rdfs:comment>
+        <odo:ECSO_01000003>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <skos:definition>The sum of gross carbon fixation by autotrophic carbon-fixing tissues per unit ground or water area and time.</skos:definition>
         <skos:altLabel>GPP</skos:altLabel>
@@ -3824,8 +3894,8 @@ synonyms: NPP</rdfs:comment>
         <rdfs:comment>Carbon Pools are amounts of carbon in the system. measurements of carbon pools would have dimensions of mass Carbon per area (eg, kg per m2
 (can these be moles? can they just be biomass?) 
 {contributor, citation unkknown, questions are magaret&apos;s}</rdfs:comment>
-        <rdfs:label>Carbon Pool</rdfs:label>
         <odo:ECSO_01000004>Carbon Pools are reservoirs in the system with the capacity to exchange carbon. Usually scientists are interested in the size of pools, and the movement of carbon between pools. The dimensions of a carbon pool are likely to be mass or moles Carbon per area or volume (eg, kg per m2).</odo:ECSO_01000004>
+        <rdfs:label>Carbon Pool</rdfs:label>
         <skos:definition>Carbon Pools are amounts of carbon in the system. measurements of carbon pools would have dimensions of mass Carbon per area (eg, kg per m2</skos:definition>
         <skos:definition>A reservoir with the capacity to store and release carbon, such as soil, terrestrial vegetation, the ocean, and the atmosphere {contributed by margaret, from</skos:definition>
         <skos:altLabel>Name of Each Carbon Pool</skos:altLabel>
@@ -3833,8 +3903,8 @@ synonyms: NPP</rdfs:comment>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000027">
         <skos:definition>The mass of carbon contained within the top layer of the earth&apos;s surface in which plants can grow, consisting of rock and mineral particles mixed with decaying organic matter and having the capability of retaining water.</skos:definition>
         <skos:altLabel>Total Soil Carbon</skos:altLabel>
-        <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <rdfs:label>Soil Carbon Pool</rdfs:label>
+        <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <odo:ECSO_01000003>&quot;soil.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Feb. 2015 http-www.thefreedictionary.com/soil</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000028">
@@ -3872,8 +3942,8 @@ synonyms: NPP</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000034">
         <odo:ECSO_01000003>Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</odo:ECSO_01000003>
-        <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <odo:ECSO_01000008>leaf decomposition</odo:ECSO_01000008>
+        <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <odo:ECSO_01000008>leaves</odo:ECSO_01000008>
         <rdfs:comment>synonyms from LTER searched terms (mob, 2015-03-24)</rdfs:comment>
         <rdfs:label>Leaf Litter Carbon Pool</rdfs:label>
@@ -3944,8 +4014,8 @@ synonyms: NPP</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000051">
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
-        <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Surface pressure</skos:definition>
+        <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <rdfs:label>Surface_Pressure_MOV</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000052">
@@ -3955,8 +4025,8 @@ synonyms: NPP</rdfs:comment>
         <skos:definition>Soil water content in each soil layer, including liquid, vapor and ice</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000053">
-        <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <rdfs:label>Average_Layer_Soil_Temperature_MOV</rdfs:label>
+        <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Average soil temperature in each soil layer</skos:definition>
     </rdf:Description>
@@ -3968,8 +4038,8 @@ synonyms: NPP</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000055">
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
-        <rdfs:label>Soil_Layer_Top_Depth_MOV</rdfs:label>
         <skos:definition>Depth from soil surface to top of soil layer</skos:definition>
+        <rdfs:label>Soil_Layer_Top_Depth_MOV</rdfs:label>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000056">
@@ -4022,8 +4092,8 @@ synonyms: NPP</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000064">
         <odo:ECSO_01000001>mob</odo:ECSO_01000001>
-        <skos:definition>MsTMIP Output: Rate of photosynthesis (always positive)</skos:definition>
         <rdfs:label>Gross_Primary_Productivity_MOV</rdfs:label>
+        <skos:definition>MsTMIP Output: Rate of photosynthesis (always positive)</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000065">
@@ -4034,8 +4104,8 @@ synonyms: NPP</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000066">
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
-        <skos:definition>Depth from soil surface to bottom of soil layer</skos:definition>
         <rdfs:label>Soil_Layer_Bottom_Depth_MOV</rdfs:label>
+        <skos:definition>Depth from soil surface to bottom of soil layer</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000067">
@@ -4046,8 +4116,8 @@ synonyms: NPP</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000068">
         <skos:definition>Thaw depth; depth to zero centigrade isotherm in permafrost</skos:definition>
-        <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <rdfs:label>Active_Layer_Thickness_MOV</rdfs:label>
+        <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000069">
@@ -4224,8 +4294,8 @@ So light + dark = GPP (or about as close as you can get with a field measurement
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000301">
         <rdfs:label>Aboveground Net Primary Production Carbon Flux</rdfs:label>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
-        <odo:ECSO_01000003>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000003>
         <skos:definition>Gross primary productivity (GPP) minus autotrophic respiration (AR) in plant segments other than the roots, e.g. leaves and shoots.</skos:definition>
+        <odo:ECSO_01000003>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000308">
         <skos:definition>Functional levels defined here:
@@ -4262,9 +4332,9 @@ maybe others.
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000312">
         <odo:ECSO_01000001>Margaret O&apos;brien</odo:ECSO_01000001>
-        <rdfs:label>Organism</rdfs:label>
         <skos:definition>An organism is a single indivual. do we really have any carbon cycle data for a single organism? maybe not.
 no ref today.</skos:definition>
+        <rdfs:label>Organism</rdfs:label>
         <rdfs:comment>This class should be incorporated into ENVO.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000313">
@@ -4283,8 +4353,8 @@ no ref today.</skos:definition>
         <skos:definition>Describes the physical state of a substance</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000319">
-        <rdfs:label>has Location</rdfs:label>
         <odo:ECSO_01000003>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000003>
+        <rdfs:label>has Location</rdfs:label>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <skos:definition>Defines where a class exists or takes place</skos:definition>
     </rdf:Description>
@@ -4354,8 +4424,8 @@ As description Annotation properties are often not as rigorous, and hence looser
         <odo:ECSO_01000001>mobb</odo:ECSO_01000001>
         <odo:ECSO_01000003>ad hoc</odo:ECSO_01000003>
         <skos:definition>has_Exact_Synonym is an OWL annotation property that holds an alternate name or lexical variant of an owl class.</skos:definition>
-        <odo:ECSO_01000004>The DataONE carbon flux ontology uses synonyms for terms that may not be well defined. But we know that they are used, and refer to an owl class.  I.e., a concept can have a synonym, but a concept should not be a synonym.</odo:ECSO_01000004>
         <odo:ECSO_01000005>Margaret O&apos;Brien, 2015-03-18</odo:ECSO_01000005>
+        <odo:ECSO_01000004>The DataONE carbon flux ontology uses synonyms for terms that may not be well defined. But we know that they are used, and refer to an owl class.  I.e., a concept can have a synonym, but a concept should not be a synonym.</odo:ECSO_01000004>
         <rdfs:comment>We are not planning to use has_Broad_Synonym or has_Narrow_Synonym at this time. although other ontologies do. the concepts of &quot;broad&quot; and &quot;narrow&quot; imply relationships that could be better described with the class hierarchy.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_01000007">
