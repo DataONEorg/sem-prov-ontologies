@@ -252,14 +252,6 @@
     
 
 
-    <!-- http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#AmountOfSubstanceConcentration -->
-
-    <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#AmountOfSubstanceConcentration">
-        <owl:equivalentClass rdf:resource="http://purl.dataone.org/odo/ECSO_00000525"/>
-    </rdf:Description>
-    
-
-
     <!-- http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#Length -->
 
     <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#Length"/>
@@ -2109,7 +2101,7 @@ W. Paul Vogt, Dianne C. Gardner, Lynne M. Haeffele. 2012. When to Use What Resea
     <!-- http://purl.dataone.org/odo/ECSO_00000508 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000508">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000306"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000570"/>
         <odo:ECSO_01000001>Margaret O&amp;apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
         <odo:ECSO_01000003>Adapted from 
 https://en.wikipedia.org/wiki/Seaweed
@@ -2909,7 +2901,7 @@ mass per area.</skos:definition>
     <!-- http://purl.dataone.org/odo/ECSO_00000556 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000556">
-        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Characteristic"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasuredCharacteristic"/>
         <rdfs:label>dry_weight</rdfs:label>
     </owl:Class>
     
@@ -2928,7 +2920,7 @@ mass per area.</skos:definition>
     <!-- http://purl.dataone.org/odo/ECSO_00000558 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000558">
-        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Characteristic"/>
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasuredCharacteristic"/>
         <odo:ECSO_01000003>https://en.wikipedia.org/wiki/Fluorescence</odo:ECSO_01000003>
         <rdfs:label>fluorescence</rdfs:label>
         <skos:definition>Fluorescence is the emission of light by a substance that has absorbed light or other electromagnetic radiation. It is a form of luminescence. In most cases, the emitted light has a longer wavelength, and therefore lower energy, than the absorbed radiation.</skos:definition>
@@ -2966,6 +2958,177 @@ The most common type of rate is &quot;per unit of time&quot;, such as speed, hea
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000559"/>
         <rdfs:label>temporal rate unit</rdfs:label>
         <skos:definition>Rate units with a denominator in time units.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000562 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000562">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_38101"/>
+        <rdfs:comment>not imported with ENVO import of chemical entity.</rdfs:comment>
+        <rdfs:label>chlorophyll</rdfs:label>
+        <skos:definition>http://purl.obolibrary.org/obo/CHEBI_28966</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000563 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000563">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000562"/>
+        <rdfs:label>chloroplyll-a</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000564 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000564">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_38101"/>
+        <oboInOwl:hasExactSynonym>phaeophytin</oboInOwl:hasExactSynonym>
+        <rdfs:label>pheophytin</rdfs:label>
+        <skos:definition>http://purl.obolibrary.org/obo/CHEBI_8108</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000565 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000565">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33560"/>
+        <odo:ECSO_01000003>http://www.ontobee.org/ontology/ENVO?iri=http://purl.obolibrary.org/obo/CHEBI_27594</odo:ECSO_01000003>
+        <rdfs:label>carbon atom</rdfs:label>
+        <skos:definition>http://purl.obolibrary.org/obo/CHEBI_27594</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000566 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000566">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000565"/>
+        <odo:ECSO_01000003>CHEBI, wikipedia (accessed 2016-06-30)</odo:ECSO_01000003>
+        <rdfs:label>carbon-12</rdfs:label>
+        <skos:definition>carbon-12 atom, ChEBI ID CHEBI:36931
+the most common natural carbon isotope, of mass 12. It is the basis for the accepted scale of atomic mass units.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000567 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000567">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000565"/>
+        <odo:ECSO_01000003>CHEBI, wikipedia (accessed 2016-06-30)</odo:ECSO_01000003>
+        <rdfs:comment>Uses in science: 
+Due to differential uptake in plants as well as marine carbonates of 13C, it is possible to use these isotopic signature in earth science. In aqueous geochemistry, by analyzing the δ13C value of surface and ground waters the source of the water can be identified. This is because atmospheric, carbonate, and plant derived δ13C values all differ with respect to Pee Dee Belemnite (PDB) standard. In biology, the ratio of carbon-13 and carbon-12 isotopes in plant tissues is different depending on the type of plant photosynthesis and this can be used, for example, to determine which types of plants were consumed by animals.</rdfs:comment>
+        <rdfs:label>carbon-13</rdfs:label>
+        <skos:definition>carbon-13 atom, ChEBI ID CHEBI:36928
+natural, stable isotope of carbon with a nucleus containing 6 protons and 7 neutrons.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000568 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000568">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000565"/>
+        <rdfs:comment>Uses in science:
+used in carbon dating and as a tracer in biochemistry.</rdfs:comment>
+        <rdfs:label>carbon-14</rdfs:label>
+        <skos:definition>carbon-14 atom, ChEBI ID CHEBI:36927
+a long-lived naturally occurring radioactive carbon isotope of mass 14 (6 protons and 8 neutrons)</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000569 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000569">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000305"/>
+        <odo:ECSO_01000003>bacteria. Dictionary.com. Dictionary.com Unabridged. Random House, Inc. http://www.dictionary.com/browse/bacteria (accessed: June 30, 2016).</odo:ECSO_01000003>
+        <rdfs:label>Bacteria</rdfs:label>
+        <skos:definition>a very large group of microorganisms comprising one of the three domains of living organisms. They are prokaryotic, unicellular, and either free-living in soil or water or parasites of plants or animals See also prokaryote</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000570 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000570">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000306"/>
+        <odo:ECSO_01000003>http://www.dictionary.com/browse/algae, accessed 2016-06-30</odo:ECSO_01000003>
+        <rdfs:label>Algae</rdfs:label>
+        <skos:altLabel>Alga</skos:altLabel>
+        <skos:definition>any of numerous groups of chlorophyll-containing, mainly aquatic eukaryotic organisms ranging from microscopic single-celled forms to multicellular forms 100 feet (30 meters) or more long, distinguished from plants by the absence of true roots, stems, and leaves and by a lack of nonreproductive cells in the reproductive structures: classified into the six phyla Euglenophyta, Crysophyta, Pyrrophyta, Chlorophyta, Phaeophyta, and Rhodophyta.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000571 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000571">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000155"/>
+        <odo:ECSO_01000003>http://serc.carleton.edu/microbelife/research_methods/biogeochemical/organic_carbon.html</odo:ECSO_01000003>
+        <odo:ECSO_01000006>DOC</odo:ECSO_01000006>
+        <odo:ECSO_01000008>DOM</odo:ECSO_01000008>
+        <odo:ECSO_01000008>dissolved organic material</odo:ECSO_01000008>
+        <rdfs:label>dissolved organic carbon</rdfs:label>
+        <skos:definition>Dissolved organic carbon (DOC) is defined as the organic matter that is able to pass through a filter (filters generally range in size between 0.7 and 0.22 um). See particulate organic carbon.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000572 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000572">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000155"/>
+        <odo:ECSO_01000003>http://www.ecologydictionary.org/PARTICULATE_ORGANIC_MATTER_(POM)</odo:ECSO_01000003>
+        <odo:ECSO_01000006>POC</odo:ECSO_01000006>
+        <odo:ECSO_01000008>POM</odo:ECSO_01000008>
+        <odo:ECSO_01000008>particulate organic matter</odo:ECSO_01000008>
+        <rdfs:label>particulate organic carbon</rdfs:label>
+        <skos:definition>Particulate organic carbon (POC), or particulate organic matter (POM) is that organic matter suspended in water, and that is not able to pass through a filter (filters generally range in size between 0.7 and 0.22 um). Usually plant or animal origin.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000573 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000573">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000155"/>
+        <odo:ECSO_01000003>Plant Ontology, PO:0000003</odo:ECSO_01000003>
+        <odo:ECSO_01000006>whole plant</odo:ECSO_01000006>
+        <rdfs:label>plant</rdfs:label>
+        <skos:definition>Defined by the Plant Ontology as a plant structure (PO:0005679) which is a whole organism. PO label is &apos;whole plant&apos;</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000574 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000574">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000281"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001309"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>This is a grouping class, analogous to &apos;lake layer&apos; and &apos;marine layer&apos;</rdfs:comment>
+        <rdfs:label>soil layer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00000575 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000575">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000574"/>
+        <odo:ECSO_01000003>https://en.wikipedia.org/wiki/Active_layer</odo:ECSO_01000003>
+        <rdfs:label>soil active layer</rdfs:label>
+        <skos:definition>In environments containing permafrost, the active layer is the top layer of soil that thaws during the summer and freezes again during the autumn.</skos:definition>
     </owl:Class>
     
 
