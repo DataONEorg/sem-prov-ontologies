@@ -27,6 +27,7 @@ ECSO tasks
 		2. Subclassing: move to appropriate trees **MARGARET, MARK**
 3. Existing carbon-cycling related classes
 	1. Add or subclass per notes **MARGARET, MARK**
+	2. Char, entity, std for all. **MARGARET, MARK**
 4. MsTMIP classes
 	1. Confirm that all Sophie’s new info has been incorporated **STUDENT**
 5. PATO qualities - OBOE characteristics
