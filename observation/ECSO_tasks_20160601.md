@@ -31,7 +31,7 @@ ECSO tasks
 4. MsTMIP classes
 	1. Confirm that all Sophie’s new info has been incorporated **STUDENT**
 5. PATO qualities - OBOE characteristics
-	1. equate where appropriate **JIM, MARGARET**
+	1. equate where appropriate **JIM, MARGARET** (done, Ben)
 6. Synonyms/alternate labels
 	1. file of suggested (by wikipedia) synonyms **JIM**
 	2. Confirm and incorporate **BRYCE**
