@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.dataone.org/odo/ECSO_/"
-     xml:base="http://purl.dataone.org/odo/ECSO_/"
+<rdf:RDF xmlns="http://purl.dataone.org/odo/ECSO_#"
+     xml:base="http://purl.dataone.org/odo/ECSO_"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:ns="http://creativecommons.org/ns#"
@@ -27,6 +27,7 @@
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology was generated from an ontology revision in WebProtege http://odo.nceas.ucsb.edu</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ontology in progress for DataONE MSTMip/LTER Carbon cycling use cases</rdfs:comment>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">Mar 31, 2015 2:04:13 PM</dc:date>
+        <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">Sara Lafia, http://orcid.org/0000-0002-5896-7295</dc:contributor>
         <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chase LeCroy, orcid.org/0000-0002-1338-9436</dc:contributor>
         <dc:contributor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SophieHou, orcid.org/0000-0002-8087-1775</dc:contributor>
         <owl:versionInfo>0.9</owl:versionInfo>
@@ -270,6 +271,14 @@
 
     <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Characteristic">
         <owl:equivalentClass rdf:resource="http://purl.obolibrary.org/obo/PATO_0000001"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Index -->
+
+    <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Index">
+        <owl:equivalentClass rdf:resource="http://purl.dataone.org/odo/ECSO_#index_measurementType"/>
     </rdf:Description>
     
 
@@ -844,6 +853,7 @@
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000045">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#proportion_measurementType"/>
     </owl:Class>
     
 
@@ -870,6 +880,7 @@
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000048">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#proportion_measurementType"/>
     </owl:Class>
     
 
@@ -878,6 +889,7 @@
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000049">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#temperature_MeasurementType"/>
     </owl:Class>
     
 
@@ -886,6 +898,7 @@
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000050">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#index_measurementType"/>
     </owl:Class>
     
 
@@ -902,6 +915,7 @@
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000052">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#proportion_measurementType"/>
     </owl:Class>
     
 
@@ -910,6 +924,7 @@
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000053">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#temperature_MeasurementType"/>
     </owl:Class>
     
 
@@ -917,6 +932,7 @@
     <!-- http://purl.dataone.org/odo/ECSO_00000054 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000054">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000519"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
     </owl:Class>
     
@@ -946,6 +962,7 @@
     <!-- http://purl.dataone.org/odo/ECSO_00000056 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000056">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000519"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
     </owl:Class>
     
@@ -991,6 +1008,7 @@
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000059">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#proportion_measurementType"/>
     </owl:Class>
     
 
@@ -1028,6 +1046,7 @@
     <!-- http://purl.dataone.org/odo/ECSO_00000062 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000062">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000519"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
     </owl:Class>
     
@@ -1037,6 +1056,7 @@
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000063">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#proportion_measurementType"/>
     </owl:Class>
     
 
@@ -1054,6 +1074,7 @@
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000065">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#named_measurementType"/>
     </owl:Class>
     
 
@@ -1142,6 +1163,7 @@
     <!-- http://purl.dataone.org/odo/ECSO_00000071 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000071">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000514"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
     </owl:Class>
     
@@ -1168,6 +1190,7 @@
     <!-- http://purl.dataone.org/odo/ECSO_00000074 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000074">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000519"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
     </owl:Class>
     
@@ -1176,6 +1199,7 @@
     <!-- http://purl.dataone.org/odo/ECSO_00000075 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000075">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000514"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
     </owl:Class>
     
@@ -1194,6 +1218,7 @@
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000077">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#proportion_measurementType"/>
     </owl:Class>
     
 
@@ -1210,6 +1235,7 @@
     <!-- http://purl.dataone.org/odo/ECSO_00000079 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000079">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000519"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
     </owl:Class>
     
@@ -1218,6 +1244,7 @@
     <!-- http://purl.dataone.org/odo/ECSO_00000080 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000080">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000514"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
     </owl:Class>
     
@@ -2428,6 +2455,7 @@ this probably should be in OBOE, and is a synomym of AmountOfSubstanceConcentrat
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000528">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#index_measurementType"/>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <rdfs:label>Near_Surface_Specific_Humidity_MOV</rdfs:label>
@@ -3149,6 +3177,38 @@ a long-lived naturally occurring radioactive carbon isotope of mass 14 (6 proton
         <rdfs:subClassOf rdf:resource="http://www.w3.org/TR/skos-reference/skos-owl1-dl#Concept"/>
         <rdfs:comment>this concept was used as a related term for &apos;leaf carbon pool&apos; and does not merit class status (although we coud leave it here as a SKOS concept if we want all potential &quot;labels&quot; to show up in our class hierarchy that is now a &quot;class/concept&quot; hierarchy due to importing SKOS-dl {MPS, 28APR15}</rdfs:comment>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_#index_measurementType -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_#index_measurementType">
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_#named_measurementType -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_#named_measurementType">
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_#proportion_measurementType -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_#proportion_measurementType">
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_#temperature_MeasurementType -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_#temperature_MeasurementType">
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType"/>
     </owl:Class>
     
 
@@ -4045,8 +4105,8 @@ a long-lived naturally occurring radioactive carbon isotope of mass 14 (6 proton
         <odo:ECSO_01000004>Carbon fluxes are the movement of Carbon from one place (Source) to another (Sink).  Carbon fluxes all have dimensions of {mass or amount of} Carbon per area (or volume) per time
 
 biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than kg to quantify the amount of Carbon, whereas Climate-oriented projects use kg</odo:ECSO_01000004>
-        <skos:definition>The rate at which a mass of carbon moves to or from a particular component of the ecosystem per unit time.</skos:definition>
         <odo:ECSO_01000003>Litton, C.M. et al. Carbon allocation in forest ecosystems. Global Change Biology. V 13 I 10. pp. 2089 - 2109. July 2007.</odo:ECSO_01000003>
+        <skos:definition>The rate at which a mass of carbon moves to or from a particular component of the ecosystem per unit time.</skos:definition>
         <odo:ECSO_01000005>unknown.</odo:ECSO_01000005>
         <rdfs:label>Carbon Flux</rdfs:label>
     </rdf:Description>
@@ -4079,8 +4139,8 @@ biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than 
 Gross primary production (GPP) is the _amount_ of chemical energy as biomass that primary producers create in a given length of time. (GPP is sometimes confused with Gross Primary productivity, which is the _rate_ at which photosynthesis or chemosynthesis occurs.)
 
 For most purposes (including this one) the two can be the same. It&apos;s most practical to measure production over a given time interval and area (or volume), and that amounts to an areal (or volumetric) rate.</rdfs:comment>
-        <rdfs:label>Primary Production Carbon Flux</rdfs:label>
         <skos:definition>The process of carbon fixation by autotrophic carbon-fixing tissues per unit ground or water area and time.</skos:definition>
+        <rdfs:label>Primary Production Carbon Flux</rdfs:label>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <skos:altLabel>Primary productivity</skos:altLabel>
         <skos:altLabel>Primary production</skos:altLabel>
@@ -4114,11 +4174,11 @@ For most purposes (including this one) the two can be the same. It&apos;s most p
 Also called photosynthetic rate, or carbon fixation rate.</rdfs:comment>
         <skos:altLabel>Gross Primary Production</skos:altLabel>
         <skos:altLabel>Gross Primary Productivity</skos:altLabel>
-        <odo:ECSO_01000003>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</odo:ECSO_01000003>
         <rdfs:comment>primary production before the autotrphs&apos; own respiration is subtracted.
 also called photosynthetic rate, or carbon fixation rate.
 
 Synonyms: GPP</rdfs:comment>
+        <odo:ECSO_01000003>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <skos:definition>The sum of gross carbon fixation by autotrophic carbon-fixing tissues per unit ground or water area and time.</skos:definition>
         <skos:altLabel>GPP</skos:altLabel>
@@ -4144,10 +4204,10 @@ synonyms: NPP</rdfs:comment>
         <rdfs:comment>Carbon Pools are amounts of carbon in the system. measurements of carbon pools would have dimensions of mass Carbon per area (eg, kg per m2
 (can these be moles? can they just be biomass?) 
 {contributor, citation unkknown, questions are magaret&apos;s}</rdfs:comment>
-        <rdfs:label>Carbon Pool</rdfs:label>
         <odo:ECSO_01000004>Carbon Pools are reservoirs in the system with the capacity to exchange carbon. Usually scientists are interested in the size of pools, and the movement of carbon between pools. The dimensions of a carbon pool are likely to be mass or moles Carbon per area or volume (eg, kg per m2).</odo:ECSO_01000004>
-        <skos:definition>Carbon Pools are amounts of carbon in the system. measurements of carbon pools would have dimensions of mass Carbon per area (eg, kg per m2</skos:definition>
+        <rdfs:label>Carbon Pool</rdfs:label>
         <skos:definition>A reservoir with the capacity to store and release carbon, such as soil, terrestrial vegetation, the ocean, and the atmosphere {contributed by margaret, from</skos:definition>
+        <skos:definition>Carbon Pools are amounts of carbon in the system. measurements of carbon pools would have dimensions of mass Carbon per area (eg, kg per m2</skos:definition>
         <skos:altLabel>Name of Each Carbon Pool</skos:altLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000027">
@@ -4169,8 +4229,8 @@ synonyms: NPP</rdfs:comment>
         <odo:ECSO_01000008>leaves</odo:ECSO_01000008>
         <skos:definition>The mass of carbon contained within flattened photosynthetic structures emerging laterally from a main axis or stem and possessing true vascular tissue.</skos:definition>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
-        <rdfs:label>Leaf Carbon Pool</rdfs:label>
         <rdfs:comment>&apos;leaf carbon pool&apos; and &apos;leaf litter carbon pool&apos; also had associated with them the concepts &apos;leaves&apos; and &apos;leaf decomposition&apos; as related terms.  These latter two concepts have been removed at this time as too general (leaves) or too processual (leaf decomposition as opposed to &apos;leaf decompositional pool&apos;).  Might consider adding these back in as skos:alLabel.</rdfs:comment>
+        <rdfs:label>Leaf Carbon Pool</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000031">
         <odo:ECSO_01000003>Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</odo:ECSO_01000003>
@@ -4185,15 +4245,15 @@ synonyms: NPP</rdfs:comment>
         <odo:ECSO_01000003>&quot;grass.&quot; Collins English Dictionary – Complete and Unabridged. 1991, 1994, 1998, 2000, 2003. HarperCollins Publishers 24 Feb. 2015 http-www.thefreedictionary.com/grass</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000033">
-        <odo:ECSO_01000003>&quot;wood.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Feb. 2015 http-www.thefreedictionary.com/wood</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
+        <odo:ECSO_01000003>&quot;wood.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Feb. 2015 http-www.thefreedictionary.com/wood</odo:ECSO_01000003>
         <skos:definition>The mass of carbon contained in the tough, fibrous substance lying beneath the bark of trees and shrubs, consisting of the vascular tissue known as xylem and composed chiefly of cellulose and lignin.</skos:definition>
         <rdfs:label>Wood Carbon Pool</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000034">
+        <odo:ECSO_01000008>leaf decomposition</odo:ECSO_01000008>
         <odo:ECSO_01000003>Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
-        <odo:ECSO_01000008>leaf decomposition</odo:ECSO_01000008>
         <odo:ECSO_01000008>leaves</odo:ECSO_01000008>
         <rdfs:comment>synonyms from LTER searched terms (mob, 2015-03-24)</rdfs:comment>
         <rdfs:label>Leaf Litter Carbon Pool</rdfs:label>
@@ -4275,8 +4335,8 @@ synonyms: NPP</rdfs:comment>
         <skos:definition>Soil water content in each soil layer, including liquid, vapor and ice</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000053">
-        <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <rdfs:label>Average_Layer_Soil_Temperature_MOV</rdfs:label>
+        <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Average soil temperature in each soil layer</skos:definition>
     </rdf:Description>
@@ -4288,8 +4348,8 @@ synonyms: NPP</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000055">
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
-        <rdfs:label>Soil_Layer_Top_Depth_MOV</rdfs:label>
         <skos:definition>Depth from soil surface to top of soil layer</skos:definition>
+        <rdfs:label>Soil_Layer_Top_Depth_MOV</rdfs:label>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000056">
@@ -4342,13 +4402,13 @@ synonyms: NPP</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000064">
         <odo:ECSO_01000001>mob</odo:ECSO_01000001>
-        <skos:definition>MsTMIP Output: Rate of photosynthesis (always positive)</skos:definition>
         <rdfs:label>Gross_Primary_Productivity_MOV</rdfs:label>
+        <skos:definition>MsTMIP Output: Rate of photosynthesis (always positive)</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000065">
-        <rdfs:label>Name_Of_Each_Carbon_Pool_MOV</rdfs:label>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
+        <rdfs:label>Name_Of_Each_Carbon_Pool_MOV</rdfs:label>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Name of each carbon pool (i.e., &quot;wood,&quot; or &quot;Coarse Woody Debris&quot;)</skos:definition>
     </rdf:Description>
@@ -4409,8 +4469,8 @@ synonyms: NPP</rdfs:comment>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000075">
         <rdfs:label>Sensible_Heat_MOV</rdfs:label>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
-        <skos:definition>Sensible heat flux into the boundary layer (positive into atmosphere)</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
+        <skos:definition>Sensible heat flux into the boundary layer (positive into atmosphere)</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000076">
         <rdfs:label>Net_Ecosystem_Exchange_MOV</rdfs:label>
@@ -4419,8 +4479,8 @@ synonyms: NPP</rdfs:comment>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000077">
-        <skos:definition>Net Primary Productivity (NPP=GPP-AutoResp, positive into plants)</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
+        <skos:definition>Net Primary Productivity (NPP=GPP-AutoResp, positive into plants)</skos:definition>
         <skos:definition>Shortwave albedo</skos:definition>
         <rdfs:label>Shortwave_Albedo_MOV</rdfs:label>
         <rdfs:comment>mob thinks NPP SKOS definition is in here by mistake. because abedo is reflected light flux. it also might be a proportion (mstimip&apos;s)</rdfs:comment>
@@ -4487,16 +4547,16 @@ So light + dark = GPP (or about as close as you can get with a field measurement
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000094">
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <odo:ECSO_01000003>O&apos;Brien, pers comm, 2014-10-15</odo:ECSO_01000003>
-        <rdfs:label>Allometric Method</rdfs:label>
-        <odo:ECSO_01000003>Begon, M., Harper, J.L., Townsend, C.R. Ecology: Individuals, Populations, and Communities. Third Edition. Blackwell Science. 1996.</odo:ECSO_01000003>
         <odo:ECSO_01000004>an allometric method is usually accomplished with a combination of measurements that are tailored to the organism, e.g, size, growth rate, carbon content, plus some loss terms. SBC&apos;s dataset 21 has a good example of an allometric method for kelp.</odo:ECSO_01000004>
+        <odo:ECSO_01000003>Begon, M., Harper, J.L., Townsend, C.R. Ecology: Individuals, Populations, and Communities. Third Edition. Blackwell Science. 1996.</odo:ECSO_01000003>
         <skos:definition>A method determining the relationship between a physical or physiological property of an organism relative to the size of the organism.</skos:definition>
+        <rdfs:label>Allometric Method</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000095">
         <skos:altLabel>LIDAR</skos:altLabel>
         <odo:ECSO_01000003>Available from: https-www.researchgate.net/publication/233137060_Use_of_ground_and_LiDAR_data_to_model_the_NPP_of_a_Mediterranean_pine_forest [accessed Mar 25, 2015].</odo:ECSO_01000003>
-        <skos:definition>A LIDAR_Method for NPP is a methodology to predict the net primary production (NPP) from ground and LiDAR data</skos:definition>
         <rdfs:label>LIDAR Method</rdfs:label>
+        <skos:definition>A LIDAR_Method for NPP is a methodology to predict the net primary production (NPP) from ground and LiDAR data</skos:definition>
         <odo:ECSO_01000001>mob, 2015-03-25</odo:ECSO_01000001>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000096">
@@ -4532,8 +4592,8 @@ So light + dark = GPP (or about as close as you can get with a field measurement
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000208">
         <skos:definition>Carbon dioxide that has passed from the gas phase into the dissolved phase, with the the ocean begin the largest component of this pool. This process contributes to acidification by forming carbonic acid with water molecules.</skos:definition>
         <odo:ECSO_01000003>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000003>
-        <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <rdfs:label>Dissolved Carbon Dioxide Pool</rdfs:label>
+        <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000300">
         <odo:ECSO_01000003>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000003>
@@ -4582,9 +4642,9 @@ maybe others.
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000312">
         <odo:ECSO_01000001>Margaret O&apos;brien</odo:ECSO_01000001>
-        <rdfs:label>Organism</rdfs:label>
         <skos:definition>An organism is a single indivual. do we really have any carbon cycle data for a single organism? maybe not.
 no ref today.</skos:definition>
+        <rdfs:label>Organism</rdfs:label>
         <rdfs:comment>This class should be incorporated into ENVO.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000313">
@@ -4603,8 +4663,8 @@ no ref today.</skos:definition>
         <skos:definition>Describes the physical state of a substance</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000319">
-        <rdfs:label>has Location</rdfs:label>
         <odo:ECSO_01000003>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000003>
+        <rdfs:label>has Location</rdfs:label>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <skos:definition>Defines where a class exists or takes place</skos:definition>
     </rdf:Description>
@@ -4674,17 +4734,17 @@ As description Annotation properties are often not as rigorous, and hence looser
         <odo:ECSO_01000001>mobb</odo:ECSO_01000001>
         <odo:ECSO_01000003>ad hoc</odo:ECSO_01000003>
         <skos:definition>has_Exact_Synonym is an OWL annotation property that holds an alternate name or lexical variant of an owl class.</skos:definition>
-        <odo:ECSO_01000004>The DataONE carbon flux ontology uses synonyms for terms that may not be well defined. But we know that they are used, and refer to an owl class.  I.e., a concept can have a synonym, but a concept should not be a synonym.</odo:ECSO_01000004>
         <odo:ECSO_01000005>Margaret O&apos;Brien, 2015-03-18</odo:ECSO_01000005>
+        <odo:ECSO_01000004>The DataONE carbon flux ontology uses synonyms for terms that may not be well defined. But we know that they are used, and refer to an owl class.  I.e., a concept can have a synonym, but a concept should not be a synonym.</odo:ECSO_01000004>
         <rdfs:comment>We are not planning to use has_Broad_Synonym or has_Narrow_Synonym at this time. although other ontologies do. the concepts of &quot;broad&quot; and &quot;narrow&quot; imply relationships that could be better described with the class hierarchy.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_01000007">
-        <odo:ECSO_01000003>O&apos;Brien, pers comm, 2015-02-19</odo:ECSO_01000003>
         <odo:ECSO_01000001>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
+        <odo:ECSO_01000003>O&apos;Brien, pers comm, 2015-02-19</odo:ECSO_01000003>
         <odo:ECSO_01000005>O&apos;Brien, pers comm, 2015-02-19</odo:ECSO_01000005>
         <skos:definition>&quot;example_Of_Usage&quot; is an OWL annotation property to record examples of how the concept or property should be used.</skos:definition>
-        <odo:ECSO_01000004>&quot;example_Of_Usage&quot; is for providing examples. It should contain actual sample strings for the resource it applies to. longer, text descriptions of good practice for the resource belong in the &quot;description&quot; annotation.</odo:ECSO_01000004>
         <rdfs:label>example_Of_Usage</rdfs:label>
+        <odo:ECSO_01000004>&quot;example_Of_Usage&quot; is for providing examples. It should contain actual sample strings for the resource it applies to. longer, text descriptions of good practice for the resource belong in the &quot;description&quot; annotation.</odo:ECSO_01000004>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_01000008">
         <odo:ECSO_01000004>The DataONE carbon flux ontology uses synonyms for terms that may not be well defined. But we know that they are used, and refer to an owl class.  I.e., a concept can have a synonym, but a concept should not be a synonym.</odo:ECSO_01000004>
@@ -4716,6 +4776,7 @@ note: ENVO also references LTER:41</rdfs:comment>
         <odo:ECSO_01000003>http://purl.obolibrary.org/obo/ENVO_01000177</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+        <odo:ECSO_01000005>O&apos;Brien, 2015-02-19</odo:ECSO_01000005>
         <odo:ECSO_01000004>rdfs:label is a built in annotation property, and W3C does not give guidelines beyond the definition. In the DataONe Carbon Flux ontology, we use rdfs:label for a human-readable version of the resource&apos;s name, but adhere to a particular pattern. Our goal is that content of rdfs:label are not broken into individual terms arbitrarily.
 
 1. Our practice is to separate individual words in the rdfs:label with underscores, but maintain capitalization consistent with the conventions of the resources type (e.g., camel case for properties, capitalized words for classes, capitalized abbreviations and acronyms). 
@@ -4723,7 +4784,6 @@ note: ENVO also references LTER:41</rdfs:comment>
 2. include namespace in the label, if resource is imported.
 
 See example_Of_Usage, presentation_Label</odo:ECSO_01000004>
-        <odo:ECSO_01000005>O&apos;Brien, 2015-02-19</odo:ECSO_01000005>
         <skos:definition>rdfs:label is an instance of rdf:Property that may be used to provide a human-readable version of a resource&apos;s name</skos:definition>
         <odo:ECSO_01000007>Carbon_Flux_NASA, definition_Source, rdfs:label</odo:ECSO_01000007>
         <odo:ECSO_01000001>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
