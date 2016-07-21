@@ -42,6 +42,7 @@ Annotation tasks
 --------------
 1. Reannotate test corpus F as needed, with new classes. **SARA, BRYCE, MARGARET**
 	1. Describe annotation process **MARGARET** 
+	2. Dependencies: additions to ECSO (classes, synonyms, axioms)
 	
 
 Algorithm tasks
