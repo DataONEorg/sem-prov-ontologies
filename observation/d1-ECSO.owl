@@ -510,6 +510,14 @@
     
 
 
+    <!-- http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Entity -->
+
+    <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Entity">
+        <rdfs:comment xml:lang="en">Confirm: structure of Entity (with subclass of &apos;continuant&apos; and &apos;occurrent&apos; from BFO) or &apos;continuant&apos; and &apos;occurrent &gt; process&apos; from ENVO)?</rdfs:comment>
+    </rdf:Description>
+    
+
+
     <!-- http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl#Ampere -->
 
     <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl#Ampere">
@@ -896,7 +904,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001309"/>
-                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000565"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27594"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -911,7 +919,7 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000331"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.dataone.org/odo/ECSO_00000319"/>
+                        <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
                         <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -922,7 +930,7 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000341"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.dataone.org/odo/ECSO_00000319"/>
+                        <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
                         <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1048,7 +1056,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
-                <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000565"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27594"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1124,7 +1132,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0000056#participates_in"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/RO_0000056#ecosystem-wide_respiration"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500008"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1136,7 +1144,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
-                <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000565"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27594"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1507,7 +1515,7 @@
                 <owl:allValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000565"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_27594"/>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
                                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
@@ -1549,7 +1557,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
-                <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000565"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27594"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1624,7 +1632,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
-                <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000565"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27594"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1699,7 +1707,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
-                <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000565"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27594"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1795,7 +1803,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
-                <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000565"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27594"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1849,7 +1857,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
-                <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000565"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27594"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1940,7 +1948,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
-                <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000565"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27594"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2483,6 +2491,17 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
     <!-- http://purl.dataone.org/odo/ECSO_00000205 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000205">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000341"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
+                        <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000324"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000341"/>
     </owl:Class>
     
@@ -2569,7 +2588,11 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000305">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000312"/>
         <owl:disjointWith rdf:resource="http://purl.dataone.org/odo/ECSO_00000306"/>
+        <odo:ECSO_01000001 xml:lang="en">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Unicellular_organism</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">unicellular, single-celled, single cell, monad</odo:ECSO_01000008>
         <rdfs:label>Single-Celled Organism</rdfs:label>
+        <skos:definition xml:lang="en">An organism that consists of only one cell</skos:definition>
     </owl:Class>
     
 
@@ -2578,7 +2601,12 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000306">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000312"/>
+        <odo:ECSO_01000003 xml:lang="en">https://en.wikipedia.org/wiki/Multicellular_organism</odo:ECSO_01000003>
+        <dc:contributor xml:lang="en">Sara Lafia, http://orcid.org/0000-0002-5896-7295</dc:contributor>
+        <oboInOwl:hasExactSynonym xml:lang="en">multi-cellular organism; whole organism</oboInOwl:hasExactSynonym>
+        <oboInOwl:hasNarrowSynonym xml:lang="en">animal</oboInOwl:hasNarrowSynonym>
         <rdfs:label>Multi-Celled Organism</rdfs:label>
+        <skos:definition xml:lang="en">An organism that consist of more than one cell</skos:definition>
     </owl:Class>
     
 
@@ -2587,6 +2615,9 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000307">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000305"/>
+        <odo:ECSO_01000004 xml:lang="en">Microorganisms are very diverse and include all bacteria, archaea and most protozoa. This group also contains some species of fungi, algae, and certain microscopic animals, such as rotifers.</odo:ECSO_01000004>
+        <odo:ECSO_01000005 xml:lang="en">https://en.wikipedia.org/wiki/Microorganism</odo:ECSO_01000005>
+        <odo:ECSO_01000008 xml:lang="en">microorganism</odo:ECSO_01000008>
         <rdfs:label>Microbe</rdfs:label>
     </owl:Class>
     
@@ -2643,6 +2674,10 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
     <!-- http://purl.dataone.org/odo/ECSO_00000314 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000314">
+        <odo:ECSO_01000001 xml:lang="en">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000004 xml:lang="en">A state of matter is one of the distinct forms that matter takes on. Four states of matter are observable in everyday life: solid, liquid, gas, and plasma. Historically, the distinction is made based on qualitative differences in properties.</odo:ECSO_01000004>
+        <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/State_of_matter</odo:ECSO_01000005>
+        <odo:ECSO_01000008 xml:lang="en">phase, state, state of matter</odo:ECSO_01000008>
         <rdfs:label>Physical State</rdfs:label>
     </owl:Class>
     
@@ -2652,6 +2687,11 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000315">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000314"/>
+        <odo:ECSO_01000001 xml:lang="en">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000004 xml:lang="en">Gas is one of the four fundamental states of matter. A pure gas may be made up of individual atoms (e.g. a noble gas like neon), elemental molecules made from one type of atom (e.g. oxygen), or compound molecules made from a variety of atoms (e.g. carbon dioxide). What distinguishes a gas from liquids and solids is the vast separation of the individual gas particles.</odo:ECSO_01000004>
+        <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Gas</odo:ECSO_01000005>
+        <odo:ECSO_01000007 xml:lang="en">air is a gas mixture with various pure gases</odo:ECSO_01000007>
+        <odo:ECSO_01000008 xml:lang="en">gaseous state</odo:ECSO_01000008>
         <rdfs:label>Gas</rdfs:label>
     </owl:Class>
     
@@ -2661,6 +2701,11 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000316">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000314"/>
+        <odo:ECSO_01000001 xml:lang="en">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000004 xml:lang="en">A liquid is a nearly incompressible fluid that conforms to the shape of its container but retains a (nearly) constant volume independent of pressure. As such, it is one of the four fundamental states of matter and is the only state with a definite volume but no fixed shape. A liquid is made up of tiny vibrating particles of matter, such as atoms, held together by intermolecular bonds.</odo:ECSO_01000004>
+        <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Liquid</odo:ECSO_01000005>
+        <odo:ECSO_01000007 xml:lang="en">water is the most abundant liquid on Earth</odo:ECSO_01000007>
+        <odo:ECSO_01000008 xml:lang="en">liquid state, liquified</odo:ECSO_01000008>
         <rdfs:label>Liquid</rdfs:label>
     </owl:Class>
     
@@ -2670,6 +2715,11 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000317">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000314"/>
+        <odo:ECSO_01000001 xml:lang="en">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000004 xml:lang="en">Solid is one of the four fundamental states of matter. It is characterized by structural rigidity and resistance to changes of shape or volume. Unlike a liquid, a solid object does not flow to take on the shape of its container, nor does it expand to fill the entire volume available to it like a gas does. The atoms in a solid are tightly bound to each other, either in a regular geometric lattice or irregularly.</odo:ECSO_01000004>
+        <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Solid</odo:ECSO_01000005>
+        <odo:ECSO_01000007 xml:lang="en">crystalline solids include metals and ice</odo:ECSO_01000007>
+        <odo:ECSO_01000008 xml:lang="en">solid state</odo:ECSO_01000008>
         <rdfs:label>Solid</rdfs:label>
     </owl:Class>
     
@@ -2698,6 +2748,11 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000321">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000314"/>
+        <odo:ECSO_01000001 xml:lang="en">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000004 xml:lang="en">The dissolution of gases, liquids, or solids into a liquid or other solvent is a process by which these original states become solutes (dissolved components), forming a solution of the gas, liquid, or solid in the original solvent. Solid solutions are the result of dissolution of one solid into another.</odo:ECSO_01000004>
+        <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Dissolution_(chemistry)</odo:ECSO_01000005>
+        <odo:ECSO_01000007 xml:lang="en">metal alloys are dissolved solid solutions</odo:ECSO_01000007>
+        <odo:ECSO_01000008 xml:lang="en">dissolution, dissolved state</odo:ECSO_01000008>
         <rdfs:label>Dissolved</rdfs:label>
     </owl:Class>
     
@@ -2708,7 +2763,11 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000323">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000337"/>
         <odo:ECSO_01000001>Margaret O&amp;apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
-        <odo:ECSO_01000003>CHEBI:16526</odo:ECSO_01000003>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_16526</odo:ECSO_01000003>
+        <odo:ECSO_01000004 xml:lang="en">Carbon dioxide is a colorless and odorless gas vital to life on Earth. This naturally occurring chemical compound is composed of a carbon atom covalently double bonded to two oxygen atoms. Carbon dioxide exists in Earth&apos;s atmosphere as a trace gas at a concentration of about 0.04 percent (400 ppm) by volume. Natural sources include volcanoes, hot springs and geysers, and it is freed from carbonate rocks by dissolution in water and acids. Because carbon dioxide is soluble in water, it occurs naturally in groundwater, rivers and lakes, in ice caps and glaciers and also in seawater. It is present in deposits of petroleum and natural gas.</odo:ECSO_01000004>
+        <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Carbon_dioxide</odo:ECSO_01000005>
+        <odo:ECSO_01000008 xml:lang="en">carbonic anhydride, CO2</odo:ECSO_01000008>
+        <oboInOwl:hasAlternativeId>CHEBI:48829, CHEBI:3283, CHEBI:13282, CHEBI:13283, CHEBI:13285, CHEBI:13284, CHEBI:23011</oboInOwl:hasAlternativeId>
         <rdfs:label>Carbon Dioxide</rdfs:label>
         <skos:altLabel>CO2</skos:altLabel>
         <skos:definition>A one-carbon compound with formula CO2 in which the carbon is attached to each oxygen atom by a double bond. A colourless, odourless gas under normal conditions, it is produced during respiration by organisms that depend directly or indirectly on living or decaying plants for food, and taken up during photosynthesis (adapted from ChEBI).
@@ -2721,7 +2780,11 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000324">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000329"/>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_16183</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">methyl hydride, CH4, marsh gas</odo:ECSO_01000008>
+        <oboInOwl:id>CHEBI:16183</oboInOwl:id>
         <rdfs:label>Methane</rdfs:label>
+        <skos:definition xml:lang="en">A one-carbon compound in which the carbon is attached by single bonds to four hydrogen atoms. It is a colourless, odourless, non-toxic but flammable gas (b.p. −161°C).</skos:definition>
     </owl:Class>
     
 
@@ -2754,7 +2817,13 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000328">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000337"/>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_17245</odo:ECSO_01000003>
+        <odo:ECSO_01000004 xml:lang="en">Carbon monoxide is a colorless, odorless, and tasteless gas that is slightly less dense than air. It is toxic to hemoglobic animals (including humans) when encountered in concentrations above about 35 ppm, although it is also produced in normal animal metabolism in low quantities, and is thought to have some normal biological functions. In the atmosphere, it is spatially variable and short lived, having a role in the formation of ground-level ozone.</odo:ECSO_01000004>
+        <odo:ECSO_01000008 xml:lang="en">CO</odo:ECSO_01000008>
+        <oboInOwl:hasAlternativeId xml:lang="en">CHEBI:41526, CHEBI:3282, CHEBI:13281, CHEBI:23013</oboInOwl:hasAlternativeId>
+        <oboInOwl:id xml:lang="en">CHEBI:17245</oboInOwl:id>
         <rdfs:label>Carbon Monoxide</rdfs:label>
+        <skos:definition xml:lang="en">A one-carbon compound in which the carbon is joined only to a single oxygen. It is a colourless, odourless, tasteless, toxic gas.</skos:definition>
     </owl:Class>
     
 
@@ -2802,6 +2871,9 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000337">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24835"/>
+        <odo:ECSO_01000004 xml:lang="en">Inorganic carbon is carbon extracted from ores and minerals, as opposed to organic carbon found in nature through plants and living things. Some examples of inorganic carbon are carbon oxides such as carbon monoxide and carbon dioxide; polyatomic ions, cyanide, cyanate, thiocyanate, carbonate and carbide in carbon.</odo:ECSO_01000004>
+        <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://chemwiki.ucdavis.edu/Core/Inorganic_Chemistry/Descriptive_Chemistry/Elements_Organized_by_Block/2_p-Block_Elements/Group_14%3A_The_Carbon_Family/Chemistry_of_Carbon</odo:ECSO_01000005>
+        <rdfs:comment xml:lang="en">Confirm: CHEBI description of &apos;inorganic molecular entity&apos; as a &apos;molecular entity that contains no carbon&apos; contradicts inorganic carbon as subclass?</rdfs:comment>
         <rdfs:label>Inorganic Carbon</rdfs:label>
     </owl:Class>
     
@@ -2837,35 +2909,16 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
     
 
 
-    <!-- http://purl.dataone.org/odo/ECSO_00000502 -->
-
-    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000502">
-        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Entity"/>
-        <odo:ECSO_01000001>Margaret O&amp;apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
-        <odo:ECSO_01000003>http://dictionary.reference.com/browse/ground</odo:ECSO_01000003>
-        <rdfs:comment>ALso see, FAO, glossary of supporting terms: 
-http://www.fao.org/docrep/009/j9345e/j9345e12.htm
-They also refer to sources, eg, IPCC, GL FRA.
-
-We might need this term when for a flux measurement. as in the layer the flux happens across. 
-for some uses, though this term (&quot;ground&quot;) is only meaningful if it is inclued as part of another concept of interest, eg above-ground or below-ground. 
-</rdfs:comment>
-        <rdfs:label>Ground</rdfs:label>
-        <skos:definition>The solid surface of the earth; firm or dry land. 
-</skos:definition>
-    </owl:Class>
-    
-
-
     <!-- http://purl.dataone.org/odo/ECSO_00000503 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000503">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000155"/>
         <odo:ECSO_01000001>Margaret O&amp;apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
+        <odo:ECSO_01000003 xml:lang="en">Plant Ontology (PO:0025161)</odo:ECSO_01000003>
         <odo:ECSO_01000003>Plant Ontology, accession: 
 PO:0025161</odo:ECSO_01000003>
-        <rdfs:label>Plant material</rdfs:label>
-        <skos:definition>A portion of organism substance that is or was part of a plant, the whole or part thereof. From Plant Ontology (PO:0025161)</skos:definition>
+        <rdfs:label xml:lang="en">plant material</rdfs:label>
+        <skos:definition xml:lang="en">A portion of organism substance that is or was part of a plant, the whole or part thereof.</skos:definition>
     </owl:Class>
     
 
@@ -2877,7 +2930,7 @@ PO:0025161</odo:ECSO_01000003>
         <odo:ECSO_01000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">Margaret O&apos;Brien, http://orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
         <odo:ECSO_01000003>https://en.wikipedia.org/wiki/Phytoplankton, 
 http://oceanservice.noaa.gov/facts/phyto.html</odo:ECSO_01000003>
-        <rdfs:label>Phytoplankton</rdfs:label>
+        <rdfs:label>phytoplankton</rdfs:label>
         <skos:definition>The autotrophic components of the plankton community and a key factor of oceans, seas and freshwater basin ecosystems. Microscopic, but when present in high enough numbers, some varieties may be produce colored patches on the water surface. From Greek, &apos;phyto&apos; = plant and &apos;planktos&apos; = wanderer. 
 Adapted from oceanservice.noaa.gov/facts/phyto.html, https://en.wikipedia.org/wiki/Phytoplankton</skos:definition>
     </owl:Class>
@@ -3230,19 +3283,6 @@ https://en.wikipedia.org/wiki/Rate_(mathematics)#Temporal</odo:ECSO_01000003>
     
 
 
-    <!-- http://purl.dataone.org/odo/ECSO_00000524 -->
-
-    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000524">
-        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Entity"/>
-        <odo:ECSO_01000001>Margaret O&amp;apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
-        <odo:ECSO_01000003>Merriam-Webster:
-http://www.merriam-webster.com/dictionary/earth</odo:ECSO_01000003>
-        <rdfs:label>Earth</rdfs:label>
-        <skos:definition>The planet on which which we live</skos:definition>
-    </owl:Class>
-    
-
-
     <!-- http://purl.dataone.org/odo/ECSO_00000525 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000525">
@@ -3262,7 +3302,11 @@ this probably should be in OBOE, and is a synomym of AmountOfSubstanceConcentrat
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000526">
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Entity"/>
+        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.biology-online.org/dictionary/Group</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">grouping</odo:ECSO_01000008>
         <rdfs:label>group</rdfs:label>
+        <skos:definition xml:lang="en">A number of entities taken together as a unit because members share a common characteristic or relation</skos:definition>
     </owl:Class>
     
 
@@ -3271,7 +3315,7 @@ this probably should be in OBOE, and is a synomym of AmountOfSubstanceConcentrat
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000527">
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Entity"/>
-        <rdfs:label>&apos;ecosystem component entity&apos;</rdfs:label>
+        <rdfs:label xml:lang="en">ecosystem component entity</rdfs:label>
     </owl:Class>
     
 
@@ -3459,20 +3503,6 @@ generally, CO2 that enters the ocean dissociates into bicarbonate, carbonate, (a
     
 
 
-    <!-- http://purl.dataone.org/odo/ECSO_00000538 -->
-
-    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000538">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000524"/>
-        <odo:ECSO_01000001>Margaret O&amp;apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
-        <odo:ECSO_01000003>Merriam-Webster:
-http://www.merriam-webster.com/dictionary/earth
-definition 3a</odo:ECSO_01000003>
-        <rdfs:label>Earth_terrestrial</rdfs:label>
-        <skos:definition> areas of land as distinguished from sea and air</skos:definition>
-    </owl:Class>
-    
-
-
     <!-- http://purl.dataone.org/odo/ECSO_00000539 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000539">
@@ -3515,6 +3545,9 @@ generally, CO2 that enters water dissociates into bicarbonate, carbonate, (and s
 http://www.bbc.co.uk/bitesize/higher/biology/control_regulation/growth/revision/1/
 http://www.biology-online.org/dictionary/Growth
 Google (no ref to src material)</odo:ECSO_01000003>
+        <odo:ECSO_01000005 xml:lang="en">WordNet</odo:ECSO_01000005>
+        <odo:ECSO_01000007 xml:lang="en">the only growth was some salt grass</odo:ECSO_01000007>
+        <odo:ECSO_01000008 xml:lang="en">growing, maturation, development</odo:ECSO_01000008>
         <rdfs:label>Growth</rdfs:label>
         <skos:definition>The process of increasing in physical size, mass or number, gradually and irreversibly. the process of developing or maturing. the increase in number and spread of small or microscopic organisms.
 
@@ -3624,7 +3657,10 @@ potential synonyms: development, maturation, growing, germination, sprouting; bl
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000546">
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Entity"/>
-        <rdfs:label>Process</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+        <obo:IAO_0000412>http://purl.obolibrary.org/obo/envo.owl</obo:IAO_0000412>
+        <rdfs:label xml:lang="en">process</rdfs:label>
+        <skos:definition xml:lang="en">An occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t.</skos:definition>
     </owl:Class>
     
 
@@ -3634,8 +3670,10 @@ potential synonyms: development, maturation, growing, germination, sprouting; bl
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000547">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000540"/>
         <odo:ECSO_01000001>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
-        <odo:ECSO_01000003>http://www.fia.fs.fed.us/library/fact-sheets/p3-factsheets/tree-growth.pdf
-https://en.wikipedia.org/wiki/Tree_measurement</odo:ECSO_01000003>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.fia.fs.fed.us/library/fact-sheets/p3-factsheets/tree-growth.pdf
+https://en.wikipedia.org/wiki/Tree_measurement
+http://texastreeid.tamu.edu/content/howTreesGrow/</odo:ECSO_01000003>
+        <odo:ECSO_01000007 xml:lang="en">the majority of tree growth occurs in late spring and early summer</odo:ECSO_01000007>
         <rdfs:label>Tree growth</rdfs:label>
         <skos:definition>Tree growth is computed from sequential measurements of a tree that often depend on the species and its form. Measurements include (but are not limited to) height, circumference and diamater, eg, diameter at breast height, or DBH.</skos:definition>
     </owl:Class>
@@ -3843,61 +3881,12 @@ The most common type of rate is &quot;per unit of time&quot;, such as speed, hea
     
 
 
-    <!-- http://purl.dataone.org/odo/ECSO_00000565 -->
-
-    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000565">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33560"/>
-        <odo:ECSO_01000003>http://www.ontobee.org/ontology/ENVO?iri=http://purl.obolibrary.org/obo/CHEBI_27594</odo:ECSO_01000003>
-        <rdfs:label>carbon atom</rdfs:label>
-        <skos:definition>http://purl.obolibrary.org/obo/CHEBI_27594</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ECSO_00000566 -->
-
-    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000566">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000565"/>
-        <odo:ECSO_01000003>CHEBI, wikipedia (accessed 2016-06-30)</odo:ECSO_01000003>
-        <rdfs:label>carbon-12</rdfs:label>
-        <skos:definition>carbon-12 atom, ChEBI ID CHEBI:36931
-the most common natural carbon isotope, of mass 12. It is the basis for the accepted scale of atomic mass units.</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ECSO_00000567 -->
-
-    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000567">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000565"/>
-        <odo:ECSO_01000003>CHEBI, wikipedia (accessed 2016-06-30)</odo:ECSO_01000003>
-        <rdfs:comment>Uses in science: 
-Due to differential uptake in plants as well as marine carbonates of 13C, it is possible to use these isotopic signature in earth science. In aqueous geochemistry, by analyzing the δ13C value of surface and ground waters the source of the water can be identified. This is because atmospheric, carbonate, and plant derived δ13C values all differ with respect to Pee Dee Belemnite (PDB) standard. In biology, the ratio of carbon-13 and carbon-12 isotopes in plant tissues is different depending on the type of plant photosynthesis and this can be used, for example, to determine which types of plants were consumed by animals.</rdfs:comment>
-        <rdfs:label>carbon-13</rdfs:label>
-        <skos:definition>carbon-13 atom, ChEBI ID CHEBI:36928
-natural, stable isotope of carbon with a nucleus containing 6 protons and 7 neutrons.</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ECSO_00000568 -->
-
-    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000568">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000565"/>
-        <rdfs:comment>Uses in science:
-used in carbon dating and as a tracer in biochemistry.</rdfs:comment>
-        <rdfs:label>carbon-14</rdfs:label>
-        <skos:definition>carbon-14 atom, ChEBI ID CHEBI:36927
-a long-lived naturally occurring radioactive carbon isotope of mass 14 (6 protons and 8 neutrons)</skos:definition>
-    </owl:Class>
-    
-
-
     <!-- http://purl.dataone.org/odo/ECSO_00000569 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000569">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000305"/>
         <odo:ECSO_01000003>bacteria. Dictionary.com. Dictionary.com Unabridged. Random House, Inc. http://www.dictionary.com/browse/bacteria (accessed: June 30, 2016).</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">bacterium</odo:ECSO_01000008>
         <rdfs:label>Bacteria</rdfs:label>
         <skos:definition>a very large group of microorganisms comprising one of the three domains of living organisms. They are prokaryotic, unicellular, and either free-living in soil or water or parasites of plants or animals See also prokaryote</skos:definition>
     </owl:Class>
@@ -3966,8 +3955,12 @@ a long-lived naturally occurring radioactive carbon isotope of mass 14 (6 proton
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <odo:ECSO_01000001 xml:lang="en">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Soil_horizon#Layers</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">soil profile, soil profiles</odo:ECSO_01000008>
         <rdfs:comment>This is a grouping class, analogous to &apos;lake layer&apos; and &apos;marine layer&apos;</rdfs:comment>
         <rdfs:label>soil layer</rdfs:label>
+        <skos:definition xml:lang="en">A layer which is part of soil. Soil generally consists of visually and texturally distinct layers.</skos:definition>
     </owl:Class>
     
 
@@ -4019,10 +4012,10 @@ a long-lived naturally occurring radioactive carbon isotope of mass 14 (6 proton
     <!-- http://purl.dataone.org/odo/ECSO_#electromagnetic_radiation -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_#electromagnetic_radiation">
-        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Entity"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
         <odo:ECSO_01000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Electromagnetic_radiation</odo:ECSO_01000003>
-        <rdfs:comment>Confirm: ER is not defined in any other BFO-aligned ontology, including ENVO</rdfs:comment>
+        <rdfs:comment xml:lang="en">Confirm: wave-particle duality; if particle, then measured material</rdfs:comment>
         <rdfs:label xml:lang="en">electromagnetic radiation</rdfs:label>
         <skos:definition xml:lang="en">Electromagnetic radiation is the radiant energy released by certain electromagnetic processes. Visible light is one type of electromagnetic radiation; other familiar forms are invisible to the human eye, such as radio waves, infrared light and X-rays.</skos:definition>
     </owl:Class>
@@ -4063,6 +4056,7 @@ a long-lived naturally occurring radioactive carbon isotope of mass 14 (6 proton
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010504"/>
         <odo:ECSO_01000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Ocean#Ocean_surface</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">sea surface</odo:ECSO_01000008>
         <rdfs:label xml:lang="en">ocean surface</rdfs:label>
         <skos:definition xml:lang="en">The ocean surface meets Earth&apos;s planetary boundary layer and troposphere, a range view which varies depending on the assumed surface elevation.</skos:definition>
     </owl:Class>
@@ -4134,10 +4128,32 @@ a long-lived naturally occurring radioactive carbon isotope of mass 14 (6 proton
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000003 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000003">
+        <obo:IAO_0000412 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/envo.owl</obo:IAO_0000412>
+        <rdfs:label xml:lang="en">occurrent</rdfs:label>
+        <skos:definition xml:lang="en">An entity that has temporal parts and that happens, unfolds or develops through time.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000019">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000019"/>
+        <rdfs:comment xml:lang="en">Confirm: move out of &apos;Physical State&apos;</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_23367 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_23367">
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_23367</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">molecular entities</odo:ECSO_01000008>
+        <oboInOwl:id xml:lang="en">CHEBI:23367</oboInOwl:id>
+        <skos:definition xml:lang="en">Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity.</skos:definition>
     </rdf:Description>
     
 
@@ -4146,6 +4162,11 @@ a long-lived naturally occurring radioactive carbon isotope of mass 14 (6 proton
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24431">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000527"/>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_24431</odo:ECSO_01000003>
+        <odo:ECSO_01000007 xml:lang="en">atom is a chemical entity</odo:ECSO_01000007>
+        <odo:ECSO_01000008 xml:lang="en">chemical entity</odo:ECSO_01000008>
+        <oboInOwl:id>CHEBI:24431</oboInOwl:id>
+        <skos:definition xml:lang="en">A chemical entity is a physical entity of interest in chemistry including molecular entities, parts thereof, and chemical substances.</skos:definition>
     </rdf:Description>
     
 
@@ -4154,7 +4175,60 @@ a long-lived naturally occurring radioactive carbon isotope of mass 14 (6 proton
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_24835">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_24835</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">inorganic compounds, inorganic entity, inorganic molecular entities, inorganics</odo:ECSO_01000008>
+        <oboInOwl:id xml:lang="en">CHEBI:24835</oboInOwl:id>
+        <skos:definition xml:lang="en">A molecular entity that contains no carbon.</skos:definition>
     </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_25555 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_25555">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33300"/>
+        <odo:ECSO_01000001 xml:lang="en">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_25555</odo:ECSO_01000003>
+        <odo:ECSO_01000004 xml:lang="en">Nitrogen is a chemical element with symbol N and atomic number 7. It is the lightest pnictogen and at room temperature, it is a transparent, odorless diatomic gas.</odo:ECSO_01000004>
+        <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Nitrogen</odo:ECSO_01000005>
+        <oboInOwl:id xml:lang="en">CHEBI:25555</oboInOwl:id>
+        <rdfs:label xml:lang="en">nitrogen atom</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_27594 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_27594">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33560"/>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_27594</odo:ECSO_01000003>
+        <odo:ECSO_01000007 xml:lang="en">carbon atom is a carbon group element atom</odo:ECSO_01000007>
+        <odo:ECSO_01000008 xml:lang="en">carbon group element, carbon group elements, group IV elements</odo:ECSO_01000008>
+        <oboInOwl:id xml:lang="en">CHEBI:33306</oboInOwl:id>
+        <rdfs:label>carbon atom</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33300 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33300">
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_33300</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">group 15 elements</odo:ECSO_01000008>
+        <oboInOwl:id xml:lang="en">CHEBI:33300</oboInOwl:id>
+        <skos:definition xml:lang="en">Any p-block element atom that is in group 15 of the periodic table: nitrogen, phosphorus, arsenic, antimony and bismuth.</skos:definition>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_33560 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33560">
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_33560</odo:ECSO_01000003>
+        <odo:ECSO_01000007 xml:lang="en">carbon group element atom is a p-block element atom</odo:ECSO_01000007>
+        <oboInOwl:id xml:lang="en">CHEBI:33560</oboInOwl:id>
+        <skos:definition xml:lang="en">Any main group element atom belonging to the p-block of the periodic table.</skos:definition>
+    </rdf:Description>
     
 
 
@@ -4164,16 +4238,70 @@ a long-lived naturally occurring radioactive carbon isotope of mass 14 (6 proton
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001309"/>
-                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000565"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27594"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_33582</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">carbon group molecular entities, carbon group molecular entity</odo:ECSO_01000008>
+        <oboInOwl:id>CHEBI:33582</oboInOwl:id>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_36927 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_36927">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27594"/>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_36927</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">carbon-13 atom, carbon, isotope of mass 14</odo:ECSO_01000008>
+        <oboInOwl:id xml:lang="en">CHEBI:36927</oboInOwl:id>
+        <rdfs:comment>Uses in science:
+used in carbon dating and as a tracer in biochemistry.</rdfs:comment>
+        <rdfs:label>carbon-14</rdfs:label>
+        <skos:definition xml:lang="en">a long-lived naturally occurring radioactive carbon isotope of mass 14 (6 protons and 8 neutrons)</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_36928 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_36928">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27594"/>
+        <odo:ECSO_01000003>CHEBI, wikipedia (accessed 2016-06-30)</odo:ECSO_01000003>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_36928</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">carbon-13 atom, carbon, isotope of mass 13</odo:ECSO_01000008>
+        <oboInOwl:id xml:lang="en">CHEBI:36928</oboInOwl:id>
+        <rdfs:comment>Uses in science: 
+Due to differential uptake in plants as well as marine carbonates of 13C, it is possible to use these isotopic signature in earth science. In aqueous geochemistry, by analyzing the δ13C value of surface and ground waters the source of the water can be identified. This is because atmospheric, carbonate, and plant derived δ13C values all differ with respect to Pee Dee Belemnite (PDB) standard. In biology, the ratio of carbon-13 and carbon-12 isotopes in plant tissues is different depending on the type of plant photosynthesis and this can be used, for example, to determine which types of plants were consumed by animals.</rdfs:comment>
+        <rdfs:label>carbon-13</rdfs:label>
+        <skos:definition>natural, stable isotope of carbon with a nucleus containing 6 protons and 7 neutrons.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/CHEBI_36931 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_36931">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27594"/>
+        <odo:ECSO_01000003>CHEBI, wikipedia (accessed 2016-06-30)</odo:ECSO_01000003>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_36931</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">carbon-12 atom</odo:ECSO_01000008>
+        <oboInOwl:id xml:lang="en">CHEBI:36931</oboInOwl:id>
+        <rdfs:label>carbon-12</rdfs:label>
+        <skos:definition xml:lang="en">the most common natural carbon isotope, of mass 12. It is the basis for the accepted scale of atomic mass units.</skos:definition>
     </owl:Class>
     
 
 
     <!-- http://purl.obolibrary.org/obo/CHEBI_50860 -->
 
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_50860"/>
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/CHEBI_50860">
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_50860</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">organic compounds, organic entity, organic molecular entities</odo:ECSO_01000008>
+        <oboInOwl:hasAlternativeId xml:lang="en">CHEBI:25700, CHEBI:33244</oboInOwl:hasAlternativeId>
+        <oboInOwl:id xml:lang="en">Any molecular entity that contains carbon.</oboInOwl:id>
+        <oboInOwl:id>CHEBI:50860</oboInOwl:id>
+    </owl:Class>
     
 
 
@@ -4235,7 +4363,7 @@ a long-lived naturally occurring radioactive carbon isotope of mass 14 (6 proton
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001000"/>
-                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000565"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27594"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <odo:ECSO_01000004 xml:lang="en">Organic matter or organic material, natural organic matter refers to the large pool of carbon-based compounds found within natural and engineered, terrestrial and aquatic environments.</odo:ECSO_01000004>
@@ -4274,6 +4402,7 @@ a long-lived naturally occurring radioactive carbon isotope of mass 14 (6 proton
                 <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000317"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <odo:ECSO_01000008 xml:lang="en">water_ice, frost</odo:ECSO_01000008>
     </rdf:Description>
     
 
@@ -4288,8 +4417,9 @@ a long-lived naturally occurring radioactive carbon isotope of mass 14 (6 proton
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000635">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000324"/>
+        <odo:ECSO_01000001 xml:lang="en">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/ENVO_01000635</odo:ECSO_01000003>
-        <odo:ECSO_01000008 xml:lang="en">Ground</odo:ECSO_01000008>
+        <odo:ECSO_01000008 xml:lang="en">ground</odo:ECSO_01000008>
         <obo:IAO_0000115 xml:lang="en">Land is a planetary surface that is not covered by liquid. [database_cross_reference: Adpated from Wikipedia:Planetary_surface]</obo:IAO_0000115>
         <rdfs:label xml:lang="en">land</rdfs:label>
     </owl:Class>
@@ -4301,6 +4431,7 @@ a long-lived naturally occurring radioactive carbon isotope of mass 14 (6 proton
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000786">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500000"/>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/ENVO_01000786</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">conflagration, wildfire</odo:ECSO_01000008>
         <rdfs:label xml:lang="en">fire</rdfs:label>
         <skos:definition xml:lang="en">A fire is a process whereby rapid and exothermic oxidation of a material through a combustion process releases heat, light, and other products. [database_cross_reference: http://www.eionet.europa.eu/gemet/concept?cp=3212][database_cross_reference: https://en.wikipedia.org/wiki/Fire]</skos:definition>
     </owl:Class>
@@ -4324,7 +4455,7 @@ a long-lived naturally occurring radioactive carbon isotope of mass 14 (6 proton
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000830">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500000"/>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/ENVO_01000830</odo:ECSO_01000003>
-        <odo:ECSO_01000008 xml:lang="en">rainfall, rain</odo:ECSO_01000008>
+        <odo:ECSO_01000008 xml:lang="en">rainfall, rain, rainwater</odo:ECSO_01000008>
         <rdfs:label xml:lang="en">water-based rainfall</rdfs:label>
         <skos:definition xml:lang="en">A hydrological precipitation process in which atmospheric water vapour condenses to form droplets of liquid water massive enough to fall to a planetary surface due to the planet&apos;s gravity. [database_cross_reference: https://en.wikipedia.org/wiki/Rain]</skos:definition>
     </owl:Class>
@@ -4340,6 +4471,7 @@ a long-lived naturally occurring radioactive carbon isotope of mass 14 (6 proton
                 <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000573"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/ENVO_01001305</odo:ECSO_01000003>
     </rdf:Description>
     
 
@@ -4366,11 +4498,24 @@ a long-lived naturally occurring radioactive carbon isotope of mass 14 (6 proton
     
 
 
+    <!-- http://purl.obolibrary.org/obo/ENVO_02500008 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02500008">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500000"/>
+        <odo:ECSO_01000008 xml:lang="en">respiration</odo:ECSO_01000008>
+        <rdfs:label xml:lang="en">ecosystem-wide respiration</rdfs:label>
+        <skos:definition xml:lang="en">A process which consists of all respiration processes instantiated in an ecosystem.</skos:definition>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/ENVO_02500008</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/ENVO_02500034 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_02500034">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500000"/>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/ENVO_02500034</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">vaporization, vaporisation</odo:ECSO_01000008>
         <rdfs:label xml:lang="en">evaporation</rdfs:label>
         <skos:definition xml:lang="en">Evaporation is a form of vaporisation which occurs when a portion of the surface layer of a liquid in contact with a gaseous material, which is not saturated with the evaporating substance, vaporises. [database_cross_reference: Adapted from Wikipedia:Evaporation]</skos:definition>
     </owl:Class>
@@ -4783,23 +4928,11 @@ size</rdfs:comment>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001309"/>
-                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000565"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27594"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/ENVO_02500010</odo:ECSO_01000003>
         <rdfs:label xml:lang="en">carbon cycling</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/RO_0000056#ecosystem-wide_respiration -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/RO_0000056#ecosystem-wide_respiration">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_02500000"/>
-        <odo:ECSO_01000008 xml:lang="en">respiration</odo:ECSO_01000008>
-        <rdfs:label xml:lang="en">ecosystem-wide respiration</rdfs:label>
-        <skos:definition xml:lang="en">A process which consists of all respiration processes instantiated in an ecosystem.</skos:definition>
-        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/ENVO_02500008</skos:definition>
     </owl:Class>
     
 
@@ -5440,8 +5573,8 @@ size</rdfs:comment>
         <rdfs:label xml:lang="en">AmountOfSubstanceMass</rdfs:label>
         <odo:ECSO_01000003 xml:lang="en">WordNet</odo:ECSO_01000003>
         <odo:ECSO_01000001 xml:lang="en">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
-        <odo:ECSO_01000008 xml:lang="en">bulk</odo:ECSO_01000008>
         <skos:definition xml:lang="en">the property of a body that causes it to have weight in a gravitational field</skos:definition>
+        <odo:ECSO_01000008 xml:lang="en">bulk</odo:ECSO_01000008>
     </rdf:Description>
     <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#AmountOfSubstanceWeight">
         <odo:ECSO_01000003 xml:lang="en">WordNet</odo:ECSO_01000003>
@@ -5505,8 +5638,8 @@ https://en.wikipedia.org/wiki/Mass_flow_rate</rdfs:comment>
         <odo:ECSO_01000008 xml:lang="en">counting, numeration, enumeration, reckoning, tally</odo:ECSO_01000008>
         <skos:definition xml:lang="en">the total number counted</skos:definition>
         <odo:ECSO_01000001 xml:lang="en">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
-        <rdfs:label xml:lang="en">Count</rdfs:label>
         <odo:ECSO_01000003 xml:lang="en">WordNet</odo:ECSO_01000003>
+        <rdfs:label xml:lang="en">Count</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#Current">
         <odo:ECSO_01000003 xml:lang="en">WordNet</odo:ECSO_01000003>
@@ -5558,8 +5691,8 @@ https://en.wikipedia.org/wiki/Mass_flow_rate</rdfs:comment>
     <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#Inductance">
         <odo:ECSO_01000003 xml:lang="en">https://en.wikipedia.org/wiki/Inductance</odo:ECSO_01000003>
         <odo:ECSO_01000001 xml:lang="en">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
-        <rdfs:label xml:lang="en">Inductance</rdfs:label>
         <odo:ECSO_01000008 xml:lang="en">induction</odo:ECSO_01000008>
+        <rdfs:label xml:lang="en">Inductance</rdfs:label>
         <skos:definition xml:lang="en">Inductance is the property of an electrical conductor by which a change in current through it induces an electromotive force in both the conductor itself[1] and in any nearby conductors by mutual inductance.</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#LifeStage">
@@ -5576,12 +5709,12 @@ https://en.wikipedia.org/wiki/Mass_flow_rate</rdfs:comment>
         <odo:ECSO_01000001 xml:lang="en">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <odo:ECSO_01000008 xml:lang="en">brightness, brightness level, luminance, luminousness, light</odo:ECSO_01000008>
         <rdfs:label xml:lang="en">Luminosity</rdfs:label>
-        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Luminosity</odo:ECSO_01000003>
         <skos:definition xml:lang="en">Luminosity is the total amount of energy emitted by a star, galaxy, or other astronomical object per unit time. It is related to the brightness, which is the luminosity of an object in a given spectral region.</skos:definition>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Luminosity</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#MagneticFieldStrength">
-        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <rdfs:label xml:lang="en">MagneticFieldStrength</rdfs:label>
+        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Magnetic_field</odo:ECSO_01000003>
         <skos:definition xml:lang="en">A magnetic field is the magnetic effect of electric currents and magnetic materials. The magnetic field at any given point is specified by both a direction and a magnitude (or strength); as such it is a vector field.</skos:definition>
     </rdf:Description>
@@ -5655,8 +5788,8 @@ https://en.wikipedia.org/wiki/Mass_flow_rate</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#Resistivity">
         <skos:definition xml:lang="en">material&apos;s opposition to the flow of electric current; measured in ohms</skos:definition>
-        <odo:ECSO_01000003 xml:lang="en">WordNet</odo:ECSO_01000003>
         <rdfs:label xml:lang="en">Resistivity</rdfs:label>
+        <odo:ECSO_01000003 xml:lang="en">WordNet</odo:ECSO_01000003>
         <odo:ECSO_01000001 xml:lang="en">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <odo:ECSO_01000008 xml:lang="en">ohmic_resistance</odo:ECSO_01000008>
     </rdf:Description>
@@ -5724,7 +5857,11 @@ https://en.wikipedia.org/wiki/Mass_flow_rate</rdfs:comment>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Wavenumber</odo:ECSO_01000003>
         <skos:definition xml:lang="en">The wavenumber is the spatial frequency of a wave, either in cycles per unit distance or radians per unit distance. It can be envisaged as the number of waves that exist over a specified distance.</skos:definition>
     </rdf:Description>
+    <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#CategoricalStandard">
+        <rdfs:label xml:lang="en">CategoricalStandard</rdfs:label>
+    </rdf:Description>
     <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Index">
+        <rdfs:label xml:lang="en">Index</rdfs:label>
         <rdfs:comment xml:lang="en">Confirm: Should the index_MeasurementType replace this class?</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#characteristicFor">
@@ -5796,8 +5933,8 @@ https://en.wikipedia.org/wiki/Mass_flow_rate</rdfs:comment>
         <odo:ECSO_01000004>Carbon fluxes are the movement of Carbon from one place (Source) to another (Sink).  Carbon fluxes all have dimensions of {mass or amount of} Carbon per area (or volume) per time
 
 biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than kg to quantify the amount of Carbon, whereas Climate-oriented projects use kg</odo:ECSO_01000004>
-        <odo:ECSO_01000003>Litton, C.M. et al. Carbon allocation in forest ecosystems. Global Change Biology. V 13 I 10. pp. 2089 - 2109. July 2007.</odo:ECSO_01000003>
         <skos:definition>The rate at which a mass of carbon moves to or from a particular component of the ecosystem per unit time.</skos:definition>
+        <odo:ECSO_01000003>Litton, C.M. et al. Carbon allocation in forest ecosystems. Global Change Biology. V 13 I 10. pp. 2089 - 2109. July 2007.</odo:ECSO_01000003>
         <odo:ECSO_01000005>unknown.</odo:ECSO_01000005>
         <rdfs:label>Carbon Flux</rdfs:label>
     </rdf:Description>
@@ -5877,11 +6014,11 @@ Synonyms: GPP</rdfs:comment>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000021">
         <skos:altLabel>Net Primary Productivity</skos:altLabel>
         <skos:altLabel>NPP</skos:altLabel>
-        <odo:ECSO_01000003>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</odo:ECSO_01000003>
         <rdfs:comment>the amount of primary production available for export (ie, gross, minus losses, like the autotrophs&apos; own respiration, or other loss (exudation) not used by the carbon-fixing organism itself)
 = gross primary production - autotrophic respiration
 
 synonyms: NPP</rdfs:comment>
+        <odo:ECSO_01000003>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</odo:ECSO_01000003>
         <rdfs:label>Net Primary Production Carbon Flux</rdfs:label>
         <skos:altLabel>Net Primary Production</skos:altLabel>
         <skos:definition>Gross primary production (GPP) minus autotrophic respiration (AR) per unit ground or water area and time.</skos:definition>
@@ -5890,7 +6027,6 @@ synonyms: NPP</rdfs:comment>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000025">
         <odo:ECSO_01000003>&quot;carbon pool.&quot; McGraw-Hill Dictionary of Scientific &amp; Technical Terms, 6E. 2003. The McGraw-Hill Companies, Inc. 20 Feb. 2015 http-encyclopedia2.thefreedictionary.com/carbon+pool</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
-        <odo:ECSO_01000004>Carbon Pools are reservoirs in the system with the capacity to exchange. Usually scientists are interested in the size of carbon pools, and the movement of carbon between pools. Carbon pools can vary widely in scale, from an ecosystem to an species functional level. The dimensions are likely to be mass or moles Carbon per area (eg, kg per m2).</odo:ECSO_01000004>
         <odo:ECSO_01000005>O&apos;Brien, pers comm. 2015-02-20</odo:ECSO_01000005>
         <rdfs:comment>Carbon Pools are amounts of carbon in the system. measurements of carbon pools would have dimensions of mass Carbon per area (eg, kg per m2
 (can these be moles? can they just be biomass?) 
@@ -5936,8 +6072,8 @@ synonyms: NPP</rdfs:comment>
         <odo:ECSO_01000003>&quot;grass.&quot; Collins English Dictionary – Complete and Unabridged. 1991, 1994, 1998, 2000, 2003. HarperCollins Publishers 24 Feb. 2015 http-www.thefreedictionary.com/grass</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000033">
-        <odo:ECSO_01000003>&quot;wood.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Feb. 2015 http-www.thefreedictionary.com/wood</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
+        <odo:ECSO_01000003>&quot;wood.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Feb. 2015 http-www.thefreedictionary.com/wood</odo:ECSO_01000003>
         <skos:definition>The mass of carbon contained in the tough, fibrous substance lying beneath the bark of trees and shrubs, consisting of the vascular tissue known as xylem and composed chiefly of cellulose and lignin.</skos:definition>
         <rdfs:label>Wood Carbon Pool</rdfs:label>
     </rdf:Description>
@@ -5999,8 +6135,8 @@ synonyms: NPP</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000047">
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Ecosystem_respiration</odo:ECSO_01000005>
-        <odo:ECSO_01000004 xml:lang="en">Ecosystem respiration is the sum of all respiration occurring by the living organisms in a specific ecosystem.</odo:ECSO_01000004>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
+        <odo:ECSO_01000004 xml:lang="en">Ecosystem respiration is the sum of all respiration occurring by the living organisms in a specific ecosystem.</odo:ECSO_01000004>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <rdfs:label>Total_Respiration_MOV</rdfs:label>
         <skos:definition>Total respiration (TotalResp=AutoResp+heteroResp, always positive)</skos:definition>
@@ -6024,15 +6160,15 @@ synonyms: NPP</rdfs:comment>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000050">
         <rdfs:label>Leaf_Area_Index_MOV</rdfs:label>
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Leaf_area_index</odo:ECSO_01000005>
-        <skos:definition>Area of leaves per area ground</skos:definition>
         <odo:ECSO_01000004 xml:lang="en">Leaf area index is a dimensionless quantity that characterizes plant canopies. It is defined as the one-sided green leaf area per unit ground surface area (LAI = leaf area / ground area, m2 / m2) in broadleaf canopies.</odo:ECSO_01000004>
+        <skos:definition>Area of leaves per area ground</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000051">
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
-        <skos:definition>Surface pressure</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
+        <skos:definition>Surface pressure</skos:definition>
         <odo:ECSO_01000004 xml:lang="en">In atmospheric science, surface pressure is the atmospheric pressure at a location on Earth&apos;s surface. It is directly proportional to the mass of air over that location.</odo:ECSO_01000004>
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Surface_pressure</odo:ECSO_01000005>
         <rdfs:label>Surface_Pressure_MOV</rdfs:label>
@@ -6040,8 +6176,8 @@ synonyms: NPP</rdfs:comment>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000052">
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <rdfs:label>Average_Layer_Soil_Moisture_MOV</rdfs:label>
-        <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Water_content</odo:ECSO_01000005>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
+        <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Water_content</odo:ECSO_01000005>
         <skos:definition>Soil water content in each soil layer, including liquid, vapor and ice</skos:definition>
         <odo:ECSO_01000004 xml:lang="en">Water content or moisture content is the quantity of water contained in a material... Water content is expressed as a ratio, which can range from 0 (completely dry) to the value of the materials&apos; porosity at saturation. It can be given on a volumetric or mass (gravimetric) basis.</odo:ECSO_01000004>
     </rdf:Description>
@@ -6132,8 +6268,8 @@ synonyms: NPP</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000064">
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Primary_production#GPP_and_NPP</odo:ECSO_01000005>
-        <skos:definition>MsTMIP Output: Rate of photosynthesis (always positive)</skos:definition>
         <rdfs:label>Gross_Primary_Productivity_MOV</rdfs:label>
+        <skos:definition>MsTMIP Output: Rate of photosynthesis (always positive)</skos:definition>
         <odo:ECSO_01000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">Margaret O&apos;Brien, http://orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000004 xml:lang="en">Gross Primary productivity is the rate at which photosynthesis or chemosynthesis occurs.</odo:ECSO_01000004>
@@ -6185,11 +6321,11 @@ synonyms: NPP</rdfs:comment>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000071">
-        <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Wildfire</odo:ECSO_01000005>
         <rdfs:label>Fire_Emissions_MOV</rdfs:label>
+        <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Wildfire</odo:ECSO_01000005>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
-        <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000004 xml:lang="en">A wildfire or wildland fire is an uncontrolled fire in an area of combustible vegetation that occurs in the countryside (i.e., not in an urban area).</odo:ECSO_01000004>
+        <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Flux of carbon due to fires (always positive)</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000072">
@@ -6233,8 +6369,8 @@ synonyms: NPP</rdfs:comment>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000077">
         <skos:definition>Net Primary Productivity (NPP=GPP-AutoResp, positive into plants)</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
-        <rdfs:label>Shortwave_Albedo_MOV</rdfs:label>
         <skos:definition>Shortwave albedo</skos:definition>
+        <rdfs:label>Shortwave_Albedo_MOV</rdfs:label>
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Albedo</odo:ECSO_01000005>
         <rdfs:comment>mob thinks NPP SKOS definition is in here by mistake. because abedo is reflected light flux. it also might be a proportion (mstimip&apos;s)</rdfs:comment>
         <rdfs:label>Net_Primary_Productivity_MOV</rdfs:label>
@@ -6248,9 +6384,9 @@ synonyms: NPP</rdfs:comment>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000079">
-        <odo:ECSO_01000004 xml:lang="en">Evaporation is a type of vaporization of a liquid that occurs from the surface of a liquid into a gaseous phase that is not saturated with the evaporating substance.</odo:ECSO_01000004>
         <rdfs:label>Total_Evaporation_MOV</rdfs:label>
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Evaporation</odo:ECSO_01000005>
+        <odo:ECSO_01000004 xml:lang="en">Evaporation is a type of vaporization of a liquid that occurs from the surface of a liquid into a gaseous phase that is not saturated with the evaporating substance.</odo:ECSO_01000004>
         <skos:definition>Sum of all evaporation sources (positive into atmosphere)</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -6343,8 +6479,8 @@ So light + dark = GPP (or about as close as you can get with a field measurement
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000207">
         <odo:ECSO_01000003>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000003>
-        <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <skos:definition>Gas phase carbon dioxide molecules in the air surrounding Earth. A principle contributor to climate change and the main source of carbon used by photoautotrophs to store energy during primary production.</skos:definition>
+        <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <rdfs:label>Atmospheric Carbon Dioxide Pool</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000208">
@@ -6362,8 +6498,8 @@ So light + dark = GPP (or about as close as you can get with a field measurement
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000301">
         <rdfs:label>Aboveground Net Primary Production Carbon Flux</rdfs:label>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
-        <skos:definition>Gross primary productivity (GPP) minus autotrophic respiration (AR) in plant segments other than the roots, e.g. leaves and shoots.</skos:definition>
         <odo:ECSO_01000003>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000003>
+        <skos:definition>Gross primary productivity (GPP) minus autotrophic respiration (AR) in plant segments other than the roots, e.g. leaves and shoots.</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000308">
         <skos:definition>Functional levels defined here:
@@ -6401,9 +6537,11 @@ maybe others.
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000312">
         <odo:ECSO_01000001>Margaret O&apos;brien</odo:ECSO_01000001>
         <rdfs:label>Organism</rdfs:label>
-        <skos:definition>An organism is a single indivual. do we really have any carbon cycle data for a single organism? maybe not.
-no ref today.</skos:definition>
+        <odo:ECSO_01000008 xml:lang="en">being</odo:ECSO_01000008>
+        <skos:definition xml:lang="en">An organism is a single individual.</skos:definition>
         <rdfs:comment>This class should be incorporated into ENVO.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Confirm: compare with ENVO (anatomical entity)</rdfs:comment>
+        <rdfs:comment xml:lang="en">Do we really have any carbon cycle data for a single organism? (MOB)</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000313">
         <odo:ECSO_01000003>http://www.physicalgeography.net/fundamentals/9d.html</odo:ECSO_01000003>
@@ -6437,18 +6575,29 @@ no ref today.</skos:definition>
         <odo:ECSO_01000003> http://purl.obolibrary.org/obo/CHEBI_41609
 </odo:ECSO_01000003>
         <skos:altLabel>CO3</skos:altLabel>
+        <odo:ECSO_01000004 xml:lang="en">In chemistry, a carbonate is a salt of carbonic acid, characterized by the presence of the carbonate ion, CO2−3. The name may also mean an ester of carbonic acid, an organic compound containing the carbonate group.</odo:ECSO_01000004>
+        <oboInOwl:id xml:lang="en">CHEBI:41609</oboInOwl:id>
+        <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Carbonate</odo:ECSO_01000005>
+        <odo:ECSO_01000008 xml:lang="en">carbonate ion</odo:ECSO_01000008>
         <rdfs:label>Carbonate</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000326">
+        <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Bicarbonate</odo:ECSO_01000005>
         <skos:definition>Carbon oxoanions resulting from the removal of a proton from carbonic acid.</skos:definition>
+        <oboInOwl:hasAlternativeId xml:lang="en">CHEBI:22863, CHEBI:40961, CHEBI:5589, CHEBI:13363</oboInOwl:hasAlternativeId>
         <rdfs:label>Bicarbonate</rdfs:label>
+        <odo:ECSO_01000008 xml:lang="en">Acid carbonate, Bicarbonate, BICARBONATE ION, HCO3-, hydrogencarbonate</odo:ECSO_01000008>
+        <oboInOwl:id xml:lang="en">CHEBI:17544</oboInOwl:id>
+        <odo:ECSO_01000004 xml:lang="en">Bicarbonate is an intermediate form in the deprotonation of carbonic acid. It is a polyatomic anion with the chemical formula HCO−3. Bicarbonate serves a crucial biochemical role in the physiological pH buffering system.</odo:ECSO_01000004>
         <odo:ECSO_01000003>http://purl.obolibrary.org/obo/CHEBI_17544</odo:ECSO_01000003>
         <skos:altLabel>HCO3</skos:altLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000327">
         <skos:definition>Any member of the class of organooxygen compounds that is a polyhydroxy-aldehyde or -ketone or a lactol resulting from their intramolecular condensation (monosaccharides); substances derived from these by reduction of the carbonyl group (alditols), by oxidation of one or more hydroxy groups to afford the corresponding aldehydes, ketones, or carboxylic acids, or by replacement of one or more hydroxy group(s) by a hydrogen atom; and polymeric products arising by intermolecular acetal formation between two or more such molecules (disaccharides, polysaccharides and oligosaccharides). Carbohydrates contain only carbon, hydrogen and oxygen atoms; prior to any oxidation or reduction, most have the empirical formula Cm(H2O)n. Compounds obtained from carbohydrates by substitution, etc., are known as carbohydrate derivatives and may contain other elements. Cyclitols are generally not regarded as carbohydrates.</skos:definition>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_16646</odo:ECSO_01000003>
         <rdfs:label>Carbohydrate</rdfs:label>
-        <odo:ECSO_01000003>http://purl.obolibrary.org/obo/CHEBI_16646</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">saccharide, saccharides</odo:ECSO_01000008>
+        <oboInOwl:id>CHEBI:16646</oboInOwl:id>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_01000001">
         <rdfs:label>definition_Contributor</rdfs:label>
@@ -6513,6 +6662,253 @@ As description Annotation properties are often not as rigorous, and hence looser
         <skos:definition>has_Related_Synonym is an owl annotation property to hold a term that is not an owl class, but is a primary term found in the literature but is not necessarily correct.</skos:definition>
         <rdfs:label>has_Related_Synonym</rdfs:label>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_18059">
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_18059</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">Lipid</odo:ECSO_01000008>
+        <oboInOwl:id>CHEBI:18059</oboInOwl:id>
+        <oboInOwl:hasAlternativeId>CHEBI:25054, CHEBI:14517, CHEBI:6486</oboInOwl:hasAlternativeId>
+        <skos:definition xml:lang="en">&apos;Lipids&apos; is a loosely defined term for substances of biological origin that are soluble in nonpolar solvents. They consist of saponifiable lipids, such as glycerides (fats and oils) and phospholipids, as well as nonsaponifiable lipids, principally steroids.</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_22563">
+        <odo:ECSO_01000004 xml:lang="en">An anion is an ion with more electrons than protons, giving it a net negative charge (since electrons are negatively charged and protons are positively charged).</odo:ECSO_01000004>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_22563</odo:ECSO_01000003>
+        <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Ion#Anions_and_cations</odo:ECSO_01000005>
+        <odo:ECSO_01000008 xml:lang="en">anions</odo:ECSO_01000008>
+        <skos:definition xml:lang="en">A monoatomic or polyatomic species having one or more elementary charges of the electron.</skos:definition>
+        <oboInOwl:id xml:lang="en">CHEBI:22563</oboInOwl:id>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_22629">
+        <oboInOwl:id xml:lang="en">CHEBI:22629</oboInOwl:id>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_22629</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">arsenate, arsenate anions, arsenate ions</odo:ECSO_01000008>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_22718">
+        <oboInOwl:id xml:lang="en">CHEBI:22718</oboInOwl:id>
+        <odo:ECSO_01000008 xml:lang="en">benzoate anion</odo:ECSO_01000008>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_22718</odo:ECSO_01000003>
+        <skos:definition xml:lang="en">A monocarboxylic acid anion obtained by deprotonation of the carboxy group of any benzoic acid.</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24675">
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_24675</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">hydroxybenzoates</odo:ECSO_01000008>
+        <oboInOwl:id>CHEBI:24675</oboInOwl:id>
+        <obo:IAO_0000115 xml:lang="en">Any benzoate derivative carrying a single carboxylate group and at least one hydroxy substituent.</obo:IAO_0000115>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24834">
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_24834</odo:ECSO_01000003>
+        <oboInOwl:id xml:lang="en">CHEBI:24834</oboInOwl:id>
+        <odo:ECSO_01000008 xml:lang="en">inorganic anions</odo:ECSO_01000008>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24870">
+        <oboInOwl:id>CHEBI:24870</oboInOwl:id>
+        <odo:ECSO_01000004 xml:lang="en">An ion is an atom or a molecule in which the total number of electrons is not equal to the total number of protons, giving the atom or molecule a net positive or negative electrical charge. Ions can be created, by either chemical or physical means, via ionization.</odo:ECSO_01000004>
+        <odo:ECSO_01000008 xml:lang="en">ions</odo:ECSO_01000008>
+        <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Ion</odo:ECSO_01000005>
+        <skos:definition xml:lang="en">A molecular entity having a net electric charge.</skos:definition>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_24870</odo:ECSO_01000003>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_25388">
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_25388</odo:ECSO_01000003>
+        <oboInOwl:id xml:lang="en">CHEBI:25388</oboInOwl:id>
+        <odo:ECSO_01000008 xml:lang="en">monohydroxybenzoates</odo:ECSO_01000008>
+        <skos:definition xml:lang="en">A hydroxybenzoate carrying a single hydroxy substituent at unspecified position.</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_25696">
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_25696</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">organic anions</odo:ECSO_01000008>
+        <oboInOwl:id>CHEBI:25696</oboInOwl:id>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_25699">
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_25699</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">organic ions</odo:ECSO_01000008>
+        <oboInOwl:id xml:lang="en">CHEBI:25699</oboInOwl:id>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_26178">
+        <oboInOwl:id>CHEBI:26178</oboInOwl:id>
+        <skos:definition xml:lang="en">polyester, polyesters</skos:definition>
+        <skos:definition xml:lang="en">A macromolecule composed of units connected by carboxylic ester (-O-CO-) linkages.</skos:definition>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_26178</odo:ECSO_01000003>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_26490">
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_26490</odo:ECSO_01000003>
+        <skos:definition xml:lang="en">A cyclitol carboxylic acid anion that is conjugate base of quinic acid.</skos:definition>
+        <oboInOwl:id xml:lang="en">CHEBI:26490</oboInOwl:id>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_27563">
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_27563</odo:ECSO_01000003>
+        <oboInOwl:id xml:lang="en">CHEBI:27563</oboInOwl:id>
+        <oboInOwl:hasAlternativeId xml:lang="en">CHEBI:2845, CHEBI:22630</oboInOwl:hasAlternativeId>
+        <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Arsenic</odo:ECSO_01000005>
+        <odo:ECSO_01000004 xml:lang="en">Arsenic is a chemical element with symbol As and atomic number 33. Arsenic occurs in many minerals, usually in combination with sulfur and metals, but also as a pure elemental crystal. Arsenic is a metalloid.</odo:ECSO_01000004>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_29067">
+        <oboInOwl:id xml:lang="en">CHEBI:29067</oboInOwl:id>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_29067</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">a carboxylate, carboxylic acid anions, carboxylic anions</odo:ECSO_01000008>
+        <skos:definition xml:lang="en">The conjugate base formed when the carboxy group of a carboxylic acid is deprotonated.</skos:definition>
+        <oboInOwl:hasAlternativeId xml:lang="en">CHEBI:13626, CHEBI:13945, CHEBI:23026, CHEBI:58657</oboInOwl:hasAlternativeId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_29125">
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_29125</odo:ECSO_01000003>
+        <oboInOwl:id xml:lang="en">CHEBI:29125</oboInOwl:id>
+        <skos:definition xml:lang="en">An arsenate ion resulting from the removal of three protons from arsenic acid.</skos:definition>
+        <odo:ECSO_01000008 xml:lang="en">Arsenate, ARSENATE, Arsenate ion, AsO43−</odo:ECSO_01000008>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_30762">
+        <oboInOwl:hasAlternativeId xml:lang="en">CHEBI:15061, CHEBI:26595</oboInOwl:hasAlternativeId>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_30762</odo:ECSO_01000003>
+        <oboInOwl:id xml:lang="en">CHEBI:30762</oboInOwl:id>
+        <odo:ECSO_01000008 xml:lang="en">2-hydroxybenzoic acid ion(1−), o-hydroxybenzoate, sal, salicylate</odo:ECSO_01000008>
+        <skos:definition xml:lang="en">A monohydroxybenzoate that is the conjugate base of salicylic acid.</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33250">
+        <skos:definition xml:lang="en">A chemical entity constituting the smallest component of an element having the chemical properties of the element.</skos:definition>
+        <oboInOwl:id xml:lang="en">CHEBI:33250</oboInOwl:id>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_33250</odo:ECSO_01000003>
+        <odo:ECSO_01000007 xml:lang="en">p-block element atom is an atom</odo:ECSO_01000007>
+        <odo:ECSO_01000008 xml:lang="en">element, elements</odo:ECSO_01000008>
+        <oboInOwl:hasAlternativeId xml:lang="en">CHEBI:22671, CHEBI:23907</oboInOwl:hasAlternativeId>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33273">
+        <odo:ECSO_01000008 xml:lang="en">polyatomic anions</odo:ECSO_01000008>
+        <skos:definition xml:lang="en">An anion consisting of more than one atom.</skos:definition>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_33273</odo:ECSO_01000003>
+        <oboInOwl:id xml:lang="en">CHEBI:33273</oboInOwl:id>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33285">
+        <oboInOwl:id>CHEBI:33285</oboInOwl:id>
+        <odo:ECSO_01000008 xml:lang="en">heteroorganic entities, organoelement compounds</odo:ECSO_01000008>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_33285</odo:ECSO_01000003>
+        <skos:definition xml:lang="en">A heteroorganic entity is an organic molecular entity in which carbon atoms or organic groups are bonded directly to one or more heteroatoms.</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33318">
+        <oboInOwl:id xml:lang="en">CHEBI:33318</oboInOwl:id>
+        <skos:definition xml:lang="en">An atom belonging to one of the main groups (found in the s- and p- blocks) of the periodic table.</skos:definition>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_33318</odo:ECSO_01000003>
+        <skos:definition xml:lang="en">p-block element atom is a main group element atom</skos:definition>
+        <odo:ECSO_01000008 xml:lang="en">main group element</odo:ECSO_01000008>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33459">
+        <oboInOwl:id>CHEBI:33459</oboInOwl:id>
+        <oboInOwl:id xml:lang="en">pnictogen oxoanion, pnictogen oxoanions</oboInOwl:id>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_33459</odo:ECSO_01000003>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33521">
+        <oboInOwl:id xml:lang="en">CHEBI:33521</oboInOwl:id>
+        <odo:ECSO_01000004 xml:lang="en">A metal is a material (an element, compound, or alloy) that is typically hard, opaque, shiny, and has good electrical and thermal conductivity. Metals are generally malleable — that is, they can be hammered or pressed permanently out of shape without breaking or cracking — as well as fusible (able to be fused or melted) and ductile (able to be drawn out into a thin wire). About 91 of the 118 elements in the periodic table are metals, the others are nonmetals or metalloids. Some elements appear in both metallic and non-metallic forms. Astrophysicists use the term &quot;metal&quot; to collectively describe all elements other than hydrogen and helium. In that sense, the metallicity of an object is the proportion of its matter made up of chemical elements other than hydrogen and helium. Many elements and compounds that are not normally classified as metals become metallic under high pressures; these are formed as metallic allotropes of non-metals.</odo:ECSO_01000004>
+        <odo:ECSO_01000008 xml:lang="en">elemental metal, elemental metals, metal element, metal elements, metals</odo:ECSO_01000008>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_33521</odo:ECSO_01000003>
+        <odo:ECSO_01000007 xml:lang="en">metal atom is an atom</odo:ECSO_01000007>
+        <skos:definition xml:lang="en">An atom of an element that exhibits typical metallic properties, being typically shiny, with high electrical and thermal conductivity.</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33579">
+        <odo:ECSO_01000008 xml:lang="en">main group compounds, main group molecular entities</odo:ECSO_01000008>
+        <oboInOwl:id xml:lang="en">CHEBI:33579</oboInOwl:id>
+        <skos:definition xml:lang="en">A molecular entity containing one or more atoms from any of groups 1, 2, 13, 14, 15, 16, 17, and 18 of the periodic table.</skos:definition>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_33579</odo:ECSO_01000003>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33675">
+        <odo:ECSO_01000008 xml:lang="en">p-block compounds, p-block molecular entities, p-block molecular entitiy</odo:ECSO_01000008>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_33675</odo:ECSO_01000003>
+        <oboInOwl:id xml:lang="en">CHEBI:33675</oboInOwl:id>
+        <skos:definition xml:lang="en">A main group molecular entity that contains one or more atoms of a p-block element.</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35402">
+        <odo:ECSO_01000008 xml:lang="en">chromium oxoanion, chromium oxoanions, oxoanions of chromium</odo:ECSO_01000008>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_35402</odo:ECSO_01000003>
+        <oboInOwl:id>CHEBI:35402</oboInOwl:id>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35404">
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_35404</odo:ECSO_01000003>
+        <oboInOwl:id>CHEBI:35404</oboInOwl:id>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35405">
+        <oboInOwl:id xml:lang="en">CHEBI:35405</oboInOwl:id>
+        <odo:ECSO_01000008 xml:lang="en">transition metal oxoanion, transition metal oxoanions, transition element oxoanions</odo:ECSO_01000008>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_35405</odo:ECSO_01000003>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35406">
+        <oboInOwl:id xml:lang="en">CHEBI:35406</oboInOwl:id>
+        <oboInOwl:id xml:lang="en">oxoacid anions, oxoanions</oboInOwl:id>
+        <skos:definition xml:lang="en">An oxoanion is an anion derived from an oxoacid by loss of hydron(s) bound to oxygen.</skos:definition>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_35406</odo:ECSO_01000003>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35701">
+        <oboInOwl:id>CHEBI:35701</oboInOwl:id>
+        <skos:definition xml:lang="en">A compound formally derived from an oxoacid RkE(=O)l(OH)m (l &gt; 0) and an alcohol, phenol, heteroarenol, or enol by linking with formal loss of water from an acidic hydroxy group of the former and a hydroxy group of the latter.</skos:definition>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_35701</odo:ECSO_01000003>
+        <oboInOwl:hasAlternativeId xml:lang="en">CHEBI:4859, CHEBI:23960</oboInOwl:hasAlternativeId>
+        <odo:ECSO_01000008 xml:lang="en">Ester, esters</odo:ECSO_01000008>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35757">
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_35757</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">a monocarboxylate, Carboxylate, Monocarboxylate, monocarboxylates, monocarboxylic acid anions</odo:ECSO_01000008>
+        <oboInOwl:id xml:lang="en">CHEBI:35757</oboInOwl:id>
+        <oboInOwl:hasAlternativeId xml:lang="en">CHEBI:3407, CHEBI:13657, CHEBI:25382</oboInOwl:hasAlternativeId>
+        <skos:definition xml:lang="en">A carboxylic acid anion formed when the carboxy group of a monocarboxylic acid is deprotonated.</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35776">
+        <oboInOwl:id xml:lang="en">CHEBI:35776</oboInOwl:id>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_35776</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">arsenic oxoanion, arsenic oxoanions, oxoanions of arsenic</odo:ECSO_01000008>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_36059">
+        <odo:ECSO_01000008 xml:lang="en">hydroxy monocarboxylic acid anions, hydroxymonocarboxylic acid anion, hydroxymonocarboxylic acid anions</odo:ECSO_01000008>
+        <odo:ECSO_01000003 xml:lang="en">http://purl.obolibrary.org/obo/CHEBI_36059</odo:ECSO_01000003>
+        <skos:definition xml:lang="en">Any monocarboxylic acid anion carrying at least one hydroxy substituent.</skos:definition>
+        <oboInOwl:id xml:lang="en">CHEBI:36059</oboInOwl:id>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_36125">
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_36125</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">cyclitol carboxylic acid anions</odo:ECSO_01000008>
+        <oboInOwl:id>CHEBI:36125</oboInOwl:id>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_36358">
+        <odo:ECSO_01000008 xml:lang="en">polyatomic ions</odo:ECSO_01000008>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_36358</odo:ECSO_01000003>
+        <skos:definition xml:lang="en">An ion consisting of more than one atom.</skos:definition>
+        <oboInOwl:id xml:lang="en">CHEBI:36358</oboInOwl:id>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_36914">
+        <oboInOwl:id>CHEBI:36914</oboInOwl:id>
+        <odo:ECSO_01000008 xml:lang="en">inorganic ions</odo:ECSO_01000008>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_36914</odo:ECSO_01000003>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_38773">
+        <odo:ECSO_01000008 xml:lang="en">quinolinemonocarboxylates</odo:ECSO_01000008>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_38773</odo:ECSO_01000003>
+        <skos:definition xml:lang="en">A monocarboxylic acid anion that is the monoanion obtained by the deprotonation of the carboxy group attached to the quinoline skeleton</skos:definition>
+        <oboInOwl:id xml:lang="en">CHEBI:38773</oboInOwl:id>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_53387">
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_53387</odo:ECSO_01000003>
+        <skos:definition xml:lang="en">A polymer composed of repeating hydroxyalkanoyl units.</skos:definition>
+        <oboInOwl:id>CHEBI:53387</oboInOwl:id>
+        <odo:ECSO_01000008 xml:lang="en">PHAs, poly(hydroxyalkanoate)s, polyhydroxyalkanoate, polyhydroxyalkanoates</odo:ECSO_01000008>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_53388">
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_53388</odo:ECSO_01000003>
+        <skos:definition xml:lang="en">A polymer composed of repeating hydroxybutyryl units.</skos:definition>
+        <oboInOwl:id>CHEBI:53388</oboInOwl:id>
+        <odo:ECSO_01000008 xml:lang="en">PHB, PHBs, poly(hydroxy butyrate), poly(hydroxy butyrate)s, poly(hydroxybutyrate)s, polyhydroxy butyrate, polyhydroxy butyrates, polyhydroxybutyrate, polyhydroxybutyrates</odo:ECSO_01000008>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_58454">
+        <skos:definition xml:lang="en">A quinolinemonocarboxylate that is the conjugate base of kynurenic acid</skos:definition>
+        <oboInOwl:id xml:lang="en">CHEBI:58454</oboInOwl:id>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_58454</odo:ECSO_01000003>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_64708">
+        <oboInOwl:id>CHEBI:64708</oboInOwl:id>
+        <skos:definition xml:lang="en">An organic molecular entity containing a single carbon atom (C1).</skos:definition>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_64708</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">one-carbon compounds</odo:ECSO_01000008>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_64709">
+        <odo:ECSO_01000008 xml:lang="en">organic acids</odo:ECSO_01000008>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_64709</odo:ECSO_01000003>
+        <skos:definition xml:lang="en">Any organic molecular entity that is acidic and contains carbon in covalent linkage.</skos:definition>
+        <oboInOwl:id>CHEBI:64709</oboInOwl:id>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000015">
         <odo:ECSO_01000003>http://purl.obolibrary.org/obo/ENVO_00000015</odo:ECSO_01000003>
         <odo:ECSO_01000001>Margaret O&amp;apos;Brien, orcid.org/0000-0002-1693-8322
@@ -6533,6 +6929,10 @@ note: ENVO also references LTER:41</rdfs:comment>
         <skos:definition>A grassland biome is a terrestrial biome which includes, across its entire spatial extent, an unbroken layer of grasses (Gramineae), sedges (Cyperaceae) or rushes (Juncaceae).</skos:definition>
         <odo:ECSO_01000003>http://purl.obolibrary.org/obo/ENVO_01000177</odo:ECSO_01000003>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01000325">
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/ENVO_01000325</odo:ECSO_01000003>
+        <skos:definition xml:lang="en">A layer in a water mass, itself composed primarily of water.</skos:definition>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_2100007">
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/ENVO_2100007</odo:ECSO_01000003>
         <odo:ECSO_01000007 xml:lang="en">rhizosphere determined by part of some soil</odo:ECSO_01000007>
@@ -6545,16 +6945,16 @@ note: ENVO also references LTER:41</rdfs:comment>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000069">
         <oboInOwl:inSubset xml:lang="en">attribute_slim</oboInOwl:inSubset>
         <oboInOwl:hasDbXref xml:lang="en">[database_cross_reference: PATOC:GVG]</oboInOwl:hasDbXref>
-        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0000069</odo:ECSO_01000003>
         <oboInOwl:hasOBONamespace xml:lang="en">quality</oboInOwl:hasOBONamespace>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0000069</odo:ECSO_01000003>
         <skos:definition xml:lang="en">A quality inhering in a bearer by virtue of the whether the bearer differs from normal or average.</skos:definition>
         <oboInOwl:id xml:lang="en">PATO:0000069</oboInOwl:id>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000085">
         <odo:ECSO_01000006 xml:lang="en">sensitivity</odo:ECSO_01000006>
         <oboInOwl:hasDbXref xml:lang="en">[database_cross_reference: PATOC:GVG]</oboInOwl:hasDbXref>
-        <oboInOwl:inSubset xml:lang="en">disposition_slim; attribute_slim; relational_slim</oboInOwl:inSubset>
         <oboInOwl:hasOBONamespace xml:lang="en">quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset xml:lang="en">disposition_slim; attribute_slim; relational_slim</oboInOwl:inSubset>
         <oboInOwl:id xml:lang="en">PATO:0000085</oboInOwl:id>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0000085</odo:ECSO_01000003>
         <skos:definition xml:lang="en">A quality inhering in a bearer by virtue of the bearer&apos;s disposition to detect or perceive external stimulation.</skos:definition>
@@ -6582,8 +6982,8 @@ note: ENVO also references LTER:41</rdfs:comment>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0000956</odo:ECSO_01000003>
         <oboInOwl:hasOBONamespace xml:lang="en">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset xml:lang="en">value_slim; disposition_slim</oboInOwl:inSubset>
-        <skos:definition xml:lang="en">A fertility quality inhering in a bearer by virtue of the bearer&apos;s being incapable of initiating, sustaining, or supporting reproduction.</skos:definition>
         <oboInOwl:id xml:lang="en">PATO:0000956</oboInOwl:id>
+        <skos:definition xml:lang="en">A fertility quality inhering in a bearer by virtue of the bearer&apos;s being incapable of initiating, sustaining, or supporting reproduction.</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001428">
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0001428</odo:ECSO_01000003>
@@ -6603,16 +7003,16 @@ note: ENVO also references LTER:41</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001430">
         <skos:definition xml:lang="en">An medium acidity quality inhering in a solution by virtue of the bearer&apos;s a low concentration of H+ ions.</skos:definition>
+        <oboInOwl:hasDbXref xml:lang="en">[database_cross_reference: chemicool:chemicool]</oboInOwl:hasDbXref>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0001430</odo:ECSO_01000003>
         <oboInOwl:id xml:lang="en">PATO:0001430</oboInOwl:id>
-        <oboInOwl:hasDbXref xml:lang="en">[database_cross_reference: chemicool:chemicool]</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace xml:lang="en">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset xml:lang="en">value_slim</oboInOwl:inSubset>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001434">
+        <oboInOwl:id xml:lang="en">PATO:0001434</oboInOwl:id>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0001434</odo:ECSO_01000003>
         <oboInOwl:hasDbXref xml:lang="en">[database_cross_reference: WordNet:WordNet]</oboInOwl:hasDbXref>
-        <oboInOwl:id xml:lang="en">PATO:0001434</oboInOwl:id>
         <oboInOwl:hasOBONamespace xml:lang="en">quality</oboInOwl:hasOBONamespace>
         <skos:definition xml:lang="en">An organismal quality inhering in a bearer by virtue of the bearer&apos;s ability to produce new life or offspring.</skos:definition>
     </rdf:Description>
@@ -6626,25 +7026,25 @@ note: ENVO also references LTER:41</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001455">
         <oboInOwl:inSubset xml:lang="en">disposition_slim; value_slim</oboInOwl:inSubset>
-        <odo:ECSO_01000003 xml:lang="en">A quality inhering in a bearer by virtue of the bearer&apos;s dependence on oxygen.</odo:ECSO_01000003>
         <oboInOwl:id xml:lang="en">PATO:0001455</oboInOwl:id>
+        <odo:ECSO_01000003 xml:lang="en">A quality inhering in a bearer by virtue of the bearer&apos;s dependence on oxygen.</odo:ECSO_01000003>
         <oboInOwl:hasOBONamespace xml:lang="en">quality</oboInOwl:hasOBONamespace>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0001455</odo:ECSO_01000003>
         <oboInOwl:hasDbXref xml:lang="en">[database_cross_reference: PATOC:GVG]</oboInOwl:hasDbXref>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001456">
-        <odo:ECSO_01000003 xml:lang="en">[database_cross_reference: PATOC:GVG]</odo:ECSO_01000003>
         <odo:ECSO_01000003 xml:lang="en">A quality inhering in a bearer by virtue of the bearer&apos;s independence on oxygen.</odo:ECSO_01000003>
-        <oboInOwl:id xml:lang="en">PATO:0001456</oboInOwl:id>
+        <odo:ECSO_01000003 xml:lang="en">[database_cross_reference: PATOC:GVG]</odo:ECSO_01000003>
         <oboInOwl:inSubset xml:lang="en">value_slim; disposition_slim</oboInOwl:inSubset>
+        <oboInOwl:id xml:lang="en">PATO:0001456</oboInOwl:id>
         <oboInOwl:hasOBONamespace xml:lang="en">quality</oboInOwl:hasOBONamespace>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0001456</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001576">
         <oboInOwl:id xml:lang="en">PATO:0001576</oboInOwl:id>
         <oboInOwl:hasOBONamespace xml:lang="en">quality</oboInOwl:hasOBONamespace>
-        <odo:ECSO_01000006 xml:lang="en">high pressure</odo:ECSO_01000006>
         <oboInOwl:inSubset xml:lang="en">value_slim</oboInOwl:inSubset>
+        <odo:ECSO_01000006 xml:lang="en">high pressure</odo:ECSO_01000006>
         <skos:definition xml:lang="en">A pressure which is relatively high.</skos:definition>
         <oboInOwl:hasDbXref xml:lang="en">[database_cross_reference: PATO:GVG]</oboInOwl:hasDbXref>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0001576</odo:ECSO_01000003>
@@ -6679,8 +7079,8 @@ note: ENVO also references LTER:41</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001657">
         <oboInOwl:inSubset xml:lang="en">relational_slim; value_slim</oboInOwl:inSubset>
-        <oboInOwl:hasOBONamespace xml:lang="en">quality</oboInOwl:hasOBONamespace>
         <skos:definition xml:lang="en">A osmolarity which is relatively high.</skos:definition>
+        <oboInOwl:hasOBONamespace xml:lang="en">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:hasDbXref xml:lang="en">[database_cross_reference: PATOC:GVG]</oboInOwl:hasDbXref>
         <oboInOwl:id xml:lang="en">PATO:0001657</oboInOwl:id>
         <odo:ECSO_01000006 xml:lang="en">high osmolarity</odo:ECSO_01000006>
@@ -6728,8 +7128,8 @@ note: ENVO also references LTER:41</rdfs:comment>
         <oboInOwl:hasDbXref xml:lang="en">[database_cross_reference: PATOC:GVG]</oboInOwl:hasDbXref>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001842">
-        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0001842</odo:ECSO_01000003>
         <odo:ECSO_01000006 xml:lang="en">pH</odo:ECSO_01000006>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0001842</odo:ECSO_01000003>
         <oboInOwl:hasOBONamespace xml:lang="en">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:hasDbXref xml:lang="en">[database_cross_reference: biology-online:biology-online]</oboInOwl:hasDbXref>
         <skos:definition xml:lang="en">A concentration quality inhering in a bearer by virtue of the bearer&apos;s containing acid (hydrogen ions).</skos:definition>
@@ -6747,8 +7147,8 @@ note: ENVO also references LTER:41</rdfs:comment>
         <oboInOwl:hasAlternativeId xml:lang="en">PATO:0002061</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref xml:lang="en">[database_cross_reference: PATOC:GVG]</oboInOwl:hasDbXref>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0002182</odo:ECSO_01000003>
-        <odo:ECSO_01000006 xml:lang="en">relational molecular quality</odo:ECSO_01000006>
         <oboInOwl:id xml:lang="en">PATO:0002182</oboInOwl:id>
+        <odo:ECSO_01000006 xml:lang="en">relational molecular quality</odo:ECSO_01000006>
         <oboInOwl:hasOBONamespace xml:lang="en">quality</oboInOwl:hasOBONamespace>
         <skos:definition xml:lang="en">A quality which inheres in a molecular entity, a single molecule, atom, ion, radical etc.</skos:definition>
     </rdf:Description>
@@ -6767,8 +7167,8 @@ note: ENVO also references LTER:41</rdfs:comment>
         <oboInOwl:id xml:lang="en">PATO:0002305</oboInOwl:id>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0001025">
-        <skos:editorialNote xml:lang="en">Location as a relation between instances: The primitive instance-level relation c located_in r at t reflects the fact that each continuant is at any given time associated with exactly one spatial region, namely its exact location. Following we can use this relation to define a further instance-level location relation - not between a continuant and the region which it exactly occupies, but rather between one continuant and another. c is located in c1, in this sense, whenever the spatial region occupied by c is part_of the spatial region occupied by c1. Note that this relation comprehends both the relation of exact location between one continuant and another which obtains when r and r1 are identical</skos:editorialNote>
         <odo:ECSO_01000008 xml:lang="en">located_in</odo:ECSO_01000008>
+        <skos:editorialNote xml:lang="en">Location as a relation between instances: The primitive instance-level relation c located_in r at t reflects the fact that each continuant is at any given time associated with exactly one spatial region, namely its exact location. Following we can use this relation to define a further instance-level location relation - not between a continuant and the region which it exactly occupies, but rather between one continuant and another. c is located in c1, in this sense, whenever the spatial region occupied by c is part_of the spatial region occupied by c1. Note that this relation comprehends both the relation of exact location between one continuant and another which obtains when r and r1 are identical</skos:editorialNote>
         <obo:IAO_0000115 xml:lang="en">A relation between two independent continuants, the target and the location, in which the target is entirely within the location</obo:IAO_0000115>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/RO_0001025</odo:ECSO_01000003>
         <odo:ECSO_01000007 xml:lang="en">my brain is located in my head; this rat is located in this cage</odo:ECSO_01000007>
@@ -6778,9 +7178,9 @@ note: ENVO also references LTER:41</rdfs:comment>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/RO_0002219</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002220">
-        <skos:definition xml:lang="en">X adjacent to y if and only if x and y share a boundary.</skos:definition>
         <odo:ECSO_01000007 xml:lang="en">The epidermis layer of a vertebrate is adjacent to the dermis.; The plasma membrane of a cell is adjacent to the cytoplasm, and also to the cell lumen which the cytoplasm occupies.; A caterpillar walking on the surface of a leaf is adjacent_to the leaf, if one of the caterpillar appendages is touching the leaf. In contrast, a butterfly flying close to a flower is not considered adjacent, unless there are any touching parts.; The skin of the forelimb is adjacent to the skin of the torso if these are considered anatomical subdivisions with a defined border. Otherwise a relation such as continuous_with would be used.</odo:ECSO_01000007>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/RO_0002220</odo:ECSO_01000003>
+        <skos:definition xml:lang="en">X adjacent to y if and only if x and y share a boundary.</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002376">
         <skos:editorialNote xml:lang="en">This relation can be used for geographic features (e.g. rivers) as well as anatomical structures (veins, arteries)</skos:editorialNote>
@@ -6823,8 +7223,8 @@ See example_Of_Usage, presentation_Label</odo:ECSO_01000004>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/TR/skos-reference/skos-owl1-dl#Concept">
         <rdfs:isDefinedBy>http://www.w3.org/2004/02/skos/core</rdfs:isDefinedBy>
-        <rdfs:label>Concept</rdfs:label>
         <skos:definition>An idea or notion; a unit of thought</skos:definition>
+        <rdfs:label>Concept</rdfs:label>
     </rdf:Description>
     
 
