@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.dataone.org/odo/ECSO_#"
-     xml:base="http://purl.dataone.org/odo/ECSO_"
+<rdf:RDF xmlns="http://purl.dataone.org/odo/ECSO_/"
+     xml:base="http://purl.dataone.org/odo/ECSO_/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:ns="http://creativecommons.org/ns#"
@@ -940,7 +940,7 @@
     <!-- http://purl.dataone.org/odo/ECSO_00000011 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000011">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000514"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001105"/>
     </owl:Class>
     
 
@@ -970,6 +970,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
                 <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000329"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000092"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1227,14 +1233,14 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.dataone.org/odo/ECSO_00000339"/>
-                <owl:someValuesFrom>
+                <owl:allValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000017"/>
                             <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000020"/>
                         </owl:intersectionOf>
                     </owl:Class>
-                </owl:someValuesFrom>
+                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1246,6 +1252,12 @@
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000043">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000552"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000096"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
@@ -1296,7 +1308,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
-                <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_#electromagnetic_radiation"/>
+                <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00001100"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1313,7 +1325,13 @@
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000045">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#proportion_measurementType"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001102"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000096"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresCharacteristic"/>
@@ -1366,7 +1384,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
-                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl#MicromolePerKilogram"/>
+                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl#MicromolePerLiter"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -1423,7 +1441,13 @@
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000048">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#proportion_measurementType"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001102"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000096"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresCharacteristic"/>
@@ -1450,11 +1474,11 @@
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000049">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#temperature_MeasurementType"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001104"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
-                <owl:someValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl#Kelvin"/>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000096"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1475,6 +1499,12 @@
                 <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002005"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
+                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl#Kelvin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1483,7 +1513,13 @@
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000050">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#proportion_measurementType"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001102"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000096"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ENVO_2100001"/>
@@ -1523,7 +1559,13 @@
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000051">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#proportion_measurementType"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001102"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000096"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ENVO_2100001"/>
@@ -1556,7 +1598,13 @@
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000052">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#proportion_measurementType"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001102"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000096"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ENVO_2100001"/>
@@ -1597,11 +1645,11 @@
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000053">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#temperature_MeasurementType"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001104"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
-                <owl:someValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl#Kelvin"/>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000096"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1622,6 +1670,12 @@
                 <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
+                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl#Kelvin"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -1631,6 +1685,12 @@
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000054">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000519"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000096"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
@@ -1666,6 +1726,12 @@
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000096"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
                 <owl:someValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl#Meter"/>
             </owl:Restriction>
@@ -1697,6 +1763,12 @@
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000056">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000519"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000096"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
@@ -1744,6 +1816,12 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000096"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ENVO_2100001"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
             </owl:Restriction>
@@ -1769,6 +1847,12 @@
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000058">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000096"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
@@ -1801,7 +1885,13 @@
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000059">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#proportion_measurementType"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001102"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000096"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresCharacteristic"/>
@@ -1829,6 +1919,12 @@
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000060">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000552"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000096"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresCharacteristic"/>
@@ -1909,6 +2005,12 @@
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000096"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
                 <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_#KilogramPerMeterSquaredPerSecond"/>
             </owl:Restriction>
@@ -1939,7 +2041,13 @@
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000063">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#proportion_measurementType"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001102"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000096"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresCharacteristic"/>
@@ -1949,7 +2057,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
-                <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_#electromagnetic_radiation"/>
+                <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00001100"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1999,7 +2107,7 @@
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000065">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#named_measurementType"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001101"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresCharacteristic"/>
@@ -2021,6 +2129,12 @@
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000066">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000096"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
@@ -2089,6 +2203,12 @@
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000096"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
                 <owl:someValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl#Meter"/>
             </owl:Restriction>
@@ -2129,7 +2249,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
-                <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_#electromagnetic_radiation"/>
+                <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00001100"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2147,6 +2267,12 @@
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000070">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000096"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
@@ -2222,7 +2348,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
-                <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_#electromagnetic_radiation"/>
+                <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00001100"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2240,6 +2366,12 @@
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000073">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000552"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000096"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001309"/>
@@ -2273,6 +2405,12 @@
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000074">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000519"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000096"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
@@ -2331,7 +2469,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
-                <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_#electromagnetic_radiation"/>
+                <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00001100"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2395,7 +2533,13 @@
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000077">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#proportion_measurementType"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001102"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000096"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresCharacteristic"/>
@@ -2405,7 +2549,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
-                <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_#electromagnetic_radiation"/>
+                <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00001100"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2438,7 +2582,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
-                <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_#electromagnetic_radiation"/>
+                <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00001100"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2456,6 +2600,12 @@
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000079">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000519"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000096"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
@@ -2504,7 +2654,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
-                <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_#electromagnetic_radiation"/>
+                <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00001100"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2900,6 +3050,12 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
                 <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000323"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000091"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3561,8 +3717,9 @@ http://www.ontobee.org/ontology/PATO?iri=http://purl.obolibrary.org/obo/PATO_000
         <odo:ECSO_01000003>https://en.wikipedia.org/wiki/Concentration</odo:ECSO_01000003>
         <odo:ECSO_01000004 xml:lang="en">the strength of a solution (i.e. number of molecules of a substance in a given volume)</odo:ECSO_01000004>
         <odo:ECSO_01000005 xml:lang="en">WordNet</odo:ECSO_01000005>
-        <odo:ECSO_01000007 xml:lang="en">taking a concentration measurement with an electric conductivity meter to determine the salinity of water</odo:ECSO_01000007>
-        <rdfs:comment>A concentration measurement describes a mixture of two entities, usually expressed as &apos;concentrat of [entity 1] in [entity 2].</rdfs:comment>
+        <rdfs:comment xml:lang="en">A concentration measurement describes a mixture of two entities, usually expressed as &apos;concentration of [entity 1] in [entity 2].&apos;
+
+Confirm: concentration a subclass of proportion?</rdfs:comment>
         <rdfs:comment>Note: see list of issues, text file called ECSO_notes_issues.txt
 
 PATO concentration_of explicitly says mixture of one substance with another.
@@ -3572,11 +3729,9 @@ superclasses (measuresEntity, measuresCharacterstic) deliberately left off this 
 added a child of concentration-of, called &apos;molar concentration&apos;, and put the equivalence class there. alternative could be that &apos;molar concentration&apos; is a synonym of AmountOfSubstanceConcentration in OBOE.</rdfs:comment>
         <rdfs:label>concentration_MeasurementType</rdfs:label>
         <rdfs:seeAlso xml:lang="en">PATO:0000033, concentration of</rdfs:seeAlso>
-        <skos:definition>In chemistry, concentration is the abundance of a constituent divided by the total volume of a mixture.  The term concentration can be applied to any kind of chemical mixture, but most frequently it refers to solutes and solvents in solutions. 
+        <skos:definition xml:lang="en">Concentration is the abundance of a constituent divided by the total volume of a mixture.  The term concentration can be applied to any kind of chemical mixture, but most frequently it refers to solutes and solvents in solutions. 
 
-Several types of mathematical description can be distinguished (4 quantities): mass concentration, molar concentration, number concentration, and volume concentration.[1]
-
-There are variants for both the numerator and denominator. In oceanography, concentrations can use other quantities, eg with mass in the denominator, rather than volume (to factor out the change in volume of water with pressure).  other variants: molar (amount) concentration has variants such as normal concentration and osmotic concentration. Alkalinity is a molar-equivalent concentration (amount of charge).</skos:definition>
+Several types of mathematical description can be distinguished: mass concentration, molar concentration, number concentration, and volume concentration.</skos:definition>
     </owl:Class>
     
 
@@ -3640,7 +3795,6 @@ There are variants for both the numerator and denominator. In oceanography, conc
         <odo:ECSO_01000003>https://en.wikipedia.org/wiki/Biomass_(ecology)
 
 IUPAC, Compendium of Chemical Terminology, 2nd ed. (the &quot;Gold Book&quot;) (1997). Online corrected version:  (2006–) &quot;biomass&quot;.</odo:ECSO_01000003>
-        <odo:ECSO_01000007 xml:lang="en">taking a biomass measurement with a soil probe to determine the amount of carbon in a soil sample</odo:ECSO_01000007>
         <rdfs:label>biomass_MeasurementType</rdfs:label>
         <skos:definition>From Wikipedia: 
 Biomass, in ecology, is the mass of living biological organisms in a given area or ecosystem at a given time. Biomass can refer to species biomass, which is the mass of one or more species, or to community biomass, which is the mass of all species in the community. It can include microorganisms, plants or animals.
@@ -3665,7 +3819,6 @@ There are many methods and usages of biomass measurements. This ECSO class is fo
         <odo:ECSO_01000003>https://en.wikipedia.org/wiki/Flux,  Bird, R. Byron; Stewart, Warren E.; Lightfoot, Edwin N. (1960). Transport Phenomena. Wiley. ISBN 0-471-07392-X.</odo:ECSO_01000003>
         <odo:ECSO_01000004 xml:lang="en">The study of transport phenomena concerns the exchange of mass, energy, and momentum between observed and studied systems. Fundamental analyses in all three subfields are often grounded in the simple principle that the sum total of the quantities being studied must be conserved by the system and its environment.</odo:ECSO_01000004>
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Transport_phenomena</odo:ECSO_01000005>
-        <odo:ECSO_01000007 xml:lang="en">taking a flux measurement with a heat flux sensor to determine the energy flux of radiation</odo:ECSO_01000007>
         <odo:ECSO_01000008 xml:lang="en">flow</odo:ECSO_01000008>
         <rdfs:label>flux_MeasurementType</rdfs:label>
         <skos:definition>the rate of transfer of a substance or energy across a given surface
@@ -3735,7 +3888,7 @@ In transport phenomena (heat transfer, mass transfer and fluid dynamics), flux i
     <!-- http://purl.dataone.org/odo/ECSO_00000517 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000517">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001111"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
@@ -3800,7 +3953,6 @@ http://purl.obolibrary.org/obo/PATO_0000146</rdfs:comment>
         </rdfs:subClassOf>
         <odo:ECSO_01000003>http://www.thefreedictionary.com/rate
 https://en.wikipedia.org/wiki/Rate_(mathematics)#Temporal</odo:ECSO_01000003>
-        <odo:ECSO_01000007 xml:lang="en">taking a temporal rate measurement with a stopwatch to determine the amount of rainfall over a given period of time</odo:ECSO_01000007>
         <rdfs:label>temporal_rate_MeasurementType</rdfs:label>
         <skos:definition>A rate measurement is a quantity measured with respect to a second measured quantitiy. In temporal rates, the denominator (second quantity) is time.</skos:definition>
     </owl:Class>
@@ -3811,7 +3963,8 @@ https://en.wikipedia.org/wiki/Rate_(mathematics)#Temporal</odo:ECSO_01000003>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000520">
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType"/>
-        <rdfs:comment>added by margaret, to get the mstimips out of the way for now. however, groups of measurements should have multiple parent classes, like this class. E.g. see, Autotrophic_respiration_MOV, Total_respiration_MOV, etc.</rdfs:comment>
+        <rdfs:comment>added by margaret, to get the mstimips out of the way for now. however, groups of measurements should have multiple parent classes, like this class. E.g. see, Autotrophic_respiration_MOV, Total_respiration_MOV, etc.
+Confirm: is this class still needed?</rdfs:comment>
         <rdfs:label>MsTMIP_output_variable</rdfs:label>
     </owl:Class>
     
@@ -3820,7 +3973,7 @@ https://en.wikipedia.org/wiki/Rate_(mathematics)#Temporal</odo:ECSO_01000003>
     <!-- http://purl.dataone.org/odo/ECSO_00000521 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000521">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001108"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
@@ -3839,8 +3992,8 @@ https://en.wikipedia.org/wiki/Rate_(mathematics)#Temporal</odo:ECSO_01000003>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
-                <owl:someValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl#KilogramPerMeterCubed"/>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00001113"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3858,9 +4011,9 @@ https://en.wikipedia.org/wiki/Rate_(mathematics)#Temporal</odo:ECSO_01000003>
     <!-- http://purl.dataone.org/odo/ECSO_00000522 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000522">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000514"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001106"/>
         <oboInOwl:hasRelatedSynonym xml:lang="en">energy transport, energy transfer, radiative flux, radiative flux density, radiation flux, irradiance, radiant exitance, radiant emittance</oboInOwl:hasRelatedSynonym>
-        <rdfs:label xml:lang="en">Radiative Flux</rdfs:label>
+        <rdfs:label>Radiative Flux</rdfs:label>
         <skos:definition xml:lang="en">Radiative flux is the amount of power radiated through a given area in the form of photons or other elementary particles, typically measured in W/m2. Radiative flux also acts as a generalization of heat flux, which is equal to the radiative flux when restricted to the infrared spectrum. When radiative flux is incident on a surface, it is often called irradiance. Flux emitted from a surface may be called radiant exitance or radiant emittance.</skos:definition>
     </owl:Class>
     
@@ -3918,7 +4071,13 @@ this probably should be in OBOE, and is a synomym of AmountOfSubstanceConcentrat
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000528">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#proportion_measurementType"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001102"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000096"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/ENVO_2100001"/>
@@ -3969,13 +4128,7 @@ this probably should be in OBOE, and is a synomym of AmountOfSubstanceConcentrat
     <!-- http://purl.dataone.org/odo/ECSO_00000530 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000530">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
-                <owl:someValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-standards.owl#MicromolePerLiter"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001109"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresCharacteristic"/>
@@ -3988,7 +4141,6 @@ this probably should be in OBOE, and is a synomym of AmountOfSubstanceConcentrat
                 <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000323"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment xml:lang="en">Confirm: micromol/mol-1 is same measure of molarity as micromol/L</rdfs:comment>
         <rdfs:comment>EquivalentTo: concentration and measurementFor only Observation and ofEntity only CO2</rdfs:comment>
         <rdfs:label>CO2 Concentration</rdfs:label>
     </owl:Class>
@@ -4056,6 +4208,12 @@ this probably should be in OBOE, and is a synomym of AmountOfSubstanceConcentrat
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000301"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000090"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <odo:ECSO_01000001>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
         <odo:ECSO_01000003>Adapted form ECSO_00000021 (Net Primary Production Carbon FLux) and ECSO_00000301 (Above Ground Net Primary Production Carbon Flux)</odo:ECSO_01000003>
         <rdfs:label>Grassland Above Ground NPP Carbon Flux</rdfs:label>
@@ -4095,6 +4253,19 @@ Often abbreviated to ANPP, and in grasslands, measured by peak biomass.</skos:de
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27594"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000092"/>
+                            <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000093"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <odo:ECSO_01000001>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
         <odo:ECSO_01000003>Adapted from
 https://en.wikipedia.org/wiki/Primary_production</odo:ECSO_01000003>
@@ -4115,6 +4286,12 @@ For most purposes (including this one) the two can be the same. It&apos;s most p
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000535">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000539"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000092"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0001025"/>
@@ -4162,6 +4339,12 @@ generally, CO2 that enters the ocean dissociates into bicarbonate, carbonate, (a
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000300"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
                 <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000506"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4177,7 +4360,7 @@ generally, CO2 that enters the ocean dissociates into bicarbonate, carbonate, (a
     <!-- http://purl.dataone.org/odo/ECSO_00000539 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000539">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001109"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
@@ -4255,8 +4438,8 @@ potential synonyms: development, maturation, growing, germination, sprouting; bl
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000001"/>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000094"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <odo:ECSO_01000001>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
@@ -4291,6 +4474,12 @@ potential synonyms: development, maturation, growing, germination, sprouting; bl
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000092"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000021"/>
         <odo:ECSO_01000001>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
         <odo:ECSO_01000003>adapted from ECSO_00000021 (Net Primary Production Carbon FLux)</odo:ECSO_01000003>
@@ -4314,6 +4503,19 @@ potential synonyms: development, maturation, growing, germination, sprouting; bl
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27594"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000092"/>
+                            <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000093"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4348,8 +4550,8 @@ potential synonyms: development, maturation, growing, germination, sprouting; bl
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000001"/>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000094"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <odo:ECSO_01000001>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
@@ -4378,8 +4580,8 @@ potential synonyms: development, maturation, growing, germination, sprouting; bl
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000001"/>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000094"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <odo:ECSO_01000001>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
@@ -4478,7 +4680,6 @@ Use in ECSO: The mass expressed as mass per unit area.</skos:definition>
 IUPAC, Compendium of Chemical Terminology, 2nd ed. (the &quot;Gold Book&quot;) (1997). Online corrected version:  (2006–) &quot;biomass&quot;.</odo:ECSO_01000003>
         <odo:ECSO_01000004 xml:lang="en">the amount per unit size (i.e. the total mass of living matter in a given unit area)</odo:ECSO_01000004>
         <odo:ECSO_01000005 xml:lang="en">WordNet</odo:ECSO_01000005>
-        <odo:ECSO_01000007 xml:lang="en">taking biomass density measurements with a soil probe to determine the amount of carbon relative to the soil over a given measurement area</odo:ECSO_01000007>
         <rdfs:label>biomass_density_MeasurementType</rdfs:label>
         <skos:definition>From Wikipedia: 
 Biomass, in ecology, is the mass of living biological organisms in a given area or ecosystem at a given time. Biomass can refer to species biomass, which is the mass of one or more species, or to community biomass, which is the mass of all species in the community. It can include microorganisms, plants or animals.
@@ -4502,7 +4703,6 @@ mass per area.</skos:definition>
         <odo:ECSO_01000003>https://www.reference.com/science/linear-measurement-c0842dc7f571f781</odo:ECSO_01000003>
         <odo:ECSO_01000004 xml:lang="en">of or in or along or relating to a line; involving or having a single dimension</odo:ECSO_01000004>
         <odo:ECSO_01000005 xml:lang="en">WordNet</odo:ECSO_01000005>
-        <odo:ECSO_01000007 xml:lang="en">taking a linear measurement with a yard stick to determine the depth of snow</odo:ECSO_01000007>
         <odo:ECSO_01000008 xml:lang="en">one-dimensional</odo:ECSO_01000008>
         <rdfs:label>linear_MeasurementType</rdfs:label>
         <skos:definition xml:lang="en">A linear measurement assigns a numerical value for the length of an object or between objects. Units of linear measure include inch, foot, meter, kilometer and mile. Linear measurements have one dimension, whereas square measurements have two dimensions and cubic measurements have three.</skos:definition>
@@ -4732,6 +4932,204 @@ The most common type of rate is &quot;per unit of time&quot;, such as speed, hea
     
 
 
+    <!-- http://purl.dataone.org/odo/ECSO_00001100 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001100">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
+        <odo:ECSO_01000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Electromagnetic_radiation</odo:ECSO_01000003>
+        <rdfs:comment xml:lang="en">Confirm: wave-particle duality; if particle, then measured material</rdfs:comment>
+        <rdfs:label xml:lang="en">electromagnetic radiation</rdfs:label>
+        <skos:definition xml:lang="en">Electromagnetic radiation is the radiant energy released by certain electromagnetic processes. Visible light is one type of electromagnetic radiation; other familiar forms are invisible to the human eye, such as radio waves, infrared light and X-rays.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001101 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001101">
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType"/>
+        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000004 xml:lang="en">Name of carbon pool (indicating composition by measured entities)</odo:ECSO_01000004>
+        <rdfs:label>named_measurementType</rdfs:label>
+        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Carbon_cycle</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001102 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001102">
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000559"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000051"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000182"/>
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000186"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <odo:ECSO_01000001 xml:lang="en">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000008 xml:lang="en">ratio, dimensionless quantity</odo:ECSO_01000008>
+        <rdfs:label>proportion_measurementType</rdfs:label>
+        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Dimensionless_quantity</rdfs:seeAlso>
+        <skos:definition xml:lang="en">the quotient obtained when the magnitude of a part is divided by the magnitude of the whole</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001103 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001103">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001100"/>
+        <odo:ECSO_01000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Sunlight</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">sunlight</odo:ECSO_01000008>
+        <rdfs:label xml:lang="en">solar radiation</rdfs:label>
+        <skos:definition xml:lang="en">Sunlight is a portion of the electromagnetic radiation given off by the Sun, in particular infrared, visible, and ultraviolet light.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001104 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001104">
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000005"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Temperature#Temperature_measurement</odo:ECSO_01000003>
+        <odo:ECSO_01000004 xml:lang="en">the degree of hotness or coldness of a body or environment (corresponding to its molecular activity)</odo:ECSO_01000004>
+        <odo:ECSO_01000005 xml:lang="en">WordNet</odo:ECSO_01000005>
+        <rdfs:label>temperature_measurementType</rdfs:label>
+        <skos:definition xml:lang="en">Temperature is measured with thermometers that may be calibrated to a variety of temperature scales. Most scientists measure temperature using the Celsius scale and thermodynamic temperature using the Kelvin scale, which is the Celsius scale offset so that its null point is 0K = −273.15°C, or absolute zero. The basic unit of temperature in the International System of Units (SI) is the kelvin. It has the symbol K.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001105 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001105">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000514"/>
+        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Transport_phenomena#Mass_transfer</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">mass transfer</odo:ECSO_01000008>
+        <rdfs:label>Mass Flux</rdfs:label>
+        <skos:definition xml:lang="en">When a system contains two or more components whose concentration vary from point to point, there is a natural tendency for mass to be transferred, minimizing any concentration difference within the system. Mass Transfer in a system is governed by Fick&apos;s First Law: &apos;Diffusion flux from higher concentration to lower concentration is proportional to the gradient of the concentration of the substance and the diffusivity of the substance in the medium.&apos;</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001106 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001106">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000514"/>
+        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Transport_phenomena#Energy_transfer</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">energy transfer</odo:ECSO_01000008>
+        <rdfs:label>Energy Flux</rdfs:label>
+        <skos:definition xml:lang="en">All processes in engineering involve the transfer of energy. Some examples are the heating and cooling of process streams, phase changes, distillations, etc. The basic principle is the first law of thermodynamics. The net flux of energy through a system equals the conductivity times the rate of change of temperature with respect to position.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001107 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001107">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000514"/>
+        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Transport_phenomena#Momentum_transfer</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">momentum transfer</odo:ECSO_01000008>
+        <rdfs:label>Momentum Flux</rdfs:label>
+        <skos:definition xml:lang="en">In momentum transfer, the fluid is treated as a continuous distribution of matter. The study of momentum transfer, or fluid mechanics can be divided into two branches: fluid statics (fluids at rest), and fluid dynamics (fluids in motion).</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001108 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001108">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
+        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Mass_concentration_(chemistry)</odo:ECSO_01000003>
+        <rdfs:label>Mass Concentration</rdfs:label>
+        <skos:definition xml:lang="en">The mass concentration is defined as the mass of a constituent divided by the volume of the mixture. The SI unit is kg/m3 (equal to g/L).</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001109 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001109">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
+        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Molar_concentration</odo:ECSO_01000003>
+        <rdfs:label>Molar Concentration</rdfs:label>
+        <skos:definition xml:lang="en">The molar concentration is defined as the amount of a constituent (in moles) divided by the volume of the mixture. The SI unit is mol/m3. However, more commonly the unit mol/L (= mol/dm3) is used.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001110 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001110">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
+        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Concentration#Number_concentration</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">number density</odo:ECSO_01000008>
+        <rdfs:label>Number Concentration</rdfs:label>
+        <skos:definition xml:lang="en">The number concentration is defined as the number of entities of a constituent in a mixture divided by the volume of the mixture. The SI unit is 1/m3.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001111 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001111">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
+        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Concentration#Volume_concentration</odo:ECSO_01000003>
+        <rdfs:label>Volume Concentration</rdfs:label>
+        <skos:definition xml:lang="en">The volume concentration (do not confuse with volume fraction) is defined as the volume of a constituent divided by the volume of the mixture. Being dimensionless, it is expressed as a number, e.g., 0.18 or 18%; its unit is 1.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001112 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001112">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000082"/>
+        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Water_content#Measurement</odo:ECSO_01000003>
+        <odo:ECSO_01000008 xml:lang="en">water content, moisture</odo:ECSO_01000008>
+        <rdfs:label>Volumetric Water Content Method</rdfs:label>
+        <skos:definition xml:lang="en">Water content can be directly measured using a known volume of the material, and a drying oven. Volumetric water content is calculated via the volume of water and the masses of water sample before and after drying in the oven. For materials that change in volume with water content, such as coal, the water content is expressed in terms of the mass of water per unit mass of the moist specimen.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001113 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001113">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000082"/>
+        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Total_organic_carbon#Combustion</odo:ECSO_01000003>
+        <rdfs:label>High Temperature Combustion</rdfs:label>
+        <skos:definition xml:lang="en">In a combustion analyzer, half of the sample is injected into a chamber where it is acidified, usually with phosphoric acid, to turn all of the inorganic carbon into carbon dioxide. This is then sent to a detector for measurement. The other half of the sample is injected into a combustion chamber which is raised to between 600–700 °C, some even up to 1200 °C. Here, all the carbon reacts with oxygen, forming carbon dioxide. It&apos;s then flushed into a cooling chamber, and finally into the detector. Usually, the detector used is a non-dispersive infrared spectrophotometer. By finding the total inorganic carbon and subtracting it from the total carbon content, the amount of organic carbon is determined.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- http://purl.dataone.org/odo/ECSO_Leaf_Decomposition -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_Leaf_Decomposition">
@@ -4785,7 +5183,7 @@ The most common type of rate is &quot;per unit of time&quot;, such as speed, hea
     <!-- http://purl.dataone.org/odo/ECSO_#PAR -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_#PAR">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#solar_radiation"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001103"/>
         <odo:ECSO_01000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Photosynthetically_active_radiation</odo:ECSO_01000003>
         <odo:ECSO_01000008 xml:lang="en">photosynthetically active radiation</odo:ECSO_01000008>
@@ -4806,40 +5204,14 @@ The most common type of rate is &quot;per unit of time&quot;, such as speed, hea
     
 
 
-    <!-- http://purl.dataone.org/odo/ECSO_#electromagnetic_radiation -->
-
-    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_#electromagnetic_radiation">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
-        <odo:ECSO_01000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
-        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Electromagnetic_radiation</odo:ECSO_01000003>
-        <rdfs:comment xml:lang="en">Confirm: wave-particle duality; if particle, then measured material</rdfs:comment>
-        <rdfs:label xml:lang="en">electromagnetic radiation</rdfs:label>
-        <skos:definition xml:lang="en">Electromagnetic radiation is the radiant energy released by certain electromagnetic processes. Visible light is one type of electromagnetic radiation; other familiar forms are invisible to the human eye, such as radio waves, infrared light and X-rays.</skos:definition>
-    </owl:Class>
-    
-
-
     <!-- http://purl.dataone.org/odo/ECSO_#infrared -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_#infrared">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#solar_radiation"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001103"/>
         <odo:ECSO_01000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Infrared</odo:ECSO_01000003>
         <rdfs:label xml:lang="en">infrared</rdfs:label>
         <skos:definition xml:lang="en">Infrared (IR) is invisible radiant energy, electromagnetic radiation with longer wavelengths than those of visible light, extending from the nominal red edge of the visible spectrum at 700 nanometers (frequency 430 THz) to 1 mm (300 GHz).</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ECSO_#named_measurementType -->
-
-    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_#named_measurementType">
-        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType"/>
-        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
-        <odo:ECSO_01000004 xml:lang="en">Name of carbon pool (indicating composition by measured entities)</odo:ECSO_01000004>
-        <odo:ECSO_01000007 xml:lang="en">Coarse Woody Debris</odo:ECSO_01000007>
-        <rdfs:label xml:lang="en">named_measurementType</rdfs:label>
-        <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Carbon_cycle</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -4871,70 +5243,10 @@ The most common type of rate is &quot;per unit of time&quot;, such as speed, hea
     
 
 
-    <!-- http://purl.dataone.org/odo/ECSO_#proportion_measurementType -->
-
-    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_#proportion_measurementType">
-        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000559"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000051"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000182"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000186"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <odo:ECSO_01000001 xml:lang="en">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
-        <odo:ECSO_01000007 xml:lang="en">taking a proportion measurement with a soil moisture sensor to determine the amount of water relative to the soil</odo:ECSO_01000007>
-        <odo:ECSO_01000008 xml:lang="en">ratio, dimensionless quantity</odo:ECSO_01000008>
-        <rdfs:comment xml:lang="en">Confirm: What is the proper term for value with numerator and denominator of same units (dimensionless quantity)?
-Also, does index differ from concentration, ratio, or proportion?</rdfs:comment>
-        <rdfs:label xml:lang="en">proportion_measurementType</rdfs:label>
-        <rdfs:seeAlso xml:lang="en">https://en.wikipedia.org/wiki/Dimensionless_quantity</rdfs:seeAlso>
-        <skos:definition xml:lang="en">the quotient obtained when the magnitude of a part is divided by the magnitude of the whole</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ECSO_#solar_radiation -->
-
-    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_#solar_radiation">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#electromagnetic_radiation"/>
-        <odo:ECSO_01000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
-        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Sunlight</odo:ECSO_01000003>
-        <odo:ECSO_01000008 xml:lang="en">sunlight</odo:ECSO_01000008>
-        <rdfs:label xml:lang="en">solar radiation</rdfs:label>
-        <skos:definition xml:lang="en">Sunlight is a portion of the electromagnetic radiation given off by the Sun, in particular infrared, visible, and ultraviolet light.</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ECSO_#temperature_MeasurementType -->
-
-    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_#temperature_MeasurementType">
-        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000005"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <odo:ECSO_01000007 xml:lang="en">taking a temperature measurement with a thermometer to determine the temperature of a stream</odo:ECSO_01000007>
-        <rdfs:label xml:lang="en">temperature_measurementType</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.dataone.org/odo/ECSO_#ultraviolet -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_#ultraviolet">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_#solar_radiation"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001103"/>
         <odo:ECSO_01000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Ultraviolet</odo:ECSO_01000003>
         <rdfs:label xml:lang="en">ultraviolet</rdfs:label>
@@ -7078,14 +7390,13 @@ https://en.wikipedia.org/wiki/Mass_flow_rate</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000011">
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
-        <rdfs:label xml:lang="en">Carbon Flux</rdfs:label>
         <odo:ECSO_01000004>Carbon fluxes are the movement of Carbon from one place (Source) to another (Sink).  Carbon fluxes all have dimensions of {mass or amount of} Carbon per area (or volume) per time
 
 biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than kg to quantify the amount of Carbon, whereas Climate-oriented projects use kg</odo:ECSO_01000004>
         <odo:ECSO_01000003>Litton, C.M. et al. Carbon allocation in forest ecosystems. Global Change Biology. V 13 I 10. pp. 2089 - 2109. July 2007.</odo:ECSO_01000003>
         <skos:definition>The rate at which a mass of carbon moves to or from a particular component of the ecosystem per unit time.</skos:definition>
-        <odo:ECSO_01000005>unknown.</odo:ECSO_01000005>
         <odo:ECSO_01000008 xml:lang="en">mass transport, mass transfer</odo:ECSO_01000008>
+        <rdfs:label>Carbon Flux</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000012">
         <odo:ECSO_01000003>Wangersky, P.J. Dissolved organic carbon methods: a critical review. Marine Chemistry. V 41 I 1-3. pp. 61-74. 1993.</odo:ECSO_01000003>
@@ -7237,8 +7548,8 @@ synonyms: NPP</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000035">
         <rdfs:label>Dissolved Organic Carbon Pool</rdfs:label>
-        <skos:definition>TO DO, Margaret</skos:definition>
         <odo:ECSO_01000003>TO DO, Margaret</odo:ECSO_01000003>
+        <skos:definition>TO DO, Margaret</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000037">
         <rdfs:label>Annual Net Primary Productivity Flux</rdfs:label>
@@ -7275,17 +7586,18 @@ synonyms: NPP</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000046">
         <rdfs:label>Near_Surface_CO2_Concentration_MOV</rdfs:label>
+        <rdfs:comment>EquivalentTo: concentration and measurementFor only ofEntity only partOf only Air
+Confirm: micromol/mol-1 is same measure of molarity as micromol/L</rdfs:comment>
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Carbon_dioxide</odo:ECSO_01000005>
         <odo:ECSO_01000004 xml:lang="en">Carbon dioxide is a greenhouse gas, absorbing and emitting infrared radiation at its two infrared-active vibrational frequencies. This process causes carbon dioxide to warm the surface and lower atmosphere, while cooling the upper atmosphere.</odo:ECSO_01000004>
-        <rdfs:comment>EquivalentTo: concentration and measurementFor only ofEntity only partOf only Air</rdfs:comment>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <skos:definition>Near surface dry air CO2 mole fraction</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000047">
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Ecosystem_respiration</odo:ECSO_01000005>
-        <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000004 xml:lang="en">Ecosystem respiration is the sum of all respiration occurring by the living organisms in a specific ecosystem.</odo:ECSO_01000004>
+        <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <rdfs:label>Total_Respiration_MOV</rdfs:label>
         <skos:definition>Total respiration (TotalResp=AutoResp+heteroResp, always positive)</skos:definition>
@@ -7331,8 +7643,8 @@ synonyms: NPP</rdfs:comment>
         <odo:ECSO_01000004 xml:lang="en">Water content or moisture content is the quantity of water contained in a material... Water content is expressed as a ratio, which can range from 0 (completely dry) to the value of the materials&apos; porosity at saturation. It can be given on a volumetric or mass (gravimetric) basis.</odo:ECSO_01000004>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000053">
-        <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <rdfs:label>Average_Layer_Soil_Temperature_MOV</rdfs:label>
+        <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000004 xml:lang="en">Soil temperature depends on the ratio of the energy absorbed to that lost. Soil has a temperature range between -20 to 60 °C. Soil temperature regulates seed germination, plant and root growth and the availability of nutrients.</odo:ECSO_01000004>
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Soil#Temperature</odo:ECSO_01000005>
@@ -7403,8 +7715,8 @@ synonyms: NPP</rdfs:comment>
         <rdfs:label>Rainfall_Rate_MOV</rdfs:label>
         <skos:definition>Rainfall rate</skos:definition>
         <odo:ECSO_01000004 xml:lang="en">Rain is liquid water in the form of droplets that have condensed from atmospheric water vapor and then precipitated, heavy enough to fall under gravity. Rain is a major component of the water cycle and is responsible for depositing most of the fresh water on the Earth.</odo:ECSO_01000004>
-        <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Rain</odo:ECSO_01000005>
+        <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000063">
@@ -7417,15 +7729,15 @@ synonyms: NPP</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000064">
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Primary_production#GPP_and_NPP</odo:ECSO_01000005>
-        <rdfs:label>Gross_Primary_Productivity_MOV</rdfs:label>
         <skos:definition>MsTMIP Output: Rate of photosynthesis (always positive)</skos:definition>
+        <rdfs:label>Gross_Primary_Productivity_MOV</rdfs:label>
         <odo:ECSO_01000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">Margaret O&apos;Brien, http://orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000004 xml:lang="en">Gross Primary productivity is the rate at which photosynthesis or chemosynthesis occurs.</odo:ECSO_01000004>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000065">
-        <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <rdfs:label>Name_Of_Each_Carbon_Pool_MOV</rdfs:label>
+        <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Name of each carbon pool (i.e., &quot;wood,&quot; or &quot;Coarse Woody Debris&quot;)</skos:definition>
     </rdf:Description>
@@ -7446,10 +7758,10 @@ synonyms: NPP</rdfs:comment>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000068">
-        <skos:definition>Thaw depth; depth to zero centigrade isotherm in permafrost</skos:definition>
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Active_layer</odo:ECSO_01000005>
-        <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
+        <skos:definition>Thaw depth; depth to zero centigrade isotherm in permafrost</skos:definition>
         <rdfs:label>Active_Layer_Thickness_MOV</rdfs:label>
+        <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000004 xml:lang="en">In environments containing permafrost, the active layer is the top layer of soil that thaws during the summer and freezes again during the autumn.</odo:ECSO_01000004>
     </rdf:Description>
@@ -7462,8 +7774,8 @@ synonyms: NPP</rdfs:comment>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000070">
-        <odo:ECSO_01000004 xml:lang="en">Snow is precipitation in the form of flakes of crystalline water ice that falls from clouds. Since snow is composed of small ice particles, it is a granular material.</odo:ECSO_01000004>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
+        <odo:ECSO_01000004 xml:lang="en">Snow is precipitation in the form of flakes of crystalline water ice that falls from clouds. Since snow is composed of small ice particles, it is a granular material.</odo:ECSO_01000004>
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Snow</odo:ECSO_01000005>
         <rdfs:label>Total_Snow_Depth_MOV</rdfs:label>
         <skos:definition>Total snow depth</skos:definition>
@@ -7516,10 +7828,10 @@ synonyms: NPP</rdfs:comment>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000077">
-        <skos:definition>Net Primary Productivity (NPP=GPP-AutoResp, positive into plants)</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
-        <skos:definition>Shortwave albedo</skos:definition>
+        <skos:definition>Net Primary Productivity (NPP=GPP-AutoResp, positive into plants)</skos:definition>
         <rdfs:label>Shortwave_Albedo_MOV</rdfs:label>
+        <skos:definition>Shortwave albedo</skos:definition>
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Albedo</odo:ECSO_01000005>
         <rdfs:comment>mob thinks NPP SKOS definition is in here by mistake. because abedo is reflected light flux. it also might be a proportion (mstimip&apos;s)</rdfs:comment>
         <rdfs:label>Net_Primary_Productivity_MOV</rdfs:label>
@@ -7533,9 +7845,9 @@ synonyms: NPP</rdfs:comment>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000079">
+        <odo:ECSO_01000004 xml:lang="en">Evaporation is a type of vaporization of a liquid that occurs from the surface of a liquid into a gaseous phase that is not saturated with the evaporating substance.</odo:ECSO_01000004>
         <rdfs:label>Total_Evaporation_MOV</rdfs:label>
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Evaporation</odo:ECSO_01000005>
-        <odo:ECSO_01000004 xml:lang="en">Evaporation is a type of vaporization of a liquid that occurs from the surface of a liquid into a gaseous phase that is not saturated with the evaporating substance.</odo:ECSO_01000004>
         <skos:definition>Sum of all evaporation sources (positive into atmosphere)</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
@@ -7569,13 +7881,13 @@ a Modeled_Method (is Simulated_Method better?) uses only data obtained from some
         <odo:ECSO_01000005>Fahey and Knapp, 2007, p33</odo:ECSO_01000005>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000091">
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Eddy_covariance</odo:ECSO_01000003>
         <rdfs:comment>add these synonyms (near? exact?):  also known as eddy correlation and eddy flux</rdfs:comment>
         <skos:definition>The eddy covariance method is an atmospheric measurement technique to measure and calculate vertical turbulent fluxes within atmospheric boundary layers, and analyzes high-frequency wind and scalar atmospheric data series, to yield exchange rates (fluxes) of trace gasses.</skos:definition>
         <odo:ECSO_01000004>It is frequently used to estimate momentum, heat, water vapor, carbon dioxide and methane fluxes. The technique is mathematically complex, and requires significant care in setting up and processing data. To date, there is no uniform terminology or a single methodology for the Eddy Covariance technique.
 
 The technique has additionally proven applicable under water to the benthic zone for measuring oxygen fluxes between seafloor and overlying water.[6] In these environments, the technique is generally known as the eddy correlation technique, or just eddy correlation. 
 For CO2.... tbd</odo:ECSO_01000004>
-        <odo:ECSO_01000003>http-en.wikipedia.org/wiki/Eddy_covariance</odo:ECSO_01000003>
         <rdfs:label>Eddy Covariance Method</rdfs:label>
         <odo:ECSO_01000005>http-en.wikipedia.org/wiki/Eddy_covariance</odo:ECSO_01000005>
     </rdf:Description>
@@ -7591,15 +7903,15 @@ So light + dark = GPP (or about as close as you can get with a field measurement
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <odo:ECSO_01000003>O&apos;Brien, pers comm, 2014-10-15</odo:ECSO_01000003>
         <rdfs:label>Allometric Method</rdfs:label>
-        <odo:ECSO_01000004>an allometric method is usually accomplished with a combination of measurements that are tailored to the organism, e.g, size, growth rate, carbon content, plus some loss terms. SBC&apos;s dataset 21 has a good example of an allometric method for kelp.</odo:ECSO_01000004>
         <odo:ECSO_01000003>Begon, M., Harper, J.L., Townsend, C.R. Ecology: Individuals, Populations, and Communities. Third Edition. Blackwell Science. 1996.</odo:ECSO_01000003>
+        <odo:ECSO_01000004>an allometric method is usually accomplished with a combination of measurements that are tailored to the organism, e.g, size, growth rate, carbon content, plus some loss terms. SBC&apos;s dataset 21 has a good example of an allometric method for kelp.</odo:ECSO_01000004>
         <skos:definition>A method determining the relationship between a physical or physiological property of an organism relative to the size of the organism.</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000095">
         <skos:altLabel>LIDAR</skos:altLabel>
         <odo:ECSO_01000003>Available from: https-www.researchgate.net/publication/233137060_Use_of_ground_and_LiDAR_data_to_model_the_NPP_of_a_Mediterranean_pine_forest [accessed Mar 25, 2015].</odo:ECSO_01000003>
-        <skos:definition>A LIDAR_Method for NPP is a methodology to predict the net primary production (NPP) from ground and LiDAR data</skos:definition>
         <rdfs:label>LIDAR Method</rdfs:label>
+        <skos:definition>A LIDAR_Method for NPP is a methodology to predict the net primary production (NPP) from ground and LiDAR data</skos:definition>
         <odo:ECSO_01000001>mob, 2015-03-25</odo:ECSO_01000001>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000096">
@@ -7739,8 +8051,8 @@ maybe others.
         <rdfs:label>Bicarbonate</rdfs:label>
         <odo:ECSO_01000008 xml:lang="en">Acid carbonate, Bicarbonate, BICARBONATE ION, HCO3-, hydrogencarbonate</odo:ECSO_01000008>
         <oboInOwl:id xml:lang="en">CHEBI:17544</oboInOwl:id>
-        <odo:ECSO_01000004 xml:lang="en">Bicarbonate is an intermediate form in the deprotonation of carbonic acid. It is a polyatomic anion with the chemical formula HCO−3. Bicarbonate serves a crucial biochemical role in the physiological pH buffering system.</odo:ECSO_01000004>
         <odo:ECSO_01000003>http://purl.obolibrary.org/obo/CHEBI_17544</odo:ECSO_01000003>
+        <odo:ECSO_01000004 xml:lang="en">Bicarbonate is an intermediate form in the deprotonation of carbonic acid. It is a polyatomic anion with the chemical formula HCO−3. Bicarbonate serves a crucial biochemical role in the physiological pH buffering system.</odo:ECSO_01000004>
         <skos:altLabel>HCO3</skos:altLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000327">
@@ -7979,8 +8291,8 @@ As description Annotation properties are often not as rigorous, and hence looser
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_35405</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35406">
-        <oboInOwl:id xml:lang="en">CHEBI:35406</oboInOwl:id>
         <oboInOwl:id xml:lang="en">oxoacid anions, oxoanions</oboInOwl:id>
+        <oboInOwl:id xml:lang="en">CHEBI:35406</oboInOwl:id>
         <skos:definition xml:lang="en">An oxoanion is an anion derived from an oxoacid by loss of hydron(s) bound to oxygen.</skos:definition>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_35406</odo:ECSO_01000003>
     </rdf:Description>
@@ -7988,8 +8300,8 @@ As description Annotation properties are often not as rigorous, and hence looser
         <oboInOwl:id>CHEBI:35701</oboInOwl:id>
         <skos:definition xml:lang="en">A compound formally derived from an oxoacid RkE(=O)l(OH)m (l &gt; 0) and an alcohol, phenol, heteroarenol, or enol by linking with formal loss of water from an acidic hydroxy group of the former and a hydroxy group of the latter.</skos:definition>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_35701</odo:ECSO_01000003>
-        <odo:ECSO_01000008 xml:lang="en">Ester, esters</odo:ECSO_01000008>
         <oboInOwl:hasAlternativeId xml:lang="en">CHEBI:4859, CHEBI:23960</oboInOwl:hasAlternativeId>
+        <odo:ECSO_01000008 xml:lang="en">Ester, esters</odo:ECSO_01000008>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35757">
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_35757</odo:ECSO_01000003>
@@ -8010,8 +8322,8 @@ As description Annotation properties are often not as rigorous, and hence looser
         <oboInOwl:id xml:lang="en">CHEBI:36059</oboInOwl:id>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_36125">
-        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_36125</odo:ECSO_01000003>
         <odo:ECSO_01000008 xml:lang="en">cyclitol carboxylic acid anions</odo:ECSO_01000008>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_36125</odo:ECSO_01000003>
         <oboInOwl:id>CHEBI:36125</oboInOwl:id>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_36358">
@@ -8070,8 +8382,8 @@ As description Annotation properties are often not as rigorous, and hence looser
         <skos:definition xml:lang="en">A layer in a water mass, itself composed primarily of water.</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_2100007">
-        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/ENVO_2100007</odo:ECSO_01000003>
         <odo:ECSO_01000007 xml:lang="en">rhizosphere determined by part of some soil</odo:ECSO_01000007>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/ENVO_2100007</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000068">
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0000068</odo:ECSO_01000003>
@@ -8169,8 +8481,8 @@ As description Annotation properties are often not as rigorous, and hence looser
         <oboInOwl:hasDbXref xml:lang="en">[database_cross_reference: PATOC:GVG]</oboInOwl:hasDbXref>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001456">
-        <odo:ECSO_01000003 xml:lang="en">A quality inhering in a bearer by virtue of the bearer&apos;s independence on oxygen.</odo:ECSO_01000003>
         <odo:ECSO_01000003 xml:lang="en">[database_cross_reference: PATOC:GVG]</odo:ECSO_01000003>
+        <odo:ECSO_01000003 xml:lang="en">A quality inhering in a bearer by virtue of the bearer&apos;s independence on oxygen.</odo:ECSO_01000003>
         <oboInOwl:inSubset xml:lang="en">value_slim; disposition_slim</oboInOwl:inSubset>
         <oboInOwl:id xml:lang="en">PATO:0001456</oboInOwl:id>
         <oboInOwl:hasOBONamespace xml:lang="en">quality</oboInOwl:hasOBONamespace>
@@ -8307,9 +8619,9 @@ As description Annotation properties are often not as rigorous, and hence looser
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/RO_0002219</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002220">
-        <odo:ECSO_01000007 xml:lang="en">The epidermis layer of a vertebrate is adjacent to the dermis.; The plasma membrane of a cell is adjacent to the cytoplasm, and also to the cell lumen which the cytoplasm occupies.; A caterpillar walking on the surface of a leaf is adjacent_to the leaf, if one of the caterpillar appendages is touching the leaf. In contrast, a butterfly flying close to a flower is not considered adjacent, unless there are any touching parts.; The skin of the forelimb is adjacent to the skin of the torso if these are considered anatomical subdivisions with a defined border. Otherwise a relation such as continuous_with would be used.</odo:ECSO_01000007>
-        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/RO_0002220</odo:ECSO_01000003>
         <skos:definition xml:lang="en">X adjacent to y if and only if x and y share a boundary.</skos:definition>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/RO_0002220</odo:ECSO_01000003>
+        <odo:ECSO_01000007 xml:lang="en">The epidermis layer of a vertebrate is adjacent to the dermis.; The plasma membrane of a cell is adjacent to the cytoplasm, and also to the cell lumen which the cytoplasm occupies.; A caterpillar walking on the surface of a leaf is adjacent_to the leaf, if one of the caterpillar appendages is touching the leaf. In contrast, a butterfly flying close to a flower is not considered adjacent, unless there are any touching parts.; The skin of the forelimb is adjacent to the skin of the torso if these are considered anatomical subdivisions with a defined border. Otherwise a relation such as continuous_with would be used.</odo:ECSO_01000007>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002376">
         <skos:editorialNote xml:lang="en">This relation can be used for geographic features (e.g. rivers) as well as anatomical structures (veins, arteries)</skos:editorialNote>
@@ -8352,8 +8664,8 @@ See example_Of_Usage, presentation_Label</odo:ECSO_01000004>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/TR/skos-reference/skos-owl1-dl#Concept">
         <rdfs:isDefinedBy>http://www.w3.org/2004/02/skos/core</rdfs:isDefinedBy>
-        <skos:definition>An idea or notion; a unit of thought</skos:definition>
         <rdfs:label>Concept</rdfs:label>
+        <skos:definition>An idea or notion; a unit of thought</skos:definition>
     </rdf:Description>
     
 
