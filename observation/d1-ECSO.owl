@@ -4560,16 +4560,14 @@ Use in ECSO: The mass expressed as mass per unit area.</skos:definition>
                 <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000052"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <odo:ECSO_01000003>https://en.wikipedia.org/wiki/Biomass_(ecology)
-IUPAC, Compendium of Chemical Terminology, 2nd ed. (the &quot;Gold Book&quot;) (1997). Online corrected version:  (2006–) &quot;biomass&quot;.</odo:ECSO_01000003>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IUPAC, Compendium of Chemical Terminology, 2nd ed. (the &quot;Gold Book&quot;) (1997). Online corrected version:  (2006–) &quot;biomass&quot;.</odo:ECSO_01000003>
+        <odo:ECSO_01000003>https://en.wikipedia.org/wiki/Biomass_(ecology)</odo:ECSO_01000003>
         <odo:ECSO_01000004 xml:lang="en">the amount per unit size (i.e. the total mass of living matter in a given unit area)</odo:ECSO_01000004>
         <odo:ECSO_01000005 xml:lang="en">WordNet</odo:ECSO_01000005>
+        <odo:ECSO_01000007 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use in ECSO: mass per area.</odo:ECSO_01000007>
         <rdfs:label>biomass_density_MeasurementType</rdfs:label>
-        <skos:definition>From Wikipedia: 
-Biomass, in ecology, is the mass of living biological organisms in a given area or ecosystem at a given time. Biomass can refer to species biomass, which is the mass of one or more species, or to community biomass, which is the mass of all species in the community. It can include microorganisms, plants or animals.
-
-Use in ECSO:
-mass per area.</skos:definition>
+        <skos:definition>Biomass, in ecology, is the mass of living biological organisms in a given area or ecosystem at a given time. Biomass can refer to species biomass, which is the mass of one or more species, or to community biomass, which is the mass of all species in the community. It can include microorganisms, plants or animals.</skos:definition>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biomass density</skos:prefLabel>
     </owl:Class>
     
 
@@ -5125,6 +5123,39 @@ When a system contains two or more components whose concentration vary from poin
     
 
 
+    <!-- http://purl.dataone.org/odo/ECSO_00001116 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001116">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001105"/>
+        <rdfs:comment>dic dissolved inorganic carbon dissolved inorganic carbon milligramPerLiter
+urn:node:GLEON</rdfs:comment>
+        <rdfs:label>Dissolved Inorganic Carbon Flux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001117 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001117">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001105"/>
+        <rdfs:comment>tic total inorganic carbon total inorganic carbon milligramPerLiter
+urn:node:GLEON</rdfs:comment>
+        <rdfs:label>Total Inorganic Carbon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001118 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001118">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001105"/>
+        <rdfs:comment>toc total organic carbon total organic carbon milligramPerLiter
+urn:node:GLEON</rdfs:comment>
+        <rdfs:label>Total Organic Carbon</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.dataone.org/odo/ECSO_00001120 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001120">
@@ -5139,6 +5170,105 @@ When a system contains two or more components whose concentration vary from poin
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001121">
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasuredCharacteristic"/>
         <rdfs:label>Flux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001122 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001122">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001108"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001109"/>
+        <rdfs:comment>dic dissolved inorganic carbon dissolved inorganic carbon milligramPerLiter
+urn:node:GLEON</rdfs:comment>
+        <rdfs:label>Dissolved Inorganic Carbon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001123 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001123">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000536"/>
+        <rdfs:comment>Ai rate Net Assimilation Rate microMolesPerMetersSquaredPerSecond
+urn:node:LTER</rdfs:comment>
+        <rdfs:label>Net Assimilation Rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001124 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001124">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001108"/>
+        <rdfs:comment>c_conc carbon concentration (mg/g) litter nutrient concentration; To reduce the number of samples analyzed for total carbon, nitrogen and phosphorus, ground samples were pooled by species, water depth and collection date prior to chemical analysis. When possible, five litter bag samples were combined to make 1 sample for nutrient analysis. Water depths were stratified into 30-cm intervals: i.e. 0 cm = unflooded, 1- 30 cm = shallow, 31-60 cm = medium,  60-90 cm = deep sites, and &gt;90cm.</rdfs:comment>
+        <rdfs:label>Carbon Litter Nutrient Concentration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001125 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001125">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001108"/>
+        <rdfs:comment>doc dissolved organic carbon dissolved organic carbon milligramPerLiter
+urn:node:GLEON</rdfs:comment>
+        <rdfs:label>Dissolved Organic Carbon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001126 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001126">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001108"/>
+        <rdfs:comment>toc total organic carbon total organic carbon milligramPerLiter
+urn:node:GLEON</rdfs:comment>
+        <rdfs:label>Total Organic Carbon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001127 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001127">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
+        <rdfs:comment>total_c  Total carbon Percentage
+urn:node:TERN</rdfs:comment>
+        <rdfs:label>Total Carbon Percentage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001128 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001128">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000015"/>
+        <rdfs:comment>Net_Carbon_Production rate Periphyton Net carbon production milligramsPerGramPerHour
+urn:node:LTER</rdfs:comment>
+        <rdfs:label>Net Carbon Production Rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001129 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001129">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000016"/>
+        <rdfs:comment>Net_Respiration rate Periphyton Net carbon respiration milligramsPerGramPerHour
+urn:node:LTER</rdfs:comment>
+        <rdfs:label>Net Carbon Respiration Rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001130 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001130">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001109"/>
+        <rdfs:comment>POC [umol/l] particulate organic carbon concentration of POC from CHN analysis micromolePerLiter
+urn:node:LTER</rdfs:comment>
+        <rdfs:label>Organic Carbon Concentration</rdfs:label>
     </owl:Class>
     
 
@@ -7637,8 +7767,8 @@ synonyms: NPP</rdfs:comment>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Incident longwave radiation minus simulated outgoing longwave radiation (positive into grnd)</skos:definition>
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Outgoing_longwave_radiation</odo:ECSO_01000005>
-        <odo:ECSO_01000004 xml:lang="en">Outgoing Longwave Radiation (OLR) is the energy radiating from the Earth as infrared radiation at low energy to Space. OLR is electromagnetic radiation emitted from Earth and its atmosphere out to space in the form of thermal radiation. The flux of energy transported by outgoing longwave radiation is measured in W/m².</odo:ECSO_01000004>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
+        <odo:ECSO_01000004 xml:lang="en">Outgoing Longwave Radiation (OLR) is the energy radiating from the Earth as infrared radiation at low energy to Space. OLR is electromagnetic radiation emitted from Earth and its atmosphere out to space in the form of thermal radiation. The flux of energy transported by outgoing longwave radiation is measured in W/m².</odo:ECSO_01000004>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000045">
         <rdfs:label>Total_Soil_Wetness_MOV</rdfs:label>
@@ -7707,8 +7837,8 @@ Confirm: micromol/mol-1 is same measure of molarity as micromol/L</rdfs:comment>
         <odo:ECSO_01000004 xml:lang="en">Water content or moisture content is the quantity of water contained in a material... Water content is expressed as a ratio, which can range from 0 (completely dry) to the value of the materials&apos; porosity at saturation. It can be given on a volumetric or mass (gravimetric) basis.</odo:ECSO_01000004>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000053">
-        <rdfs:label>Average_Layer_Soil_Temperature_MOV</rdfs:label>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
+        <rdfs:label>Average_Layer_Soil_Temperature_MOV</rdfs:label>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000004 xml:lang="en">Soil temperature depends on the ratio of the energy absorbed to that lost. Soil has a temperature range between -20 to 60 °C. Soil temperature regulates seed germination, plant and root growth and the availability of nutrients.</odo:ECSO_01000004>
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Soil#Temperature</odo:ECSO_01000005>
@@ -7918,10 +8048,10 @@ Confirm: micromol/mol-1 is same measure of molarity as micromol/L</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000080">
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Latent_heat</odo:ECSO_01000005>
-        <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Latent heat flux into the boundary layer (positive into atmosphere)</skos:definition>
-        <rdfs:label>Latent_Heat_MOV</rdfs:label>
+        <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000004 xml:lang="en">Latent heat is energy released or absorbed, by a body or a thermodynamic system, during a constant-temperature process that is specified in some way. An example is latent heat of fusion for a phase change, melting, at a specified temperature and pressure.</odo:ECSO_01000004>
+        <rdfs:label>Latent_Heat_MOV</rdfs:label>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000082">
@@ -8205,8 +8335,8 @@ As description Annotation properties are often not as rigorous, and hence looser
         <oboInOwl:id xml:lang="en">CHEBI:22563</oboInOwl:id>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_22629">
-        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_22629</odo:ECSO_01000003>
         <oboInOwl:id xml:lang="en">CHEBI:22629</oboInOwl:id>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_22629</odo:ECSO_01000003>
         <odo:ECSO_01000008 xml:lang="en">arsenate, arsenate anions, arsenate ions</odo:ECSO_01000008>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_22718">
@@ -8683,9 +8813,9 @@ As description Annotation properties are often not as rigorous, and hence looser
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/RO_0002219</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002220">
+        <skos:definition xml:lang="en">X adjacent to y if and only if x and y share a boundary.</skos:definition>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/RO_0002220</odo:ECSO_01000003>
         <odo:ECSO_01000007 xml:lang="en">The epidermis layer of a vertebrate is adjacent to the dermis.; The plasma membrane of a cell is adjacent to the cytoplasm, and also to the cell lumen which the cytoplasm occupies.; A caterpillar walking on the surface of a leaf is adjacent_to the leaf, if one of the caterpillar appendages is touching the leaf. In contrast, a butterfly flying close to a flower is not considered adjacent, unless there are any touching parts.; The skin of the forelimb is adjacent to the skin of the torso if these are considered anatomical subdivisions with a defined border. Otherwise a relation such as continuous_with would be used.</odo:ECSO_01000007>
-        <skos:definition xml:lang="en">X adjacent to y if and only if x and y share a boundary.</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002376">
         <skos:editorialNote xml:lang="en">This relation can be used for geographic features (e.g. rivers) as well as anatomical structures (veins, arteries)</skos:editorialNote>
