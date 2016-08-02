@@ -3797,7 +3797,8 @@ In transport phenomena (heat transfer, mass transfer and fluid dynamics), flux i
     <!-- http://purl.dataone.org/odo/ECSO_00000517 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000517">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001111"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001102"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
@@ -3825,8 +3826,9 @@ In transport phenomena (heat transfer, mass transfer and fluid dynamics), flux i
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Moisture</odo:ECSO_01000005>
         <odo:ECSO_01000008 xml:lang="en">wet, wetness</odo:ECSO_01000008>
         <rdfs:comment xml:lang="en">Confirm: dimensionless measurement (percentage) g/g
-Is this a concentration or a proportion?</rdfs:comment>
-        <rdfs:label>moisture</rdfs:label>
+Is this a concentration or a proportion?
+smh_l  soil moisture high profile, litter layer at 1.25 volt</rdfs:comment>
+        <rdfs:label>Soil Moisture</rdfs:label>
         <skos:definition xml:lang="en">wetness caused by water</skos:definition>
     </owl:Class>
     
@@ -4023,7 +4025,7 @@ this probably should be in OBOE, and is a synomym of AmountOfSubstanceConcentrat
     <!-- http://purl.dataone.org/odo/ECSO_00000530 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000530">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001109"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
@@ -4247,7 +4249,7 @@ generally, CO2 that enters the ocean dissociates into bicarbonate, carbonate, (a
     <!-- http://purl.dataone.org/odo/ECSO_00000539 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000539">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001109"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
@@ -4861,26 +4863,6 @@ The most common type of rate is &quot;per unit of time&quot;, such as speed, hea
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001102">
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#Proportion"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000109"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000182"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/UO_0000186"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <odo:ECSO_01000001 xml:lang="en">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <odo:ECSO_01000008 xml:lang="en">ratio, dimensionless quantity</odo:ECSO_01000008>
         <rdfs:label>proportion_measurementType</rdfs:label>
@@ -4997,81 +4979,6 @@ When a system contains two or more components whose concentration vary from poin
         <odo:ECSO_01000008 xml:lang="en">momentum transfer</odo:ECSO_01000008>
         <rdfs:label>Momentum Flux</rdfs:label>
         <skos:definition xml:lang="en">In momentum transfer, the fluid is treated as a continuous distribution of matter. The study of momentum transfer, or fluid mechanics can be divided into two branches: fluid statics (fluids at rest), and fluid dynamics (fluids in motion).</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ECSO_00001108 -->
-
-    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001108">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#MassDensity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
-        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Mass_concentration_(chemistry)</odo:ECSO_01000003>
-        <odo:ECSO_01000008>density</odo:ECSO_01000008>
-        <rdfs:label>Mass Concentration</rdfs:label>
-        <skos:definition xml:lang="en">The mass concentration is defined as the mass of a constituent divided by the volume of the mixture. The SI unit is kg/m3 (equal to g/L).</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ECSO_00001109 -->
-
-    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001109">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#Molality"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
-        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Molar_concentration</odo:ECSO_01000003>
-        <odo:ECSO_01000008>molal concentration</odo:ECSO_01000008>
-        <rdfs:label>Molar Concentration</rdfs:label>
-        <skos:definition xml:lang="en">The molar concentration is defined as the amount of a constituent (in moles) divided by the volume of the mixture. The SI unit is mol/m3. However, more commonly the unit mol/L (= mol/dm3) is used.</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ECSO_00001110 -->
-
-    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001110">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#MassSpecificCount"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
-        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Concentration#Number_concentration</odo:ECSO_01000003>
-        <odo:ECSO_01000008 xml:lang="en">number density</odo:ECSO_01000008>
-        <rdfs:label>Number Concentration</rdfs:label>
-        <skos:definition xml:lang="en">The number concentration is defined as the number of entities of a constituent in a mixture divided by the volume of the mixture. The SI unit is 1/m3.</skos:definition>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ECSO_00001111 -->
-
-    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001111">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresCharacteristic"/>
-                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#VolumePerVolume"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
-        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Concentration#Volume_concentration</odo:ECSO_01000003>
-        <rdfs:label>Volume Concentration</rdfs:label>
-        <skos:definition xml:lang="en">The volume concentration (do not confuse with volume fraction) is defined as the volume of a constituent divided by the volume of the mixture. Being dimensionless, it is expressed as a number, e.g., 0.18 or 18%; its unit is 1.</skos:definition>
     </owl:Class>
     
 
@@ -5195,7 +5102,7 @@ urn:node:GLEON</rdfs:comment>
     <!-- http://purl.dataone.org/odo/ECSO_00001122 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001122">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001109"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -5213,7 +5120,7 @@ urn:node:GLEON</rdfs:comment>
     <!-- http://purl.dataone.org/odo/ECSO_00001123 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001123">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000536"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000514"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
         <rdfs:comment>Ai rate Net Assimilation Rate microMolesPerMetersSquaredPerSecond
 urn:node:LTER</rdfs:comment>
@@ -5313,7 +5220,7 @@ urn:node:LTER</rdfs:comment>
     <!-- http://purl.dataone.org/odo/ECSO_00001130 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001130">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001109"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
         <rdfs:comment>POC [umol/l] particulate organic carbon concentration of POC from CHN analysis micromolePerLiter
 s_extOC  surface soil extractable organic Carbon in mg per kg dry
@@ -5372,6 +5279,18 @@ urn:node:LTER</rdfs:comment>
     
 
 
+    <!-- http://purl.dataone.org/odo/ECSO_00001135 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001135">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000513"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:comment>agb  &quot;agb&quot; is the standing above ground biomass of each measured stem, given by the formula: AGB = 0.0673 x (ρD²H) 0.976 kilogram
+www.supersites.net.au/knb/metacat/tucker.17.15/html</rdfs:comment>
+        <rdfs:label>Aboveground Standing Biomass</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.dataone.org/odo/ECSO_00001136 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001136">
@@ -5405,6 +5324,30 @@ urn:node:KNB</rdfs:comment>
         <rdfs:comment>C_to_N  Ratio of Carbon to Nitrogen dimensionless
 urn:node:LTER</rdfs:comment>
         <rdfs:label>Carbon to Nitrogen ratio</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001139 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001139">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000513"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:comment>biomass Biomass Wet weight (kg) of kelp canopy in the pixel (900 meter squared) kilogram
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/54/6</rdfs:comment>
+        <rdfs:label>Biomass Wet Weight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001140 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001140">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000513"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:comment>Plant_Biomass  Plant biomass calculated from shoot height and flowering status, based on curve fits of allometric data collected for each site, marsh zone and species gram
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/281/32</rdfs:comment>
+        <rdfs:label>Plant Biomass</rdfs:label>
     </owl:Class>
     
 
@@ -5477,6 +5420,331 @@ urn:node:KNB</rdfs:comment>
         <rdfs:comment>Percent_ Phosphorus  %  Phosphorus dimensionless
 urn:node:KNB</rdfs:comment>
         <rdfs:label>Percentage Phosphorus</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001147 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001147">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000552"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:comment>Browse biomass (g DM_m-1)  Browse biomass (g DM.m-1) dimensionless
+judithk.109849.2
+Preferred biomass (g DM_m-1)  Preferred biomass (g DM.m-1) dimensionless
+judithk.109849.2</rdfs:comment>
+        <rdfs:label>Plant Material Biomass Density</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001148 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001148">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000513"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:comment>Stem/branch/foliage biomass
+Stem/branch/foliage biomass kilogram
+cmchiu.135.2</rdfs:comment>
+        <rdfs:label>Plant Material Biomass</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001149 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001149">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000552"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:comment>salmonBM2005 Salmon Biomass 05 Salmon Biomass in 2005 kilogramsPerSquareMeter
+df35b.159.6</rdfs:comment>
+        <rdfs:label>Non-Plant Material Biomass Density</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001150 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001150">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000513"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:comment>basSpawnBM2004 Basin Spawner Biomass 2004 Basin spawner biomass in 2004 in metric tons tonne
+df35b.159.6</rdfs:comment>
+        <rdfs:label>Non-Plant Material Biomass</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001151 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001151">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000513"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:comment>Column 12 Halodule Biomass (g AFDW) of Halodule leaves and rhizomes dimensionless
+(where AFDW is ash-free dry weight)
+doi:10.5063/AA/hstuar01.6.3</rdfs:comment>
+        <rdfs:label>Biomass Ash Free Dry Weight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001153 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001153">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000513"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:comment>DryWeight dry weight X Dry Weight gram
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1115/1</rdfs:comment>
+        <rdfs:label>Biomass Dry Weight</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001154 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001154">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:comment>deltaD Dynamic height measured in meters meter
+df35b.21.6</rdfs:comment>
+        <rdfs:label>Dynamic Height</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001156 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001156">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001102"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:comment>LAI  Leaf Area Index number
+www.supersites.net.au/knb/metacat/supersite.377.4/html</rdfs:comment>
+        <rdfs:label>Leaf Area Index</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001157 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001157">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000505"/>
+        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Loss_on_ignition</odo:ECSO_01000003>
+        <rdfs:label>Loss on ignition</rdfs:label>
+        <skos:definition xml:lang="en">Loss on ignition is a test used in inorganic analytical chemistry, particularly in the analysis of minerals. It consists of strongly heating (&quot;igniting&quot;) a sample of the material at a specified temperature, allowing volatile substances to escape, until its mass ceases to change. This may be done in air, or in some other reactive or inert atmosphere.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001158 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001158">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001102"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00001157"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <odo:ECSO_01000001 xml:lang="en">Organic Content Organic Content bulk organic content of the sample (%, from loss on ignition) percent
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-pie/215/2</odo:ECSO_01000001>
+        <rdfs:label>Organic Content</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001159 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001159">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:comment xml:lang="en">pH_tot_insitu in situ pH, Total scale seaFET pH, Total scale (CO2calc input) dimensionless
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/6004/1</rdfs:comment>
+        <rdfs:label>Water pH</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001160 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001160">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Number_density</odo:ECSO_01000003>
+        <rdfs:comment xml:lang="en">LeafNum density Number of Thalassia testudinum Leaves Per Short Shoot leafnumberPerShortShoot
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1130/2</rdfs:comment>
+        <rdfs:label>Number Density</rdfs:label>
+        <skos:definition>Number density is an intensive quantity used to describe the degree of concentration of countable objects in physical space: three-dimensional volume number density, two-dimensional area number density, or one-dimensional line number density.</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001161 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001161">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001104"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:comment>potemp00 potential temperature from first sensor pair Temperature after the effects of compression have been removed. Defined as the temperature of a parcel of water at the sea surface after it has been raised adiabatically from some depth in the ocean celsius
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/1009/6</rdfs:comment>
+        <rdfs:label>Potential Temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001162 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001162">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000519"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:label>Precipitation Rate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001163 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001163">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001102"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresCharacteristic"/>
+                <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#MassPerMass"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000266"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000163"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>Relative Humidity</rdfs:label>
+        <skos:definition>Humidity in %  Humidity in % dimensionless
+peggym.109987.2</skos:definition>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001164 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001164">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002006"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000186"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Salinity salinity Composite salinity PSU (practical salinity unit)
+doi:10.6073/AA/knb-lter-fce.39.5</rdfs:comment>
+        <rdfs:label>Water Salinity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001165 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001165">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
+                <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000186"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Soil_Salinity_Porewater  Porewater salinity calculated from soil sample dry weight and salinity of supernatant after resuspension in water dimensionless
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/433/8</rdfs:comment>
+        <rdfs:label>Soil Salinity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001166 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001166">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000552"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:comment>col_4144 CephalopVol biomass milliliterPerThousandCubicMeter
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-pal/212/1</rdfs:comment>
+        <rdfs:label>Biomass Volume Fraction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001167 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001167">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001102"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00001998"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
+                        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_00002006"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00001112"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresCharacteristic"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#MassPerMass"/>
+                            <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#VolumePerVolume"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Water_content  Percent of wet soil mass made up of water percent
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/572/2</rdfs:comment>
+        <rdfs:label>Soil Water Content</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001168 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001168">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000513"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:comment>TOTAL_SAMPLE_WT Total weight of sample Total weight of all the algae in the sample. gram
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/47/3</rdfs:comment>
+        <rdfs:label>Biomass Wet Weight</rdfs:label>
     </owl:Class>
     
 
