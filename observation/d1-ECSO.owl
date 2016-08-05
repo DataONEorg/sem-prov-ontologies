@@ -3708,7 +3708,7 @@ In transport phenomena (heat transfer, mass transfer and fluid dynamics), flux i
         <odo:ECSO_01000004 xml:lang="en">Moisture refers to the presence of a liquid, especially water, often in trace amounts. Moisture also refers to the amount of water vapour present in the air. There are many ways to measure moisture in products, such as different wave measurement (light and audio), electromagnetic fields, capacitive methods, and the more traditional weighing and drying technique.</odo:ECSO_01000004>
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Moisture</odo:ECSO_01000005>
         <odo:ECSO_01000008 xml:lang="en">wet, wetness</odo:ECSO_01000008>
-        <rdfs:label>Soil Moisture</rdfs:label>
+        <rdfs:label>Soil Moisture Percentage</rdfs:label>
         <skos:definition xml:lang="en">wetness caused by water</skos:definition>
     </owl:Class>
     
@@ -4648,12 +4648,16 @@ The most common type of rate is &quot;per unit of time&quot;, such as speed, hea
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000565">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
                 <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000325"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <rdfs:comment>HCO3_CO2calc_output HCO3, CO2calc output (micromol/kgSW) Concentration of bicarbonate ion micromol per kilogram seawater (CO2calc output) milliMolesPerKilogram
+https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/75/1</rdfs:comment>
         <rdfs:label>Carbonate Concentration</rdfs:label>
     </owl:Class>
     
@@ -4990,7 +4994,7 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/75/1</rdfs:comment>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <rdfs:comment>AshWeight ash weight Soil Ash Weight gram
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1115/1</rdfs:comment>
-        <rdfs:label>Biomass Ash Weight</rdfs:label>
+        <rdfs:label>Ash Weight Biomass</rdfs:label>
     </owl:Class>
     
 
@@ -5131,7 +5135,7 @@ www.supersites.net.au/knb/metacat/lloyd.301.8/html</odo:ECSO_01000001>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <rdfs:comment>toc total organic carbon total organic carbon milligramPerLiter
 urn:node:GLEON</rdfs:comment>
-        <rdfs:label>Aquatic Total Organic Carbon</rdfs:label>
+        <rdfs:label>Aquatic Total Organic Carbon Concentration</rdfs:label>
     </owl:Class>
     
 
@@ -5207,7 +5211,7 @@ urn:node:GLEON</rdfs:comment>
         <rdfs:comment>Ai rate Net Assimilation Rate microMolesPerMetersSquaredPerSecond
 urn:node:LTER</rdfs:comment>
         <rdfs:comment>Confirm: flagged for removal</rdfs:comment>
-        <rdfs:label>Net Assimilation Rate</rdfs:label>
+        <rdfs:label>Net Assimilation Rate Flux</rdfs:label>
     </owl:Class>
     
 
@@ -5289,7 +5293,7 @@ urn:node:LTER</rdfs:comment>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <rdfs:comment>total_c  Total carbon Percentage
 urn:node:TERN</rdfs:comment>
-        <rdfs:label>Percentage Carbon</rdfs:label>
+        <rdfs:label>Carbon Percentage</rdfs:label>
     </owl:Class>
     
 
@@ -5308,7 +5312,7 @@ urn:node:TERN</rdfs:comment>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <rdfs:comment>Net_Carbon_Production rate Periphyton Net carbon production milligramsPerGramPerHour
 urn:node:LTER</rdfs:comment>
-        <rdfs:label>Net Carbon Production Rate</rdfs:label>
+        <rdfs:label>Net Carbon Production Rate Flux</rdfs:label>
     </owl:Class>
     
 
@@ -5327,7 +5331,7 @@ urn:node:LTER</rdfs:comment>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <rdfs:comment>Net_Respiration rate Periphyton Net carbon respiration milligramsPerGramPerHour
 urn:node:LTER</rdfs:comment>
-        <rdfs:label>Net Carbon Respiration Rate</rdfs:label>
+        <rdfs:label>Net Carbon Respiration Rate Flux</rdfs:label>
     </owl:Class>
     
 
@@ -5409,7 +5413,7 @@ urn:node:LTER</rdfs:comment>
         <rdfs:comment>coupledvegCchange coupledvegCchange coupled vegetation Carbon change dimensionless
 (coupled/uncoupled)
 urn:node:LTER</rdfs:comment>
-        <rdfs:label>Vegetation carbon change</rdfs:label>
+        <rdfs:label>Vegetation Carbon Change Percentage</rdfs:label>
     </owl:Class>
     
 
@@ -5439,7 +5443,7 @@ urn:node:LTER</rdfs:comment>
         <rdfs:comment>coupledsoilCchange coupledsoilCchange coupled soil Carbon change dimensionless
 (coupled/uncoupled)
 urn:node:LTER</rdfs:comment>
-        <rdfs:label>Soil Carbon Change</rdfs:label>
+        <rdfs:label>Soil Carbon Change Percentage</rdfs:label>
     </owl:Class>
     
 
@@ -5498,7 +5502,7 @@ urn:node:LTER</rdfs:comment>
         <rdfs:comment>npp  Net primary production (g m-2 yr-1) dimensionless
 this is one that needs the NPP in plant weight, not carbon.
 doi:10.5063/AA/nceas.347.3</rdfs:comment>
-        <rdfs:label>Biomass Net Primary Production</rdfs:label>
+        <rdfs:label>Net Primary Production Biomass Flux</rdfs:label>
     </owl:Class>
     
 
@@ -5552,7 +5556,7 @@ urn:node:LTER</rdfs:comment>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <rdfs:comment>biomass Biomass Wet weight (kg) of kelp canopy in the pixel (900 meter squared) kilogram
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/54/6</rdfs:comment>
-        <rdfs:label>Biomass Wet Weight</rdfs:label>
+        <rdfs:label>Wet Weight Biomass</rdfs:label>
     </owl:Class>
     
 
@@ -5626,7 +5630,7 @@ urn:node:GOA</rdfs:comment>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <rdfs:comment>wtC Carbon Weight Weight of carbon in sample dimensionless
 urn:node:GOA</rdfs:comment>
-        <rdfs:label>Weight of Carbon in Sample</rdfs:label>
+        <rdfs:label>Sample Carbon Weight</rdfs:label>
     </owl:Class>
     
 
@@ -5674,7 +5678,7 @@ urn:node:LTER</rdfs:comment>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <rdfs:comment>Percent_N  Percent Nitrogen dimensionless
 urn:node:KNB</rdfs:comment>
-        <rdfs:label>Percentage Nitrogen</rdfs:label>
+        <rdfs:label>Nitrogen Percentage</rdfs:label>
     </owl:Class>
     
 
@@ -5775,7 +5779,7 @@ df35b.159.6</rdfs:comment>
         <rdfs:comment>Column 12 Halodule Biomass (g AFDW) of Halodule leaves and rhizomes dimensionless
 (where AFDW is ash-free dry weight)
 doi:10.5063/AA/hstuar01.6.3</rdfs:comment>
-        <rdfs:label>Biomass Ash Free Dry Weight</rdfs:label>
+        <rdfs:label>Ash Free Dry Weight Biomass</rdfs:label>
     </owl:Class>
     
 
@@ -5794,7 +5798,7 @@ doi:10.5063/AA/hstuar01.6.3</rdfs:comment>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <rdfs:comment>fert_area  measurement area of the experimental unit : m² for fertilization manipulation squareMeter
 doi:10.5063/AA/nceas.347.3</rdfs:comment>
-        <rdfs:label>Sampling Site</rdfs:label>
+        <rdfs:label>Sampling Site Area</rdfs:label>
     </owl:Class>
     
 
@@ -5819,7 +5823,7 @@ doi:10.5063/AA/nceas.347.3</rdfs:comment>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <rdfs:comment>DryWeight dry weight X Dry Weight gram
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1115/1</rdfs:comment>
-        <rdfs:label>Biomass Dry Weight</rdfs:label>
+        <rdfs:label>Dry Weight Biomass</rdfs:label>
     </owl:Class>
     
 
@@ -5965,8 +5969,9 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1098/3</rdfs:comment
             </owl:Restriction>
         </rdfs:subClassOf>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000008>relative humidity</odo:ECSO_01000008>
         <rdfs:comment>Confirm: sibling to soil moisture (air moisture)</rdfs:comment>
-        <rdfs:label>Relative Humidity</rdfs:label>
+        <rdfs:label>Air Moisture Percentage</rdfs:label>
         <skos:definition>Humidity in %  Humidity in % dimensionless
 peggym.109987.2</skos:definition>
     </owl:Class>
@@ -6047,7 +6052,7 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/433/8</rdfs:comment>
         <rdfs:comment>Confirm: flagged for removal</rdfs:comment>
         <rdfs:comment>col_4144 CephalopVol biomass milliliterPerThousandCubicMeter
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-pal/212/1</rdfs:comment>
-        <rdfs:label>Biomass Volume Fraction</rdfs:label>
+        <rdfs:label>Volume Fraction Biomass Density</rdfs:label>
     </owl:Class>
     
 
@@ -6083,7 +6088,7 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-pal/212/1</rdfs:comment>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <rdfs:comment>OBSERVATION  animal density of Cymatogaster aggregata numberPerMeterSquared
 https://pasta.lternet.edu/package/metadata/eml/ecotrends/5556/2</rdfs:comment>
-        <rdfs:label>Non-Plant Material Count Density</rdfs:label>
+        <rdfs:label>Non-Plant Material Count Aerial Density</rdfs:label>
     </owl:Class>
     
 
@@ -6115,7 +6120,7 @@ taxa:Aeschynomene_pratensis</rdfs:comment>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <rdfs:comment>roadDens_BUFR  Density of roads within the buffer. Derived using methods of Pechenick et al. 2014 (km^-1) dimensionless
 cgries.16.1</rdfs:comment>
-        <rdfs:label>Built Feature Count Density</rdfs:label>
+        <rdfs:label>Built Feature Count Aerial Density</rdfs:label>
     </owl:Class>
     
 
@@ -6237,6 +6242,7 @@ doi:10.5063/AA/nceas.919.3</odo:ECSO_01000003>
         </rdfs:subClassOf>
         <odo:ECSO_01000001>1 Difference/Dry weight  proportion of water in soil sample dimensionless
 judithk.1264.2</odo:ECSO_01000001>
+        <odo:ECSO_01000008>soil wet mass</odo:ECSO_01000008>
         <rdfs:comment>Sara Lafia, http://orcid.org/0000-0002-5896-7295</rdfs:comment>
         <rdfs:label>Soil Wet Weight</rdfs:label>
     </owl:Class>
@@ -6385,7 +6391,7 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/1009/6</rdfs:comment
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <rdfs:comment>N_OBSERVED  number of observations actually observed in a sample number
 https://pasta.lternet.edu/package/metadata/eml/ecotrends/3114/2</rdfs:comment>
-        <rdfs:label>Count of Sample</rdfs:label>
+        <rdfs:label>Sample Count</rdfs:label>
     </owl:Class>
     
 
@@ -6398,7 +6404,7 @@ https://pasta.lternet.edu/package/metadata/eml/ecotrends/3114/2</rdfs:comment>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <rdfs:comment>Average number of live pupae per mature tree  based on average number of pupae per square meter (surface area excavated) and assuming that pupae are found around each mopane tree to a radius of 1.25m (calculation made on sheet 3: Hole specs and density calcs). dimensionless
 judithk.1287.1</rdfs:comment>
-        <rdfs:label>Count per Entity</rdfs:label>
+        <rdfs:label>Entity Count</rdfs:label>
     </owl:Class>
     
 
@@ -6427,7 +6433,7 @@ judithk.1287.1</rdfs:comment>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <rdfs:comment>OBSERVATION  plant cover of Dasyochloa pulchella (low woollygrass) percent
 https://pasta.lternet.edu/package/metadata/eml/ecotrends/15283/2</rdfs:comment>
-        <rdfs:label>Aerial Percent Cover</rdfs:label>
+        <rdfs:label>Aerial Cover Percentage</rdfs:label>
     </owl:Class>
     
 
@@ -6452,7 +6458,7 @@ https://pasta.lternet.edu/package/metadata/eml/ecotrends/15283/2</rdfs:comment>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <rdfs:comment>CC (%)  Percentage crown cover Percentage
 www.supersites.net.au/knb/metacat/lloyd.635.9/html</rdfs:comment>
-        <rdfs:label>Percentage Crown Cover</rdfs:label>
+        <rdfs:label>Crown Cover Percentage</rdfs:label>
     </owl:Class>
     
 
@@ -6471,7 +6477,7 @@ www.supersites.net.au/knb/metacat/lloyd.635.9/html</rdfs:comment>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <rdfs:comment>%CC  Percentage canopy cover of a single plot, calculated with a supervisd classification with maximum likelihood classifier(IDRISI GIS) on the area of an experimental burn plot dimensionless
 judithk.173.7</rdfs:comment>
-        <rdfs:label>Percentage Canopy</rdfs:label>
+        <rdfs:label>Canopy Percentage</rdfs:label>
     </owl:Class>
     
 
@@ -6500,7 +6506,7 @@ judithk.173.7</rdfs:comment>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <rdfs:comment>Total cover  Sum of all cover measurements dimensionless
 Collinge.3.34</rdfs:comment>
-        <rdfs:label>Total Cover</rdfs:label>
+        <rdfs:label>Total Cover Percentage</rdfs:label>
     </owl:Class>
     
 
@@ -6513,7 +6519,7 @@ Collinge.3.34</rdfs:comment>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <rdfs:comment>N1  Proportion of individuals sampled who were in the naupliar 1 stage number
 ark:/90135/q13j39xf/4/mrt-eml.xml</rdfs:comment>
-        <rdfs:label>Proportion of Individuals Sampled</rdfs:label>
+        <rdfs:label>Sampled Individuals Proportion</rdfs:label>
     </owl:Class>
     
 
@@ -6532,7 +6538,7 @@ ark:/90135/q13j39xf/4/mrt-eml.xml</rdfs:comment>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <rdfs:comment>PCT_WETLAND_BUFR  Percent of buffer area as Wetlands (Woody + Herbaceous) squareKilometers
 cgries.16.1</rdfs:comment>
-        <rdfs:label>Percentage of Area</rdfs:label>
+        <rdfs:label>Area Percentage</rdfs:label>
     </owl:Class>
     
 
@@ -6935,7 +6941,7 @@ judithk.109838.2</rdfs:comment>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <rdfs:comment>PIR Pile longwave flux PIR Pile longwave flux flux calculated from the Eppley PIR Pyrgeometer thermopile wattPerMeterSquared
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/1107/6</rdfs:comment>
-        <rdfs:label>Solar Radiation Longwave</rdfs:label>
+        <rdfs:label>Solar Radiation Longwave Flux</rdfs:label>
     </owl:Class>
     
 
@@ -6954,7 +6960,7 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/1107/6</rdfs:comment
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <rdfs:comment>LE LE Latent heat flux wattPerMeterSquared
 knb-lter-arc.20005.1</rdfs:comment>
-        <rdfs:label>Latent Heat</rdfs:label>
+        <rdfs:label>Latent Heat Flux</rdfs:label>
     </owl:Class>
     
 
@@ -7327,6 +7333,7 @@ jstocking.3.4</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000008>soil dry mass</odo:ECSO_01000008>
         <rdfs:comment>Weight1dry  weight of soil sample after drying in an oven for 24 hours. dimensionless
 judithk.1264.2</rdfs:comment>
         <rdfs:label>Soil Dry Weight</rdfs:label>
@@ -10386,8 +10393,8 @@ maybe others.
         <skos:definition>Carbon oxoanions that have formula CO3.</skos:definition>
         <odo:ECSO_01000003> http://purl.obolibrary.org/obo/CHEBI_41609
 </odo:ECSO_01000003>
-        <skos:altLabel>CO3</skos:altLabel>
         <odo:ECSO_01000004 xml:lang="en">In chemistry, a carbonate is a salt of carbonic acid, characterized by the presence of the carbonate ion, CO2−3. The name may also mean an ester of carbonic acid, an organic compound containing the carbonate group.</odo:ECSO_01000004>
+        <skos:altLabel>CO3</skos:altLabel>
         <oboInOwl:id xml:lang="en">CHEBI:41609</oboInOwl:id>
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Carbonate</odo:ECSO_01000005>
         <odo:ECSO_01000008 xml:lang="en">carbonate ion</odo:ECSO_01000008>
