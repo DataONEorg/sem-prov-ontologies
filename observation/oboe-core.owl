@@ -451,7 +451,7 @@
     <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#BaseCharacteristicQualifier">
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#CharacteristicQualifier"/>
         <rdfs:comment>A base qualifier denotes a simple, atomic qualifier such as average, minimum, and maximum.</rdfs:comment>
-        <rdfs:label xml:lang="en">Base Characteristic Qualifier</rdfs:label>
+        <rdfs:label>Base Characteristic Qualifier</rdfs:label>
     </owl:Class>
     
 
@@ -497,7 +497,7 @@
         <owl:disjointWith rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#ObservationCollection"/>
         <owl:disjointWith rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Protocol"/>
         <owl:disjointWith rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Standard"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A characteristic represents a property of an entity that can be measured (e.g., height, length, or color).  A characteristic of an entity is observed through a measurement, which further asserts a value of the characteristic for the entity. A characteristic type (e.g., &quot;height&quot;) can be associated with many different entities, whereas an individual characteristic (a particular occurrence of the &quot;height&quot; characteristic) is associated to exactly one entity.</rdfs:comment>
+        <rdfs:comment>A characteristic represents a property of an entity that can be measured (e.g., height, length, or color).  A characteristic of an entity is observed through a measurement, which further asserts a value of the characteristic for the entity. A characteristic type (e.g., &quot;height&quot;) can be associated with many different entities, whereas an individual characteristic (a particular occurrence of the &quot;height&quot; characteristic) is associated to exactly one entity.</rdfs:comment>
         <rdfs:label>Characteristic</rdfs:label>
     </owl:Class>
     
@@ -524,7 +524,7 @@
         <owl:disjointWith rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Standard"/>
         <owl:disjointWith rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#UnitConversion"/>
         <rdfs:comment>A characteristic qualifier is a derived property of an entity that must be combined with concrete characteristics to be used in a measurement. A qualifier is either a base (atomic) or composite qualifier. As an example, the base qualifier minimum can be combined with a characteristic length to create a minimum length qualified characteristic. A composite qualifer is used to combine multiple qualifiers.</rdfs:comment>
-        <rdfs:label xml:lang="en">Characteristic Qualifier</rdfs:label>
+        <rdfs:label>Characteristic Qualifier</rdfs:label>
     </owl:Class>
     
 
@@ -548,7 +548,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A composite qualifier combines multiple qualifiers. Each composite qualifier has a base qualifier and a reference to another qualifier. Composite qualifiers are ordered (through hasNextQualifier) to distinguish between the scope of qualifiers, e.g., AverageMinimum versus MinimumAverage.</rdfs:comment>
-        <rdfs:label xml:lang="en">Composite Characteristic Qualifier</rdfs:label>
+        <rdfs:label>Composite Characteristic Qualifier</rdfs:label>
     </owl:Class>
     
 
@@ -628,8 +628,8 @@ BRL 20160601: I removed this restriction so that CompositeUnits like XXXPerLiter
         <owl:disjointWith rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#ObservationCollection"/>
         <owl:disjointWith rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Protocol"/>
         <owl:disjointWith rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Standard"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An entity is an object (e.g., a tree, a community, an ecological process). Entities constitute the foci of observations, i.e., every observation is of exactly one entity.</rdfs:comment>
-        <rdfs:label xml:lang="en">Entity</rdfs:label>
+        <rdfs:comment>An entity is an object (e.g., a tree, a community, an ecological process). Entities constitute the foci of observations, i.e., every observation is of exactly one entity.</rdfs:comment>
+        <rdfs:label>Entity</rdfs:label>
     </owl:Class>
     
 
@@ -675,7 +675,7 @@ BRL 20160601: I removed this restriction so that CompositeUnits like XXXPerLiter
         <owl:disjointWith rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Standard"/>
         <owl:disjointWith rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#UnitConversion"/>
         <rdfs:comment>A measurement value is a quantitative or qualitative result of a measurement. Measurement values can contain a coded representation of the result, e.g., as a number or string.</rdfs:comment>
-        <rdfs:label xml:lang="en">Measurement Value</rdfs:label>
+        <rdfs:label>Measurement Value</rdfs:label>
     </owl:Class>
     
 
@@ -719,8 +719,8 @@ BRL 20160601: I removed this restriction so that CompositeUnits like XXXPerLiter
         <owl:disjointWith rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#ObservationCollection"/>
         <owl:disjointWith rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Protocol"/>
         <owl:disjointWith rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Standard"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A measurement is an assertion that a characteristic of an entity had a particular value with respect to an observation event.  A measurement is comprised of a characteristic, a value, a measurement standard, and a protocol. Measurements can also have precision as well as a description of the methods used. Measurements can encapsulate characteristics that were recorded, but not necessarily measured in a physical sense.  For example, the name of a location and a taxon can be captured through measurements.</rdfs:comment>
-        <rdfs:label xml:lang="en">Measurement</rdfs:label>
+        <rdfs:comment>A measurement is an assertion that a characteristic of an entity had a particular value with respect to an observation event.  A measurement is comprised of a characteristic, a value, a measurement standard, and a protocol. Measurements can also have precision as well as a description of the methods used. Measurements can encapsulate characteristics that were recorded, but not necessarily measured in a physical sense.  For example, the name of a location and a taxon can be captured through measurements.</rdfs:comment>
+        <rdfs:label>Measurement</rdfs:label>
     </owl:Class>
     
 
@@ -757,8 +757,8 @@ BRL 20160601: I removed this restriction so that CompositeUnits like XXXPerLiter
         <owl:disjointWith rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Protocol"/>
         <owl:disjointWith rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Standard"/>
         <owl:disjointWith rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#UnitConversion"/>
-        <rdfs:comment xml:lang="en">A MeasurementType describes the type of a Measurement in which the Measurement would follow the associated Protocol to record the value of the associated Characteristic of the associated Entity using the associated Standard.  Any of these associated properties may be omitted, in which case the MeasurementType is only constrained by the provided associations. A MeasurementType is a hypothetical construct, in that it is not associated with a particular instance of a Measurement.</rdfs:comment>
-        <rdfs:label xml:lang="en">Measurement Type</rdfs:label>
+        <rdfs:comment>A MeasurementType describes the type of a Measurement in which the Measurement would follow the associated Protocol to record the value of the associated Characteristic of the associated Entity using the associated Standard.  Any of these associated properties may be omitted, in which case the MeasurementType is only constrained by the provided associations. A MeasurementType is a hypothetical construct, in that it is not associated with a particular instance of a Measurement.</rdfs:comment>
+        <rdfs:label>Measurement Type</rdfs:label>
     </owl:Class>
     
 
@@ -776,7 +776,7 @@ BRL 20160601: I removed this restriction so that CompositeUnits like XXXPerLiter
         <owl:disjointWith rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Protocol"/>
         <owl:disjointWith rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Standard"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> An observation is an assertion that an entity (e.g., biological organisms, geographic locations, or environmental features, among others) was observed by an observer. An observation primarily serves to group a set of measurements together into a single &quot;observation event&quot;. Observations are often made within a broader context. The context of an observation is given by other observations, implying that an observed entity (and specifically each corresponding measurement) contextualizes another observed entity (and its corresponding measurements). For example, an observation associated with a location may serve as context for an observation associated with an organism. In this case, the observed characteristic values of the location (such as humidity) are assumed constant for the corresponding measurements of the organism.</rdfs:comment>
-        <rdfs:label xml:lang="en">Observation</rdfs:label>
+        <rdfs:label>Observation</rdfs:label>
     </owl:Class>
     
 
@@ -787,7 +787,7 @@ BRL 20160601: I removed this restriction so that CompositeUnits like XXXPerLiter
         <owl:disjointWith rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Protocol"/>
         <owl:disjointWith rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Standard"/>
         <rdfs:comment>An observation collection is a container for a set of observations.</rdfs:comment>
-        <rdfs:label xml:lang="en">Observation Collection</rdfs:label>
+        <rdfs:label>Observation Collection</rdfs:label>
     </owl:Class>
     
 
@@ -840,7 +840,7 @@ BRL 20160601: I removed this restriction so that CompositeUnits like XXXPerLiter
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Standard"/>
         <rdfs:comment>A protocol is a procedure for generating or processing data.</rdfs:comment>
-        <rdfs:label xml:lang="en">Protocol</rdfs:label>
+        <rdfs:label>Protocol</rdfs:label>
     </owl:Class>
     
 
@@ -858,8 +858,8 @@ BRL 20160601: I removed this restriction so that CompositeUnits like XXXPerLiter
                 <owl:someValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Measurement"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A standard defines a reference for comparing or naming entities via a measurement. A standard can be defined intentionally (e.g., as in the case of units) or extensionally (by listing the values of the standard, e.g., for color this might be red, blue, yellow, etc).</rdfs:comment>
-        <rdfs:label xml:lang="en">Standard</rdfs:label>
+        <rdfs:comment>A standard defines a reference for comparing or naming entities via a measurement. A standard can be defined intentionally (e.g., as in the case of units) or extensionally (by listing the values of the standard, e.g., for color this might be red, blue, yellow, etc).</rdfs:comment>
+        <rdfs:label>Standard</rdfs:label>
     </owl:Class>
     
 
@@ -879,7 +879,7 @@ BRL 20160601: I removed this restriction so that CompositeUnits like XXXPerLiter
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Standard"/>
         <rdfs:comment>A unit is a standard quantification for physical measurements. A unit is either a base unit, a composite unit, or a derived unit.</rdfs:comment>
-        <rdfs:label xml:lang="en">Unit</rdfs:label>
+        <rdfs:label>Unit</rdfs:label>
     </owl:Class>
     
 
@@ -912,7 +912,7 @@ BRL 20160601: I removed this restriction so that CompositeUnits like XXXPerLiter
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>A unit conversion is a mapping from a source unit to a target unit via a multiplier and an offset value.</rdfs:comment>
-        <rdfs:label xml:lang="en">Unit Conversion</rdfs:label>
+        <rdfs:label>Unit Conversion</rdfs:label>
     </owl:Class>
     
 
