@@ -265,7 +265,6 @@
         <rdfs:domain rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType"/>
         <rdfs:range rdf:resource="http://purl.dataone.org/odo/ECSO_00000546"/>
         <odo:ECSO_01000007 xml:lang="en">this input material (or this output material) participates in this process; this blood clot participates in this blood coagulation; this investigator participates in this investigation</odo:ECSO_01000007>
-        <rdfs:comment xml:lang="en">Confirm: That import of RO IRI is correct (not allowed to change IRI)</rdfs:comment>
         <rdfs:label>participates in</rdfs:label>
         <skos:definition>A relation between a continuant and a process, in which the continuant is somehow involved in the process</skos:definition>
     </owl:ObjectProperty>
@@ -324,7 +323,6 @@
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/RO_0002473">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <odo:ECSO_01000007 xml:lang="en">&apos;otolith organ&apos; SubClassOf &apos;composed primarily of&apos; some &apos;calcium carbonate&apos;</odo:ECSO_01000007>
-        <rdfs:comment xml:lang="en">Confirm: changed to &apos;composed primarily of&apos; and inherited from RO</rdfs:comment>
         <rdfs:label>composed primarily of</rdfs:label>
         <skos:definition>X composed_primarily_of y if and only if more than half of the mass of x is made from y or units of the same type as y.</skos:definition>
     </owl:ObjectProperty>
@@ -486,7 +484,7 @@
     <owl:Class rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#Length">
         <odo:ECSO_01000001 xml:lang="en">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <odo:ECSO_01000003 xml:lang="en">WordNet</odo:ECSO_01000003>
-        <rdfs:comment>Confirm: length should be a subclass and the parent class (OBOE) should be more general (&quot;linear&quot;)</rdfs:comment>
+        <rdfs:comment>Confirm: to follow the pattern, &apos;length&apos; could be a subclass and the parent class (OBOE)  more general (&quot;linear&quot;). Is this justified? or necessary?</rdfs:comment>
         <rdfs:label xml:lang="en">Length</rdfs:label>
         <skos:definition xml:lang="en">The linear extent in space from one end to the other; the longest dimension of something that is fixed in place</skos:definition>
     </owl:Class>
@@ -508,7 +506,8 @@
     <!-- http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#MassDensity -->
 
     <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#MassDensity">
-        <rdfs:comment xml:lang="en">Confirm: meaning of term (same concept as density)?</rdfs:comment>
+        <rdfs:comment xml:lang="en">Confirm: meaning of term (same concept as density)?
+See ArealDensity, ArealMassDensity. These need better definitions before ECSO can use them</rdfs:comment>
         <rdfs:label xml:lang="en">MassDensity</rdfs:label>
     </rdf:Description>
     
@@ -2911,7 +2910,7 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
     <!-- http://purl.dataone.org/odo/ECSO_00000201 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000201">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001105"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000536"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
@@ -3364,10 +3363,11 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
     <!-- http://purl.dataone.org/odo/ECSO_00000337 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000337">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24835"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
         <odo:ECSO_01000004 xml:lang="en">Inorganic carbon is carbon extracted from ores and minerals, as opposed to organic carbon found in nature through plants and living things. Some examples of inorganic carbon are carbon oxides such as carbon monoxide and carbon dioxide; polyatomic ions, cyanide, cyanate, thiocyanate, carbonate and carbide in carbon.</odo:ECSO_01000004>
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://chemwiki.ucdavis.edu/Core/Inorganic_Chemistry/Descriptive_Chemistry/Elements_Organized_by_Block/2_p-Block_Elements/Group_14%3A_The_Carbon_Family/Chemistry_of_Carbon</odo:ECSO_01000005>
-        <rdfs:comment xml:lang="en">Confirm: CHEBI description of &apos;inorganic molecular entity&apos; as a &apos;molecular entity that contains no carbon&apos; contradicts inorganic carbon as subclass?</rdfs:comment>
+        <dc:contributor>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</dc:contributor>
+        <rdfs:comment xml:lang="en">Made this class a sibling of CHEBI class &apos;inorganic molecular entity&apos; because CHEBI says that an &apos;inorganic molecular entity&apos; contains no carbon, and we didn&apos;t want to contradict that.</rdfs:comment>
         <rdfs:label>Inorganic Carbon</rdfs:label>
     </owl:Class>
     
@@ -3395,7 +3395,6 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000501">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000306"/>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000155"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/RO_0002473"/>
@@ -3414,6 +3413,52 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
     
 
 
+    <!-- http://purl.dataone.org/odo/ECSO_00000502 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000502">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001130"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/STATO_0000101"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/CHEBI_27594"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/STATO_0000259"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000155"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_27594"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000050"/>
+                                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000155"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000003>Adapted from
+https://en.wikipedia.org/wiki/Soil_carbon</odo:ECSO_01000003>
+        <rdfs:comment>numerator is carbon, denominator is a volume or weight of soil.</rdfs:comment>
+        <rdfs:label>&apos;Litter Carbon Concentration&apos;</rdfs:label>
+        <skos:definition>Concentration of carbon in litter.</skos:definition>
+        <skos:prefLabel>Litter Carbon Concentration</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- http://purl.dataone.org/odo/ECSO_00000503 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000503">
@@ -3422,8 +3467,9 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
         <odo:ECSO_01000003 xml:lang="en">Plant Ontology (PO:0025161)</odo:ECSO_01000003>
         <odo:ECSO_01000003>Plant Ontology, accession: 
 PO:0025161</odo:ECSO_01000003>
-        <rdfs:label xml:lang="en">plant material</rdfs:label>
+        <rdfs:label>plant-derived organic material</rdfs:label>
         <skos:definition xml:lang="en">A portion of organism substance that is or was part of a plant, the whole or part thereof.</skos:definition>
+        <skos:prefLabel>Plant Material</skos:prefLabel>
     </owl:Class>
     
 
@@ -3431,7 +3477,7 @@ PO:0025161</odo:ECSO_01000003>
     <!-- http://purl.dataone.org/odo/ECSO_00000504 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000504">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000155"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000310"/>
         <odo:ECSO_01000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">Margaret O&apos;Brien, http://orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
         <odo:ECSO_01000003>Adapted from https://en.wikipedia.org/wiki/Phytoplankton, 
 http://oceanservice.noaa.gov/facts/phyto.html</odo:ECSO_01000003>
@@ -3577,9 +3623,7 @@ http://www.ontobee.org/ontology/PATO?iri=http://purl.obolibrary.org/obo/PATO_000
         <odo:ECSO_01000003>https://en.wikipedia.org/wiki/Concentration</odo:ECSO_01000003>
         <odo:ECSO_01000004 xml:lang="en">the strength of a solution (i.e. number of molecules of a substance in a given volume)</odo:ECSO_01000004>
         <odo:ECSO_01000005 xml:lang="en">WordNet</odo:ECSO_01000005>
-        <rdfs:comment xml:lang="en">A concentration measurement describes a mixture of two entities, usually expressed as &apos;concentration of [entity 1] in [entity 2].&apos;
-
-Confirm: concentration a subclass of proportion?</rdfs:comment>
+        <rdfs:comment xml:lang="en">A concentration measurement describes a mixture of two entities, usually expressed as &apos;concentration of [entity 1] in [entity 2].&apos;</rdfs:comment>
         <rdfs:comment>Note: see list of issues, text file called ECSO_notes_issues.txt
 
 PATO concentration_of explicitly says mixture of one substance with another.
@@ -3702,8 +3746,10 @@ There are many methods and usages of biomass measurements. This ECSO class is fo
     <!-- http://purl.dataone.org/odo/ECSO_00000518 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000518">
-        <rdfs:comment xml:lang="en">Confirm: different from other term definitions?
-http://purl.obolibrary.org/obo/PATO_0000146</rdfs:comment>
+        <odo:ECSO_01000001>margaret, sara</odo:ECSO_01000001>
+        <rdfs:comment xml:lang="en">Confirm: deprecated. 
+but when rendering, Protege is confusing this leftover class with PATO_0000146
+when we remove it, PATO import is still missing it&apos;s temperature class (http://purl.obolibrary.org/obo/PATO_0000146)</rdfs:comment>
         <rdfs:label>temperature_518</rdfs:label>
     </owl:Class>
     
@@ -3805,12 +3851,6 @@ Confirm: is this class still needed?</rdfs:comment>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000526">
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#Entity"/>
-        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
-        <odo:ECSO_01000003>http://www.biology-online.org/dictionary/Group</odo:ECSO_01000003>
-        <rdfs:label>group</rdfs:label>
-        <skos:altLabel>grouping</skos:altLabel>
-        <skos:definition>A number of entities taken together as a unit because members share a common characteristic or relation</skos:definition>
-        <skos:prefLabel>group</skos:prefLabel>
     </owl:Class>
     
 
@@ -4093,13 +4133,7 @@ The primary production of phytoplankton has been estimated for decades by the 14
     <!-- http://purl.dataone.org/odo/ECSO_00000536 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000536">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001105"/>
-        <odo:ECSO_01000001>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
-        <odo:ECSO_01000003>ECSO_00000011 (Carbon Flux), adapted for CO2</odo:ECSO_01000003>
-        <rdfs:comment>Confirm: How does this differ from &quot;Carbon Dioxide Diffusion Flux&quot;?</rdfs:comment>
-        <rdfs:label>CO2 Carbon Flux</rdfs:label>
-        <skos:definition>The rate at which a Carbon Dioxide (CO2) moves to or from a particular component of the ecosystem per unit time.</skos:definition>
-        <skos:prefLabel>CO2 Carbon Flux</skos:prefLabel>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000514"/>
     </owl:Class>
     
 
@@ -4270,7 +4304,7 @@ potential synonyms: development, maturation, growing, germination, sprouting; bl
     <!-- http://purl.dataone.org/odo/ECSO_00000543 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000543">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001105"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000536"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
@@ -4446,14 +4480,7 @@ Use in ECSO: The mass expressed as mass per unit area.</skos:definition>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresCharacteristic"/>
-                <owl:allValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#ArealDensity"/>
-                            <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000551"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:allValuesFrom>
+                <owl:allValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000551"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4474,6 +4501,7 @@ Use in ECSO: The mass expressed as mass per unit area.</skos:definition>
         <odo:ECSO_01000004 xml:lang="en">the amount per unit size (i.e. the total mass of living matter in a given unit area)</odo:ECSO_01000004>
         <odo:ECSO_01000005 xml:lang="en">WordNet</odo:ECSO_01000005>
         <odo:ECSO_01000007 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Use in ECSO: mass per area.</odo:ECSO_01000007>
+        <rdfs:comment>Deliberately did not use the OBOE characteristic ArealDensity, because that one seemed to be specific to physics.</rdfs:comment>
         <rdfs:label>biomass_density_MeasurementType</rdfs:label>
         <skos:definition>Biomass, in ecology, is the mass of living biological organisms per unit area at a given time. Biomass can refer to species biomass, which is the mass of one or more species, or to community biomass, which is the mass of all species in the community. It can include microorganisms, plants or animals.</skos:definition>
         <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biomass density</skos:prefLabel>
@@ -4831,7 +4859,7 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/75/1</odo:ECSO_01000
     <!-- http://purl.dataone.org/odo/ECSO_00000573 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000573">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000155"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000306"/>
         <odo:ECSO_01000003>Plant Ontology, PO:0000003</odo:ECSO_01000003>
         <odo:ECSO_01000006>whole plant</odo:ECSO_01000006>
         <rdfs:label>plant</rdfs:label>
@@ -4910,9 +4938,9 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/75/1</odo:ECSO_01000
         <odo:ECSO_01000003>Adapted from
 https://en.wikipedia.org/wiki/Soil_carbon</odo:ECSO_01000003>
         <rdfs:comment>numerator is carbon, denominator is a volume or weight of soil.</rdfs:comment>
-        <rdfs:label>Total Soil Carbon Concentration</rdfs:label>
-        <skos:definition>Concentration of soil carbon, which includes both inorganic carbon as carbonate minerals, and as soil organic matter. Soil carbon plays a key role in the carbon cycle, and thus it is important in global climate models.</skos:definition>
-        <skos:prefLabel>Total Soil Carbon Concentration</skos:prefLabel>
+        <rdfs:label>Soil Carbon Concentration</rdfs:label>
+        <skos:definition>Concentration of carbon in soil, which could include all forms (eg, inorganic carbon, carbonate minerals, and as soil organic matter). Soil carbon plays a key role in the carbon cycle, and thus it is important in global climate models.</skos:definition>
+        <skos:prefLabel>Soil Carbon Concentration</skos:prefLabel>
     </owl:Class>
     
 
@@ -4981,8 +5009,8 @@ https://en.wikipedia.org/wiki/Soil_carbon</odo:ECSO_01000003>
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00010483"/>
         <odo:ECSO_01000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Electromagnetic_radiation</odo:ECSO_01000003>
-        <rdfs:comment xml:lang="en">Confirm: wave-particle duality; if particle, then measured material</rdfs:comment>
-        <rdfs:label xml:lang="en">electromagnetic radiation</rdfs:label>
+        <rdfs:comment xml:lang="en">since light can be either a wave or a particle, is it a material entity? for ECSO purposes, yes.</rdfs:comment>
+        <rdfs:label>electromagnetic radiation</rdfs:label>
         <skos:definition xml:lang="en">Electromagnetic radiation is the radiant energy released by certain electromagnetic processes. Visible light is one type of electromagnetic radiation; other familiar forms are invisible to the human eye, such as radio waves, infrared light and X-rays.</skos:definition>
     </owl:Class>
     
@@ -5038,7 +5066,7 @@ https://en.wikipedia.org/wiki/Soil_carbon</odo:ECSO_01000003>
         <odo:ECSO_01000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Sunlight</odo:ECSO_01000003>
         <odo:ECSO_01000008 xml:lang="en">sunlight</odo:ECSO_01000008>
-        <rdfs:label xml:lang="en">solar radiation</rdfs:label>
+        <rdfs:label>solar radiation</rdfs:label>
         <skos:definition xml:lang="en">Sunlight is a portion of the electromagnetic radiation given off by the Sun, in particular infrared, visible, and ultraviolet light.</skos:definition>
     </owl:Class>
     
@@ -5431,34 +5459,13 @@ Confirm: is this class still needed?</rdfs:comment>
         <odo:ECSO_01000003>http://www.nature.com/nature/journal/v200/n4908/abs/200814a0.html</odo:ECSO_01000003>
         <odo:ECSO_01000007>Ai rate Net Assimilation Rate microMolesPerMetersSquaredPerSecond
 urn:node:LTER</odo:ECSO_01000007>
-        <rdfs:comment>Confirm: flagged for removal
-Specific production rate - how to model these combinations of existing measurement types</rdfs:comment>
+        <rdfs:comment>Confirm:
+Not sure what to do with these. in our corpus, there is only only one dataset with this measurement (https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1150/1)
+
+It seems like it is a Specific production rate, but we have not decided how to model these combinations of existing measurement types</rdfs:comment>
         <rdfs:label>Net Assimilation Rate Flux</rdfs:label>
         <skos:definition>the rate of increase of dry weight per unit of leaf area</skos:definition>
         <skos:prefLabel>Net Assimilation Rate Flux</skos:prefLabel>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.dataone.org/odo/ECSO_00001124 -->
-
-    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001124">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000628"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
-        <odo:ECSO_01000003>Adapted from
-https://en.wikipedia.org/wiki/Plant_litter</odo:ECSO_01000003>
-        <odo:ECSO_01000007>c_conc carbon concentration (mg/g) litter nutrient concentration; To reduce the number of samples analyzed for total carbon, nitrogen and phosphorus, ground samples were pooled by species, water depth and collection date prior to chemical analysis. When possible, five litter bag samples were combined to make 1 sample for nutrient analysis. Water depths were stratified into 30-cm intervals: i.e. 0 cm = unflooded, 1- 30 cm = shallow, 31-60 cm = medium,  60-90 cm = deep sites, and &gt;90cm.
-doi:10.5063/AA/duc_merp.88.6</odo:ECSO_01000007>
-        <rdfs:comment>Confirm: flagged for removal</rdfs:comment>
-        <rdfs:label>Carbon Litter Nutrient Concentration</rdfs:label>
-        <skos:definition>Concentration of carbon from litter, which is dead plant material such as leaves, bark, needles, and twigs, that have fallen to the ground. This detritus or dead organic material and its constituent nutrients are added to the top layer of soil, commonly known as the litter layer or O horizon (&quot;O&quot; for &quot;organic&quot;).</skos:definition>
-        <skos:prefLabel>Carbon Litter Nutrient Concentration</skos:prefLabel>
     </owl:Class>
     
 
@@ -6114,7 +6121,6 @@ https://en.wikipedia.org/wiki/Biomass_(ecology)</odo:ECSO_01000003>
         <odo:ECSO_01000007>Stem/branch/foliage biomass
 Stem/branch/foliage biomass kilogram
 cmchiu.135.2</odo:ECSO_01000007>
-        <rdfs:comment>Confirm: Does this include litter? Tree weight?</rdfs:comment>
         <rdfs:label>Plant Material Biomass</rdfs:label>
         <skos:definition>Biomass excluding non-plants</skos:definition>
         <skos:prefLabel>Plant Material Biomass</skos:prefLabel>
@@ -6287,14 +6293,6 @@ doi:10.5063/AA/hstuar01.6.3</odo:ECSO_01000007>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
-        <odo:ECSO_01000003>https://en.wikipedia.org/wiki/Leaf_area_index</odo:ECSO_01000003>
-        <odo:ECSO_01000007>LAI  Leaf Area Index number
-www.supersites.net.au/knb/metacat/supersite.377.4/html</odo:ECSO_01000007>
-        <rdfs:label>Leaf Area Index</rdfs:label>
-        <skos:altLabel>LAI</skos:altLabel>
-        <skos:definition>Leaf area index (LAI) is a dimensionless quantity that characterizes plant canopies. It is defined as the one-sided green leaf area per unit ground surface area (LAI = leaf area / ground area, m2 / m2) in broadleaf canopies.</skos:definition>
-        <skos:prefLabel>Leaf Area Index</skos:prefLabel>
     </owl:Class>
     
 
@@ -6500,6 +6498,7 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/433/8</odo:ECSO_0100
     <!-- http://purl.dataone.org/odo/ECSO_00001166 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001166">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -6512,8 +6511,9 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/433/8</odo:ECSO_0100
 https://en.wikipedia.org/wiki/Density</odo:ECSO_01000003>
         <odo:ECSO_01000007>col_4144 CephalopVol biomass milliliterPerThousandCubicMeter
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-pal/212/1</odo:ECSO_01000007>
-        <rdfs:comment>Confirm: flagged for removal</rdfs:comment>
-        <rdfs:label>Volume Fraction Biomass Density</rdfs:label>
+        <rdfs:comment>Confirm: 
+This class may be deprecated, or transformed somehow for use in population measurements. For now, only one dataset in the corpus uses it, for a common representation of abundance, for groups of organisms. (https://pasta.lternet.edu/package/metadata/eml/knb-lter-pal/212/1)</rdfs:comment>
+        <rdfs:label>Volume Fraction Biomass Concentration</rdfs:label>
         <skos:definition>The density, or more precisely, the volumetric mass density of biomass per unit volume.</skos:definition>
     </owl:Class>
     
@@ -6524,9 +6524,15 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-pal/212/1</odo:ECSO_0100
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001168">
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType"/>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
-        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Area_density</odo:ECSO_01000003>
+        <odo:ECSO_01000003></odo:ECSO_01000003>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">Physics definition: https://en.wikipedia.org/wiki/Area_density
+General defiintion: https://www.google.com/#q=define+density</odo:ECSO_01000003>
+        <rdfs:comment>There could be a subclass for a material&apos;s areal density that 
+measuresCharacterstic only ArealDensity</rdfs:comment>
         <rdfs:label>areal_density_MeasurementType</rdfs:label>
-        <skos:definition>The area density (also known as areal density, surface density, or superficial density) of a two-dimensional object is calculated as some characteristic, such as mass or count, per unit area.</skos:definition>
+        <skos:definition>The quantity, amount, weight, etc or things in a given area or space, ie, where the numerator and denominator are different entities. 
+
+If the numerator and denominator are the same entity, then this would be a measurement of material density (of a 2-dimensional object), eg, as in physics.</skos:definition>
         <skos:prefLabel>Areal Density Measurement Type</skos:prefLabel>
     </owl:Class>
     
@@ -6952,14 +6958,6 @@ The most common way to measure plant cover in herbal plant communities, is to ma
                 <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000503"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
-        <odo:ECSO_01000003>https://en.wikipedia.org/wiki/Crown_closure</odo:ECSO_01000003>
-        <odo:ECSO_01000007>CC (%)  Percentage crown cover Percentage
-www.supersites.net.au/knb/metacat/lloyd.635.9/html</odo:ECSO_01000007>
-        <rdfs:label>Crown Cover Percentage</rdfs:label>
-        <skos:altLabel>Crown Cover</skos:altLabel>
-        <skos:definition>Crown cover is the proportion of a stand covered by the crowns of live trees.</skos:definition>
-        <skos:prefLabel>Crown Cover Percentage</skos:prefLabel>
     </owl:Class>
     
 
@@ -8888,9 +8886,7 @@ note: ENVO also references LTER:41</rdfs:comment>
         <oboInOwl:hasOBONamespace xml:lang="en">quality</oboInOwl:hasOBONamespace>
         <oboInOwl:id xml:lang="en">PATO:0000128</oboInOwl:id>
         <oboInOwl:inSubset xml:lang="en">scalar_slim; attribute_slim</oboInOwl:inSubset>
-        <rdfs:comment xml:lang="en">Confirm: subclass of 
-force</rdfs:comment>
-        <rdfs:label xml:lang="en">weight</rdfs:label>
+        <rdfs:label>weight</rdfs:label>
         <skos:definition xml:lang="en">A physical quality inhering in a bearer that has mass near a gravitational body.</skos:definition>
     </rdf:Description>
     
@@ -9794,7 +9790,9 @@ size</rdfs:comment>
 
     <!-- http://purl.dataone.org/odo/ECSO_00000048 -->
 
-    <owl:NamedIndividual rdf:about="http://purl.dataone.org/odo/ECSO_00000048"/>
+    <owl:NamedIndividual rdf:about="http://purl.dataone.org/odo/ECSO_00000048">
+        <skos:altLabel>Photosynthetically Active Radiation</skos:altLabel>
+    </owl:NamedIndividual>
     
 
 
@@ -10243,6 +10241,14 @@ size</rdfs:comment>
     
 
 
+    <!-- http://purl.dataone.org/odo/ECSO_00000526 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.dataone.org/odo/ECSO_00000526">
+        <skos:altLabel>grouping</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.dataone.org/odo/ECSO_00000530 -->
 
     <owl:NamedIndividual rdf:about="http://purl.dataone.org/odo/ECSO_00000530">
@@ -10267,6 +10273,14 @@ size</rdfs:comment>
     
 
 
+    <!-- http://purl.dataone.org/odo/ECSO_00000536 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.dataone.org/odo/ECSO_00000536">
+        <skos:altLabel>CO2 Flux</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://purl.dataone.org/odo/ECSO_00000539 -->
 
     <owl:NamedIndividual rdf:about="http://purl.dataone.org/odo/ECSO_00000539">
@@ -10286,7 +10300,7 @@ size</rdfs:comment>
     <!-- http://purl.dataone.org/odo/ECSO_00000543 -->
 
     <owl:NamedIndividual rdf:about="http://purl.dataone.org/odo/ECSO_00000543">
-        <skos:altLabel>Oceanic Carbon Dioxide Carbon Flux</skos:altLabel>
+        <skos:altLabel>Oceanic CO2 Flux</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -10426,6 +10440,7 @@ size</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.dataone.org/odo/ECSO_00001125">
         <skos:altLabel>DOC Concentration</skos:altLabel>
+        <skos:altLabel>DOC concentration</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -10457,6 +10472,7 @@ size</rdfs:comment>
     <!-- http://purl.dataone.org/odo/ECSO_00001138 -->
 
     <owl:NamedIndividual rdf:about="http://purl.dataone.org/odo/ECSO_00001138">
+        <skos:altLabel>C to N Ratio</skos:altLabel>
         <skos:altLabel>Carbon-nitrogen ratio</skos:altLabel>
     </owl:NamedIndividual>
     
@@ -10474,6 +10490,7 @@ size</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.dataone.org/odo/ECSO_00001142">
         <skos:altLabel>Carbon Isotope Ratio</skos:altLabel>
+        <skos:altLabel>Carbon SI Ratio</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -10498,6 +10515,14 @@ size</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.dataone.org/odo/ECSO_00001153">
         <skos:altLabel>Dry Weight</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001156 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.dataone.org/odo/ECSO_00001156">
+        <skos:altLabel>LAI</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -10587,6 +10612,14 @@ size</rdfs:comment>
 
     <owl:NamedIndividual rdf:about="http://purl.dataone.org/odo/ECSO_00001189">
         <skos:altLabel>count</skos:altLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001191 -->
+
+    <owl:NamedIndividual rdf:about="http://purl.dataone.org/odo/ECSO_00001191">
+        <skos:altLabel>Crown Cover</skos:altLabel>
     </owl:NamedIndividual>
     
 
@@ -10737,7 +10770,7 @@ size</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#AmountOfSubstanceWeightFlux">
         <rdfs:label xml:lang="en">AmountOfSubstanceWeightFlux</rdfs:label>
-        <rdfs:comment xml:lang="en">Confirm: not Mass Flux?</rdfs:comment>
+        <rdfs:comment xml:lang="en">Confirm: still looking for a definition of this...</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#Angle">
         <odo:ECSO_01000003 xml:lang="en">WordNet</odo:ECSO_01000003>
@@ -10867,8 +10900,10 @@ https://en.wikipedia.org/wiki/Mass_flow_rate</rdfs:comment>
         <skos:definition xml:lang="en">The magnetic flux through a surface is the surface integral of the normal component of the magnetic field B passing through that surface. The SI unit of magnetic flux is the weber (Wb) (in derived units: volt-seconds), and the CGS unit is the maxwell.</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#MagneticFluxDensity">
+        <obo:IAO_0000115>magnetic flux density. A vector quantity measuring the strength and direction of the magnetic field around a magnet or an electric current. Magnetic flux density is equal to magnetic field strength times the magnetic permeability in the region in which the field exists.
+Magnetic flux density - Dictionary.com</obo:IAO_0000115>
+        <odo:ECSO_01000003>www.dictionary.com/browse/magnetic--flux--density</odo:ECSO_01000003>
         <rdfs:label xml:lang="en">MagneticFluxDensity</rdfs:label>
-        <rdfs:comment>Confirm: same concept as magnetic field density?</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#PhotonFluxDensity">
         <odo:ECSO_01000008 xml:lang="en">photon_areal_density_rate</odo:ECSO_01000008>
@@ -10899,8 +10934,8 @@ https://en.wikipedia.org/wiki/Mass_flow_rate</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#Resistivity">
         <skos:definition xml:lang="en">material&apos;s opposition to the flow of electric current; measured in ohms</skos:definition>
-        <rdfs:label xml:lang="en">Resistivity</rdfs:label>
         <odo:ECSO_01000003 xml:lang="en">WordNet</odo:ECSO_01000003>
+        <rdfs:label xml:lang="en">Resistivity</rdfs:label>
         <odo:ECSO_01000001 xml:lang="en">Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <odo:ECSO_01000008 xml:lang="en">ohmic_resistance</odo:ECSO_01000008>
     </rdf:Description>
@@ -10942,8 +10977,8 @@ https://en.wikipedia.org/wiki/Mass_flow_rate</rdfs:comment>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Temperature</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#Transmissivity">
-        <rdfs:comment xml:lang="en">Confirm: appropriate definition for term?</rdfs:comment>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <rdfs:comment xml:lang="en">Confirm: appropriate definition for term?</rdfs:comment>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Hydraulic_conductivity#Transmissivity</odo:ECSO_01000003>
         <skos:definition xml:lang="en">The transmissivity is a measure of how much water can be transmitted horizontally, such as to a pumping well.</skos:definition>
         <rdfs:label xml:lang="en">Transmissivity</rdfs:label>
@@ -11030,8 +11065,8 @@ https://en.wikipedia.org/wiki/Mass_flow_rate</rdfs:comment>
         <rdfs:label>has next qualifier</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#hasObservedRelation">
-        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#hasObservedRelation</odo:ECSO_01000003>
         <rdfs:label>has observed relation</rdfs:label>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#hasObservedRelation</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#hasQualifier">
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ecoinformatics.org/oboe/oboe.1.1/oboe-core.owl#hasQualifier</odo:ECSO_01000003>
@@ -11100,8 +11135,8 @@ https://en.wikipedia.org/wiki/Mass_flow_rate</rdfs:comment>
         <rdfs:seeAlso>NEE</rdfs:seeAlso>
         <rdfs:label>Net Ecosystem Exchange Carbon Flux</rdfs:label>
         <skos:definition>The magnitude of carbon sources and sinks is defined as the vertical exchange of CO2 between the surface (land or ocean) and the atmosphere.</skos:definition>
-        <odo:ECSO_01000003>Hayes, D.J. et al. Reconciling estimates of the contemporary North American carbon balance among terrestrial biosphere models, atmospheric inversions, and a new approach for estimating net ecosystem exchange from inventory-based data. Global Change Biology. V 8, i 4. pp. 1282-1299. April 2012. DOI: 10.1111/j.1365-2486.2011.02627.x</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
+        <odo:ECSO_01000003>Hayes, D.J. et al. Reconciling estimates of the contemporary North American carbon balance among terrestrial biosphere models, atmospheric inversions, and a new approach for estimating net ecosystem exchange from inventory-based data. Global Change Biology. V 8, i 4. pp. 1282-1299. April 2012. DOI: 10.1111/j.1365-2486.2011.02627.x</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000015">
         <skos:prefLabel>Primary Production Carbon Flux</skos:prefLabel>
@@ -11141,21 +11176,21 @@ For most purposes (including this one) the two can be the same. It&apos;s most p
         <rdfs:comment>Primary production before the autotrophs&apos; own respiration is subtracted.
 Also called photosynthetic rate, or carbon fixation rate.</rdfs:comment>
         <odo:ECSO_01000003>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</odo:ECSO_01000003>
-        <skos:prefLabel>Gross Primary Production Carbon Flux</skos:prefLabel>
         <rdfs:comment>primary production before the autotrphs&apos; own respiration is subtracted.
 also called photosynthetic rate, or carbon fixation rate.
 
 Synonyms: GPP</rdfs:comment>
+        <skos:prefLabel>Gross Primary Production Carbon Flux</skos:prefLabel>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <skos:definition>The sum of gross carbon fixation by autotrophic carbon-fixing tissues per unit ground or water area and time.</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000021">
         <skos:prefLabel>Net Primary Production Carbon Flux</skos:prefLabel>
+        <odo:ECSO_01000003>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</odo:ECSO_01000003>
         <rdfs:comment>the amount of primary production available for export (ie, gross, minus losses, like the autotrophs&apos; own respiration, or other loss (exudation) not used by the carbon-fixing organism itself)
 = gross primary production - autotrophic respiration
 
 synonyms: NPP</rdfs:comment>
-        <odo:ECSO_01000003>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</odo:ECSO_01000003>
         <rdfs:label>Net Primary Production Carbon Flux</rdfs:label>
         <skos:definition>Gross primary production (GPP) minus autotrophic respiration (AR) per unit ground or water area and time.</skos:definition>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
@@ -11207,8 +11242,8 @@ synonyms: NPP</rdfs:comment>
         <odo:ECSO_01000003>&quot;grass.&quot; Collins English Dictionary – Complete and Unabridged. 1991, 1994, 1998, 2000, 2003. HarperCollins Publishers 24 Feb. 2015 http-www.thefreedictionary.com/grass</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000033">
-        <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <odo:ECSO_01000003>&quot;wood.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Feb. 2015 http-www.thefreedictionary.com/wood</odo:ECSO_01000003>
+        <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <skos:definition>The mass of carbon contained in the tough, fibrous substance lying beneath the bark of trees and shrubs, consisting of the vascular tissue known as xylem and composed chiefly of cellulose and lignin.</skos:definition>
         <rdfs:label>Wood Carbon Pool</rdfs:label>
     </rdf:Description>
@@ -11223,8 +11258,8 @@ synonyms: NPP</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000035">
         <rdfs:label>Dissolved Organic Carbon Pool</rdfs:label>
-        <skos:definition>TO DO, Margaret</skos:definition>
         <odo:ECSO_01000003>TO DO, Margaret</odo:ECSO_01000003>
+        <skos:definition>TO DO, Margaret</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000037">
         <rdfs:label>Annual Net Primary Productivity Flux</rdfs:label>
@@ -11245,8 +11280,8 @@ synonyms: NPP</rdfs:comment>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000044">
         <rdfs:label>Net_Longwave_Radiation_MOV</rdfs:label>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
-        <skos:definition>Incident longwave radiation minus simulated outgoing longwave radiation (positive into grnd)</skos:definition>
         <odo:ECSO_01000004>Outgoing Longwave Radiation (OLR) is the energy radiating from the Earth as infrared radiation at low energy to Space. OLR is electromagnetic radiation emitted from Earth and its atmosphere out to space in the form of thermal radiation. The flux of energy transported by outgoing longwave radiation is measured in W/m².</odo:ECSO_01000004>
+        <skos:definition>Incident longwave radiation minus simulated outgoing longwave radiation (positive into grnd)</skos:definition>
         <skos:prefLabel>Net Longwave Radiation MOV</skos:prefLabel>
         <odo:ECSO_01000005>https://en.wikipedia.org/wiki/Outgoing_longwave_radiation</odo:ECSO_01000005>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
@@ -11262,12 +11297,10 @@ synonyms: NPP</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000046">
         <skos:prefLabel>Near Surface CO2 Concentration MOV</skos:prefLabel>
-        <rdfs:comment>EquivalentTo: concentration and measurementFor only ofEntity only partOf only Air
-Confirm: micromol/mol-1 is same measure of molarity as micromol/L</rdfs:comment>
         <odo:ECSO_01000004>Carbon dioxide is a greenhouse gas, absorbing and emitting infrared radiation at its two infrared-active vibrational frequencies. This process causes carbon dioxide to warm the surface and lower atmosphere, while cooling the upper atmosphere.</odo:ECSO_01000004>
         <rdfs:label>Near_Surface_CO2_Concentration_MOV</rdfs:label>
+        <skos:definition>Near surface dry air CO2 mole fraction (micromoles per mole)</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
-        <skos:definition>Near surface dry air CO2 mole fraction</skos:definition>
         <odo:ECSO_01000005>https://en.wikipedia.org/wiki/Carbon_dioxide</odo:ECSO_01000005>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
     </rdf:Description>
@@ -11282,9 +11315,8 @@ Confirm: micromol/mol-1 is same measure of molarity as micromol/L</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000048">
         <odo:ECSO_01000005>https://en.wikipedia.org/wiki/Photosynthetically_active_radiation</odo:ECSO_01000005>
-        <skos:definition>Absorbed fraction incoming photosyntetically active radiation</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
-        <skos:altLabel>Photosynthetically Active Radiation</skos:altLabel>
+        <skos:definition>Absorbed fraction incoming photosyntetically active radiation</skos:definition>
         <rdfs:label>Absorbed_Fraction_Incoming_PAR_MOV</rdfs:label>
         <odo:ECSO_01000004>Photosynthetically active radiation, often abbreviated PAR, designates the spectral range (wave band) of solar radiation from 400 to 700 nanometers that photosynthetic organisms are able to use in the process of photosynthesis.</odo:ECSO_01000004>
         <skos:prefLabel>Absorbed Fraction Incoming PAR MOV</skos:prefLabel>
@@ -11305,15 +11337,15 @@ Confirm: micromol/mol-1 is same measure of molarity as micromol/L</rdfs:comment>
         <odo:ECSO_01000005>https://en.wikipedia.org/wiki/Leaf_area_index</odo:ECSO_01000005>
         <skos:definition>Area of leaves per area ground</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
-        <skos:prefLabel>Leaf Area Index MOV</skos:prefLabel>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
+        <skos:prefLabel>Leaf Area Index MOV</skos:prefLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000051">
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
-        <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Surface pressure</skos:definition>
-        <rdfs:label>Surface_Pressure_MOV</rdfs:label>
+        <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:prefLabel>Surface Pressure MOV</skos:prefLabel>
+        <rdfs:label>Surface_Pressure_MOV</rdfs:label>
         <odo:ECSO_01000004>In atmospheric science, surface pressure is the atmospheric pressure at a location on Earth&apos;s surface. It is directly proportional to the mass of air over that location.</odo:ECSO_01000004>
         <odo:ECSO_01000005>https://en.wikipedia.org/wiki/Surface_pressure</odo:ECSO_01000005>
     </rdf:Description>
@@ -11391,17 +11423,17 @@ Confirm: micromol/mol-1 is same measure of molarity as micromol/L</rdfs:comment>
         <odo:ECSO_01000005>https://en.wikipedia.org/wiki/Soil_carbon</odo:ECSO_01000005>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <skos:prefLabel>Total Soil Carbon MOV</skos:prefLabel>
-        <odo:ECSO_01000004>Soil carbon includes both inorganic carbon as carbonate minerals, and as soil organic matter.</odo:ECSO_01000004>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
+        <odo:ECSO_01000004>Soil carbon includes both inorganic carbon as carbonate minerals, and as soil organic matter.</odo:ECSO_01000004>
         <rdfs:label>Total_Soil_Carbon_MOV</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000061">
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Autotrophic respiration rate (always positive)</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
-        <skos:prefLabel>Autotrophic Respiration MOV</skos:prefLabel>
         <odo:ECSO_01000004>An autotroph or producer, is an organism that produces complex organic compounds (such as carbohydrates, fats, and proteins) from simple substances present in its surroundings, generally using energy from light (photosynthesis) or inorganic chemical reactions (chemosynthesis).</odo:ECSO_01000004>
         <odo:ECSO_01000005>https://en.wikipedia.org/wiki/Autotroph</odo:ECSO_01000005>
+        <skos:prefLabel>Autotrophic Respiration MOV</skos:prefLabel>
         <rdfs:label>Autotrophic_Respiration_MOV</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000062">
@@ -11424,8 +11456,8 @@ Confirm: micromol/mol-1 is same measure of molarity as micromol/L</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000064">
         <skos:prefLabel>Gross Primary Productivity MOV</skos:prefLabel>
-        <rdfs:label>Gross_Primary_Productivity_MOV</rdfs:label>
         <skos:definition>MsTMIP Output: Rate of photosynthesis (always positive)</skos:definition>
+        <rdfs:label>Gross_Primary_Productivity_MOV</rdfs:label>
         <odo:ECSO_01000001 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">Margaret O&apos;Brien, http://orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
         <odo:ECSO_01000005>https://en.wikipedia.org/wiki/Primary_production#GPP_and_NPP</odo:ECSO_01000005>
         <odo:ECSO_01000004>Gross Primary productivity is the rate at which photosynthesis or chemosynthesis occurs.</odo:ECSO_01000004>
@@ -11480,13 +11512,13 @@ Confirm: micromol/mol-1 is same measure of molarity as micromol/L</rdfs:comment>
         <rdfs:label>Total_Snow_Depth_MOV</rdfs:label>
         <skos:definition>Total snow depth</skos:definition>
         <odo:ECSO_01000004>Snow is precipitation in the form of flakes of crystalline water ice that falls from clouds. Since snow is composed of small ice particles, it is a granular material.</odo:ECSO_01000004>
-        <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <skos:prefLabel>Total Snow Depth MOV</skos:prefLabel>
+        <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000071">
         <odo:ECSO_01000005>https://en.wikipedia.org/wiki/Wildfire</odo:ECSO_01000005>
-        <odo:ECSO_01000004>A wildfire or wildland fire is an uncontrolled fire in an area of combustible vegetation that occurs in the countryside (i.e., not in an urban area).</odo:ECSO_01000004>
         <rdfs:label>Fire_Emissions_MOV</rdfs:label>
+        <odo:ECSO_01000004>A wildfire or wildland fire is an uncontrolled fire in an area of combustible vegetation that occurs in the countryside (i.e., not in an urban area).</odo:ECSO_01000004>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:prefLabel>Fire Emissions MOV</skos:prefLabel>
@@ -11511,8 +11543,8 @@ Confirm: micromol/mol-1 is same measure of molarity as micromol/L</rdfs:comment>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000074">
         <odo:ECSO_01000005>https://en.wikipedia.org/wiki/Subsurface_flow#Runoff</odo:ECSO_01000005>
         <skos:prefLabel>Subsurface Runoff MOV</skos:prefLabel>
-        <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <odo:ECSO_01000004>Water flows from areas where the water table is higher to areas where it is lower. This flow can be either surface runoff in rivers and streams, or subsurface runoff infiltrating rocks and soil. The amount of runoff reaching surface and groundwater can vary significantly, depending on rainfall, soil moisture, permeability, groundwater storage, evaporation, upstream use, and whether or not the ground is frozen. The movement of subsurface water is determined largely by the water gradient, type of substrate, and any barriers to flow.</odo:ECSO_01000004>
+        <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <rdfs:label>Subsurface_Runoff_MOV</rdfs:label>
         <skos:definition>Gravity soil water drainage and/or soil water lateral flow</skos:definition>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
@@ -11562,11 +11594,11 @@ Confirm: micromol/mol-1 is same measure of molarity as micromol/L</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000080">
         <skos:prefLabel>Latent Heat MOV</skos:prefLabel>
-        <skos:definition>Latent heat flux into the boundary layer (positive into atmosphere)</skos:definition>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
+        <skos:definition>Latent heat flux into the boundary layer (positive into atmosphere)</skos:definition>
         <rdfs:label>Latent_Heat_MOV</rdfs:label>
-        <odo:ECSO_01000005>https://en.wikipedia.org/wiki/Latent_heat</odo:ECSO_01000005>
         <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
+        <odo:ECSO_01000005>https://en.wikipedia.org/wiki/Latent_heat</odo:ECSO_01000005>
         <odo:ECSO_01000004>Latent heat is energy released or absorbed, by a body or a thermodynamic system, during a constant-temperature process that is specified in some way. An example is latent heat of fusion for a phase change, melting, at a specified temperature and pressure.</odo:ECSO_01000004>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000082">
@@ -11603,12 +11635,12 @@ For CO2.... tbd</odo:ECSO_01000004>
         <odo:ECSO_01000005>http-en.wikipedia.org/wiki/Eddy_covariance</odo:ECSO_01000005>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000093">
+        <rdfs:label>Oxygen Evolution LightDark Method</rdfs:label>
         <skos:definition>The stoichiometry of phtotsynthesis is well known. So you can measure O2 evolution, and back calculate to CO2 use.
 usually, there is a &quot;iight bottle&quot; and &quot;dark bottle&quot;. O2 evolution in the Light bottle is the net result, or sum, of all processes (GPP, Autotrophic resp, and probably some heterotrophic respiration too, because heterotrophs are hard to exclude).  So Light bottle = NPP. 
 
 Dark bottle is respiration, probably total, eg, autotrophs + heterotrophs.
 So light + dark = GPP (or about as close as you can get with a field measurement, and assume that heterotrophs aren&apos;t respiring much.)</skos:definition>
-        <rdfs:label>Oxygen Evolution LightDark Method</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000094">
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
@@ -11620,8 +11652,8 @@ So light + dark = GPP (or about as close as you can get with a field measurement
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000095">
         <odo:ECSO_01000003>Available from: https-www.researchgate.net/publication/233137060_Use_of_ground_and_LiDAR_data_to_model_the_NPP_of_a_Mediterranean_pine_forest [accessed Mar 25, 2015].</odo:ECSO_01000003>
-        <rdfs:label>LIDAR Method</rdfs:label>
         <skos:definition>A LIDAR_Method for NPP is a methodology to predict the net primary production (NPP) from ground and LiDAR data</skos:definition>
+        <rdfs:label>LIDAR Method</rdfs:label>
         <odo:ECSO_01000001>mob, 2015-03-25</odo:ECSO_01000001>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000096">
@@ -11632,8 +11664,8 @@ So light + dark = GPP (or about as close as you can get with a field measurement
         <odo:ECSO_01000004 xml:lang="en">terrestrial biospheric models vary in complexity and the way in which they simulate canopy conductance (energy and water fluxes), simulate photosynthesis and respiration (carbon fluxes), allocate carbon between soil and above and belowground biomass (carbon pools), and model vegetation dynamics and disturbances; MsTMIP models formulate and parameterize energy, carbon, vegetation, and nitrogen process dynamics</odo:ECSO_01000004>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000201">
+        <skos:definition>The process by which carbon dioxide in the atmosphere moves across a phase boundary e.g., into the ocean, which is a major sink of atmospheric carbon dioxide. Dissolved carbon dioxide subsequently reacts to form carbonic acid, bicarbonate ions, and carbonate ions, leading to ocean acidification.</skos:definition>
         <skos:prefLabel>Carbon Dioxide Diffusion Flux</skos:prefLabel>
-        <skos:definition>The process by which carbon dioxide in the atmosphere moves across a phase boundary and into the ocean. This is a major sink of atmospheric carbon dioxide. Dissolved carbon dioxide subsequently reacts to form carbonic acid, bicarbonate ions, and carbonate ions, leading to ocean acidification.</skos:definition>
         <odo:ECSO_01000003>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000003>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <rdfs:label>Carbon Dioxide Diffusion Flux</rdfs:label>
@@ -11673,8 +11705,8 @@ So light + dark = GPP (or about as close as you can get with a field measurement
         <skos:prefLabel>Aboveground Net Primary Production Carbon Flux</skos:prefLabel>
         <rdfs:label>Aboveground Net Primary Production Carbon Flux</rdfs:label>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
-        <skos:definition>Gross primary productivity (GPP) minus autotrophic respiration (AR) in plant segments other than the roots, e.g. leaves and shoots.</skos:definition>
         <odo:ECSO_01000003>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000003>
+        <skos:definition>Gross primary productivity (GPP) minus autotrophic respiration (AR) in plant segments other than the roots, e.g. leaves and shoots.</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000308">
         <skos:definition>Functional levels defined here:
@@ -11717,13 +11749,12 @@ maybe others.
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000312">
         <rdfs:seeAlso>Animals, plants, fungi; Flora, fauna</rdfs:seeAlso>
+        <rdfs:comment xml:lang="en">It seems like this class could be related to ENVO&apos;s anatomical entity, as in &quot;Organism has part &apos;anatomical entity&quot; &apos;</rdfs:comment>
         <skos:prefLabel>Organism</skos:prefLabel>
         <rdfs:label>Organism</rdfs:label>
         <odo:ECSO_01000001>Margaret O&apos;Brien, http://orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
         <skos:definition xml:lang="en">An organism is a single individual.</skos:definition>
         <rdfs:comment>This class should be incorporated into ENVO.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Confirm: compare with ENVO (anatomical entity)</rdfs:comment>
-        <rdfs:comment xml:lang="en">Do we really have any carbon cycle data for a single organism? (MOB)</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000313">
         <odo:ECSO_01000003>http://www.physicalgeography.net/fundamentals/9d.html</odo:ECSO_01000003>
@@ -11788,8 +11819,8 @@ maybe others.
         <odo:ECSO_01000003> http://purl.obolibrary.org/obo/CHEBI_41609
 </odo:ECSO_01000003>
         <odo:ECSO_01000004 xml:lang="en">In chemistry, a carbonate is a salt of carbonic acid, characterized by the presence of the carbonate ion, CO2−3. The name may also mean an ester of carbonic acid, an organic compound containing the carbonate group.</odo:ECSO_01000004>
-        <oboInOwl:id>CHEBI:41609</oboInOwl:id>
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Carbonate</odo:ECSO_01000005>
+        <oboInOwl:id>CHEBI:41609</oboInOwl:id>
         <skos:prefLabel>Carbonate</skos:prefLabel>
         <rdfs:label>Carbonate</rdfs:label>
     </rdf:Description>
@@ -11802,8 +11833,8 @@ maybe others.
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <rdfs:label>Bicarbonate</rdfs:label>
         <oboInOwl:id xml:lang="en">CHEBI:17544</oboInOwl:id>
-        <odo:ECSO_01000004 xml:lang="en">Bicarbonate is an intermediate form in the deprotonation of carbonic acid. It is a polyatomic anion with the chemical formula HCO−3. Bicarbonate serves a crucial biochemical role in the physiological pH buffering system.</odo:ECSO_01000004>
         <odo:ECSO_01000003>http://purl.obolibrary.org/obo/CHEBI_17544</odo:ECSO_01000003>
+        <odo:ECSO_01000004 xml:lang="en">Bicarbonate is an intermediate form in the deprotonation of carbonic acid. It is a polyatomic anion with the chemical formula HCO−3. Bicarbonate serves a crucial biochemical role in the physiological pH buffering system.</odo:ECSO_01000004>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000327">
         <skos:definition>Any member of the class of organooxygen compounds that is a polyhydroxy-aldehyde or -ketone or a lactol resulting from their intramolecular condensation (monosaccharides); substances derived from these by reduction of the carbonyl group (alditols), by oxidation of one or more hydroxy groups to afford the corresponding aldehydes, ketones, or carboxylic acids, or by replacement of one or more hydroxy group(s) by a hydrogen atom; and polymeric products arising by intermolecular acetal formation between two or more such molecules (disaccharides, polysaccharides and oligosaccharides). Carbohydrates contain only carbon, hydrogen and oxygen atoms; prior to any oxidation or reduction, most have the empirical formula Cm(H2O)n. Compounds obtained from carbohydrates by substitution, etc., are known as carbohydrate derivatives and may contain other elements. Cyclitols are generally not regarded as carbohydrates.</skos:definition>
@@ -11827,8 +11858,8 @@ maybe others.
         <skos:definition>the rate of transfer of a substance or energy across a given surface
 
 In transport phenomena (heat transfer, mass transfer and fluid dynamics), flux is defined as the rate of flow of a property per unit area, which has the dimensions [quantity]·[time]−1·[area]−1.[Bird et al, 1960] The area is of the surface the property is flowing &quot;through&quot; or &quot;across&quot;. For example, the magnitude of a river&apos;s current, i.e. the amount of water that flows through a cross-section of the river each second, or the amount of sunlight that lands on a patch of ground each second, are kinds of flux.</skos:definition>
-        <odo:ECSO_01000004 xml:lang="en">The study of transport phenomena concerns the exchange of mass, energy, and momentum between observed and studied systems. Fundamental analyses in all three subfields are often grounded in the simple principle that the sum total of the quantities being studied must be conserved by the system and its environment.</odo:ECSO_01000004>
         <odo:ECSO_01000001>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
+        <odo:ECSO_01000004 xml:lang="en">The study of transport phenomena concerns the exchange of mass, energy, and momentum between observed and studied systems. Fundamental analyses in all three subfields are often grounded in the simple principle that the sum total of the quantities being studied must be conserved by the system and its environment.</odo:ECSO_01000004>
         <skos:prefLabel>Flux Measurement Type</skos:prefLabel>
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Transport_phenomena</odo:ECSO_01000005>
         <odo:ECSO_01000003>https://en.wikipedia.org/wiki/Flux,  Bird, R. Byron; Stewart, Warren E.; Lightfoot, Edwin N. (1960). Transport Phenomena. Wiley. ISBN 0-471-07392-X.</odo:ECSO_01000003>
@@ -11853,14 +11884,21 @@ this probably should be in OBOE, and is a synomym of AmountOfSubstanceConcentrat
         <skos:definition xml:lang="en">Molar concentration, also called molarity, amount concentration or substance concentration, is a measure of the concentration of a solute in a solution, or of any chemical species, in terms of amount of substance in a given volume.</skos:definition>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Molar_concentration</odo:ECSO_01000003>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000526">
+        <skos:prefLabel>group</skos:prefLabel>
+        <skos:definition>A number of entities taken together as a unit because members share a common characteristic or relation</skos:definition>
+        <odo:ECSO_01000003>http://www.biology-online.org/dictionary/Group</odo:ECSO_01000003>
+        <rdfs:label>group</rdfs:label>
+        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000530">
-        <skos:definition>Concentration of carbon dioxide, a naturally occurring chemical compound is composed of a carbon atom covalently double bonded to two oxygen atoms</skos:definition>
         <skos:prefLabel>CO2 Concentration</skos:prefLabel>
+        <skos:definition>Concentration of carbon dioxide, a naturally occurring chemical compound is composed of a carbon atom covalently double bonded to two oxygen atoms</skos:definition>
         <rdfs:label>CO2 Concentration</rdfs:label>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <rdfs:comment>EquivalentTo: concentration and measurementFor only Observation and ofEntity only CO2</rdfs:comment>
         <odo:ECSO_01000003>Adapted from
 https://en.wikipedia.org/wiki/Carbon_dioxide</odo:ECSO_01000003>
-        <rdfs:comment>EquivalentTo: concentration and measurementFor only Observation and ofEntity only CO2</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000533">
         <skos:definition>Gross primary productivity (GPP) minus autotrophic respiration (AR) in a GRASSLAND of plant segments other than the roots, e.g. leaves and shoots.
@@ -11875,20 +11913,27 @@ Often abbreviated to ANPP, and in grasslands, measured by peak biomass.</skos:de
         <odo:ECSO_01000003>https://en.wikipedia.org/wiki/Total_inorganic_carbon</odo:ECSO_01000003>
         <odo:ECSO_01000007>DIC_Meas  Dissolved inorganic carbon concentration, measured microMolesPerLiter
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/22/20</odo:ECSO_01000007>
+        <odo:ECSO_01000001>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
         <rdfs:comment>This might be a subclass of CO2 concentration (rather than it&apos;s sibling). Margaret needs to talk to her local CO2 system experts.
 
 generally, CO2 that enters the ocean dissociates into bicarbonate, carbonate, (and some stays as CO2). but not sure what people in that domain call the total. (or if this is actually what they would search for! will confirm that, too, this week.</rdfs:comment>
-        <odo:ECSO_01000001>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
         <skos:definition>The total inorganic carbon or dissolved inorganic carbon (DIC) is the sum of inorganic carbon species in a solution in sea water. 
 
 The inorganic carbon species include carbon dioxide, carbonic acid, bicarbonate anion, and carbonate.[1] It is customary to express carbon dioxide and carbonic acid simultaneously as CO2* . CT is a key parameter when making measurements related to the pH of natural aqueous systems,[2] and carbon dioxide flux estimates.</skos:definition>
         <rdfs:label>Oceanic Total Inorganic Carbon Concentration</rdfs:label>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000536">
+        <rdfs:label>Carbon Dioxide Flux</rdfs:label>
+        <skos:prefLabel>Carbon Dioxide Flux</skos:prefLabel>
+        <odo:ECSO_01000001>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
+        <skos:definition>The rate at which a Carbon Dioxide (CO2) moves to or from a particular component of the ecosystem per unit time.</skos:definition>
+        <odo:ECSO_01000003>ECSO_00000011 (Carbon Flux), adapted for CO2</odo:ECSO_01000003>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000539">
         <rdfs:seeAlso>total inorganic carbon, CT, dissolved inorganic carbon</rdfs:seeAlso>
+        <skos:prefLabel>Aquatic Total Inorganic Carbon Concentration</skos:prefLabel>
         <odo:ECSO_01000007>tic total inorganic carbon total inorganic carbon milligramPerLiter
 ben.1.1</odo:ECSO_01000007>
-        <skos:prefLabel>Aquatic Total Inorganic Carbon Concentration</skos:prefLabel>
         <odo:ECSO_01000001>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
         <rdfs:label>Aquatic Total Inorganic Carbon Concentration</rdfs:label>
         <skos:definition>Determination of total dissolved inorganic carbon in water, expressed as moles of carbon per kilogram of water; this method is suitable for the assay of aquatic levels of total dissolved inorganic carbon (1800-2300 micromol/kg)</skos:definition>
@@ -11909,11 +11954,12 @@ generally, CO2 that enters water dissociates into bicarbonate, carbonate, (and s
         <odo:ECSO_01000003>adapted from ECSO_00000021 (Net Primary Production Carbon FLux)</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000543">
-        <rdfs:label>Oceanic CO2 Carbon Flux</rdfs:label>
+        <skos:prefLabel>Oceanic Carbon Dioxide Flux</skos:prefLabel>
+        <rdfs:label>Oceanic Carbon Dioxide Flux</rdfs:label>
+        <rdfs:comment>This class probably could be a child of &quot;carbon dioxide diffusion flux&quot;, especially since definition of the parent is based on the ocean. But contributor is not confident saying that it always is diffusion.</rdfs:comment>
         <odo:ECSO_01000001>Margaret O&apos;Brien, orcid.org/0000-0002-1693-8322</odo:ECSO_01000001>
         <odo:ECSO_01000003>ECSO_00000200,  Areal Carbon Flux, adapted for the ocean.</odo:ECSO_01000003>
         <skos:definition>A flux of carbon across the surface of the ocean, per unit area.</skos:definition>
-        <skos:prefLabel>Oceanic CO2 Carbon Flux</skos:prefLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000545">
         <rdfs:label>Tree Circumference</rdfs:label>
@@ -11990,6 +12036,7 @@ https://en.wikipedia.org/wiki/Total_organic_carbon#Measurement</odo:ECSO_0100000
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00001105">
         <rdfs:seeAlso xml:lang="en">mass transport, mass transfer</rdfs:seeAlso>
         <skos:prefLabel>Carbon Flux</skos:prefLabel>
+        <skos:definition xml:lang="en">The rate at which a mass or amount of carbon moves to or from a particular component of the ecosystem per unit time.</skos:definition>
         <odo:ECSO_01000001>Chase LeCroy, http://orcid.org/0000-0002-1338-9436
 Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <odo:ECSO_01000004 xml:lang="en">Carbon fluxes are the movement of Carbon from one place (Source) to another (Sink).  Carbon fluxes all have dimensions of {mass or amount of} Carbon per area (or volume) per time. Biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than kg to quantify the amount of Carbon, whereas Climate-oriented projects use kg.
@@ -11998,7 +12045,6 @@ When a system contains two or more components whose concentration vary from poin
         <rdfs:label>Carbon Flux</rdfs:label>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Transport_phenomena#Mass_transfer</odo:ECSO_01000003>
         <odo:ECSO_01000003 xml:lang="en">Litton, C.M. et al. Carbon allocation in forest ecosystems. Global Change Biology. V 13 I 10. pp. 2089 - 2109. July 2007.</odo:ECSO_01000003>
-        <skos:definition xml:lang="en">The rate at which a mass of carbon moves to or from a particular component of the ecosystem per unit time.</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00001106">
         <rdfs:label>Radiative Flux</rdfs:label>
@@ -12023,8 +12069,8 @@ www.supersites.net.au/knb/metacat/tucker.17.15/html</odo:ECSO_01000007>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <skos:prefLabel>Biomass</skos:prefLabel>
         <skos:definition xml:lang="en">Biomass is organic matter derived from living, or recently living organisms. Biomass can be used as a source of energy and it most often refers to plants or plant-based materials which are not used for food or feed.</skos:definition>
-        <rdfs:label>biomass</rdfs:label>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Biomass</odo:ECSO_01000003>
+        <rdfs:label>biomass</rdfs:label>
         <odo:ECSO_01000005>WordNet</odo:ECSO_01000005>
         <odo:ECSO_01000004>plant materials and animal waste used as fuel</odo:ECSO_01000004>
     </rdf:Description>
@@ -12061,7 +12107,6 @@ urn:node:GLEON</odo:ECSO_01000007>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00001125">
         <rdfs:label>Dissolved Organic Carbon Concentration</rdfs:label>
-        <skos:altLabel>DOC concentration</skos:altLabel>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <skos:prefLabel>Dissolved Organic Carbon Concentration</skos:prefLabel>
         <odo:ECSO_01000007>doc dissolved organic carbon dissolved organic carbon milligramPerLiter
@@ -12104,7 +12149,6 @@ www.supersites.net.au/knb/metacat/tucker.17.15/html</odo:ECSO_01000007>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00001138">
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
-        <skos:altLabel>C to N Ratio</skos:altLabel>
         <odo:ECSO_01000003>https://en.wikipedia.org/wiki/Carbon-to-nitrogen_ratio</odo:ECSO_01000003>
         <odo:ECSO_01000007>C_to_N  Ratio of Carbon to Nitrogen dimensionless
 urn:node:LTER</odo:ECSO_01000007>
@@ -12125,7 +12169,6 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/54/6</odo:ECSO_01000
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00001142">
         <skos:definition>An isotopic signature is a ratio of non-radiogenic &apos;stable isotopes&apos;, stable radiogenic isotopes, or unstable radioactive isotopes of particular elements in an investigated material. The ratios of isotopes in a sample material are measured by isotope ratio mass spectrometry. The atomic mass of different isotopes affect their chemical kinetic behavior, leading to natural isotope separation processes. For example, different sources and sinks of methane have different affinity for the 12C and 13C isotopes, which allows distinguishing between different sources by the 13C/12C ratio in methane in the air.</skos:definition>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
-        <skos:altLabel>Carbon SI Ratio</skos:altLabel>
         <skos:prefLabel>Carbon Stable Isotope Ratio</skos:prefLabel>
         <odo:ECSO_01000007>carbonStableIsotopeRatio Carbon SI ratio Carbon stable isotope ratio of the bulk sample in standard delta units relative to VPDB to the nearest 0.1 Ratio
 urn:node:GOA</odo:ECSO_01000007>
@@ -12143,8 +12186,8 @@ df35b.161.4</odo:ECSO_01000007>
         <skos:definition>Amount of carbon present in biomass</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00001152">
-        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <skos:prefLabel>Sampling Site Area</skos:prefLabel>
+        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <odo:ECSO_01000003>http://www.biology-online.org/dictionary/Area
 http://www.biology-online.org/dictionary/Sample
 https://en.wikipedia.org/wiki/Quadrat</odo:ECSO_01000003>
@@ -12161,6 +12204,15 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1115/1</odo:ECSO_010
         <rdfs:label>Dry Weight Biomass</rdfs:label>
         <skos:prefLabel>Dry Weight Biomass</skos:prefLabel>
         <skos:definition>The weight of dry biomass matter when completely dried (lacks or excluding water).</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00001156">
+        <skos:definition>Leaf area index (LAI) is a dimensionless quantity that characterizes plant canopies. It is defined as the one-sided green leaf area per unit ground surface area (LAI = leaf area / ground area, m2 / m2) in broadleaf canopies.</skos:definition>
+        <rdfs:label>Leaf Area Index</rdfs:label>
+        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000003>https://en.wikipedia.org/wiki/Leaf_area_index</odo:ECSO_01000003>
+        <odo:ECSO_01000007>LAI  Leaf Area Index number
+www.supersites.net.au/knb/metacat/supersite.377.4/html</odo:ECSO_01000007>
+        <skos:prefLabel>Leaf Area Index</skos:prefLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00001157">
         <skos:definition>An identifier is a name that identifies (that is, labels the identity of) either a unique object or a unique class of objects, where the &quot;object&quot; or class may be an idea, physical [countable] object (or class thereof), or physical [noncountable] substance (or class thereof). The abbreviation ID often refers to identity, identification (the process of identifying), or an identifier (that is, an instance of identification). An identifier may be a word, number, letter, symbol, or any combination of those.</skos:definition>
@@ -12186,6 +12238,7 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/6004/1</odo:ECSO_010
         <odo:ECSO_01000007>LeafNum density Number of Thalassia testudinum Leaves Per Short Shoot leafnumberPerShortShoot
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1130/2</odo:ECSO_01000007>
         <rdfs:label>Count Density</rdfs:label>
+        <rdfs:comment>Confirm: if OBOE class ArealDensity is for physical (material) measuements, then we need a different characteristics for this class, eg, analogous to biomass_density.</rdfs:comment>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00001163">
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
@@ -12221,8 +12274,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/344/16</odo:ECSO_010
         <odo:ECSO_01000003>Adapted from
 https://en.wikipedia.org/wiki/Biomass_(ecology)</odo:ECSO_01000003>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
-        <rdfs:label>Nitrogen Biomass Density</rdfs:label>
         <skos:definition>Mass of nitrogen in biomass per unit area at a given time.</skos:definition>
+        <rdfs:label>Nitrogen Biomass Density</rdfs:label>
         <skos:prefLabel>Nitrogen Biomass Density</skos:prefLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00001180">
@@ -12262,6 +12315,15 @@ judithk.1287.1</odo:ECSO_01000007>
         <odo:ECSO_01000003>Adapted from
 https://en.wikipedia.org/wiki/Counting</odo:ECSO_01000003>
         <skos:definition>Counting entities is the action of finding the number of elements of a finite set of entities.</skos:definition>
+        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00001191">
+        <odo:ECSO_01000003>https://en.wikipedia.org/wiki/Crown_closure</odo:ECSO_01000003>
+        <odo:ECSO_01000007>CC (%)  Percentage crown cover Percentage
+www.supersites.net.au/knb/metacat/lloyd.635.9/html</odo:ECSO_01000007>
+        <rdfs:label>Crown Cover Percentage</rdfs:label>
+        <skos:definition>Crown cover is the proportion of a stand covered by the crowns of live trees.</skos:definition>
+        <skos:prefLabel>Crown Cover Percentage</skos:prefLabel>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00001204">
@@ -12308,8 +12370,8 @@ judithk.1000.13</odo:ECSO_01000007>
         <rdfs:label>Tag Number</rdfs:label>
         <skos:prefLabel>Tag Number</skos:prefLabel>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
-        <odo:ECSO_01000003>Adapted from OBOE definition of tag number</odo:ECSO_01000003>
         <skos:definition>A tag number provides an alphanumeric string of characters to refer to an entity. A TagNumber is typically used to uniquely identify an entity such as a sample or an individual specimen such as a tree or a rock sample.</skos:definition>
+        <odo:ECSO_01000003>Adapted from OBOE definition of tag number</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00001220">
         <rdfs:label>Tree Canopy Height</rdfs:label>
@@ -12480,8 +12542,8 @@ As description Annotation properties are often not as rigorous, and hence looser
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_27563">
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_27563</odo:ECSO_01000003>
-        <oboInOwl:hasAlternativeId xml:lang="en">CHEBI:2845, CHEBI:22630</oboInOwl:hasAlternativeId>
         <oboInOwl:id xml:lang="en">CHEBI:27563</oboInOwl:id>
+        <oboInOwl:hasAlternativeId xml:lang="en">CHEBI:2845, CHEBI:22630</oboInOwl:hasAlternativeId>
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Arsenic</odo:ECSO_01000005>
         <odo:ECSO_01000004 xml:lang="en">Arsenic is a chemical element with symbol As and atomic number 33. Arsenic occurs in many minerals, usually in combination with sulfur and metals, but also as a pure elemental crystal. Arsenic is a metalloid.</odo:ECSO_01000004>
     </rdf:Description>
@@ -12516,8 +12578,8 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33273">
         <odo:ECSO_01000008 xml:lang="en">polyatomic anions</odo:ECSO_01000008>
         <skos:definition xml:lang="en">An anion consisting of more than one atom.</skos:definition>
-        <oboInOwl:id xml:lang="en">CHEBI:33273</oboInOwl:id>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_33273</odo:ECSO_01000003>
+        <oboInOwl:id xml:lang="en">CHEBI:33273</oboInOwl:id>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33285">
         <oboInOwl:id>CHEBI:33285</oboInOwl:id>
@@ -12572,8 +12634,8 @@ As description Annotation properties are often not as rigorous, and hence looser
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_35405</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35406">
-        <oboInOwl:id xml:lang="en">oxoacid anions, oxoanions</oboInOwl:id>
         <oboInOwl:id xml:lang="en">CHEBI:35406</oboInOwl:id>
+        <oboInOwl:id xml:lang="en">oxoacid anions, oxoanions</oboInOwl:id>
         <skos:definition xml:lang="en">An oxoanion is an anion derived from an oxoacid by loss of hydron(s) bound to oxygen.</skos:definition>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_35406</odo:ECSO_01000003>
     </rdf:Description>
@@ -12730,8 +12792,8 @@ As description Annotation properties are often not as rigorous, and hence looser
         <skos:definition xml:lang="en">An medium acidity quality inhering in a solution by virtue of the bearer&apos;s a low concentration of H+ ions.</skos:definition>
         <oboInOwl:hasDbXref xml:lang="en">[database_cross_reference: chemicool:chemicool]</oboInOwl:hasDbXref>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0001430</odo:ECSO_01000003>
-        <oboInOwl:id xml:lang="en">PATO:0001430</oboInOwl:id>
         <oboInOwl:hasOBONamespace xml:lang="en">quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:id xml:lang="en">PATO:0001430</oboInOwl:id>
         <oboInOwl:inSubset xml:lang="en">value_slim</oboInOwl:inSubset>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001434">
@@ -12760,8 +12822,8 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001456">
         <odo:ECSO_01000003 xml:lang="en">[database_cross_reference: PATOC:GVG]</odo:ECSO_01000003>
         <odo:ECSO_01000003 xml:lang="en">A quality inhering in a bearer by virtue of the bearer&apos;s independence on oxygen.</odo:ECSO_01000003>
-        <oboInOwl:id xml:lang="en">PATO:0001456</oboInOwl:id>
         <oboInOwl:inSubset xml:lang="en">value_slim; disposition_slim</oboInOwl:inSubset>
+        <oboInOwl:id xml:lang="en">PATO:0001456</oboInOwl:id>
         <oboInOwl:hasOBONamespace xml:lang="en">quality</oboInOwl:hasOBONamespace>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0001456</odo:ECSO_01000003>
     </rdf:Description>
@@ -12775,11 +12837,11 @@ As description Annotation properties are often not as rigorous, and hence looser
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0001576</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001598">
-        <odo:ECSO_01000003 xml:lang="en">A quality inhering in a bearer by virtue of the bearer&apos;s extending out above or beyond a surface or boundary.</odo:ECSO_01000003>
         <odo:ECSO_01000006 xml:lang="en">protruding ; relational protruding quality</odo:ECSO_01000006>
+        <odo:ECSO_01000003 xml:lang="en">A quality inhering in a bearer by virtue of the bearer&apos;s extending out above or beyond a surface or boundary.</odo:ECSO_01000003>
         <oboInOwl:inSubset xml:lang="en">value_slim</oboInOwl:inSubset>
-        <oboInOwl:id xml:lang="en">PATO:0001598</oboInOwl:id>
         <oboInOwl:hasAlternativeId xml:lang="en">PATO:0001644</oboInOwl:hasAlternativeId>
+        <oboInOwl:id xml:lang="en">PATO:0001598</oboInOwl:id>
         <oboInOwl:hasDbXref xml:lang="en">[database_cross_reference: WordNet:WordNet]</oboInOwl:hasDbXref>
         <oboInOwl:hasOBONamespace xml:lang="en">quality</oboInOwl:hasOBONamespace>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0001598</odo:ECSO_01000003>
@@ -12874,8 +12936,8 @@ As description Annotation properties are often not as rigorous, and hence looser
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002220">
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/RO_0002220</odo:ECSO_01000003>
-        <odo:ECSO_01000007 xml:lang="en">The epidermis layer of a vertebrate is adjacent to the dermis.; The plasma membrane of a cell is adjacent to the cytoplasm, and also to the cell lumen which the cytoplasm occupies.; A caterpillar walking on the surface of a leaf is adjacent_to the leaf, if one of the caterpillar appendages is touching the leaf. In contrast, a butterfly flying close to a flower is not considered adjacent, unless there are any touching parts.; The skin of the forelimb is adjacent to the skin of the torso if these are considered anatomical subdivisions with a defined border. Otherwise a relation such as continuous_with would be used.</odo:ECSO_01000007>
         <skos:definition xml:lang="en">X adjacent to y if and only if x and y share a boundary.</skos:definition>
+        <odo:ECSO_01000007 xml:lang="en">The epidermis layer of a vertebrate is adjacent to the dermis.; The plasma membrane of a cell is adjacent to the cytoplasm, and also to the cell lumen which the cytoplasm occupies.; A caterpillar walking on the surface of a leaf is adjacent_to the leaf, if one of the caterpillar appendages is touching the leaf. In contrast, a butterfly flying close to a flower is not considered adjacent, unless there are any touching parts.; The skin of the forelimb is adjacent to the skin of the torso if these are considered anatomical subdivisions with a defined border. Otherwise a relation such as continuous_with would be used.</odo:ECSO_01000007>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002376">
         <skos:editorialNote xml:lang="en">This relation can be used for geographic features (e.g. rivers) as well as anatomical structures (veins, arteries)</skos:editorialNote>
