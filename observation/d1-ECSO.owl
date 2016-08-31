@@ -4228,7 +4228,7 @@ potential synonyms: development, maturation, growing, germination, sprouting; bl
     <!-- http://purl.dataone.org/odo/ECSO_00000541 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000541">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001252"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
@@ -4327,7 +4327,7 @@ potential synonyms: development, maturation, growing, germination, sprouting; bl
     <!-- http://purl.dataone.org/odo/ECSO_00000544 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000544">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001251"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
@@ -4358,7 +4358,7 @@ potential synonyms: development, maturation, growing, germination, sprouting; bl
     <!-- http://purl.dataone.org/odo/ECSO_00000545 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000545">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001255"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
@@ -6509,6 +6509,28 @@ This class may be deprecated, or transformed somehow for use in population measu
     
 
 
+    <!-- http://purl.dataone.org/odo/ECSO_00001167 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001167">
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/PATO_0001309"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingStandard"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/UO_0000003"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label>temporal_MeasurementType</rdfs:label>
+        <skos:prefLabel>Temporal Measurement Type</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- http://purl.dataone.org/odo/ECSO_00001168 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001168">
@@ -6664,8 +6686,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1059/3</odo:ECSO_010
     <!-- http://purl.dataone.org/odo/ECSO_00001175 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001175">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001252"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
@@ -6704,8 +6726,8 @@ df35d.398.6</odo:ECSO_01000007>
     <!-- http://purl.dataone.org/odo/ECSO_00001177 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001177">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001253"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -6794,6 +6816,22 @@ doi:10.5063/AA/nceas.919.3</odo:ECSO_01000007>
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001182">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/UO_0000052"/>
         <rdfs:label>GramPerMeterSquared</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001183 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001183">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001167"/>
+        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000003>Adapted from 
+https://en.wikipedia.org/wiki/Time</odo:ECSO_01000003>
+        <obo:IAO_0000115>Interval of time representing duration of observation</obo:IAO_0000115>
+        <rdfs:label>Time Step</rdfs:label>
+        <skos:altLabel>duration</skos:altLabel>
+        <skos:altLabel>time interval</skos:altLabel>
+        <skos:prefLabel>Time Step</skos:prefLabel>
     </owl:Class>
     
 
@@ -7233,8 +7271,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-ntl/79/4</odo:ECSO_01000
     <!-- http://purl.dataone.org/odo/ECSO_00001203 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001203">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001250"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
@@ -7271,8 +7309,8 @@ cgries.23.1</odo:ECSO_01000007>
     <!-- http://purl.dataone.org/odo/ECSO_00001205 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001205">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001250"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
@@ -7317,8 +7355,8 @@ ben.1.1</odo:ECSO_01000007>
     <!-- http://purl.dataone.org/odo/ECSO_00001207 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001207">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001250"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
@@ -7352,8 +7390,8 @@ www.supersites.net.au/knb/metacat/supersite.182.10/html</odo:ECSO_01000007>
     <!-- http://purl.dataone.org/odo/ECSO_00001209 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001209">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001250"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
@@ -7453,8 +7491,8 @@ judithk.1716.4</odo:ECSO_01000007>
     <!-- http://purl.dataone.org/odo/ECSO_00001214 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001214">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001251"/>
     </owl:Class>
     
 
@@ -7462,8 +7500,8 @@ judithk.1716.4</odo:ECSO_01000007>
     <!-- http://purl.dataone.org/odo/ECSO_00001215 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001215">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001251"/>
     </owl:Class>
     
 
@@ -7510,6 +7548,20 @@ knb-lter-arc.20005.1</odo:ECSO_01000007>
     
 
 
+    <!-- http://purl.dataone.org/odo/ECSO_00001218 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001218">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001101"/>
+        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000003>WordNet</odo:ECSO_01000003>
+        <rdfs:label>Occurrence</rdfs:label>
+        <skos:altLabel>occurrent</skos:altLabel>
+        <skos:definition>binary indication of an instance of something occurring (i.e. presence - yes, no)</skos:definition>
+        <skos:prefLabel>Occurrence</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- http://purl.dataone.org/odo/ECSO_00001219 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001219">
@@ -7535,8 +7587,8 @@ knb-lter-arc.20005.1</odo:ECSO_01000007>
     <!-- http://purl.dataone.org/odo/ECSO_00001220 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001220">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001252"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
@@ -7550,8 +7602,8 @@ knb-lter-arc.20005.1</odo:ECSO_01000007>
     <!-- http://purl.dataone.org/odo/ECSO_00001221 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001221">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001252"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
@@ -7574,8 +7626,8 @@ www.supersites.net.au/knb/metacat/lloyd.628.7/html</odo:ECSO_01000007>
     <!-- http://purl.dataone.org/odo/ECSO_00001222 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001222">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001252"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
@@ -7923,8 +7975,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1067/3</odo:ECSO_010
     <!-- http://purl.dataone.org/odo/ECSO_00001238 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001238">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001119"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001254"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
@@ -8005,6 +8057,33 @@ jstocking.3.4</odo:ECSO_01000007>
     
 
 
+    <!-- http://purl.dataone.org/odo/ECSO_00001243 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001243">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000562"/>
+                            <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000563"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <obo:IAO_0000115>Adapted from 
+https://en.wikipedia.org/wiki/Chlorophyll</obo:IAO_0000115>
+        <rdfs:label>Chlorophyll Concentration</rdfs:label>
+        <skos:definition>The concentration of chlorophyll, which are related green pigments found in cyanobacteria and the chloroplasts of algae and plants, in seawater</skos:definition>
+        <skos:prefLabel>Chlorophyll Concentration</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- http://purl.dataone.org/odo/ECSO_00001244 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001244">
@@ -8024,6 +8103,28 @@ jstocking.3.4</odo:ECSO_01000007>
     
 
 
+    <!-- http://purl.dataone.org/odo/ECSO_00001246 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001246">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_#oxygen_atom"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000003>https://en.wikipedia.org/wiki/Oxygen</odo:ECSO_01000003>
+        <odo:ECSO_01000004>Free oxygen also occurs in solution in the world&apos;s water bodies. The increased solubility of O2 at lower temperatures has important implications for ocean life, as polar oceans support a much higher density of life due to their higher oxygen content. Water polluted with plant nutrients such as nitrates or phosphates may stimulate growth of algae by a process called eutrophication and the decay of these organisms and other biomaterials may reduce the O2 content in eutrophic water bodies. Scientists assess this aspect of water quality by measuring the water&apos;s biochemical oxygen demand, or the amount of O2 needed to restore it to a normal concentration.</odo:ECSO_01000004>
+        <odo:ECSO_01000005>https://en.wikipedia.org/wiki/Oxygen</odo:ECSO_01000005>
+        <rdfs:label>Oxygen Concentration</rdfs:label>
+        <skos:altLabel>Dissolved Oxygen Concentration</skos:altLabel>
+        <skos:definition>Concentration of oxygen, which is a chemical element that is a member of the chalcogen group on the periodic table and is a highly reactive nonmetal and oxidizing agent that readily forms oxides with most elements as well as other compounds</skos:definition>
+        <skos:prefLabel>Oxygen Concentration</skos:prefLabel>
+    </owl:Class>
+    
+
+
     <!-- http://purl.dataone.org/odo/ECSO_00001247 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001247">
@@ -8038,6 +8139,83 @@ jstocking.3.4</odo:ECSO_01000007>
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001248">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001247"/>
         <rdfs:label>GramPerMeterCubed</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001249 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001249">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresEntity"/>
+                <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000564"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
+        <odo:ECSO_01000003>Adapted from
+https://en.wikipedia.org/wiki/Pheophytin</odo:ECSO_01000003>
+        <rdfs:label>Pheophytin Concentration</rdfs:label>
+        <skos:altLabel>Phaeophytin Concentration</skos:altLabel>
+        <skos:altLabel>Pheo Concentration</skos:altLabel>
+        <skos:definition>Concentration of pheophytin, which is  chemical compound that serves as the first electron carrier intermediate in the electron transfer pathway of photosystem II (PS II) in plants, and the photosynthetic reaction center (RC P870) found in purple bacteria</skos:definition>
+        <skos:prefLabel>Pheophytin Concentration</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001250 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001250">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
+        <rdfs:label>Depth</rdfs:label>
+        <skos:prefLabel>Depth</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001251 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001251">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
+        <rdfs:label>Diameter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001252 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001252">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
+        <rdfs:label>Height</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001253 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001253">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
+        <rdfs:label>Length</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001254 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001254">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
+        <rdfs:label>Width</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001255 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001255">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
+        <rdfs:label>Circumference</rdfs:label>
     </owl:Class>
     
 
@@ -12109,6 +12287,7 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1130/2</odo:ECSO_010
         <skos:definition>Water vapor, water vapour or aqueous vapor, is the gaseous phase of water. It is one state of water within the hydrosphere. Water vapor can be produced from the evaporation or boiling of liquid water or from the sublimation of ice. Unlike other forms of water, water vapor is invisible. Under typical atmospheric conditions, water vapor is continuously generated by evaporation and removed by condensation. It is lighter than air and triggers convection currents that can lead to clouds.</skos:definition>
         <skos:altLabel>Relative Humidity</skos:altLabel>
         <skos:prefLabel>Air Moisture Percentage</skos:prefLabel>
+        <skos:altLabel>Air Humidity</skos:altLabel>
         <odo:ECSO_01000003>https://en.wikipedia.org/wiki/Water_vapor</odo:ECSO_01000003>
         <rdfs:label>Air Moisture Percentage</rdfs:label>
         <odo:ECSO_01000007>Humidity in %  Humidity in % dimensionless
@@ -12176,6 +12355,7 @@ https://pasta.lternet.edu/package/metadata/eml/ecotrends/3114/2</odo:ECSO_010000
         <skos:definition>Counting entities within a sample is the action of finding the number of elements of a finite set of entities constrained within a sample.</skos:definition>
         <rdfs:label>Sample Count</rdfs:label>
         <skos:prefLabel>Sample Count</skos:prefLabel>
+        <skos:altLabel>abundance</skos:altLabel>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00001189">
