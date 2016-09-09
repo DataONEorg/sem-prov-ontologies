@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://purl.dataone.org/odo/ECSO_/"
-     xml:base="http://purl.dataone.org/odo/ECSO_/"
+<rdf:RDF xmlns="http://purl.dataone.org/odo/ECSO_#"
+     xml:base="http://purl.dataone.org/odo/ECSO_"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:ns="http://creativecommons.org/ns#"
@@ -24,6 +24,7 @@
         <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe.owl"/>
         <owl:imports rdf:resource="http://purl.dataone.org/obo/ENVO_import.owl"/>
         <owl:imports rdf:resource="http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf"/>
+        <owl:imports rdf:resource="http://purl.dataone.org/odo/d1-ECSO.owl"/>
         <owl:imports rdf:resource="http://purl.dataone.org/obo/PATO_import.owl"/>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This ontology was generated from an ontology revision in WebProtege http://odo.nceas.ucsb.edu</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ontology in progress for DataONE MSTMip/LTER Carbon cycling use cases</rdfs:comment>
@@ -11149,9 +11150,9 @@ synonyms: NPP</rdfs:comment>
         <skos:altLabel>Annual Net Primary Production</skos:altLabel>
         <odo:ECSO_01000001>Chase LeCroy, orcid.org/0000-0002-1338-9436</odo:ECSO_01000001>
         <odo:ECSO_01000003>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</odo:ECSO_01000003>
+        <skos:altLabel>anpp</skos:altLabel>
         <skos:altLabel>Annual NPP</skos:altLabel>
         <skos:altLabel>ANPP</skos:altLabel>
-        <skos:altLabel>anpp</skos:altLabel>
         <skos:definition>Gross primary production (GPP) minus autotrophic respiration (AR) over one year.</skos:definition>
         <skos:altLabel>Annual Net Primary Productivity</skos:altLabel>
         <skos:prefLabel>Annual Net Primary Productivity Flux</skos:prefLabel>
@@ -11355,8 +11356,8 @@ synonyms: NPP</rdfs:comment>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000065">
-        <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <rdfs:label>Name_Of_Each_Carbon_Pool_MOV</rdfs:label>
+        <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <odo:ECSO_01000003>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</odo:ECSO_01000003>
         <skos:definition>Name of each carbon pool (i.e., &quot;wood,&quot; or &quot;Coarse Woody Debris&quot;)</skos:definition>
         <skos:prefLabel>Name of Each Carbon Pool MOV</skos:prefLabel>
@@ -11404,8 +11405,8 @@ synonyms: NPP</rdfs:comment>
         <rdfs:label>Total_Snow_Depth_MOV</rdfs:label>
         <skos:definition>Total snow depth</skos:definition>
         <odo:ECSO_01000004>Snow is precipitation in the form of flakes of crystalline water ice that falls from clouds. Since snow is composed of small ice particles, it is a granular material.</odo:ECSO_01000004>
-        <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
         <skos:prefLabel>Total Snow Depth MOV</skos:prefLabel>
+        <odo:ECSO_01000001>Chung-Yi Hou, orcid.org/0000-0002-8087-1775</odo:ECSO_01000001>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00000071">
         <odo:ECSO_01000005>https://en.wikipedia.org/wiki/Wildfire</odo:ECSO_01000005>
@@ -11520,8 +11521,8 @@ a Modeled_Method (is Simulated_Method better?) uses only data obtained from some
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://en.wikipedia.org/wiki/Eddy_covariance</odo:ECSO_01000003>
         <rdfs:seeAlso>flux tower</rdfs:seeAlso>
         <rdfs:comment>add these synonyms (near? exact?):  also known as eddy correlation and eddy flux</rdfs:comment>
-        <skos:definition>The eddy covariance method is an atmospheric measurement technique to measure and calculate vertical turbulent fluxes within atmospheric boundary layers, and analyzes high-frequency wind and scalar atmospheric data series, to yield exchange rates (fluxes) of trace gasses.</skos:definition>
         <rdfs:seeAlso>gas flux</rdfs:seeAlso>
+        <skos:definition>The eddy covariance method is an atmospheric measurement technique to measure and calculate vertical turbulent fluxes within atmospheric boundary layers, and analyzes high-frequency wind and scalar atmospheric data series, to yield exchange rates (fluxes) of trace gasses.</skos:definition>
         <odo:ECSO_01000004>It is frequently used to estimate momentum, heat, water vapor, carbon dioxide and methane fluxes. The technique is mathematically complex, and requires significant care in setting up and processing data. To date, there is no uniform terminology or a single methodology for the Eddy Covariance technique.
 
 The technique has additionally proven applicable under water to the benthic zone for measuring oxygen fluxes between seafloor and overlying water.[6] In these environments, the technique is generally known as the eddy correlation technique, or just eddy correlation. 
@@ -12278,9 +12279,9 @@ www.supersites.net.au/knb/metacat/supersite.377.4/html</odo:ECSO_01000007>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00001159">
         <odo:ECSO_01000007>pH_tot_insitu in situ pH, Total scale seaFET pH, Total scale (CO2calc input) dimensionless
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/6004/1</odo:ECSO_01000007>
+        <skos:altLabel>ph</skos:altLabel>
         <skos:altLabel>pH</skos:altLabel>
         <skos:prefLabel>Water pH</skos:prefLabel>
-        <skos:altLabel>ph</skos:altLabel>
         <odo:ECSO_01000003>https://en.wikipedia.org/wiki/PH</odo:ECSO_01000003>
         <rdfs:label>Water pH</rdfs:label>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
