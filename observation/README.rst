@@ -1,7 +1,9 @@
 This directory stores ontologies related to scientific observations.
 
 This is meant to be a collaborative space as we develop ontologies that meet
-the annotation goals in phase 2 of the DataONE project.
+the annotation goals in phase 2 of the DataONE project. Partial support for these
+efforts also provided through the NSF Scientific Observations Network, "SONet"
+project, NSF INTEROP #0753144.
 
 
 Candidate ontologies include:
