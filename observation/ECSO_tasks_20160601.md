@@ -29,12 +29,12 @@ ECSO tasks
 	1. Review candidates; Add or subclass per notes **SARA, MARGARET, MARK**
 	2. Char, entity, std for all. **MARGARET, MARK**
 4. MsTMIP classes
-	1. Confirm that all Sophie’s new info has been incorporated **SARA**
+	1. Confirm that all Sophie’s new info has been incorporated **MARGARET**
 5. PATO qualities - OBOE characteristics
 	1. equate where appropriate **JIM, MARGARET** (done, Ben)
 6. Synonyms/alternate labels
 	1. file of suggested (by wikipedia) synonyms **JIM**
-	2. Confirm and incorporate **BRYCE, SARA**
+	2. Confirm and incorporate **BRYCE, MARGARET**
 	
 
 
