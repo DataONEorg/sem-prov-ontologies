@@ -5,7 +5,7 @@ Mark S, Margaret
 
 
 Tasks to be done by mid-July:
-We are planning a 90 min workshop at ESIP, for data managers. The LTER is targeted here; see abstract text at bottom of this page. We expect that the workshop will have 3 basic components:
+We are planning a 90 min workshop at ESIP (sometime betw. Jul 25-28), for data managers. The LTER is targeted here; see abstract text at bottom of this page. We expect that the workshop will have 3 basic components:
 
 Participants will be able to 
  - explore ECSO through the annotation interface
