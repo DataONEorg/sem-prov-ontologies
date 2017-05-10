@@ -19,28 +19,28 @@ A. Annotation and search interface
 --------------
 1.	Complete, ie, ready for use/comment
   1.	The “Sandbox” server is adequate, as long as is contains a significant proportion of LTER datasets  (more than just test_corpus_f)
-  2.	https://search-sandbox-2.test.dataone.org/#data
-  3.	Confirm that authentication system runs, with same accounts as D1 production
-  4.	Confirm that tasks from his notes (directly to Ben) are done. Notes not included here, since they include screenshots, etc. -- Mark S 
-  5.	UI also searches synonyms.
+   -	https://search-sandbox-2.test.dataone.org/#data
+  2.	Confirm that authentication system runs, with same accounts as D1 production
+  3.	Confirm that tasks from his notes (directly to Ben) are done. Notes not included here, since they include screenshots, etc. -- Mark S 
+  4.	UI also searches synonyms.
 
 B.	ECSO 1.0
 --------------
   1.	Tasks 2, 3, 6 from Summer 2016 
   2.	Reproduced here (features required for all new classes)
-    1.	Entity/char --include useful ones from “auto-generated” run (Margaret)
-    2.	metadata (definition, contributor, etc), Margaret
-    3.	Synonyms and alt labels - 
-      1.	produces a text list of syn candidates - Jim
-      2.	review/add - Margaret
+    -	Entity/char --include useful ones from “auto-generated” run (Margaret)
+    -	metadata (definition, contributor, etc), Margaret
+    -	Synonyms and alt labels - 
+      -	a. produces a text list of syn candidates - Jim
+      -	b. review/add - Margaret
   3.	ECSO Ontology Quality checking - Bryce (tbd)
-    1.	 We should design and run a few structural checks and other utilities.
-    2.	Look for certain features as above
-    3.	Missing or duplicate labels 
-    4.	(some duplicates are fine, eg, when a simple word is found in two trees,
-      1.	Litter
-      2.	Bridge.
-    5.	Duplicate ids (eg, grep id, sort | uniq). 
+    -	We should design and run a few structural checks and other utilities.
+    -	Look for certain features as above
+    -	Missing or duplicate labels 
+    -	(some duplicates are fine, eg, when a simple word is found in two trees,
+      - a.	Litter
+      - b.	Bridge.
+    -	Duplicate ids (eg, grep id, sort | uniq). 
 
 C.	Preview - 
 --------------
