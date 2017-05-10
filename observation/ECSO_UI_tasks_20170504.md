@@ -1,5 +1,5 @@
 ECSO and dataset annotation, 2017
-
+--------------
 2017-05-05 D1
 Mark S, Margaret
 
@@ -42,18 +42,21 @@ B.	ECSO 1.0
       2.	Bridge.
     5.	Duplicate ids (eg, grep id, sort | uniq). 
 
-C.	Preview - Margaret
+C.	Preview - 
 --------------
-  1.	Query LTER IMs to see who is planning to attend, 
-  2.	examine their data for other classes, to anticipate adding to ECSO.
+  1.	Query LTER IMs to see who is planning to attend (Margaret)
+  2.	examine their data for other classes, to anticipate adding to ECSO. (Margaret)
 
 
 
 
 --------------
-Proposed ESIP session (currently scheduled for Wed PM)
+Proposed ESIP session (currently scheduled for Wed afternoon):
+
 Annotating datasets with measurement classes from the Ecosystem Ontology (ECSO)
+
 Presenter: Margaret O’Brien (perhaps others)
+
 Type: workshop
 
 A new measurement ontology, the Ecosystem Ontology (ECSO), is now available, as is a system for annotating datasets in DataONE. Because ontologies include parent-child structure, synonyms and enable formal logic, the data discovery process can be streamlined when dataset metadata incorporates annotations from ontologies. The ECSO project currently focuses on measurements related to carbon cycling - such as fluxes (e.g., ecosystem exchange, NPP, respiration) and concentrations (of pigments, carbon compounds). Measurement descriptions include units, applicable observed entities (both terrestrial and aquatic), and methods, and are based on a broad corpus of datasets found in DataONE. Additions are planned to add other classes of measurements to ECSO.  During this workshop, we will explore the ECSO ontology and demonstrate the annotation system. Participants will then be invited to annotate existing EML-described datasets with carbon cycling measurements, using the DataONE annotation interface.
