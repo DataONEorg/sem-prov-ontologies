@@ -33,6 +33,7 @@ B.	ECSO 1.0
     -	Synonyms and alt labels - 
       -	a. produces a text list of syn candidates - Jim
       -	b. review/add - Margaret
+      - c. see potential syns discussed here: https://docs.google.com/document/d/15b5TNYwbnSk3rgkIXOFq0gkDkUjXlPOYf1fp5HVqm3Q/edit, and listed here: https://github.com/DataONEorg/sem-prov-ontologies/tree/master/observation/resources/lter_search_strings_2007_2015
   3.	ECSO Ontology Quality checking - Bryce (tbd)
     -	We should design and run a few structural checks and other utilities.
     -	Look for certain features as above
