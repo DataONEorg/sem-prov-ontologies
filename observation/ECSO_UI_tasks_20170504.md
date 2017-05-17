@@ -28,6 +28,7 @@ B.	ECSO 1.0
 --------------
   1.	Tasks 2, 3, 6 from Summer 2016 
    - classes to add: https://docs.google.com/document/d/1P_36CGAYfLsnUb4pKEPKQ4zFViH8tiOs3xq-OYQkhAU/edit
+   - classes to augment: https://docs.google.com/spreadsheets/d/1WXlKjA7GyKDXkhDivvq1CPGrvdCa2L86vdD1e-enn6Y/edit#gid=0
   2.	Reproduced here (features required for all new classes)
     -	Entity/char --include useful ones from “auto-generated” run (Margaret)
     -	metadata (definition, contributor, etc), Margaret
