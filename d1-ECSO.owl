@@ -3939,6 +3939,7 @@ https://en.wikipedia.org/wiki/Rate_(mathematics)#Temporal</odo:ECSO_01000003>
         <rdfs:comment>this class is general enough to be in oboe. but it could be a child of PATO concentration.</rdfs:comment>
         <rdfs:label>mass concentration</rdfs:label>
         <skos:definition xml:lang="en">In chemistry, the mass concentration is defined as the mass of a constituent divided by the volume of the mixture.</skos:definition>
+        <skos:hiddenLabel>mass concentration</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -8922,6 +8923,7 @@ note: ENVO also references LTER:41</rdfs:comment>
         <oboInOwl:id xml:lang="en">PATO:0000033</oboInOwl:id>
         <oboInOwl:inSubset xml:lang="en">scalar_slim; attribute_slim; relational_slim</oboInOwl:inSubset>
         <skos:definition xml:lang="en">A quality inhering in a substance by virtue of the amount of the bearer&apos;s there is mixed with another substance.</skos:definition>
+        <skos:hiddenLabel>concentration of</skos:hiddenLabel>
     </rdf:Description>
     
 
@@ -9090,6 +9092,7 @@ physial quality of a process</rdfs:comment>
         <oboInOwl:inSubset xml:lang="en">scalar_slim; attribute_slim; relational_slim</oboInOwl:inSubset>
         <rdfs:label>catalytic (activity) concentration</rdfs:label>
         <skos:definition xml:lang="en">A concentration quality inhering in a bearer by virtue of the bearer&apos;s catalytic activity divided by the volume of the system.</skos:definition>
+        <skos:hiddenLabel>catalytic (activity) concentration</skos:hiddenLabel>
     </rdf:Description>
     
 
@@ -10839,10 +10842,10 @@ https://en.wikipedia.org/wiki/Mass_flow_rate</rdfs:comment>
         <skos:definition xml:lang="en">Luminosity is the total amount of energy emitted by a star, galaxy, or other astronomical object per unit time. It is related to the brightness, which is the luminosity of an object in a given spectral region.</skos:definition>
     </rdf:Description>
     <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#MagneticFieldStrength">
-        <rdfs:label xml:lang="en">MagneticFieldStrength</rdfs:label>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
-        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Magnetic_field</odo:ECSO_01000003>
+        <rdfs:label xml:lang="en">MagneticFieldStrength</rdfs:label>
         <skos:definition xml:lang="en">A magnetic field is the magnetic effect of electric currents and magnetic materials. The magnetic field at any given point is specified by both a direction and a magnitude (or strength); as such it is a vector field.</skos:definition>
+        <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Magnetic_field</odo:ECSO_01000003>
         <skos:hiddenLabel>MagneticFieldStrength</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#MagneticFlux">
@@ -11921,6 +11924,7 @@ https://en.wikipedia.org/wiki/Carbon_dioxide</odo:ECSO_01000003>
         <skos:altLabel>Amount concentration</skos:altLabel>
         <rdfs:comment>mob:
 this probably should be in OBOE, and is a synomym of AmountOfSubstanceConcentration.</rdfs:comment>
+        <skos:hiddenLabel>molar concentration</skos:hiddenLabel>
         <skos:altLabel>Molarity</skos:altLabel>
         <skos:altLabel>Amount of substance concentration</skos:altLabel>
         <rdfs:label>molar concentration</rdfs:label>
@@ -12442,8 +12446,8 @@ peggym.109987.2</odo:ECSO_01000007>
 doi:10.6073/AA/knb-lter-fce.39.5</odo:ECSO_01000007>
         <skos:prefLabel>Water Salinity</skos:prefLabel>
         <skos:definition>Salinity is the saltiness or dissolved salt content of a body of water (see also soil salinity). Salinity is an important factor in determining many aspects of the chemistry of natural waters and of biological processes within it, and is a thermodynamic state variable that, along with temperature and pressure, governs physical characteristics like the density and heat capacity of the water.</skos:definition>
-        <skos:altLabel>Salinity</skos:altLabel>
         <skos:altLabel>salinity</skos:altLabel>
+        <skos:altLabel>Salinity</skos:altLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.dataone.org/odo/ECSO_00001178">
         <skos:prefLabel>Soil Wet Weight</skos:prefLabel>
@@ -12984,6 +12988,12 @@ As description Annotation properties are often not as rigorous, and hence looser
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/ENVO_01000325</odo:ECSO_01000003>
         <skos:definition xml:lang="en">A layer in a water mass, itself composed primarily of water.</skos:definition>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000051">
+        <skos:hiddenLabel>morphology</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000052">
+        <skos:hiddenLabel>shape</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000068">
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0000068</odo:ECSO_01000003>
         <oboInOwl:hasOBONamespace xml:lang="en">quality</oboInOwl:hasOBONamespace>
@@ -13006,6 +13016,18 @@ As description Annotation properties are often not as rigorous, and hence looser
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0000085</odo:ECSO_01000003>
         <skos:definition xml:lang="en">A quality inhering in a bearer by virtue of the bearer&apos;s disposition to detect or perceive external stimulation.</skos:definition>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000117">
+        <skos:hiddenLabel>size</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000119">
+        <skos:hiddenLabel>height</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000122">
+        <skos:hiddenLabel>length</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000136">
+        <skos:hiddenLabel>closure</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000140">
         <oboInOwl:inSubset xml:lang="en">attribute_slim</oboInOwl:inSubset>
         <oboInOwl:id xml:lang="en">PATO:0000140</oboInOwl:id>
@@ -13015,6 +13037,9 @@ As description Annotation properties are often not as rigorous, and hence looser
         <skos:definition xml:lang="en">A spatial quality inhering in a bearer by virtue of the bearer&apos;s spatial location relative to other objects in the vicinity.</skos:definition>
         <odo:ECSO_01000006 xml:lang="en">relational spatial quality; location; placement</odo:ECSO_01000006>
         <oboInOwl:hasDbXref xml:lang="en">[database_cross_reference: PATOC:GVG]</oboInOwl:hasDbXref>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000141">
+        <skos:hiddenLabel>structure</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000274">
         <oboInOwl:inSubset xml:lang="en">attribute_slim; disposition_slim</oboInOwl:inSubset>
@@ -13053,6 +13078,42 @@ As description Annotation properties are often not as rigorous, and hence looser
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000389">
         <skos:hiddenLabel>acute</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000402">
+        <skos:hiddenLabel>branched</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000403">
+        <skos:hiddenLabel>cleft</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000404">
+        <skos:hiddenLabel>coiled</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000405">
+        <skos:hiddenLabel>curled</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000406">
+        <skos:hiddenLabel>curved</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000407">
+        <skos:hiddenLabel>flat</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000409">
+        <skos:hiddenLabel>oblate</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000410">
+        <skos:hiddenLabel>pinnate</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000411">
+        <skos:hiddenLabel>circular</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000413">
+        <skos:hiddenLabel>square</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000414">
+        <skos:hiddenLabel>unbranched</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000415">
+        <skos:hiddenLabel>uncoiled</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000470">
         <skos:hiddenLabel>increased amount</skos:hiddenLabel>
@@ -13111,11 +13172,44 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000600">
         <skos:hiddenLabel>increased width</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000608">
+        <skos:hiddenLabel>closed</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000609">
+        <skos:hiddenLabel>closure incomplete</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000610">
+        <skos:hiddenLabel>open</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000615">
+        <skos:hiddenLabel>anterioralized</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000617">
+        <skos:hiddenLabel>bent</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000620">
+        <skos:hiddenLabel>dorsalized</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000630">
+        <skos:hiddenLabel>posterioralized</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000636">
+        <skos:hiddenLabel>ventralized</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000638">
+        <skos:hiddenLabel>apoptotic</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000644">
         <skos:hiddenLabel>hyperplastic</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000645">
         <skos:hiddenLabel>hypoplastic</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000646">
+        <skos:hiddenLabel>malformed</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000648">
+        <skos:hiddenLabel>obstructed</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000706">
         <skos:hiddenLabel>increased threshold</skos:hiddenLabel>
@@ -13135,8 +13229,35 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000912">
         <skos:hiddenLabel>increased rate</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000915">
+        <skos:hiddenLabel>thickness</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000918">
         <skos:hiddenLabel>volume</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000921">
+        <skos:hiddenLabel>width</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000936">
+        <skos:hiddenLabel>truncated</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000944">
+        <skos:hiddenLabel>sharpness</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000945">
+        <skos:hiddenLabel>epinastic</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000946">
+        <skos:hiddenLabel>oblong</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000947">
+        <skos:hiddenLabel>elliptic</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000948">
+        <skos:hiddenLabel>heart shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000949">
+        <skos:hiddenLabel>fasciated</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000956">
         <oboInOwl:hasDbXref xml:lang="en">[database_cross_reference: PATOC:GVG]</oboInOwl:hasDbXref>
@@ -13146,8 +13267,20 @@ As description Annotation properties are often not as rigorous, and hence looser
         <oboInOwl:id xml:lang="en">PATO:0000956</oboInOwl:id>
         <skos:definition xml:lang="en">A fertility quality inhering in a bearer by virtue of the bearer&apos;s being incapable of initiating, sustaining, or supporting reproduction.</skos:definition>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000967">
+        <skos:hiddenLabel>undulate</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0000969">
         <skos:hiddenLabel>dwarf-like</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001154">
+        <skos:hiddenLabel>elongated</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001159">
+        <skos:hiddenLabel>concentrated</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001161">
+        <skos:hiddenLabel>diluted</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001162">
         <skos:hiddenLabel>increased concentration</skos:hiddenLabel>
@@ -13160,6 +13293,21 @@ As description Annotation properties are often not as rigorous, and hence looser
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001194">
         <skos:hiddenLabel>hyporesponsive to</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001199">
+        <skos:hiddenLabel>linear</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001200">
+        <skos:hiddenLabel>T-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001201">
+        <skos:hiddenLabel>Y-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001205">
+        <skos:hiddenLabel>dentated</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001206">
+        <skos:hiddenLabel>serrated</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001305">
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0001305</odo:ECSO_01000003>
@@ -13202,8 +13350,44 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001323">
         <skos:hiddenLabel>area</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001332">
+        <skos:hiddenLabel>amorphous</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001333">
         <skos:hiddenLabel>temporally extended</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001334">
+        <skos:hiddenLabel>diameter</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001355">
+        <skos:hiddenLabel>convex</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001356">
+        <skos:hiddenLabel>pleomorphic</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001357">
+        <skos:hiddenLabel>pulvinate</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001359">
+        <skos:hiddenLabel>rugose</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001360">
+        <skos:hiddenLabel>filamentous</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001365">
+        <skos:hiddenLabel>spiny</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001366">
+        <skos:hiddenLabel>punctiform</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001367">
+        <skos:hiddenLabel>lobate</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001368">
+        <skos:hiddenLabel>erose</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001369">
+        <skos:hiddenLabel>raised</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001374">
         <skos:hiddenLabel>ploidy</skos:hiddenLabel>
@@ -13310,11 +13494,23 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001408">
         <skos:hiddenLabel>ciliatedness</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001409">
+        <skos:hiddenLabel>spindle-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001410">
+        <skos:hiddenLabel>striated</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001416">
         <skos:hiddenLabel>regular duration</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001417">
         <skos:hiddenLabel>irregular duration</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001419">
+        <skos:hiddenLabel>sharp</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001427">
+        <skos:hiddenLabel>compound acidity</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001428">
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0001428</odo:ECSO_01000003>
@@ -13322,6 +13518,7 @@ As description Annotation properties are often not as rigorous, and hence looser
         <oboInOwl:id xml:lang="en">PATO:0001428</oboInOwl:id>
         <oboInOwl:hasDbXref xml:lang="en">[database_cross_reference: chemicool:chemicool]</oboInOwl:hasDbXref>
         <skos:definition xml:lang="en">A concentration quality inhering in a medium by virtue of the bearer&apos;s tendency to hydronate a specific reference base.</skos:definition>
+        <skos:hiddenLabel>medium acidity</skos:hiddenLabel>
         <oboInOwl:hasOBONamespace xml:lang="en">quality</oboInOwl:hasOBONamespace>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001429">
@@ -13330,6 +13527,7 @@ As description Annotation properties are often not as rigorous, and hence looser
         <skos:definition xml:lang="en">An medium acidity quality inhering in a solution by virtue of the bearer&apos;s a high concentration of H+ ions.</skos:definition>
         <oboInOwl:hasDbXref xml:lang="en">[database_cross_reference: chemicool:chemicool]</oboInOwl:hasDbXref>
         <oboInOwl:id xml:lang="en">PATO:0001429</oboInOwl:id>
+        <skos:hiddenLabel>acidic</skos:hiddenLabel>
         <oboInOwl:hasOBONamespace xml:lang="en">quality</oboInOwl:hasOBONamespace>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001430">
@@ -13338,6 +13536,7 @@ As description Annotation properties are often not as rigorous, and hence looser
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0001430</odo:ECSO_01000003>
         <oboInOwl:id xml:lang="en">PATO:0001430</oboInOwl:id>
         <oboInOwl:hasOBONamespace xml:lang="en">quality</oboInOwl:hasOBONamespace>
+        <skos:hiddenLabel>alkaline</skos:hiddenLabel>
         <oboInOwl:inSubset xml:lang="en">value_slim</oboInOwl:inSubset>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001434">
@@ -13377,6 +13576,21 @@ As description Annotation properties are often not as rigorous, and hence looser
         <oboInOwl:hasOBONamespace xml:lang="en">quality</oboInOwl:hasOBONamespace>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0001456</odo:ECSO_01000003>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001465">
+        <skos:hiddenLabel>monstrous</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001466">
+        <skos:hiddenLabel>curved rostral</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001467">
+        <skos:hiddenLabel>curved caudal</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001468">
+        <skos:hiddenLabel>curved dorsal</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001469">
+        <skos:hiddenLabel>curved ventral</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001472">
         <skos:hiddenLabel>decreased depth</skos:hiddenLabel>
     </rdf:Description>
@@ -13389,14 +13603,38 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001476">
         <skos:hiddenLabel>decreased position</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001481">
+        <skos:hiddenLabel>sloped</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001483">
         <skos:hiddenLabel>aplastic</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001488">
         <skos:hiddenLabel>cellular motility</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001495">
+        <skos:hiddenLabel>notched</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001499">
+        <skos:hiddenLabel>spherical</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001500">
+        <skos:hiddenLabel>tapered</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001509">
+        <skos:hiddenLabel>functionality</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001510">
+        <skos:hiddenLabel>functional</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001511">
+        <skos:hiddenLabel>non-functional</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001531">
         <skos:hiddenLabel>cellular adhesivity</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001536">
+        <skos:hiddenLabel>solubility</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001549">
         <skos:hiddenLabel>increased sensitivity toward</skos:hiddenLabel>
@@ -13415,6 +13653,9 @@ As description Annotation properties are often not as rigorous, and hence looser
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001554">
         <skos:hiddenLabel>decreased sensitivity of a process to oxygen</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001555">
+        <skos:hiddenLabel>has number of</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001559">
         <skos:hiddenLabel>having extra function</skos:hiddenLabel>
@@ -13465,11 +13706,20 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001588">
         <skos:hiddenLabel>decreased variability of rate</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001591">
+        <skos:hiddenLabel>curvature</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001592">
         <skos:hiddenLabel>increased curvature</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001593">
         <skos:hiddenLabel>decreased curvature</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001594">
+        <skos:hiddenLabel>arched</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001595">
+        <skos:hiddenLabel>depth</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001596">
         <skos:hiddenLabel>increased depth</skos:hiddenLabel>
@@ -13499,6 +13749,9 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001613">
         <skos:hiddenLabel>decreased variability of color</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001617">
+        <skos:hiddenLabel>deformed</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001618">
         <skos:hiddenLabel>increased tonicity</skos:hiddenLabel>
     </rdf:Description>
@@ -13520,6 +13773,27 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001625">
         <skos:hiddenLabel>increased functionality</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001626">
+        <skos:hiddenLabel>sufficiency</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001627">
+        <skos:hiddenLabel>sufficient</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001628">
+        <skos:hiddenLabel>insufficient</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001634">
+        <skos:hiddenLabel>necessity (continuant)</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001635">
+        <skos:hiddenLabel>necessary (continuant)</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001636">
+        <skos:hiddenLabel>unnecessary (continuant)</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001643">
+        <skos:hiddenLabel>stubby</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001646">
         <oboInOwl:inSubset xml:lang="en">relational_slim; value_slim</oboInOwl:inSubset>
         <oboInOwl:hasOBONamespace xml:lang="en">quality</oboInOwl:hasOBONamespace>
@@ -13529,6 +13803,12 @@ As description Annotation properties are often not as rigorous, and hence looser
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0001646</odo:ECSO_01000003>
         <oboInOwl:id xml:lang="en">PATO:0001646</oboInOwl:id>
         <oboInOwl:hasDbXref xml:lang="en">[database_cross_reference: PATOC:nc]</oboInOwl:hasDbXref>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001648">
+        <skos:hiddenLabel>circumference</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001649">
+        <skos:hiddenLabel>curved lateral</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001650">
         <skos:hiddenLabel>increased resistance to</skos:hiddenLabel>
@@ -13543,6 +13823,7 @@ As description Annotation properties are often not as rigorous, and hence looser
         <oboInOwl:hasDbXref xml:lang="en">[database_cross_reference: Wikipedia:http://en.wikipedia.org/wiki/Osmolarity]</oboInOwl:hasDbXref>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0001655</odo:ECSO_01000003>
         <oboInOwl:hasOBONamespace xml:lang="en">quality</oboInOwl:hasOBONamespace>
+        <skos:hiddenLabel>osmolarity</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001656">
         <skos:hiddenLabel>decreased osmolarity</skos:hiddenLabel>
@@ -13614,6 +13895,12 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001698">
         <skos:hiddenLabel>increased photosensitivity</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001708">
+        <skos:hiddenLabel>1-D extent</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001711">
+        <skos:hiddenLabel>perimeter</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001712">
         <skos:hiddenLabel>increased perimeter</skos:hiddenLabel>
     </rdf:Description>
@@ -13637,6 +13924,12 @@ As description Annotation properties are often not as rigorous, and hence looser
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001726">
         <skos:hiddenLabel>decreased male receptivity</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001727">
+        <skos:hiddenLabel>disposition</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001728">
+        <skos:hiddenLabel>multi-cellular organismal disposition</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001739">
         <skos:definition>A quality that inheres in an bearer by virtue of how that bearer interacts with radiation.</skos:definition>
@@ -13669,6 +13962,9 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001743">
         <skos:hiddenLabel>decreased radioactivity</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001748">
+        <skos:hiddenLabel>invaginated</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001764">
         <skos:hiddenLabel>increased age</skos:hiddenLabel>
     </rdf:Description>
@@ -13690,23 +13986,50 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001780">
         <skos:hiddenLabel>dystrophic</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001781">
+        <skos:hiddenLabel>irregular thickness</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001782">
         <skos:hiddenLabel>increased intensity</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001783">
         <skos:hiddenLabel>decreased intensity</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001784">
+        <skos:hiddenLabel>bifurcated</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001785">
+        <skos:hiddenLabel>splayed</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001786">
+        <skos:hiddenLabel>split</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001787">
+        <skos:hiddenLabel>rotational curvature</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001788">
         <skos:hiddenLabel>increased mass density</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001789">
+        <skos:hiddenLabel>domed</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001790">
         <skos:hiddenLabel>decreased mass density</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001794">
+        <skos:hiddenLabel>coiling</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001795">
         <skos:hiddenLabel>increased coiling</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001796">
         <skos:hiddenLabel>decreased coiling</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001798">
+        <skos:hiddenLabel>kinked</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001799">
+        <skos:hiddenLabel>ruffled</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001801">
         <skos:hiddenLabel>decreased water composition</skos:hiddenLabel>
@@ -13722,6 +14045,9 @@ As description Annotation properties are often not as rigorous, and hence looser
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001817">
         <skos:hiddenLabel>decreased fatigability</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001819">
+        <skos:hiddenLabel>atretic</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001825">
         <skos:hiddenLabel>increased wetness</skos:hiddenLabel>
@@ -13760,6 +14086,7 @@ As description Annotation properties are often not as rigorous, and hence looser
         <oboInOwl:hasDbXref xml:lang="en">[database_cross_reference: biology-online:biology-online]</oboInOwl:hasDbXref>
         <skos:definition xml:lang="en">A concentration quality inhering in a bearer by virtue of the bearer&apos;s containing acid (hydrogen ions).</skos:definition>
         <oboInOwl:inSubset xml:lang="en">scalar_slim; attribute_slim</oboInOwl:inSubset>
+        <skos:hiddenLabel>acidity</skos:hiddenLabel>
         <oboInOwl:id xml:lang="en">PATO:0001842</oboInOwl:id>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001843">
@@ -13767,6 +14094,12 @@ As description Annotation properties are often not as rigorous, and hence looser
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001844">
         <skos:hiddenLabel>increased acidity</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001848">
+        <skos:hiddenLabel>asymmetrically curved</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001857">
+        <skos:hiddenLabel>concave</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001859">
         <skos:hiddenLabel>increased coordination</skos:hiddenLabel>
@@ -13776,6 +14109,63 @@ As description Annotation properties are often not as rigorous, and hence looser
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001863">
         <skos:hiddenLabel>chronic</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001865">
+        <skos:hiddenLabel>spheroid</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001866">
+        <skos:hiddenLabel>prolate</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001867">
+        <skos:hiddenLabel>rectangular</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001870">
+        <skos:hiddenLabel>crescent-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001871">
+        <skos:hiddenLabel>reniform</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001872">
+        <skos:hiddenLabel>cuboid</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001873">
+        <skos:hiddenLabel>cylindrical</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001874">
+        <skos:hiddenLabel>discoid</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001875">
+        <skos:hiddenLabel>triangular</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001876">
+        <skos:hiddenLabel>dumbbell-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001877">
+        <skos:hiddenLabel>lanceolate</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001878">
+        <skos:hiddenLabel>sigmoid</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001879">
+        <skos:hiddenLabel>U-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001881">
+        <skos:hiddenLabel>arrow-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001882">
+        <skos:hiddenLabel>limaciform</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001883">
+        <skos:hiddenLabel>clavate</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001889">
+        <skos:hiddenLabel>scalloped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001890">
+        <skos:hiddenLabel>tripartite</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001891">
+        <skos:hiddenLabel>ovate</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001892">
         <skos:hiddenLabel>decreased odor</skos:hiddenLabel>
@@ -13789,11 +14179,23 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001899">
         <skos:hiddenLabel>decreased circumference</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001905">
+        <skos:hiddenLabel>has normal numbers of parts of type</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001907">
+        <skos:hiddenLabel>botryoidal</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001908">
         <skos:hiddenLabel>multinucleate</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001909">
         <skos:hiddenLabel>trinucleate</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001910">
+        <skos:hiddenLabel>folded</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001925">
+        <skos:hiddenLabel>surface feature shape</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001926">
         <skos:hiddenLabel>increased fluorescence</skos:hiddenLabel>
@@ -13801,8 +14203,35 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001927">
         <skos:hiddenLabel>decreased fluorescence</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001934">
+        <skos:hiddenLabel>orbicular</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001935">
+        <skos:hiddenLabel>obtuse</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001936">
+        <skos:hiddenLabel>obovate</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001937">
+        <skos:hiddenLabel>spatulate</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001938">
+        <skos:hiddenLabel>rhomboid</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001940">
         <skos:hiddenLabel>gigantic</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001949">
+        <skos:hiddenLabel>pointleted</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001950">
+        <skos:hiddenLabel>blunt</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001954">
+        <skos:hiddenLabel>subulate</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001955">
+        <skos:hiddenLabel>cuneate</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001957">
         <skos:hiddenLabel>decreased variability of size</skos:hiddenLabel>
@@ -13810,9 +14239,84 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001958">
         <skos:hiddenLabel>increased variability of size</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001960">
+        <skos:hiddenLabel>interdigitated</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001962">
+        <skos:hiddenLabel>involute</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001963">
+        <skos:hiddenLabel>revolute</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001964">
+        <skos:hiddenLabel>circinate</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001965">
+        <skos:hiddenLabel>reclinate</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001966">
+        <skos:hiddenLabel>convolute</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001967">
+        <skos:hiddenLabel>actinodromous</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001968">
+        <skos:hiddenLabel>parallelodromous</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001969">
+        <skos:hiddenLabel>craspedodromous</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001970">
+        <skos:hiddenLabel>brochidodromous</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001971">
+        <skos:hiddenLabel>cladodromous</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001972">
+        <skos:hiddenLabel>reticulodromous</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001973">
+        <skos:hiddenLabel>cuspidate</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001974">
+        <skos:hiddenLabel>retuse</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001975">
+        <skos:hiddenLabel>unserrated</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001976">
+        <skos:hiddenLabel>serration</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001977">
+        <skos:hiddenLabel>angular</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001978">
+        <skos:hiddenLabel>cut</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001979">
+        <skos:hiddenLabel>lobed</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001980">
+        <skos:hiddenLabel>digitate</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001981">
+        <skos:hiddenLabel>auriculate</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001982">
+        <skos:hiddenLabel>attenuate</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001984">
+        <skos:hiddenLabel>decurrent</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001985">
         <odo:ECSO_01000007 xml:lang="en">ice has quality some frozen</odo:ECSO_01000007>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0001985</odo:ECSO_01000003>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001988">
+        <skos:hiddenLabel>quadrangular</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001989">
+        <skos:hiddenLabel>sinuous</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001990">
         <skos:hiddenLabel>duration of disease</skos:hiddenLabel>
@@ -13820,11 +14324,41 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001997">
         <skos:hiddenLabel>decreased amount</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001999">
+        <skos:hiddenLabel>lacks parts or has fewer parts of type</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002000">
+        <skos:hiddenLabel>lacks all parts of type</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002001">
         <skos:hiddenLabel>has fewer parts of type</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002002">
         <skos:hiddenLabel>has extra parts of type</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002005">
+        <skos:hiddenLabel>concavity</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002006">
+        <skos:hiddenLabel>2-D shape</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002007">
+        <skos:hiddenLabel>convex 3-D shape</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002008">
+        <skos:hiddenLabel>concave 3-D shape</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002009">
+        <skos:hiddenLabel>branchiness</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002021">
+        <skos:hiddenLabel>conical</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002022">
+        <skos:hiddenLabel>villiform</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002027">
+        <skos:hiddenLabel>osmolality</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002028">
         <skos:hiddenLabel>decreased osmolality</skos:hiddenLabel>
@@ -13832,17 +14366,50 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002029">
         <skos:hiddenLabel>increased osmolality</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002030">
+        <skos:hiddenLabel>specificity to</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002031">
+        <skos:hiddenLabel>upturned</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002034">
+        <skos:hiddenLabel>undivided</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002039">
+        <skos:hiddenLabel>biconcave</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002040">
+        <skos:hiddenLabel>biconvex</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002041">
+        <skos:hiddenLabel>anterior-posterior diameter</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002042">
         <skos:hiddenLabel>decreased anterior-posterior diameter</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002043">
         <skos:hiddenLabel>increased anterior-posterior diameter</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002044">
+        <skos:hiddenLabel>trapezoid</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002045">
+        <skos:hiddenLabel>dendritic</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002049">
+        <skos:hiddenLabel>lateral and rotional curvature</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002051">
         <skos:hiddenLabel>increased occurrence</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002052">
         <skos:hiddenLabel>decreased occurrence</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002053">
+        <skos:hiddenLabel>dorso-ventrally flattened</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002054">
+        <skos:hiddenLabel>laterally compressed</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002055">
         <skos:hiddenLabel>increased fragility</skos:hiddenLabel>
@@ -13856,11 +14423,26 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002058">
         <skos:hiddenLabel>decreased area</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002063">
+        <skos:hiddenLabel>columnar</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002064">
+        <skos:hiddenLabel>fenestrated</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002065">
+        <skos:hiddenLabel>star shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002070">
+        <skos:hiddenLabel>affinity</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002071">
         <skos:hiddenLabel>increased affinity</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002072">
         <skos:hiddenLabel>decreased affinity</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002073">
+        <skos:hiddenLabel>avidity</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002074">
         <skos:hiddenLabel>increased avidity</skos:hiddenLabel>
@@ -13868,11 +14450,26 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002075">
         <skos:hiddenLabel>decreased avidity</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002083">
+        <skos:hiddenLabel>altered number of</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002087">
+        <skos:hiddenLabel>bullet-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002090">
+        <skos:hiddenLabel>adenomatous</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002091">
         <skos:hiddenLabel>subacute</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002092">
+        <skos:hiddenLabel>anaplastic</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002093">
         <skos:hiddenLabel>ballooning</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002094">
+        <skos:hiddenLabel>basophilic</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002099">
         <skos:hiddenLabel>differentiated</skos:hiddenLabel>
@@ -13895,11 +14492,20 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002111">
         <skos:hiddenLabel>moderately well differentiated</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002117">
+        <skos:hiddenLabel>glandular</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002118">
         <skos:hiddenLabel>multiple</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002127">
         <skos:hiddenLabel>scirrhous</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002142">
+        <skos:hiddenLabel>bracket</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002143">
+        <skos:hiddenLabel>sloped downward</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002144">
         <skos:hiddenLabel>increased radiopacity</skos:hiddenLabel>
@@ -13916,23 +14522,201 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002149">
         <skos:hiddenLabel>ivory</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002150">
+        <skos:hiddenLabel>splayed caudal</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002151">
+        <skos:hiddenLabel>splayed dorsal</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002152">
+        <skos:hiddenLabel>splayed lateral</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002153">
+        <skos:hiddenLabel>splayed rostral</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002154">
+        <skos:hiddenLabel>splayed ventral</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002161">
+        <skos:hiddenLabel>bicornuate</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002162">
         <skos:hiddenLabel>high-arched</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002164">
+        <skos:hiddenLabel>curved medial</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002165">
+        <skos:hiddenLabel>drooping</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002169">
+        <skos:hiddenLabel>split medially</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002170">
+        <skos:hiddenLabel>split laterally</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002171">
+        <skos:hiddenLabel>split bilaterally</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002172">
+        <skos:hiddenLabel>split radially</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002180">
+        <skos:hiddenLabel>straight</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002182">
         <oboInOwl:hasAlternativeId xml:lang="en">PATO:0002061</oboInOwl:hasAlternativeId>
         <oboInOwl:hasDbXref xml:lang="en">[database_cross_reference: PATOC:GVG]</oboInOwl:hasDbXref>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0002182</odo:ECSO_01000003>
+        <skos:hiddenLabel>molecular quality</skos:hiddenLabel>
         <oboInOwl:id xml:lang="en">PATO:0002182</oboInOwl:id>
         <odo:ECSO_01000006 xml:lang="en">relational molecular quality</odo:ECSO_01000006>
         <oboInOwl:hasOBONamespace xml:lang="en">quality</oboInOwl:hasOBONamespace>
         <skos:definition xml:lang="en">A quality which inheres in a molecular entity, a single molecule, atom, ion, radical etc.</skos:definition>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002183">
+        <skos:hiddenLabel>cyclicity</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002184">
+        <skos:hiddenLabel>cyclic cyclicity</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002185">
+        <skos:hiddenLabel>acyclic cyclicity</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002186">
+        <skos:hiddenLabel>polarity</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002187">
+        <skos:hiddenLabel>polar polarity</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002188">
+        <skos:hiddenLabel>nonpolar polarity</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002189">
+        <skos:hiddenLabel>electric polarizability</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002190">
+        <skos:hiddenLabel>aromaticity</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002191">
+        <skos:hiddenLabel>aromatic</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002192">
+        <skos:hiddenLabel>non-aromatic</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002193">
+        <skos:hiddenLabel>electric charge</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002194">
+        <skos:hiddenLabel>neutral charge</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002195">
+        <skos:hiddenLabel>positive charge</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002196">
+        <skos:hiddenLabel>negative charge</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002197">
+        <skos:hiddenLabel>electronegativity</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002205">
+        <skos:hiddenLabel>capacitance</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002208">
+        <skos:hiddenLabel>spoon-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002209">
+        <skos:hiddenLabel>incisiform</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002210">
+        <skos:hiddenLabel>bulbous</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002211">
+        <skos:hiddenLabel>recurved</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002212">
+        <skos:hiddenLabel>slender</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002213">
+        <skos:hiddenLabel>obclavate</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002214">
+        <skos:hiddenLabel>bilobed</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002215">
+        <skos:hiddenLabel>falciform</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002216">
+        <skos:hiddenLabel>ubiquinated</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002217">
+        <skos:hiddenLabel>nitrated</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002219">
+        <skos:hiddenLabel>fan-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002220">
+        <skos:hiddenLabel>phosphorylated</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002221">
         <skos:hiddenLabel>increased phosphorylation</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002222">
         <skos:hiddenLabel>decreased phosphorylation</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002223">
+        <skos:hiddenLabel>oxidized</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002224">
+        <skos:hiddenLabel>V-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002225">
+        <skos:hiddenLabel>L-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002226">
+        <skos:hiddenLabel>subcylindrical</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002227">
+        <skos:hiddenLabel>cup-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002228">
+        <skos:hiddenLabel>acuminate</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002229">
+        <skos:hiddenLabel>subrectangular</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002230">
+        <skos:hiddenLabel>subtriangular</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002231">
+        <skos:hiddenLabel>multifid</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002232">
+        <skos:hiddenLabel>semicircular</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002234">
+        <skos:hiddenLabel>emarginate</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002235">
+        <skos:hiddenLabel>blade-like</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002236">
+        <skos:hiddenLabel>aliform</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002237">
+        <skos:hiddenLabel>retrorse</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002238">
+        <skos:hiddenLabel>antrorse</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002239">
+        <skos:hiddenLabel>hourglass-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002240">
+        <skos:hiddenLabel>teardrop-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002241">
+        <skos:hiddenLabel>trilobed</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002245">
         <skos:hiddenLabel>increased force</skos:hiddenLabel>
@@ -13946,11 +14730,47 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002251">
         <skos:hiddenLabel>decreased pigmentation</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002252">
+        <skos:hiddenLabel>antero-posteriorly flattened</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002253">
+        <skos:hiddenLabel>platelike</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002254">
+        <skos:hiddenLabel>flattened</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002257">
+        <skos:hiddenLabel>multicuspidate</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002258">
+        <skos:hiddenLabel>pointed</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002262">
+        <skos:hiddenLabel>phosphorylation</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002263">
+        <skos:hiddenLabel>dephosphorylated</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002266">
+        <skos:hiddenLabel>3-D shape</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002267">
+        <skos:hiddenLabel>edge shape</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002269">
+        <skos:hiddenLabel>accumulation</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002282">
         <skos:hiddenLabel>increased mobility</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002283">
         <skos:hiddenLabel>decreased mobility</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002285">
+        <skos:hiddenLabel>increased branchiness</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002286">
+        <skos:hiddenLabel>decreased branchiness</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002287">
         <skos:hiddenLabel>increased elasticity</skos:hiddenLabel>
@@ -13961,11 +14781,17 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002290">
         <skos:hiddenLabel>aplastic/hypoplastic</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002295">
+        <skos:hiddenLabel>areolate</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002297">
         <skos:hiddenLabel>decreased cellular motility</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002298">
         <skos:hiddenLabel>increased cellular motility</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002299">
+        <skos:hiddenLabel>tubular</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002300">
         <oboInOwl:id xml:lang="en">PATO:0002300</oboInOwl:id>
@@ -13995,11 +14821,59 @@ As description Annotation properties are often not as rigorous, and hence looser
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/PATO_0002305</odo:ECSO_01000003>
         <oboInOwl:id xml:lang="en">PATO:0002305</oboInOwl:id>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002306">
+        <skos:hiddenLabel>equilateral triangular</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002307">
+        <skos:hiddenLabel>isosceles triangular</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002308">
+        <skos:hiddenLabel>scalene triangular</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002309">
+        <skos:hiddenLabel>fiber shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002310">
+        <skos:hiddenLabel>robust</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002311">
+        <skos:hiddenLabel>fimbriated</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002313">
+        <skos:hiddenLabel>telescopic</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002315">
+        <skos:hiddenLabel>brush-like shape</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002317">
+        <skos:hiddenLabel>parallelogram</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002318">
+        <skos:hiddenLabel>superelliptic</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002319">
+        <skos:hiddenLabel>squircle</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002320">
+        <skos:hiddenLabel>diamond shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002321">
+        <skos:hiddenLabel>hypoelliptic</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002322">
+        <skos:hiddenLabel>hyperelliptic</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002327">
         <skos:hiddenLabel>increased angle to</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002328">
         <skos:hiddenLabel>decreased angle to</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002329">
+        <skos:hiddenLabel>hyponastic</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002330">
+        <skos:hiddenLabel>oblanceolate</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002333">
         <skos:hiddenLabel>increased adhesivity</skos:hiddenLabel>
@@ -14007,11 +14881,68 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002334">
         <skos:hiddenLabel>decreased adhesivity</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002335">
+        <skos:hiddenLabel>tholiform</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002336">
+        <skos:hiddenLabel>pyramidal</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002337">
+        <skos:hiddenLabel>lance-ovate</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002338">
+        <skos:hiddenLabel>lanceolate-triangular</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002342">
+        <skos:hiddenLabel>cupulate</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002345">
+        <skos:hiddenLabel>lemon-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002346">
+        <skos:hiddenLabel>snowman-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002347">
+        <skos:hiddenLabel>obconical</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002353">
+        <skos:hiddenLabel>activation quality</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002354">
+        <skos:hiddenLabel>active</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002355">
+        <skos:hiddenLabel>inactive</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002356">
+        <skos:hiddenLabel>constitutively active</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002357">
+        <skos:hiddenLabel>D-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002358">
+        <skos:hiddenLabel>ridged</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002359">
+        <skos:hiddenLabel>broad</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002360">
+        <skos:hiddenLabel>tendency</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002361">
         <skos:hiddenLabel>increased tendency</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002362">
         <skos:hiddenLabel>decreased tendency</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002364">
+        <skos:hiddenLabel>shortened</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002375">
+        <skos:hiddenLabel>trumpet-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002378">
+        <skos:hiddenLabel>acinus</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002382">
         <skos:hiddenLabel>increased waxiness</skos:hiddenLabel>
@@ -14019,8 +14950,20 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002383">
         <skos:hiddenLabel>decreased waxiness</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002385">
+        <skos:hiddenLabel>striate-angular</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002386">
+        <skos:hiddenLabel>anvil</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002387">
         <skos:hiddenLabel>peracute</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002390">
+        <skos:hiddenLabel>radius</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002391">
+        <skos:hiddenLabel>triradiate</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002393">
         <skos:hiddenLabel>increased tolerance to</skos:hiddenLabel>
@@ -14028,8 +14971,107 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002394">
         <skos:hiddenLabel>decreased tolerance to</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002397">
+        <skos:hiddenLabel>subcircular</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002400">
+        <skos:hiddenLabel>fusiform</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002414">
         <skos:hiddenLabel>chronic-active</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002418">
+        <skos:hiddenLabel>acidophilic</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002419">
+        <skos:hiddenLabel>eosinophilic</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002420">
+        <skos:hiddenLabel>amphiphilic</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002421">
+        <skos:hiddenLabel>cicatricial</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002422">
+        <skos:hiddenLabel>acinar</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002423">
+        <skos:hiddenLabel>papillomatous</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002426">
+        <skos:hiddenLabel>scaphoid</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002427">
+        <skos:hiddenLabel>knobbled</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002428">
+        <skos:hiddenLabel>tripodal</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002429">
+        <skos:hiddenLabel>x-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002430">
+        <skos:hiddenLabel>strap-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002431">
+        <skos:hiddenLabel>waisted</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002432">
+        <skos:hiddenLabel>spade-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002433">
+        <skos:hiddenLabel>sculpted surface</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002439">
+        <skos:hiddenLabel>w-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002440">
+        <skos:hiddenLabel>ornamentation</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002441">
+        <skos:hiddenLabel>ornamented</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002442">
+        <skos:hiddenLabel>unornamented</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002445">
+        <skos:hiddenLabel>torsioned</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002446">
+        <skos:hiddenLabel>anchor-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002447">
+        <skos:hiddenLabel>quadripartite</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002454">
+        <skos:hiddenLabel>carpel-like</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002455">
+        <skos:hiddenLabel>corymb-like</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002456">
+        <skos:hiddenLabel>inflorescence-like</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002457">
+        <skos:hiddenLabel>leaf-like</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002458">
+        <skos:hiddenLabel>pin-like</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002459">
+        <skos:hiddenLabel>sepal-like</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002461">
+        <skos:hiddenLabel>wilty</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002465">
+        <skos:hiddenLabel>prism shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002466">
+        <skos:hiddenLabel>keyhole shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002467">
+        <skos:hiddenLabel>lathlike</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002471">
         <skos:hiddenLabel>increased velocity</skos:hiddenLabel>
@@ -14037,14 +15079,131 @@ As description Annotation properties are often not as rigorous, and hence looser
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002472">
         <skos:hiddenLabel>decreased velocity</skos:hiddenLabel>
     </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002478">
+        <skos:hiddenLabel>transversely striated</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002479">
+        <skos:hiddenLabel>obliquely striated</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002482">
+        <skos:hiddenLabel>slit-like</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002485">
+        <skos:hiddenLabel>parallel-sided</skos:hiddenLabel>
+    </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002505">
         <skos:hiddenLabel>nucleated</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002506">
+        <skos:hiddenLabel>alobate</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002509">
+        <skos:hiddenLabel>hexagonal</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002510">
+        <skos:hiddenLabel>multipartite</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002511">
+        <skos:hiddenLabel>cane-like</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002517">
+        <skos:hiddenLabel>saddle-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002520">
+        <skos:hiddenLabel>scute-like</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002521">
+        <skos:hiddenLabel>funnel-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002522">
+        <skos:hiddenLabel>keel-shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002533">
+        <skos:hiddenLabel>bipartite</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002534">
+        <skos:hiddenLabel>plowshare shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002535">
+        <skos:hiddenLabel>peg-like</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002536">
+        <skos:hiddenLabel>boomerang shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002537">
+        <skos:hiddenLabel>subovoid</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002538">
+        <skos:hiddenLabel>concavo-convex</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002539">
+        <skos:hiddenLabel>ring shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0002540">
+        <skos:hiddenLabel>spur shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0005000">
+        <skos:hiddenLabel>hemispheroid</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0005002">
+        <skos:hiddenLabel>pear shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0005003">
+        <skos:hiddenLabel>paddle shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0005004">
+        <skos:hiddenLabel>subelliptical</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0005005">
+        <skos:hiddenLabel>radiating</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0005006">
+        <skos:hiddenLabel>differentiated from</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0005007">
+        <skos:hiddenLabel>hypsodont</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0005008">
+        <skos:hiddenLabel>brachydont</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0005009">
+        <skos:hiddenLabel>molariform</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0005010">
+        <skos:hiddenLabel>plumose</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0005014">
+        <skos:hiddenLabel>subspherical</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0005015">
+        <skos:hiddenLabel>tapered size</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0005017">
+        <skos:hiddenLabel>labiolingually compressed</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0005018">
+        <skos:hiddenLabel>mesiodistally compressed</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0005019">
+        <skos:hiddenLabel>curved lingually</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0005020">
+        <skos:hiddenLabel>irregularly shaped</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0005021">
+        <skos:hiddenLabel>unicuspidate</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0005022">
+        <skos:hiddenLabel>uniform diameter</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0015003">
         <skos:hiddenLabel>decreased efficacy</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0015004">
         <skos:hiddenLabel>increased efficacy</skos:hiddenLabel>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0015005">
+        <skos:hiddenLabel>tendrilous</skos:hiddenLabel>
     </rdf:Description>
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/RO_0002219">
         <skos:definition xml:lang="en">X surrounded_by y if and only if (1) x is adjacent to y and for every region r that is adjacent to x, r overlaps y (2) the shared boundary between x and y occupies the majority of the outermost boundary of x</skos:definition>
