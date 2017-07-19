@@ -1,3 +1,10 @@
+2017-07-19 mob
+ontofox_input_ENVO.txt now includes contiunant and occurrent. these are the best settings so far. 
+1. There are fewer bare classes, but the trees will probably need some pruning
+2. still does not pass reasoner (hermit)
+
+--------
+
 2017-07-17
 not yet able to recreate the ENVO import that was created earlier. 
 working files are stashed here
