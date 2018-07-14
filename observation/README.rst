@@ -15,4 +15,9 @@ Candidate ontologies include:
 	* SWEET and others?
 * Earth Science related Ontoloiges: https://docs.google.com/document/d/1YcRiiqNUVZlay3pDR6yQKuKHGe-Q5Mwynx_a0w8zkr0/edit?usp=sharing
 
+11JUL2018 MPS
+status of d1-ECSO in GitHub was that we had three branches-- master, run4 (the one to which the purl.dataone.org URL's resolved), and ArcticECSO (Elizabeth's branch?).  These all had outdated imports of ENVO and PATO that required refreshing, and had problems, both before and after getting new IMPORTs, with how these displayed in Protegé-- with many missing labels. 
 
+MPS started afresh with an almost complete import of the latest ENVO, a complete import of the latest UO, and a selective import of PATO (see the saved ONTOFOX files that were used to derive these imports).  Protegé 5.2 was then used to load up the ENVO_IMPORT from local filesystem with a DIRECT IMPORT, followed by PATO and UO, and then URL-based imports of OBOÉ and SKOS-DL. 
+
+ Then careful examination of an earlier "d1-ECSO-generated.owl" file was used to copy terms from the d1-ECSO-generated.owl file into the growing "IMPORT"-based ontology.
