@@ -3434,7 +3434,7 @@ synonyms: NPP</rdfs:comment>
     <!-- http://purl.dataone.org/odo/ECSO_00000062 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000062">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000519"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001162"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#measuresUsingProtocol"/>
@@ -9415,13 +9415,13 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-hfr/130/13</odo:ECSO_010
     <!-- http://purl.dataone.org/odo/ECSO_00001231 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001231">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001227"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001525"/>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <odo:ECSO_01000003>Adapted from
 https://en.wikipedia.org/wiki/Temperature</odo:ECSO_01000003>
         <odo:ECSO_01000007>meanT_1m  Seasonal (June to October) mean temperature for the 1 meter stratum celsius
 df35d.362.10</odo:ECSO_01000007>
-        <rdfs:label>Lake Temperature</rdfs:label>
+        <rdfs:label>lake water temperature</rdfs:label>
         <skos-owl1-dl:definition>Objective comparative measure of hot or cold of water in lake</skos-owl1-dl:definition>
         <skos-owl1-dl:hiddenLabel>Lake Temperature</skos-owl1-dl:hiddenLabel>
         <skos-owl1-dl:prefLabel>Lake Temperature</skos-owl1-dl:prefLabel>
@@ -9468,7 +9468,7 @@ peggym.109987.2</odo:ECSO_01000007>
     <!-- http://purl.dataone.org/odo/ECSO_00001234 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001234">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000519"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001543"/>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <odo:ECSO_01000003>Adapted from
 https://en.wikipedia.org/wiki/Velocity</odo:ECSO_01000003>
@@ -10056,7 +10056,7 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1107/3</odo:ECSO_010
     <!-- http://purl.dataone.org/odo/ECSO_00001523 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001523">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001226"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001526"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T23:53:47Z</dc:date>
         <rdfs:label xml:lang="en">sea surface temperature</rdfs:label>
@@ -10071,6 +10071,227 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1107/3</odo:ECSO_010
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T23:59:05Z</dc:date>
         <rdfs:label xml:lang="en">sonic temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001525 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001525">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001227"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-30T16:50:55Z</dc:date>
+        <rdfs:label xml:lang="en">freshwater temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001526 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001526">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001104"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-30T17:18:08Z</dc:date>
+        <rdfs:label xml:lang="en">surface temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001527 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001527">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001526"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-30T17:24:32Z</dc:date>
+        <rdfs:label xml:lang="en">ground surface temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001528 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001528">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001525"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-30T19:29:50Z</dc:date>
+        <rdfs:label xml:lang="en">river water temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001529 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001529">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001526"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-30T19:37:56Z</dc:date>
+        <rdfs:label xml:lang="en">lake surface temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001530 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001530">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001104"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-30T20:04:43Z</dc:date>
+        <rdfs:label xml:lang="en">lake sediment temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001531 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001531">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001226"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-30T20:16:41Z</dc:date>
+        <rdfs:label xml:lang="en">equilbrator seawater temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001532 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001532">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001104"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-30T20:16:52Z</dc:date>
+        <rdfs:label xml:lang="en">data logger panel temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001533 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001533">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001527"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-30T21:38:05Z</dc:date>
+        <rdfs:label xml:lang="en">soil surface temperature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001534 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001534">
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-30T21:42:37Z</dc:date>
+        <rdfs:label xml:lang="en">conductivity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001535 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001535">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001534"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-30T21:43:32Z</dc:date>
+        <rdfs:label xml:lang="en">water conductivity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001536 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001536">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001535"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-30T21:43:42Z</dc:date>
+        <rdfs:label xml:lang="en">freshwater conductivity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001537 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001537">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001536"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-30T21:43:52Z</dc:date>
+        <rdfs:label xml:lang="en">lake water conductivity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001538 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001538">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001534"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-30T21:55:55Z</dc:date>
+        <rdfs:label xml:lang="en">soil conductivity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001539 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001539">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001534"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-30T22:00:04Z</dc:date>
+        <rdfs:label xml:lang="en">ice core conductivity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001540 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001540">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001535"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-30T22:02:30Z</dc:date>
+        <rdfs:label xml:lang="en">seawater conductivity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001541 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001541">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001536"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-30T22:21:44Z</dc:date>
+        <rdfs:label xml:lang="en">river water conductivity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001543 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001543">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000519"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-30T23:14:43Z</dc:date>
+        <rdfs:label xml:lang="en">velocity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001544 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001544">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001543"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-30T23:15:58Z</dc:date>
+        <rdfs:label xml:lang="en">wind velocity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001546 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001546">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001543"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-30T23:23:30Z</dc:date>
+        <rdfs:label xml:lang="en">friction velocity</rdfs:label>
+        <skos-owl1-dl:altLabel xml:lang="en">shear velocity</skos-owl1-dl:altLabel>
     </owl:Class>
     
 
