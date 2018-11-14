@@ -8615,6 +8615,7 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/49/8</odo:ECSO_01000
 ark:/90135/q17s7kq7/1/mrt-eml.xml</odo:ECSO_01000007>
         <rdfs:label>Air Pressure</rdfs:label>
         <skos-owl1-dl:altLabel>Atmospheric Pressure</skos-owl1-dl:altLabel>
+        <skos-owl1-dl:altLabel xml:lang="en">barometric pressure</skos-owl1-dl:altLabel>
         <skos-owl1-dl:definition>Atmospheric pressure, sometimes also called barometric pressure, is the pressure exerted by the weight of air in the atmosphere of Earth (or that of another planet). In most circumstances atmospheric pressure is closely approximated by the hydrostatic pressure caused by the weight of air above the measurement point.</skos-owl1-dl:definition>
         <skos-owl1-dl:hiddenLabel>Air Pressure</skos-owl1-dl:hiddenLabel>
         <skos-owl1-dl:prefLabel>Air Pressure</skos-owl1-dl:prefLabel>
@@ -8625,7 +8626,7 @@ ark:/90135/q17s7kq7/1/mrt-eml.xml</odo:ECSO_01000007>
     <!-- http://purl.dataone.org/odo/ECSO_00001187 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001187">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001185"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001568"/>
         <odo:ECSO_01000001>Sara Lafia, http://orcid.org/0000-0002-5896-7295</odo:ECSO_01000001>
         <odo:ECSO_01000003>Adapted from
 https://en.wikipedia.org/wiki/Seawater</odo:ECSO_01000003>
@@ -10349,7 +10350,7 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1107/3</odo:ECSO_010
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001204"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-31T21:57:10Z</dc:date>
-        <rdfs:label xml:lang="en">bottom seawater depth</rdfs:label>
+        <rdfs:label xml:lang="en">seawater bottom depth</rdfs:label>
     </owl:Class>
     
 
@@ -10505,6 +10506,105 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1107/3</odo:ECSO_010
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-13T18:57:11Z</dc:date>
         <rdfs:label xml:lang="en">surface ground heat flux</rdfs:label>
         <skos-owl1-dl:altLabel xml:lang="en">surface soil heat flux</skos-owl1-dl:altLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001564 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001564">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001252"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-13T22:14:25Z</dc:date>
+        <rdfs:label xml:lang="en">altitude</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001565 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001565">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001564"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-13T22:14:39Z</dc:date>
+        <rdfs:label xml:lang="en">altitude above seafloor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001566 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001566">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001564"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-13T22:43:31Z</dc:date>
+        <rdfs:label xml:lang="en">altitude above mean sea level</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001567 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001567">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001252"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-13T22:51:42Z</dc:date>
+        <rdfs:label xml:lang="en">elevation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001568 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001568">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001185"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-13T23:44:20Z</dc:date>
+        <rdfs:label xml:lang="en">water pressure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001569 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001569">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001568"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-13T23:44:35Z</dc:date>
+        <rdfs:label xml:lang="en">lake water pressure</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001570 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001570">
+        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-14T00:31:52Z</dc:date>
+        <rdfs:label xml:lang="en">voltage</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001571 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001571">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001219"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-14T01:05:00Z</dc:date>
+        <rdfs:label xml:lang="en">latent heat turbulent flux</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001572 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001572">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001219"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-14T01:05:38Z</dc:date>
+        <rdfs:label xml:lang="en">latent heat storage flux</rdfs:label>
     </owl:Class>
     
 
