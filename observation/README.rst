@@ -13,7 +13,15 @@ Candidate ontologies include:
 * O&M lite models
 * Other domain-relevant ontologies
 	* SWEET and others?
-* Earth Science related Ontoloiges: https://docs.google.com/document/d/1YcRiiqNUVZlay3pDR6yQKuKHGe-Q5Mwynx_a0w8zkr0/edit?usp=sharing
+* Earth Science related Ontologies: https://docs.google.com/document/d/1YcRiiqNUVZlay3pDR6yQKuKHGe-Q5Mwynx_a0w8zkr0/edit?usp=sharing
+
+The Ecosystem Ontology (ECSO)
+-----------------------------
+ECSO expresses **'Measurement Types'** to describe measurements present in raw data.  It uses the OBOÉ observation and measurements design pattern (OBOE: https://github.com/NCEAS/oboe) to capture both the **'entity of interest'** and **'characteristic measured'**.  ECSO is intended to be used with terms in other OWL ontologies, including ENVO, PATO, CHEBI, BCO and PCO.
+
+ECSO is currently in development (as of 12/2018) and should not be used for semantic annotations yet.  This status is expected to change in the near future.  The latest edits to the ontology may be found in the 'ECSO8-add_non-carbon_measurements' branch.
+
+
 
 11JUL2018 MPS
 status of d1-ECSO in GitHub was that we had three branches-- master, run4 (the one to which the purl.dataone.org URL's resolved), and ArcticECSO (Elizabeth's branch?).  These all had outdated imports of ENVO and PATO that required refreshing, and had problems, both before and after getting new IMPORTs, with how these displayed in Protegé-- with many missing labels. 
