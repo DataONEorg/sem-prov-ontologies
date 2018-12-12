@@ -1,3 +1,5 @@
+Introduction
+-----------------------------
 This directory stores ontologies related to scientific observations.
 
 This is meant to be a collaborative space as we develop ontologies that meet
@@ -5,8 +7,8 @@ the annotation goals in phase 2 of the DataONE project. Partial support for thes
 efforts also provided through the NSF Scientific Observations Network, "SONet"
 project, NSF INTEROP #0753144.
 
-
 Candidate ontologies include:
+
 * OBOE extensions that include Entities, Measurements, Characteristics, Standards, and Protocols. E.g.,
 	* OBOE: http://ecoinformatics.org/oboe/oboe.1.1/oboe.owl
 	* OBOE-SBC: http://ecoinformatics.org/oboe-ext/sbclter.1.0/oboe-sbclter.owl
@@ -21,8 +23,8 @@ ECSO expresses **'Measurement Types'** to describe measurements present in raw d
 
 ECSO is currently in development (as of 12/2018) and should not be used for semantic annotations yet.  This status is expected to change in the near future.  The latest edits to the ontology may be found in the 'ECSO8-add_non-carbon_measurements' branch.
 
-
-
+Notes
+-----------------------------
 11JUL2018 MPS
 status of d1-ECSO in GitHub was that we had three branches-- master, run4 (the one to which the purl.dataone.org URL's resolved), and ArcticECSO (Elizabeth's branch?).  These all had outdated imports of ENVO and PATO that required refreshing, and had problems, both before and after getting new IMPORTs, with how these displayed in Protegé-- with many missing labels. 
 
