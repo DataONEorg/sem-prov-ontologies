@@ -2,7 +2,7 @@ The Ecosystem Ontology (ECSO)
 -----------------------------
 ECSO is currently in development (as of 12/2018) and should *not* be used for semantic annotations yet.  This status is expected to change in the near future.  The latest edits to the ontology may be found in the ``ECSO8.owl`` file within the **ECSO8-add_non-carbon_measurements** branch (https://github.com/DataONEorg/sem-prov-ontologies/tree/ECSO8-add_non-carbon_measurements/observation).
 
-ECSO expresses **'Measurement Types'** to describe measurements present in raw data.  It uses the OBOÉ observation and measurements design pattern (OBOE: https://github.com/NCEAS/oboe) to capture both the **'entity of interest'** and **'characteristic measured'**.  ECSO is intended to be used with terms in other OWL ontologies, including ENVO, PATO, CHEBI, BCO and PCO.
+ECSO expresses **'Measurement Types'** to describe measurements present in raw data.  It uses the OBOÉ observation and measurements design pattern (OBOE: https://github.com/NCEAS/oboe) to capture both the **'entity of interest'** and **'characteristic measured'**.  ECSO is intended to be used with terms in other OWL ontologies, including ENVO, PATO, CHEBI, BCO and PCO. It is currently focused on carbon and associated measurements.
 
 Introduction to this directory
 -----------------------------
@@ -31,4 +31,4 @@ status of d1-ECSO in GitHub was that we had three branches-- master, run4 (the o
 
 MPS started afresh with an almost complete import of the latest ENVO, a complete import of the latest UO, and a selective import of PATO (see the saved ONTOFOX files that were used to derive these imports).  Protegé 5.2 was then used to load up the ENVO_IMPORT from local filesystem with a DIRECT IMPORT, followed by PATO and UO, and then URL-based imports of OBOÉ and SKOS-DL. 
 
- Then careful examination of an earlier "d1-ECSO-generated.owl" file was used to copy terms from the d1-ECSO-generated.owl file into the growing "IMPORT"-based ontology.
+Then careful examination of an earlier "d1-ECSO-generated.owl" file was used to copy terms from the d1-ECSO-generated.owl file into the growing "IMPORT"-based ontology.
