@@ -1,4 +1,10 @@
-Introduction
+The Ecosystem Ontology (ECSO)
+-----------------------------
+ECSO is currently in development (as of 12/2018) and should *not* be used for semantic annotations yet.  This status is expected to change in the near future.  The latest edits to the ontology may be found in the ``ECSO8.owl`` file within the **ECSO8-add_non-carbon_measurements** branch (https://github.com/DataONEorg/sem-prov-ontologies/tree/ECSO8-add_non-carbon_measurements/observation).
+
+ECSO expresses **'Measurement Types'** to describe measurements present in raw data.  It uses the OBOÉ observation and measurements design pattern (OBOE: https://github.com/NCEAS/oboe) to capture both the **'entity of interest'** and **'characteristic measured'**.  ECSO is intended to be used with terms in other OWL ontologies, including ENVO, PATO, CHEBI, BCO and PCO.
+
+Introduction to this directory
 -----------------------------
 This directory stores ontologies related to scientific observations.
 
@@ -17,11 +23,6 @@ Candidate ontologies include:
 	* SWEET and others?
 * Earth Science related Ontologies: https://docs.google.com/document/d/1YcRiiqNUVZlay3pDR6yQKuKHGe-Q5Mwynx_a0w8zkr0/edit?usp=sharing
 
-The Ecosystem Ontology (ECSO)
------------------------------
-ECSO expresses **'Measurement Types'** to describe measurements present in raw data.  It uses the OBOÉ observation and measurements design pattern (OBOE: https://github.com/NCEAS/oboe) to capture both the **'entity of interest'** and **'characteristic measured'**.  ECSO is intended to be used with terms in other OWL ontologies, including ENVO, PATO, CHEBI, BCO and PCO.
-
-ECSO is currently in development (as of 12/2018) and should not be used for semantic annotations yet.  This status is expected to change in the near future.  The latest edits to the ontology may be found in the **ECSO8-add_non-carbon_measurements** branch.
 
 Notes
 -----------------------------
