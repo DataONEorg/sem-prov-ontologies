@@ -52,12 +52,6 @@
     
 
 
-    <!-- http://purl.dataone.org/odo/ECSO_01000008 -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.dataone.org/odo/ECSO_01000008"/>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/IAO_0000111 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0000111">
@@ -2448,9 +2442,9 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasuredCharacteristic"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001120"/>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Molality</odo:ECSO_01000003>
-        <oboInOwl:hasRelatedSynonym>molal concentration</oboInOwl:hasRelatedSynonym>
         <obo:IAO_0000115>Molality is a measure of the concentration of a solute in a solution in terms of amount of substance in a specified amount of mass of the solvent.</obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
+        <oboInOwl:hasRelatedSynonym>molal concentration</oboInOwl:hasRelatedSynonym>
         <rdfs:comment>Molality amount of substance of solute B in a solution divided by the mass of the solvent: Often favored because measurements of mass are more precise than measurements of volume.</rdfs:comment>
         <rdfs:label xml:lang="en">Molality</rdfs:label>
         <skos-owl1-dl:hiddenLabel>Molality</skos-owl1-dl:hiddenLabel>
@@ -2478,9 +2472,11 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasuredCharacteristic"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001115"/>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Volumetric_flow_rate</odo:ECSO_01000003>
-        <oboInOwl:hasRelatedSynonym>volume flow rate, rate of fluid flow or volume velocity</oboInOwl:hasRelatedSynonym>
         <obo:IAO_0000115>The volumetric flow rate is the volume of fluid which passes per unit time</obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
+        <oboInOwl:hasRelatedSynonym>rate of fluid flow</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>volume flow rate</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>volume velocity</oboInOwl:hasRelatedSynonym>
         <rdfs:comment xml:lang="en">Confirm: similar to volumetric flow rate?</rdfs:comment>
         <rdfs:label xml:lang="en">VolumetricRate</rdfs:label>
         <skos-owl1-dl:hiddenLabel>VolumetricRate</skos-owl1-dl:hiddenLabel>
@@ -2791,9 +2787,9 @@ synonyms: NPP</rdfs:comment>
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000030">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000343"/>
         <odo:ECSO_01000003>Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</odo:ECSO_01000003>
-        <oboInOwl:hasRelatedSynonym>leaves</oboInOwl:hasRelatedSynonym>
         <obo:IAO_0000115>The mass of carbon contained within flattened photosynthetic structures emerging laterally from a main axis or stem and possessing true vascular tissue.</obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
+        <oboInOwl:hasRelatedSynonym>leaves</oboInOwl:hasRelatedSynonym>
         <rdfs:comment>&apos;leaf carbon pool&apos; and &apos;leaf litter carbon pool&apos; also had associated with them the concepts &apos;leaves&apos; and &apos;leaf decomposition&apos; as related terms.  These latter two concepts have been removed at this time as too general (leaves) or too processual (leaf decomposition as opposed to &apos;leaf decompositional pool&apos;).  Might consider adding these back in as skos:alLabel.</rdfs:comment>
         <rdfs:label>Leaf Carbon Pool</rdfs:label>
         <skos-owl1-dl:hiddenLabel>Leaf Carbon Pool</skos-owl1-dl:hiddenLabel>
@@ -2845,10 +2841,10 @@ synonyms: NPP</rdfs:comment>
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000034">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000206"/>
         <odo:ECSO_01000003>Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</odo:ECSO_01000003>
-        <oboInOwl:hasRelatedSynonym>leaf decomposition</oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>leaves</oboInOwl:hasRelatedSynonym>
         <obo:IAO_0000115>The mass of carbon contained in the partly decomposed remains of plants on the surface and in the upper layers of the soil.</obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
+        <oboInOwl:hasRelatedSynonym>leaf decomposition</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>leaves</oboInOwl:hasRelatedSynonym>
         <rdfs:comment>synonyms from LTER searched terms (mob, 2015-03-24)</rdfs:comment>
         <rdfs:label>Leaf Litter Carbon Pool</rdfs:label>
         <skos-owl1-dl:hiddenLabel>Leaf Litter Carbon Pool</skos-owl1-dl:hiddenLabel>
@@ -4566,9 +4562,12 @@ NIES = National Institute for Environmental Studies, Japan</odo:ECSO_01000004>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000312"/>
         <owl:disjointWith rdf:resource="http://purl.dataone.org/odo/ECSO_00000306"/>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Unicellular_organism</odo:ECSO_01000003>
-        <oboInOwl:hasRelatedSynonym>unicellular, single-celled, single cell, monad</oboInOwl:hasRelatedSynonym>
         <obo:IAO_0000115>An organism that consists of only one cell</obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
+        <oboInOwl:hasRelatedSynonym>monad</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>single cell</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>single-celled</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>unicellular</oboInOwl:hasRelatedSynonym>
         <rdfs:label>Single-Celled Organism</rdfs:label>
     </owl:Class>
     
@@ -4720,9 +4719,9 @@ maybe others.
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000314"/>
         <odo:ECSO_01000004 xml:lang="en">Gas is one of the four fundamental states of matter. A pure gas may be made up of individual atoms (e.g. a noble gas like neon), elemental molecules made from one type of atom (e.g. oxygen), or compound molecules made from a variety of atoms (e.g. carbon dioxide). What distinguishes a gas from liquids and solids is the vast separation of the individual gas particles.</odo:ECSO_01000004>
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Gas</odo:ECSO_01000005>
-        <oboInOwl:hasRelatedSynonym>gaseous state</oboInOwl:hasRelatedSynonym>
         <obo:IAO_0000112>air is a gas mixture with various pure gases</obo:IAO_0000112>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
+        <oboInOwl:hasRelatedSynonym>gaseous state</oboInOwl:hasRelatedSynonym>
         <rdfs:label>Gas</rdfs:label>
         <skos-owl1-dl:hiddenLabel>Gas</skos-owl1-dl:hiddenLabel>
         <skos-owl1-dl:prefLabel>Gas</skos-owl1-dl:prefLabel>
@@ -4752,9 +4751,9 @@ maybe others.
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000314"/>
         <odo:ECSO_01000004 xml:lang="en">Solid is one of the four fundamental states of matter. It is characterized by structural rigidity and resistance to changes of shape or volume. Unlike a liquid, a solid object does not flow to take on the shape of its container, nor does it expand to fill the entire volume available to it like a gas does. The atoms in a solid are tightly bound to each other, either in a regular geometric lattice or irregularly.</odo:ECSO_01000004>
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Solid</odo:ECSO_01000005>
-        <oboInOwl:hasRelatedSynonym>solid state</oboInOwl:hasRelatedSynonym>
         <obo:IAO_0000112>crystalline solids include metals and ice</obo:IAO_0000112>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
+        <oboInOwl:hasRelatedSynonym>solid state</oboInOwl:hasRelatedSynonym>
         <rdfs:label>Solid</rdfs:label>
         <skos-owl1-dl:hiddenLabel>Solid</skos-owl1-dl:hiddenLabel>
         <skos-owl1-dl:prefLabel>Solid</skos-owl1-dl:prefLabel>
@@ -4782,9 +4781,10 @@ maybe others.
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000314"/>
         <odo:ECSO_01000004 xml:lang="en">The dissolution of gases, liquids, or solids into a liquid or other solvent is a process by which these original states become solutes (dissolved components), forming a solution of the gas, liquid, or solid in the original solvent. Solid solutions are the result of dissolution of one solid into another.</odo:ECSO_01000004>
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Dissolution_(chemistry)</odo:ECSO_01000005>
-        <oboInOwl:hasRelatedSynonym>dissolution, dissolved state</oboInOwl:hasRelatedSynonym>
         <obo:IAO_0000112>metal alloys are dissolved solid solutions</obo:IAO_0000112>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
+        <oboInOwl:hasRelatedSynonym>dissolution</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>dissolved state</oboInOwl:hasRelatedSynonym>
         <rdfs:label>Dissolved</rdfs:label>
         <skos-owl1-dl:hiddenLabel>Dissolved</skos-owl1-dl:hiddenLabel>
         <skos-owl1-dl:prefLabel>Dissolved</skos-owl1-dl:prefLabel>
@@ -4799,11 +4799,12 @@ maybe others.
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_16526</odo:ECSO_01000003>
         <odo:ECSO_01000004 xml:lang="en">Carbon dioxide is a colorless and odorless gas vital to life on Earth. This naturally occurring chemical compound is composed of a carbon atom covalently double bonded to two oxygen atoms. Carbon dioxide exists in Earth&apos;s atmosphere as a trace gas at a concentration of about 0.04 percent (400 ppm) by volume. Natural sources include volcanoes, hot springs and geysers, and it is freed from carbonate rocks by dissolution in water and acids. Because carbon dioxide is soluble in water, it occurs naturally in groundwater, rivers and lakes, in ice caps and glaciers and also in seawater. It is present in deposits of petroleum and natural gas.</odo:ECSO_01000004>
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Carbon_dioxide</odo:ECSO_01000005>
-        <oboInOwl:hasRelatedSynonym>carbonic anhydride, CO2</oboInOwl:hasRelatedSynonym>
         <obo:IAO_0000115>A one-carbon compound with formula CO2 in which the carbon is attached to each oxygen atom by a double bond. A colourless, odourless gas under normal conditions, it is produced during respiration by organisms that depend directly or indirectly on living or decaying plants for food, and taken up during photosynthesis (adapted from ChEBI).
 </obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1693-8322"/>
         <oboInOwl:hasAlternativeId>CHEBI:48829, CHEBI:3283, CHEBI:13282, CHEBI:13283, CHEBI:13285, CHEBI:13284, CHEBI:23011</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasRelatedSynonym>CO2</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>carbonic anhydride</oboInOwl:hasRelatedSynonym>
         <rdfs:label>Carbon Dioxide</rdfs:label>
         <skos-owl1-dl:altLabel>CO2</skos-owl1-dl:altLabel>
         <skos-owl1-dl:hiddenLabel>Carbon Dioxide</skos-owl1-dl:hiddenLabel>
@@ -4873,9 +4874,9 @@ maybe others.
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000337"/>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://purl.obolibrary.org/obo/CHEBI_17245</odo:ECSO_01000003>
         <odo:ECSO_01000004 xml:lang="en">Carbon monoxide is a colorless, odorless, and tasteless gas that is slightly less dense than air. It is toxic to hemoglobic animals (including humans) when encountered in concentrations above about 35 ppm, although it is also produced in normal animal metabolism in low quantities, and is thought to have some normal biological functions. In the atmosphere, it is spatially variable and short lived, having a role in the formation of ground-level ozone.</odo:ECSO_01000004>
-        <oboInOwl:hasRelatedSynonym>CO</oboInOwl:hasRelatedSynonym>
         <obo:IAO_0000115>A one-carbon compound in which the carbon is joined only to a single oxygen. It is a colourless, odourless, tasteless, toxic gas.</obo:IAO_0000115>
         <oboInOwl:hasAlternativeId xml:lang="en">CHEBI:41526, CHEBI:3282, CHEBI:13281, CHEBI:23013</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasRelatedSynonym>CO</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id xml:lang="en">CHEBI:17245</oboInOwl:id>
         <rdfs:label>Carbon Monoxide</rdfs:label>
         <skos-owl1-dl:hiddenLabel>Carbon Monoxide</skos-owl1-dl:hiddenLabel>
@@ -5244,9 +5245,9 @@ In transport phenomena (heat transfer, mass transfer and fluid dynamics), flux i
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000515">
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#Length"/>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.merriam-webster.com/dictionary/depth, accessed 2016-06-27</odo:ECSO_01000003>
-        <oboInOwl:hasRelatedSynonym>deepness</oboInOwl:hasRelatedSynonym>
         <obo:IAO_0000115>the perpendicular measurement downward from a surface</obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
+        <oboInOwl:hasRelatedSynonym>deepness</oboInOwl:hasRelatedSynonym>
         <rdfs:label>depth</rdfs:label>
         <skos-owl1-dl:hiddenLabel>depth</skos-owl1-dl:hiddenLabel>
     </owl:Class>
@@ -5646,13 +5647,15 @@ http://www.bbc.co.uk/bitesize/higher/biology/control_regulation/growth/revision/
 http://www.biology-online.org/dictionary/Growth
 Google (no ref to src material)</odo:ECSO_01000003>
         <odo:ECSO_01000005 xml:lang="en">WordNet</odo:ECSO_01000005>
-        <oboInOwl:hasRelatedSynonym>growing, maturation, development</oboInOwl:hasRelatedSynonym>
         <obo:IAO_0000112>the only growth was some salt grass</obo:IAO_0000112>
         <obo:IAO_0000115>The process of increasing in physical size, mass or number, gradually and irreversibly. the process of developing or maturing. the increase in number and spread of small or microscopic organisms.
 
 potential synonyms: development, maturation, growing, germination, sprouting; blooming, expansion, extension, development, progress, advance, advancement
 </obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1693-8322"/>
+        <oboInOwl:hasRelatedSynonym>development</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>growing</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>maturation</oboInOwl:hasRelatedSynonym>
         <rdfs:label>Growth</rdfs:label>
         <skos-owl1-dl:hiddenLabel>Growth</skos-owl1-dl:hiddenLabel>
     </owl:Class>
@@ -6138,9 +6141,9 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/75/1</obo:IAO_000011
         <rdfs:subClassOf rdf:resource="http://www.purl.dataone.org/odo/ECSO_00010075"/>
         <odo:ECSO_01000003>http://serc.carleton.edu/microbelife/research_methods/biogeochemical/organic_carbon.html</odo:ECSO_01000003>
         <odo:ECSO_01000006>DOC</odo:ECSO_01000006>
+        <obo:IAO_0000115>Dissolved organic carbon (DOC) is defined as the organic matter that is able to pass through a filter (filters generally range in size between 0.7 and 0.22 um). See particulate organic carbon.</obo:IAO_0000115>
         <oboInOwl:hasRelatedSynonym>DOM</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>dissolved organic material</oboInOwl:hasRelatedSynonym>
-        <obo:IAO_0000115>Dissolved organic carbon (DOC) is defined as the organic matter that is able to pass through a filter (filters generally range in size between 0.7 and 0.22 um). See particulate organic carbon.</obo:IAO_0000115>
         <rdfs:label>dissolved organic carbon</rdfs:label>
         <skos-owl1-dl:altLabel>DOC</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>DOM</skos-owl1-dl:altLabel>
@@ -6155,9 +6158,9 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/75/1</obo:IAO_000011
         <rdfs:subClassOf rdf:resource="http://www.purl.dataone.org/odo/ECSO_00010075"/>
         <odo:ECSO_01000003>http://www.ecologydictionary.org/PARTICULATE_ORGANIC_MATTER_(POM)</odo:ECSO_01000003>
         <odo:ECSO_01000006>POC</odo:ECSO_01000006>
+        <obo:IAO_0000115>Particulate organic carbon (POC), or particulate organic matter (POM) is that organic matter suspended in water, and that is not able to pass through a filter (filters generally range in size between 0.7 and 0.22 um). Usually plant or animal origin.</obo:IAO_0000115>
         <oboInOwl:hasRelatedSynonym>POM</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>particulate organic matter</oboInOwl:hasRelatedSynonym>
-        <obo:IAO_0000115>Particulate organic carbon (POC), or particulate organic matter (POM) is that organic matter suspended in water, and that is not able to pass through a filter (filters generally range in size between 0.7 and 0.22 um). Usually plant or animal origin.</obo:IAO_0000115>
         <rdfs:label>particulate organic carbon</rdfs:label>
     </owl:Class>
     
@@ -6181,9 +6184,10 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/75/1</obo:IAO_000011
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000574">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000281"/>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Soil_horizon#Layers</odo:ECSO_01000003>
-        <oboInOwl:hasRelatedSynonym>soil profile, soil profiles</oboInOwl:hasRelatedSynonym>
         <obo:IAO_0000115>A layer which is part of soil. Soil generally consists of visually and texturally distinct layers.</obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
+        <oboInOwl:hasRelatedSynonym>soil profile</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>soil profiles</oboInOwl:hasRelatedSynonym>
         <rdfs:comment>This is a grouping class, analogous to &apos;lake layer&apos; and &apos;marine layer&apos;</rdfs:comment>
         <rdfs:label>soil layer</rdfs:label>
         <skos-owl1-dl:hiddenLabel>soil layer</skos-owl1-dl:hiddenLabel>
@@ -7084,9 +7088,9 @@ https://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</odo:ECSO_01000003
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001103">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001100"/>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Sunlight</odo:ECSO_01000003>
-        <oboInOwl:hasRelatedSynonym>sunlight</oboInOwl:hasRelatedSynonym>
         <obo:IAO_0000115>Sunlight is a portion of the electromagnetic radiation given off by the Sun, in particular infrared, visible, and ultraviolet light.</obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
+        <oboInOwl:hasRelatedSynonym>sunlight</oboInOwl:hasRelatedSynonym>
         <rdfs:label>solar radiation</rdfs:label>
         <skos-owl1-dl:hiddenLabel>solar radiation</skos-owl1-dl:hiddenLabel>
     </owl:Class>
@@ -7251,9 +7255,10 @@ www.supersites.net.au/knb/metacat/tucker.17.15/html</obo:IAO_0000112>
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001112">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000082"/>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Water_content#Measurement</odo:ECSO_01000003>
-        <oboInOwl:hasRelatedSynonym>water content, moisture</oboInOwl:hasRelatedSynonym>
         <obo:IAO_0000115>Water content can be directly measured using a known volume of the material, and a drying oven. Volumetric water content is calculated via the volume of water and the masses of water sample before and after drying in the oven. For materials that change in volume with water content, such as coal, the water content is expressed in terms of the mass of water per unit mass of the moist specimen.</obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
+        <oboInOwl:hasRelatedSynonym>moisture</oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>water content</oboInOwl:hasRelatedSynonym>
         <rdfs:label>Volumetric Water Content Method</rdfs:label>
         <skos-owl1-dl:hiddenLabel>Volumetric Water Content Method</skos-owl1-dl:hiddenLabel>
     </owl:Class>
@@ -27446,9 +27451,9 @@ https://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</odo:ECSO_01000003
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_#PAR">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001103"/>
         <odo:ECSO_01000003 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/Photosynthetically_active_radiation</odo:ECSO_01000003>
-        <oboInOwl:hasRelatedSynonym>photosynthetically active radiation</oboInOwl:hasRelatedSynonym>
         <obo:IAO_0000115>Photosynthetically active radiation, often abbreviated PAR, designates the spectral range (wave band) of solar radiation from 400 to 700 nanometers that photosynthetic organisms are able to use in the process of photosynthesis. This spectral region corresponds more or less with the range of light visible to the human eye.</obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
+        <oboInOwl:hasRelatedSynonym>photosynthetically active radiation</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">PAR</rdfs:label>
         <skos-owl1-dl:hiddenLabel>PAR</skos-owl1-dl:hiddenLabel>
     </owl:Class>
@@ -27992,10 +27997,10 @@ between them during the freezing of water.</obo:IAO_0000115>
 
     <owl:Class rdf:about="http://www.purl.dataone.org/odo/ECSO_00010104">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000281"/>
-        <oboInOwl:hasRelatedSynonym>aquiclude</oboInOwl:hasRelatedSynonym>
         <obo:IAO_0000115>a bed of low permeability along an aquifer</obo:IAO_0000115>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Aquifer</obo:IAO_0000119>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-8622-9698</dc:creator>
+        <oboInOwl:hasRelatedSynonym>aquiclude</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">aquitard</rdfs:label>
     </owl:Class>
     
