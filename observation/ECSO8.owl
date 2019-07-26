@@ -344,6 +344,13 @@
     
 
 
+    <!-- http://www.w3.org/2004/02/skos/core#hiddenLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#hiddenLabel">
+         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#label"/>
+    </owl:AnnotationProperty>   
+
+
     <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
@@ -355,12 +362,6 @@
     <!-- http://www.w3.org/TR/skos-reference/skos-owl1-dl#altLabel -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/TR/skos-reference/skos-owl1-dl#altLabel"/>
-    
-
-
-    <!-- http://www.w3.org/TR/skos-reference/skos-owl1-dl#hiddenLabel -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/TR/skos-reference/skos-owl1-dl#hiddenLabel"/>
     
 
 
@@ -2368,7 +2369,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000551"/>
         <rdfs:comment xml:lang="en">Confirm: how is this different from ArealDensity?</rdfs:comment>
         <rdfs:label xml:lang="en">ArealMassDensity</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>ArealMassDensity</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>ArealMassDensity</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -2382,7 +2383,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:comment>Confirm: to follow the pattern, &apos;length&apos; could be a subclass and the parent class (OBOE)  more general (&quot;linear&quot;). Is this justified? or necessary?</rdfs:comment>
         <rdfs:label xml:lang="en">Length</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Length</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Length</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -2395,7 +2396,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <obo:IAO_0000119>WordNet</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label xml:lang="en">Mass</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Mass</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Mass</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -2410,7 +2411,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <oboInOwl:hasDbXref rdf:resource="http://purl.dataone.org/odo/ECSO8.owl"/>
         <rdfs:label xml:lang="en">MassFlux</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>MassFlux</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>MassFlux</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -2422,7 +2423,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001120"/>
         <rdfs:comment xml:lang="en">Confirm: meaning of term</rdfs:comment>
         <rdfs:label xml:lang="en">MassSpecificCount</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>MassSpecificCount</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>MassSpecificCount</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -2438,7 +2439,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <oboInOwl:hasRelatedSynonym>molal concentration</oboInOwl:hasRelatedSynonym>
         <rdfs:comment>Molality amount of substance of solute B in a solution divided by the mass of the solvent: Often favored because measurements of mass are more precise than measurements of volume.</rdfs:comment>
         <rdfs:label xml:lang="en">Molality</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Molality</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Molality</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -2452,7 +2453,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Speed</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label xml:lang="en">Speed</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Speed</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Speed</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -2470,7 +2471,7 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <oboInOwl:hasRelatedSynonym>volume velocity</oboInOwl:hasRelatedSynonym>
         <rdfs:comment xml:lang="en">Confirm: similar to volumetric flow rate?</rdfs:comment>
         <rdfs:label xml:lang="en">VolumetricRate</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>VolumetricRate</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>VolumetricRate</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -2523,8 +2524,8 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <obo:IAO_0000119>&quot;carbon cycle.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Feb. 2015 http-www.thefreedictionary.com/carbon+cycle</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
         <rdfs:label>Carbon Cycle Component</rdfs:label>
+        <skos:hiddenLabel>Carbon Cycle Component</skos:hiddenLabel>
         <skos:prefLabel>Carbon Cycle Component</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Carbon Cycle Component</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -2544,8 +2545,8 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
         <rdfs:label>Dissolved Organic Carbon Flux</rdfs:label>
         <rdfs:seeAlso>DOC flux</rdfs:seeAlso>
+        <skos:hiddenLabel>Dissolved Organic Carbon Flux</skos:hiddenLabel>
         <skos:prefLabel>Dissolved Organic Carbon Flux</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Dissolved Organic Carbon Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -2572,9 +2573,9 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
         <dc:description>Fire Carbon Flux is a measure of carbon released into the atmosphere due to fire (MPS, 2015)</dc:description>
         <rdfs:label>Fire Carbon Flux</rdfs:label>
+        <skos:hiddenLabel>Fire Carbon Flux</skos:hiddenLabel>
         <skos:prefLabel>Fire Carbon Flux</skos:prefLabel>
         <skos-owl1-dl:altLabel>Fire Emissions</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Fire Carbon Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -2594,10 +2595,10 @@ Each of these 3 primitives can be composed to yield a cross-product of different
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
         <rdfs:label>Net Ecosystem Exchange Carbon Flux</rdfs:label>
         <rdfs:seeAlso>NEE</rdfs:seeAlso>
+        <skos:hiddenLabel>Net Ecosystem Exchange Carbon Flux</skos:hiddenLabel>
         <skos:prefLabel>Net Ecosystem Exchange Carbon Flux</skos:prefLabel>
         <skos-owl1-dl:altLabel>NEE</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>Net Ecosystem Exchange</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Net Ecosystem Exchange Carbon Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -2614,11 +2615,11 @@ Each of these 3 primitives can be composed to yield a cross-product of different
 
 For most purposes (including this one) the two can be the same. It&apos;s most practical to measure production over a given time interval and area (or volume), and that amounts to an areal (or volumetric) rate.</dc:description>
         <rdfs:label>Primary Production Carbon Flux</rdfs:label>
+        <skos:hiddenLabel>Primary Production Carbon Flux</skos:hiddenLabel>
         <skos:prefLabel>Primary Production Carbon Flux</skos:prefLabel>
         <skos-owl1-dl:altLabel>Primary production</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>Primary productivity</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>primary productivity</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Primary Production Carbon Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -2632,10 +2633,10 @@ For most purposes (including this one) the two can be the same. It&apos;s most p
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
         <dc:description>CO2 produced by organisms and emitted to the environment per unit ground or water area and time. Equivalent to the sum of autotrophic and heterotrophic respiration.</dc:description>
         <rdfs:label>Respiration Carbon Flux</rdfs:label>
+        <skos:hiddenLabel>Respiration Carbon Flux</skos:hiddenLabel>
         <skos:prefLabel>Respiration Carbon Flux</skos:prefLabel>
         <skos-owl1-dl:altLabel>Respiration</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>Total Respiration</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Respiration Carbon Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -2649,9 +2650,9 @@ For most purposes (including this one) the two can be the same. It&apos;s most p
         <obo:IAO_0000119>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
         <rdfs:label>Autotrophic Respiration Carbon Flux</rdfs:label>
+        <skos:hiddenLabel>Autotrophic Respiration Carbon Flux</skos:hiddenLabel>
         <skos:prefLabel>Autotrophic Respiration Carbon Flux</skos:prefLabel>
         <skos-owl1-dl:altLabel>Autotrophic Respiration</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Autotrophic Respiration Carbon Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -2664,9 +2665,9 @@ For most purposes (including this one) the two can be the same. It&apos;s most p
         <obo:IAO_0000119>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
         <rdfs:label>Heterotrophic Respiration Carbon Flux</rdfs:label>
+        <skos:hiddenLabel>Heterotrophic Respiration Carbon Flux</skos:hiddenLabel>
         <skos:prefLabel>Heterotrophic Respiration Carbon Flux</skos:prefLabel>
         <skos-owl1-dl:altLabel>Heterotrophic Respiration</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Heterotrophic Respiration Carbon Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -2681,12 +2682,12 @@ For most purposes (including this one) the two can be the same. It&apos;s most p
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
         <rdfs:comment>Primary production before the autotrophs&apos; own respiration is subtracted. Also called photosynthetic rate, or carbon fixation rate.</rdfs:comment>
         <rdfs:label>Gross Primary Production Carbon Flux</rdfs:label>
+        <skos:hiddenLabel>Gross Primary Production Carbon Flux</skos:hiddenLabel>
         <skos:prefLabel>Gross Primary Production Carbon Flux</skos:prefLabel>
         <skos-owl1-dl:altLabel>GPP</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>Gross Primary Production</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>Gross Primary Productivity</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>Gross primary productivity</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Gross Primary Production Carbon Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -2703,12 +2704,12 @@ For most purposes (including this one) the two can be the same. It&apos;s most p
 
 synonyms: NPP</rdfs:comment>
         <rdfs:label>Net Primary Production Carbon Flux</rdfs:label>
+        <skos:hiddenLabel>Net Primary Production Carbon Flux</skos:hiddenLabel>
         <skos:prefLabel>Net Primary Production Carbon Flux</skos:prefLabel>
         <skos-owl1-dl:altLabel>NPP</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>Net Primary Production</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>Net Primary Productivity</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>Net primary productivity</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Net Primary Production Carbon Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -2733,9 +2734,9 @@ synonyms: NPP</rdfs:comment>
 (can these be moles? can they just be biomass?)
 {contributor, citation unkknown, questions are magaret&apos;s}</rdfs:comment>
         <rdfs:label>Carbon Pool</rdfs:label>
+        <skos:hiddenLabel>Carbon Pool</skos:hiddenLabel>
         <skos:prefLabel>Carbon Pool</skos:prefLabel>
         <skos-owl1-dl:altLabel>Name of Each Carbon Pool</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Carbon Pool</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -2749,8 +2750,8 @@ synonyms: NPP</rdfs:comment>
         <obo:IAO_0000119>&quot;soil.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Feb. 2015 http-www.thefreedictionary.com/soil</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
         <rdfs:label>Soil Carbon Pool</rdfs:label>
+        <skos:hiddenLabel>Soil Carbon Pool</skos:hiddenLabel>
         <skos-owl1-dl:altLabel>Total Soil Carbon</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Soil Carbon Pool</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -2763,7 +2764,7 @@ synonyms: NPP</rdfs:comment>
         <obo:IAO_0000119>Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
         <rdfs:label>Plankton Carbon Pool</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Plankton Carbon Pool</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Plankton Carbon Pool</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -2778,7 +2779,7 @@ synonyms: NPP</rdfs:comment>
         <oboInOwl:hasRelatedSynonym>leaves</oboInOwl:hasRelatedSynonym>
         <rdfs:comment>&apos;leaf carbon pool&apos; and &apos;leaf litter carbon pool&apos; also had associated with them the concepts &apos;leaves&apos; and &apos;leaf decomposition&apos; as related terms.  These latter two concepts have been removed at this time as too general (leaves) or too processual (leaf decomposition as opposed to &apos;leaf decompositional pool&apos;).  Might consider adding these back in as skos:alLabel.</rdfs:comment>
         <rdfs:label>Leaf Carbon Pool</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Leaf Carbon Pool</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Leaf Carbon Pool</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -2791,7 +2792,7 @@ synonyms: NPP</rdfs:comment>
         <obo:IAO_0000119>Purves, W.K. et al. Life, the science of biology. Sinauer Associates, Inc. 5th Edition. 1998.</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
         <rdfs:label>Benthic Algae Carbon Pool</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Benthic Algae Carbon Pool</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Benthic Algae Carbon Pool</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -2804,7 +2805,7 @@ synonyms: NPP</rdfs:comment>
         <obo:IAO_0000119>&quot;grass.&quot; Collins English Dictionary – Complete and Unabridged. 1991, 1994, 1998, 2000, 2003. HarperCollins Publishers 24 Feb. 2015 http-www.thefreedictionary.com/grass</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
         <rdfs:label>Grass Carbon Pool</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Grass Carbon Pool</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Grass Carbon Pool</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -2817,7 +2818,7 @@ synonyms: NPP</rdfs:comment>
         <obo:IAO_0000119>&quot;wood.&quot; American Heritage® Dictionary of the English Language, Fifth Edition. 2011. Houghton Mifflin Harcourt Publishing Company 24 Feb. 2015 http-www.thefreedictionary.com/wood</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
         <rdfs:label>Wood Carbon Pool</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Wood Carbon Pool</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Wood Carbon Pool</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -2833,7 +2834,7 @@ synonyms: NPP</rdfs:comment>
         <oboInOwl:hasRelatedSynonym>leaves</oboInOwl:hasRelatedSynonym>
         <rdfs:comment>synonyms from LTER searched terms (mob, 2015-03-24)</rdfs:comment>
         <rdfs:label>Leaf Litter Carbon Pool</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Leaf Litter Carbon Pool</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Leaf Litter Carbon Pool</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -2857,7 +2858,7 @@ synonyms: NPP</rdfs:comment>
         <obo:IAO_0000119>https://serc.carleton.edu/microbelife/research_methods/biogeochemical/organic_carbon.html</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0001-8622-9698"/>
         <rdfs:label>Dissolved Organic Carbon Pool</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Dissolved Organic Carbon Pool</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Dissolved Organic Carbon Pool</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -2870,13 +2871,13 @@ synonyms: NPP</rdfs:comment>
         <obo:IAO_0000119>Chapin, F.J. et al. Reconciling Carbon-cycle Concepts, Terminology, and Methods. Ecosystems. V 9 I 7. pp. 1041-1050. 2006.  DOI: 10.1007/s10021-005-0105-7</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
         <rdfs:label>Annual Net Primary Productivity Flux</rdfs:label>
+        <skos:hiddenLabel>Annual Net Primary Productivity Flux</skos:hiddenLabel>
         <skos:prefLabel>Annual Net Primary Productivity Flux</skos:prefLabel>
         <skos-owl1-dl:altLabel>ANPP</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>Annual NPP</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>Annual Net Primary Production</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>Annual Net Primary Productivity</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>anpp</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Annual Net Primary Productivity Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -2897,8 +2898,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>Biomass is organic matter derived from living organisms.</dc:description>
         <rdfs:label>Total_Living_Biomass_MOV</rdfs:label>
+        <skos:hiddenLabel>Total_Living_Biomass_MOV</skos:hiddenLabel>
         <skos:prefLabel>Total Living Biomass MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Total_Living_Biomass_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -2925,8 +2926,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>Outgoing Longwave Radiation (OLR) is the energy radiating from the Earth as infrared radiation at low energy to Space. OLR is electromagnetic radiation emitted from Earth and its atmosphere out to space in the form of thermal radiation. The flux of energy transported by outgoing longwave radiation is measured in W/m².</dc:description>
         <rdfs:label>Net_Longwave_Radiation_MOV</rdfs:label>
+        <skos:hiddenLabel>Net_Longwave_Radiation_MOV</skos:hiddenLabel>
         <skos:prefLabel>Net Longwave Radiation MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Net_Longwave_Radiation_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -2947,8 +2948,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>Water content or moisture content is the quantity of water contained in a material.</dc:description>
         <rdfs:label>Total_Soil_Wetness_MOV</rdfs:label>
+        <skos:hiddenLabel>Total_Soil_Wetness_MOV</skos:hiddenLabel>
         <skos:prefLabel>Total Soil Wetness MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Total_Soil_Wetness_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -2969,9 +2970,9 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>Carbon dioxide is a greenhouse gas, absorbing and emitting infrared radiation at its two infrared-active vibrational frequencies. This process causes carbon dioxide to warm the surface and lower atmosphere, while cooling the upper atmosphere.</dc:description>
         <rdfs:label>Near_Surface_CO2_Concentration_MOV</rdfs:label>
+        <skos:hiddenLabel>Near_Surface_CO2_Concentration_MOV</skos:hiddenLabel>
         <skos:prefLabel>Near Surface CO2 Concentration MOV</skos:prefLabel>
         <skos-owl1-dl:altLabel>Near Surface Carbon Dioxide Concentration MOV</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Near_Surface_CO2_Concentration_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -2992,8 +2993,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>Ecosystem respiration is the sum of all respiration occurring by the living organisms in a specific ecosystem.</dc:description>
         <rdfs:label>Total_Respiration_MOV</rdfs:label>
+        <skos:hiddenLabel>Total_Respiration_MOV</skos:hiddenLabel>
         <skos:prefLabel>Total Respiration MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Total_Respiration_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3020,9 +3021,9 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>Photosynthetically active radiation, often abbreviated PAR, designates the spectral range (wave band) of solar radiation from 400 to 700 nanometers that photosynthetic organisms are able to use in the process of photosynthesis.</dc:description>
         <rdfs:label>Absorbed_Fraction_Incoming_PAR_MOV</rdfs:label>
+        <skos:hiddenLabel>Absorbed_Fraction_Incoming_PAR_MOV</skos:hiddenLabel>
         <skos:prefLabel>Absorbed Fraction Incoming PAR MOV</skos:prefLabel>
         <skos-owl1-dl:altLabel>Photosynthetically Active Radiation</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Absorbed_Fraction_Incoming_PAR_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3043,8 +3044,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>A temperature is an objective comparative measure of hot or cold. It is measured by a thermometer, which may work through the bulk behavior of a thermometric material, detection of thermal radiation, or particle kinetic energy.</dc:description>
         <rdfs:label>Near_Surface_Air_Temperature_MOV</rdfs:label>
+        <skos:hiddenLabel>Near_Surface_Air_Temperature_MOV</skos:hiddenLabel>
         <skos:prefLabel>Near Surface Air Temperature MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Near_Surface_Air_Temperature_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3077,8 +3078,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>Leaf area index is a dimensionless quantity that characterizes plant canopies. It is defined as the one-sided green leaf area per unit ground surface area (LAI = leaf area / ground area, m2 / m2) in broadleaf canopies.</dc:description>
         <rdfs:label>Leaf_Area_Index_MOV</rdfs:label>
+        <skos:hiddenLabel>Leaf_Area_Index_MOV</skos:hiddenLabel>
         <skos:prefLabel>Leaf Area Index MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Leaf_Area_Index_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3099,8 +3100,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>In atmospheric science, surface pressure is the atmospheric pressure at a location on Earth&apos;s surface. It is directly proportional to the mass of air over that location.</dc:description>
         <rdfs:label>Surface_Pressure_MOV</rdfs:label>
+        <skos:hiddenLabel>Surface_Pressure_MOV</skos:hiddenLabel>
         <skos:prefLabel>Surface Pressure MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Surface_Pressure_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3127,8 +3128,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>Water content or moisture content is the quantity of water contained in a material... Water content is expressed as a ratio, which can range from 0 (completely dry) to the value of the materials&apos; porosity at saturation. It can be given on a volumetric or mass (gravimetric) basis.</dc:description>
         <rdfs:label>Average_Layer_Soil_Moisture_MOV</rdfs:label>
+        <skos:hiddenLabel>Average_Layer_Soil_Moisture_MOV</skos:hiddenLabel>
         <skos:prefLabel>Average Layer Soil Moisture MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Average_Layer_Soil_Moisture_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3149,8 +3150,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>Soil temperature depends on the ratio of the energy absorbed to that lost. Soil has a temperature range between -20 to 60 °C. Soil temperature regulates seed germination, plant and root growth and the availability of nutrients.</dc:description>
         <rdfs:label>Average_Layer_Soil_Temperature_MOV</rdfs:label>
+        <skos:hiddenLabel>Average_Layer_Soil_Temperature_MOV</skos:hiddenLabel>
         <skos:prefLabel>Average Layer Soil Temperature MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Average_Layer_Soil_Temperature_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3178,8 +3179,8 @@ synonyms: NPP</rdfs:comment>
         <dc:description>Surface runoff is the flow of water that occurs when excess stormwater, meltwater, or other sources flows over the earth&apos;s surface. This might occur because soil is saturated to full capacity, because rain arrives more quickly than soil can absorb it, or because impervious areas send their runoff to surrounding soil that cannot absorb all of it.</dc:description>
         <rdfs:label>Surface_Runoff_MOV</rdfs:label>
         <rdfs:seeAlso>overland flow</rdfs:seeAlso>
+        <skos:hiddenLabel>Surface_Runoff_MOV</skos:hiddenLabel>
         <skos:prefLabel>Surface Runoff MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Surface_Runoff_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3212,8 +3213,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>Soil is a mixture of minerals, organic matter, gases, liquids, and countless organisms that together support life on Earth. Soil is a natural body called the pedosphere.</dc:description>
         <rdfs:label>Soil_Layer_Top_Depth_MOV</rdfs:label>
+        <skos:hiddenLabel>Soil_Layer_Top_Depth_MOV</skos:hiddenLabel>
         <skos:prefLabel>Soil Layer Top Depth MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Soil_Layer_Top_Depth_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3234,8 +3235,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>Wind is the flow of gases on a large scale. On the surface of the Earth, wind consists of the bulk movement of air. Wind is caused by differences in the atmospheric pressure.</dc:description>
         <rdfs:label>Near_Surface_Module_Of_The_Wind_MOV</rdfs:label>
+        <skos:hiddenLabel>Near_Surface_Module_Of_The_Wind_MOV</skos:hiddenLabel>
         <skos:prefLabel>Near Surface Module of the Wind MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Near_Surface_Module_Of_The_Wind_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3260,8 +3261,8 @@ synonyms: NPP</rdfs:comment>
         <obo:IAO_0000119>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <rdfs:label>Size_Of_Each_Carbon_Pool_MOV</rdfs:label>
+        <skos:hiddenLabel>Size_Of_Each_Carbon_Pool_MOV</skos:hiddenLabel>
         <skos:prefLabel>Size of Each Carbon Pool MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Size_Of_Each_Carbon_Pool_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3294,8 +3295,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>Soil is a mixture of minerals, organic matter, gases, liquids, and countless organisms that together support life on Earth. Soil is a natural body called the pedosphere.</dc:description>
         <rdfs:label>Soil_Layer_Node_Depth_MOV</rdfs:label>
+        <skos:hiddenLabel>Soil_Layer_Node_Depth_MOV</skos:hiddenLabel>
         <skos:prefLabel>Soil Layer Node Depth MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Soil_Layer_Node_Depth_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3320,8 +3321,8 @@ synonyms: NPP</rdfs:comment>
         <obo:IAO_0000119>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <rdfs:label>Snow_Water_Equivalent_MOV</rdfs:label>
+        <skos:hiddenLabel>Snow_Water_Equivalent_MOV</skos:hiddenLabel>
         <skos:prefLabel>Snow Water Equivalent MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Snow_Water_Equivalent_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3342,8 +3343,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>Soil carbon includes both inorganic carbon as carbonate minerals, and as soil organic matter.</dc:description>
         <rdfs:label>Total_Soil_Carbon_MOV</rdfs:label>
+        <skos:hiddenLabel>Total_Soil_Carbon_MOV</skos:hiddenLabel>
         <skos:prefLabel>Total Soil Carbon MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Total_Soil_Carbon_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3383,8 +3384,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>An autotroph or producer, is an organism that produces complex organic compounds (such as carbohydrates, fats, and proteins) from simple substances present in its surroundings, generally using energy from light (photosynthesis) or inorganic chemical reactions (chemosynthesis).</dc:description>
         <rdfs:label>Autotrophic_Respiration_MOV</rdfs:label>
+        <skos:hiddenLabel>Autotrophic_Respiration_MOV</skos:hiddenLabel>
         <skos:prefLabel>Autotrophic Respiration MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Autotrophic_Respiration_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3411,8 +3412,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>Rain is liquid water in the form of droplets that have condensed from atmospheric water vapor and then precipitated, heavy enough to fall under gravity. Rain is a major component of the water cycle and is responsible for depositing most of the fresh water on the Earth.</dc:description>
         <rdfs:label>Rainfall_Rate_MOV</rdfs:label>
+        <skos:hiddenLabel>Rainfall_Rate_MOV</skos:hiddenLabel>
         <skos:prefLabel>Rainfall Rate MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Rainfall_Rate_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3439,9 +3440,9 @@ synonyms: NPP</rdfs:comment>
         <dc:contributor>https://orcid.org/0000-0002-8087-1775</dc:contributor>
         <dc:description>Albedo or reflection coefficient, derived from Latin albedo &quot;whiteness&quot; (or reflected sunlight) in turn from albus &quot;white&quot;, is the diffuse reflectivity or reflecting power of a surface.</dc:description>
         <rdfs:label>Longwave_Albedo_MOV</rdfs:label>
+        <skos:hiddenLabel>Longwave_Albedo_MOV</skos:hiddenLabel>
         <skos:prefLabel>Longwave Albedo MOV</skos:prefLabel>
         <skos-owl1-dl:altLabel>albedo</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Longwave_Albedo_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3468,8 +3469,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1693-8322"/>
         <dc:description>Gross Primary productivity is the rate at which photosynthesis or chemosynthesis occurs.</dc:description>
         <rdfs:label>Gross_Primary_Productivity_MOV</rdfs:label>
+        <skos:hiddenLabel>Gross_Primary_Productivity_MOV</skos:hiddenLabel>
         <skos:prefLabel>Gross Primary Productivity MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Gross_Primary_Productivity_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3488,8 +3489,8 @@ synonyms: NPP</rdfs:comment>
         <obo:IAO_0000119>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <rdfs:label>Name_Of_Each_Carbon_Pool_MOV</rdfs:label>
+        <skos:hiddenLabel>Name_Of_Each_Carbon_Pool_MOV</skos:hiddenLabel>
         <skos:prefLabel>Name of Each Carbon Pool MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Name_Of_Each_Carbon_Pool_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3522,8 +3523,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>Soil is a mixture of minerals, organic matter, gases, liquids, and countless organisms that together support life on Earth. Soil is a natural body called the pedosphere.</dc:description>
         <rdfs:label>Soil_Layer_Bottom_Depth_MOV</rdfs:label>
+        <skos:hiddenLabel>Soil_Layer_Bottom_Depth_MOV</skos:hiddenLabel>
         <skos:prefLabel>Soil Layer Bottom Depth MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Soil_Layer_Bottom_Depth_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3550,8 +3551,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>A heterotroph is an organism that cannot fix carbon and uses organic carbon for growth. Ninety-five percent or more of all types of living organisms are heterotrophic, including all animals and fungi and most bacteria and protists.</dc:description>
         <rdfs:label>Heterotrophic_Respiration_MOV</rdfs:label>
+        <skos:hiddenLabel>Heterotrophic_Respiration_MOV</skos:hiddenLabel>
         <skos:prefLabel>Heterotrophic Respiration MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Heterotrophic_Respiration_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3578,9 +3579,9 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>In environments containing permafrost, the active layer is the top layer of soil that thaws during the summer and freezes again during the autumn.</dc:description>
         <rdfs:label>Active_Layer_Thickness_MOV</rdfs:label>
+        <skos:hiddenLabel>Active_Layer_Thickness_MOV</skos:hiddenLabel>
         <skos:prefLabel>Active Layer Thickness MOV</skos:prefLabel>
         <skos-owl1-dl:altLabel>Thaw Depth MOV</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Active_Layer_Thickness_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3607,8 +3608,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>Shortwave radiation (SW) is radiant energy with wavelengths in the visible (VIS), near-ultraviolet (UV), and near-infrared (NIR) spectra.</dc:description>
         <rdfs:label>Net_Shortwave_Radiation_MOV</rdfs:label>
+        <skos:hiddenLabel>Net_Shortwave_Radiation_MOV</skos:hiddenLabel>
         <skos:prefLabel>Net Shortwave Radiation MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Net_Shortwave_Radiation_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3641,8 +3642,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>Snow is precipitation in the form of flakes of crystalline water ice that falls from clouds. Since snow is composed of small ice particles, it is a granular material.</dc:description>
         <rdfs:label>Total_Snow_Depth_MOV</rdfs:label>
+        <skos:hiddenLabel>Total_Snow_Depth_MOV</skos:hiddenLabel>
         <skos:prefLabel>Total Snow Depth MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Total_Snow_Depth_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3669,8 +3670,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>A wildfire or wildland fire is an uncontrolled fire in an area of combustible vegetation that occurs in the countryside (i.e., not in an urban area).</dc:description>
         <rdfs:label>Fire_Emissions_MOV</rdfs:label>
+        <skos:hiddenLabel>Fire_Emissions_MOV</skos:hiddenLabel>
         <skos:prefLabel>Fire Emissions MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Fire_Emissions_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3695,8 +3696,8 @@ synonyms: NPP</rdfs:comment>
         <obo:IAO_0000119>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <rdfs:label>Surface_Incident_Longwave_Radiation_MOV</rdfs:label>
+        <skos:hiddenLabel>Surface_Incident_Longwave_Radiation_MOV</skos:hiddenLabel>
         <skos:prefLabel>Surface Incident Longwave Radiation MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Surface_Incident_Longwave_Radiation_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3717,8 +3718,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>Biomass is organic matter derived from living, or recently living organisms. Biomass can be used as a source of energy and it most often refers to plants or plant-based materials which are not used for food or feed.</dc:description>
         <rdfs:label>Above_Ground_Woody_Biomass_MOV</rdfs:label>
+        <skos:hiddenLabel>Above_Ground_Woody_Biomass_MOV</skos:hiddenLabel>
         <skos:prefLabel>Above Ground Woody Biomass MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Above_Ground_Woody_Biomass_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3745,8 +3746,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>Water flows from areas where the water table is higher to areas where it is lower. This flow can be either surface runoff in rivers and streams, or subsurface runoff infiltrating rocks and soil. The amount of runoff reaching surface and groundwater can vary significantly, depending on rainfall, soil moisture, permeability, groundwater storage, evaporation, upstream use, and whether or not the ground is frozen. The movement of subsurface water is determined largely by the water gradient, type of substrate, and any barriers to flow.</dc:description>
         <rdfs:label>Subsurface_Runoff_MOV</rdfs:label>
+        <skos:hiddenLabel>Subsurface_Runoff_MOV</skos:hiddenLabel>
         <skos:prefLabel>Subsurface Runoff MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Subsurface_Runoff_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3773,8 +3774,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>Sensible heat is heat exchanged by a body or thermodynamic system that changes the temperature, and some macroscopic variables of the body, but leaves unchanged certain other macroscopic variables, such as volume or pressure.</dc:description>
         <rdfs:label>Sensible_Heat_MOV</rdfs:label>
+        <skos:hiddenLabel>Sensible_Heat_MOV</skos:hiddenLabel>
         <skos:prefLabel>Sensible Heat MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Sensible_Heat_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3807,8 +3808,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>Ecosystem respiration is the sum of all respiration occurring by the living organisms in a specific ecosystem.</dc:description>
         <rdfs:label>Net_Ecosystem_Exchange_MOV</rdfs:label>
+        <skos:hiddenLabel>Net_Ecosystem_Exchange_MOV</skos:hiddenLabel>
         <skos:prefLabel>Net Ecosystem Exchange MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Net_Ecosystem_Exchange_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3835,9 +3836,9 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>Albedo or reflection coefficient, derived from Latin albedo &quot;whiteness&quot; (or reflected sunlight) in turn from albus &quot;white&quot;, is the diffuse reflectivity or reflecting power of a surface.</dc:description>
         <rdfs:label>Shortwave_Albedo_MOV</rdfs:label>
+        <skos:hiddenLabel>Shortwave_Albedo_MOV</skos:hiddenLabel>
         <skos:prefLabel>Shortwave Albedo MOV</skos:prefLabel>
         <skos-owl1-dl:altLabel>albedo</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Shortwave_Albedo_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3862,8 +3863,8 @@ synonyms: NPP</rdfs:comment>
         <obo:IAO_0000119>http-nacp.ornl.gov/MsTMIP_variables.shtml, accessed 2015-03-25</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <rdfs:label>Surface_Incident_Shortwave_Radiation_MOV</rdfs:label>
+        <skos:hiddenLabel>Surface_Incident_Shortwave_Radiation_MOV</skos:hiddenLabel>
         <skos:prefLabel>Surface Incident Shortwave Radiation MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Surface_Incident_Shortwave_Radiation_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3890,8 +3891,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>Evaporation is a type of vaporization of a liquid that occurs from the surface of a liquid into a gaseous phase that is not saturated with the evaporating substance.</dc:description>
         <rdfs:label>Total_Evaporation_MOV</rdfs:label>
+        <skos:hiddenLabel>Total_Evaporation_MOV</skos:hiddenLabel>
         <skos:prefLabel>Total Evaporation MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Total_Evaporation_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3918,8 +3919,8 @@ synonyms: NPP</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>Latent heat is energy released or absorbed, by a body or a thermodynamic system, during a constant-temperature process that is specified in some way. An example is latent heat of fusion for a phase change, melting, at a specified temperature and pressure.</dc:description>
         <rdfs:label>Latent_Heat_MOV</rdfs:label>
+        <skos:hiddenLabel>Latent_Heat_MOV</skos:hiddenLabel>
         <skos:prefLabel>Latent Heat MOV</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Latent_Heat_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3931,8 +3932,8 @@ synonyms: NPP</rdfs:comment>
         <obo:IAO_0000115>strawman definition from margaret:
 a Field_Method is a method for determining a component of primary production that involves observations or measurements of the real world. A field method may have steps which could be considered &apos;modeling&apos; (such as development of an allometric model of tree growth based on height), but measurements &quot;in the field&quot; (eg, of trees) are always involved. compare to Modeled_Method.</obo:IAO_0000115>
         <rdfs:label>Field Method</rdfs:label>
+        <skos:hiddenLabel>Field Method</skos:hiddenLabel>
         <skos:prefLabel>Field Method</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Field Method</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3944,8 +3945,8 @@ a Field_Method is a method for determining a component of primary production tha
         <obo:IAO_0000115>strawman definition from Margaret
 a Modeled_Method (is Simulated_Method better?) uses only data obtained from some source. It does not directly measure any real phenomenon.</obo:IAO_0000115>
         <rdfs:label>Modeled Method</rdfs:label>
+        <skos:hiddenLabel>Modeled Method</skos:hiddenLabel>
         <skos:prefLabel>Modeled Method</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Modeled Method</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -3962,7 +3963,7 @@ a Modeled_Method (is Simulated_Method better?) uses only data obtained from some
 2) the growing season is sufficiently short or plant material is of such low quality that decomposition of biomass produced  can be ignored
 3) consumption of plants by herbivores is minimal (i.e., large grazers are absent and small vertebrates and invertebrates can be ignored).</dc:description>
         <rdfs:label>Peak Biomass Harvest Method</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Peak Biomass Harvest Method</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Peak Biomass Harvest Method</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -3982,7 +3983,7 @@ For CO2.... tbd</dc:description>
         <rdfs:label>Eddy Covariance Method</rdfs:label>
         <rdfs:seeAlso>flux tower</rdfs:seeAlso>
         <rdfs:seeAlso>gas flux</rdfs:seeAlso>
-        <skos-owl1-dl:hiddenLabel>Eddy Covariance Method</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Eddy Covariance Method</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -4012,7 +4013,7 @@ Dark bottle is respiration, probably total, eg, autotrophs + heterotrophs.
 So light + dark = GPP (or about as close as you can get with a field measurement, and assume that heterotrophs aren&apos;t respiring much.)</obo:IAO_0000115>
         <rdfs:label>Oxygen Evolution LightDark Method</rdfs:label>
         <rdfs:seeAlso>bottle method</rdfs:seeAlso>
-        <skos-owl1-dl:hiddenLabel>Oxygen Evolution LightDark Method</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Oxygen Evolution LightDark Method</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -4033,7 +4034,7 @@ So light + dark = GPP (or about as close as you can get with a field measurement
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
         <dc:description>an allometric method is usually accomplished with a combination of measurements that are tailored to the organism, e.g, size, growth rate, carbon content, plus some loss terms. SBC&apos;s dataset 21 has a good example of an allometric method for kelp.</dc:description>
         <rdfs:label>Allometric Method</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Allometric Method</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Allometric Method</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -4046,8 +4047,8 @@ So light + dark = GPP (or about as close as you can get with a field measurement
         <obo:IAO_0000119>Available from: https-www.researchgate.net/publication/233137060_Use_of_ground_and_LiDAR_data_to_model_the_NPP_of_a_Mediterranean_pine_forest [accessed Mar 25, 2015].</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1693-8322"/>
         <rdfs:label>LIDAR Method</rdfs:label>
+        <skos:hiddenLabel>LIDAR Method</skos:hiddenLabel>
         <skos-owl1-dl:altLabel>LIDAR</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>LIDAR Method</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -4061,7 +4062,7 @@ So light + dark = GPP (or about as close as you can get with a field measurement
         <obo:IAO_0000119>adapted from wikipedia, Simulation</obo:IAO_0000119>
         <dc:description>terrestrial biospheric models vary in complexity and the way in which they simulate canopy conductance (energy and water fluxes), simulate photosynthesis and respiration (carbon fluxes), allocate carbon between soil and above and belowground biomass (carbon pools), and model vegetation dynamics and disturbances; MsTMIP models formulate and parameterize energy, carbon, vegetation, and nitrogen process dynamics</dc:description>
         <rdfs:label>MsTMIP_Simulation</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>MsTMIP_Simulation</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>MsTMIP_Simulation</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -4348,9 +4349,9 @@ NIES = National Institute for Environmental Studies, Japan</dc:description>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
         <rdfs:label>Carbon Dioxide Diffusion Flux</rdfs:label>
         <rdfs:seeAlso>gas flux</rdfs:seeAlso>
+        <skos:hiddenLabel>Carbon Dioxide Diffusion Flux</skos:hiddenLabel>
         <skos:prefLabel>Carbon Dioxide Diffusion Flux</skos:prefLabel>
         <skos-owl1-dl:altLabel>CO2 Diffusion Flux</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Carbon Dioxide Diffusion Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -4374,7 +4375,7 @@ NIES = National Institute for Environmental Studies, Japan</dc:description>
         <obo:IAO_0000119>http://purl.obolibrary.org/obo/CHEBI_17544</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
         <rdfs:label>Bicarbonate Pool</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Bicarbonate Pool</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Bicarbonate Pool</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -4444,8 +4445,8 @@ NIES = National Institute for Environmental Studies, Japan</dc:description>
         <obo:IAO_0000119> http://purl.obolibrary.org/obo/CHEBI_16183</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
         <rdfs:label>Methane Pool</rdfs:label>
+        <skos:hiddenLabel>Methane Pool</skos:hiddenLabel>
         <skos-owl1-dl:altLabel>CH4 pool</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Methane Pool</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -4480,7 +4481,7 @@ NIES = National Institute for Environmental Studies, Japan</dc:description>
         <obo:IAO_0000119>https://orcid.org/0000-0002-1338-9436</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
         <rdfs:label>Atmospheric Carbon Dioxide Pool</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Atmospheric Carbon Dioxide Pool</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Atmospheric Carbon Dioxide Pool</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -4503,7 +4504,7 @@ NIES = National Institute for Environmental Studies, Japan</dc:description>
         <obo:IAO_0000119>https://orcid.org/0000-0002-1338-9436</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
         <rdfs:label>Dissolved Carbon Dioxide Pool</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Dissolved Carbon Dioxide Pool</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Dissolved Carbon Dioxide Pool</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -4522,7 +4523,7 @@ NIES = National Institute for Environmental Studies, Japan</dc:description>
         <obo:IAO_0000119>https://orcid.org/0000-0002-1338-9436</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
         <rdfs:label>CO2 Enrichment Method</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>CO2 Enrichment Method</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>CO2 Enrichment Method</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -4535,9 +4536,9 @@ NIES = National Institute for Environmental Studies, Japan</dc:description>
         <obo:IAO_0000119>https://orcid.org/0000-0002-1338-9436</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
         <rdfs:label>Aboveground Net Primary Production Carbon Flux</rdfs:label>
+        <skos:hiddenLabel>Aboveground Net Primary Production Carbon Flux</skos:hiddenLabel>
         <skos:prefLabel>Aboveground Net Primary Production Carbon Flux</skos:prefLabel>
         <skos-owl1-dl:altLabel>Aboveground NPP Carbon Flux</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Aboveground Net Primary Production Carbon Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -4597,7 +4598,7 @@ maybe others.
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1693-8322"/>
         <rdfs:comment>This class and all subclasses should be incorporated into ENVO.</rdfs:comment>
         <rdfs:label>Functional Level</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Functional Level</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Functional Level</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -4614,9 +4615,9 @@ maybe others.
         <dc:description>a system formed by the interaction of a community of organisms with their physical environment</dc:description>
         <rdfs:comment>This class should be incorporated into ENVO.</rdfs:comment>
         <rdfs:label>Ecosystem</rdfs:label>
+        <skos:hiddenLabel>Ecosystem</skos:hiddenLabel>
         <skos:prefLabel>Ecosystem</skos:prefLabel>
         <skos-owl1-dl:altLabel>Ecological system</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Ecosystem</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -4630,7 +4631,7 @@ maybe others.
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
         <rdfs:comment>This class should be incorporated into ENVO.</rdfs:comment>
         <rdfs:label>Community</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Community</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Community</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -4647,8 +4648,8 @@ maybe others.
         <dc:description>a group of organisms of the same species inhabiting a given area</dc:description>
         <rdfs:comment>This class should be incorporated into ENVO.</rdfs:comment>
         <rdfs:label>Population</rdfs:label>
+        <skos:hiddenLabel>Population</skos:hiddenLabel>
         <skos:prefLabel>Population</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Population</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -4663,9 +4664,9 @@ maybe others.
         <rdfs:comment>This class should be incorporated into ENVO.</rdfs:comment>
         <rdfs:label>Organism</rdfs:label>
         <rdfs:seeAlso>Animals, plants, fungi; Flora, fauna</rdfs:seeAlso>
+        <skos:hiddenLabel>Organism</skos:hiddenLabel>
         <skos:prefLabel>Organism</skos:prefLabel>
         <skos-owl1-dl:altLabel>Living creatures</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Organism</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -4679,8 +4680,8 @@ maybe others.
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1693-8322"/>
         <rdfs:comment>This class should be incorporated into ENVO.</rdfs:comment>
         <rdfs:label>Species</rdfs:label>
+        <skos:hiddenLabel>Species</skos:hiddenLabel>
         <skos:prefLabel>Species</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Species</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -4693,8 +4694,8 @@ maybe others.
         <dc:description>A state of matter is one of the distinct forms that matter takes on. Four states of matter are observable in everyday life: solid, liquid, gas, and plasma. Historically, the distinction is made based on qualitative differences in properties.</dc:description>
         <rdfs:label>Physical State</rdfs:label>
         <rdfs:seeAlso xml:lang="en">phase, state, state of matter</rdfs:seeAlso>
+        <skos:hiddenLabel>Physical State</skos:hiddenLabel>
         <skos:prefLabel>Physical State</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Physical State</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -4709,8 +4710,8 @@ maybe others.
         <dc:description>Gas is one of the four fundamental states of matter. A pure gas may be made up of individual atoms (e.g. a noble gas like neon), elemental molecules made from one type of atom (e.g. oxygen), or compound molecules made from a variety of atoms (e.g. carbon dioxide). What distinguishes a gas from liquids and solids is the vast separation of the individual gas particles.</dc:description>
         <oboInOwl:hasRelatedSynonym>gaseous state</oboInOwl:hasRelatedSynonym>
         <rdfs:label>Gas</rdfs:label>
+        <skos:hiddenLabel>Gas</skos:hiddenLabel>
         <skos:prefLabel>Gas</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Gas</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -4724,9 +4725,9 @@ maybe others.
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Liquid</rdfs:label>
         <rdfs:seeAlso>liquified</rdfs:seeAlso>
+        <skos:hiddenLabel>Liquid</skos:hiddenLabel>
         <skos:prefLabel>Liquid</skos:prefLabel>
         <skos-owl1-dl:altLabel>Liquid State</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Liquid</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -4741,8 +4742,8 @@ maybe others.
         <dc:description>Solid is one of the four fundamental states of matter. It is characterized by structural rigidity and resistance to changes of shape or volume. Unlike a liquid, a solid object does not flow to take on the shape of its container, nor does it expand to fill the entire volume available to it like a gas does. The atoms in a solid are tightly bound to each other, either in a regular geometric lattice or irregularly.</dc:description>
         <oboInOwl:hasRelatedSynonym>solid state</oboInOwl:hasRelatedSynonym>
         <rdfs:label>Solid</rdfs:label>
+        <skos:hiddenLabel>Solid</skos:hiddenLabel>
         <skos:prefLabel>Solid</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Solid</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -4755,8 +4756,8 @@ maybe others.
         <obo:IAO_0000119>https://orcid.org/0000-0002-1338-9436</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1338-9436"/>
         <rdfs:label>Dissolution Carbon Flux</rdfs:label>
+        <skos:hiddenLabel>Dissolution Carbon Flux</skos:hiddenLabel>
         <skos:prefLabel>Dissolution Carbon Flux</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Dissolution Carbon Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -4772,8 +4773,8 @@ maybe others.
         <oboInOwl:hasRelatedSynonym>dissolution</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>dissolved state</oboInOwl:hasRelatedSynonym>
         <rdfs:label>Dissolved</rdfs:label>
+        <skos:hiddenLabel>Dissolved</skos:hiddenLabel>
         <skos:prefLabel>Dissolved</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Dissolved</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -4792,8 +4793,8 @@ maybe others.
         <oboInOwl:hasRelatedSynonym>CO2</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>carbonic anhydride</oboInOwl:hasRelatedSynonym>
         <rdfs:label>Carbon Dioxide</rdfs:label>
+        <skos:hiddenLabel>Carbon Dioxide</skos:hiddenLabel>
         <skos-owl1-dl:altLabel>CO2</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Carbon Dioxide</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -4817,10 +4818,10 @@ maybe others.
         <dc:description>In chemistry, a carbonate is a salt of carbonic acid, characterized by the presence of the carbonate ion, CO2−3. The name may also mean an ester of carbonic acid, an organic compound containing the carbonate group.</dc:description>
         <oboInOwl:id>CHEBI:41609</oboInOwl:id>
         <rdfs:label>Carbonate</rdfs:label>
+        <skos:hiddenLabel>Carbonate</skos:hiddenLabel>
         <skos:prefLabel>Carbonate</skos:prefLabel>
         <skos-owl1-dl:altLabel>CO3</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel xml:lang="en">carbonate ion</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Carbonate</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -4838,10 +4839,10 @@ maybe others.
         <oboInOwl:id xml:lang="en">CHEBI:17544</oboInOwl:id>
         <rdfs:label>Bicarbonate</rdfs:label>
         <rdfs:seeAlso xml:lang="en">Acid carbonate, Bicarbonate, hydrogen carbonate</rdfs:seeAlso>
+        <skos:hiddenLabel>Bicarbonate</skos:hiddenLabel>
         <skos:prefLabel>Bicarbonate</skos:prefLabel>
         <skos-owl1-dl:altLabel>Bicarbonate ion</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>HCO3-</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Bicarbonate</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -4865,7 +4866,7 @@ maybe others.
         <oboInOwl:hasRelatedSynonym>CO</oboInOwl:hasRelatedSynonym>
         <oboInOwl:id xml:lang="en">CHEBI:17245</oboInOwl:id>
         <rdfs:label>Carbon Monoxide</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Carbon Monoxide</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Carbon Monoxide</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -4874,7 +4875,7 @@ maybe others.
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000329">
         <rdfs:label>Organic Carbon</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Organic Carbon</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Organic Carbon</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -4889,7 +4890,7 @@ and
 https://en.wikipedia.org/wiki/Organic_compound</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0001-8622-9698"/>
         <rdfs:label>Organic Carbon Pool</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Organic Carbon Pool</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Organic Carbon Pool</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -4903,7 +4904,7 @@ https://en.wikipedia.org/wiki/Organic_compound</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0001-8622-9698"/>
         <dc:description>Particulate organic carbon also decomposes relatively quickly (years to decades) and provides an important source of energy for soil microorganisms. It also plays an important role in maintaining soil structure and providing soil nutrients. Plant residues and particulate organic carbon are often referred to as ‘labile carbon’ because they cycle in the soil relatively quickly.</dc:description>
         <rdfs:label>Particulate Organic Carbon Pool</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Particulate Organic Carbon Pool</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Particulate Organic Carbon Pool</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -4916,7 +4917,7 @@ https://en.wikipedia.org/wiki/Organic_compound</obo:IAO_0000119>
         <dc:description>Inorganic carbon is carbon extracted from ores and minerals, as opposed to organic carbon found in nature through plants and living things. Some examples of inorganic carbon are carbon oxides such as carbon monoxide and carbon dioxide; polyatomic ions, cyanide, cyanate, thiocyanate, carbonate and carbide in carbon.</dc:description>
         <rdfs:comment xml:lang="en">Made this class a sibling of CHEBI class &apos;inorganic molecular entity&apos; because CHEBI says that an &apos;inorganic molecular entity&apos; contains no carbon, and we didn&apos;t want to contradict that.</rdfs:comment>
         <rdfs:label>Inorganic Carbon</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Inorganic Carbon</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Inorganic Carbon</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -4931,7 +4932,7 @@ and
 https://en.wikipedia.org/wiki/Total_inorganic_carbon</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0001-8622-9698"/>
         <rdfs:label>Inorganic Carbon Pool</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Inorganic Carbon Pool</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Inorganic Carbon Pool</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -4944,7 +4945,7 @@ https://en.wikipedia.org/wiki/Total_inorganic_carbon</obo:IAO_0000119>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Death</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0001-8622-9698"/>
         <rdfs:label>Total Living Biomass Carbon Pool</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Total Living Biomass Carbon Pool</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Total Living Biomass Carbon Pool</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -4960,8 +4961,8 @@ https://en.wikipedia.org/wiki/Total_inorganic_carbon</obo:IAO_0000119>
         <dc:description>a tall perennial woody plant having a main trunk and branches forming a distinct elevated crown; includes both gymnosperms and angiosperms</dc:description>
         <rdfs:label>Tree</rdfs:label>
         <rdfs:seeAlso>sapling</rdfs:seeAlso>
+        <skos:hiddenLabel>Tree</skos:hiddenLabel>
         <skos:prefLabel>Tree</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Tree</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -4981,8 +4982,8 @@ https://en.wikipedia.org/wiki/Soil_carbon</obo:IAO_0000119>
         <rdfs:seeAlso>leaf litter</rdfs:seeAlso>
         <rdfs:seeAlso>litter fall</rdfs:seeAlso>
         <rdfs:seeAlso>litterfall</rdfs:seeAlso>
+        <skos:hiddenLabel>Litter Carbon Concentration</skos:hiddenLabel>
         <skos:prefLabel>Litter Carbon Concentration</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Litter Carbon Concentration</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5013,9 +5014,9 @@ http://oceanservice.noaa.gov/facts/phyto.html</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1693-8322"/>
         <dc:description>photosynthetic or plant constituent of plankton; mainly unicellular algae</dc:description>
         <rdfs:label>phytoplankton</rdfs:label>
+        <skos:hiddenLabel>phytoplankton</skos:hiddenLabel>
         <skos:prefLabel>Phytoplankton</skos:prefLabel>
         <skos-owl1-dl:altLabel>plankton</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>phytoplankton</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5031,9 +5032,9 @@ http://oceanservice.noaa.gov/facts/phyto.html</obo:IAO_0000119>
         <dc:description>the act of conducting a controlled test or investigation</dc:description>
         <rdfs:label>Experiment</rdfs:label>
         <rdfs:seeAlso>Experimental group</rdfs:seeAlso>
+        <skos:hiddenLabel>Experiment</skos:hiddenLabel>
         <skos:prefLabel>Experiment</skos:prefLabel>
         <skos-owl1-dl:altLabel>Scientific experiment</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Experiment</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5060,7 +5061,7 @@ Hurlbert, S. H. 1984. Pseudoreplication and the design of ecolgical field experm
 
 A manipulative experiment is one in which the experimenter manipulates the system of study in order to attempt to uncover causal relationships. Such experiments can either be rigidly or loosely controlled. In the former case, investigator may create an artificial system in a laboratory setting and control all confounding variables so as to eliminate ambiguity in the interpretation of results. In the latter case, the investigator may simply modify one or two variables of interest in order to determine how the natural system will respond. The statistical methods used to analyse the data are generally of the analysis of variance type, but there are exceptions (especially in the case of loosely controlled manipulations). Two examples follow, one where rigid control was exercised, and one where loose control was used. </rdfs:comment>
         <rdfs:label>Manipulative experiment</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Manipulative experiment</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Manipulative experiment</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -5077,8 +5078,8 @@ Term loosely used to apply to the study of any naturally occurring differences a
 
 W. Paul Vogt, Dianne C. Gardner, Lynne M. Haeffele. 2012. When to Use What Research Design Guilford Press (p 62 via google books)</rdfs:comment>
         <rdfs:label>Natural experiment</rdfs:label>
+        <skos:hiddenLabel>Natural experiment</skos:hiddenLabel>
         <skos:prefLabel>Natural experiment</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Natural experiment</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5094,7 +5095,7 @@ and
 Dawes, Cl J. 1978. Marine Botany, John Wiley and Sons., p 113</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1693-8322"/>
         <rdfs:label>Macroalgae</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Macroalgae</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Macroalgae</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -5107,7 +5108,7 @@ Dawes, Cl J. 1978. Marine Botany, John Wiley and Sons., p 113</obo:IAO_0000119>
         <obo:IAO_0000119>PATO:0001334</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1693-8322"/>
         <rdfs:label>diameter</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>diameter</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>diameter</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -5125,8 +5126,8 @@ http://www.ontobee.org/ontology/PATO?iri=http://purl.obolibrary.org/obo/PATO_000
         <dc:description>the size of something as given by the distance around it</dc:description>
         <rdfs:label>circumference</rdfs:label>
         <rdfs:seeAlso xml:lang="en">Perimeter of a circle</rdfs:seeAlso>
+        <skos:hiddenLabel>circumference</skos:hiddenLabel>
         <skos:prefLabel>Circumference</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>circumference</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5143,8 +5144,8 @@ http://www.ontobee.org/ontology/PATO?iri=http://purl.obolibrary.org/obo/PATO_000
         <rdfs:label>height</rdfs:label>
         <rdfs:seeAlso xml:lang="en">PATO:0000119</rdfs:seeAlso>
         <rdfs:seeAlso>width, length</rdfs:seeAlso>
+        <skos:hiddenLabel>height</skos:hiddenLabel>
         <skos:prefLabel>Height</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>height</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5170,8 +5171,8 @@ superclasses (measuresEntity, measuresCharacterstic) deliberately left off this 
 added a child of concentration-of, called &apos;molar concentration&apos;, and put the equivalence class there. alternative could be that &apos;molar concentration&apos; is a synonym of AmountOfSubstanceConcentration in OBOE.</rdfs:comment>
         <rdfs:label>concentration_MeasurementType</rdfs:label>
         <rdfs:seeAlso xml:lang="en">PATO:0000033, concentration of</rdfs:seeAlso>
+        <skos:hiddenLabel>concentration_MeasurementType</skos:hiddenLabel>
         <skos:prefLabel>Concentration Measurement Type</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>concentration_MeasurementType</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5195,8 +5196,8 @@ There are many methods and usages of biomass measurements. This ECSO class is fo
 
 IUPAC, Compendium of Chemical Terminology, 2nd ed. (the &quot;Gold Book&quot;) (1997). Online corrected version:  (2006–) &quot;biomass&quot;.</obo:IAO_0000119>
         <rdfs:label>biomass_MeasurementType</rdfs:label>
+        <skos:hiddenLabel>biomass_MeasurementType</skos:hiddenLabel>
         <skos:prefLabel>Biomass Measurement Type</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>biomass_MeasurementType</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5220,9 +5221,9 @@ In transport phenomena (heat transfer, mass transfer and fluid dynamics), flux i
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1693-8322"/>
         <dc:description>The study of transport phenomena concerns the exchange of mass, energy, and momentum between observed and studied systems. Fundamental analyses in all three subfields are often grounded in the simple principle that the sum total of the quantities being studied must be conserved by the system and its environment.</dc:description>
         <rdfs:label>flux_MeasurementType</rdfs:label>
+        <skos:hiddenLabel>flux_MeasurementType</skos:hiddenLabel>
         <skos:prefLabel>Flux Measurement Type</skos:prefLabel>
         <skos-owl1-dl:altLabel xml:lang="en">Flow Measurement Type</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>flux_MeasurementType</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5236,7 +5237,7 @@ In transport phenomena (heat transfer, mass transfer and fluid dynamics), flux i
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <oboInOwl:hasRelatedSynonym>deepness</oboInOwl:hasRelatedSynonym>
         <rdfs:label>depth</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>depth</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>depth</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -5255,8 +5256,8 @@ In transport phenomena (heat transfer, mass transfer and fluid dynamics), flux i
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Chlorophyll_a</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1693-8322"/>
         <rdfs:label>Chlorophyll-a Concentration</rdfs:label>
+        <skos:hiddenLabel>Chlorophyll-a Concentration</skos:hiddenLabel>
         <skos-owl1-dl:altLabel>Chl-a</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Chlorophyll-a Concentration</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5278,8 +5279,8 @@ In transport phenomena (heat transfer, mass transfer and fluid dynamics), flux i
         <dc:description>Moisture refers to the presence of a liquid, especially water, often in trace amounts. Moisture also refers to the amount of water vapour present in the air. There are many ways to measure moisture in products, such as different wave measurement (light and audio), electromagnetic fields, capacitive methods, and the more traditional weighing and drying technique.</dc:description>
         <rdfs:label>Soil Moisture Percentage</rdfs:label>
         <rdfs:seeAlso>wet, wetness</rdfs:seeAlso>
+        <skos:hiddenLabel>Soil Moisture Percentage</skos:hiddenLabel>
         <skos:prefLabel>Soil Moisture Percentage</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Soil Moisture Percentage</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5290,7 +5291,7 @@ In transport phenomena (heat transfer, mass transfer and fluid dynamics), flux i
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
         <rdfs:comment>Concentration may be expressed per volume of water (e.g., for phytoplankton), or per some measure of plant material.</rdfs:comment>
         <rdfs:label>Plant Pigment Concentration</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Plant Pigment Concentration</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Plant Pigment Concentration</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -5309,8 +5310,8 @@ In transport phenomena (heat transfer, mass transfer and fluid dynamics), flux i
         <obo:IAO_0000119>http://www.thefreedictionary.com/rate</obo:IAO_0000119>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Rate_(mathematics)#Temporal</obo:IAO_0000119>
         <rdfs:label>temporal_rate_MeasurementType</rdfs:label>
+        <skos:hiddenLabel>temporal_rate_MeasurementType</skos:hiddenLabel>
         <skos:prefLabel>Temporal Rate Measurement Type</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>temporal_rate_MeasurementType</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5321,7 +5322,7 @@ In transport phenomena (heat transfer, mass transfer and fluid dynamics), flux i
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00002932"/>
         <obo:IAO_0000115>Amount of carbon in some material. measurements will be a ratio where the numerator is Carbon (in mass or amount) and denominator is [mass or amount] of the material the Carbon is mixed with. Various units are used, eg, gram/gram,gram/volume, percent.</obo:IAO_0000115>
         <rdfs:label>Organic Carbon Concentration</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Organic Carbon Concentration</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Organic Carbon Concentration</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -5350,9 +5351,9 @@ urn:node:LTER</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Carbon_dioxide</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Freshwater Carbon Dioxide Concentration</rdfs:label>
+        <skos:hiddenLabel>Freshwater Carbon Dioxide Concentration</skos:hiddenLabel>
         <skos:prefLabel>Freshwater Carbon Dioxide Concentration</skos:prefLabel>
         <skos-owl1-dl:altLabel>Freshwater CO2 Concentration</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Freshwater Carbon Dioxide Concentration</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5364,7 +5365,7 @@ https://en.wikipedia.org/wiki/Carbon_dioxide</obo:IAO_0000119>
         <obo:IAO_0000115>the distance between the top and bottom or front and back surfaces of something</obo:IAO_0000115>
         <obo:IAO_0000119>http://www.merriam-webster.com/dictionary/thickness</obo:IAO_0000119>
         <rdfs:label>thickness</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>thickness</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>thickness</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -5374,7 +5375,7 @@ https://en.wikipedia.org/wiki/Carbon_dioxide</obo:IAO_0000119>
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000524">
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType"/>
         <rdfs:label>Fluorescence_measurementType</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Fluorescence_measurementType</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Fluorescence_measurementType</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -5387,9 +5388,9 @@ https://en.wikipedia.org/wiki/Carbon_dioxide</obo:IAO_0000119>
         <obo:IAO_0000119>http://www.biology-online.org/dictionary/Group</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>group</rdfs:label>
+        <skos:hiddenLabel>group</skos:hiddenLabel>
         <skos:prefLabel>group</skos:prefLabel>
         <skos-owl1-dl:altLabel>grouping</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>group</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5410,9 +5411,9 @@ https://en.wikipedia.org/wiki/Carbon_dioxide</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-8087-1775"/>
         <dc:description>Humidity is the amount of water vapor in the air. Water vapor is the gaseous state of water. Specific humidity is a ratio of the water vapor content of the mixture to the total air content on a mass basis.</dc:description>
         <rdfs:label>Near_Surface_Specific_Humidity_MOV</rdfs:label>
+        <skos:hiddenLabel>Near_Surface_Specific_Humidity_MOV</skos:hiddenLabel>
         <skos:prefLabel>Near Surface Specific Humidity MOV</skos:prefLabel>
         <skos-owl1-dl:altLabel>humidity</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Near_Surface_Specific_Humidity_MOV</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5427,9 +5428,9 @@ https://en.wikipedia.org/wiki/Carbon_dioxide</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:comment>EquivalentTo: concentration and measurementFor only Observation and ofEntity only CO2</rdfs:comment>
         <rdfs:label>carbon dioxide concentration</rdfs:label>
+        <skos:hiddenLabel>CO2 Concentration</skos:hiddenLabel>
         <skos:prefLabel>CO2 Concentration</skos:prefLabel>
         <skos-owl1-dl:altLabel>CO2 Concentration</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>CO2 Concentration</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5451,8 +5452,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-and/3142/7</obo:IAO_0000
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Total Soil Carbon</rdfs:label>
         <rdfs:seeAlso>soil organic</rdfs:seeAlso>
+        <skos:hiddenLabel>Total Soil Carbon</skos:hiddenLabel>
         <skos:prefLabel>Total Soil Carbon</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Total Soil Carbon</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5465,8 +5466,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-and/3142/7</obo:IAO_0000
         <obo:IAO_0000119>Adapted from ECSO_00000018, Heterotrophic Respiration Carbon Flux</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1693-8322"/>
         <rdfs:label>Soil Heterotrophic Respiration Carbon Flux</rdfs:label>
+        <skos:hiddenLabel>Soil Heterotrophic Respiration Carbon Flux</skos:hiddenLabel>
         <skos:prefLabel>Soil Heterotrophic Respiration Carbon Flux</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Soil Heterotrophic Respiration Carbon Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5486,10 +5487,10 @@ Often abbreviated to ANPP, and in grasslands, measured by peak biomass.</obo:IAO
         <obo:IAO_0000119>Adapted from ECSO_00000021 (Net Primary Production Carbon FLux) and ECSO_00000301 (Above Ground Net Primary Production Carbon Flux)</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1693-8322"/>
         <rdfs:label>Grassland Above Ground Net Primary Production Carbon Flux</rdfs:label>
+        <skos:hiddenLabel>Grassland Above Ground Net Primary Production Carbon Flux</skos:hiddenLabel>
         <skos:prefLabel>Grassland Above Ground Net Primary Production Carbon Flux</skos:prefLabel>
         <skos-owl1-dl:altLabel>Grassland Above Ground NPP Carbon Flux</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>anpp</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Grassland Above Ground Net Primary Production Carbon Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5522,9 +5523,9 @@ The primary production of phytoplankton has been estimated for decades by the 14
 
 For most purposes (including this one) the two can be the same. It&apos;s most practical to measure production over a given time interval and area (or volume), and that amounts to an areal (or volumetric) rate.</dc:description>
         <rdfs:label>Phytoplankton Primary Production Carbon Flux</rdfs:label>
+        <skos:hiddenLabel>Phytoplankton Primary Production Carbon Flux</skos:hiddenLabel>
         <skos:prefLabel>Phytoplankton Primary Production Carbon Flux</skos:prefLabel>
         <skos-owl1-dl:altLabel>phytoplankton primary productivity</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Phytoplankton Primary Production Carbon Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5550,9 +5551,9 @@ The inorganic carbon species include carbon dioxide, carbonic acid, bicarbonate 
 
 generally, CO2 that enters the ocean dissociates into bicarbonate, carbonate, (and some stays as CO2). but not sure what people in that domain call the total. (or if this is actually what they would search for! will confirm that, too, this week.</rdfs:comment>
         <rdfs:label>Oceanic Total Inorganic Carbon Concentration</rdfs:label>
+        <skos:hiddenLabel>Oceanic Total Inorganic Carbon Concentration</skos:hiddenLabel>
         <skos:prefLabel>Oceanic Total Inorganic Carbon Concentration</skos:prefLabel>
         <skos-owl1-dl:altLabel>DIC</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Oceanic Total Inorganic Carbon Concentration</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5565,9 +5566,9 @@ generally, CO2 that enters the ocean dissociates into bicarbonate, carbonate, (a
         <obo:IAO_0000119>ECSO_00000011 (Carbon Flux), adapted for CO2</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1693-8322"/>
         <rdfs:label>Carbon Dioxide Flux</rdfs:label>
+        <skos:hiddenLabel>Carbon Dioxide Flux</skos:hiddenLabel>
         <skos:prefLabel>Carbon Dioxide Flux</skos:prefLabel>
         <skos-owl1-dl:altLabel>CO2 Flux</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Carbon Dioxide Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5577,7 +5578,7 @@ generally, CO2 that enters the ocean dissociates into bicarbonate, carbonate, (a
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000537">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000524"/>
         <rdfs:label>Freshwater Chlorophyll Fluorescence</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Freshwater Chlorophyll Fluorescence</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Freshwater Chlorophyll Fluorescence</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -5593,9 +5594,9 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/75/1</obo:IAO_000011
 https://en.wikipedia.org/wiki/Bicarbonate</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Bicarbonate Concentration</rdfs:label>
+        <skos:hiddenLabel>Bicarbonate Concentration</skos:hiddenLabel>
         <skos:prefLabel>Bicarbonate Concentration</skos:prefLabel>
         <skos-owl1-dl:altLabel>HCO3 concentration</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Bicarbonate Concentration</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5618,9 +5619,9 @@ The class for &apos;Oceanic ...&apos; should be a subclass of this one.
 Right now, we have separate classes for &apos;total&apos;, as in the sum of all forms - this is a different concept than &quot;any&quot; form. also note: parent is incomplete; there are probably 8 leafs, only 6 at the moment.</rdfs:comment>
         <rdfs:label>Aquatic Inorganic Carbon Concentration</rdfs:label>
         <rdfs:seeAlso>total inorganic carbon, CT, dissolved inorganic carbon</rdfs:seeAlso>
+        <skos:hiddenLabel>Aquatic Inorganic Carbon Concentration</skos:hiddenLabel>
         <skos:prefLabel>Aquatic Inorganic Carbon Concentration, all forms</skos:prefLabel>
         <skos-owl1-dl:altLabel>TIC</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Aquatic Inorganic Carbon Concentration</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5644,7 +5645,7 @@ Google (no ref to src material)</obo:IAO_0000119>
         <oboInOwl:hasRelatedSynonym>growing</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>maturation</oboInOwl:hasRelatedSynonym>
         <rdfs:label>Growth</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Growth</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Growth</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -5675,8 +5676,8 @@ Google (no ref to src material)</obo:IAO_0000119>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Tree_measurement#Height</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1693-8322"/>
         <rdfs:label>Tree Height</rdfs:label>
+        <skos:hiddenLabel>Tree Height</skos:hiddenLabel>
         <skos:prefLabel>Tree Height</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Tree Height</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5704,9 +5705,9 @@ Google (no ref to src material)</obo:IAO_0000119>
         <obo:IAO_0000119>adapted from ECSO_00000021 (Net Primary Production Carbon FLux)</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1693-8322"/>
         <rdfs:label>Marine Macroalgae Net Primary Production Carbon Flux</rdfs:label>
+        <skos:hiddenLabel>Marine Macroalgae Net Primary Production Carbon Flux</skos:hiddenLabel>
         <skos:prefLabel>Marine Macroalgae Net Primary Production Carbon Flux</skos:prefLabel>
         <skos-owl1-dl:altLabel>Marine Macroalgae NPP Carbon Flux</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Marine Macroalgae Net Primary Production Carbon Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5732,9 +5733,9 @@ Google (no ref to src material)</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1693-8322"/>
         <rdfs:comment>This class probably could be a child of &quot;carbon dioxide diffusion flux&quot;, especially since definition of the parent is based on the ocean. But contributor is not confident saying that it always is diffusion.</rdfs:comment>
         <rdfs:label>Oceanic Carbon Dioxide Flux</rdfs:label>
+        <skos:hiddenLabel>Oceanic Carbon Dioxide Flux</skos:hiddenLabel>
         <skos:prefLabel>Oceanic Carbon Dioxide Flux</skos:prefLabel>
         <skos-owl1-dl:altLabel>Oceanic CO2 Flux</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Oceanic Carbon Dioxide Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5765,8 +5766,8 @@ Google (no ref to src material)</obo:IAO_0000119>
         <obo:IAO_0000119>http://www.fs.usda.gov/Internet/FSE_DOCUMENTS/stelprdb5202838.pdf</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1693-8322"/>
         <rdfs:label>Tree Diameter</rdfs:label>
+        <skos:hiddenLabel>Tree Diameter</skos:hiddenLabel>
         <skos:prefLabel>Tree Diameter</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Tree Diameter</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5797,9 +5798,9 @@ Google (no ref to src material)</obo:IAO_0000119>
         <obo:IAO_0000119>http://www.fs.usda.gov/Internet/FSE_DOCUMENTS/stelprdb5202838.pdf</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1693-8322"/>
         <rdfs:label>Tree Circumference</rdfs:label>
+        <skos:hiddenLabel>Tree Circumference</skos:hiddenLabel>
         <skos:prefLabel>Tree Circumference</skos:prefLabel>
         <skos-owl1-dl:altLabel>Tree Girth</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Tree Circumference</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5812,8 +5813,8 @@ Google (no ref to src material)</obo:IAO_0000119>
         <obo:IAO_0000115>An occurrent that has temporal proper parts and for some time t, p s-depends_on some material entity at t.</obo:IAO_0000115>
         <obo:IAO_0000412>http://purl.obolibrary.org/obo/envo.owl</obo:IAO_0000412>
         <rdfs:label>Process</rdfs:label>
+        <skos:hiddenLabel>Process</skos:hiddenLabel>
         <skos:prefLabel>Process</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Process</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5842,7 +5843,7 @@ http://texastreeid.tamu.edu/content/howTreesGrow/</obo:IAO_0000119>
         <obo:IAO_0000119>http://www.greenfacts.org/glossary/wxyz/wet-weight.htm</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>wet_weight</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>wet_weight</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>wet_weight</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -5856,10 +5857,10 @@ http://texastreeid.tamu.edu/content/howTreesGrow/</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1693-8322"/>
         <rdfs:label>Tree Diameter at Breast Height</rdfs:label>
         <rdfs:seeAlso>basal diameter</rdfs:seeAlso>
+        <skos:hiddenLabel>Tree Diameter at Breast Height</skos:hiddenLabel>
         <skos:prefLabel>Tree Diameter at Breast Height</skos:prefLabel>
         <skos-owl1-dl:altLabel>DBH</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>Diameter at Breast Height</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Tree Diameter at Breast Height</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5870,8 +5871,8 @@ http://texastreeid.tamu.edu/content/howTreesGrow/</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000556"/>
         <obo:IAO_0000115>Ash-free dry weight is used as an index for percent organic carbon in the quantified substrate.</obo:IAO_0000115>
         <rdfs:label>ash_free_dry_weight</rdfs:label>
+        <skos:hiddenLabel>ash_free_dry_weight</skos:hiddenLabel>
         <skos-owl1-dl:altLabel xml:lang="en">AFDW</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>ash_free_dry_weight</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5892,7 +5893,7 @@ Use in ECSO: The mass expressed as mass per unit area.</obo:IAO_0000115>
         <obo:IAO_0000119>IUPAC, Compendium of Chemical Terminology, 2nd ed. (the &quot;Gold Book&quot;) (1997). Online corrected version:  (2006–) &quot;biomass&quot;.</obo:IAO_0000119>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Biomass_(ecology)</obo:IAO_0000119>
         <rdfs:label>biomass_density</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>biomass_density</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>biomass_density</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -5915,8 +5916,8 @@ Use in ECSO: The mass expressed as mass per unit area.</obo:IAO_0000115>
         <dc:description>the amount per unit size (i.e. the total mass of living matter in a given unit area)</dc:description>
         <rdfs:comment>Deliberately did not use the OBOE characteristic ArealDensity, because that one seemed to be specific to physics.</rdfs:comment>
         <rdfs:label>biomass_density_MeasurementType</rdfs:label>
+        <skos:hiddenLabel>biomass_density_MeasurementType</skos:hiddenLabel>
         <skos:prefLabel>biomass density</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>biomass_density_MeasurementType</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5944,8 +5945,8 @@ Use in ECSO: The mass expressed as mass per unit area.</obo:IAO_0000115>
         <dc:description>of or in or along or relating to a line; involving or having a single dimension</dc:description>
         <rdfs:label>linear_MeasurementType</rdfs:label>
         <rdfs:seeAlso xml:lang="en">one-dimensional</rdfs:seeAlso>
+        <skos:hiddenLabel>linear_MeasurementType</skos:hiddenLabel>
         <skos:prefLabel>Linear Measurement Type</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>linear_MeasurementType</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -5957,7 +5958,7 @@ Use in ECSO: The mass expressed as mass per unit area.</obo:IAO_0000115>
         <obo:IAO_0000115>A length quality which is equal to the length of any straight line segment that passes from the center of a circle to any endpoint on the circular boundary. The radius is half of the diameter</obo:IAO_0000115>
         <obo:IAO_0000119>http://www.ontobee.org/ontology/PATO?iri=http://purl.obolibrary.org/obo/PATO_0002390</obo:IAO_0000119>
         <rdfs:label>radius</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>radius</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>radius</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -5968,7 +5969,7 @@ Use in ECSO: The mass expressed as mass per unit area.</obo:IAO_0000115>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000082"/>
         <rdfs:comment>This class is a grouping for all protocols that measure the biomass of something. These might include total weight of (e.g.) a sample of grass or fish, or total carbon in a sample, where the size of the sample is not part of the observation. Hence, unit should be a mass unit only.</rdfs:comment>
         <rdfs:label>Biomass Method</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Biomass Method</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Biomass Method</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -5981,7 +5982,7 @@ Use in ECSO: The mass expressed as mass per unit area.</obo:IAO_0000115>
         <obo:IAO_0000119>http://medical-dictionary.thefreedictionary.com/dry+mass</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>dry_weight</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>dry_weight</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>dry_weight</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -5994,7 +5995,7 @@ Use in ECSO: The mass expressed as mass per unit area.</obo:IAO_0000115>
         <oboInOwl:hasRelatedSynonym>ash_content</oboInOwl:hasRelatedSynonym>
         <rdfs:comment>syn = ash_content</rdfs:comment>
         <rdfs:label>ash_weight</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>ash_weight</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>ash_weight</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -6010,9 +6011,9 @@ Use in ECSO: The mass expressed as mass per unit area.</obo:IAO_0000115>
         <dc:description>any of a group of green pigments found in photosynthetic organisms; there are four naturally occurring forms</dc:description>
         <rdfs:comment>not imported with ENVO import of chemical entity.</rdfs:comment>
         <rdfs:label>chlorophyll</rdfs:label>
+        <skos:hiddenLabel>chlorophyll</skos:hiddenLabel>
         <skos:prefLabel>Chlorophyll</skos:prefLabel>
         <skos-owl1-dl:altLabel>chlorophyl</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>chlorophyll</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -6022,7 +6023,7 @@ Use in ECSO: The mass expressed as mass per unit area.</obo:IAO_0000115>
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000563">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000562"/>
         <rdfs:label>chloroplyll-a</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>chloroplyll-a</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>chloroplyll-a</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -6038,9 +6039,9 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/75/1</obo:IAO_000011
 https://en.wikipedia.org/wiki/Carbonate</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Carbonate Concentration</rdfs:label>
+        <skos:hiddenLabel>Carbonate Concentration</skos:hiddenLabel>
         <skos:prefLabel>Carbonate Concentration</skos:prefLabel>
         <skos-owl1-dl:altLabel>CO3 concentration</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Carbonate Concentration</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -6054,9 +6055,9 @@ https://en.wikipedia.org/wiki/Carbonate</obo:IAO_0000119>
 https://en.wikipedia.org/wiki/Carbonate</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Freshwater Carbonate Concentration</rdfs:label>
+        <skos:hiddenLabel>Freshwater Carbonate Concentration</skos:hiddenLabel>
         <skos:prefLabel>Freshwater Carbonate Concentration</skos:prefLabel>
         <skos-owl1-dl:altLabel>freshwater CO3 concentration</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Freshwater Carbonate Concentration</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -6082,7 +6083,7 @@ https://en.wikipedia.org/wiki/Bicarbonate</obo:IAO_0000119>
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000568">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001560"/>
         <rdfs:label>Seawater Chlorophyll Fluorescence</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>&apos;Seawater Chlorophyll Fluorescence&apos;</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>&apos;Seawater Chlorophyll Fluorescence&apos;</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -6098,8 +6099,8 @@ https://en.wikipedia.org/wiki/Bicarbonate</obo:IAO_0000119>
         <dc:description>single-celled or noncellular spherical or spiral or rod-shaped organisms lacking chlorophyll that reproduce by fission; important as pathogens and for biochemical properties; taxonomy is difficult; often considered to be plants</dc:description>
         <rdfs:label>Bacteria</rdfs:label>
         <rdfs:seeAlso>Eubacteria</rdfs:seeAlso>
+        <skos:hiddenLabel>Bacteria</skos:hiddenLabel>
         <skos:prefLabel>Bacteria</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Bacteria</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -6114,9 +6115,9 @@ https://en.wikipedia.org/wiki/Bicarbonate</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <dc:description>primitive chlorophyll-containing mainly aquatic eukaryotic organisms lacking true stems and roots and leaves</dc:description>
         <rdfs:label>Algae</rdfs:label>
+        <skos:hiddenLabel>Algae</skos:hiddenLabel>
         <skos:prefLabel>Algae</skos:prefLabel>
         <skos-owl1-dl:altLabel>Alga</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Algae</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -6161,7 +6162,7 @@ https://en.wikipedia.org/wiki/Bicarbonate</obo:IAO_0000119>
         <obo:IAO_0000119>Plant Ontology, PO:0000003</obo:IAO_0000119>
         <oboInOwl:hasExactSynonym>whole plant</oboInOwl:hasExactSynonym>
         <rdfs:label>plant</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>plant</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>plant</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -6177,7 +6178,7 @@ https://en.wikipedia.org/wiki/Bicarbonate</obo:IAO_0000119>
         <oboInOwl:hasRelatedSynonym>soil profiles</oboInOwl:hasRelatedSynonym>
         <rdfs:comment>This is a grouping class, analogous to &apos;lake layer&apos; and &apos;marine layer&apos;</rdfs:comment>
         <rdfs:label>soil layer</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>soil layer</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>soil layer</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -6189,7 +6190,7 @@ https://en.wikipedia.org/wiki/Bicarbonate</obo:IAO_0000119>
         <obo:IAO_0000115>In environments containing permafrost, the active layer is the top layer of soil that thaws during the summer and freezes again during the autumn.</obo:IAO_0000115>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Active_layer</obo:IAO_0000119>
         <rdfs:label>soil active layer</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>soil active layer</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>soil active layer</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -6204,8 +6205,8 @@ https://en.wikipedia.org/wiki/Soil_carbon</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:comment>numerator is carbon, denominator is a volume or weight of soil.</rdfs:comment>
         <rdfs:label>Soil Carbon Concentration</rdfs:label>
+        <skos:hiddenLabel>Soil Carbon Concentration</skos:hiddenLabel>
         <skos:prefLabel>Soil Carbon Concentration</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Soil Carbon Concentration</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -6225,9 +6226,9 @@ https://en.wikipedia.org/wiki/Dissolved_organic_carbon</obo:IAO_0000119>
         <obo:IAO_0000119>Concentration of dissolved organic carbon (DOC) within aquatic systems</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Aquatic Dissolved Organic Carbon</rdfs:label>
+        <skos:hiddenLabel>Aquatic Dissolved Organic Carbon</skos:hiddenLabel>
         <skos:prefLabel>Aquatic Dissolved Organic Carbon</skos:prefLabel>
         <skos-owl1-dl:altLabel>DOC</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Aquatic Dissolved Organic Carbon</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -6241,10 +6242,10 @@ https://en.wikipedia.org/wiki/Dissolved_organic_carbon</obo:IAO_0000119>
 https://en.wikipedia.org/wiki/Total_organic_carbon#Measurement</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Aquatic Particulate Organic Carbon</rdfs:label>
+        <skos:hiddenLabel>Aquatic Particulate Organic Carbon</skos:hiddenLabel>
         <skos:prefLabel>Aquatic Particulate Organic Carbon</skos:prefLabel>
         <skos-owl1-dl:altLabel>POC</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>Suspended Organic Carbon</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Aquatic Particulate Organic Carbon</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7039,7 +7040,7 @@ https://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:comment xml:lang="en">since light can be either a wave or a particle, is it a material entity? for ECSO purposes, yes.</rdfs:comment>
         <rdfs:label>electromagnetic radiation</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>electromagnetic radiation</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>electromagnetic radiation</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -7051,8 +7052,8 @@ https://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
         <dc:contributor>https://orcid.org/0000-0002-5896-7295</dc:contributor>
         <rdfs:comment>This is a &quot;foster parent&quot; class, for holding MTs that are not quite done. It is intended to be removed.</rdfs:comment>
         <rdfs:label>00_unclassified_measurementType</rdfs:label>
+        <skos:hiddenLabel>00_unclassified_measurementType</skos:hiddenLabel>
         <skos:prefLabel>00 Unclassified Measurement Type</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>00_unclassified_measurementType</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7064,8 +7065,8 @@ https://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
         <obo:IAO_0000115>the quotient obtained when the magnitude of a part is divided by the magnitude of the whole, or the ratio obtained in the contrast of two values, where the value of the numerator is added together with that of the contrasting value in the denominator</obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>proportion_measurementType</rdfs:label>
+        <skos:hiddenLabel>proportion_measurementType</skos:hiddenLabel>
         <skos:prefLabel>Proportion Measurement Type</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>proportion_measurementType</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7079,7 +7080,7 @@ https://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <oboInOwl:hasRelatedSynonym>sunlight</oboInOwl:hasRelatedSynonym>
         <rdfs:label>solar radiation</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>solar radiation</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>solar radiation</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -7093,9 +7094,9 @@ https://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Temperature#Temperature_measurement</obo:IAO_0000119>
         <dc:description>the degree of hotness or coldness of a body or environment (corresponding to its molecular activity)</dc:description>
         <rdfs:label>temperature_measurementType</rdfs:label>
+        <skos:hiddenLabel>temperature_measurementType</skos:hiddenLabel>
         <skos:prefLabel>Temperature Measurement Type</skos:prefLabel>
         <skos-owl1-dl:altLabel>temp</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>temperature_measurementType</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7120,9 +7121,9 @@ https://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
 When a system contains two or more components whose concentration vary from point to point, there is a natural tendency for mass to be transferred, minimizing any concentration difference within the system. Mass Transfer in a system is governed by Fick&apos;s First Law: &apos;Diffusion flux from higher concentration to lower concentration is proportional to the gradient of the concentration of the substance and the diffusivity of the substance in the medium.&apos;</dc:description>
         <rdfs:label>Carbon Flux</rdfs:label>
         <rdfs:seeAlso xml:lang="en">mass transport, mass transfer</rdfs:seeAlso>
+        <skos:hiddenLabel>Carbon Flux</skos:hiddenLabel>
         <skos:prefLabel>Carbon Flux</skos:prefLabel>
         <skos-owl1-dl:altLabel xml:lang="en">Mass Flux</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Carbon Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7137,10 +7138,10 @@ When a system contains two or more components whose concentration vary from poin
         <dc:description>All processes in engineering involve the transfer of energy. Some examples are the heating and cooling of process streams, phase changes, distillations, etc. The basic principle is the first law of thermodynamics. The net flux of energy through a system equals the conductivity times the rate of change of temperature with respect to position.</dc:description>
         <rdfs:label>Radiative Flux</rdfs:label>
         <rdfs:seeAlso xml:lang="en">energy transport, energy transfer, radiative flux, radiative flux density, radiation flux, irradiance, radiant exitance, radiant emittance, energy transfer</rdfs:seeAlso>
+        <skos:hiddenLabel>Radiative Flux</skos:hiddenLabel>
         <skos:prefLabel>Radiative flux</skos:prefLabel>
         <skos-owl1-dl:altLabel xml:lang="en">Energy Flux</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>Flux</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Radiative Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7154,9 +7155,9 @@ When a system contains two or more components whose concentration vary from poin
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Momentum Flux</rdfs:label>
         <rdfs:seeAlso xml:lang="en">momentum transfer</rdfs:seeAlso>
+        <skos:hiddenLabel>Momentum Flux</skos:hiddenLabel>
         <skos:prefLabel>Momentum Flux</skos:prefLabel>
         <skos-owl1-dl:altLabel xml:lang="en">tau</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Momentum Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7178,8 +7179,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1115/1</obo:IAO_0000
 http://www.madsci.org/posts/archives/2000-09/970201967.Es.r.html</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Ash Weight Biomass</rdfs:label>
+        <skos:hiddenLabel>Ash Weight Biomass</skos:hiddenLabel>
         <skos:prefLabel>Ash Weight Biomass</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Ash Weight Biomass</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7195,8 +7196,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-ntl/299/1</obo:IAO_00001
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Nitrogen_fixation</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Nitrogen Fixation Rate</rdfs:label>
+        <skos:hiddenLabel>Nitrogen Fixation Rate</skos:hiddenLabel>
         <skos:prefLabel>Nitrogen Fixation Rate</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Nitrogen Fixation Rate</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7213,8 +7214,8 @@ https://en.wikipedia.org/wiki/Bulk_density</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:comment>mass density numerator and denominator same entity</rdfs:comment>
         <rdfs:label>Soil Bulk Density</rdfs:label>
+        <skos:hiddenLabel>Soil Bulk Density</skos:hiddenLabel>
         <skos:prefLabel>Soil Bulk Density</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Soil Bulk Density</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7230,9 +7231,9 @@ www.supersites.net.au/knb/metacat/tucker.17.15/html</obo:IAO_0000112>
 http://www.biology-online.org/dictionary/Standing_crop</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Belowground Biomass</rdfs:label>
+        <skos:hiddenLabel>Belowground Biomass</skos:hiddenLabel>
         <skos:prefLabel>Belowground Biomass</skos:prefLabel>
         <skos-owl1-dl:altLabel>Belowground Standing Biomass</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Belowground Biomass</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7247,7 +7248,7 @@ http://www.biology-online.org/dictionary/Standing_crop</obo:IAO_0000119>
         <oboInOwl:hasRelatedSynonym>moisture</oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>water content</oboInOwl:hasRelatedSynonym>
         <rdfs:label>Volumetric Water Content Method</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Volumetric Water Content Method</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Volumetric Water Content Method</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -7260,7 +7261,7 @@ http://www.biology-online.org/dictionary/Standing_crop</obo:IAO_0000119>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Total_organic_carbon#Combustion</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>High Temperature Combustion</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>High Temperature Combustion</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>High Temperature Combustion</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -7282,9 +7283,9 @@ http://www.biology-online.org/dictionary/Standing_crop</obo:IAO_0000119>
         <dc:description>plant materials and animal waste used as fuel</dc:description>
         <rdfs:label>biomass</rdfs:label>
         <rdfs:seeAlso>aboveground biomass</rdfs:seeAlso>
+        <skos:hiddenLabel>biomass</skos:hiddenLabel>
         <skos:prefLabel>Biomass</skos:prefLabel>
         <skos-owl1-dl:altLabel>biomatter</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>biomass</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7294,7 +7295,7 @@ http://www.biology-online.org/dictionary/Standing_crop</obo:IAO_0000119>
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001115">
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasuredCharacteristic"/>
         <rdfs:label>Temporal Rate</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Temporal Rate</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Temporal Rate</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -7313,9 +7314,9 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/10/21</obo:IAO_00001
 http://www.extension.umn.edu/agriculture/nutrient-management/nitrogen/understanding-nitrogen-in-soils/</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1693-8322"/>
         <rdfs:label>Ammonium Concentration</rdfs:label>
+        <skos:hiddenLabel>Ammonium Concentration</skos:hiddenLabel>
         <skos:prefLabel>Ammonium Concentration</skos:prefLabel>
         <skos-owl1-dl:altLabel>NH4 concentration</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Ammonium Concentration</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7328,8 +7329,8 @@ http://www.extension.umn.edu/agriculture/nutrient-management/nitrogen/understand
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Area</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>area_MeasurementType</rdfs:label>
+        <skos:hiddenLabel>area_MeasurementType</skos:hiddenLabel>
         <skos:prefLabel>Area Measurement Type</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>area_MeasurementType</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7345,9 +7346,9 @@ urn:node:GLEON</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Total_organic_carbon#Measurement</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Aquatic Total Organic Carbon Concentration</rdfs:label>
+        <skos:hiddenLabel>Aquatic Total Organic Carbon Concentration</skos:hiddenLabel>
         <skos:prefLabel>Aquatic Total Organic Carbon Concentration</skos:prefLabel>
         <skos-owl1-dl:altLabel>TOC</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Aquatic Total Organic Carbon Concentration</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7363,9 +7364,9 @@ https://en.wikipedia.org/wiki/Total_organic_carbon#Measurement</obo:IAO_0000119>
         <dc:description>the strength of a solution; number of molecules of a substance in a given volume</dc:description>
         <rdfs:label>Concentration</rdfs:label>
         <rdfs:seeAlso>Diluting</rdfs:seeAlso>
+        <skos:hiddenLabel>Concentration</skos:hiddenLabel>
         <skos:prefLabel>Concentration</skos:prefLabel>
         <skos-owl1-dl:altLabel>Mole ratio</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Concentration</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7375,7 +7376,7 @@ https://en.wikipedia.org/wiki/Total_organic_carbon#Measurement</obo:IAO_0000119>
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001121">
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasuredCharacteristic"/>
         <rdfs:label>Flux</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Flux</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Flux</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -7398,9 +7399,9 @@ The inorganic carbon species include carbon dioxide, carbonic acid, bicarbonate 
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Total_inorganic_carbon</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Freshwater Total Inorganic Carbon Concentration</rdfs:label>
+        <skos:hiddenLabel>Freshwater Total Inorganic Carbon Concentration</skos:hiddenLabel>
         <skos:prefLabel>Freshwater Total Inorganic Carbon Concentration</skos:prefLabel>
         <skos-owl1-dl:altLabel>DIC</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Freshwater Total Inorganic Carbon Concentration</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7419,8 +7420,8 @@ Not sure what to do with these. in our corpus, there is only only one dataset wi
 
 It seems like it is a Specific production rate, but we have not decided how to model these combinations of existing measurement types</rdfs:comment>
         <rdfs:label>Net Assimilation Rate Flux</rdfs:label>
+        <skos:hiddenLabel>Net Assimilation Rate Flux</skos:hiddenLabel>
         <skos:prefLabel>Net Assimilation Rate Flux</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Net Assimilation Rate Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7444,11 +7445,11 @@ urn:node:GLEON</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Dissolved_organic_carbon</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Dissolved Organic Carbon Concentration</rdfs:label>
+        <skos:hiddenLabel>Dissolved Organic Carbon Concentration</skos:hiddenLabel>
         <skos:prefLabel>Dissolved Organic Carbon Concentration</skos:prefLabel>
         <skos-owl1-dl:altLabel>DOC</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>DOC Concentration</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>DOC concentration</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Dissolved Organic Carbon Concentration</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7464,12 +7465,12 @@ urn:node:LTER</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Carbonate</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Oceanic Carbonate Concentration</rdfs:label>
+        <skos:hiddenLabel>Oceanic Carbonate Concentration</skos:hiddenLabel>
         <skos:prefLabel>Oceanic Carbonate Concentration</skos:prefLabel>
         <skos-owl1-dl:altLabel>marine CO3 concentration</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>marine carbonate concentration</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>seawater CO3 concentration</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>seawater carbonate concentration</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Oceanic Carbonate Concentration</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7483,9 +7484,9 @@ urn:node:TERN</obo:IAO_0000112>
         <obo:IAO_0000115>Percentage of a sample that is carbon</obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Carbon Percentage</rdfs:label>
+        <skos:hiddenLabel>Carbon Percentage</skos:hiddenLabel>
         <skos:prefLabel>Carbon Percentage</skos:prefLabel>
         <skos-owl1-dl:altLabel>percent carbon</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Carbon Percentage</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7498,8 +7499,8 @@ urn:node:TERN</obo:IAO_0000112>
         <rdfs:comment>Net_Carbon_Production rate Periphyton Net carbon production milligramsPerGramPerHour
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1107/3</rdfs:comment>
         <rdfs:label>Carbon Specific Net Production Rate</rdfs:label>
+        <skos:hiddenLabel>Carbon Specific Net Production Rate</skos:hiddenLabel>
         <skos:prefLabel>Carbon Specific Net Production Rate</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Carbon Specific Net Production Rate</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7515,8 +7516,8 @@ urn:node:LTER</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Carbon_respiration</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Net Carbon Respiration Rate Flux</rdfs:label>
+        <skos:hiddenLabel>Net Carbon Respiration Rate Flux</skos:hiddenLabel>
         <skos:prefLabel>Net Carbon Respiration Rate Flux</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Net Carbon Respiration Rate Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7533,9 +7534,9 @@ urn:node:LTER</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Total_organic_carbon</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Organic Carbon Concentration in Water</rdfs:label>
+        <skos:hiddenLabel>Organic Carbon Concentration in Water</skos:hiddenLabel>
         <skos:prefLabel>Organic Carbon Concentration, in Water</skos:prefLabel>
         <skos-owl1-dl:altLabel>TOC</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Organic Carbon Concentration in Water</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7551,8 +7552,8 @@ urn:node:LTER</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Bicarbonate</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Oceanic Bicarbonate Concentration</rdfs:label>
+        <skos:hiddenLabel>Oceanic Bicarbonate Concentration</skos:hiddenLabel>
         <skos:prefLabel>Oceanic Bicarbonate Concentration</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Oceanic Bicarbonate Concentration</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7568,9 +7569,9 @@ urn:node:LTER</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Carbon_dioxide</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Oceanic Carbon Dioxide Concentration</rdfs:label>
+        <skos:hiddenLabel>Oceanic Carbon Dioxide Concentration</skos:hiddenLabel>
         <skos:prefLabel>Oceanic Carbon Dioxide Concentration</skos:prefLabel>
         <skos-owl1-dl:altLabel>Oceanic CO2 Concentration</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Oceanic Carbon Dioxide Concentration</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7587,8 +7588,8 @@ urn:node:LTER</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Vegetation</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Vegetation Carbon Change Percentage</rdfs:label>
+        <skos:hiddenLabel>Vegetation Carbon Change Percentage</skos:hiddenLabel>
         <skos:prefLabel>Vegetation Carbon Change Percentage</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Vegetation Carbon Change Percentage</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7605,8 +7606,8 @@ urn:node:LTER</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Soil_carbon</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Soil Carbon Change Percentage</rdfs:label>
+        <skos:hiddenLabel>Soil Carbon Change Percentage</skos:hiddenLabel>
         <skos:prefLabel>Soil Carbon Change Percentage</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Soil Carbon Change Percentage</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7621,10 +7622,10 @@ www.supersites.net.au/knb/metacat/tucker.17.15/html</obo:IAO_0000112>
         <obo:IAO_0000119>http://www.biology-online.org/dictionary/Standing_crop</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Aboveground Biomass</rdfs:label>
+        <skos:hiddenLabel>Aboveground Biomass</skos:hiddenLabel>
         <skos:prefLabel>Aboveground Biomass</skos:prefLabel>
         <skos-owl1-dl:altLabel>Aboveground Standing Biomass</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>standing biomass</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Aboveground Biomass</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7651,8 +7652,8 @@ urn:node:LTER</obo:IAO_0000112>
         <obo:IAO_0000119>http://www.biology-online.org/dictionary/Growth_rate</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Growth Rate</rdfs:label>
+        <skos:hiddenLabel>Growth Rate</skos:hiddenLabel>
         <skos:prefLabel>Growth Rate</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Growth Rate</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7675,8 +7676,8 @@ doi:10.5063/AA/nceas.347.3</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Primary_production</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Net Primary Production Biomass Flux</rdfs:label>
+        <skos:hiddenLabel>Net Primary Production Biomass Flux</skos:hiddenLabel>
         <skos:prefLabel>Net Primary Production Biomass Flux</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Net Primary Production Biomass Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7691,10 +7692,10 @@ urn:node:LTER</obo:IAO_0000112>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Carbon-to-nitrogen_ratio</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Carbon to Nitrogen Ratio</rdfs:label>
+        <skos:hiddenLabel>Carbon to Nitrogen Ratio</skos:hiddenLabel>
         <skos:prefLabel>Carbon to Nitrogen Ratio</skos:prefLabel>
         <skos-owl1-dl:altLabel>C to N Ratio</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>Carbon-nitrogen ratio</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Carbon to Nitrogen Ratio</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7716,9 +7717,9 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/54/6</obo:IAO_000011
 http://www.greenfacts.org/glossary/wxyz/wet-weight.htm</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Wet Weight Biomass</rdfs:label>
+        <skos:hiddenLabel>Wet Weight Biomass</skos:hiddenLabel>
         <skos:prefLabel>Wet Weight Biomass</skos:prefLabel>
         <skos-owl1-dl:altLabel>Fresh Weight</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Wet Weight Biomass</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7733,8 +7734,8 @@ peggym.110159.2</obo:IAO_0000112>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Transpiration</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Transpiration Height</rdfs:label>
+        <skos:hiddenLabel>Transpiration Height</skos:hiddenLabel>
         <skos:prefLabel>Transpiration Height</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Transpiration Height</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7749,8 +7750,8 @@ peggym.110159.2</obo:IAO_0000112>
         <rdfs:comment>Count  count dimensionless
 doi:10.5063/AA/gtg488d.4.1</rdfs:comment>
         <rdfs:label>count_MeasurementType</rdfs:label>
+        <skos:hiddenLabel>count_MeasurementType</skos:hiddenLabel>
         <skos:prefLabel>Count Measurement Type</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>count_MeasurementType</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7765,10 +7766,10 @@ urn:node:GOA</obo:IAO_0000112>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Isotopic_signature#Carbon_isotopes</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Stable Carbon Isotope Ratio</rdfs:label>
+        <skos:hiddenLabel>Carbon Stable Isotope Ratio</skos:hiddenLabel>
         <skos:prefLabel>Carbon Stable Isotope Ratio</skos:prefLabel>
         <skos-owl1-dl:altLabel>Carbon Isotope Ratio</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>Carbon SI Ratio</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Carbon Stable Isotope Ratio</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7784,9 +7785,9 @@ df35b.161.4</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Biomass</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Carbon Biomass</rdfs:label>
+        <skos:hiddenLabel>Carbon Biomass</skos:hiddenLabel>
         <skos:prefLabel>Carbon Biomass</skos:prefLabel>
         <skos-owl1-dl:altLabel>Carbon Weight</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Carbon Biomass</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7800,9 +7801,9 @@ urn:node:LTER</obo:IAO_0000112>
         <obo:IAO_0000115>total amount of nitrogen (usually mass) per volume of soil</obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Total Soil Nitrogen Concentration</rdfs:label>
+        <skos:hiddenLabel>Total Soil Nitrogen Concentration</skos:hiddenLabel>
         <skos:prefLabel>Total Soil Nitrogen Concentration</skos:prefLabel>
         <skos-owl1-dl:altLabel>Total soil N</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Total Soil Nitrogen Concentration</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7816,8 +7817,8 @@ urn:node:KNB</obo:IAO_0000112>
         <obo:IAO_0000115>Percentage of a sample that is nitrogen</obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Nitrogen Percentage</rdfs:label>
+        <skos:hiddenLabel>Nitrogen Percentage</skos:hiddenLabel>
         <skos:prefLabel>Nitrogen Percentage</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Nitrogen Percentage</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7827,7 +7828,7 @@ urn:node:KNB</obo:IAO_0000112>
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001146">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001208"/>
         <rdfs:label>Freshwater</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Freshwater</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Freshwater</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -7851,8 +7852,8 @@ judithk.109849.2</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Biomass_(ecology)</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Plant Material Biomass Density</rdfs:label>
+        <skos:hiddenLabel>Plant Material Biomass Density</skos:hiddenLabel>
         <skos:prefLabel>Plant Material Biomass Density</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Plant Material Biomass Density</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7875,8 +7876,8 @@ cmchiu.135.2</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Biomass_(ecology)</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Plant Material Biomass</rdfs:label>
+        <skos:hiddenLabel>Plant Material Biomass</skos:hiddenLabel>
         <skos:prefLabel>Plant Material Biomass</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Plant Material Biomass</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7905,8 +7906,8 @@ df35b.159.6</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Biomass_(ecology)</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Non-Plant Material Biomass Density</rdfs:label>
+        <skos:hiddenLabel>Non-Plant Material Biomass Density</skos:hiddenLabel>
         <skos:prefLabel>Non-Plant Material Biomass Density</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Non-Plant Material Biomass Density</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7935,8 +7936,8 @@ df35b.159.6</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Biomass_(ecology)</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Non-Plant Material Biomass</rdfs:label>
+        <skos:hiddenLabel>Non-Plant Material Biomass</skos:hiddenLabel>
         <skos:prefLabel>Non-Plant Material Biomass</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Non-Plant Material Biomass</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7959,8 +7960,8 @@ doi:10.5063/AA/hstuar01.6.3</obo:IAO_0000112>
 http://www.biology-online.org/dictionary/Dry_mass</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Ash Free Dry Weight Biomass</rdfs:label>
+        <skos:hiddenLabel>Ash Free Dry Weight Biomass</skos:hiddenLabel>
         <skos:prefLabel>Ash Free Dry Weight Biomass</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Ash Free Dry Weight Biomass</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -7977,9 +7978,9 @@ doi:10.5063/AA/nceas.347.3</obo:IAO_0000112>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Quadrat</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Sampling Site Area</rdfs:label>
+        <skos:hiddenLabel>Sampling Site Area</skos:hiddenLabel>
         <skos:prefLabel>Sampling Site Area</skos:prefLabel>
         <skos-owl1-dl:altLabel>quadrat</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Sampling Site Area</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8000,9 +8001,9 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1115/1</obo:IAO_0000
         <obo:IAO_0000119>http://www.biology-online.org/dictionary/Dry_mass</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Dry Weight Biomass</rdfs:label>
+        <skos:hiddenLabel>Dry Weight Biomass</skos:hiddenLabel>
         <skos:prefLabel>Dry Weight Biomass</skos:prefLabel>
         <skos-owl1-dl:altLabel>Dry Weight</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Dry Weight Biomass</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8012,7 +8013,7 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1115/1</obo:IAO_0000
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001154">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001208"/>
         <rdfs:label>Ocean</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Ocean</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Ocean</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -8027,9 +8028,9 @@ www.supersites.net.au/knb/metacat/supersite.377.4/html</obo:IAO_0000112>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Leaf_area_index</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Leaf Area Index</rdfs:label>
+        <skos:hiddenLabel>Leaf Area Index</skos:hiddenLabel>
         <skos:prefLabel>Leaf Area Index</skos:prefLabel>
         <skos-owl1-dl:altLabel>LAI</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Leaf Area Index</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8042,10 +8043,10 @@ www.supersites.net.au/knb/metacat/supersite.377.4/html</obo:IAO_0000112>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Identifier</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Identity</rdfs:label>
+        <skos:hiddenLabel>Identity</skos:hiddenLabel>
         <skos:prefLabel>Identity</skos:prefLabel>
         <skos-owl1-dl:altLabel>ID</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>Identifier</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Identity</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8060,10 +8061,10 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/6004/1</obo:IAO_0000
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/PH</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Water pH</rdfs:label>
+        <skos:hiddenLabel>Water pH</skos:hiddenLabel>
         <skos:prefLabel>Water pH</skos:prefLabel>
         <skos-owl1-dl:altLabel>pH</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>ph</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Water pH</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8079,9 +8080,9 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1130/2</obo:IAO_0000
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:comment>Confirm: if OBOE class ArealDensity is for physical (material) measuements, then we need a different characteristics for this class, eg, analogous to biomass_density.</rdfs:comment>
         <rdfs:label>Count Density</rdfs:label>
+        <skos:hiddenLabel>Count Density</skos:hiddenLabel>
         <skos:prefLabel>Count Density</skos:prefLabel>
         <skos-owl1-dl:altLabel>number density</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Count Density</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8096,8 +8097,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/1009/6</obo:IAO_0000
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Potential_temperature</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Potential Temperature</rdfs:label>
+        <skos:hiddenLabel>Potential Temperature</skos:hiddenLabel>
         <skos:prefLabel>Potential Temperature</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Potential Temperature</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8113,8 +8114,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1098/3</obo:IAO_0000
 https://en.wikipedia.org/wiki/Precipitation</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Precipitation Rate</rdfs:label>
+        <skos:hiddenLabel>Precipitation Rate</skos:hiddenLabel>
         <skos:prefLabel>Precipitation Rate</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Precipitation Rate</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8129,10 +8130,10 @@ peggym.109987.2</obo:IAO_0000112>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Water_vapor</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Air Moisture Percentage</rdfs:label>
+        <skos:hiddenLabel>Air Moisture Percentage</skos:hiddenLabel>
         <skos:prefLabel>Air Moisture Percentage</skos:prefLabel>
         <skos-owl1-dl:altLabel>Air Humidity</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>humidity</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Air Moisture Percentage</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8147,10 +8148,10 @@ doi:10.6073/AA/knb-lter-fce.39.5</obo:IAO_0000112>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Salinity</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Water Salinity</rdfs:label>
+        <skos:hiddenLabel>Water Salinity</skos:hiddenLabel>
         <skos:prefLabel>Water Salinity</skos:prefLabel>
         <skos-owl1-dl:altLabel>Salinity</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>salinity</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Water Salinity</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8165,8 +8166,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/433/8</obo:IAO_00001
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Soil_salinity</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Soil Porewater Salinity Concentration</rdfs:label>
+        <skos:hiddenLabel>Soil Porewater Salinity Concentration</skos:hiddenLabel>
         <skos:prefLabel>Soil Porewater Salinity Concentration</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Soil Porewater Salinity Concentration</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8190,7 +8191,7 @@ https://en.wikipedia.org/wiki/Density</obo:IAO_0000119>
         <rdfs:comment>Confirm:
 This class may be deprecated, or transformed somehow for use in population measurements. For now, only one dataset in the corpus uses it, for a common representation of abundance, for groups of organisms. (https://pasta.lternet.edu/package/metadata/eml/knb-lter-pal/212/1)</rdfs:comment>
         <rdfs:label>Volume Fraction Biomass Concentration</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Volume Fraction Biomass Concentration</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Volume Fraction Biomass Concentration</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -8200,8 +8201,8 @@ This class may be deprecated, or transformed somehow for use in population measu
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001167">
         <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType"/>
         <rdfs:label>temporal_MeasurementType</rdfs:label>
+        <skos:hiddenLabel>temporal_MeasurementType</skos:hiddenLabel>
         <skos:prefLabel>Temporal Measurement Type</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>temporal_MeasurementType</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8219,8 +8220,8 @@ If the numerator and denominator are the same entity, then this would be a measu
         <rdfs:comment>There could be a subclass for a material&apos;s areal density that
 measuresCharacterstic only ArealDensity</rdfs:comment>
         <rdfs:label>areal_density_MeasurementType</rdfs:label>
+        <skos:hiddenLabel>areal_density_MeasurementType</skos:hiddenLabel>
         <skos:prefLabel>Areal Density Measurement Type</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>areal_density_MeasurementType</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8247,8 +8248,8 @@ https://pasta.lternet.edu/package/metadata/eml/ecotrends/5556/2</obo:IAO_0000112
         <obo:IAO_0000115>Number of non-plant material entities (i.e. animals, fungi) per unit area at a given time</obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Non-Plant Material Count Aerial Density</rdfs:label>
+        <skos:hiddenLabel>Non-Plant Material Count Aerial Density</skos:hiddenLabel>
         <skos:prefLabel>Non-Plant Material Count Aerial Density</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Non-Plant Material Count Aerial Density</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8268,8 +8269,8 @@ taxa:Aeschynomene_pratensis</obo:IAO_0000112>
         <obo:IAO_0000115>Number of plant material entities (i.e. trees, plant parts) per unit area at a given time</obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Plant Material Count Aerial Density</rdfs:label>
+        <skos:hiddenLabel>Plant Material Count Aerial Density</skos:hiddenLabel>
         <skos:prefLabel>Plant Material Count Aerial Density</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Plant Material Count Aerial Density</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8283,8 +8284,8 @@ cgries.16.1</obo:IAO_0000112>
         <obo:IAO_0000115>Number of built feature entities (i.e. roads, bridges) per unit area at a given time</obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Built Feature Count Aerial Density</rdfs:label>
+        <skos:hiddenLabel>Built Feature Count Aerial Density</skos:hiddenLabel>
         <skos:prefLabel>Built Feature Count Aerial Density</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Built Feature Count Aerial Density</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8303,8 +8304,8 @@ http://www.biology-online.org/dictionary/Litter</obo:IAO_0000119>
         <rdfs:seeAlso>decomposition</rdfs:seeAlso>
         <rdfs:seeAlso>detritus</rdfs:seeAlso>
         <rdfs:seeAlso>leaf litter</rdfs:seeAlso>
+        <skos:hiddenLabel>Litter Biomass Density</skos:hiddenLabel>
         <skos:prefLabel>Litter Biomass Density</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Litter Biomass Density</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8320,8 +8321,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-gce/249/33</obo:IAO_0000
 https://en.wikipedia.org/wiki/Tide</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Tide Height</rdfs:label>
+        <skos:hiddenLabel>Tide Height</skos:hiddenLabel>
         <skos:prefLabel>Tide Height</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Tide Height</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8343,8 +8344,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1059/3</obo:IAO_0000
 https://en.wikipedia.org/wiki/Sea_level</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Sea Level Height</rdfs:label>
+        <skos:hiddenLabel>Sea Level Height</skos:hiddenLabel>
         <skos:prefLabel>Sea Level Height</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Sea Level Height</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8361,8 +8362,8 @@ https://en.wikipedia.org/wiki/Water</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Water Height</rdfs:label>
         <rdfs:seeAlso>Evapotranspiration</rdfs:seeAlso>
+        <skos:hiddenLabel>Water Height</skos:hiddenLabel>
         <skos:prefLabel>Water Height</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Water Height</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8377,8 +8378,8 @@ df35d.398.6</obo:IAO_0000112>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Wave_height</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Wave Height</rdfs:label>
+        <skos:hiddenLabel>Wave Height</skos:hiddenLabel>
         <skos:prefLabel>Wave Height</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Wave Height</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8405,8 +8406,8 @@ doi:10.5063/AA/nceas.919.3</obo:IAO_0000112>
         <obo:IAO_0000115>Length of an entity that is not a plant (i.e. body length of a specimen)</obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Non-Plant Material Length</rdfs:label>
+        <skos:hiddenLabel>Non-Plant Material Length</skos:hiddenLabel>
         <skos:prefLabel>Non-Plant Material Length</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Non-Plant Material Length</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8422,9 +8423,9 @@ judithk.1264.2</obo:IAO_0000112>
 http://www.greenfacts.org/glossary/wxyz/wet-weight.htm</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Soil Wet Weight</rdfs:label>
+        <skos:hiddenLabel>Soil Wet Weight</skos:hiddenLabel>
         <skos:prefLabel>Soil Wet Weight</skos:prefLabel>
         <skos-owl1-dl:altLabel>Soil Wet Mass</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Soil Wet Weight</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8440,9 +8441,9 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/344/16</obo:IAO_0000
 https://en.wikipedia.org/wiki/Biomass_(ecology)</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Nitrogen Biomass Density</rdfs:label>
+        <skos:hiddenLabel>Nitrogen Biomass Density</skos:hiddenLabel>
         <skos:prefLabel>Nitrogen Biomass Density</skos:prefLabel>
         <skos-owl1-dl:altLabel>Nitrogen Pool Biomass Density</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Nitrogen Biomass Density</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8458,9 +8459,9 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/344/16</obo:IAO_0000
 http://www.biology-online.org/dictionary/Biomass</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Carbon Biomass Density</rdfs:label>
+        <skos:hiddenLabel>Carbon Biomass Density</skos:hiddenLabel>
         <skos:prefLabel>Carbon Biomass Density</skos:prefLabel>
         <skos-owl1-dl:altLabel>Carbon Pool Biomass Density</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Carbon Biomass Density</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8474,10 +8475,10 @@ http://www.biology-online.org/dictionary/Biomass</obo:IAO_0000119>
 https://en.wikipedia.org/wiki/Time</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Time Step</rdfs:label>
+        <skos:hiddenLabel>Time Step</skos:hiddenLabel>
         <skos:prefLabel>Time Step</skos:prefLabel>
         <skos-owl1-dl:altLabel>duration</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>time interval</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Time Step</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8499,8 +8500,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/49/8</obo:IAO_000011
 http://www.biology-online.org/dictionary/Dry_mass</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Dry Mass Density</rdfs:label>
+        <skos:hiddenLabel>Dry Mass Density</skos:hiddenLabel>
         <skos:prefLabel>Dry Mass Density</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Dry Mass Density</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8513,8 +8514,8 @@ http://www.biology-online.org/dictionary/Dry_mass</obo:IAO_0000119>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Pressure</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>pressure_MeasurementType</rdfs:label>
+        <skos:hiddenLabel>pressure_MeasurementType</skos:hiddenLabel>
         <skos:prefLabel>Pressure Measurement Type</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>pressure_MeasurementType</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8529,10 +8530,10 @@ ark:/90135/q17s7kq7/1/mrt-eml.xml</obo:IAO_0000112>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Atmospheric_pressure</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Air Pressure</rdfs:label>
+        <skos:hiddenLabel>Air Pressure</skos:hiddenLabel>
         <skos:prefLabel>Air Pressure</skos:prefLabel>
         <skos-owl1-dl:altLabel>Atmospheric Pressure</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel xml:lang="en">barometric pressure</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Air Pressure</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8548,8 +8549,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/1009/6</obo:IAO_0000
 https://en.wikipedia.org/wiki/Seawater</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Seawater Pressure</rdfs:label>
+        <skos:hiddenLabel>Seawater Pressure</skos:hiddenLabel>
         <skos:prefLabel>Seawater Pressure</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Seawater Pressure</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8565,10 +8566,10 @@ https://pasta.lternet.edu/package/metadata/eml/ecotrends/3114/2</obo:IAO_0000112
 https://en.wikipedia.org/wiki/Counting</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Sample Count</rdfs:label>
+        <skos:hiddenLabel>Sample Count</skos:hiddenLabel>
         <skos:prefLabel>Sample Count</skos:prefLabel>
         <skos-owl1-dl:altLabel>abundance</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>count</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Sample Count</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8584,9 +8585,9 @@ judithk.1287.1</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Counting</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Entity Count</rdfs:label>
+        <skos:hiddenLabel>Entity Count</skos:hiddenLabel>
         <skos:prefLabel>Entity Count</skos:prefLabel>
         <skos-owl1-dl:altLabel>count</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Entity Count</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8605,8 +8606,8 @@ https://en.wikipedia.org/wiki/Plant_cover</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Aerial Cover Percentage</rdfs:label>
         <rdfs:seeAlso>ground cover</rdfs:seeAlso>
+        <skos:hiddenLabel>Aerial Cover Percentage</skos:hiddenLabel>
         <skos:prefLabel>Aerial Cover Percentage</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Aerial Cover Percentage</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8621,9 +8622,9 @@ www.supersites.net.au/knb/metacat/lloyd.635.9/html</obo:IAO_0000112>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Crown_closure</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Crown Cover Percentage</rdfs:label>
+        <skos:hiddenLabel>Crown Cover Percentage</skos:hiddenLabel>
         <skos:prefLabel>Crown Cover Percentage</skos:prefLabel>
         <skos-owl1-dl:altLabel>Crown Cover</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Crown Cover Percentage</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8639,8 +8640,8 @@ judithk.173.7</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Canopy_(biology)</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Canopy Percentage</rdfs:label>
+        <skos:hiddenLabel>Canopy Percentage</skos:hiddenLabel>
         <skos:prefLabel>Canopy Percentage</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Canopy Percentage</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8653,8 +8654,8 @@ https://en.wikipedia.org/wiki/Canopy_(biology)</obo:IAO_0000119>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Name</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Name</rdfs:label>
+        <skos:hiddenLabel>Name</skos:hiddenLabel>
         <skos:prefLabel>Name</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Name</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8675,8 +8676,8 @@ ark:/90135/q13j39xf/4/mrt-eml.xml</obo:IAO_0000112>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Sample_(statistics)</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Sampled Individuals Proportion</rdfs:label>
+        <skos:hiddenLabel>Sampled Individuals Proportion</skos:hiddenLabel>
         <skos:prefLabel>Sampled Individuals Proportion</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Sampled Individuals Proportion</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8694,8 +8695,8 @@ https://en.wikipedia.org/wiki/Area</obo:IAO_0000119>
 https://en.wikipedia.org/wiki/Quadrat</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Area Percentage</rdfs:label>
+        <skos:hiddenLabel>Area Percentage</skos:hiddenLabel>
         <skos:prefLabel>Area Percentage</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Area Percentage</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8711,8 +8712,8 @@ milligramsPerGramPerHour
 e.g, see these attributes and dataset: GrossProductionPerMass rate Periphyton Gross Production per Mass
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1107/3</rdfs:comment>
         <rdfs:label>Carbon Specific Gross Production Rate</rdfs:label>
+        <skos:hiddenLabel>Carbon Specific Gross Production Rate</skos:hiddenLabel>
         <skos:prefLabel>Carbon Specific Gross Production Rate</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Carbon Specific Gross Production Rate</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8727,8 +8728,8 @@ https://pasta.lternet.edu/package/metadata/eml/ecotrends/2645/2</obo:IAO_0000112
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Plant_cover</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Plant Cover Percentage</rdfs:label>
+        <skos:hiddenLabel>Plant Cover Percentage</skos:hiddenLabel>
         <skos:prefLabel>Plant Cover Percentage</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Plant Cover Percentage</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8742,8 +8743,8 @@ https://pasta.lternet.edu/package/metadata/eml/ecotrends/2645/2</obo:IAO_0000112
 https://en.wikipedia.org/wiki/Density</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>mass_density_MeasurementType</rdfs:label>
+        <skos:hiddenLabel>mass_density_MeasurementType</skos:hiddenLabel>
         <skos:prefLabel>Mass Density Measurement Type</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>mass_density_MeasurementType</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8758,8 +8759,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-ntl/79/4</obo:IAO_000011
         <obo:IAO_0000119>Adapted from
 https://en.wikipedia.org/wiki/Density</obo:IAO_0000119>
         <rdfs:label>volumetric_density_MeasurementType</rdfs:label>
+        <skos:hiddenLabel>volumetric_density_MeasurementType</skos:hiddenLabel>
         <skos:prefLabel>Volumetric Density Measurement Type</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>volumetric_density_MeasurementType</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8781,10 +8782,10 @@ doi:10.5063/AA/nceas.958.8</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Density</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Biomass Volumetric Density</rdfs:label>
+        <skos:hiddenLabel>Biomass Volumetric Density</skos:hiddenLabel>
         <skos:prefLabel>Biomass Volumetric Density</skos:prefLabel>
         <skos-owl1-dl:altLabel>abundance</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>richness</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Biomass Volumetric Density</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8800,8 +8801,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-ntl/37/11</obo:IAO_00001
 https://en.wikipedia.org/wiki/Density</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Number Volumetric Density</rdfs:label>
+        <skos:hiddenLabel>Number Volumetric Density</skos:hiddenLabel>
         <skos:prefLabel>Number Volumetric Density</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Number Volumetric Density</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8818,8 +8819,8 @@ https://en.wikipedia.org/wiki/Biomass
 https://en.wikipedia.org/wiki/Concentration</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Biomass Concentration</rdfs:label>
+        <skos:hiddenLabel>Biomass Concentration</skos:hiddenLabel>
         <skos:prefLabel>Biomass Concentration</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Biomass Concentration</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8835,8 +8836,8 @@ cgries.23.1</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Water</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Water Depth</rdfs:label>
+        <skos:hiddenLabel>Water Depth</skos:hiddenLabel>
         <skos:prefLabel>Water Depth</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Water Depth</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8858,9 +8859,9 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/1009/6</obo:IAO_0000
 https://en.wikipedia.org/wiki/Sea</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Seawater Depth</rdfs:label>
+        <skos:hiddenLabel>Seawater Depth</skos:hiddenLabel>
         <skos:prefLabel>Seawater Depth</skos:prefLabel>
         <skos-owl1-dl:altLabel>Sea Depth</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Seawater Depth</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8884,8 +8885,8 @@ https://en.wikipedia.org/wiki/Snow</obo:IAO_0000119>
         <rdfs:label>Snow Depth</rdfs:label>
         <rdfs:seeAlso>precipitation</rdfs:seeAlso>
         <rdfs:seeAlso>snowpack</rdfs:seeAlso>
+        <skos:hiddenLabel>Snow Depth</skos:hiddenLabel>
         <skos:prefLabel>Snow Depth</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Snow Depth</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8901,8 +8902,8 @@ ben.1.1</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Lake</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Lake Depth</rdfs:label>
+        <skos:hiddenLabel>Lake Depth</skos:hiddenLabel>
         <skos:prefLabel>Lake Depth</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Lake Depth</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8918,8 +8919,8 @@ www.supersites.net.au/knb/metacat/supersite.182.10/html</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Soil</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Soil Depth</rdfs:label>
+        <skos:hiddenLabel>Soil Depth</skos:hiddenLabel>
         <skos:prefLabel>Soil Depth</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Soil Depth</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8932,7 +8933,7 @@ https://en.wikipedia.org/wiki/Soil</obo:IAO_0000119>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Secchi_disk</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Secchi Depth Method</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Secchi Depth Method</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Secchi Depth Method</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -8951,8 +8952,8 @@ https://en.wikipedia.org/wiki/Plant_litter</obo:IAO_0000119>
         <rdfs:seeAlso>decomposition</rdfs:seeAlso>
         <rdfs:seeAlso>detritus</rdfs:seeAlso>
         <rdfs:seeAlso>leaf litter</rdfs:seeAlso>
+        <skos:hiddenLabel>Litter Depth</skos:hiddenLabel>
         <skos:prefLabel>Litter Depth</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Litter Depth</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8974,9 +8975,9 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-bnz/190/20</obo:IAO_0000
 https://en.wikipedia.org/wiki/Active_layer</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Soil Active Layer Depth</rdfs:label>
+        <skos:hiddenLabel>Soil Active Layer Depth</skos:hiddenLabel>
         <skos:prefLabel>Soil Active Layer Depth</skos:prefLabel>
         <skos-owl1-dl:altLabel>Active Layer Thickness</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Soil Active Layer Depth</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -8995,8 +8996,8 @@ https://en.wikipedia.org/wiki/Primary_production#Gross_primary_production_and_ne
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:comment>Carbon in the numerator (weight or moles) and measured weight (in weight or moles) in both the numerator and denominator</rdfs:comment>
         <rdfs:label>Specific Net Production Flux</rdfs:label>
+        <skos:hiddenLabel>Specifc Net Production Flux</skos:hiddenLabel>
         <skos:prefLabel>Specifc Net Production Flux</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Specifc Net Production Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9012,8 +9013,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-pie/161/3</obo:IAO_00001
 https://en.wikipedia.org/wiki/Stream</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Stream Depth</rdfs:label>
+        <skos:hiddenLabel>Stream Depth</skos:hiddenLabel>
         <skos:prefLabel>Stream Depth</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Stream Depth</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9028,8 +9029,8 @@ judithk.1716.4</obo:IAO_0000112>
         <obo:IAO_0000119>Adapted from
 https://en.wikipedia.org/wiki/Groundwater</obo:IAO_0000119>
         <rdfs:label>Groundwater Depth</rdfs:label>
+        <skos:hiddenLabel>Groundwater Depth</skos:hiddenLabel>
         <skos:prefLabel>Groundwater Depth</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Groundwater Depth</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9045,9 +9046,9 @@ judithk.1060.2</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Tree_crown_measurement</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Tree Crown Diameter</rdfs:label>
+        <skos:hiddenLabel>Tree Crown Diameter</skos:hiddenLabel>
         <skos:prefLabel>Tree Crown Diameter</skos:prefLabel>
         <skos-owl1-dl:altLabel>Crown Diameter</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Tree Crown Diameter</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9063,9 +9064,9 @@ judithk.1000.13</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Canopy_(biology)</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Tree Canopy Diameter</rdfs:label>
+        <skos:hiddenLabel>Tree Canopy Diameter</skos:hiddenLabel>
         <skos:prefLabel>Tree Canopy Diameter</skos:prefLabel>
         <skos-owl1-dl:altLabel>Canopy Diameter</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Tree Canopy Diameter</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9080,9 +9081,9 @@ knb-lter-arc.20005.1</obo:IAO_0000112>
         <obo:IAO_0000119>http://disc.sci.gsfc.nasa.gov/hydrology/data-holdings/parameters/ground_heat_flux.shtml</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Ground Heat Flux</rdfs:label>
+        <skos:hiddenLabel>Ground Heat Flux</skos:hiddenLabel>
         <skos:prefLabel>Ground Heat Flux</skos:prefLabel>
         <skos-owl1-dl:altLabel>soil heat flux</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Ground Heat Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9095,9 +9096,9 @@ knb-lter-arc.20005.1</obo:IAO_0000112>
         <obo:IAO_0000119>Adapted from OBOE definition of tag number</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Tag Number</rdfs:label>
+        <skos:hiddenLabel>Tag Number</skos:hiddenLabel>
         <skos:prefLabel>Tag Number</skos:prefLabel>
         <skos-owl1-dl:altLabel>Tag</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Tag Number</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9118,8 +9119,8 @@ knb-lter-arc.20005.1</obo:IAO_0000112>
         <obo:IAO_0000119>http://disc.gsfc.nasa.gov/hydrology/data-holdings/parameters/latent_heat_flux.shtml</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Latent Heat Flux</rdfs:label>
+        <skos:hiddenLabel>Latent Heat Flux</skos:hiddenLabel>
         <skos:prefLabel>Latent Heat Flux</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Latent Heat Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9135,9 +9136,9 @@ judithk.1256.3</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Canopy_(biology)</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Tree Canopy Height</rdfs:label>
+        <skos:hiddenLabel>Tree Canopy Height</skos:hiddenLabel>
         <skos:prefLabel>Tree Canopy Height</skos:prefLabel>
         <skos-owl1-dl:altLabel>Canopy Height</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Tree Canopy Height</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9159,9 +9160,9 @@ www.supersites.net.au/knb/metacat/lloyd.628.7/html</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Tree_crown_measurement</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Tree Crown Height</rdfs:label>
+        <skos:hiddenLabel>Tree Crown Height</skos:hiddenLabel>
         <skos:prefLabel>Crown Height</skos:prefLabel>
         <skos:prefLabel>Tree Crown Height</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Tree Crown Height</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9181,8 +9182,8 @@ www.supersites.net.au/knb/metacat/supersite.116.9/html</obo:IAO_0000112>
         <obo:IAO_0000115>Height of a physical entity that is a plant or part of a plant (i.e. tree trunk height)</obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Plant Material Height</rdfs:label>
+        <skos:hiddenLabel>Plant Material Height</skos:hiddenLabel>
         <skos:prefLabel>Plant Material Height</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Plant Material Height</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9197,8 +9198,8 @@ peggym.110130.3</obo:IAO_0000112>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Precipitation</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Precipitation Height</rdfs:label>
+        <skos:hiddenLabel>Precipitation Height</skos:hiddenLabel>
         <skos:prefLabel>Precipitation Height</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Precipitation Height</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9220,8 +9221,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/75/1</obo:IAO_000011
 https://en.wikipedia.org/wiki/Carbon_dioxide</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Carbon Dioxide Pressure</rdfs:label>
+        <skos:hiddenLabel>Carbon Dioxide Pressure</skos:hiddenLabel>
         <skos:prefLabel>Carbon Dioxide Pressure</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Carbon Dioxide Pressure</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9237,8 +9238,8 @@ ark:/90135/q17s7kq7/1/mrt-eml.xml</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Temperature</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Air Temperature</rdfs:label>
+        <skos:hiddenLabel>Air Temperature</skos:hiddenLabel>
         <skos:prefLabel>Air Temperature</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Air Temperature</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9254,7 +9255,7 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/1009/6</obo:IAO_0000
 https://en.wikipedia.org/wiki/Temperature</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Seawater Temperature</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Seawater Temperature</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Seawater Temperature</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -9270,8 +9271,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/1007/6</obo:IAO_0000
 https://en.wikipedia.org/wiki/Temperature</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Water Temperature</rdfs:label>
+        <skos:hiddenLabel>Water Temperature</skos:hiddenLabel>
         <skos:prefLabel>Water Temperature</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Water Temperature</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9287,8 +9288,8 @@ doi:10.5063/AA/Jinyuntang.15.5</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Temperature</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Peat Temperature</rdfs:label>
+        <skos:hiddenLabel>Peat Temperature</skos:hiddenLabel>
         <skos:prefLabel>Peat Temperature</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Peat Temperature</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9304,8 +9305,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-hfr/68/21</obo:IAO_00001
 https://en.wikipedia.org/wiki/Temperature</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Ground Temperature</rdfs:label>
+        <skos:hiddenLabel>Ground Temperature</skos:hiddenLabel>
         <skos:prefLabel>Ground Temperature</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Ground Temperature</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9321,8 +9322,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-hfr/130/13</obo:IAO_0000
 https://en.wikipedia.org/wiki/Temperature</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Soil Temperature</rdfs:label>
+        <skos:hiddenLabel>Soil Temperature</skos:hiddenLabel>
         <skos:prefLabel>Soil Temperature</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Soil Temperature</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9338,8 +9339,8 @@ df35d.362.10</obo:IAO_0000112>
 https://en.wikipedia.org/wiki/Temperature</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>lake water temperature</rdfs:label>
+        <skos:hiddenLabel>Lake Temperature</skos:hiddenLabel>
         <skos:prefLabel>Lake Temperature</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Lake Temperature</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9356,8 +9357,8 @@ https://en.wikipedia.org/wiki/Primary_production#Gross_primary_production_and_ne
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:comment>Carbon in the numerator (weight or moles) and measured weight (in weight or moles) in both the numerator and denominator. For example, carbon or some other material can be in the numerator.</rdfs:comment>
         <rdfs:label>Specific Gross Production Flux</rdfs:label>
+        <skos:hiddenLabel>Specifc Gross Production Flux</skos:hiddenLabel>
         <skos:prefLabel>Specifc Gross Production Flux</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Specifc Gross Production Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9374,8 +9375,8 @@ https://en.wikipedia.org/wiki/Velocity</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:comment>Wind measurements are usually reported in two parts: speed and direction. Velocity is direction-aware, so would be a combined form of these (the OBOE observation). A measurement of a wind vector would be wind velocity, and would need a new class.</rdfs:comment>
         <rdfs:label>Wind Speed</rdfs:label>
+        <skos:hiddenLabel>Wind Speed</skos:hiddenLabel>
         <skos:prefLabel>Wind Speed</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Wind Speed</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9391,8 +9392,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1135/1</obo:IAO_0000
 https://en.wikipedia.org/wiki/Velocity</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Water Velocity</rdfs:label>
+        <skos:hiddenLabel>Water Velocity</skos:hiddenLabel>
         <skos:prefLabel>Water Velocity</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Water Velocity</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9408,8 +9409,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/2005/15</obo:IAO_000
 https://en.wikipedia.org/wiki/Velocity</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Seawater Velocity</rdfs:label>
+        <skos:hiddenLabel>Seawater Velocity</skos:hiddenLabel>
         <skos:prefLabel>Seawater Velocity</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Seawater Velocity</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9422,8 +9423,8 @@ https://en.wikipedia.org/wiki/Velocity</obo:IAO_0000119>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Volume</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>volume_measurementType</rdfs:label>
+        <skos:hiddenLabel>volume_measurementType</skos:hiddenLabel>
         <skos:prefLabel>Volume Measurement Type</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>volume_measurementType</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9439,8 +9440,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1067/3</obo:IAO_0000
 https://en.wikipedia.org/wiki/Precipitation</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Precipitation Volume</rdfs:label>
+        <skos:hiddenLabel>Precipitation Volume</skos:hiddenLabel>
         <skos:prefLabel>Precipitation Volume</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Precipitation Volume</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9454,8 +9455,8 @@ jstocking.3.4</obo:IAO_0000112>
         <obo:IAO_0000115>Width of a physical abiotic entity (i.e. width of a stream)</obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Physical Feature Width</rdfs:label>
+        <skos:hiddenLabel>Physical Feature Width</skos:hiddenLabel>
         <skos:prefLabel>Physical Feature Width</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Physical Feature Width</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9471,9 +9472,9 @@ judithk.1264.2</obo:IAO_0000112>
 http://medical-dictionary.thefreedictionary.com/dry+mass</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Soil Dry Weight</rdfs:label>
+        <skos:hiddenLabel>Soil Dry Weight</skos:hiddenLabel>
         <skos:prefLabel>Soil Dry Weight</skos:prefLabel>
         <skos-owl1-dl:altLabel>Soil Dry Mass</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Soil Dry Weight</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9492,8 +9493,8 @@ http://medical-dictionary.thefreedictionary.com/dry+mass</obo:IAO_0000119>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Mass</obo:IAO_0000119>
         <obo:IAO_0000119>https://orcid.org/0000-0002-5896-7295</obo:IAO_0000119>
         <rdfs:label>mass_measurementType</rdfs:label>
+        <skos:hiddenLabel>mass_measurementType</skos:hiddenLabel>
         <skos:prefLabel>Mass Measurement Type</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>mass_measurementType</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9513,8 +9514,8 @@ https://en.wikipedia.org/wiki/Chlorophyll</obo:IAO_0000115>
         <obo:IAO_0000115>The concentration of chlorophyll, which are related green pigments found in cyanobacteria and the chloroplasts of algae and plants. to do: delete extra string.</obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Chlorophyll Concentration</rdfs:label>
+        <skos:hiddenLabel>Chlorophyll Concentration</skos:hiddenLabel>
         <skos:prefLabel>Chlorophyll Concentration</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Chlorophyll Concentration</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9529,10 +9530,10 @@ https://en.wikipedia.org/wiki/Chlorophyll</obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <dc:description>Free oxygen also occurs in solution in the world&apos;s water bodies. The increased solubility of O2 at lower temperatures has important implications for ocean life, as polar oceans support a much higher density of life due to their higher oxygen content. Water polluted with plant nutrients such as nitrates or phosphates may stimulate growth of algae by a process called eutrophication and the decay of these organisms and other biomaterials may reduce the O2 content in eutrophic water bodies. Scientists assess this aspect of water quality by measuring the water&apos;s biochemical oxygen demand, or the amount of O2 needed to restore it to a normal concentration.</dc:description>
         <rdfs:label>Oxygen Concentration</rdfs:label>
+        <skos:hiddenLabel>Oxygen Concentration</skos:hiddenLabel>
         <skos:prefLabel>Oxygen Concentration</skos:prefLabel>
         <skos-owl1-dl:altLabel>Dissolved Oxygen Concentration</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>O2 concentration</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Oxygen Concentration</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9548,10 +9549,10 @@ https://en.wikipedia.org/wiki/Pheophytin</obo:IAO_0000119>
         <rdfs:comment>Structurally, phaeophytin is a chlorophyll molecule without the central magnesium ion.
 https://en.wikipedia.org/wiki/Pheophytin</rdfs:comment>
         <rdfs:label>Pheophytin Concentration</rdfs:label>
+        <skos:hiddenLabel>Pheophytin Concentration</skos:hiddenLabel>
         <skos:prefLabel>Pheophytin Concentration</skos:prefLabel>
         <skos-owl1-dl:altLabel>Phaeophytin Concentration</skos-owl1-dl:altLabel>
         <skos-owl1-dl:altLabel>Pheo Concentration</skos-owl1-dl:altLabel>
-        <skos-owl1-dl:hiddenLabel>Pheophytin Concentration</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9567,8 +9568,8 @@ https://en.wikipedia.org/wiki/Pheophytin</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label>Depth</rdfs:label>
+        <skos:hiddenLabel>Depth</skos:hiddenLabel>
         <skos:prefLabel>Depth</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Depth</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9578,7 +9579,7 @@ https://en.wikipedia.org/wiki/Pheophytin</rdfs:comment>
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001251">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
         <rdfs:label>Diameter</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Diameter</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Diameter</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -9648,7 +9649,7 @@ https://en.wikipedia.org/wiki/Pheophytin</rdfs:comment>
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001255">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000553"/>
         <rdfs:label>Circumference</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>Circumference</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>Circumference</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -9667,8 +9668,8 @@ https://en.wikipedia.org/wiki/Pheophytin</rdfs:comment>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:comment>The addition of grams in the denominator makes it a specific flux (i.e. gC/(g DW * t * m^2))</rdfs:comment>
         <rdfs:label>Specific Flux</rdfs:label>
+        <skos:hiddenLabel>Specific Flux</skos:hiddenLabel>
         <skos:prefLabel>Specific Flux</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Specific Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -9684,8 +9685,8 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1107/3</obo:IAO_0000
 https://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label>Specific Respiration Flux</rdfs:label>
+        <skos:hiddenLabel>Specific Respiration Flux</skos:hiddenLabel>
         <skos:prefLabel>Specific Respiration Flux</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>Specific Respiration Flux</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
@@ -27440,7 +27441,7 @@ https://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <oboInOwl:hasRelatedSynonym>photosynthetically active radiation</oboInOwl:hasRelatedSynonym>
         <rdfs:label xml:lang="en">PAR</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>PAR</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>PAR</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -27453,7 +27454,7 @@ https://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
         <obo:IAO_0000119>https://en.wikipedia.org/wiki/Infrared</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label xml:lang="en">infrared</rdfs:label>
-        <skos-owl1-dl:hiddenLabel>infrared</skos-owl1-dl:hiddenLabel>
+        <skos:hiddenLabel>infrared</skos:hiddenLabel>
     </owl:Class>
     
 
@@ -27473,8 +27474,8 @@ https://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
         <rdfs:label xml:lang="en">ultraviolet</rdfs:label>
         <rdfs:seeAlso>ultraviolet radiation</rdfs:seeAlso>
+        <skos:hiddenLabel>ultraviolet</skos:hiddenLabel>
         <skos:prefLabel>Ultraviolet</skos:prefLabel>
-        <skos-owl1-dl:hiddenLabel>ultraviolet</skos-owl1-dl:hiddenLabel>
     </owl:Class>
     
 
