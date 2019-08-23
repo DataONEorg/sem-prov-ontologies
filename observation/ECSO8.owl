@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.dataone.org/odo/ECSO8.owl"
      xml:base="http://purl.dataone.org/odo/ECSO8.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:odo="http://purl.dataone.org/odo/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:envo="http://purl.obolibrary.org/obo/envo#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:odo="http://purl.dataone.org/odo/"
-     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:envo="http://purl.obolibrary.org/obo/envo#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.dataone.org/odo/ECSO8.owl"/>
     
 
@@ -16891,7 +16891,7 @@ https://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001104"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-29T22:16:15Z</dc:date>
-        <rdfs:label xml:lang="en">temperature change</rdfs:label>
+        <rdfs:label xml:lang="en">temperature difference</rdfs:label>
     </owl:Class>
     
 
@@ -22153,7 +22153,7 @@ https://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
     <!-- http://purl.dataone.org/odo/ECSO_00002624 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002624">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001104"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00002147"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-15T23:06:09Z</dc:date>
         <rdfs:label xml:lang="en">lower troposphere stability</rdfs:label>
@@ -26924,17 +26924,6 @@ https://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
     
 
 
-    <!-- http://purl.dataone.org/odo/ECSO_00003055 -->
-
-    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00003055">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001104"/>
-        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-16T21:48:18Z</dc:date>
-        <rdfs:label xml:lang="en">stem temperature difference</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.dataone.org/odo/ECSO_00003056 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00003056">
@@ -27663,7 +27652,7 @@ https://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
         <oboInOwl:id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENVO:00002297</oboInOwl:id>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A material entity determines an environmental system when its removal would cause the collapse of that system. For example, a seamount determines a seamount environment, acting as its &apos;hub&apos;. This class is currently being aligned to the Basic Formal Ontology. Following this alignment, its definition and the definitions of its subclasses will be revised.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">environmental feature</rdfs:label>
-        <skos:prefLabel>environmental feature</skos:prefLabel>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">environmental feature</skos:prefLabel>
     </owl:Class>
     
 
@@ -27680,7 +27669,7 @@ https://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">portion of environmental material</oboInOwl:hasExactSynonym>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Everything under this parent must be a mass noun. All subclasses are to be understood as being composed primarily of the named entity, rather than restricted to that entity. For example, &quot;ENVO:water&quot; is to be understood as &quot;environmental material composed primarly of some CHEBI:water&quot;. This class is currently being aligned to the Basic Formal Ontology. Following this alignment, its definition and the definitions of its subclasses will be revised.</rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">environmental material</rdfs:label>
-        <skos:prefLabel>environmental material</skos:prefLabel>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">environmental material</skos:prefLabel>
     </owl:Class>
     
 
@@ -45818,8 +45807,9 @@ Sciences, Vol. 15,No.2, pp. 263-276.</obo:IAO_0000119>
 
     <rdf:Description rdf:about="http://purl.obolibrary.org/obo/envo.owl">
         <dc:creator>http://orcid.org/0000-0002-8343-612X</dc:creator>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Includes Ontology(OntologyID(OntologyIRI(&lt;http://purl.obolibrary.org/obo/envo/modules/entity_attribute.owl&gt;) VersionIRI(&lt;null&gt;))) [Axioms: 85 Logical Axioms: 13]</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Includes Ontology(OntologyID(OntologyIRI(&lt;http://purl.obolibrary.org/obo/envo/modules/process_attribute.owl&gt;) VersionIRI(&lt;null&gt;))) [Axioms: 21 Logical Axioms: 2]</rdfs:comment>
         <oboInOwl:default-namespace rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENVO</oboInOwl:default-namespace>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Includes Ontology(OntologyID(OntologyIRI(&lt;http://purl.obolibrary.org/obo/envo/modules/entity_quality_location.owl&gt;) VersionIRI(&lt;null&gt;))) [Axioms: 45 Logical Axioms: 6]</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENVO is an ontology which represents knowledge about environments,environmental processes, ecosystems, habitats, and related entities. It interoperates with other ontologies in the OBO Foundry and Library.
 
 New terms or revisions can be requested at https://github.com/EnvironmentOntology/envo/issues/
@@ -45829,8 +45819,7 @@ Please see www.environmentontology.org for more information and citations.</rdfs
         <dc:creator>http://orcid.org/0000-0002-4366-3088</dc:creator>
         <dc:creator>http://orcid.org/0000-0002-6601-2165</dc:creator>
         <dc:creator>http://orcid.org/0000-0003-1604-1512</dc:creator>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Includes Ontology(OntologyID(OntologyIRI(&lt;http://purl.obolibrary.org/obo/envo/modules/entity_attribute.owl&gt;) VersionIRI(&lt;null&gt;))) [Axioms: 85 Logical Axioms: 13]</rdfs:comment>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Includes Ontology(OntologyID(OntologyIRI(&lt;http://purl.obolibrary.org/obo/envo/modules/process_attribute.owl&gt;) VersionIRI(&lt;null&gt;))) [Axioms: 21 Logical Axioms: 2]</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Includes Ontology(OntologyID(OntologyIRI(&lt;http://purl.obolibrary.org/obo/envo/modules/entity_quality_location.owl&gt;) VersionIRI(&lt;null&gt;))) [Axioms: 45 Logical Axioms: 6]</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Includes Ontology(OntologyID(OntologyIRI(&lt;http://purl.obolibrary.org/obo/envo/modules/entity_attribute_location.owl&gt;) VersionIRI(&lt;null&gt;))) [Axioms: 138 Logical Axioms: 23]</rdfs:comment>
         <dc:creator>https://orcid.org/0000-0002-6962-2807</dc:creator>
     </rdf:Description>
@@ -45906,5 +45895,5 @@ Please see www.environmentontology.org for more information and citations.</rdfs
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
