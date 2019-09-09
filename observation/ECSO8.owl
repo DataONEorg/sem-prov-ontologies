@@ -6900,7 +6900,7 @@ https://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000669">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001142"/>
         <obo:IAO_0000115>A stable carbon isotope ratio, which is a measure of the ratio of stable isotopes 13C and 12C.</obo:IAO_0000115>
-        <dc:contributor>http://orcid.org/0000-0003-1264-1166</dc:contributor>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-0632-7576"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T23:36:02Z</dc:date>
         <rdfs:label xml:lang="en">D13C</rdfs:label>
@@ -7185,7 +7185,7 @@ When a system contains two or more components whose concentration vary from poin
         </rdfs:subClassOf>
         <obo:IAO_0000112>AshWeight ash weight Soil Ash Weight gram
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1115/1</obo:IAO_0000112>
-        <obo:IAO_0000115>Mass of the ash remaining from comustion of a dried sample, thus the inorganic content.</obo:IAO_0000115>
+        <obo:IAO_0000115>Mass of the ash remaining from combustion of a dried sample, thus the inorganic content.</obo:IAO_0000115>
         <obo:IAO_0000119>Adapted from
 http://www.madsci.org/posts/archives/2000-09/970201967.Es.r.html</obo:IAO_0000119>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-5896-7295"/>
@@ -17217,12 +17217,19 @@ https://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
     <!-- http://purl.dataone.org/odo/ECSO_00002175 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002175">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00002174"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001242"/>
+        <obo:IAO_0000115>The weight of a sample&apos;s empty container.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T23:44:48Z</dc:date>
         <rdfs:label xml:lang="en">container weight</rdfs:label>
         <skos:altLabel>tare weight</skos:altLabel>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00002175"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The weight of a sample&apos;s empty container.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://en.wikipedia.org/wiki/Tare_weight</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -21667,7 +21674,8 @@ https://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
     <!-- http://purl.dataone.org/odo/ECSO_00002578 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002578">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00002893"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001242"/>
+        <obo:IAO_0000115>The mass of a soil sample.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-27T23:14:39Z</dc:date>
         <rdfs:label xml:lang="en">soil mass</rdfs:label>
@@ -21832,7 +21840,7 @@ https://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
     <!-- http://purl.dataone.org/odo/ECSO_00002593 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002593">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00002174"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001150"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-03-28T19:29:45Z</dc:date>
         <rdfs:label xml:lang="en">bird weight</rdfs:label>
@@ -24449,10 +24457,10 @@ https://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
     <!-- http://purl.dataone.org/odo/ECSO_00002830 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002830">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001241"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001242"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-06T23:09:16Z</dc:date>
-        <rdfs:label xml:lang="en">soil dry weight plus tare weight</rdfs:label>
+        <rdfs:label xml:lang="en">soil dry weight and container weight</rdfs:label>
     </owl:Class>
     
 
@@ -24978,6 +24986,7 @@ https://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002878">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001148"/>
+        <obo:IAO_0000115>The biomass of plant roots in a sample.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-07T20:47:14Z</dc:date>
         <rdfs:label xml:lang="en">root biomass</rdfs:label>
@@ -25719,6 +25728,7 @@ https://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002945">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001148"/>
+        <obo:IAO_0000115>The biomass of leaves in a sample.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-15T01:01:47Z</dc:date>
         <rdfs:label xml:lang="en">leaf biomass</rdfs:label>
@@ -26679,10 +26689,13 @@ https://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
         <obo:IAO_0000115>[Soil organic content ] is a measurement of the total organic components of soil, measured as mass.</obo:IAO_0000115>
         <obo:IAO_0000119>adapted from
 https://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1693-8322"/>
         <dc:description>Organic matter in soil consists of plant and animal residues at various stages of decomposition, cells and tissues of soil organisms, and substances synthesized by soil organisms.</dc:description>
         <dc:description>SOM exerts numerous positive effects on soil physical and chemical properties, as well as the soil’s capacity to provide regulatory ecosystem services.[1] Particularly, the presence of SOM is regarded as being critical for soil function and soil quality.[2]]</dc:description>
-        <rdfs:label>soil organic_content</rdfs:label>
+        <rdfs:label>soil organic content</rdfs:label>
+        <skos:altLabel>SOM</skos:altLabel>
+        <skos:altLabel>soil organic matter</skos:altLabel>
     </owl:Class>
     
 
