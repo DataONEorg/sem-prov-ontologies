@@ -6893,11 +6893,20 @@ https://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
     <!-- http://purl.dataone.org/odo/ECSO_00000668 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000668">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001513"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00003112"/>
+        <obo:IAO_0000115>The normalized version of d14C.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-0632-7576"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T23:34:51Z</dc:date>
+        <rdfs:comment>Note that this measurement uses the upper case Greek letter Delta (Δ).</rdfs:comment>
         <rdfs:label xml:lang="en">D14C</rdfs:label>
+        <skos:altLabel>Delta C 14</skos:altLabel>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00000668"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The normalized version of d14C.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://www.c14dating.com/agecalc.html"/>
+    </owl:Axiom>
     
 
 
@@ -6909,7 +6918,8 @@ https://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
         <dc:contributor rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-0632-7576"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-18T23:36:02Z</dc:date>
-        <rdfs:label xml:lang="en">D13C</rdfs:label>
+        <rdfs:comment>Note that this measurement uses the lowercase Greek letter delta (δ).</rdfs:comment>
+        <rdfs:label xml:lang="en">d13C</rdfs:label>
         <skos:altLabel>delta C 13</skos:altLabel>
     </owl:Class>
     <owl:Axiom>
@@ -10972,7 +10982,7 @@ https://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000669"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-21T17:47:14Z</dc:date>
-        <rdfs:label xml:lang="en">D13C error</rdfs:label>
+        <rdfs:label xml:lang="en">d13C error</rdfs:label>
     </owl:Class>
     
 
@@ -12399,6 +12409,7 @@ https://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
         <obo:IAO_0000115>A stable nitrogen isotope ratio of nitrogen 15 to nitrogen 14.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-03T17:37:58Z</dc:date>
+        <rdfs:comment>Note that this measurement uses the lower case Greek delta (δ)</rdfs:comment>
         <rdfs:label xml:lang="en">D15N</rdfs:label>
         <skos:altLabel>delta N 15</skos:altLabel>
         <skos:altLabel>delta N15</skos:altLabel>
@@ -14892,10 +14903,18 @@ https://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001962">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001514"/>
+        <obo:IAO_0000115>A carbon isotope ratio which is the ratio of C14 to C12 in the sample and the ratio of C14 and C12 in modern carbon.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-10T22:26:54Z</dc:date>
+        <rdfs:comment>Modern carbon is the ratio of C14 to C12 that would be measured in the year 1950 AD if there was no fossil fuel effect.</rdfs:comment>
         <rdfs:label xml:lang="en">fraction modern</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00001962"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A carbon isotope ratio which is the ratio of C14 to C12 in the sample and the ratio of C14 and C12 in modern carbon.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://en.wikipedia.org/wiki/Radiocarbon_dating"/>
+    </owl:Axiom>
     
 
 
@@ -17000,7 +17019,7 @@ https://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000669"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-29T23:09:59Z</dc:date>
-        <rdfs:label xml:lang="en">D13C of particulate organic carbon</rdfs:label>
+        <rdfs:label xml:lang="en">d13C of particulate organic carbon</rdfs:label>
     </owl:Class>
     
 
@@ -24988,7 +25007,7 @@ https://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000669"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-07T20:42:13Z</dc:date>
-        <rdfs:label xml:lang="en">D13C in sediment</rdfs:label>
+        <rdfs:label xml:lang="en">d13C in sediment</rdfs:label>
     </owl:Class>
     
 
@@ -25044,7 +25063,7 @@ https://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000669"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-07T21:16:38Z</dc:date>
-        <rdfs:label xml:lang="en">D13C in freshwater</rdfs:label>
+        <rdfs:label xml:lang="en">d13C in freshwater</rdfs:label>
     </owl:Class>
     
 
@@ -25819,7 +25838,7 @@ https://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000669"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-15T01:49:58Z</dc:date>
-        <rdfs:label xml:lang="en">D13C in seawater uncertainty</rdfs:label>
+        <rdfs:label xml:lang="en">d13C in seawater uncertainty</rdfs:label>
     </owl:Class>
     
 
@@ -26358,11 +26377,18 @@ https://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00003000">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001102"/>
+        <obo:IAO_0000115>The ratio of amounts of odd-carbon n-alkanes to even-carbon n-alkanes.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-30T17:09:21Z</dc:date>
         <rdfs:label xml:lang="en">carbon preference index</rdfs:label>
         <skos:altLabel>CPI</skos:altLabel>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00003000"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The ratio of amounts of odd-carbon n-alkanes to even-carbon n-alkanes.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>http://www.btb.termiumplus.gc.ca/tpv2alpha/alpha-eng.html?lang=eng&amp;i=1&amp;index=alt&amp;srchtxt=carbon%20preference%20index</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -27605,6 +27631,26 @@ https://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-29T21:13:24Z</dc:date>
         <rdfs:label xml:lang="en">exchange pool</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00003112 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00003112">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001514"/>
+        <obo:IAO_0000115>The per mille depletion in sample carbon 14 prior to isotopic fractionation correction.</obo:IAO_0000115>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-11T23:51:31Z</dc:date>
+        <rdfs:comment>Note that this measurement uses the lower case Greek letter delta (δ).</rdfs:comment>
+        <rdfs:label xml:lang="en">d14C</rdfs:label>
+        <skos:altLabel>delta C 14</skos:altLabel>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00003112"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The per mille depletion in sample carbon 14 prior to isotopic fractionation correction.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://www.c14dating.com/agecalc.html"/>
+    </owl:Axiom>
     
 
 
@@ -45995,8 +46041,8 @@ New terms or revisions can be requested at https://github.com/EnvironmentOntolog
 
 Please see www.environmentontology.org for more information and citations.</rdfs:comment>
         <dc:creator>http://orcid.org/0000-0002-4366-3088</dc:creator>
-        <dc:creator>http://orcid.org/0000-0002-6601-2165</dc:creator>
         <dc:creator>http://orcid.org/0000-0003-1604-1512</dc:creator>
+        <dc:creator>http://orcid.org/0000-0002-6601-2165</dc:creator>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Includes Ontology(OntologyID(OntologyIRI(&lt;http://purl.obolibrary.org/obo/envo/modules/entity_quality_location.owl&gt;) VersionIRI(&lt;null&gt;))) [Axioms: 45 Logical Axioms: 6]</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Includes Ontology(OntologyID(OntologyIRI(&lt;http://purl.obolibrary.org/obo/envo/modules/entity_attribute_location.owl&gt;) VersionIRI(&lt;null&gt;))) [Axioms: 138 Logical Axioms: 23]</rdfs:comment>
         <dc:creator>https://orcid.org/0000-0002-6962-2807</dc:creator>
