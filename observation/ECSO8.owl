@@ -11012,6 +11012,7 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001571">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001219"/>
+        <obo:IAO_0000115>A latent heat flux without a correction for storage.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-14T01:05:00Z</dc:date>
         <rdfs:label xml:lang="en">latent heat turbulent flux</rdfs:label>
@@ -11023,6 +11024,7 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001572">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001219"/>
+        <obo:IAO_0000115>A latent heat flux with a correction for storage.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-14T01:05:38Z</dc:date>
         <rdfs:label xml:lang="en">latent heat storage flux</rdfs:label>
@@ -21792,6 +21794,7 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002525">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_04000000"/>
+        <obo:IAO_0000115>An indication of whether sea ice was present.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-15T22:50:55Z</dc:date>
         <rdfs:label xml:lang="en">sea ice presence</rdfs:label>
@@ -28039,10 +28042,17 @@ http://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00003085">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00002730"/>
+        <obo:IAO_0000115>An operational definition used to classify a group of closely related individuals.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-19T00:20:08Z</dc:date>
         <rdfs:label xml:lang="en">operational taxonomic unit</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00003085"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An operational definition used to classify a group of closely related individuals.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://en.wikipedia.org/wiki/Operational_taxonomic_unit"/>
+    </owl:Axiom>
     
 
 
