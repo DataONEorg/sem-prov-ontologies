@@ -6676,6 +6676,7 @@ http://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000614">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001105"/>
+        <obo:IAO_0000115>A carbon flux which is the rate at which carbon monoxide moves to or from a particular component of the ecosystem per unit area and time.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-0632-7576"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-13T23:29:47Z</dc:date>
         <rdfs:label xml:lang="en">carbon monoxide flux</rdfs:label>
@@ -10416,10 +10417,17 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001521">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001225"/>
+        <obo:IAO_0000115>An air temperature which is measured by a thermometer freely exposed to the air but shielded from radiation and moisture.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T22:27:15Z</dc:date>
         <rdfs:label xml:lang="en">dry bulb temperature</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00001521"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An air temperature which is measured by a thermometer freely exposed to the air but shielded from radiation and moisture.</owl:annotatedTarget>
+        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Dry-bulb_temperature</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 
@@ -10427,10 +10435,17 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001522">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001225"/>
+        <obo:IAO_0000115>An air temperature which is measured by a thermometer covered in water-soaked cloth.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T22:28:27Z</dc:date>
         <rdfs:label xml:lang="en">wet bulb temperature</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00001522"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An air temperature which is measured by a thermometer covered in water-soaked cloth.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://en.wikipedia.org/wiki/Wet-bulb_temperature"/>
+    </owl:Axiom>
     
 
 
@@ -10515,6 +10530,7 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001530">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001104"/>
+        <obo:IAO_0000115>A temperature which is of lake sediment.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-30T20:04:43Z</dc:date>
         <rdfs:label xml:lang="en">lake sediment temperature</rdfs:label>
@@ -10845,6 +10861,7 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001558">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001104"/>
+        <obo:IAO_0000115>A temperature which is of water ice.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-31T23:59:19Z</dc:date>
         <rdfs:label xml:lang="en">ice temperature</rdfs:label>
@@ -11526,10 +11543,17 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001618">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000514"/>
+        <obo:IAO_0000115>A measurement of the perceived power of light.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-21T22:50:22Z</dc:date>
         <rdfs:label xml:lang="en">luminous flux</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00001618"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A measurement of the perceived power of light.</owl:annotatedTarget>
+        <obo:IAO_0000115 rdf:resource="https://en.wikipedia.org/wiki/Luminous_flux"/>
+    </owl:Axiom>
     
 
 
@@ -11559,10 +11583,17 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001621">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000514"/>
+        <obo:IAO_0000115>A flux measurement which is divided by the average air density.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-21T23:10:24Z</dc:date>
         <rdfs:label xml:lang="en">kinematic flux</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00001621"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A flux measurement which is divided by the average air density.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://glossary.ametsoc.org/wiki/Kinematic_flux"/>
+    </owl:Axiom>
     
 
 
@@ -11959,10 +11990,17 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001657">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001225"/>
+        <obo:IAO_0000115>A temperature to which air must be cooled to become saturated with water vapor.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-20T18:17:50Z</dc:date>
         <rdfs:label xml:lang="en">dew point temperature</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00001657"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A temperature to which air must be cooled to become saturated with water vapor.</owl:annotatedTarget>
+        <obo:IAO_0000119>https://en.wikipedia.org/wiki/Dew_point</obo:IAO_0000119>
+    </owl:Axiom>
     
 
 
@@ -13079,10 +13117,10 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
     <!-- http://purl.dataone.org/odo/ECSO_00001755 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001755">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001225"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001101"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-03T21:34:25Z</dc:date>
-        <rdfs:label xml:lang="en">wind chill</rdfs:label>
+        <rdfs:label xml:lang="en">wind chill index</rdfs:label>
     </owl:Class>
     
 
@@ -14214,11 +14252,18 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
     <!-- http://purl.dataone.org/odo/ECSO_00001858 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001858">
-        <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001618"/>
+        <obo:IAO_0000115>A total luminous flux which is incident on a surface, per unit area.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-04T22:12:04Z</dc:date>
-        <rdfs:label xml:lang="en">illuminance measurement type</rdfs:label>
+        <rdfs:label xml:lang="en">illuminance</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00001858"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A total luminous flux which is incident on a surface, per unit area.</owl:annotatedTarget>
+        <obo:IAO_0000115 rdf:resource="https://en.wikipedia.org/wiki/Illuminance"/>
+    </owl:Axiom>
     
 
 
@@ -14472,10 +14517,17 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001881">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001104"/>
+        <obo:IAO_0000115>A temperature measurement of a surface of a body if it were not warmed by its own atmosphere.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-03T22:25:59Z</dc:date>
         <rdfs:label xml:lang="en">blackbody temperature</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00001881"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A temperature measurement of a surface of a body if it were not warmed by its own atmosphere.</owl:annotatedTarget>
+        <obo:IAO_0000119 rdf:resource="https://www.oxfordreference.com/view/10.1093/oi/authority.20110803095509515#"/>
+    </owl:Axiom>
     
 
 
@@ -15295,6 +15347,7 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001954">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000514"/>
+        <obo:IAO_0000115>A flux measurement which is the rate at which nitrous oxide moves to or from a particular component of the ecosystem per unit area and time.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-07T00:56:39Z</dc:date>
         <rdfs:label xml:lang="en">nitrous oxide flux</rdfs:label>
@@ -16763,10 +16816,17 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002085">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001104"/>
+        <obo:IAO_0000115>A temperature measurement of a canopy.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-03T23:14:07Z</dc:date>
         <rdfs:label xml:lang="en">canopy temperature</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00002085"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A temperature measurement of a canopy.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://glossary.ametsoc.org/wiki/Canopy_temperature"/>
+    </owl:Axiom>
     
 
 
@@ -16839,11 +16899,18 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
     <!-- http://purl.dataone.org/odo/ECSO_00002092 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002092">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001104"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001881"/>
+        <obo:IAO_0000115>A blackbody temperature when the blackbody is in thermal equilibrium with its surroundings.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-03T23:26:08Z</dc:date>
         <rdfs:label xml:lang="en">brightness temperature</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00002092"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A blackbody temperature when the blackbody is in thermal equilibrium with its surroundings.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://en.wikipedia.org/wiki/Brightness_temperature"/>
+    </owl:Axiom>
     
 
 
@@ -18991,6 +19058,7 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002286">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001104"/>
+        <obo:IAO_0000115>A temperature measurement of a cloud top.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-31T00:01:47Z</dc:date>
         <rdfs:label xml:lang="en">cloud top temperature</rdfs:label>
@@ -24563,10 +24631,17 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002789">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000016"/>
+        <obo:IAO_0000115>A respiration carbon flux which is not light dependent and may occur in the dark or light.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-04-25T23:27:24Z</dc:date>
         <rdfs:label xml:lang="en">dark respiration carbon flux</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00002789"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A respiration carbon flux which is not light dependent and may occur in the dark or light.</owl:annotatedTarget>
+        <rdfs:comment rdf:resource="https://doi.org/10.1016/B978-0-12-675402-5.50019-2"/>
+    </owl:Axiom>
     
 
 
@@ -25968,6 +26043,7 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002916">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001104"/>
+        <obo:IAO_0000115>A temperature of a leaf.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-08T21:21:51Z</dc:date>
         <rdfs:label xml:lang="en">leaf temperature</rdfs:label>
@@ -27563,6 +27639,7 @@ http://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00003057">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001225"/>
+        <obo:IAO_0000115>An air temperature measured close to the surface of the Earth.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-16T23:23:21Z</dc:date>
         <rdfs:label xml:lang="en">near surface air temperature</rdfs:label>
@@ -28070,6 +28147,7 @@ http://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00003103">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001104"/>
+        <obo:IAO_0000115>A temperature measurement of a cloud base.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-23T22:56:15Z</dc:date>
         <rdfs:label xml:lang="en">cloud base temperature</rdfs:label>
