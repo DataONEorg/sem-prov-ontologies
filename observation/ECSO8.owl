@@ -6978,6 +6978,7 @@ http://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000646">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00002932"/>
+        <obo:IAO_0000115>A concentration of inorganic carbon.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-0632-7576"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-15T01:25:14Z</dc:date>
         <rdfs:label xml:lang="en">Inorganic carbon concentration</rdfs:label>
@@ -10136,6 +10137,7 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001500">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001504"/>
+        <obo:IAO_0000115>An absorbance measurement of the optically measurable component of dissolved organic matter in water.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-26T20:06:57Z</dc:date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CDOM absorbance</oboInOwl:hasExactSynonym>
@@ -10144,6 +10146,12 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
         <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CDOM absorbance</skos:altLabel>
         <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">colored dissolved organic matter absorbance</skos:altLabel>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00001500"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>An absorbance measurement of the optically measurable component of dissolved organic matter in water.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://en.wikipedia.org/wiki/Colored_dissolved_organic_matter"/>
+    </owl:Axiom>
     
 
 
@@ -10336,9 +10344,12 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001513">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001514"/>
+        <obo:IAO_0000115>A carbon isotope ratio which consists of radioactive carbon (14C).</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-28T21:42:56Z</dc:date>
+        <oboInOwl:hasExactSynonym>radiocarbon isotope ratio</oboInOwl:hasExactSynonym>
         <rdfs:label xml:lang="en">radioactive carbon isotope ratio</rdfs:label>
+        <skos:altLabel>radiocarbon isotope ratio</skos:altLabel>
     </owl:Class>
     
 
@@ -10347,6 +10358,7 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001514">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001102"/>
+        <obo:IAO_0000115>The proportion of different carbon isotopes in a sample.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-28T21:43:10Z</dc:date>
         <rdfs:label xml:lang="en">carbon isotope ratio</rdfs:label>
@@ -14805,7 +14817,7 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
     <!-- http://purl.dataone.org/odo/ECSO_00001900 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001900">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00002088"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001860"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-05T22:10:49Z</dc:date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">downward solar radiation</oboInOwl:hasExactSynonym>
@@ -17105,7 +17117,7 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
     <!-- http://purl.dataone.org/odo/ECSO_00002103 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002103">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000539"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001122"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-03T23:46:26Z</dc:date>
         <rdfs:label xml:lang="en">dissolved inorganic carbon concentration in freshwater</rdfs:label>
@@ -17766,6 +17778,7 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002163">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000656"/>
+        <obo:IAO_0000115>An age measurement which is determined by radiocarbon dating.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-01-22T21:47:00Z</dc:date>
         <rdfs:label xml:lang="en">14C age</rdfs:label>
@@ -24585,7 +24598,7 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
                 <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00002776"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:label>periphyton MassSpecificProductionRate</rdfs:label>
+        <rdfs:label>periphyton Mass Specific Production Rate</rdfs:label>
     </owl:Class>
     
 
@@ -26525,17 +26538,6 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
     
 
 
-    <!-- http://purl.dataone.org/odo/ECSO_00002952 -->
-
-    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002952">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001106"/>
-        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-15T06:40:09Z</dc:date>
-        <rdfs:label xml:lang="en">global radiation</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://purl.dataone.org/odo/ECSO_00002953 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002953">
@@ -28346,7 +28348,7 @@ http://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
     <!-- http://purl.dataone.org/odo/ECSO_00003112 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00003112">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001514"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001513"/>
         <obo:IAO_0000115>The per mille depletion in sample carbon 14 prior to isotopic fractionation correction.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-11T23:51:31Z</dc:date>
@@ -46759,8 +46761,8 @@ New terms or revisions can be requested at https://github.com/EnvironmentOntolog
 
 Please see www.environmentontology.org for more information and citations.</rdfs:comment>
         <dc:creator>http://orcid.org/0000-0002-4366-3088</dc:creator>
-        <dc:creator>http://orcid.org/0000-0002-6601-2165</dc:creator>
         <dc:creator>http://orcid.org/0000-0003-1604-1512</dc:creator>
+        <dc:creator>http://orcid.org/0000-0002-6601-2165</dc:creator>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Includes Ontology(OntologyID(OntologyIRI(&lt;http://purl.obolibrary.org/obo/envo/modules/entity_quality_location.owl&gt;) VersionIRI(&lt;null&gt;))) [Axioms: 45 Logical Axioms: 6]</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Includes Ontology(OntologyID(OntologyIRI(&lt;http://purl.obolibrary.org/obo/envo/modules/entity_attribute_location.owl&gt;) VersionIRI(&lt;null&gt;))) [Axioms: 138 Logical Axioms: 23]</rdfs:comment>
         <dc:creator>https://orcid.org/0000-0002-6962-2807</dc:creator>
