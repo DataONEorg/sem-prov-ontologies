@@ -5220,12 +5220,19 @@ maybe others.
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000337">
         <odo:ECSO_01000005 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://chemwiki.ucdavis.edu/Core/Inorganic_Chemistry/Descriptive_Chemistry/Elements_Organized_by_Block/2_p-Block_Elements/Group_14%3A_The_Carbon_Family/Chemistry_of_Carbon</odo:ECSO_01000005>
+        <obo:IAO_0000115>Carbon extracted from ores and minerals and not obtained from plants and living things.</obo:IAO_0000115>
         <dc:contributor rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
-        <dc:description>Inorganic carbon is carbon extracted from ores and minerals, as opposed to organic carbon found in nature through plants and living things. Some examples of inorganic carbon are carbon oxides such as carbon monoxide and carbon dioxide; polyatomic ions, cyanide, cyanate, thiocyanate, carbonate and carbide in carbon.</dc:description>
+        <dc:description>Some examples of inorganic carbon are carbon oxides such as carbon monoxide and carbon dioxide; polyatomic ions, cyanide, cyanate, thiocyanate, carbonate and carbide in carbon.</dc:description>
         <rdfs:comment xml:lang="en">Made this class a sibling of CHEBI class &apos;inorganic molecular entity&apos; because CHEBI says that an &apos;inorganic molecular entity&apos; contains no carbon, and we didn&apos;t want to contradict that.</rdfs:comment>
         <rdfs:label>Inorganic Carbon</rdfs:label>
         <skos:hiddenLabel>Inorganic Carbon</skos:hiddenLabel>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00000337"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Carbon extracted from ores and minerals and not obtained from plants and living things.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://libretexts.org/Bookshelves/Inorganic_Chemistry"/>
+    </owl:Axiom>
     
 
 
@@ -5233,13 +5240,20 @@ maybe others.
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000341">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000025"/>
-        <obo:IAO_0000115>A system that has the capacity to store or release carbon that is either of a non-biologic origin or cannot be found or incorporated into a living organism. The inorganic carbon species include carbon dioxide, carbonic acid, biocarbonate anion, and carbonate.</obo:IAO_0000115>
+        <obo:IAO_0000115>A component of a system that has the capacity to store or release carbon that is either of a non-biologic origin or cannot be found or incorporated into a living organism. The inorganic carbon species include carbon dioxide, carbonic acid, biocarbonate anion, and carbonate.</obo:IAO_0000115>
         <obo:IAO_0000119>http://en.wikipedia.org/wiki/Inorganic_compound</obo:IAO_0000119>
         <obo:IAO_0000119>http://en.wikipedia.org/wiki/Total_inorganic_carbon</obo:IAO_0000119>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0001-8622-9698"/>
         <rdfs:label>Inorganic Carbon Pool</rdfs:label>
         <skos:hiddenLabel>Inorganic Carbon Pool</skos:hiddenLabel>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00000341"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A component of a system that has the capacity to store or release carbon that is either of a non-biologic origin or cannot be found or incorporated into a living organism. The inorganic carbon species include carbon dioxide, carbonic acid, biocarbonate anion, and carbonate.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://energyeducation.ca/encyclopedia/Carbon_pool"/>
+    </owl:Axiom>
     
 
 
@@ -5247,12 +5261,19 @@ maybe others.
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000343">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000206"/>
-        <obo:IAO_0000115>A system that has the capacity to store or release carbon, via processes inherient to the condition of death (the cessation of all biological functions that sustain a living organism).</obo:IAO_0000115>
+        <obo:IAO_0000115>A fixed carbon pool of the carbon found in living organisms, in a system with the capacity to store and release carbon through process inherent to those organisms.</obo:IAO_0000115>
         <obo:IAO_0000119>http://en.wikipedia.org/wiki/Death</obo:IAO_0000119>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0001-8622-9698"/>
         <rdfs:label>Total Living Biomass Carbon Pool</rdfs:label>
         <skos:hiddenLabel>Total Living Biomass Carbon Pool</skos:hiddenLabel>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00000343"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A fixed carbon pool of the carbon found in living organisms, in a system with the capacity to store and release carbon through process inherent to those organisms.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://energyeducation.ca/encyclopedia/Carbon_pool"/>
+    </owl:Axiom>
     
 
 
@@ -5277,9 +5298,10 @@ maybe others.
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000502">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000520"/>
-        <obo:IAO_0000115>Concentration of carbon in litter.</obo:IAO_0000115>
+        <obo:IAO_0000115>Concentration of carbon in plant litter.</obo:IAO_0000115>
         <obo:IAO_0000119>Adapted from
 http://en.wikipedia.org/wiki/Soil_carbon</obo:IAO_0000119>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-5896-7295"/>
         <rdfs:comment>numerator is carbon, denominator is a volume or weight of soil.</rdfs:comment>
         <rdfs:label>Litter Carbon Concentration</rdfs:label>
@@ -5631,7 +5653,9 @@ In transport phenomena (heat transfer, mass transfer and fluid dynamics), flux i
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000520">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00002932"/>
-        <obo:IAO_0000115>Amount of carbon in some material. measurements will be a ratio where the numerator is Carbon (in mass or amount) and denominator is [mass or amount] of the material the Carbon is mixed with. Various units are used, eg, gram/gram,gram/volume, percent.</obo:IAO_0000115>
+        <obo:IAO_0000115>A concentration of organic carbon in some material.</obo:IAO_0000115>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:description>Organic carbon measurements will be a ratio where the numerator is Carbon (in mass or amount) and denominator is [mass or amount] of the material the Carbon is mixed with. Various units are used, eg, gram/gram, gram/volume, percent.</dc:description>
         <rdfs:label>Organic Carbon Concentration</rdfs:label>
         <skos:hiddenLabel>Organic Carbon Concentration</skos:hiddenLabel>
     </owl:Class>
@@ -16428,7 +16452,7 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
     <!-- http://purl.dataone.org/odo/ECSO_00002037 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002037">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001199"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001198"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-12-12T21:23:15Z</dc:date>
         <rdfs:label xml:lang="en">air density calculated from virtual temperature</rdfs:label>
@@ -20516,7 +20540,7 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
     <!-- http://purl.dataone.org/odo/ECSO_00002405 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002405">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001199"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001198"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-02-22T00:38:53Z</dc:date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sigma</oboInOwl:hasExactSynonym>
@@ -26190,7 +26214,7 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
     <!-- http://purl.dataone.org/odo/ECSO_00002917 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002917">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001199"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001198"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-08T21:27:37Z</dc:date>
         <rdfs:label xml:lang="en">snow density</rdfs:label>
@@ -26646,7 +26670,7 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
     <!-- http://purl.dataone.org/odo/ECSO_00002959 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002959">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001199"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001198"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-15T21:53:41Z</dc:date>
         <rdfs:label xml:lang="en">ice density</rdfs:label>
