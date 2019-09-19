@@ -2744,9 +2744,10 @@ synonyms: NPP</rdfs:comment>
             </owl:Restriction>
         </rdfs:subClassOf>
         <odo:ECSO_01000005>O&apos;Brien, pers comm. 2015-02-20</odo:ECSO_01000005>
-        <obo:IAO_0000115>A reservoir with the capacity to store and release carbon, such as soil, terrestrial vegetation, the ocean, and the atmosphere {contributed by margaret, from</obo:IAO_0000115>
+        <obo:IAO_0000115>A reservoir pool with the capacity to store and release carbon, such as soil, terrestrial vegetation, the ocean, and the atmosphere.</obo:IAO_0000115>
         <obo:IAO_0000115>Carbon Pools are amounts of carbon in the system. measurements of carbon pools would have dimensions of mass Carbon per area (eg, kg per m2</obo:IAO_0000115>
         <obo:IAO_0000119>&quot;carbon pool.&quot; McGraw-Hill Dictionary of Scientific &amp; Technical Terms, 6E. 2003. The McGraw-Hill Companies, Inc. 20 Feb. 2015 http://encyclopedia2.thefreedictionary.com/carbon+pool</obo:IAO_0000119>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-1338-9436"/>
         <dc:description>Carbon Pools are reservoirs in the system with the capacity to exchange carbon. Usually scientists are interested in the size of pools, and the movement of carbon between pools. The dimensions of a carbon pool are likely to be mass or moles Carbon per area or volume (eg, kg per m2).</dc:description>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Name of Each Carbon Pool</oboInOwl:hasExactSynonym>
@@ -4258,6 +4259,9 @@ For CO2.... tbd</dc:description>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000082"/>
         <odo:ECSO_01000005>O&apos;Brien, pers comm 2015-02-15
 Fahey and Knapp, 2007</odo:ECSO_01000005>
+        <obo:IAO_0000119 rdf:resource="https://serc.carleton.edu/microbelife/research_methods/biogeochemical/productivity.html"/>
+        <obo:IAO_0000119>https://global.oup.com/academic/product/principles-and-standards-for-measuring-primary-production-9780195168662?cc=us&amp;lang=en&amp;#</obo:IAO_0000119>
+        <dc:creator rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
         <dc:description>A C14 uptake method is typically used in aquatic environments, for microscopic autotrophs (phytoplankton). C14 is a radioactive tracer added as bicarbonate, and its concentration determined in the plankton after removed by filtration. Measurement scales tend to be small (hours and liters) relative to the scales of other field methods. Photosynthetic and heterotrophic activity are tightly coupled in planktonic systems (Fahey and Knapp, 2007). If the incubation is short enough, the result will be GPP (gross), because presumably, no labeled c14 was recycled (or respired) by the cells.
 
 Sometimes researchers conduct &quot;light-dark bottle&quot;, but the dark bottle tells you something different than in o2 light-dark. It gives you dark CO2 uptake, so subtract this from light CO2 uptake if you want autotrophic GPP.</dc:description>
@@ -5152,9 +5156,18 @@ maybe others.
     <!-- http://purl.dataone.org/odo/ECSO_00000329 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000329">
+        <obo:IAO_0000115>The carbon found in organic molecules.</obo:IAO_0000115>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
+        <rdfs:comment>Organic molecules contain both carbon and hydrogen, and &quot;organic carbon&quot; is defined as the carbon found in organic molecules. Though many organic chemicals also contain other elements, it is the carbon-hydrogen bond that defines them as organic. Organic carbon is found naturally in plants and organisms.</rdfs:comment>
         <rdfs:label>Organic Carbon</rdfs:label>
         <skos:hiddenLabel>Organic Carbon</skos:hiddenLabel>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00000329"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The carbon found in organic molecules.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref>https://www.visionlearning.com/en/library/Chemistry/1/Carbon-Chemistry/60</oboInOwl:hasDbXref>
+    </owl:Axiom>
     
 
 
@@ -5165,10 +5178,18 @@ maybe others.
         <obo:IAO_0000115>A system that has the capacity to store or release carbon that is either of a biologic origin or can be found or incorporated into a living organism.</obo:IAO_0000115>
         <obo:IAO_0000119>http://en.wikipedia.org/wiki/Organic_compound</obo:IAO_0000119>
         <obo:IAO_0000119>http://en.wikipedia.org/wiki/Total_organic_carbon</obo:IAO_0000119>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0001-8622-9698"/>
+        <rdfs:comment>A &quot;pool&quot; is the reservoir that has the capacity to both take in and release a substance.  Hence the &quot;organic carbon pool&quot; is part of a system that has the capacity to store or release carbon that is either of a biologic origin or can be found or incorporated into a living organism.</rdfs:comment>
         <rdfs:label>Organic Carbon Pool</rdfs:label>
         <skos:hiddenLabel>Organic Carbon Pool</skos:hiddenLabel>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00000331"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>A &quot;pool&quot; is the reservoir that has the capacity to both take in and release a substance.  Hence the &quot;organic carbon pool&quot; is part of a system that has the capacity to store or release carbon that is either of a biologic origin or can be found or incorporated into a living organism.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://energyeducation.ca/encyclopedia/Carbon_pool"/>
+    </owl:Axiom>
     
 
 
@@ -5178,11 +5199,20 @@ maybe others.
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000331"/>
         <obo:IAO_0000115>A system that has the capacity to store or release carbon, in the form of pieces of plant debris 0.053–2 mm in size.</obo:IAO_0000115>
         <obo:IAO_0000119>http://soilquality.org.au/factsheets/organic-carbon-pools</obo:IAO_0000119>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0001-8622-9698"/>
         <dc:description>Particulate organic carbon also decomposes relatively quickly (years to decades) and provides an important source of energy for soil microorganisms. It also plays an important role in maintaining soil structure and providing soil nutrients. Plant residues and particulate organic carbon are often referred to as ‘labile carbon’ because they cycle in the soil relatively quickly.</dc:description>
+        <rdfs:comment>A &quot;pool&quot; is the reservoir that has the capacity to both take in and release a substance.  &quot;Particulate Organic Carbon (POC)&quot; is carbon from heterogenous living and detrital material, sometimes fragmented into  pieces 0.053–2 mm in size.  POC is often collected by filtering (or another separation technique), and so definition by size is somewhat operational. See &quot;Dissolved Organic Carbon&quot;.</rdfs:comment>
         <rdfs:label>Particulate Organic Carbon Pool</rdfs:label>
         <skos:hiddenLabel>Particulate Organic Carbon Pool</skos:hiddenLabel>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00000336"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget>A &quot;pool&quot; is the reservoir that has the capacity to both take in and release a substance.  &quot;Particulate Organic Carbon (POC)&quot; is carbon from heterogenous living and detrital material, sometimes fragmented into  pieces 0.053–2 mm in size.  POC is often collected by filtering (or another separation technique), and so definition by size is somewhat operational. See &quot;Dissolved Organic Carbon&quot;.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://soilquality.org.au/factsheets/organic-carbon-pools"/>
+        <oboInOwl:hasDbXref rdf:resource="https://energyeducation.ca/encyclopedia/Carbon_pool"/>
+    </owl:Axiom>
     
 
 
@@ -6687,7 +6717,8 @@ http://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
     <!-- http://purl.dataone.org/odo/ECSO_00000615 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000615">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000646"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00002516"/>
+        <obo:IAO_0000115>A carbon compound concentration which consists of methane.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-0632-7576"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-13T23:30:33Z</dc:date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CH4 concentration</oboInOwl:hasExactSynonym>
@@ -6877,6 +6908,7 @@ http://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000634">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000636"/>
+        <obo:IAO_0000115>A carbon dioxide partial pressure measurement measured at the sea surface.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-0632-7576"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-14T23:51:42Z</dc:date>
         <rdfs:label xml:lang="en">carbon dioxide partial pressure at sea surface</rdfs:label>
@@ -6898,7 +6930,8 @@ http://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
     <!-- http://purl.dataone.org/odo/ECSO_00000636 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000636">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001224"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001561"/>
+        <obo:IAO_0000115>A partial pressure measurement of carbon dioxide gas.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-0632-7576"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-15T01:10:29Z</dc:date>
         <rdfs:label xml:lang="en">carbon dioxide partial pressure</rdfs:label>
@@ -10472,8 +10505,11 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001523">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001526"/>
+        <obo:IAO_0000115>A water temperature which inheres in water close to the surface of an ocean or sea.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-29T23:53:47Z</dc:date>
+        <oboInOwl:hasDbXref rdf:resource="http://purl.obolibrary.org/obo/ENVO_04000002"/>
+        <rdfs:comment>The exact meaning of surface varies according to the measurement method used, but it is between 1 millimetre (0.04 in) and 20 metres (70 ft) below the sea surface.</rdfs:comment>
         <rdfs:label xml:lang="en">sea surface temperature</rdfs:label>
     </owl:Class>
     
@@ -10549,7 +10585,7 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001530">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001104"/>
-        <obo:IAO_0000115>A temperature which is of lake sediment.</obo:IAO_0000115>
+        <obo:IAO_0000115>A temperature which is measured in lake sediment.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-30T20:04:43Z</dc:date>
         <rdfs:label xml:lang="en">lake sediment temperature</rdfs:label>
@@ -10916,6 +10952,24 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-11-03T02:12:49Z</dc:date>
         <rdfs:label xml:lang="en">seawater fluorescence</rdfs:label>
     </owl:Class>
+    
+
+
+    <!-- http://purl.dataone.org/odo/ECSO_00001561 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001561">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001185"/>
+        <obo:IAO_0000115>A pressure measurement which is the pressure of a constituent gas in a mixture of gases if it alone occupied the entire volume of the mixture at the same temperature.</obo:IAO_0000115>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-19T18:23:55Z</dc:date>
+        <rdfs:label xml:lang="en">partial pressure</rdfs:label>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00001561"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A pressure measurement which is the pressure of a constituent gas in a mixture of gases if it alone occupied the entire volume of the mixture at the same temperature.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://en.wikipedia.org/wiki/Partial_pressure"/>
+    </owl:Axiom>
     
 
 
@@ -26125,7 +26179,7 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002916">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001104"/>
-        <obo:IAO_0000115>A temperature of a leaf.</obo:IAO_0000115>
+        <obo:IAO_0000115>A temperature measurement of a leaf.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-08T21:21:51Z</dc:date>
         <rdfs:label xml:lang="en">leaf temperature</rdfs:label>
@@ -28312,10 +28366,17 @@ http://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00003110">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001580"/>
+        <obo:IAO_0000115>A large and usually abiotic store of a nutrient in a biogeochemical cycle that has the capacity to both take in and release a nutrient.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-08-29T21:13:06Z</dc:date>
         <rdfs:label xml:lang="en">reservoir pool</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00003110"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A large and usually abiotic store of a nutrient in a biogeochemical cycle that has the capacity to both take in and release a nutrient.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://www.encyclopedia.com/earth-and-environment/ecology-and-environmentalism/environmental-studies/reservoir-pool"/>
+    </owl:Axiom>
     
 
 
@@ -29164,8 +29225,7 @@ positive degree-days (above DoC) in spring and fall</obo:IAO_0000115>
 
     <owl:Class rdf:about="http://www.purl.dataone.org/odo/ECSO_00010126">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001104"/>
-        <obo:IAO_0000115>The number of degrees by which the freezing point of an earth material is
-depressed below 0oC</obo:IAO_0000115>
+        <obo:IAO_0000115>The number of degrees by which the freezing point of an earth material is depressed below 0 degrees C.</obo:IAO_0000115>
         <obo:IAO_0000119>http://ipa.arcticportal.org/images/Glossary/Glossary_of_Permafrost_and_Related_Ground-Ice_Terms_1998.pdf</obo:IAO_0000119>
         <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0001-8622-9698</dc:creator>
         <rdfs:label xml:lang="en">Freezing Point Depression</rdfs:label>
@@ -46746,8 +46806,8 @@ New terms or revisions can be requested at https://github.com/EnvironmentOntolog
 
 Please see www.environmentontology.org for more information and citations.</rdfs:comment>
         <dc:creator>http://orcid.org/0000-0002-4366-3088</dc:creator>
-        <dc:creator>http://orcid.org/0000-0003-1604-1512</dc:creator>
         <dc:creator>http://orcid.org/0000-0002-6601-2165</dc:creator>
+        <dc:creator>http://orcid.org/0000-0003-1604-1512</dc:creator>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Includes Ontology(OntologyID(OntologyIRI(&lt;http://purl.obolibrary.org/obo/envo/modules/entity_quality_location.owl&gt;) VersionIRI(&lt;null&gt;))) [Axioms: 45 Logical Axioms: 6]</rdfs:comment>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Includes Ontology(OntologyID(OntologyIRI(&lt;http://purl.obolibrary.org/obo/envo/modules/entity_attribute_location.owl&gt;) VersionIRI(&lt;null&gt;))) [Axioms: 138 Logical Axioms: 23]</rdfs:comment>
         <dc:creator>https://orcid.org/0000-0002-6962-2807</dc:creator>
