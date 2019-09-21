@@ -5829,12 +5829,13 @@ https://pasta.lternet.edu/package/metadata/eml/knb-lter-and/3142/7</obo:IAO_0000
                 <owl:someValuesFrom rdf:resource="http://purl.dataone.org/odo/ECSO_00000090"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>Gross primary productivity (GPP) minus autotrophic respiration (AR) in a GRASSLAND of plant segments other than the roots, e.g. leaves and shoots.
-Often abbreviated to ANPP, and in grasslands, measured by peak biomass.</obo:IAO_0000115>
+        <obo:IAO_0000115>A net primary production measurement which is measured in a grassland and only measures plant segments other than the roots, e.g. leaves and shoots.</obo:IAO_0000115>
         <obo:IAO_0000119>Adapted from ECSO_00000021 (Net Primary Production Carbon FLux) and ECSO_00000301 (Above Ground Net Primary Production Carbon Flux)</obo:IAO_0000119>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grassland Above Ground NPP Carbon Flux</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anpp</oboInOwl:hasExactSynonym>
+        <rdfs:comment>In grasslands, measured by peak biomass.</rdfs:comment>
         <rdfs:label>Grassland Above Ground Net Primary Production Carbon Flux</rdfs:label>
         <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grassland Above Ground NPP Carbon Flux</skos:altLabel>
         <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">anpp</skos:altLabel>
@@ -5863,20 +5864,26 @@ Often abbreviated to ANPP, and in grasslands, measured by peak biomass.</obo:IAO
         </rdfs:subClassOf>
         <odo:ECSO_01000005>Adapted from
 http://en.wikipedia.org/wiki/Primary_production</odo:ECSO_01000005>
-        <obo:IAO_0000115>From Moigis and Gocke, 2003, 10.1093/plankt/fbg089
-
-The primary production of phytoplankton has been estimated for decades by the 14C (Steemann-Nielsen, 1952) and O2 (Gaarder and Gran, 1927) methods.</obo:IAO_0000115>
-        <obo:IAO_0000115>The process of carbon fixation by autotrophic phytoplankton per unit area or volume and time. May occur in aquatic environments of all types.</obo:IAO_0000115>
+        <obo:IAO_0000115>The primary production of phytoplankton has been estimated for decades by the 14C (Steemann-Nielsen, 1952) and O2 (Gaarder and Gran, 1927) methods.</obo:IAO_0000115>
+        <obo:IAO_0000115>The process of carbon fixation by autotrophic phytoplankton per unit area or volume and time.</obo:IAO_0000115>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
         <dc:description>Gross primary production (GPP) is the _amount_ of chemical energy as biomass that primary producers create in a given length of time. (GPP is sometimes confused with Gross Primary productivity, which is the _rate_ at which photosynthesis or chemosynthesis occurs.)
 
 For most purposes (including this one) the two can be the same. It&apos;s most practical to measure production over a given time interval and area (or volume), and that amounts to an areal (or volumetric) rate.</dc:description>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phytoplankton primary productivity</oboInOwl:hasExactSynonym>
+        <rdfs:comment>May occur in aquatic environments of all types. The primary production of phytoplankton has been estimated for decades by the 14C (Steemann-Nielsen, 1952) and O2 (Gaarder and Gran, 1927) methods.</rdfs:comment>
         <rdfs:label>Phytoplankton Primary Production Carbon Flux</rdfs:label>
         <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phytoplankton primary productivity</skos:altLabel>
         <skos:hiddenLabel>Phytoplankton Primary Production Carbon Flux</skos:hiddenLabel>
         <skos:prefLabel>Phytoplankton Primary Production Carbon Flux</skos:prefLabel>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00000534"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The process of carbon fixation by autotrophic phytoplankton per unit area or volume and time.</owl:annotatedTarget>
+        <rdfs:comment>From Moigis and Gocke, 2003, 10.1093/plankt/fbg089</rdfs:comment>
+    </owl:Axiom>
     
 
 
@@ -5941,10 +5948,12 @@ generally, CO2 that enters the ocean dissociates into bicarbonate, carbonate, (a
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000565"/>
         <obo:IAO_0000112>CO3_CO2calc_output CO3, CO2calc output (micromol/kgSW) Concentration of carbonate ion, micromol per kilogram seawater (CO2calc output) milliMolesPerKilogram
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-sbc/75/1</obo:IAO_0000112>
-        <obo:IAO_0000115>Concentration of bicarbonate serves a crucial biochemical role in the physiological pH buffering system. Bicarbonate is an intermediate form in the deprotonation of carbonic acid.</obo:IAO_0000115>
+        <obo:IAO_0000115>A carbonate concentration which is comprised of bicarbonate.</obo:IAO_0000115>
         <obo:IAO_0000119>Adapted from
 http://en.wikipedia.org/wiki/Bicarbonate</obo:IAO_0000119>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-5896-7295"/>
+        <dc:description>Concentration of biocarbonate serves a crucial biochemical role in the physiological pH buffering system. Bicarbonate is an intermediate form in the deprotonation of carbonic acid.</dc:description>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HCO3 concentration</oboInOwl:hasExactSynonym>
         <rdfs:label>Bicarbonate Concentration</rdfs:label>
         <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HCO3 concentration</skos:altLabel>
@@ -5960,10 +5969,11 @@ http://en.wikipedia.org/wiki/Bicarbonate</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000646"/>
         <obo:IAO_0000112>tic total inorganic carbon total inorganic carbon milligramPerLiter
 ben.1.1</obo:IAO_0000112>
-        <obo:IAO_0000115>Determination of total dissolved inorganic carbon in water, expressed as moles of carbon per kilogram of water; this method is suitable for the assay of aquatic levels of total dissolved inorganic carbon (1800-2300 micromol/kg)</obo:IAO_0000115>
+        <obo:IAO_0000115>A concentration of inorganic carbon occurring in water.</obo:IAO_0000115>
         <obo:IAO_0000119>http://cdiac.ornl.gov/ftp/cdiac74/sop02.pdf</obo:IAO_0000119>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
-        <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aquatic Inorganic Carbon Concentration, all forms</oboInOwl:hasExactSynonym>
+        <dc:description>Amount of total dissolved inorganic carbon in naturally occurring water, usually expressed as moles of carbon per kilogram of water; this method is suitable for the assay of aquatic levels of total dissolved inorganic carbon (1800-2300 micromol/kg)</dc:description>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TIC</oboInOwl:hasExactSynonym>
         <rdfs:comment>Class to hold measurements for concentration for any form of inorganic C.. three main ones, carbonate, bicarbonate and co2 (also carbonic acid, but they might add that into the co2)
 
@@ -5973,10 +5983,11 @@ The class for &apos;Oceanic ...&apos; should be a subclass of this one.
 
 Right now, we have separate classes for &apos;total&apos;, as in the sum of all forms - this is a different concept than &quot;any&quot; form. also note: parent is incomplete; there are probably 8 leafs, only 6 at the moment.</rdfs:comment>
         <rdfs:label>Aquatic Inorganic Carbon Concentration</rdfs:label>
-        <rdfs:seeAlso>total inorganic carbon, CT, dissolved inorganic carbon</rdfs:seeAlso>
+        <rdfs:seeAlso>CT</rdfs:seeAlso>
+        <rdfs:seeAlso>dissolved inorganic carbon</rdfs:seeAlso>
+        <rdfs:seeAlso>total inorganic carbon</rdfs:seeAlso>
         <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TIC</skos:altLabel>
         <skos:hiddenLabel>Aquatic Inorganic Carbon Concentration</skos:hiddenLabel>
-        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aquatic Inorganic Carbon Concentration, all forms</skos:prefLabel>
     </owl:Class>
     
 
@@ -6700,8 +6711,10 @@ http://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000612">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000512"/>
+        <obo:IAO_0000115>The number of moles of a component divided by the total number of moles of a solution.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-0632-7576"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-13T23:28:44Z</dc:date>
+        <dc:description>Mole fraction is a unit of concentration, defined to be equal to the number of moles of a component divided by the total number of moles of a solution. Because it is a ratio, mole fraction is a unitless expression.</dc:description>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&apos;amount of substance&apos; fraction</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molar density</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molar fraction</oboInOwl:hasExactSynonym>
@@ -6713,6 +6726,12 @@ http://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
         <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">molar fraction</skos:altLabel>
         <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mole density</skos:altLabel>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00000612"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The number of moles of a component divided by the total number of moles of a solution.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://www.thoughtco.com/mole-fraction-definition-chemistry-glossary-606379"/>
+    </owl:Axiom>
     
 
 
@@ -6720,10 +6739,18 @@ http://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000613">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000612"/>
+        <obo:IAO_0000115>A mole fraction measurement with moles of carbon dioxide in the numerator.</obo:IAO_0000115>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-0632-7576"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-13T23:29:14Z</dc:date>
         <rdfs:label xml:lang="en">mole fraction of Carbon Dioxide</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00000613"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A mole fraction measurement with moles of carbon dioxide in the numerator.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://www.thoughtco.com/mole-fraction-definition-chemistry-glossary-606379"/>
+    </owl:Axiom>
     
 
 
@@ -6768,10 +6795,18 @@ http://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000617">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000613"/>
+        <obo:IAO_0000115>A mole fraction of carbon dioxide measurement with the numerator being moles of carbon dioxide and the denominator being the total number of moles of air.</obo:IAO_0000115>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-0632-7576"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-13T23:32:21Z</dc:date>
         <rdfs:label xml:lang="en">mole fraction of carbon dioxide in air</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00000617"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A mole fraction of carbon dioxide measurement with the numerator being moles of carbon dioxide and the denominator being the total number of moles of air.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://www.thoughtco.com/mole-fraction-definition-chemistry-glossary-606379"/>
+    </owl:Axiom>
     
 
 
@@ -6791,10 +6826,18 @@ http://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000619">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001198"/>
+        <obo:IAO_0000115>Ratio of the mass of a substance to the total mass of a mixture. With a denominator of 100, mass fraction can also be expressed as percentage by mass</obo:IAO_0000115>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-0632-7576"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-13T23:34:53Z</dc:date>
         <rdfs:label xml:lang="en">mass fraction</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00000619"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Ratio of the mass of a substance to the total mass of a mixture. With a denominator of 100, mass fraction can also be expressed as percentage by mass</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://en.wikipedia.org/wiki/Mass_fraction_(chemistry)"/>
+    </owl:Axiom>
     
 
 
@@ -6803,10 +6846,18 @@ http://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000620">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000530"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000619"/>
+        <obo:IAO_0000115>Ratio of the mass of carbon dioxide to the total mass of a mixture.</obo:IAO_0000115>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-0632-7576"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-13T23:35:03Z</dc:date>
         <rdfs:label xml:lang="en">mass fraction of carbon dioxide</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00000620"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>Ratio of the mass of carbon dioxide to the total mass of a mixture.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://en.wikipedia.org/wiki/Mass_fraction_(chemistry)"/>
+    </owl:Axiom>
     
 
 
@@ -6814,6 +6865,9 @@ http://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000621">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000620"/>
+        <obo:IAO_0000115>A mass fraction of carbon dioxide as measured by a LI-COR CO2 analyzer.</obo:IAO_0000115>
+        <obo:IAO_0000119>LI-6251 CO2 Analyzer Operating and Service Manual Publication Number 8712-56, https://www.licor.com/documents/omn2x59g70lba7pyl1qm (accessed 2019-09-18)</obo:IAO_0000119>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-0632-7576"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-13T23:35:36Z</dc:date>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mean LICOR weight fraction of carbon dioxide</oboInOwl:hasExactSynonym>
@@ -6851,11 +6905,18 @@ http://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000627">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000612"/>
-        <obo:IAO_0000115>Molar density is defined as moles/volume</obo:IAO_0000115>
+        <obo:IAO_0000115>The volume occupied by a mole of a substance moles/volume</obo:IAO_0000115>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-0632-7576"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-14T22:24:10Z</dc:date>
         <rdfs:label xml:lang="en">molar density</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00000627"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The volume occupied by a mole of a substance moles/volume</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://www.knowledgedoor.com/2/units_and_constants_handbook/molar_density.html"/>
+    </owl:Axiom>
     
 
 
@@ -6864,10 +6925,18 @@ http://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00000628">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000627"/>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000662"/>
+        <obo:IAO_0000115>The volume occupied by a mole of Carbon Dioxide gas.</obo:IAO_0000115>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-0632-7576"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-09-14T22:24:55Z</dc:date>
         <rdfs:label xml:lang="en">molar density of carbon dioxide</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00000628"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The volume occupied by a mole of Carbon Dioxide gas.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="http://www.knowledgedoor.com/2/units_and_constants_handbook/molar_density.html"/>
+    </owl:Axiom>
     
 
 
@@ -7544,9 +7613,10 @@ http://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
                 <owl:allValuesFrom rdf:resource="http://ecoinformatics.org/oboe/oboe.1.2/oboe-characteristics.owl#MassFlux"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115>The rate at which a mass or amount of carbon moves to or from a particular component of the ecosystem per unit time.</obo:IAO_0000115>
+        <obo:IAO_0000115>The rate at which a mass or amount of carbon moves to or from a particular component across a surface of the ecosystem per unit time.</obo:IAO_0000115>
         <obo:IAO_0000119>Litton, C.M. et al. Carbon allocation in forest ecosystems. Global Change Biology. V 13 I 10. pp. 2089 - 2109. July 2007.</obo:IAO_0000119>
         <obo:IAO_0000119>http://en.wikipedia.org/wiki/Transport_phenomena#Mass_transfer</obo:IAO_0000119>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-1338-9436"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-5896-7295"/>
         <dc:description>Carbon fluxes are the movement of Carbon from one place (Source) to another (Sink).  Carbon fluxes all have dimensions of {mass or amount of} Carbon per area (or volume) per time. Biochemically-oriented projects use moles (e.g., for Stoichiometry) rather than kg to quantify the amount of Carbon, whereas Climate-oriented projects use kg.
@@ -7835,12 +7905,12 @@ http://en.wikipedia.org/wiki/Total_organic_carbon#Measurement</obo:IAO_0000119>
         </rdfs:subClassOf>
         <obo:IAO_0000112>dic dissolved inorganic carbon dissolved inorganic carbon milligramPerLiter
 urn:node:GLEON</obo:IAO_0000112>
-        <obo:IAO_0000115>The total inorganic carbon or dissolved inorganic carbon (DIC) is the sum of inorganic carbon species in a solution in freshwater.
-
-The inorganic carbon species include carbon dioxide, carbonic acid, bicarbonate anion, and carbonate.[1] It is customary to express carbon dioxide and carbonic acid simultaneously as CO2* . CT is a key parameter when making measurements related to the pH of natural aqueous systems,[2] and carbon dioxide flux estimates.</obo:IAO_0000115>
+        <obo:IAO_0000115>An aquatic inorganic carbon concentration which is the sum of inorganic carbon species in a solution in freshwater.</obo:IAO_0000115>
         <obo:IAO_0000119>http://en.wikipedia.org/wiki/Total_inorganic_carbon</obo:IAO_0000119>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-5896-7295"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DIC</oboInOwl:hasExactSynonym>
+        <rdfs:comment>The inorganic carbon species include carbon dioxide, carbonic acid, bicarbonate anion, and carbonate.[1] It is customary to express carbon dioxide and carbonic acid simultaneously as CO2* . Total DIC is a key parameter when making measurements related to the pH of natural aqueous systems,[2] and carbon dioxide flux estimates.</rdfs:comment>
         <rdfs:label>Freshwater Total Inorganic Carbon Concentration</rdfs:label>
         <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DIC</skos:altLabel>
         <skos:hiddenLabel>Freshwater Total Inorganic Carbon Concentration</skos:hiddenLabel>
@@ -7931,7 +8001,8 @@ http://en.wikipedia.org/wiki/Carbonate</obo:IAO_0000119>
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001102"/>
         <obo:IAO_0000112>total_c  Total carbon Percentage
 urn:node:TERN</obo:IAO_0000112>
-        <obo:IAO_0000115>Percentage of a sample that is carbon</obo:IAO_0000115>
+        <obo:IAO_0000115>Proportion of a sample that is carbon, normalized to a denominator of 100.</obo:IAO_0000115>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-5896-7295"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">percent carbon</oboInOwl:hasExactSynonym>
         <rdfs:label>Carbon Percentage</rdfs:label>
@@ -7946,9 +8017,12 @@ urn:node:TERN</obo:IAO_0000112>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001128">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000664"/>
+        <obo:IAO_0000115>A carbon accumulation rate for carbon expressed relative to the amount of carbon originally present.</obo:IAO_0000115>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-5896-7295"/>
         <rdfs:comment>Net_Carbon_Production rate Periphyton Net carbon production milligramsPerGramPerHour
 https://pasta.lternet.edu/package/metadata/eml/knb-lter-fce/1107/3</rdfs:comment>
+        <rdfs:comment>e.g, carbon produced per carbon present</rdfs:comment>
         <rdfs:label>Carbon Specific Net Production Rate</rdfs:label>
         <skos:hiddenLabel>Carbon Specific Net Production Rate</skos:hiddenLabel>
         <skos:prefLabel>Carbon Specific Net Production Rate</skos:prefLabel>
@@ -7983,9 +8057,11 @@ urn:node:LTER</obo:IAO_0000112>
         <obo:IAO_0000115>Concentration of total organic carbon (TOC) is the concentration of amount of carbon found in an organic compound</obo:IAO_0000115>
         <obo:IAO_0000119>Adapted from
 http://en.wikipedia.org/wiki/Total_organic_carbon</obo:IAO_0000119>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-5896-7295"/>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organic Carbon Concentration, in Water</oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TOC</oboInOwl:hasExactSynonym>
+        <rdfs:comment>e.g, Sum of dissolved and particulate carbon.</rdfs:comment>
         <rdfs:label>Organic Carbon Concentration in Water</rdfs:label>
         <skos:altLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TOC</skos:altLabel>
         <skos:hiddenLabel>Organic Carbon Concentration in Water</skos:hiddenLabel>
@@ -9192,6 +9268,8 @@ http://en.wikipedia.org/wiki/Quadrat</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001196">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000664"/>
+        <obo:IAO_0000115>A carbon accumulation rate expressed relative to the amount of carbon originally present (e.g, carbon produced per carbon present).</obo:IAO_0000115>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-5896-7295"/>
         <rdfs:comment>units typical for this kind of measurement are
 milligramsPerGramPerHour
@@ -10429,10 +10507,18 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001515">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001516"/>
+        <obo:IAO_0000115>A mineralization rate in which organic carbon is transformed into inorganic forms.</obo:IAO_0000115>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-09T21:20:50Z</dc:date>
         <rdfs:label xml:lang="en">dissolved organic carbon mineralization rate</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00001515"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>A mineralization rate in which organic carbon is transformed into inorganic forms.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://dl.sciencesocieties.org/publications/books/abstracts/sssabookseries/methodsinbiogeo/385?access=0&amp;view=pdf"/>
+    </owl:Axiom>
     
 
 
@@ -10440,6 +10526,7 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001516">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000519"/>
+        <obo:IAO_0000115>A temporal rate in which an organic material is transformed into inorganic material.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-10-09T21:22:37Z</dc:date>
         <rdfs:label xml:lang="en">mineralization rate</rdfs:label>
@@ -15229,6 +15316,7 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00001928">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001127"/>
+        <obo:IAO_0000115>A carbon percentage, which is measured in a sample of lake sediment.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-03T22:31:43Z</dc:date>
         <rdfs:label xml:lang="en">carbon percentage in lake sediment</rdfs:label>
@@ -17194,8 +17282,11 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002103">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00001122"/>
+        <obo:IAO_0000115>A freshwater total inorganic carbon concentration, which is composed of dissolved inorganic carbon.</obo:IAO_0000115>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-03T23:46:26Z</dc:date>
+        <dc:description>The concentration for any form of inorganic C in freshwater. There are three main forms: carbonate, bicarbonate and CO2, plus carbonic acid, which may be either negligible or measured with CO2). Generally, CO2 that enters water dissociates into bicarbonate, carbonate, (and some stays as CO2).</dc:description>
         <rdfs:label xml:lang="en">dissolved inorganic carbon concentration in freshwater</rdfs:label>
     </owl:Class>
     
@@ -17204,9 +17295,12 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
     <!-- http://purl.dataone.org/odo/ECSO_00002104 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002104">
-        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000539"/>
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000535"/>
+        <obo:IAO_0000115>An oceanic total inorganic carbon concentration, which is composed of dissolved inorganic carbon.</obo:IAO_0000115>
+        <dc:contributor rdf:resource="http://orcid.org/0000-0002-1693-8322"/>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-05-03T23:48:42Z</dc:date>
+        <dc:description>The concentration for any form of inorganic C in sea water. There are three main forms: carbonate, bicarbonate and CO2, plus carbonic acid, which may be either negligible or measured with CO2). generally, CO2 that enters water dissociates into bicarbonate, carbonate, (and some stays as CO2).</dc:description>
         <rdfs:label xml:lang="en">dissolved inorganic carbon concentration in seawater</rdfs:label>
     </owl:Class>
     
