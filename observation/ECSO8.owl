@@ -17117,6 +17117,19 @@ http://en.wikipedia.org/wiki/Ecosystem_respiration</obo:IAO_0000119>
     
 
 
+    <!-- http://purl.dataone.org/odo/ECSO_00002088 -->
+
+    <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002088">
+        <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000536"/>
+        <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-09-24T00:24:14Z</dc:date>
+        <oboInOwl:hasExactSynonym>soil CO2 flux</oboInOwl:hasExactSynonym>
+        <rdfs:label xml:lang="en">soil carbon dioxide flux</rdfs:label>
+        <skos:altLabel>soil CO2 flux</skos:altLabel>
+    </owl:Class>
+    
+
+
     <!-- http://purl.dataone.org/odo/ECSO_00002089 -->
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00002089">
@@ -28192,10 +28205,17 @@ http://en.wikipedia.org/wiki/Soil_organic_matter, 2017-07-08</obo:IAO_0000119>
 
     <owl:Class rdf:about="http://purl.dataone.org/odo/ECSO_00003084">
         <rdfs:subClassOf rdf:resource="http://purl.dataone.org/odo/ECSO_00000536"/>
+        <obo:IAO_0000115>The rate of carbon dioxide entering or water vapor exiting through the stomata of a leaf.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0003-1264-1166"/>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-07-19T00:06:38Z</dc:date>
         <rdfs:label xml:lang="en">stomatal conductance</rdfs:label>
     </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://purl.dataone.org/odo/ECSO_00003084"/>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
+        <owl:annotatedTarget>The rate of carbon dioxide entering or water vapor exiting through the stomata of a leaf.</owl:annotatedTarget>
+        <oboInOwl:hasDbXref rdf:resource="https://en.wikipedia.org/wiki/Stomatal_conductance"/>
+    </owl:Axiom>
     
 
 
