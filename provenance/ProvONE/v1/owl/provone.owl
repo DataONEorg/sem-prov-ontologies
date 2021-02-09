@@ -45,7 +45,7 @@
 
     <owl:ObjectProperty rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#controls">
         <rdfs:label>controls</rdfs:label>
-        <prov:category>Relates a Controller to its destination Program.</prov:category>
+        <rdfs:comment>Relates a Controller to its destination Program.</rdfs:comment>
         <prov:category>workflow-specification</prov:category>
         <rdfs:range rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#Program"/>
         <rdfs:domain rdf:resource="http://purl.dataone.org/provone/2015/01/15/ontology#Controller"/>
@@ -319,7 +319,7 @@
     <owl:Class rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#Port">
         <rdfs:label>Port</rdfs:label>
         <rdfs:subClassOf rdf:resource="&prov;Entity"/>
-        <prov:category>A Port enables a Program to send and receive Entities (Data, Visualizations, etc.).  When used in a role as an input port, default parameters may be configured for the Port.</prov:category>
+        <rdfs:comment>A Port enables a Program to send and receive Entities (Data, Visualizations, etc.).  When used in a role as an input port, default parameters may be configured for the Port.</rdfs:comment>
         <prov:category>workflow-specification</prov:category>
     </owl:Class>
     
@@ -365,7 +365,7 @@
     <owl:Class rdf:about="http://purl.dataone.org/provone/2015/01/15/ontology#Controller">
         <rdfs:label>Controller</rdfs:label>
         <rdfs:subClassOf rdf:resource="&prov;Entity"/>
-        <prov:category>A Controller specifies a control link between two Programs, and defines the model of computation for the Program.  Some models will implement sequential flow control, others will implement parallel flow control, etc.  Each model of computation can be implemented by subclassing the Controller class.</prov:category>
+        <rdfs:comment>A Controller specifies a control link between two Programs, and defines the model of computation for the Program.  Some models will implement sequential flow control, others will implement parallel flow control, etc.  Each model of computation can be implemented by subclassing the Controller class.</rdfs:comment>
         <prov:category>workflow-specification</prov:category>
     </owl:Class>
     
