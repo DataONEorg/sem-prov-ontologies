@@ -1,0 +1,1690 @@
+@prefix : <http://www.semanticweb.org/samanthacsik/ontologies/2021/2/salmon#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/samanthacsik/ontologies/2021/2/salmon> .
+
+<http://www.semanticweb.org/samanthacsik/ontologies/2021/2/salmon> rdf:type owl:Ontology ;
+                                                                    rdfs:comment "An ontology which represents knowledge about salmon, features of their habitats, salmon stakeholders, and related entities." .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000115
+<http://purl.obolibrary.org/obo/IAO_0000115> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/source
+<http://purl.org/dc/elements/1.1/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#hasDbXref
+<http://www.geneontology.org/formats/oboInOwl#hasDbXref> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#hasExactSynonym
+<http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#sameAs
+owl:sameAs rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+<http://www.w3.org/2004/02/skos/core#exactMatch> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.dataone.org/odo/salmon_00066
+<http://purl.dataone.org/odo/salmon_00066> rdf:type owl:ObjectProperty ;
+                                           owl:inverseOf <http://purl.dataone.org/odo/salmon_00069> ;
+                                           rdfs:domain <http://purl.dataone.org/odo/salmon_00064> ;
+                                           rdfs:range <http://purl.dataone.org/odo/salmon_00023> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T19:00:26Z"^^xsd:dateTime ;
+                                           rdfs:label "employedAt"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00067
+<http://purl.dataone.org/odo/salmon_00067> rdf:type owl:ObjectProperty ;
+                                           owl:inverseOf <http://purl.dataone.org/odo/salmon_00071> ;
+                                           rdfs:domain <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T19:00:44Z"^^xsd:dateTime ;
+                                           rdfs:label "hasResearchRole"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00069
+<http://purl.dataone.org/odo/salmon_00069> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://purl.dataone.org/odo/salmon_00023> ;
+                                           rdfs:range <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T19:11:36Z"^^xsd:dateTime ;
+                                           rdfs:label "employs"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00071
+<http://purl.dataone.org/odo/salmon_00071> rdf:type owl:ObjectProperty ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T19:45:52Z"^^xsd:dateTime ;
+                                           rdfs:label "researchedBy"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.dataone.org/odo/salmon_00001
+<http://purl.dataone.org/odo/salmon_00001> rdf:type owl:Class ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:24:20Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> """The thirteen SASAP regions were determined based on their geography, and in many cases represent large watersheds where all precipitation melts and flows into the same part of the ocean. Regions tend to also be grouped by Indigenous cultures and languages, evidence of the deep-time ties between Alaska’s salmon and people. Some regions align with current Alaska Department of Fish & Game (ADF&G) statistical areas; some do not. 
+
+The bounding cooridnates and shapefiles for each region are accessible at: https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W""" ;
+                                           rdfs:comment "Populates the SASAP Data Portal (https://knb.ecoinformatics.org/portals/SASAP/Data) faceted search field, 'SASAP Region'" ;
+                                           rdfs:label "SASAP Region"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00001> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """The thirteen SASAP regions were determined based on their geography, and in many cases represent large watersheds where all precipitation melts and flows into the same part of the ocean. Regions tend to also be grouped by Indigenous cultures and languages, evidence of the deep-time ties between Alaska’s salmon and people. Some regions align with current Alaska Department of Fish & Game (ADF&G) statistical areas; some do not. 
+
+The bounding cooridnates and shapefiles for each region are accessible at: https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W""" ;
+   <http://purl.org/dc/elements/1.1/source> "https://alaskasalmonandpeople.org/regions/"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00016
+<http://purl.dataone.org/odo/salmon_00016> rdf:type owl:Class ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-24T22:09:33Z"^^xsd:dateTime ;
+                                           rdfs:label "Salmon common name and biological taxon"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "Species" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00016> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
+   owl:annotatedTarget "Species" ;
+   rdfs:comment "Populates the SASAP Data Portal (https://knb.ecoinformatics.org/portals/SASAP/Data) faceted search field, 'Species'"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00023
+<http://purl.dataone.org/odo/salmon_00023> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00098> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T17:58:28Z"^^xsd:dateTime ;
+                                           rdfs:comment "Populates the SASAP Data Portal (https://knb.ecoinformatics.org/portals/SASAP/Data) faceted search field, 'Organization'" ;
+                                           rdfs:label "Data contributor"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00024
+<http://purl.dataone.org/odo/salmon_00024> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00023> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:01:09Z"^^xsd:dateTime ;
+                                           rdfs:label "State government organization"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00025
+<http://purl.dataone.org/odo/salmon_00025> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00023> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:01:18Z"^^xsd:dateTime ;
+                                           rdfs:label "Federal government organization"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00026
+<http://purl.dataone.org/odo/salmon_00026> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00023> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:01:44Z"^^xsd:dateTime ;
+                                           rdfs:label "Nonprofit organization"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00048
+<http://purl.dataone.org/odo/salmon_00048> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00023> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:06:04Z"^^xsd:dateTime ;
+                                           rdfs:label "International organization"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00054
+<http://purl.dataone.org/odo/salmon_00054> rdf:type owl:Class ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:45:38Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> """Beginning in 2016, nine SASAP working groups formed – each composed of between 12 and 24 knowledge experts from a range of disciplines, backgrounds, and regions. Each participant brought his or her data and experiences for synthesis and analysis, while NCEAS provided logistical and technical support to facilitate each group’s innovative work.
+
+Each of the nine groups focused on specific issues related to salmon and people in Alaska:
+
+Four SASAP groups were tasked with integrating knowledge across multiple disciplines to understand the fundamental state of knowledge of Alaska’s salmon systems. The work of each group is presented for each of the major watersheds in Alaska in the Region section (https://alaskasalmonandpeople.org/regions/).
+
+An additional five working groups were selected to focus on specific research questions that provide insight into the pressures on salmon and salmon communities, as well as options for response to those pressures. Their work is presented in the Special Topics section (https://alaskasalmonandpeople.org/topics/).""" ;
+                                           rdfs:label "SASAP working group and project support"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "Working Group" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00054> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """Beginning in 2016, nine SASAP working groups formed – each composed of between 12 and 24 knowledge experts from a range of disciplines, backgrounds, and regions. Each participant brought his or her data and experiences for synthesis and analysis, while NCEAS provided logistical and technical support to facilitate each group’s innovative work.
+
+Each of the nine groups focused on specific issues related to salmon and people in Alaska:
+
+Four SASAP groups were tasked with integrating knowledge across multiple disciplines to understand the fundamental state of knowledge of Alaska’s salmon systems. The work of each group is presented for each of the major watersheds in Alaska in the Region section (https://alaskasalmonandpeople.org/regions/).
+
+An additional five working groups were selected to focus on specific research questions that provide insight into the pressures on salmon and salmon communities, as well as options for response to those pressures. Their work is presented in the Special Topics section (https://alaskasalmonandpeople.org/topics/).""" ;
+   <http://purl.org/dc/elements/1.1/source> "https://alaskasalmonandpeople.org/about/process-people/"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00054> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
+   owl:annotatedTarget "Working Group" ;
+   rdfs:comment "Populates the SASAP Data Portal (https://knb.ecoinformatics.org/portals/SASAP/Data) faceted search field, 'Working Group'"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00064
+<http://purl.dataone.org/odo/salmon_00064> rdf:type owl:Class ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:48:44Z"^^xsd:dateTime ;
+                                           rdfs:label "Person"@en ;
+                                           owl:sameAs "https://schema.org/Person" .
+
+
+###  http://purl.dataone.org/odo/salmon_00097
+<http://purl.dataone.org/odo/salmon_00097> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00023> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T21:04:36Z"^^xsd:dateTime ;
+                                           rdfs:label "Indigenous organization"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00098
+<http://purl.dataone.org/odo/salmon_00098> rdf:type owl:Class ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T21:14:05Z"^^xsd:dateTime ;
+                                           rdfs:label "Organization"@en ;
+                                           owl:sameAs "https://schema.org/Organization" .
+
+
+###  http://purl.dataone.org/odo/salmon_00099
+<http://purl.dataone.org/odo/salmon_00099> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00098> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-27T00:18:10Z"^^xsd:dateTime ;
+                                           rdfs:label "Researcher affiliation"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00101
+<http://purl.dataone.org/odo/salmon_00101> rdf:type owl:Class ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-29T17:33:25Z"^^xsd:dateTime ;
+                                           rdfs:label "Data corpus"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.dataone.org/odo/salmon_00002
+<http://purl.dataone.org/odo/salmon_00002> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:27:29Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> """Although relatively small in landmass (4th smallest region) the total expanse of the Alaska Peninsula and Aleutian Island region is enormous, spanning over 1600 km (1000 miles) and 10 degrees of longitude.
+
+The bounding coordinates for this SASAP region are:
+North: 57.2997 degrees
+South: 51.1568 degrees
+East: -153.6282 degrees
+West: 179.8567 degrees""" ;
+                                           rdfs:label "Alaska Peninsula/Aleutian Islands"@en ;
+                                           owl:sameAs "http://purl.obolibrary.org/obo/GAZ_00055133" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A peninsula extending about 800 km to the southwest from the mainland of Alaska and ending in the Aleutian Islands. The peninsula separates the Pacific Ocean from Bristol Bay, an arm of the Bering Sea." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00002> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """Although relatively small in landmass (4th smallest region) the total expanse of the Alaska Peninsula and Aleutian Island region is enormous, spanning over 1600 km (1000 miles) and 10 degrees of longitude.
+
+The bounding coordinates for this SASAP region are:
+North: 57.2997 degrees
+South: 51.1568 degrees
+East: -153.6282 degrees
+West: 179.8567 degrees""" ;
+   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#alaskapeninsulaandaleutianislands
+https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00002> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A peninsula extending about 800 km to the southwest from the mainland of Alaska and ending in the Aleutian Islands. The peninsula separates the Pacific Ocean from Bristol Bay, an arm of the Bering Sea." ;
+   <http://purl.org/dc/elements/1.1/source> """http://en.wikipedia.org/wiki/Alaska_Peninsula 
+https://www.wikidata.org/wiki/Q119285"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00003
+<http://purl.dataone.org/odo/salmon_00003> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:27:43Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> """In the Arctic region of Alaska, connections between salmon and people are in their infancy. Salmon are just one harbinger of change in this region.
+
+The bounding coordinates for this SASAP region are:
+North: 71.4396 degrees
+South: 67.7408 degrees
+East: -136.684 degrees
+West: -166.311 degrees""" ;
+                                           rdfs:label "Arctic"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Arctic Alaska or Far North Alaska is a region of the U.S. state of Alaska generally referring to the northern areas on or close to the Arctic Ocean." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "Far North Alaska" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00003> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """In the Arctic region of Alaska, connections between salmon and people are in their infancy. Salmon are just one harbinger of change in this region.
+
+The bounding coordinates for this SASAP region are:
+North: 71.4396 degrees
+South: 67.7408 degrees
+East: -136.684 degrees
+West: -166.311 degrees""" ;
+   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#arctic
+https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00003> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Arctic Alaska or Far North Alaska is a region of the U.S. state of Alaska generally referring to the northern areas on or close to the Arctic Ocean." ;
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Arctic_Alaska 
+https://www.wikidata.org/wiki/Q3245148"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00004
+<http://purl.dataone.org/odo/salmon_00004> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:27:48Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> """Bristol Bay is sockeye salmon country. The region is a land of great inland lakes, ideally suited to the juvenile life of sockeye salmon. The habitats here are virtually pristine and intact with a notable absence of mining and offshore oil and gas exploration in the region. The long proposed Pebble Mine, situated at the intersection between the Nushagak River and Kvichak River watersheds, would unquestionably and permanently change this salmon landscape.
+
+The bounding coordinates for this SASAP region are:
+North: 60.9278 degrees
+South: 56.8716 degrees
+East: -152.7319 degrees
+West: -162.2713 degrees""" ;
+                                           rdfs:label "Bristol Bay"@en ;
+                                           owl:sameAs "http://purl.obolibrary.org/obo/GAZ_00055147" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The eastern-most arm of the Bering Sea. It is located between the southwest part of the Alaska mainland to its north, and the Alaska Peninsula to its south and east. Bristol Bay is 400 km long and 290 km wide at its mouth. A number of rivers flow into the bay, including the Cinder, Igushik, Kvichak, Meshik, Nushagak, Naknek, Togiak, and Ugashik." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00004> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The eastern-most arm of the Bering Sea. It is located between the southwest part of the Alaska mainland to its north, and the Alaska Peninsula to its south and east. Bristol Bay is 400 km long and 290 km wide at its mouth. A number of rivers flow into the bay, including the Cinder, Igushik, Kvichak, Meshik, Nushagak, Naknek, Togiak, and Ugashik." ;
+   <http://purl.org/dc/elements/1.1/source> """http://en.wikipedia.org/wiki/Bristol_Bay 
+https://www.wikidata.org/wiki/Q917872"""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00004> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """Bristol Bay is sockeye salmon country. The region is a land of great inland lakes, ideally suited to the juvenile life of sockeye salmon. The habitats here are virtually pristine and intact with a notable absence of mining and offshore oil and gas exploration in the region. The long proposed Pebble Mine, situated at the intersection between the Nushagak River and Kvichak River watersheds, would unquestionably and permanently change this salmon landscape.
+
+The bounding coordinates for this SASAP region are:
+North: 60.9278 degrees
+South: 56.8716 degrees
+East: -152.7319 degrees
+West: -162.2713 degrees""" ;
+   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#bristolbay
+https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00005
+<http://purl.dataone.org/odo/salmon_00005> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:27:57Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> """Despite being the smallest salmon-people region of Alaska (6,587 km²), Chignik is remarkably rich in habitat diversity–which translates into biological diversity of its salmon. The Chignik region is home to multiple dispersed communities such as Chignik Lake, Chignik Lagoon, Chignik Bay, Perryville, and Ivanof Bay.
+
+The bounding coordinates for this SASAP region are:
+North: 57.142 degrees
+South: 55.5261 degrees
+East: -155.4645 degrees
+West: -159.6479 degrees""" ;
+                                           rdfs:comment "GAZ contains term URIs for Chignik Lake (http://purl.obolibrary.org/obo/GAZ_00197745), Chignik River (http://purl.obolibrary.org/obo/GAZ_00197347), and the City of Chignik (http://purl.obolibrary.org/obo/GAZ_00262790), which are all contained within the SASAP Chignik region, but too specific." ;
+                                           rdfs:label "Chignik"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00005> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """Despite being the smallest salmon-people region of Alaska (6,587 km²), Chignik is remarkably rich in habitat diversity–which translates into biological diversity of its salmon. The Chignik region is home to multiple dispersed communities such as Chignik Lake, Chignik Lagoon, Chignik Bay, Perryville, and Ivanof Bay.
+
+The bounding coordinates for this SASAP region are:
+North: 57.142 degrees
+South: 55.5261 degrees
+East: -155.4645 degrees
+West: -159.6479 degrees""" ;
+   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#chignik
+https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00006
+<http://purl.dataone.org/odo/salmon_00006> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:28:08Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> """Home to over 60% of Alaska’s residents, the Cook Inlet region may provide a glimpse of the future. Issues of urbanization, road building, and the rise of invasive species are increasingly prominent here. These changes are set within a context of a changing climate and increased conflict among user groups for limited salmon resources.
+
+The bounding coordinates for this SASAP region are: 
+North: 63.638 degrees
+South: 58.6157 degrees
+East: -146.1503 degrees
+West: -154.7415 degrees""" ;
+                                           rdfs:label "Cook Inlet"@en ;
+                                           owl:sameAs "http://purl.obolibrary.org/obo/GAZ_00051076" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A large estuary stretching 180 miles from the Gulf of Alaska to Anchorage in south-central Alaska. It separates the Kenai Peninsula from mainland Alaska and branches into the Knik Arm and Turnagain Arm at its northern end, almost surrounding Anchorage. The watershed covers about 100,000 km2 of southern Alaska, east of the Aleutian Range and south of the Alaska Range, receiving water from its tributaries the Knik River, the Little Susitna River, and the Susitna and Matanuska rivers. The watershed includes the drainage areas of Mount McKinley. Within the watershed there are several national parks and four historically active volcanoes." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00006> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """Home to over 60% of Alaska’s residents, the Cook Inlet region may provide a glimpse of the future. Issues of urbanization, road building, and the rise of invasive species are increasingly prominent here. These changes are set within a context of a changing climate and increased conflict among user groups for limited salmon resources.
+
+The bounding coordinates for this SASAP region are: 
+North: 63.638 degrees
+South: 58.6157 degrees
+East: -146.1503 degrees
+West: -154.7415 degrees""" ;
+   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#cookinlet
+https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00006> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A large estuary stretching 180 miles from the Gulf of Alaska to Anchorage in south-central Alaska. It separates the Kenai Peninsula from mainland Alaska and branches into the Knik Arm and Turnagain Arm at its northern end, almost surrounding Anchorage. The watershed covers about 100,000 km2 of southern Alaska, east of the Aleutian Range and south of the Alaska Range, receiving water from its tributaries the Knik River, the Little Susitna River, and the Susitna and Matanuska rivers. The watershed includes the drainage areas of Mount McKinley. Within the watershed there are several national parks and four historically active volcanoes." ;
+   <http://purl.org/dc/elements/1.1/source> """http://en.wikipedia.org/wiki/Cook_Inlet 
+https://www.wikidata.org/wiki/Q5166925"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00007
+<http://purl.dataone.org/odo/salmon_00007> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:28:12Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> """Fewer than 2500 people live permanently in the Copper River region, an area comparable in size to the state of West Virginia. Sockeye salmon are dominant here, given the multiple large lakes available for rearing juvenile salmon. Though less abundant than sockeye, king salmon are deeply important to all salmon-connected people. Kings have declined in number since 2007.
+
+The bounding coordinates for this SASAP region are:
+North: 63.3227 degrees
+South: 59.7112 degrees
+East: -139.6942 degrees
+West: -147.8251 degrees""" ;
+                                           rdfs:label "Copper River"@en ;
+                                           owl:sameAs "http://purl.obolibrary.org/obo/GAZ_00197403" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A river in south-central Alaska in the United States. It drains a large region of the Wrangell Mountains and Chugach Mountains into the Gulf of Alaska. The Copper River rises out of the Copper Glacier, which lies on the northeast side of Mount Wrangell, in the Wrangell Mountains, within Wrangell-Saint Elias National Park. It begins by flowing almost due north in a valley that lies on the east side of Mount Sanford, and then turns west, forming the northwest edge of the Wrangell Mountains and separating them from the Mentasta Mountains to the northeast. It continues to turn southeast, through a wide marshy plain to Chitina, where it is joined from the southeast by the Chitina River. Downstream from its confluence with the Chitina it flows southwest, passing through a narrow glacier-lined gap in the Chugach Mountains east of Cordova Peak. There is an extensive area of sand dunes between the Copper and Bremner Rivers. Both Miles Glacier and Child's Glacier calve directly into the river." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00007> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """Fewer than 2500 people live permanently in the Copper River region, an area comparable in size to the state of West Virginia. Sockeye salmon are dominant here, given the multiple large lakes available for rearing juvenile salmon. Though less abundant than sockeye, king salmon are deeply important to all salmon-connected people. Kings have declined in number since 2007.
+
+The bounding coordinates for this SASAP region are:
+North: 63.3227 degrees
+South: 59.7112 degrees
+East: -139.6942 degrees
+West: -147.8251 degrees""" ;
+   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#copperriver
+https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00007> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A river in south-central Alaska in the United States. It drains a large region of the Wrangell Mountains and Chugach Mountains into the Gulf of Alaska. The Copper River rises out of the Copper Glacier, which lies on the northeast side of Mount Wrangell, in the Wrangell Mountains, within Wrangell-Saint Elias National Park. It begins by flowing almost due north in a valley that lies on the east side of Mount Sanford, and then turns west, forming the northwest edge of the Wrangell Mountains and separating them from the Mentasta Mountains to the northeast. It continues to turn southeast, through a wide marshy plain to Chitina, where it is joined from the southeast by the Chitina River. Downstream from its confluence with the Chitina it flows southwest, passing through a narrow glacier-lined gap in the Chugach Mountains east of Cordova Peak. There is an extensive area of sand dunes between the Copper and Bremner Rivers. Both Miles Glacier and Child's Glacier calve directly into the river." ;
+   <http://purl.org/dc/elements/1.1/source> """http://en.wikipedia.org/wiki/Copper_River_(Alaska) 
+https://www.wikidata.org/wiki/Q1131444"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00008
+<http://purl.dataone.org/odo/salmon_00008> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:28:29Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> """The abundance of salmon returning to the largest island in Alaska remain high, though sociocultural challenges loom as large as the 925 glaciers that cling to the island’s coastal and interior mountains.
+
+The bounding coordinates for this SASAP region are: 
+North: 59.0261 degrees
+South: 56.3492 degrees
+East: -151.6884 degrees
+West: -156.7838 degrees""" ;
+                                           rdfs:label "Kodiak"@en ;
+                                           owl:sameAs "http://purl.obolibrary.org/obo/GAZ_00050020" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A large island on the south coast of the State of Alaska, separated from the Alaska mainland by the Shelikof Strait." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00008> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """The abundance of salmon returning to the largest island in Alaska remain high, though sociocultural challenges loom as large as the 925 glaciers that cling to the island’s coastal and interior mountains.
+
+The bounding coordinates for this SASAP region are: 
+North: 59.0261 degrees
+South: 56.3492 degrees
+East: -151.6884 degrees
+West: -156.7838 degrees""" ;
+   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#kodiak
+https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00008> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A large island on the south coast of the State of Alaska, separated from the Alaska mainland by the Shelikof Strait." ;
+   <http://purl.org/dc/elements/1.1/source> """http://en.wikipedia.org/wiki/Kodiak_Island  
+https://www.wikidata.org/wiki/Q514093"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00009
+<http://purl.dataone.org/odo/salmon_00009> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:28:35Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> """Straddling the Arctic Circle, the Kotzebue region is twice the size of West Virginia and categorized as among the driest areas of Alaska. Chum salmon is the primary species in this region and is harvested by local users in both subsistence and commercial fisheries.
+
+The bounding coordinates for this SASAP region are:
+North: 68.9178 degrees
+South: 65.3082 degrees
+East: 65.3082 degrees
+West: -169.0513 degrees""" ;
+                                           rdfs:comment "GAZ contains term URIs for Kotzebue (a populated place; http://purl.obolibrary.org/obo/GAZ_22223765), Kotzebue Sound (http://purl.obolibrary.org/obo/GAZ_00132744), and City of Kotzebue (http://purl.obolibrary.org/obo/GAZ_00198349), which are all contained within the SASAP Kotzebue region, but too specific." ;
+                                           rdfs:label "Kotzebue"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00009> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """Straddling the Arctic Circle, the Kotzebue region is twice the size of West Virginia and categorized as among the driest areas of Alaska. Chum salmon is the primary species in this region and is harvested by local users in both subsistence and commercial fisheries.
+
+The bounding coordinates for this SASAP region are:
+North: 68.9178 degrees
+South: 65.3082 degrees
+East: 65.3082 degrees
+West: -169.0513 degrees""" ;
+   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#kotzebue
+https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00010
+<http://purl.dataone.org/odo/salmon_00010> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:28:48Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> """The Kuskokwim region is the 4th largest of Alaska, and at 154,168 km² is comparable in size to the state of Georgia. The region drains the Kuskokwim – one of the great rivers of the world. The salmon-producing habitat of the Kuskokwim region is diverse and productive. Drier than the neighboring Bristol Bay region, the Kuskokwim region has a larger amount of burn area from forest fires than all other regions but the Yukon.
+
+The bounding coordinates for this SASAP region are:
+North: 64.4166 degrees
+South: 58.6262 degrees
+East: -151.5105 degrees
+West: -173.2164 degrees""" ;
+                                           rdfs:comment "GAZ contains term URIs for Kuskokwin Bay (http://purl.obolibrary.org/obo/GAZ_00147944), Kuskokwim River (http://purl.obolibrary.org/obo/GAZ_00197646), and Kuskokwim Moutains (http://purl.obolibrary.org/obo/GAZ_00055346), which are all contained within the SASAP Kuskokwim region, but too specific." ;
+                                           rdfs:label "Kuskokwim"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00010> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """The Kuskokwim region is the 4th largest of Alaska, and at 154,168 km² is comparable in size to the state of Georgia. The region drains the Kuskokwim – one of the great rivers of the world. The salmon-producing habitat of the Kuskokwim region is diverse and productive. Drier than the neighboring Bristol Bay region, the Kuskokwim region has a larger amount of burn area from forest fires than all other regions but the Yukon.
+
+The bounding coordinates for this SASAP region are:
+North: 64.4166 degrees
+South: 58.6262 degrees
+East: -151.5105 degrees
+West: -173.2164 degrees""" ;
+   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#kuskokwim
+https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00011
+<http://purl.dataone.org/odo/salmon_00011> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:28:55Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> """Prince William Sound is a region of rain, icefields, and glaciers. Only two (Whittier and Valdez) of Prince William Sound’s largest human communities are connected via road. The terminus of the Alaska oil pipeline ends in this region and results in a fairly high footprint of human activity in a relatively small region. Pink salmon, chum salmon, and sockeye salmon fisheries are current mainstays of local communities with hatchery enhancement of these species (particularly pink salmon) a fundamental dynamic in the region.
+
+The bounding coordinates of this SASAP region are:
+North: 61.5189  degrees
+South: 59.357  degrees
+East: -145.1013  degrees
+West: -149.1761  degrees""" ;
+                                           rdfs:label "Prince William Sound"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A sound of the Gulf of Alaska on the south coast of the State of Alaska. It is located on the east side of the Kenai Peninsula." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "PWS" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00011> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """Prince William Sound is a region of rain, icefields, and glaciers. Only two (Whittier and Valdez) of Prince William Sound’s largest human communities are connected via road. The terminus of the Alaska oil pipeline ends in this region and results in a fairly high footprint of human activity in a relatively small region. Pink salmon, chum salmon, and sockeye salmon fisheries are current mainstays of local communities with hatchery enhancement of these species (particularly pink salmon) a fundamental dynamic in the region.
+
+The bounding coordinates of this SASAP region are:
+North: 61.5189  degrees
+South: 59.357  degrees
+East: -145.1013  degrees
+West: -149.1761  degrees""" ;
+   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#princewilliamsound
+https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00011> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A sound of the Gulf of Alaska on the south coast of the State of Alaska. It is located on the east side of the Kenai Peninsula." ;
+   <http://purl.org/dc/elements/1.1/source> """http://en.wikipedia.org/wiki/Prince_William_Sound 
+https://www.wikidata.org/wiki/Q631282"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00012
+<http://purl.dataone.org/odo/salmon_00012> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:28:59Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> """An average of two million pink salmon and 250,000 chum salmon return to the sub-Arctic region of Norton Sound, an area approximately twice the size of Massachusetts.
+
+The bounding coordinates of this SASAP region are:
+North: 65.8544 degrees
+South: 62.8268 degrees
+East: -159.1906 degrees
+West: -171.9762 degrees""" ;
+                                           rdfs:label "Norton Sound"@en ;
+                                           owl:sameAs "http://purl.obolibrary.org/obo/GAZ_00051068" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "An inlet of the Bering Sea on the western coast of the State of Alaska, south of the Seward Peninsula. It is about 240 km long and 200 km wide. The Yukon River delta forms a portion of the south shore and water from the Yukon influences this body of water." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00012> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """An average of two million pink salmon and 250,000 chum salmon return to the sub-Arctic region of Norton Sound, an area approximately twice the size of Massachusetts.
+
+The bounding coordinates of this SASAP region are:
+North: 65.8544 degrees
+South: 62.8268 degrees
+East: -159.1906 degrees
+West: -171.9762 degrees""" ;
+   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#nortonsound
+https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00012> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "An inlet of the Bering Sea on the western coast of the State of Alaska, south of the Seward Peninsula. It is about 240 km long and 200 km wide. The Yukon River delta forms a portion of the south shore and water from the Yukon influences this body of water." ;
+   <http://purl.org/dc/elements/1.1/source> """http://en.wikipedia.org/wiki/Norton_Sound 
+https://www.wikidata.org/wiki/Q1973692"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00013
+<http://purl.dataone.org/odo/salmon_00013> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:29:03Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> """Approximately the size of the state of Kansas, the Southeast region is categorized by thousands of small coastal watersheds that provide ideal spawning habitat for pink salmon and chum salmon in particular. All five species are caught and return to this region. In terms of total abundance of salmon, Southeast Alaska dominates the state. Managing and conserving salmon populations that move beyond international borders is a key challenge here as many of the Chinook salmon caught in Southeast were hatched outside Alaska.
+
+The bounding coordinates for this SASAP region are:
+North: 61.6887 degrees
+South: 54.2508 degrees
+East: -126.7735 degrees
+West: -143.8874 degrees""" ;
+                                           rdfs:label "Southeast"@en ;
+                                           owl:sameAs "http://purl.obolibrary.org/obo/GAZ_00055328" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The southeastern portion of the coast of the State of Alaska, which lies just west of the northern half of the Canadian province of British Columbia. The majority of the panhandle's area is part of the Tongass National Forest, the United States's largest national forest. In many places, the international border runs along the crest of the Boundary Ranges of the Coast Mountains." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> """Southeast Alaska
+Alaska Panhandle
+Alaskan Panhandle""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00013> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """Approximately the size of the state of Kansas, the Southeast region is categorized by thousands of small coastal watersheds that provide ideal spawning habitat for pink salmon and chum salmon in particular. All five species are caught and return to this region. In terms of total abundance of salmon, Southeast Alaska dominates the state. Managing and conserving salmon populations that move beyond international borders is a key challenge here as many of the Chinook salmon caught in Southeast were hatched outside Alaska.
+
+The bounding coordinates for this SASAP region are:
+North: 61.6887 degrees
+South: 54.2508 degrees
+East: -126.7735 degrees
+West: -143.8874 degrees""" ;
+   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#southeast
+https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00013> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The southeastern portion of the coast of the State of Alaska, which lies just west of the northern half of the Canadian province of British Columbia. The majority of the panhandle's area is part of the Tongass National Forest, the United States's largest national forest. In many places, the international border runs along the crest of the Boundary Ranges of the Coast Mountains." ;
+   <http://purl.org/dc/elements/1.1/source> """http://en.wikipedia.org/wiki/Alaska_panhandle 
+https://www.wikidata.org/wiki/Q198710"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00014
+<http://purl.dataone.org/odo/salmon_00014> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:29:06Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> """Larger than the state of Texas and home to the third longest river in the United States, the Yukon region is a governance mosaic of state and federal fisheries management.
+
+The bounding coordinates for this SASAP region are:
+North: 69.0792 degrees
+South: 58.8686 degrees
+East: -129.1775 degrees
+West: -166.281 degrees""" ;
+                                           rdfs:comment "GAZ contains a term URI for Yukon River, which run through the SASAP Yukon region: http://purl.obolibrary.org/obo/GAZ_00069437" ;
+                                           rdfs:label "Yukon"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00014> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """Larger than the state of Texas and home to the third longest river in the United States, the Yukon region is a governance mosaic of state and federal fisheries management.
+
+The bounding coordinates for this SASAP region are:
+North: 69.0792 degrees
+South: 58.8686 degrees
+East: -129.1775 degrees
+West: -166.281 degrees""" ;
+   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#yukon
+https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00018
+<http://purl.dataone.org/odo/salmon_00018> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00016> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T16:43:05Z"^^xsd:dateTime ;
+                                           rdfs:label "Sockeye"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161979" ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> """\"Oncorhynchus nerka\" @la
+\"O. nerka\" @la
+\"red salmon\" @en
+\"kokanee salmon\" @en
+\"blueback salmon\" @en
+\"Cayak\" @ypk 
+\"Sayak\" @ypk
+\"Niklliq\" [Alutiiq/Sugpiaq]
+\"Nulaeggi\" [Ahtna]
+\"Sesluugge\"' [Ahtna]
+\"Natael luugge'\" [Ahtna]
+\"k'q'uya\" [Kenai Dena'ina]
+\"tahi'id\" @eyk
+\"cha'ch\" @eyk
+\"Misoo\" @tsi @tli 
+\"g̲aat\" @tsi @tli""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00018> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161979" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161979#null"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00019
+<http://purl.dataone.org/odo/salmon_00019> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00016> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T16:43:09Z"^^xsd:dateTime ;
+                                           rdfs:label "Chinook"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161980" ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> """\"Oncorhynchus tshawytscha\" @la
+\"O. tshawytscha\" @la
+\"king salmon\" @en
+\"Quinnat salmon\" @en
+\"spring salmon\" @en
+\"chrome hog\" @en
+\"Blackmouth\" @en
+\"Tyee salmon\" @en
+\"Sikayujak\" @ipk
+\"Ggaal\" [Denaakk'e, Koyukon Athabaskan]
+\"Gath\" [Benhti Kenaga, Lower Tanana]
+\"Luk Choo\" @gwi
+\"Kiagtaq\" @ypk
+\"Taryaqvak\" @ypk
+\"Aciirturtet\" @ypk
+\"sumgax̂\" @ale [Unangam tunuu variant]
+\"chaguchax̂\" @ale [Unangam tunuu variant])
+\"chavichax̂\" @ale [Unangam tunuu variant]
+\"Aamasuuk\" [Alutiiq/Sugpiaq]
+\"Liliksak\" [Alutiiq/Sugpiaq]
+\"Luk'ece'e\"  [Ahtna]
+\"Kentsinai'i\" [Ahtna]
+\"luq'aka'a\" [Kenai Dena'ina]
+\"nudlaghi\" [Kenai Dena'ina]
+\"te'ya'lee\" @eya
+\"Yee\" @tsi @tli 
+\"t'á\" @tsi @tli""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00019> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161980" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161980#null"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00020
+<http://purl.dataone.org/odo/salmon_00020> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00016> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T16:43:12Z"^^xsd:dateTime ;
+                                           rdfs:label "Coho"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161977" ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> """\"Oncorhynchus kisutch\" @la
+\"O. kisutch\" @la
+\"silver salmon\" @en
+\"silvers\" @en
+\"Saanlaaghe\" [Denaakk'e, Koyukon Athabaskan]
+\"Khwyhts'en'\" [Benhti Kenaga, Lower Tanana]
+\"Shii\" @gwi 
+\"Caayuryaq\" @ypk 
+\"Qakiiyaq\" @ypk 
+\"Qavlunaq\" @ypk 
+\"Uqurliq\" @ypk 
+\"Qakiidax̂: @ale [Unangam tunuu variant]
+\"Qakiiyaq\" [Alutiiq/Sugpiaq]
+\"ta'ay\" @eyk
+\"ÜÜx\" @tsi @tli
+\"L'ook\" @tsi @tli""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00020> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161977" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161977#null"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00021
+<http://purl.dataone.org/odo/salmon_00021> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00016> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T16:43:16Z"^^xsd:dateTime ;
+                                           rdfs:label "Chum"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161976" ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> """\"Oncorhynchus keta\" @la
+\"O. keta\" @la
+\"dog salmon\" @en
+\"keta salmon\" @en
+\"silverbrite salmon\" @en
+\"Iqalugruaq\" @ipk
+\"Aqalugruaq\" @ipk
+\"Noolaaghe\" [Denaakk'e, Koyukon Athabaskan]
+\"Nahdlii\" @gwi
+\"Shii\" @gwi
+\"Aluyak\" @ypk
+\"Iqalluk\" @ypk
+\"Kangitneq\" @ypk
+\"Mac'utaq\" @ypk
+\"Teggmaarrluk\" @ypk [Unangam tunuu variant]
+\"x̂aykix̂\" @ale
+\"Alimaq\" [Alutiiq/Sugpiaq]
+\"alima\" [Kenai Dena'ina] 
+\"tiitl'\" @eya 
+\"Gaynii\"@tsi @tli 
+\"téel'\" @tsi @tli""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00021> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161976" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161976#null"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00022
+<http://purl.dataone.org/odo/salmon_00022> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00016> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T16:43:19Z"^^xsd:dateTime ;
+                                           <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> """\"Oncorhynchus gorbuscha\" @la
+\"O. gorbuscha\" @la
+\"humpback salmon\" @en
+\"humpbacked salmon\" @en
+\"Amaqtuq\" @ipk
+\"Amaqaayak\" @ypk
+\"Amaqsuq\" @ypk
+\"Cuqpeq\" @ypk
+\"Terteq\" @ypk
+\"Qungaayux\" @ale [Unangam tunuu variant]
+\"Amartuq\" [Alutiiq/Sugpiaq]
+\"Amaqaayak\" [Alutiiq/Sugpiaq] 
+\"Dak'aay\" [Ahtna]
+\"Dak'aagi\" [Ahtna]
+\"qughuna\" [Kenai Dena'ina]
+\"giyah sdilahL\" @eyk
+\"kaashk'\" @eyk
+\"Sti'moon\" @tsi @tli 
+\"Cháas'\" @tsi @tli""" ;
+                                           rdfs:label "Pink"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161975" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00022> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161975" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161975#null"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00027
+<http://purl.dataone.org/odo/salmon_00027> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:03:19Z"^^xsd:dateTime ;
+                                           rdfs:label "Alaska Department of Commerce, Community, and Economic Development"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A department within the government of Alaska whose mission is to \"Promote a healthy economy, strong communities, and protect consumers in Alaska.\"" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00027> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A department within the government of Alaska whose mission is to \"Promote a healthy economy, strong communities, and protect consumers in Alaska.\"" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.commerce.alaska.gov/web/"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00028
+<http://purl.dataone.org/odo/salmon_00028> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:03:25Z"^^xsd:dateTime ;
+                                           rdfs:label "Alaska Department of Fish and Game (all departments)"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A department within the government of Alaska which manages approximately 750 active fisheries, 26 game management units, and 32 special areas, with a mission, \"To protect, maintain, and improve the fish, game, and aquatic plant resources of the state, and manage their use and development in the best interest of the economy and the well-being of the people of the state, consistent with the sustained yield principle.\"" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00028> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A department within the government of Alaska which manages approximately 750 active fisheries, 26 game management units, and 32 special areas, with a mission, \"To protect, maintain, and improve the fish, game, and aquatic plant resources of the state, and manage their use and development in the best interest of the economy and the well-being of the people of the state, consistent with the sustained yield principle.\"" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.adfg.alaska.gov/index.cfm?adfg=about.mission"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00029
+<http://purl.dataone.org/odo/salmon_00029> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:03:30Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "The CFEC website is accessible at: https://cfec.state.ak.us/" ;
+                                           rdfs:label "Alaska Department of Fish and Game, Commercial Fisheries Entry Commision"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A department within the government of Alaska which helps to conserve and maintain the economic health of Alaska’s commercial fisheries by limiting the number of participating fishers. The Commission issues permits and vessel licenses to qualified individuals in both limited and unlimited fisheries, and provides due process hearings and appeal processes for disputes related to limitations on fishery participation." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "CFEC" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00029> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A department within the government of Alaska which helps to conserve and maintain the economic health of Alaska’s commercial fisheries by limiting the number of participating fishers. The Commission issues permits and vessel licenses to qualified individuals in both limited and unlimited fisheries, and provides due process hearings and appeal processes for disputes related to limitations on fishery participation." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.adfg.alaska.gov/index.cfm?adfg=about.cfec#:~:text=Department%20of%20Fish%20and%20Game%3B%20Commercial%20Fisheries%20Entry%20Commission,the%20number%20of%20participating%20fishers."
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00030
+<http://purl.dataone.org/odo/salmon_00030> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:03:36Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "The Division of Commercial Fisheries website is accessible at: https://www.adfg.alaska.gov/index.cfm?adfg=fishingcommercial.main" ;
+                                           rdfs:label "Alaska Department of Fish and Game, Division of Commercial Fisheries"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A department within the government of Alaska which manages commercial, subsistence, and personal use fisheries within the jurisdiction of the State of Alaska." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00030> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A department within the government of Alaska which manages commercial, subsistence, and personal use fisheries within the jurisdiction of the State of Alaska." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.adfg.alaska.gov/index.cfm?adfg=divisions.cfoverview"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00031
+<http://purl.dataone.org/odo/salmon_00031> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:03:57Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "The Arctic-Yukon-Kuskokwim (AYK) Region encompasses the coastal waters of Alaska and includes the rivers and streams that drain into the Bering, Chukchi, and Beaufort Seas. It stretches from its boundary at Cape Newenham with the Bristol Bay area to the border with Canada on the Arctic Ocean. The Yukon River, with the fifth largest drainage in North America, lies within this management region, as do many other major rivers; the Kuskokwim being second in size next to the Yukon. With the exception of Fairbanks, Bethel, and Nome, this is a region of villages. Salmon and herring are the most important fisheries resources in this region. Large numbers of salmon are taken for subsistence and subsistence harvests can equal or surpass the numbers of fish harvested in commercial fisheries, especially Chinook salmon. King crab is harvested near Nome in both commercial and subsistence fisheries. Whitefish are also important to the residents of this region." ;
+                                           rdfs:label "Alaska Department of Division of Commercial Fisheries, Arctic-Yukon-Kuskokwim Region"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A department within the government of Alaska and a sub-division of the Alaska Department of Fish and Wildlife, Division of Commercial Fisheries which manages the Arctic-Yukon-Kuskokwim Region." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "AYK" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00031> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "The Arctic-Yukon-Kuskokwim (AYK) Region encompasses the coastal waters of Alaska and includes the rivers and streams that drain into the Bering, Chukchi, and Beaufort Seas. It stretches from its boundary at Cape Newenham with the Bristol Bay area to the border with Canada on the Arctic Ocean. The Yukon River, with the fifth largest drainage in North America, lies within this management region, as do many other major rivers; the Kuskokwim being second in size next to the Yukon. With the exception of Fairbanks, Bethel, and Nome, this is a region of villages. Salmon and herring are the most important fisheries resources in this region. Large numbers of salmon are taken for subsistence and subsistence harvests can equal or surpass the numbers of fish harvested in commercial fisheries, especially Chinook salmon. King crab is harvested near Nome in both commercial and subsistence fisheries. Whitefish are also important to the residents of this region." ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.adfg.alaska.gov/index.cfm?adfg=fishingcommercialbyarea.interior"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00032
+<http://purl.dataone.org/odo/salmon_00032> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:02Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "Central Region Alaska commercial fisheries are composed of four distinct management areas that include Bristol Bay, Prince William Sound and Copper River, Upper Cook Inlet, and Lower Cook Inlet. Although all 5 species of salmon are harvested in each area, sockeye and pink salmon are the most abundant and most valuable. This area encompasses some of the largest and most valuable salmon fisheries in the world. From Bristol Bay, home of the largest sockeye salmon fishery in the world, to the Copper River where sockeye and Chinook salmon fetch some of the highest prices per pound paid to commercial fishermen. Cook Inlet commercial fisheries occur near the largest population center in Alaska, providing salmon to numerous niche and local markets, as well as fresh salmon to markets in other states. Prince William Sound adds productive healthy pink, chum, and sockeye salmon fisheries to the region. Southcentral groundfish fisheries are small, yet diverse, targeting pollock, Pacific cod, rockfish, sablefish, lingcod, and skate while small shrimp and scallop fisheries in Prince William Sound cater predominately to local markets. Southcentral commercial fisheries are of tremendous importance and an integral part of many communities and local economies in the state." ;
+                                           rdfs:label "Alaska Department of Fish and Game, Division of Commercial Fisheries, Central Region"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A department within the government of Alaska and a sub-division of the Alaska Department of Fish and Wildlife, Division of Commercial Fisheries which manages the Central Region." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00032> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "Central Region Alaska commercial fisheries are composed of four distinct management areas that include Bristol Bay, Prince William Sound and Copper River, Upper Cook Inlet, and Lower Cook Inlet. Although all 5 species of salmon are harvested in each area, sockeye and pink salmon are the most abundant and most valuable. This area encompasses some of the largest and most valuable salmon fisheries in the world. From Bristol Bay, home of the largest sockeye salmon fishery in the world, to the Copper River where sockeye and Chinook salmon fetch some of the highest prices per pound paid to commercial fishermen. Cook Inlet commercial fisheries occur near the largest population center in Alaska, providing salmon to numerous niche and local markets, as well as fresh salmon to markets in other states. Prince William Sound adds productive healthy pink, chum, and sockeye salmon fisheries to the region. Southcentral groundfish fisheries are small, yet diverse, targeting pollock, Pacific cod, rockfish, sablefish, lingcod, and skate while small shrimp and scallop fisheries in Prince William Sound cater predominately to local markets. Southcentral commercial fisheries are of tremendous importance and an integral part of many communities and local economies in the state." ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.adfg.alaska.gov/index.cfm?adfg=fishingcommercialbyarea.southcentral"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00033
+<http://purl.dataone.org/odo/salmon_00033> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:07Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "The Southeast Alaska/Yakutat Region (Region I) consists of Alaska waters between Cape Suckling on the north and Dixon Entrance on the south. Salmon are commercially harvested in Southeast Alaska with purse seines and drift gillnets; in Yakutat with set gillnets; and in both areas with hand and power troll gear. Herring are harvested in winter bait, sac roe, spawn-on-kelp, and bait pound fisheries. Miscellaneous shellfish (sea cucumber, sea urchins, and geoduck clams) are harvested in dive fisheries in the region. The Alaska Department of Fish and Game (ADF&G) has management jurisdiction over all groundfish resources within state waters in Region I. In addition, the State has management authority for Demersal Shelf Rockfish, ling cod, and black and blue rock fish in both state and federal waters. There are several commercially important shellfish species in Southeast Alaska. They include golden and red king crab, Dungeness crab, Tanner crab, and pandalid shrimp." ;
+                                           rdfs:label "Alaska Department of Fish and Game, Division of Commercial Fisheries, Southeast Region"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A department within the government of Alaska and a sub-division of the Alaska Department of Fish and Wildlife, Division of Commercial Fisheries which manages the Southeast Region." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "Region I" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00033> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "The Southeast Alaska/Yakutat Region (Region I) consists of Alaska waters between Cape Suckling on the north and Dixon Entrance on the south. Salmon are commercially harvested in Southeast Alaska with purse seines and drift gillnets; in Yakutat with set gillnets; and in both areas with hand and power troll gear. Herring are harvested in winter bait, sac roe, spawn-on-kelp, and bait pound fisheries. Miscellaneous shellfish (sea cucumber, sea urchins, and geoduck clams) are harvested in dive fisheries in the region. The Alaska Department of Fish and Game (ADF&G) has management jurisdiction over all groundfish resources within state waters in Region I. In addition, the State has management authority for Demersal Shelf Rockfish, ling cod, and black and blue rock fish in both state and federal waters. There are several commercially important shellfish species in Southeast Alaska. They include golden and red king crab, Dungeness crab, Tanner crab, and pandalid shrimp." ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.adfg.alaska.gov/index.cfm?adfg=commercialbyareasoutheast.main"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00034
+<http://purl.dataone.org/odo/salmon_00034> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:11Z"^^xsd:dateTime ;
+                                           rdfs:label "Alaska Department of Fish and Game, Division of Habitat"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A department within the government of Alaska which (a) has the specific statutory responsibility of protecting freshwater habitat for anadromous fish and providing free passage for all fish in freshwater bodies, (b) develops management plans and oversees activities (excluding trapping, hunting, fishing, and wildlife viewing) in legislatively designated refuges, critical habitat areas, and sanctuaries known collectively as Special Areas, (c) works with the Division of Sport Fish to update the “Catalog of Waters Important for the Spawning, Rearing, or Migration of Anadromous Fishes,” (d) coordinates the ADF&G review of large and complex projects important to the State, and (e) works closely with the ADNR Division of Forestry to survey State and private forestry operations and evaluate implementation of Alaska’s Forest Resources and Practices Act (FRPA)." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00034> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A department within the government of Alaska which (a) has the specific statutory responsibility of protecting freshwater habitat for anadromous fish and providing free passage for all fish in freshwater bodies, (b) develops management plans and oversees activities (excluding trapping, hunting, fishing, and wildlife viewing) in legislatively designated refuges, critical habitat areas, and sanctuaries known collectively as Special Areas, (c) works with the Division of Sport Fish to update the “Catalog of Waters Important for the Spawning, Rearing, or Migration of Anadromous Fishes,” (d) coordinates the ADF&G review of large and complex projects important to the State, and (e) works closely with the ADNR Division of Forestry to survey State and private forestry operations and evaluate implementation of Alaska’s Forest Resources and Practices Act (FRPA)." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.adfg.alaska.gov/index.cfm?adfg=divisions.haboverview"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00035
+<http://purl.dataone.org/odo/salmon_00035> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:16Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "The Division of Sport Fisheries provides the following core services: (a) fisheries management, (b) fisheries research, (c) fisheries enhancement, (d) protection and restoration of fish habitats for the ebefit of fish and sport anglers, (e) communication and outreach, and (f) providing leadership and administrative support for the Division's core functions." ;
+                                           rdfs:label "Alaska Department of Fish and Game, Division of Sport Fish"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A department within the government of Alaska with a mission to protect and improve the state's sport fishery resources." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00035> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "The Division of Sport Fisheries provides the following core services: (a) fisheries management, (b) fisheries research, (c) fisheries enhancement, (d) protection and restoration of fish habitats for the ebefit of fish and sport anglers, (e) communication and outreach, and (f) providing leadership and administrative support for the Division's core functions." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.adfg.alaska.gov/index.cfm?adfg=divisions.sfmission"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00035> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A department within the government of Alaska with a mission to protect and improve the state's sport fishery resources." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.adfg.alaska.gov/index.cfm?adfg=divisions.sfmission"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00036
+<http://purl.dataone.org/odo/salmon_00036> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:20Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "The Subsistence Section provides the following core services: (a) Compile and analyze existing data; conduct research to gather information on the role of hunting and fishing by Alaskans for customary and traditional uses, (b) Disseminate current subsistence use information to the public; appropriate agencies and organizations; and fisheries and wildlife management divisions, (c) Assist the Board of Fisheries, the Board of Game, and the Joint Board of Fisheries and Game to evaluate customary and traditional uses of Alaska's fish and wildlife resources and amounts reasonably necessary for subsistence uses (ANS) of those resources, and (d) Assist fisheries and wildlife managers in preparing management plans to ensure information on customary and traditional uses and fish and wildlife harvests is incorporated." ;
+                                           rdfs:label "Alaska Department of Fish and Game, Division of Subsistence"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A department within the government of Alaska with a mission to scientifically gather, quantify, evaluate, and report information about customary and traditional uses of Alaska's fish and wildlife resources." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00036> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "The Subsistence Section provides the following core services: (a) Compile and analyze existing data; conduct research to gather information on the role of hunting and fishing by Alaskans for customary and traditional uses, (b) Disseminate current subsistence use information to the public; appropriate agencies and organizations; and fisheries and wildlife management divisions, (c) Assist the Board of Fisheries, the Board of Game, and the Joint Board of Fisheries and Game to evaluate customary and traditional uses of Alaska's fish and wildlife resources and amounts reasonably necessary for subsistence uses (ANS) of those resources, and (d) Assist fisheries and wildlife managers in preparing management plans to ensure information on customary and traditional uses and fish and wildlife harvests is incorporated." ;
+   <http://purl.org/dc/elements/1.1/source> "http://www.adfg.alaska.gov/index.cfm?adfg=divisions.subsmission"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00036> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A department within the government of Alaska with a mission to scientifically gather, quantify, evaluate, and report information about customary and traditional uses of Alaska's fish and wildlife resources." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.adfg.alaska.gov/index.cfm?adfg=divisions.subsoverview"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00037
+<http://purl.dataone.org/odo/salmon_00037> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:24Z"^^xsd:dateTime ;
+                                           rdfs:comment "No information is currently available on the department's webpage: http://www.adfg.alaska.gov/index.cfm?adfg=fishingmarktagagelab.main" ;
+                                           rdfs:label "Alaska Department of Fish and Game, Mark, Tab and Age Laboratory"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00038
+<http://purl.dataone.org/odo/salmon_00038> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:28Z"^^xsd:dateTime ;
+                                           rdfs:label "Alaska Department of Labor and Workforce Development"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The Alaska Department of Labor and Workforce Development (DOLWD) is a department within the govenrment of Alaska which handles most of the state's labor and workforce issues, primarily at the administrative level." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00038> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The Alaska Department of Labor and Workforce Development (DOLWD) is a department within the govenrment of Alaska which handles most of the state's labor and workforce issues, primarily at the administrative level." ;
+   <http://purl.org/dc/elements/1.1/source> "https://en.wikipedia.org/wiki/Alaska_Department_of_Labor_and_Workforce_Development" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://labor.alaska.gov/"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00039
+<http://purl.dataone.org/odo/salmon_00039> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:32Z"^^xsd:dateTime ;
+                                           rdfs:label "Alaska Department of Natural Resources, Support Services Division, Information Resource Management"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A division within the government of Alaska's Department of Natural Resources (DNR) which maintains the department's land records repository and oversees DNR's computer systems and networks services. It provides for the department's data processing functions including development, training, operations, and maintenance. The Department of Natural Resources' (DNR) systems include the Land Administration System (LAS), the Geographic Information System, the Revenue and Billing System, and others. The section also produces and maintains the state's land status maps." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "Alaska Department of Natural Resources, IRM" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00039> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A division within the government of Alaska's Department of Natural Resources (DNR) which maintains the department's land records repository and oversees DNR's computer systems and networks services. It provides for the department's data processing functions including development, training, operations, and maintenance. The Department of Natural Resources' (DNR) systems include the Land Administration System (LAS), the Geographic Information System, the Revenue and Billing System, and others. The section also produces and maintains the state's land status maps." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://dnr.alaska.gov/ssd/irm/"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00040
+<http://purl.dataone.org/odo/salmon_00040> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:39Z"^^xsd:dateTime ;
+                                           rdfs:label "Alaska Department of Public Safety, Division of Alaska Wildlife Troopers"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A division wihtin Alaska's Department of Public Safety with a mission to  protect Alaska's Natural Resources through the enfrocement wildlife statutes and regulations." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "AWT" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00040> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A division wihtin Alaska's Department of Public Safety with a mission to  protect Alaska's Natural Resources through the enfrocement wildlife statutes and regulations." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://dps.alaska.gov/AWT/Home"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00041
+<http://purl.dataone.org/odo/salmon_00041> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:43Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "Visit LFD's webpage at: https://www.legfin.akleg.gov/" ;
+                                           rdfs:label "Alaska Department of Legislative Finance"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A department within the government of Alaska which provides non-partisan budgetary and fiscal analysis to the Alaska Legislature." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "LFD" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00041> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A department within the government of Alaska which provides non-partisan budgetary and fiscal analysis to the Alaska Legislature." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.legfin.akleg.gov/AgencyInfo/AboutLFD.php"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00042
+<http://purl.dataone.org/odo/salmon_00042> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00026> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:51Z"^^xsd:dateTime ;
+                                           rdfs:label "Cook Inletkeeper"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A community-based nonprofit organization that combines advocacy, education and science toward its mission to protect Alaska’s Cook Inlet watershed and the life it sustains. Inletkeeper’s monitoring and science work builds credibility with scientists and resource managers, its education and advocacy efforts enhance stewardship and citizen participation, and together, these efforts translate into Inletkeeper’s ability to effectively ensure a vibrant and healthy Cook Inlet watershed." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00042> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A community-based nonprofit organization that combines advocacy, education and science toward its mission to protect Alaska’s Cook Inlet watershed and the life it sustains. Inletkeeper’s monitoring and science work builds credibility with scientists and resource managers, its education and advocacy efforts enhance stewardship and citizen participation, and together, these efforts translate into Inletkeeper’s ability to effectively ensure a vibrant and healthy Cook Inlet watershed." ;
+   <http://purl.org/dc/elements/1.1/source> "https://inletkeeper.org/about/"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00043
+<http://purl.dataone.org/odo/salmon_00043> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00025> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:57Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "Visit the National Park Service's website at: https://www.nps.gov/index.htm" ;
+                                           rdfs:label "National Park Service"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "An agency of the federal government of the United States that manages all national parks, many national monuments, and other conservation and hisotrical properties with various title designations." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "NPS" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00043> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "An agency of the federal government of the United States that manages all national parks, many national monuments, and other conservation and hisotrical properties with various title designations." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/National_Park_Service"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00044
+<http://purl.dataone.org/odo/salmon_00044> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00025> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:05:22Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "Visit the U.S. Census Bureau at: https://www.census.gov/" ;
+                                           rdfs:label "United States Census Bureau"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A principle agency of the U.S. Federal Satistical System, whose responsibility and mission is to serve as the nation's leading provider of quality data about its people and economy." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00044> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A principle agency of the U.S. Federal Satistical System, whose responsibility and mission is to serve as the nation's leading provider of quality data about its people and economy." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/United_States_Census_Bureau"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00045
+<http://purl.dataone.org/odo/salmon_00045> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00025> ;
+                                           <http://purl.dataone.org/odo/salmon_00069> <http://purl.dataone.org/odo/salmon_00068> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:05:30Z"^^xsd:dateTime ;
+                                           rdfs:label "United States Fish and Wildlife Service"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A bureau of the United States Department of the Interior whose mission is to work with others to conserve, protect and enhance fish, wildlife and plants and their habitats for the continuing benefit of the American people." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "USFWS" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00045> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A bureau of the United States Department of the Interior whose mission is to work with others to conserve, protect and enhance fish, wildlife and plants and their habitats for the continuing benefit of the American people." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.fws.gov/"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00046
+<http://purl.dataone.org/odo/salmon_00046> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00025> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:05:35Z"^^xsd:dateTime ;
+                                           rdfs:label "United States Geologic Survey"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A bureau of the United Sates Departement of the Interior, which provides science about the natural hazards that threaten lives and livelihoods, the water, energy, minerals, and other natural resources we rely on, the health of our ecosystems and environment, and the impacts of climate and land-use change." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "USGS" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00046> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A bureau of the United Sates Departement of the Interior, which provides science about the natural hazards that threaten lives and livelihoods, the water, energy, minerals, and other natural resources we rely on, the health of our ecosystems and environment, and the impacts of climate and land-use change." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.usgs.gov/about/about-us"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00047
+<http://purl.dataone.org/odo/salmon_00047> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:05:41Z"^^xsd:dateTime ;
+                                           rdfs:label "Washington Department of Fish and Wildlife"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A department within the government of Washington which is dedicated to preserving, protecting, and perpetuating the state's fish, wildlife, and ecosystems while providing sustainable fish and wildlife recreational and commercial opportunities." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "WDFW" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00047> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A department within the government of Washington which is dedicated to preserving, protecting, and perpetuating the state's fish, wildlife, and ecosystems while providing sustainable fish and wildlife recreational and commercial opportunities." ;
+   <http://purl.org/dc/elements/1.1/source> "https://wdfw.wa.gov/about"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00049
+<http://purl.dataone.org/odo/salmon_00049> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00048> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:06:17Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "Visit the North Pacific Anadrmous Fish Commission's website at: https://npafc.org/" ;
+                                           rdfs:label "North Pacific Anadromous Fish Commission"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "An international inter-governmental organization established by the Convention for the Conservation of Anadromous Stocks in the North Pacific Ocean whose primary objective is to promote the conservation of anadromous stocks in the Convention Area. The Convention Area is the international waters of the North Pacific Ocean and its adjacent seas north of 33° North beyond the 200-mile zones (exclusive economic zones) of the coastal States." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "NPAFC" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00049> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "An international inter-governmental organization established by the Convention for the Conservation of Anadromous Stocks in the North Pacific Ocean whose primary objective is to promote the conservation of anadromous stocks in the Convention Area. The Convention Area is the international waters of the North Pacific Ocean and its adjacent seas north of 33° North beyond the 200-mile zones (exclusive economic zones) of the coastal States." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://npafc.org/"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00050
+<http://purl.dataone.org/odo/salmon_00050> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00097> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:06:45Z"^^xsd:dateTime ;
+                                           rdfs:label "Orutsararmiut Traditional Native Council"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A federally recognized governing body for the community of Bethel, Alaska whose mission is to promote the general welfare, enhance independence, encourage self-sufficiency/self-motivation, enhance quality of life, and preserve cultural and traditional values of the Tribe, and to exercise tribal authority over resources through educational, economic, and social development opportunities." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "ONC" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00050> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A federally recognized governing body for the community of Bethel, Alaska whose mission is to promote the general welfare, enhance independence, encourage self-sufficiency/self-motivation, enhance quality of life, and preserve cultural and traditional values of the Tribe, and to exercise tribal authority over resources through educational, economic, and social development opportunities." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://nativecouncil.org/welcome/"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00055
+<http://purl.dataone.org/odo/salmon_00055> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00054> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:46:55Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "The goal of the to Biophysical working group is to compare and contrast the status of Alaska salmon and their habitats across regions." ;
+                                           rdfs:label "Biophysical"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "Biophysical working group" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00055> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "The goal of the to Biophysical working group is to compare and contrast the status of Alaska salmon and their habitats across regions." ;
+   <http://purl.org/dc/elements/1.1/source> "https://alaskasalmonandpeople.org/working-group/biophysical-information-on-salmon-distribution-and-habitat/"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00056
+<http://purl.dataone.org/odo/salmon_00056> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00054> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:47:05Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "The topics explored by the Sociocultural working group are (1) social and cultural values and relationships between people and salmon, (2) trends in human populations and communities and uses of salmon, and (3) key threads to salmon-dependent communities" ;
+                                           rdfs:label "Sociocultural"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "Sociocultural working group" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00056> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "The topics explored by the Sociocultural working group are (1) social and cultural values and relationships between people and salmon, (2) trends in human populations and communities and uses of salmon, and (3) key threads to salmon-dependent communities" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://alaskasalmonandpeople.org/working-group/social-and-cultural-dimensions-of-salmon-systems/"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00057
+<http://purl.dataone.org/odo/salmon_00057> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00054> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:47:08Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "The goals of the Economic working group are to (1) identify important trends in the historical relationships between salmon and salmon users which may have been overlooked, (2) inform and support evidence-based policy aimed at sustainable and equitable decision making, and (3) compile, archive, and share relevant historical socioeconomic data about Alaska's salmon systems." ;
+                                           rdfs:label "Economic"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> """Economic working group
+Socioeconomic
+Socioeconomic working group""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00057> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "The goals of the Economic working group are to (1) identify important trends in the historical relationships between salmon and salmon users which may have been overlooked, (2) inform and support evidence-based policy aimed at sustainable and equitable decision making, and (3) compile, archive, and share relevant historical socioeconomic data about Alaska's salmon systems." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://alaskasalmonandpeople.org/working-group/economic-dimensions-of-salmon-systems/"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00058
+<http://purl.dataone.org/odo/salmon_00058> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00054> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:47:12Z"^^xsd:dateTime ;
+                                           rdfs:label "Governance"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "Governance working group" .
+
+
+###  http://purl.dataone.org/odo/salmon_00059
+<http://purl.dataone.org/odo/salmon_00059> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00054> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:47:18Z"^^xsd:dateTime ;
+                                           rdfs:label "Salmon size"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "Salmon size working group" .
+
+
+###  http://purl.dataone.org/odo/salmon_00060
+<http://purl.dataone.org/odo/salmon_00060> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00054> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:47:23Z"^^xsd:dateTime ;
+                                           rdfs:label "Ocean climate"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "Ocean climate working group" .
+
+
+###  http://purl.dataone.org/odo/salmon_00061
+<http://purl.dataone.org/odo/salmon_00061> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00054> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:47:30Z"^^xsd:dateTime ;
+                                           rdfs:label "Community monitoring"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "Community monitoring working group" .
+
+
+###  http://purl.dataone.org/odo/salmon_00062
+<http://purl.dataone.org/odo/salmon_00062> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00054> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:47:37Z"^^xsd:dateTime ;
+                                           rdfs:label "Kenai lowlands"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "Kenai lowlands working group" .
+
+
+###  http://purl.dataone.org/odo/salmon_00063
+<http://purl.dataone.org/odo/salmon_00063> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00054> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:47:41Z"^^xsd:dateTime ;
+                                           rdfs:label "Well being"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "Well being working group" .
+
+
+###  http://purl.dataone.org/odo/salmon_00065
+<http://purl.dataone.org/odo/salmon_00065> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:58:18Z"^^xsd:dateTime ;
+                                           rdfs:label "Peter Westley"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00068
+<http://purl.dataone.org/odo/salmon_00068> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T19:07:18Z"^^xsd:dateTime ;
+                                           rdfs:label "Dan Rinella"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00072
+<http://purl.dataone.org/odo/salmon_00072> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T19:55:01Z"^^xsd:dateTime ;
+                                           rdfs:label "Frank Davis"@en ;
+                                           owl:sameAs "https://orcid.org/0000-0002-4643-5718" .
+
+
+###  http://purl.dataone.org/odo/salmon_00074
+<http://purl.dataone.org/odo/salmon_00074> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:07:45Z"^^xsd:dateTime ;
+                                           rdfs:label "Ian Dutton"@en ;
+                                           owl:sameAs "https://orcid.org/0000-0001-5722-5073" .
+
+
+###  http://purl.dataone.org/odo/salmon_00075
+<http://purl.dataone.org/odo/salmon_00075> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:07:50Z"^^xsd:dateTime ;
+                                           rdfs:label "Matthew Jones"@en ;
+                                           owl:sameAs "https://orcid.org/0000-0003-0077-4738" .
+
+
+###  http://purl.dataone.org/odo/salmon_00076
+<http://purl.dataone.org/odo/salmon_00076> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:07:56Z"^^xsd:dateTime ;
+                                           rdfs:label "Jared Kibele"@en ;
+                                           owl:sameAs "https://orcid.org/0000-0001-8874-7595" .
+
+
+###  http://purl.dataone.org/odo/salmon_00077
+<http://purl.dataone.org/odo/salmon_00077> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:08:02Z"^^xsd:dateTime ;
+                                           rdfs:label "Jeanette Clark"@en ;
+                                           owl:sameAs "https://orcid.org/0000-0003-4703-1974" .
+
+
+###  http://purl.dataone.org/odo/salmon_00078
+<http://purl.dataone.org/odo/salmon_00078> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:08:09Z"^^xsd:dateTime ;
+                                           rdfs:label "Jorge Cornejo-Donoso"@en ;
+                                           owl:sameAs "https://orcid.org/0000-0002-4244-2865" .
+
+
+###  http://purl.dataone.org/odo/salmon_00079
+<http://purl.dataone.org/odo/salmon_00079> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:08:16Z"^^xsd:dateTime ;
+                                           rdfs:label "Courtney Carothers"@en ;
+                                           owl:sameAs "https://orcid.org/0000-0002-1513-9078" .
+
+
+###  http://purl.dataone.org/odo/salmon_00080
+<http://purl.dataone.org/odo/salmon_00080> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:08:20Z"^^xsd:dateTime ;
+                                           rdfs:label "Jessica Black"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00081
+<http://purl.dataone.org/odo/salmon_00081> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:08:28Z"^^xsd:dateTime ;
+                                           rdfs:label "Tobias Schworer"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00082
+<http://purl.dataone.org/odo/salmon_00082> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:08:34Z"^^xsd:dateTime ;
+                                           rdfs:label "Steven J. Langdon"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00083
+<http://purl.dataone.org/odo/salmon_00083> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:08:42Z"^^xsd:dateTime ;
+                                           rdfs:label "Taylor Breisford"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00084
+<http://purl.dataone.org/odo/salmon_00084> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:08:46Z"^^xsd:dateTime ;
+                                           rdfs:label "James Fall"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00085
+<http://purl.dataone.org/odo/salmon_00085> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:08:54Z"^^xsd:dateTime ;
+                                           rdfs:label "Eric P. Palkovacs"@en ;
+                                           owl:sameAs "https://orcid.org/0000-0002-5496-7263" .
+
+
+###  http://purl.dataone.org/odo/salmon_00086
+<http://purl.dataone.org/odo/salmon_00086> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:09:04Z"^^xsd:dateTime ;
+                                           rdfs:label "Rachel Donkersloot"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00087
+<http://purl.dataone.org/odo/salmon_00087> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:09:09Z"^^xsd:dateTime ;
+                                           rdfs:label "Peter S. Rand"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00088
+<http://purl.dataone.org/odo/salmon_00088> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:09:14Z"^^xsd:dateTime ;
+                                           rdfs:label "Robert W. Campbell"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00089
+<http://purl.dataone.org/odo/salmon_00089> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:09:26Z"^^xsd:dateTime ;
+                                           rdfs:label "Kristen B. Gorman"@en ;
+                                           owl:sameAs "https://orcid.org/0000-0002-0258-9264" .
+
+
+###  http://purl.dataone.org/odo/salmon_00090
+<http://purl.dataone.org/odo/salmon_00090> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:09:31Z"^^xsd:dateTime ;
+                                           rdfs:label "Michael L. Jones"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00091
+<http://purl.dataone.org/odo/salmon_00091> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:09:38Z"^^xsd:dateTime ;
+                                           rdfs:label "Coowe Walker"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00092
+<http://purl.dataone.org/odo/salmon_00092> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:09:43Z"^^xsd:dateTime ;
+                                           rdfs:label "Ryan King"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00093
+<http://purl.dataone.org/odo/salmon_00093> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:09:48Z"^^xsd:dateTime ;
+                                           rdfs:label "Mark Rains"@en ;
+                                           owl:sameAs "https://orcid.org/0000-0002-8103-475X" .
+
+
+###  http://purl.dataone.org/odo/salmon_00094
+<http://purl.dataone.org/odo/salmon_00094> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:09:56Z"^^xsd:dateTime ;
+                                           rdfs:label "Charles A. Simenstad"@en ;
+                                           owl:sameAs "https://orcid.org/0000-0001-8384-3385" .
+
+
+###  http://purl.dataone.org/odo/salmon_00095
+<http://purl.dataone.org/odo/salmon_00095> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:10:04Z"^^xsd:dateTime ;
+                                           rdfs:label "Dennis Whigham"@en ;
+                                           owl:sameAs "https://orcid.org/0000-0003-1488-820X" .
+
+
+###  http://purl.dataone.org/odo/salmon_00100
+<http://purl.dataone.org/odo/salmon_00100> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00099> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-27T00:18:57Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "NCEAS's website is accessible at: https://www.nceas.ucsb.edu/" ;
+                                           rdfs:label "National Center for Ecological Analysis and Synthesis"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A research center of the University of California, Santa Barbara which fosters collaborative synthesis research by assembling interdisciplinary teams to distill existing data, ideas, theories, or methods drawn from many sources, across multiple fields of inquiry, in order to accelerate the generation of new knowledge on a broad scale." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> """National Center for Ecological Analysis & Synthesis
+NCEAS""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00100> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A research center of the University of California, Santa Barbara which fosters collaborative synthesis research by assembling interdisciplinary teams to distill existing data, ideas, theories, or methods drawn from many sources, across multiple fields of inquiry, in order to accelerate the generation of new knowledge on a broad scale." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://alaskasalmonandpeople.org/about/process-people/"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00102
+<http://purl.dataone.org/odo/salmon_00102> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00101> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-29T17:34:06Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "The State of Alaska's Salmon and People (SASAP) project is a collaboration of researchers, cultural leaders, and others working to bring together integrated, accurate, and up-to-date information that will help to support better salmon decision-making." ;
+                                           rdfs:label "State of Alaska's Salmon and People Data Portal"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A collection of datasets and their metadata which were curated in support of the State of Alaska's Salmon and People (SASAP) Project and accessible at the URL, https://knb.ecoinformatics.org/portals/SASAP/Data" ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "SASAP Data Portal" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00102> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "The State of Alaska's Salmon and People (SASAP) project is a collaboration of researchers, cultural leaders, and others working to bring together integrated, accurate, and up-to-date information that will help to support better salmon decision-making." ;
+   <http://purl.org/dc/elements/1.1/source> "https://knb.ecoinformatics.org/portals/SASAP/About"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00103
+<http://purl.dataone.org/odo/salmon_00103> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00054> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-29T18:12:03Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> """An essential component of the SASAP working group process is the support each group received from a stellar group of “data wranglers”, a team of geospatial analysis experts from NCEAS known as the Data Task Force.
+
+The Task Force coordinated hundreds of data requests from Alaska Department of Fish and Game and other agencies and organizations, then worked to reformat, integrate, and run quality control on millions of lines of data in over 125 data sets.
+
+The graphs, figures, and infograms generated by the Task Force greatly enhanced the ability of users to visualize often complex information about Alaska salmon.""" ;
+                                           rdfs:label "Data Task Force"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00103> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """An essential component of the SASAP working group process is the support each group received from a stellar group of “data wranglers”, a team of geospatial analysis experts from NCEAS known as the Data Task Force.
+
+The Task Force coordinated hundreds of data requests from Alaska Department of Fish and Game and other agencies and organizations, then worked to reformat, integrate, and run quality control on millions of lines of data in over 125 data sets.
+
+The graphs, figures, and infograms generated by the Task Force greatly enhanced the ability of users to visualize often complex information about Alaska salmon.""" ;
+   <http://purl.org/dc/elements/1.1/source> "https://alaskasalmonandpeople.org/about/process-people/"
+ ] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
