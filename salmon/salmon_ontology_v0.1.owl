@@ -129,6 +129,7 @@ owl:sameAs rdf:type owl:AnnotationProperty .
 
 ###  http://purl.dataone.org/odo/salmon_00001
 <http://purl.dataone.org/odo/salmon_00001> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00124> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:24:20Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> """The thirteen SASAP regions were determined based on their geography, and in many cases represent large watersheds where all precipitation melts and flows into the same part of the ocean. Regions tend to also be grouped by Indigenous cultures and languages, evidence of the deep-time ties between Alaska’s salmon and people. Some regions align with current Alaska Department of Fish & Game (ADF&G) statistical areas; some do not. 
@@ -289,7 +290,7 @@ An additional five working groups were selected to focus on specific research qu
 <http://purl.dataone.org/odo/salmon_00124> rdf:type owl:Class ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-30T20:59:48Z"^^xsd:dateTime ;
-                                           rdfs:label "Place"@en .
+                                           rdfs:label "Place or location"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_00125
@@ -310,9 +311,10 @@ An additional five working groups were selected to focus on specific research qu
 
 ###  http://purl.dataone.org/odo/salmon_00127
 <http://purl.dataone.org/odo/salmon_00127> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00167> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-31T17:43:39Z"^^xsd:dateTime ;
-                                           rdfs:label "Fish length measurement protocol"@en ;
+                                           rdfs:label "Fish length measurement type"@en ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "A protocol which is used to measure the length of a fish." .
 
 [ rdf:type owl:Axiom ;
@@ -827,6 +829,13 @@ https://www.wikidata.org/wiki/Q600580"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:47:27Z"^^xsd:dateTime ;
                                            rdfs:label "Hand collection (?)"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00167
+<http://purl.dataone.org/odo/salmon_00167> rdf:type owl:Class ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-01T21:37:39Z"^^xsd:dateTime ;
+                                           rdfs:label "Fish measurement type"@en .
 
 
 #################################################################
@@ -2512,8 +2521,7 @@ SASAP Project""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00139
-<http://purl.dataone.org/odo/salmon_00139> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00137> ;
+<http://purl.dataone.org/odo/salmon_00139> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-01T17:33:26Z"^^xsd:dateTime ;
                                            rdfs:label "Commercial"@en .
