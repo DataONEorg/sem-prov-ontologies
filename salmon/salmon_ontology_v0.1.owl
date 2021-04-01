@@ -308,6 +308,527 @@ An additional five working groups were selected to focus on specific research qu
                                            rdfs:label "Community"@en .
 
 
+###  http://purl.dataone.org/odo/salmon_00127
+<http://purl.dataone.org/odo/salmon_00127> rdf:type owl:Class ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-31T17:43:39Z"^^xsd:dateTime ;
+                                           rdfs:label "Fish length measurement protocol"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A protocol which is used to measure the length of a fish." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00127> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A protocol which is used to measure the length of a fish." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Fish_measurement 
+https://www.wikidata.org/wiki/Q1847935"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00128
+<http://purl.dataone.org/odo/salmon_00128> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00127> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-31T18:19:34Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "Fork length is commonly used in fish species that have forked caudal fins -- where the dorsal and ventral rays are longer than median rays. Longer rays are often damaged or eroded by contact with rocks, debris, or hatchery walls." ;
+                                           rdfs:label "fork length"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """FL 
+tip of snout to fork of tail""" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A fish length measurement taken from the most anterior part of a fish to the tip of the median caudal fin rays." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00128> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "Fork length is commonly used in fish species that have forked caudal fins -- where the dorsal and ventral rays are longer than median rays. Longer rays are often damaged or eroded by contact with rocks, debris, or hatchery walls." ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.monitoringresources.org/Document/Method/Details/4041"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00128> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A fish length measurement taken from the most anterior part of a fish to the tip of the median caudal fin rays." ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.monitoringresources.org/Document/Method/Details/4041"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00129
+<http://purl.dataone.org/odo/salmon_00129> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00127> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-31T18:19:40Z"^^xsd:dateTime ;
+                                           rdfs:label "post orbit to fork of tail"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "POFK" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A fish length measurement taken from the hind margin of the orbit to the tip of the median caudal fin rays." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00129> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
+   owl:annotatedTarget "POFK" ;
+   rdfs:comment "\"POFK\" is an acronym used by Alaska Department of Fish & Game (ADF&G)"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00129> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A fish length measurement taken from the hind margin of the orbit to the tip of the median caudal fin rays." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://www.monitoringresources.org/Document/Method/Details/1548 
+https://www.monitoringresources.org/Document/Method/Details/4041"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00130
+<http://purl.dataone.org/odo/salmon_00130> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00127> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-31T18:19:49Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "Measurements of specific parts of a fish are sometimes necessary when intact fish are not available. For instance, spawning or dead salmon often have eroded tails (from redd excavation) or enlarged or damaged jaws. When researchers want to compare fish lengths of male spawners versus female spawners or hatchery spawned females versus carcasses, it is a good idea to use this type of length measurement to remove the bias of the eroded tails on female spawners. So length measurements are made from specific parts of the body that are intact, such as the orbit and the hypural plate. The hypural plate is comprised of modified vertebrae that support the rays of the caudal fin and originate from the posterior end of the vertebral column." ;
+                                           rdfs:label "post orbit to hypural plate"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "POHL" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A fish length measurement taken from the hind margin of the orbit to the hypural plate." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00130> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "Measurements of specific parts of a fish are sometimes necessary when intact fish are not available. For instance, spawning or dead salmon often have eroded tails (from redd excavation) or enlarged or damaged jaws. When researchers want to compare fish lengths of male spawners versus female spawners or hatchery spawned females versus carcasses, it is a good idea to use this type of length measurement to remove the bias of the eroded tails on female spawners. So length measurements are made from specific parts of the body that are intact, such as the orbit and the hypural plate. The hypural plate is comprised of modified vertebrae that support the rays of the caudal fin and originate from the posterior end of the vertebral column." ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.monitoringresources.org/Document/Method/Details/1548"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00130> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
+   owl:annotatedTarget "POHL" ;
+   rdfs:comment "\"POHL\" is an acronym used by Alaska Department of Fish & Game (ADF&G)"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00130> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A fish length measurement taken from the hind margin of the orbit to the hypural plate." ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.monitoringresources.org/Document/Method/Details/1548"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00131
+<http://purl.dataone.org/odo/salmon_00131> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00127> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-31T18:19:56Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "Measurements of specific parts of a fish are sometimes necessary when intact fish are not available. For instance, spawning or dead salmon often have eroded tails (from redd excavation) or enlarged or damaged jaws. When researchers want to compare fish lengths of male spawners versus female spawners or hatchery spawned females versus carcasses, it is a good idea to use this type of length measurement to remove the bias of the eroded tails on female spawners. So length measurements are made from specific parts of the body that are intact, such as the orbit and the hypural plate. The hypural plate is comprised of modified vertebrae that support the rays of the caudal fin and originate from the posterior end of the vertebral column. This measurement is also commonly referred to as MEPS, or mid-eye to posterior scale, noting that researchers typically take the measurement to an external feature when the hypural plate is not visible." ;
+                                           rdfs:label "mid-eye to hypural plate"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """MEHL 
+MEPS 
+mid-eye to posterior scale""" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A fish length measurement taken from the middle of the orbit to the hypural plate." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00131> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "Measurements of specific parts of a fish are sometimes necessary when intact fish are not available. For instance, spawning or dead salmon often have eroded tails (from redd excavation) or enlarged or damaged jaws. When researchers want to compare fish lengths of male spawners versus female spawners or hatchery spawned females versus carcasses, it is a good idea to use this type of length measurement to remove the bias of the eroded tails on female spawners. So length measurements are made from specific parts of the body that are intact, such as the orbit and the hypural plate. The hypural plate is comprised of modified vertebrae that support the rays of the caudal fin and originate from the posterior end of the vertebral column. This measurement is also commonly referred to as MEPS, or mid-eye to posterior scale, noting that researchers typically take the measurement to an external feature when the hypural plate is not visible." ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.monitoringresources.org/Document/Method/Details/1549"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00131> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
+   owl:annotatedTarget """MEHL 
+MEPS 
+mid-eye to posterior scale""" ;
+   rdfs:comment "\"MEHL\" is an acronym used by Alaska Department of Fish & Game (ADF&G)"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00131> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A fish length measurement taken from the middle of the orbit to the hypural plate." ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.monitoringresources.org/Document/Method/Details/1549"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00132
+<http://purl.dataone.org/odo/salmon_00132> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00127> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-31T18:20:26Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "The insertion of a fin is the posterior-most point where the fin connects with the body." ;
+                                           rdfs:label "mid-eye to posterior insertion of anal fin"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A fish length measurement taken from the mid-eye to the posterior insertion of the anal fin." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00132> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "The insertion of a fin is the posterior-most point where the fin connects with the body." ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.seagrant.wisc.edu/our-work/focus-areas/fish-and-fisheries/fish-glossary/"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00132> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A fish length measurement taken from the mid-eye to the posterior insertion of the anal fin." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.monitoringresources.org/Document/Method/Details/1549"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00133
+<http://purl.dataone.org/odo/salmon_00133> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00127> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-31T18:20:33Z"^^xsd:dateTime ;
+                                           rdfs:label "mid-eye to fork of tail"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "MEFK" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A fish length measurement taken from the middle of the orbit to the tip of the median caudal fin rays." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00133> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
+   owl:annotatedTarget "MEFK" ;
+   rdfs:comment "\"MEFK\" is an acronym used by Alaska Department of Fish & Game (ADF&G)"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00133> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A fish length measurement taken from the middle of the orbit to the tip of the median caudal fin rays." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://www.monitoringresources.org/Document/Method/Details/1549 
+https://www.monitoringresources.org/Document/Method/Details/4041"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00134
+<http://purl.dataone.org/odo/salmon_00134> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00127> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-31T18:21:18Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "Total length can be measured by two conventions -- by leaving the caudal fin spread in a natural position or by compressing the lobes of the caudal fin dorsoventrally." ;
+                                           rdfs:label "total length"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "TL" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A fish length measurement of the entire length of a fish's body, taken from the most anterior part of the fish to the tip of the longest caudal fin rays." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00134> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "Total length can be measured by two conventions -- by leaving the caudal fin spread in a natural position or by compressing the lobes of the caudal fin dorsoventrally." ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.monitoringresources.org/Document/Method/Details/1551"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00134> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A fish length measurement of the entire length of a fish's body, taken from the most anterior part of the fish to the tip of the longest caudal fin rays." ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.monitoringresources.org/Document/Method/Details/1551"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00135
+<http://purl.dataone.org/odo/salmon_00135> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00127> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-03-31T18:21:24Z"^^xsd:dateTime ;
+                                           rdfs:label "standard length"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "SL" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The measurement from the most anterior tip of the body to the midlateral posterior edge of the hypural plate (in fish with a hypural plate) or to the posterior end of the vertebral column (in fish lacking hypural plates)." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00135> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The measurement from the most anterior tip of the body to the midlateral posterior edge of the hypural plate (in fish with a hypural plate) or to the posterior end of the vertebral column (in fish lacking hypural plates)." ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.fishbase.in/glossary/Glossary.php?q=standard+length"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00137
+<http://purl.dataone.org/odo/salmon_00137> rdf:type owl:Class ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-01T17:33:14Z"^^xsd:dateTime ;
+                                           rdfs:label "Fishery type"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00142
+<http://purl.dataone.org/odo/salmon_00142> rdf:type owl:Class ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:00:22Z"^^xsd:dateTime ;
+                                           rdfs:label "Fish collection method"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00144
+<http://purl.dataone.org/odo/salmon_00144> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00164> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:01:18Z"^^xsd:dateTime ;
+                                           rdfs:label "Angling"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "hook and line" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A method of fishing by means of an \"angle\" (fish hook). The hook is usually attached to a fishing line and baitied with natural bait or artificial lures to attract fish. The line is often attached to a fishing rod." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00144> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A method of fishing by means of an \"angle\" (fish hook). The hook is usually attached to a fishing line and baitied with natural bait or artificial lures to attract fish. The line is often attached to a fishing rod." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Angling"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00145
+<http://purl.dataone.org/odo/salmon_00145> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00142> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:01:23Z"^^xsd:dateTime ;
+                                           rdfs:label "Fish wheel"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "salmon wheel" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A device that is situated in rivers for catching fish which looks and operates like a watermill and is outfitted with wire baskets designed to catch and carry fish from the water and into a nearby holding tank." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00145> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A device that is situated in rivers for catching fish which looks and operates like a watermill and is outfitted with wire baskets designed to catch and carry fish from the water and into a nearby holding tank." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Fish_wheel 
+https://www.wikidata.org/wiki/Q5454688"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00146
+<http://purl.dataone.org/odo/salmon_00146> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00164> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:01:30Z"^^xsd:dateTime ;
+                                           rdfs:label "Spear"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A method of fishing which involves using a spear to strike and collect a fish." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00146> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A method of fishing which involves using a spear to strike and collect a fish." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Spearfishing 
+https://www.wikidata.org/wiki/Q765706"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00147
+<http://purl.dataone.org/odo/salmon_00147> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00160> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:01:36Z"^^xsd:dateTime ;
+                                           rdfs:label "Set gillnet"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "set net" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A gillnet which is attached to poles fixed in the substrate or an anchor system to prevent movement of the net." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00147> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A gillnet which is attached to poles fixed in the substrate or an anchor system to prevent movement of the net." ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.fisheries.noaa.gov/national/bycatch/fishing-gear-gillnets"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00148
+<http://purl.dataone.org/odo/salmon_00148> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00142> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:01:41Z"^^xsd:dateTime ;
+                                           rdfs:label "Weir"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """fish weir 
+fishing weir 
+fishgarth 
+kiddle""" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "An obstruction placed in tidal waters, or wholly or partially across a river, to direct the passage of, or trap fish." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00148> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "An obstruction placed in tidal waters, or wholly or partially across a river, to direct the passage of, or trap fish." ;
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Fishing_weir 
+https://www.wikidata.org/wiki/Q1417573"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00150
+<http://purl.dataone.org/odo/salmon_00150> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00142> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:01:50Z"^^xsd:dateTime ;
+                                           rdfs:label "Pot"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "trap" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A submerged three-dimensional wire or wood device which are commonly baited and permit organisms to enter the enclosure, but make escape extremely difficult or impossible." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00150> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A submerged three-dimensional wire or wood device which are commonly baited and permit organisms to enter the enclosure, but make escape extremely difficult or impossible." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.fisheries.noaa.gov/national/bycatch/fishing-gear-traps-and-pots"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00151
+<http://purl.dataone.org/odo/salmon_00151> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00162> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:01:54Z"^^xsd:dateTime ;
+                                           rdfs:label "Beach seine"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A beach seine is a seine net operated from the shore. The gear is composed of a bunt (bag or lose netting) and long wings often lengthened with long ropes for towing the seine to the beach. The headrope with floats is on the surface, the footrope is in permanent contact with the bottom and the seine is therefore a barrier which prevent the fish from escaping from the area enclosed by the net" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00151> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A beach seine is a seine net operated from the shore. The gear is composed of a bunt (bag or lose netting) and long wings often lengthened with long ropes for towing the seine to the beach. The headrope with floats is on the surface, the footrope is in permanent contact with the bottom and the seine is therefore a barrier which prevent the fish from escaping from the area enclosed by the net" ;
+   <http://purl.org/dc/elements/1.1/source> "http://www.fao.org/fishery/geartype/202/en"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00152
+<http://purl.dataone.org/odo/salmon_00152> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00164> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:01:59Z"^^xsd:dateTime ;
+                                           rdfs:label "Dip net"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """hand net 
+scoop net""" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A net or mesh basket held open by a hoop which may or may not be on the end of a handle and is used for scopping fish near the surface of the water." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00152> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A net or mesh basket held open by a hoop which may or may not be on the end of a handle and is used for scopping fish near the surface of the water." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Hand_net 
+https://www.wikidata.org/wiki/Q640082"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00154
+<http://purl.dataone.org/odo/salmon_00154> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00164> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:02:25Z"^^xsd:dateTime ;
+                                           rdfs:label "Handpicked or carcass collection"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00155
+<http://purl.dataone.org/odo/salmon_00155> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00142> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:02:30Z"^^xsd:dateTime ;
+                                           rdfs:label "Troll"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A method of fishing in which one or more fishing lines, baited with lures or bait fish, are drawn through the water (often behind a moving vessel) to catch pelagic fishes." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00155> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A method of fishing in which one or more fishing lines, baited with lures or bait fish, are drawn through the water (often behind a moving vessel) to catch pelagic fishes." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Trolling_(fishing)"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00156
+<http://purl.dataone.org/odo/salmon_00156> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00146> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:02:33Z"^^xsd:dateTime ;
+                                           rdfs:label "Gig"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A multi-pronged spear, typically ranging in length from 8 to 14 feet, used to spear (or \"gig\") fishes for harvest." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00156> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A multi-pronged spear, typically ranging in length from 8 to 14 feet, used to spear (or \"gig\") fishes for harvest." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Gigging 
+https://www.wikidata.org/wiki/Q4412590"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00157
+<http://purl.dataone.org/odo/salmon_00157> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00160> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:02:38Z"^^xsd:dateTime ;
+                                           rdfs:label "Drift gillnet"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A gillnet which is kept afloat at the proper depth using a system of weights and buoys attached to the headrope, footrope, or floatline." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00157> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A gillnet which is kept afloat at the proper depth using a system of weights and buoys attached to the headrope, footrope, or floatline." ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.fisheries.noaa.gov/national/bycatch/fishing-gear-gillnets"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00158
+<http://purl.dataone.org/odo/salmon_00158> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00162> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:02:44Z"^^xsd:dateTime ;
+                                           rdfs:label "Purse seine"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A purse seine is a large wall of netting deployed around an entire area or school of fish. The seine has floats along the top line with a lead line threaded through rings along the bottom. Once a school of fish is located, a skiff encircles the school with the net. The lead line is then pulled in, \"pursing\" the net closed on the bottom, preventing fish from escaping by swimming downward. The catch is harvested by either hauling the net aboard or bringing it alongside the vessel." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00158> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A purse seine is a large wall of netting deployed around an entire area or school of fish. The seine has floats along the top line with a lead line threaded through rings along the bottom. Once a school of fish is located, a skiff encircles the school with the net. The lead line is then pulled in, \"pursing\" the net closed on the bottom, preventing fish from escaping by swimming downward. The catch is harvested by either hauling the net aboard or bringing it alongside the vessel." ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.fisheries.noaa.gov/national/bycatch/fishing-gear-purse-seines"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00159
+<http://purl.dataone.org/odo/salmon_00159> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00164> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:02:48Z"^^xsd:dateTime ;
+                                           rdfs:label "Electrofishing"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A method of fishing which uses direct current electricity flowing between a submerged cathod and anode to cause galvanotaxis, or an uncontrolled muscular convulsion, which affects the movement of the fish such that it swims towards the anode, where it is then collected." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00159> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A method of fishing which uses direct current electricity flowing between a submerged cathod and anode to cause galvanotaxis, or an uncontrolled muscular convulsion, which affects the movement of the fish such that it swims towards the anode, where it is then collected." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Electrofishing 
+https://www.wikidata.org/wiki/Q1249133"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00160
+<http://purl.dataone.org/odo/salmon_00160> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00163> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:31:54Z"^^xsd:dateTime ;
+                                           rdfs:label "Gillnet"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A wall of netting that hangs in the water column, typically made of monofilament or multifilament nylon. Mesh sizes are designed to allow fish to get only their head through the netting but not their body. The fish's gills then get caught in the mesh as the fish tries to back out of the net. As the fish struggles to free itself, it becomes more and more entangled." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00160> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A wall of netting that hangs in the water column, typically made of monofilament or multifilament nylon. Mesh sizes are designed to allow fish to get only their head through the netting but not their body. The fish's gills then get caught in the mesh as the fish tries to back out of the net. As the fish struggles to free itself, it becomes more and more entangled." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.fisheries.noaa.gov/national/bycatch/fishing-gear-gillnets"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00162
+<http://purl.dataone.org/odo/salmon_00162> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00163> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:32:41Z"^^xsd:dateTime ;
+                                           rdfs:label "Seine"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A method of fishing that employs a fishing net, called a seine, that hangs vertically in the water with its bottom edge held down by weights and its top edge buoyed by floats. Seine nets can be deployed from the shore as a beach seine, or from a boat." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00162> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A method of fishing that employs a fishing net, called a seine, that hangs vertically in the water with its bottom edge held down by weights and its top edge buoyed by floats. Seine nets can be deployed from the shore as a beach seine, or from a boat." ;
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Seine_fishing 
+https://www.wikidata.org/wiki/Q600580"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00163
+<http://purl.dataone.org/odo/salmon_00163> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00142> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:46:07Z"^^xsd:dateTime ;
+                                           rdfs:label "Netting (?)"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00164
+<http://purl.dataone.org/odo/salmon_00164> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00142> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:47:27Z"^^xsd:dateTime ;
+                                           rdfs:label "Hand collection (?)"@en .
+
+
 #################################################################
 #    Individuals
 #################################################################
@@ -364,8 +885,8 @@ South: 67.7408 degrees
 East: -136.684 degrees
 West: -166.311 degrees""" ;
                                            rdfs:label "Arctic"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "Arctic Alaska or Far North Alaska is a region of the U.S. state of Alaska generally referring to the northern areas on or close to the Arctic Ocean." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "Far North Alaska" .
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "Far North Alaska" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Arctic Alaska or Far North Alaska is a region of the U.S. state of Alaska generally referring to the northern areas on or close to the Arctic Ocean." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00003> ;
@@ -408,14 +929,6 @@ West: -162.2713 degrees""" ;
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00004> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "The eastern-most arm of the Bering Sea. It is located between the southwest part of the Alaska mainland to its north, and the Alaska Peninsula to its south and east. Bristol Bay is 400 km long and 290 km wide at its mouth. A number of rivers flow into the bay, including the Cinder, Igushik, Kvichak, Meshik, Nushagak, Naknek, Togiak, and Ugashik." ;
-   <http://purl.org/dc/elements/1.1/source> """http://en.wikipedia.org/wiki/Bristol_Bay 
-https://www.wikidata.org/wiki/Q917872"""
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00004> ;
    owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
    owl:annotatedTarget """Bristol Bay is sockeye salmon country. The region is a land of great inland lakes, ideally suited to the juvenile life of sockeye salmon. The habitats here are virtually pristine and intact with a notable absence of mining and offshore oil and gas exploration in the region. The long proposed Pebble Mine, situated at the intersection between the Nushagak River and Kvichak River watersheds, would unquestionably and permanently change this salmon landscape.
 
@@ -426,6 +939,14 @@ East: -152.7319 degrees
 West: -162.2713 degrees""" ;
    <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#bristolbay
 https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00004> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The eastern-most arm of the Bering Sea. It is located between the southwest part of the Alaska mainland to its north, and the Alaska Peninsula to its south and east. Bristol Bay is 400 km long and 290 km wide at its mouth. A number of rivers flow into the bay, including the Cinder, Igushik, Kvichak, Meshik, Nushagak, Naknek, Togiak, and Ugashik." ;
+   <http://purl.org/dc/elements/1.1/source> """http://en.wikipedia.org/wiki/Bristol_Bay 
+https://www.wikidata.org/wiki/Q917872"""
  ] .
 
 
@@ -590,10 +1111,10 @@ North: 68.9178 degrees
 South: 65.3082 degrees
 East: 65.3082 degrees
 West: -169.0513 degrees""" ;
-                                           rdfs:comment """http://purl.obolibrary.org/obo/GAZ_22223765 
+                                           rdfs:label "Kotzebue"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#relatedMatch> """http://purl.obolibrary.org/obo/GAZ_22223765 
 http://purl.obolibrary.org/obo/GAZ_00132744 
-http://purl.obolibrary.org/obo/GAZ_00198349""" ;
-                                           rdfs:label "Kotzebue"@en .
+http://purl.obolibrary.org/obo/GAZ_00198349""" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00009> ;
@@ -655,9 +1176,9 @@ South: 59.357  degrees
 East: -145.1013  degrees
 West: -149.1761  degrees""" ;
                                            rdfs:label "Prince William Sound"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "PWS" ;
                                            <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.obolibrary.org/obo/GAZ_00051075" ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A sound of the Gulf of Alaska on the south coast of the State of Alaska. It is located on the east side of the Kenai Peninsula." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "PWS" .
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A sound of the Gulf of Alaska on the south coast of the State of Alaska. It is located on the east side of the Kenai Peninsula." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00011> ;
@@ -734,11 +1255,11 @@ South: 54.2508 degrees
 East: -126.7735 degrees
 West: -143.8874 degrees""" ;
                                            rdfs:label "Southeast"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.obolibrary.org/obo/GAZ_00055328" ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "The southeastern portion of the coast of the State of Alaska, which lies just west of the northern half of the Canadian province of British Columbia. The majority of the panhandle's area is part of the Tongass National Forest, the United States's largest national forest. In many places, the international border runs along the crest of the Boundary Ranges of the Coast Mountains." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> """Southeast Alaska
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """Southeast Alaska
 Alaska Panhandle
-Alaskan Panhandle""" .
+Alaskan Panhandle""" ;
+                                           <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.obolibrary.org/obo/GAZ_00055328" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The southeastern portion of the coast of the State of Alaska, which lies just west of the northern half of the Canadian province of British Columbia. The majority of the panhandle's area is part of the Tongass National Forest, the United States's largest national forest. In many places, the international border runs along the crest of the Boundary Ranges of the Coast Mountains." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00013> ;
@@ -799,8 +1320,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T16:43:05Z"^^xsd:dateTime ;
                                            rdfs:label "Sockeye"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161979" ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> """\"Oncorhynchus nerka\" @la
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """\"Oncorhynchus nerka\" @la
 \"O. nerka\" @la
 \"red salmon\" @en
 \"kokanee salmon\" @en
@@ -815,7 +1335,8 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 \"tahi'id\" @eyk
 \"cha'ch\" @eyk
 \"Misoo\" @tsi @tli 
-\"g̲aat\" @tsi @tli""" .
+\"g̲aat\" @tsi @tli""" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161979" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00018> ;
@@ -831,8 +1352,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T16:43:09Z"^^xsd:dateTime ;
                                            rdfs:label "Chinook"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161980" ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> """\"Oncorhynchus tshawytscha\" @la
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """\"Oncorhynchus tshawytscha\" @la
 \"O. tshawytscha\" @la
 \"king salmon\" @en
 \"Quinnat salmon\" @en
@@ -858,7 +1378,8 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 \"nudlaghi\" [Kenai Dena'ina]
 \"te'ya'lee\" @eya
 \"Yee\" @tsi @tli 
-\"t'á\" @tsi @tli""" .
+\"t'á\" @tsi @tli""" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161980" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00019> ;
@@ -874,8 +1395,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T16:43:12Z"^^xsd:dateTime ;
                                            rdfs:label "Coho"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161977" ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> """\"Oncorhynchus kisutch\" @la
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """\"Oncorhynchus kisutch\" @la
 \"O. kisutch\" @la
 \"silver salmon\" @en
 \"silvers\" @en
@@ -890,7 +1410,8 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 \"Qakiiyaq\" [Alutiiq/Sugpiaq]
 \"ta'ay\" @eyk
 \"ÜÜx\" @tsi @tli
-\"L'ook\" @tsi @tli""" .
+\"L'ook\" @tsi @tli""" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161977" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00020> ;
@@ -906,8 +1427,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T16:43:16Z"^^xsd:dateTime ;
                                            rdfs:label "Chum"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161976" ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> """\"Oncorhynchus keta\" @la
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """\"Oncorhynchus keta\" @la
 \"O. keta\" @la
 \"dog salmon\" @en
 \"keta salmon\" @en
@@ -927,7 +1447,8 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 \"alima\" [Kenai Dena'ina] 
 \"tiitl'\" @eya 
 \"Gaynii\"@tsi @tli 
-\"téel'\" @tsi @tli""" .
+\"téel'\" @tsi @tli""" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161976" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00021> ;
@@ -942,7 +1463,8 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
                                                     <http://purl.dataone.org/odo/salmon_00016> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T16:43:19Z"^^xsd:dateTime ;
-                                           <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> """\"Oncorhynchus gorbuscha\" @la
+                                           rdfs:label "Pink"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """\"Oncorhynchus gorbuscha\" @la
 \"O. gorbuscha\" @la
 \"humpback salmon\" @en
 \"humpbacked salmon\" @en
@@ -961,7 +1483,6 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 \"kaashk'\" @eyk
 \"Sti'moon\" @tsi @tli 
 \"Cháas'\" @tsi @tli""" ;
-                                           rdfs:label "Pink"@en ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161975" .
 
 [ rdf:type owl:Axiom ;
@@ -1011,8 +1532,8 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:03:30Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The CFEC website is accessible at: https://cfec.state.ak.us/" ;
                                            rdfs:label "Alaska Department of Fish and Game, Commercial Fisheries Entry Commision"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A department within the government of Alaska which helps to conserve and maintain the economic health of Alaska’s commercial fisheries by limiting the number of participating fishers. The Commission issues permits and vessel licenses to qualified individuals in both limited and unlimited fisheries, and provides due process hearings and appeal processes for disputes related to limitations on fishery participation." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "CFEC" .
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "CFEC" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A department within the government of Alaska which helps to conserve and maintain the economic health of Alaska’s commercial fisheries by limiting the number of participating fishers. The Commission issues permits and vessel licenses to qualified individuals in both limited and unlimited fisheries, and provides due process hearings and appeal processes for disputes related to limitations on fishery participation." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00029> ;
@@ -1046,8 +1567,8 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:03:57Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The Arctic-Yukon-Kuskokwim (AYK) Region encompasses the coastal waters of Alaska and includes the rivers and streams that drain into the Bering, Chukchi, and Beaufort Seas. It stretches from its boundary at Cape Newenham with the Bristol Bay area to the border with Canada on the Arctic Ocean. The Yukon River, with the fifth largest drainage in North America, lies within this management region, as do many other major rivers; the Kuskokwim being second in size next to the Yukon. With the exception of Fairbanks, Bethel, and Nome, this is a region of villages. Salmon and herring are the most important fisheries resources in this region. Large numbers of salmon are taken for subsistence and subsistence harvests can equal or surpass the numbers of fish harvested in commercial fisheries, especially Chinook salmon. King crab is harvested near Nome in both commercial and subsistence fisheries. Whitefish are also important to the residents of this region." ;
                                            rdfs:label "Alaska Department of Division of Commercial Fisheries, Arctic-Yukon-Kuskokwim Region"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A department within the government of Alaska and a sub-division of the Alaska Department of Fish and Wildlife, Division of Commercial Fisheries which manages the Arctic-Yukon-Kuskokwim Region." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "AYK" .
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "AYK" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A department within the government of Alaska and a sub-division of the Alaska Department of Fish and Wildlife, Division of Commercial Fisheries which manages the Arctic-Yukon-Kuskokwim Region." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00031> ;
@@ -1081,8 +1602,8 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:07Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The Southeast Alaska/Yakutat Region (Region I) consists of Alaska waters between Cape Suckling on the north and Dixon Entrance on the south. Salmon are commercially harvested in Southeast Alaska with purse seines and drift gillnets; in Yakutat with set gillnets; and in both areas with hand and power troll gear. Herring are harvested in winter bait, sac roe, spawn-on-kelp, and bait pound fisheries. Miscellaneous shellfish (sea cucumber, sea urchins, and geoduck clams) are harvested in dive fisheries in the region. The Alaska Department of Fish and Game (ADF&G) has management jurisdiction over all groundfish resources within state waters in Region I. In addition, the State has management authority for Demersal Shelf Rockfish, ling cod, and black and blue rock fish in both state and federal waters. There are several commercially important shellfish species in Southeast Alaska. They include golden and red king crab, Dungeness crab, Tanner crab, and pandalid shrimp." ;
                                            rdfs:label "Alaska Department of Fish and Game, Division of Commercial Fisheries, Southeast Region"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A department within the government of Alaska and a sub-division of the Alaska Department of Fish and Wildlife, Division of Commercial Fisheries which manages the Southeast Region." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "Region I" .
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "Region I" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A department within the government of Alaska and a sub-division of the Alaska Department of Fish and Wildlife, Division of Commercial Fisheries which manages the Southeast Region." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00033> ;
@@ -1189,8 +1710,8 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:32Z"^^xsd:dateTime ;
                                            rdfs:label "Alaska Department of Natural Resources, Support Services Division, Information Resource Management"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A division within the government of Alaska's Department of Natural Resources (DNR) which maintains the department's land records repository and oversees DNR's computer systems and networks services. It provides for the department's data processing functions including development, training, operations, and maintenance. The Department of Natural Resources' (DNR) systems include the Land Administration System (LAS), the Geographic Information System, the Revenue and Billing System, and others. The section also produces and maintains the state's land status maps." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "Alaska Department of Natural Resources, IRM" .
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "Alaska Department of Natural Resources, IRM" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A division within the government of Alaska's Department of Natural Resources (DNR) which maintains the department's land records repository and oversees DNR's computer systems and networks services. It provides for the department's data processing functions including development, training, operations, and maintenance. The Department of Natural Resources' (DNR) systems include the Land Administration System (LAS), the Geographic Information System, the Revenue and Billing System, and others. The section also produces and maintains the state's land status maps." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00039> ;
@@ -1206,8 +1727,8 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:39Z"^^xsd:dateTime ;
                                            rdfs:label "Alaska Department of Public Safety, Division of Alaska Wildlife Troopers"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A division wihtin Alaska's Department of Public Safety with a mission to  protect Alaska's Natural Resources through the enfrocement wildlife statutes and regulations." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "AWT" .
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "AWT" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A division wihtin Alaska's Department of Public Safety with a mission to  protect Alaska's Natural Resources through the enfrocement wildlife statutes and regulations." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00040> ;
@@ -1224,8 +1745,8 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:43Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "Visit LFD's webpage at: https://www.legfin.akleg.gov/" ;
                                            rdfs:label "Alaska Department of Legislative Finance"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A department within the government of Alaska which provides non-partisan budgetary and fiscal analysis to the Alaska Legislature." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "LFD" .
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "LFD" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A department within the government of Alaska which provides non-partisan budgetary and fiscal analysis to the Alaska Legislature." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00041> ;
@@ -1258,8 +1779,8 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:57Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "Visit the National Park Service's website at: https://www.nps.gov/index.htm" ;
                                            rdfs:label "National Park Service"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "An agency of the federal government of the United States that manages all national parks, many national monuments, and other conservation and hisotrical properties with various title designations." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "NPS" .
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "NPS" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "An agency of the federal government of the United States that manages all national parks, many national monuments, and other conservation and hisotrical properties with various title designations." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00043> ;
@@ -1294,8 +1815,8 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:05:30Z"^^xsd:dateTime ;
                                            rdfs:label "United States Fish and Wildlife Service"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A bureau of the United States Department of the Interior whose mission is to work with others to conserve, protect and enhance fish, wildlife and plants and their habitats for the continuing benefit of the American people." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "USFWS" .
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "USFWS" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A bureau of the United States Department of the Interior whose mission is to work with others to conserve, protect and enhance fish, wildlife and plants and their habitats for the continuing benefit of the American people." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00045> ;
@@ -1311,8 +1832,8 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:05:35Z"^^xsd:dateTime ;
                                            rdfs:label "United States Geologic Survey"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A bureau of the United Sates Departement of the Interior, which provides science about the natural hazards that threaten lives and livelihoods, the water, energy, minerals, and other natural resources we rely on, the health of our ecosystems and environment, and the impacts of climate and land-use change." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "USGS" .
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "USGS" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A bureau of the United Sates Departement of the Interior, which provides science about the natural hazards that threaten lives and livelihoods, the water, energy, minerals, and other natural resources we rely on, the health of our ecosystems and environment, and the impacts of climate and land-use change." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00046> ;
@@ -1328,8 +1849,8 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:05:41Z"^^xsd:dateTime ;
                                            rdfs:label "Washington Department of Fish and Wildlife"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A department within the government of Washington which is dedicated to preserving, protecting, and perpetuating the state's fish, wildlife, and ecosystems while providing sustainable fish and wildlife recreational and commercial opportunities." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "WDFW" .
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "WDFW" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A department within the government of Washington which is dedicated to preserving, protecting, and perpetuating the state's fish, wildlife, and ecosystems while providing sustainable fish and wildlife recreational and commercial opportunities." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00047> ;
@@ -1346,8 +1867,8 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:06:17Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "Visit the North Pacific Anadrmous Fish Commission's website at: https://npafc.org/" ;
                                            rdfs:label "North Pacific Anadromous Fish Commission"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "An international inter-governmental organization established by the Convention for the Conservation of Anadromous Stocks in the North Pacific Ocean whose primary objective is to promote the conservation of anadromous stocks in the Convention Area. The Convention Area is the international waters of the North Pacific Ocean and its adjacent seas north of 33° North beyond the 200-mile zones (exclusive economic zones) of the coastal States." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "NPAFC" .
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "NPAFC" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "An international inter-governmental organization established by the Convention for the Conservation of Anadromous Stocks in the North Pacific Ocean whose primary objective is to promote the conservation of anadromous stocks in the Convention Area. The Convention Area is the international waters of the North Pacific Ocean and its adjacent seas north of 33° North beyond the 200-mile zones (exclusive economic zones) of the coastal States." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00049> ;
@@ -1363,8 +1884,8 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:06:45Z"^^xsd:dateTime ;
                                            rdfs:label "Orutsararmiut Traditional Native Council"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A federally recognized governing body for the community of Bethel, Alaska whose mission is to promote the general welfare, enhance independence, encourage self-sufficiency/self-motivation, enhance quality of life, and preserve cultural and traditional values of the Tribe, and to exercise tribal authority over resources through educational, economic, and social development opportunities." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "ONC" .
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "ONC" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A federally recognized governing body for the community of Bethel, Alaska whose mission is to promote the general welfare, enhance independence, encourage self-sufficiency/self-motivation, enhance quality of life, and preserve cultural and traditional values of the Tribe, and to exercise tribal authority over resources through educational, economic, and social development opportunities." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00050> ;
@@ -1414,7 +1935,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:47:08Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The goals of the Economic working group are to (1) identify important trends in the historical relationships between salmon and salmon users which may have been overlooked, (2) inform and support evidence-based policy aimed at sustainable and equitable decision making, and (3) compile, archive, and share relevant historical socioeconomic data about Alaska's salmon systems." ;
                                            rdfs:label "Economic working group"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "Socioeconomic working group" .
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "Socioeconomic working group" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00057> ;
@@ -1742,9 +2263,9 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-27T00:18:57Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The NCEAS website is accessible at: https://www.nceas.ucsb.edu/" ;
                                            rdfs:label "National Center for Ecological Analysis and Synthesis"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A research center of the University of California, Santa Barbara which fosters collaborative synthesis research by assembling interdisciplinary teams to distill existing data, ideas, theories, or methods drawn from many sources, across multiple fields of inquiry, in order to accelerate the generation of new knowledge on a broad scale." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> """National Center for Ecological Analysis & Synthesis
-NCEAS""" .
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """National Center for Ecological Analysis & Synthesis
+NCEAS""" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A research center of the University of California, Santa Barbara which fosters collaborative synthesis research by assembling interdisciplinary teams to distill existing data, ideas, theories, or methods drawn from many sources, across multiple fields of inquiry, in order to accelerate the generation of new knowledge on a broad scale." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00100> ;
@@ -1784,8 +2305,8 @@ NCEAS""" .
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T17:34:06Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The State of Alaska's Salmon and People (SASAP) project is a collaboration of researchers, cultural leaders, and others working to bring together integrated, accurate, and up-to-date information that will help to support better salmon decision-making." ;
                                            rdfs:label "State of Alaska's Salmon and People Data Portal"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A collection of datasets and their metadata which were curated in support of the State of Alaska's Salmon and People (SASAP) Project and accessible at the URL, https://knb.ecoinformatics.org/portals/SASAP/Data" ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "SASAP Data Portal" .
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "SASAP Data Portal" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A collection of datasets and their metadata which were curated in support of the State of Alaska's Salmon and People (SASAP) Project and accessible at the URL, https://knb.ecoinformatics.org/portals/SASAP/Data" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00102> ;
@@ -1826,7 +2347,7 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T22:57:11Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The KBNERR website is accessbile at: https://accs.uaa.alaska.edu/kbnerr/" ;
                                            rdfs:label "Kachemak Bay National Estuarine Research Reserve"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "KBNERR" .
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "KBNERR" .
 
 
 ###  http://purl.dataone.org/odo/salmon_00105
@@ -1899,7 +2420,7 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T22:59:49Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The UAF Alaska Native Studies and Rural Development webpage is accessible at: https://www.uaf.edu/dansrd/" ;
                                            rdfs:label "Department of Alaska Native Studies and Rural Development, University of Alaska Fairbanks"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "DANSRD" .
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "DANSRD" .
 
 
 ###  http://purl.dataone.org/odo/salmon_00113
@@ -1936,7 +2457,7 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T23:00:51Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The UAA website is accessible at: https://www.uaa.alaska.edu/" ;
                                            rdfs:label "University of Alaska Anchorage"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "UAA" .
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "UAA" .
 
 
 ###  http://purl.dataone.org/odo/salmon_00117
@@ -1963,8 +2484,9 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-30T20:31:38Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The SASAP project is a deep assessment of the state of knowledge of the biological, sociocultural, economic and governance dimensions of Alaska's salmon and the people who depend upon them. The SASAP project shares this knowledge with Alaska salmon users through comprehensive watershed-level summaries (Regions), focused research on specific salmon issues (Topics), and suppported links to SASAP's free, open-source datasets, accessible through the SASAP Data Portal (https://knb.ecoinformatics.org/portals/SASAP/Data)." ;
                                            rdfs:label "The State of Alaska's Salmon and People Project"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A collaborative project which seeks to provide a holistic, statewide overview of the status and characteristics of Alaska's coupled human-salmon system." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "SASAP" .
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """SASAP
+SASAP Project""" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A collaborative project which seeks to provide a holistic, statewide overview of the status and characteristics of Alaska's coupled human-salmon system." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00122> ;
@@ -1979,6 +2501,38 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
    owl:annotatedTarget "A collaborative project which seeks to provide a holistic, statewide overview of the status and characteristics of Alaska's coupled human-salmon system." ;
    <http://purl.org/dc/elements/1.1/source> "https://alaskasalmonandpeople.org/"
  ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00138
+<http://purl.dataone.org/odo/salmon_00138> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00137> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-01T17:33:22Z"^^xsd:dateTime ;
+                                           rdfs:label "Recreational"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00139
+<http://purl.dataone.org/odo/salmon_00139> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00137> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-01T17:33:26Z"^^xsd:dateTime ;
+                                           rdfs:label "Commercial"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00140
+<http://purl.dataone.org/odo/salmon_00140> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00137> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-01T17:33:29Z"^^xsd:dateTime ;
+                                           rdfs:label "Subsistence"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00141
+<http://purl.dataone.org/odo/salmon_00141> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00137> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-01T17:55:58Z"^^xsd:dateTime ;
+                                           rdfs:label "Hatchery"@en .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
