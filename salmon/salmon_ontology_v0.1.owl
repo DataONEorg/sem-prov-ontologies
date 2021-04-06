@@ -366,6 +366,7 @@ An additional five working groups were selected to focus on specific research qu
 
 ###  http://purl.dataone.org/odo/salmon_00127
 <http://purl.dataone.org/odo/salmon_00127> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00167> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-31T17:43:39Z"^^xsd:dateTime ;
                                            rdfs:label "Fish length measurement type"@en ;
@@ -903,6 +904,7 @@ https://www.wikidata.org/wiki/Q600580"""
 <http://purl.dataone.org/odo/salmon_00167> rdf:type owl:Class ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-01T21:37:39Z"^^xsd:dateTime ;
+                                           rdfs:comment "TEMPORARY NOTE: I see a couple options for how to organize 'measurement types' -- we could sort by fish measurements vs environmental measurements etc. (i.e. what I've started to do here) OR we could follow a similar pattern to ECSO. I'm not sure which the better route is just yet..." ;
                                            rdfs:label "Fish measurement type"@en .
 
 
@@ -1103,7 +1105,7 @@ https://www.wikidata.org/wiki/Q1752459"""
 <http://purl.dataone.org/odo/salmon_00182> rdf:type owl:Class ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-05T21:55:12Z"^^xsd:dateTime ;
-                                           rdfs:label "Research and data collection method"@en .
+                                           rdfs:label "Data collection method"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_00183
@@ -1113,6 +1115,92 @@ https://www.wikidata.org/wiki/Q1752459"""
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-06T17:24:47Z"^^xsd:dateTime ;
                                            rdfs:label "Consultancy (?)"@en ;
                                            <http://www.w3.org/2004/02/skos/core#altLabel> "Consulting firm" .
+
+
+###  http://purl.dataone.org/odo/salmon_00184
+<http://purl.dataone.org/odo/salmon_00184> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00167> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-06T22:46:36Z"^^xsd:dateTime ;
+                                           rdfs:comment """TEMPORARY NOTE:
+
+**do we want to import `age_measurementType` (http://purl.dataone.org/odo/ECSO_00000656) ?
+
+**ALSO** need to figure out where to include the term `Fish age in European notation` which is defined as \"An age designation notation that includes two number separated by a period. The first number represents the number of years or winters a salmon has spent in freshwater after emergence from the gravel, and the second number represents the number of years spent in the ocean. Added togethr, these numbers provide the total age or age class of a salmon.\" (source: Gillespie DC & Maclellan SE (2015) Chinook salmon (Oncorhynchus tshawytscha) scale age determination procedures. Canadian Technical Report of Fishereis and Aquatic Sciences. 3123.)
+
+^ could include dc:description: \"e.g. 1.3 = 1 year over-wintered in freshwater and 3 in the ocean\"""" ;
+                                           rdfs:label "Fish age measurement type"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.dataone.org/odo/ECSO_00000656" .
+
+
+###  http://purl.dataone.org/odo/salmon_00185
+<http://purl.dataone.org/odo/salmon_00185> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00182> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-06T22:49:05Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "There are three basic methods for age and growth determination of fishes: (1) observation of the growth of fishes of known age, (2) study of fish size-frequencies, and (3) study of seasonal ring formation in hard body parts such as scales and bones." ;
+                                           rdfs:label "Fish age determination method"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.dataone.org/odo/ECSO_00001602" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The way in which age is determined for a given individual." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00185> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "There are three basic methods for age and growth determination of fishes: (1) observation of the growth of fishes of known age, (2) study of fish size-frequencies, and (3) study of seasonal ring formation in hard body parts such as scales and bones." ;
+   <http://purl.org/dc/elements/1.1/source> "https://spo.nmfs.noaa.gov/sites/default/files/legacy-pdfs/leaflet488.pdf"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00186
+<http://purl.dataone.org/odo/salmon_00186> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00182> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-06T22:50:14Z"^^xsd:dateTime ;
+                                           rdfs:comment "TEMPORARY NOTE: **do we want to import `age_measurementType` (http://purl.dataone.org/odo/ECSO_00001601) ?" ;
+                                           rdfs:label "Fish sex determination method"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.dataone.org/odo/ECSO_00001601" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The way in which sex is determined for a given individual." .
+
+
+###  http://purl.dataone.org/odo/salmon_00187
+<http://purl.dataone.org/odo/salmon_00187> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00184> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-06T22:51:22Z"^^xsd:dateTime ;
+                                           rdfs:label "Total age"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The sum of freshwater and marine annuli plus one to account for time spent in the gravel before hatching." .
+
+
+###  http://purl.dataone.org/odo/salmon_00188
+<http://purl.dataone.org/odo/salmon_00188> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00184> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-06T23:10:05Z"^^xsd:dateTime ;
+                                           rdfs:label "Freshwater age"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The number of years or winters a salmon spends in a freshwater environment as a free-swimming fish." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00188> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The number of years or winters a salmon spends in a freshwater environment as a free-swimming fish." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.researchgate.net/profile/Darlene-Gillespie/publication/281285926_Chinook_Salmon_Oncorhynchus_tshawytscha_Scale_Age_Determination_Procedures/links/55df66d708aede0b572b8de7/Chinook-Salmon-Oncorhynchus-tshawytscha-Scale-Age-Determination-Procedures.pdf"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00189
+<http://purl.dataone.org/odo/salmon_00189> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00184> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-06T23:14:20Z"^^xsd:dateTime ;
+                                           rdfs:label "Saltwater age"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The number of years or winters a salmon spends in a saltwater environment." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00189> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The number of years or winters a salmon spends in a saltwater environment." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.researchgate.net/profile/Darlene-Gillespie/publication/281285926_Chinook_Salmon_Oncorhynchus_tshawytscha_Scale_Age_Determination_Procedures/links/55df66d708aede0b572b8de7/Chinook-Salmon-Oncorhynchus-tshawytscha-Scale-Age-Determination-Procedures.pdf"
+ ] .
 
 
 #################################################################
