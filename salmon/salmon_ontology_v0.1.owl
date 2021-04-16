@@ -80,6 +80,10 @@ https://orcid.org/0000-0003-0077-4738""" ;
 <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2002/07/owl#equivalentClass
+owl:equivalentClass rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2002/07/owl#sameAs
 owl:sameAs rdf:type owl:AnnotationProperty .
 
@@ -1613,6 +1617,7 @@ https://www.wikidata.org/wiki/Q165"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-12T23:40:43Z"^^xsd:dateTime ;
                                            rdfs:label "Measurement type"@en ;
+                                           owl:equivalentClass "http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType" ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "A MeasurementType describes the type of a Measurement in which the Measurement would follow the associated Protocol to record the value of the associated Characteristic of the associated Entity using the associated Standard. Any of these associated properties may be omitted, in which case the MeasurementType is only constrained by the provided associations. A MeasurementType is a hypothetical construct, in that it is not associated with a particular instance of a Measurement." ;
                                            <http://www.w3.org/2004/02/skos/core#exactMatch> "http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType" .
 
@@ -1647,11 +1652,8 @@ https://www.wikidata.org/wiki/Q165"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-13T20:15:44Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "A taxonomic concept describes the allowable phenotypic, genomic, or other variation within a taxon by designating type specimens and describing characters explicitly." ;
-                                           rdfs:comment "MAKE THESE CLASSES (SAME WITH COMMON NAME)" ,
-                                                        """[ADDRESS THIS COMMENT, THEN DELETE]
-
-Review/get feedback on taxon concept instances""" ;
-                                           rdfs:label "Taxon concept (?)"@en ;
+                                           rdfs:label "Taxon concept"@en ;
+                                           owl:equivalentClass "http://rs.tdwg.org/dwc/terms/Taxon" ;
                                            <http://www.w3.org/2004/02/skos/core#altLabel> """taxonomic concept 
 taxon""" ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "A reference which is made to a taxon name along with a publication which explains how the author intends for the name to be applied." ;
@@ -1720,7 +1722,27 @@ http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28421""" ;
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00214> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-14T22:18:17Z"^^xsd:dateTime ;
-                                           rdfs:label "Temperature measurement type"@en .
+                                           <http://purl.org/dc/elements/1.1/description> "Temperature is measured with thermometers that may be calibrated to a variety of temperature scales. Most scientists measure temperature using the Celsius scale and thermodynamic temperature using the Kelvin scale, which is the Celsius scale offset so that its null point is 0K = −273.15°C, or absolute zero. The basic unit of temperature in the International System of Units (SI) is the kelvin. It has the symbol K." ;
+                                           rdfs:label "Temperature measurement type"@en ;
+                                           owl:equivalentClass "http://purl.dataone.org/odo/ECSO_00001104" ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """temp
+temperature""" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The degree of hotness or coldness of a body or environment (corresponding to its molecular activity)." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "http://purl.dataone.org/odo/ECSO_00001104" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00217> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "Temperature is measured with thermometers that may be calibrated to a variety of temperature scales. Most scientists measure temperature using the Celsius scale and thermodynamic temperature using the Kelvin scale, which is the Celsius scale offset so that its null point is 0K = −273.15°C, or absolute zero. The basic unit of temperature in the International System of Units (SI) is the kelvin. It has the symbol K." ;
+   <http://purl.org/dc/elements/1.1/source> "http://purl.dataone.org/odo/ECSO_00001104"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00217> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The degree of hotness or coldness of a body or environment (corresponding to its molecular activity)." ;
+   <http://purl.org/dc/elements/1.1/source> "http://purl.dataone.org/odo/ECSO_00001104"
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_00218
@@ -1729,6 +1751,7 @@ http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28421""" ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-14T22:18:45Z"^^xsd:dateTime ;
                                            rdfs:label "Air temperature"@en ;
+                                           owl:equivalentClass "http://purl.dataone.org/odo/ECSO_00001225" ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "Objective comparative measure of hot or cold of air." ;
                                            <http://www.w3.org/2004/02/skos/core#exactMatch> "http://purl.dataone.org/odo/ECSO_00001225" .
 
@@ -1746,6 +1769,7 @@ http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28421""" ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-14T22:18:53Z"^^xsd:dateTime ;
                                            rdfs:label "Stream water temperature"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.dataone.org/odo/ECSO_00001528" ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "Objective comparative measure of hot or cold of stream water temperature." .
 
 [ rdf:type owl:Axiom ;
@@ -1778,6 +1802,7 @@ http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28421""" ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-14T22:33:23Z"^^xsd:dateTime ;
                                            rdfs:label "Precipitation volume"@en ;
+                                           owl:equivalentClass "http://purl.dataone.org/odo/ECSO_00001237" ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "Volume of precipitation, which is any product of the condensation of atmospheric water vapor that falls under gravity." ;
                                            <http://www.w3.org/2004/02/skos/core#exactMatch> "http://purl.dataone.org/odo/ECSO_00001237" .
 
@@ -1982,7 +2007,15 @@ https://www.wikidata.org/wiki/Q63565252"""
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00217> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-15T20:49:21Z"^^xsd:dateTime ;
-                                           rdfs:label "Aquatic temperature"@en .
+                                           rdfs:label "Aquatic temperature"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Objective comparative measure of hot or cold of water temperature in an aquatic environment." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00236> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Objective comparative measure of hot or cold of water temperature in an aquatic environment." ;
+   <http://purl.org/dc/elements/1.1/source> "http://orcid.org/0000-0002-5300-3075"
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_00237
@@ -2008,7 +2041,8 @@ https://www.wikidata.org/wiki/Q63565252"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-16T18:10:30Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161980" ;
-                                           rdfs:label "Chin"@en ;
+                                           rdfs:label "Chinook"@en ;
+                                           owl:equivalentClass <http://purl.dataone.org/odo/salmon_00248> ;
                                            <http://www.w3.org/2004/02/skos/core#altLabel> """Oncorhynchus tshawytscha
 O. tshawytscha 
 \"king salmon\" @en
@@ -2051,7 +2085,8 @@ O. tshawytscha
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-16T18:10:52Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161976" ;
-                                           rdfs:label "Chu"@en ;
+                                           rdfs:label "Chum"@en ;
+                                           owl:equivalentClass <http://purl.dataone.org/odo/salmon_00245> ;
                                            <http://www.w3.org/2004/02/skos/core#altLabel> """Oncorhynchus keta
 O. keta
 \"dog salmon\" @en
@@ -2088,7 +2123,8 @@ O. keta
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-16T18:10:57Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161975" ;
-                                           rdfs:label "Pin"@en ;
+                                           rdfs:label "Pink"@en ;
+                                           owl:equivalentClass <http://purl.dataone.org/odo/salmon_00244> ;
                                            <http://www.w3.org/2004/02/skos/core#altLabel> """Oncorhynchus gorbuscha 
 O. gorbuscha
 \"humpback salmon\" @en
@@ -2123,7 +2159,8 @@ O. gorbuscha
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-16T18:11:02Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161979" ;
-                                           rdfs:label "Sockey"@en ;
+                                           rdfs:label "Sockeye"@en ;
+                                           owl:equivalentClass <http://purl.dataone.org/odo/salmon_00247> ;
                                            <http://www.w3.org/2004/02/skos/core#altLabel> """Oncorhynchus nerka
 O. nerka
 \"red salmon\" @en
@@ -2155,7 +2192,8 @@ O. nerka
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-16T18:11:22Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161977" ;
-                                           rdfs:label "Coh"@en ;
+                                           rdfs:label "Coho"@en ;
+                                           owl:equivalentClass <http://purl.dataone.org/odo/salmon_00246> ;
                                            <http://www.w3.org/2004/02/skos/core#altLabel> """Oncorhynchus kisutch
 O. kisutch
 \"silver salmon\" @en
@@ -2178,6 +2216,125 @@ O. kisutch
    owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
    owl:annotatedTarget "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161977" ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161977#null"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00244
+<http://purl.dataone.org/odo/salmon_00244> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00208> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-16T18:24:43Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/source> """https://www.gbif.org/species/5204037 
+http://www.fishbase.org/summary/240 
+https://eol.org/pages/46563135/names""" ;
+                                           <http://rs.tdwg.org/dwc/terms/originalNameUsage> "Salmo gorbuscha (Walbaum, 1792)" ;
+                                           <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/salmon_00241> ;
+                                           rdfs:label "Oncorhynchus gorbuscha (Walbaum, 1792)"@en ;
+                                           owl:equivalentClass <http://purl.dataone.org/odo/salmon_00241> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00244> ;
+   owl:annotatedProperty <http://rs.tdwg.org/dwc/terms/originalNameUsage> ;
+   owl:annotatedTarget "Salmo gorbuscha (Walbaum, 1792)" ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.gbif.org/species/5204037"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00245
+<http://purl.dataone.org/odo/salmon_00245> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00208> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-16T18:25:00Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/source> """https://www.gbif.org/species/5204014 
+http://www.fishbase.org/summary/241
+https://eol.org/pages/46563136/names""" ;
+                                           <http://rs.tdwg.org/dwc/terms/originalNameUsage> "Salmo keta (Walbaum, 1792)" ;
+                                           <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/salmon_00240> ;
+                                           rdfs:label "Oncorhynchus keta (Walbaum, 1792)"@en ;
+                                           owl:equivalentClass <http://purl.dataone.org/odo/salmon_00240> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00245> ;
+   owl:annotatedProperty <http://rs.tdwg.org/dwc/terms/originalNameUsage> ;
+   owl:annotatedTarget "Salmo keta (Walbaum, 1792)" ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.gbif.org/species/5204014"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00246
+<http://purl.dataone.org/odo/salmon_00246> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00208> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-16T18:25:15Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/source> """https://www.gbif.org/species/5204034 
+http://www.fishbase.org/summary/245 
+https://eol.org/pages/46563137/names""" ;
+                                           <http://rs.tdwg.org/dwc/terms/originalNameUsage> "Salmo kisutch (Walbaum, 1792)" ;
+                                           <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/salmon_00243> ;
+                                           rdfs:label "Oncorhynchus kisutch (Walbaum, 1792)"@en ;
+                                           owl:equivalentClass <http://purl.dataone.org/odo/salmon_00243> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00246> ;
+   owl:annotatedProperty <http://rs.tdwg.org/dwc/terms/originalNameUsage> ;
+   owl:annotatedTarget "Salmo kisutch (Walbaum, 1792)" ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.gbif.org/species/5204034"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00247
+<http://purl.dataone.org/odo/salmon_00247> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00208> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-16T18:25:28Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/source> """https://www.gbif.org/species/5204039 
+http://www.fishbase.de/summary/243""" ;
+                                           <http://rs.tdwg.org/dwc/terms/originalNameUsage> "Salmo nerka (Walbaum, 1792)" ;
+                                           <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/salmon_00242> ;
+                                           rdfs:label "Oncorhynchus nerka (Walbaum, 1792)"@en ;
+                                           owl:equivalentClass <http://purl.dataone.org/odo/salmon_00242> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00247> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/source> ;
+   owl:annotatedTarget """https://www.gbif.org/species/5204039 
+http://www.fishbase.de/summary/243""" ;
+   rdfs:comment "Encyclopedia of Life (eol) webpage for Sockeye salmon returns Internal server error - 500"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00247> ;
+   owl:annotatedProperty <http://rs.tdwg.org/dwc/terms/originalNameUsage> ;
+   owl:annotatedTarget "Salmo nerka (Walbaum, 1792)" ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.gbif.org/species/5204039"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00248
+<http://purl.dataone.org/odo/salmon_00248> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00208> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-16T18:29:06Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/source> """https://www.gbif.org/species/5204024 
+http://www.fishbase.org/summary/244""" ;
+                                           <http://rs.tdwg.org/dwc/terms/originalNameUsage> "Salmo tshawytscha (Walbaum, 1792)" ;
+                                           <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/salmon_00239> ;
+                                           rdfs:label "Oncorhynchus tshawytscha (Walbaum, 1792)"@en ;
+                                           owl:equivalentClass <http://purl.dataone.org/odo/salmon_00239> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00248> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/source> ;
+   owl:annotatedTarget """https://www.gbif.org/species/5204024 
+http://www.fishbase.org/summary/244""" ;
+   rdfs:comment "Encyclopedia of Life (eol) webpage for Chinook salmon returns Internal server error - 500"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00248> ;
+   owl:annotatedProperty <http://rs.tdwg.org/dwc/terms/originalNameUsage> ;
+   owl:annotatedTarget "Salmo tshawytscha (Walbaum, 1792)" ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.gbif.org/species/5204024"
  ] .
 
 
@@ -2663,185 +2820,6 @@ East: -129.1775 degrees
 West: -166.281 degrees""" ;
    <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#yukon 
 https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
- ] .
-
-
-###  http://purl.dataone.org/odo/salmon_00018
-<http://purl.dataone.org/odo/salmon_00018> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00016> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T16:43:05Z"^^xsd:dateTime ;
-                                           rdfs:label "Sockeye"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#altLabel> """Oncorhynchus nerka
-O. nerka
-\"red salmon\" @en
-\"kokanee salmon\" @en
-\"blueback salmon\" @en
-\"Cayak\" @ypk 
-\"Sayak\" @ypk
-\"Niklliq\" [Alutiiq/Sugpiaq]
-\"Nulaeggi\" [Ahtna]
-\"Sesluugge\"' [Ahtna]
-\"Natael luugge'\" [Ahtna]
-\"k'q'uya\" [Kenai Dena'ina]
-\"tahi'id\" @eyk
-\"cha'ch\" @eyk
-\"Misoo\" @tsi @tli 
-\"g̲aat\" @tsi @tli""" ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161979" .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00018> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161979" ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161979#null"
- ] .
-
-
-###  http://purl.dataone.org/odo/salmon_00019
-<http://purl.dataone.org/odo/salmon_00019> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00016> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T16:43:09Z"^^xsd:dateTime ;
-                                           rdfs:label "Chinook"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#altLabel> """Oncorhynchus tshawytscha
-O. tshawytscha 
-\"king salmon\" @en
-\"Quinnat salmon\" @en
-\"spring salmon\" @en
-\"chrome hog\" @en
-\"Blackmouth\" @en
-\"Tyee salmon\" @en
-\"Sikayujak\" @ipk
-\"Ggaal\" [Denaakk'e, Koyukon Athabaskan]
-\"Gath\" [Benhti Kenaga, Lower Tanana]
-\"Luk Choo\" @gwi
-\"Kiagtaq\" @ypk
-\"Taryaqvak\" @ypk
-\"Aciirturtet\" @ypk
-\"sumgax̂\" @ale [Unangam tunuu variant]
-\"chaguchax̂\" @ale [Unangam tunuu variant])
-\"chavichax̂\" @ale [Unangam tunuu variant]
-\"Aamasuuk\" [Alutiiq/Sugpiaq]
-\"Liliksak\" [Alutiiq/Sugpiaq]
-\"Luk'ece'e\"  [Ahtna]
-\"Kentsinai'i\" [Ahtna]
-\"luq'aka'a\" [Kenai Dena'ina]
-\"nudlaghi\" [Kenai Dena'ina]
-\"te'ya'lee\" @eya
-\"Yee\" @tsi @tli 
-\"t'á\" @tsi @tli""" ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161980" .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00019> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161980" ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161980#null"
- ] .
-
-
-###  http://purl.dataone.org/odo/salmon_00020
-<http://purl.dataone.org/odo/salmon_00020> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00016> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T16:43:12Z"^^xsd:dateTime ;
-                                           rdfs:label "Coho"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#altLabel> """Oncorhynchus kisutch
-O. kisutch
-\"silver salmon\" @en
-\"silvers\" @en
-\"Saanlaaghe\" [Denaakk'e, Koyukon Athabaskan]
-\"Khwyhts'en'\" [Benhti Kenaga, Lower Tanana]
-\"Shii\" @gwi 
-\"Caayuryaq\" @ypk 
-\"Qakiiyaq\" @ypk 
-\"Qavlunaq\" @ypk 
-\"Uqurliq\" @ypk 
-\"Qakiidax̂: @ale [Unangam tunuu variant]
-\"Qakiiyaq\" [Alutiiq/Sugpiaq]
-\"ta'ay\" @eyk
-\"ÜÜx\" @tsi @tli
-\"L'ook\" @tsi @tli""" ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161977" .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00020> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161977" ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161977#null"
- ] .
-
-
-###  http://purl.dataone.org/odo/salmon_00021
-<http://purl.dataone.org/odo/salmon_00021> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00016> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T16:43:16Z"^^xsd:dateTime ;
-                                           rdfs:label "Chum"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#altLabel> """Oncorhynchus keta
-O. keta
-\"dog salmon\" @en
-\"keta salmon\" @en
-\"silverbrite salmon\" @en
-\"Iqalugruaq\" @ipk
-\"Aqalugruaq\" @ipk
-\"Noolaaghe\" [Denaakk'e, Koyukon Athabaskan]
-\"Nahdlii\" @gwi
-\"Shii\" @gwi
-\"Aluyak\" @ypk
-\"Iqalluk\" @ypk
-\"Kangitneq\" @ypk
-\"Mac'utaq\" @ypk
-\"Teggmaarrluk\" @ypk [Unangam tunuu variant]
-\"x̂aykix̂\" @ale
-\"Alimaq\" [Alutiiq/Sugpiaq]
-\"alima\" [Kenai Dena'ina] 
-\"tiitl'\" @eya 
-\"Gaynii\"@tsi @tli 
-\"téel'\" @tsi @tli""" ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161976" .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00021> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161976" ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161976#null"
- ] .
-
-
-###  http://purl.dataone.org/odo/salmon_00022
-<http://purl.dataone.org/odo/salmon_00022> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00016> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T16:43:19Z"^^xsd:dateTime ;
-                                           rdfs:label "Pink"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#altLabel> """Oncorhynchus gorbuscha 
-O. gorbuscha
-\"humpback salmon\" @en
-\"humpbacked salmon\" @en
-\"Amaqtuq\" @ipk
-\"Amaqaayak\" @ypk
-\"Amaqsuq\" @ypk
-\"Cuqpeq\" @ypk
-\"Terteq\" @ypk
-\"Qungaayux\" @ale [Unangam tunuu variant]
-\"Amartuq\" [Alutiiq/Sugpiaq]
-\"Amaqaayak\" [Alutiiq/Sugpiaq] 
-\"Dak'aay\" [Ahtna]
-\"Dak'aagi\" [Ahtna]
-\"qughuna\" [Kenai Dena'ina]
-\"giyah sdilahL\" @eyk
-\"kaashk'\" @eyk
-\"Sti'moon\" @tsi @tli 
-\"Cháas'\" @tsi @tli""" ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161975" .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00022> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161975" ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161975#null"
  ] .
 
 
@@ -3925,121 +3903,6 @@ SASAP Project""" ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A historical GIS project to create and freely disseminate a database incorporating all available aggregate census information for the United States between 1790 and 2010." ;
    <http://purl.org/dc/elements/1.1/source> "https://en.wikipedia.org/wiki/National_Historical_Geographic_Information_System"
- ] .
-
-
-###  http://purl.dataone.org/odo/salmon_00209
-<http://purl.dataone.org/odo/salmon_00209> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00208> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-04-13T20:33:17Z"^^xsd:dateTime ;
-                                           <http://purl.org/dc/elements/1.1/source> """https://www.gbif.org/species/5204039 
-http://www.fishbase.de/summary/243""" ;
-                                           <http://rs.tdwg.org/dwc/terms/originalNameUsage> "Salmo nerka (Walbaum, 1792)" ;
-                                           <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/salmon_00018> ;
-                                           rdfs:label "Oncorhynchus nerka (Walbaum, 1792)"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00209> ;
-   owl:annotatedProperty <http://purl.org/dc/elements/1.1/source> ;
-   owl:annotatedTarget """https://www.gbif.org/species/5204039 
-http://www.fishbase.de/summary/243""" ;
-   rdfs:comment "Encyclopedia of Life (eol) webpage for Sockeye salmon returns Internal server error - 500"
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00209> ;
-   owl:annotatedProperty <http://rs.tdwg.org/dwc/terms/originalNameUsage> ;
-   owl:annotatedTarget "Salmo nerka (Walbaum, 1792)" ;
-   <http://purl.org/dc/elements/1.1/source> "https://www.gbif.org/species/5204039"
- ] .
-
-
-###  http://purl.dataone.org/odo/salmon_00210
-<http://purl.dataone.org/odo/salmon_00210> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00208> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-04-13T20:49:31Z"^^xsd:dateTime ;
-                                           <http://purl.org/dc/elements/1.1/source> """https://www.gbif.org/species/5204024 
-http://www.fishbase.org/summary/244""" ;
-                                           <http://rs.tdwg.org/dwc/terms/originalNameUsage> "Salmo tshawytscha (Walbaum, 1792)" ;
-                                           <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/salmon_00019> ;
-                                           rdfs:label "Oncorhynchus tshawytscha (Walbaum, 1792)"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00210> ;
-   owl:annotatedProperty <http://purl.org/dc/elements/1.1/source> ;
-   owl:annotatedTarget """https://www.gbif.org/species/5204024 
-http://www.fishbase.org/summary/244""" ;
-   rdfs:comment "Encyclopedia of Life (eol) webpage for Chinook salmon returns Internal server error - 500"
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00210> ;
-   owl:annotatedProperty <http://rs.tdwg.org/dwc/terms/originalNameUsage> ;
-   owl:annotatedTarget "Salmo tshawytscha (Walbaum, 1792)" ;
-   <http://purl.org/dc/elements/1.1/source> "https://www.gbif.org/species/5204024"
- ] .
-
-
-###  http://purl.dataone.org/odo/salmon_00211
-<http://purl.dataone.org/odo/salmon_00211> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00208> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-04-13T20:49:43Z"^^xsd:dateTime ;
-                                           <http://purl.org/dc/elements/1.1/source> """https://www.gbif.org/species/5204014 
-http://www.fishbase.org/summary/241
-https://eol.org/pages/46563136/names""" ;
-                                           <http://rs.tdwg.org/dwc/terms/originalNameUsage> "Salmo keta (Walbaum, 1792)" ;
-                                           <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/salmon_00021> ;
-                                           rdfs:label "Oncorhynchus keta (Walbaum, 1792)"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00211> ;
-   owl:annotatedProperty <http://rs.tdwg.org/dwc/terms/originalNameUsage> ;
-   owl:annotatedTarget "Salmo keta (Walbaum, 1792)" ;
-   <http://purl.org/dc/elements/1.1/source> "https://www.gbif.org/species/5204014"
- ] .
-
-
-###  http://purl.dataone.org/odo/salmon_00212
-<http://purl.dataone.org/odo/salmon_00212> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00208> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-04-13T20:49:56Z"^^xsd:dateTime ;
-                                           <http://purl.org/dc/elements/1.1/source> """https://www.gbif.org/species/5204034 
-http://www.fishbase.org/summary/245 
-https://eol.org/pages/46563137/names""" ;
-                                           <http://rs.tdwg.org/dwc/terms/originalNameUsage> "Salmo kisutch (Walbaum, 1792)" ;
-                                           <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/salmon_00020> ;
-                                           rdfs:label "Oncorhynchus kisutch (Walbaum, 1792)"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00212> ;
-   owl:annotatedProperty <http://rs.tdwg.org/dwc/terms/originalNameUsage> ;
-   owl:annotatedTarget "Salmo kisutch (Walbaum, 1792)" ;
-   <http://purl.org/dc/elements/1.1/source> "https://www.gbif.org/species/5204034"
- ] .
-
-
-###  http://purl.dataone.org/odo/salmon_00213
-<http://purl.dataone.org/odo/salmon_00213> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00208> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-04-13T20:50:06Z"^^xsd:dateTime ;
-                                           <http://purl.org/dc/elements/1.1/source> """https://www.gbif.org/species/5204037 
-http://www.fishbase.org/summary/240 
-https://eol.org/pages/46563135/names""" ;
-                                           <http://rs.tdwg.org/dwc/terms/originalNameUsage> "Salmo gorbuscha (Walbaum, 1792)" ;
-                                           <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/salmon_00022> ;
-                                           rdfs:label "Oncorhynchus gorbuscha (Walbaum, 1792)"@en ;
-                                           owl:sameAs <http://purl.dataone.org/odo/salmon_00022> .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00213> ;
-   owl:annotatedProperty <http://rs.tdwg.org/dwc/terms/originalNameUsage> ;
-   owl:annotatedTarget "Salmo gorbuscha (Walbaum, 1792)" ;
-   <http://purl.org/dc/elements/1.1/source> "https://www.gbif.org/species/5204037"
  ] .
 
 
