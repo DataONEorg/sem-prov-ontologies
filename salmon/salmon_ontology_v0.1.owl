@@ -7,6 +7,8 @@
 @base <http://www.semanticweb.org/samanthacsik/ontologies/2021/2/salmon> .
 
 <http://www.semanticweb.org/samanthacsik/ontologies/2021/2/salmon> rdf:type owl:Ontology ;
+                                                                    owl:versionIRI <http://www.semanticweb.org/samanthacsik/ontologies/2021/2/salmon/0.1> ;
+                                                                    <http://purl.org/dc/elements/1.1/date> "2021-04-12T11:02:10-07:00"^^xsd:dateTimeStamp ;
                                                                     <http://purl.org/dc/elements/1.1/description> "An ontology which represents knowledge about salmon, features of their habitats, salmon stakeholders, and related entities." ;
                                                                     <http://purl.org/dc/terms/creator> """https://orcid.org/0000-0002-5300-3075 
 https://orcid.org/0000-0002-0381-3766 
@@ -48,6 +50,14 @@ https://orcid.org/0000-0003-0077-4738""" ;
 
 ###  http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://rs.tdwg.org/dwc/terms/originalNameUsage
+<http://rs.tdwg.org/dwc/terms/originalNameUsage> rdf:type owl:AnnotationProperty .
+
+
+###  http://rs.tdwg.org/dwc/terms/vernacularName
+<http://rs.tdwg.org/dwc/terms/vernacularName> rdf:type owl:AnnotationProperty .
 
 
 ###  http://usefulinc.com/ns/doap#GitRepository
@@ -102,10 +112,18 @@ owl:sameAs rdf:type owl:AnnotationProperty .
 <http://purl.dataone.org/odo/salmon_00066> rdf:type owl:ObjectProperty ;
                                            owl:inverseOf <http://purl.dataone.org/odo/salmon_00069> ;
                                            rdfs:domain <http://purl.dataone.org/odo/salmon_00064> ;
+                                           rdfs:range <http://purl.dataone.org/odo/salmon_00098> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T19:00:26Z"^^xsd:dateTime ;
                                            rdfs:label "affiliateOf"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "https://schema.org/affiliation" .
+                                           <http://www.w3.org/2004/02/skos/core#closeMatch> "https://schema.org/affiliation" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00066> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#closeMatch> ;
+   owl:annotatedTarget "https://schema.org/affiliation" ;
+   rdfs:comment "Using skos:closeMatch rather than skos:exactMatch because schema.org does not provide an inverse property to https://schema.org/affiliation. We define the inverse of 'affiliateOf' as 'hasAffiliate'."
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_00067
@@ -114,11 +132,12 @@ owl:sameAs rdf:type owl:AnnotationProperty .
                                            rdfs:domain <http://purl.dataone.org/odo/salmon_00064> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T19:00:44Z"^^xsd:dateTime ;
-                                           rdfs:label "memberOf"@en .
+                                           rdfs:label "participantOf"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_00069
 <http://purl.dataone.org/odo/salmon_00069> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://purl.dataone.org/odo/salmon_00098> ;
                                            rdfs:range <http://purl.dataone.org/odo/salmon_00064> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T19:11:36Z"^^xsd:dateTime ;
@@ -129,16 +148,7 @@ owl:sameAs rdf:type owl:AnnotationProperty .
 <http://purl.dataone.org/odo/salmon_00071> rdf:type owl:ObjectProperty ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T19:45:52Z"^^xsd:dateTime ;
-                                           rdfs:label "hasMember"@en .
-
-
-###  http://purl.dataone.org/odo/salmon_00119
-<http://purl.dataone.org/odo/salmon_00119> rdf:type owl:ObjectProperty ;
-                                           owl:inverseOf <http://purl.dataone.org/odo/salmon_00120> ;
-                                           rdfs:range <http://purl.dataone.org/odo/salmon_00101> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-03-30T18:33:02Z"^^xsd:dateTime ;
-                                           rdfs:label "providedDataTo"@en .
+                                           rdfs:label "hasParticipant"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_00120
@@ -176,16 +186,26 @@ The bounding cooridnates and shapefiles for each region are accessible at: https
 
 ###  http://purl.dataone.org/odo/salmon_00016
 <http://purl.dataone.org/odo/salmon_00016> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00215> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-24T22:09:33Z"^^xsd:dateTime ;
-                                           rdfs:label "Salmon common name and biological taxon"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#altLabel> "Species" .
+                                           rdfs:label "Common name"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "Species" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The name based on the normal language of everyday life." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00016> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
    owl:annotatedTarget "Species" ;
    rdfs:comment "Populates the SASAP Data Portal (https://knb.ecoinformatics.org/portals/SASAP/Data) faceted search field, 'Species'"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00016> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The name based on the normal language of everyday life." ;
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Common_name 
+https://www.wikidata.org/wiki/Q502895"""
  ] .
 
 
@@ -196,7 +216,8 @@ The bounding cooridnates and shapefiles for each region are accessible at: https
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:01:09Z"^^xsd:dateTime ;
                                            rdfs:label "State government department or agency"@en ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "A permanent or semi-permanent state govenrment organization which is responsible for the oversight and administration of specific functions." ;
-                                           <http://www.w3.org/2004/02/skos/core#relatedMatch> "http://purl.bioontology.org/ontology/MESH/D013219" .
+                                           <http://www.w3.org/2004/02/skos/core#relatedMatch> """http://purl.bioontology.org/ontology/MESH/D013219 
+http://vivoweb.org/ontology/core#GovernmentAgency""" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00024> ;
@@ -214,7 +235,8 @@ https://www.wikidata.org/wiki/Q327333"""
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:01:18Z"^^xsd:dateTime ;
                                            rdfs:label "Federal government department or agency"@en ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "A permanent or semi-permanent federal govenrment organization which is responsible for the oversight and administration of specific functions." ;
-                                           <http://www.w3.org/2004/02/skos/core#relatedMatch> "http://purl.bioontology.org/ontology/MESH/D035082" .
+                                           <http://www.w3.org/2004/02/skos/core#relatedMatch> """http://purl.bioontology.org/ontology/MESH/D035082 
+http://vivoweb.org/ontology/core#GovernmentAgency""" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00025> ;
@@ -246,6 +268,13 @@ Not for profit organization""" ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "An organization whose primary objective is to support some issue or matter of private interest or public concern for non-commercial purposes. Nonprofits generally do not operate to generate profit, and this characteristic is popularly considered to be the defining characterisitic of such organizations. However, a non-profit organization may accept, hold and disburse money and other things of value. It may also legally and ethically trade at a profit. The extent to which it can generate income may be constrained, or the use of those profits may be restricted." ;
    <http://purl.org/dc/elements/1.1/source> "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54073"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00026> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#exactMatch> ;
+   owl:annotatedTarget "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54073" ;
+   rdfs:comment "This URI does not appear to dereference to the term. Including this URL, https://bioportal.bioontology.org/ontologies/NCIT?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C54073, to ensure findability."
  ] .
 
 
@@ -331,7 +360,15 @@ An additional five working groups were selected to focus on specific research qu
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T17:33:25Z"^^xsd:dateTime ;
                                            rdfs:label "Data corpus"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A collection of datasets." ;
                                            <http://www.w3.org/2004/02/skos/core#relatedMatch> "https://schema.org/Collection" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00101> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A collection of datasets." ;
+   <http://purl.org/dc/elements/1.1/source> "http://orcid.org/0000-0002-5300-3075"
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_00121
@@ -339,7 +376,15 @@ An additional five working groups were selected to focus on specific research qu
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-30T20:31:09Z"^^xsd:dateTime ;
                                            rdfs:label "Project"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim." ;
                                            <http://www.w3.org/2004/02/skos/core#exactMatch> "https://schema.org/Project" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00121> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim." ;
+   <http://purl.org/dc/elements/1.1/source> "https://schema.org/Project"
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_00124
@@ -351,11 +396,32 @@ An additional five working groups were selected to focus on specific research qu
 
 ###  http://purl.dataone.org/odo/salmon_00125
 <http://purl.dataone.org/odo/salmon_00125> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00124> ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00202> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-30T20:59:53Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "The term body of water most often refers to large accumulations of water, such as oceans, seas, and lakes, but it includes smaller pools of water such as ponds, wetlands, or more rarely, puddles. A body of water does not have to be still or contained; Rivers, streams, canals, and other geographical features where water moves from one place to another are also considered bodies of water." ;
                                            rdfs:label "Water body"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """waterbody 
+body of water 
+bodies of water 
+aquatic feature""" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "An accumulation of water of varying size." ;
                                            <http://www.w3.org/2004/02/skos/core#exactMatch> "http://purl.obolibrary.org/obo/ENVO_00000063" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00125> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "The term body of water most often refers to large accumulations of water, such as oceans, seas, and lakes, but it includes smaller pools of water such as ponds, wetlands, or more rarely, puddles. A body of water does not have to be still or contained; Rivers, streams, canals, and other geographical features where water moves from one place to another are also considered bodies of water." ;
+   <http://purl.org/dc/elements/1.1/source> "https://en.wikipedia.org/wiki/Body_of_water"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00125> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "An accumulation of water of varying size." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Body_of_water 
+https://www.wikidata.org/wiki/Q15324"""
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_00126
@@ -372,14 +438,14 @@ An additional five working groups were selected to focus on specific research qu
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-31T17:43:39Z"^^xsd:dateTime ;
                                            rdfs:label "Fish length measurement type"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "[EDIT THIS] A protocol which is used to measure the length of a fish." .
+                                           <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.dataone.org/odo/ECSO_00000553" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A numerical value which represents the length of a fish, typically in units of millimeters, centimeters, or inches." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00127> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "[EDIT THIS] A protocol which is used to measure the length of a fish." ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Fish_measurement 
-https://www.wikidata.org/wiki/Q1847935"""
+   owl:annotatedTarget "A numerical value which represents the length of a fish, typically in units of millimeters, centimeters, or inches." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://purl.dataone.org/odo/ECSO_00000553"
  ] .
 
 
@@ -614,11 +680,24 @@ Fletcher, W.J., Chesson, J. Fisher, M., Sainsbury K.J., Hundloe, T. Smith A.D.M.
 
 ###  http://purl.dataone.org/odo/salmon_00142
 <http://purl.dataone.org/odo/salmon_00142> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00182> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:00:22Z"^^xsd:dateTime ;
-                                           <http://purl.org/dc/elements/1.1/description> "Methods which are used to physically collect fish specimens." ;
-                                           rdfs:label "Fish collection method"@en .
+                                           <http://purl.org/dc/elements/1.1/description> "Equipment which is used to harvest aquatic resources, and in particular fish(es)." ;
+                                           rdfs:comment """[ADDRESS THIS COMMENT, THEN DELETE]
+
+NOTE: was called 'Fish collection method'
+
+1. Could use some input on subclass hierarchy. E.g. 'Hand collection' includes methods which are largely done with tools that can be operated by hand. 'Netting' includes things like gillnets and seines, which, while largely set from fishing vessels (particularly in commercial fisheries), can also be set by hand at smaller scales.
+
+2. update subclass labels + definitions to better suit the new 'Fishing gear type' superclass""" ;
+                                           rdfs:label "Fishing gear type"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00142> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "Equipment which is used to harvest aquatic resources, and in particular fish(es)." ;
+   <http://purl.org/dc/elements/1.1/source> "http://orcid.org/0000-0002-5300-3075"
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_00144
@@ -700,12 +779,12 @@ https://www.wikidata.org/wiki/Q765706"""
 fishing weir 
 fishgarth 
 kiddle""" ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "An obstruction placed in tidal waters, or wholly or partially across a river, to direct the passage of, or trap fish." .
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A method of fishing which invovles an obstruction placed in tidal waters, or wholly or partially across a river, to direct the passage of, or trap fish." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00148> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "An obstruction placed in tidal waters, or wholly or partially across a river, to direct the passage of, or trap fish." ;
+   owl:annotatedTarget "A method of fishing which invovles an obstruction placed in tidal waters, or wholly or partially across a river, to direct the passage of, or trap fish." ;
    <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Fishing_weir 
 https://www.wikidata.org/wiki/Q1417573"""
  ] .
@@ -718,12 +797,12 @@ https://www.wikidata.org/wiki/Q1417573"""
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:01:50Z"^^xsd:dateTime ;
                                            rdfs:label "Pot"@en ;
                                            <http://www.w3.org/2004/02/skos/core#altLabel> "trap" ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A submerged three-dimensional wire or wood device which are commonly baited and permit organisms to enter the enclosure, but make escape extremely difficult or impossible." .
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A method of fishing that involves submerging a three-dimensional wire or wood device which is commonly baited and permits organisms to enter the enclosure, but makes escape extremely difficult or impossible." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00150> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "A submerged three-dimensional wire or wood device which are commonly baited and permit organisms to enter the enclosure, but make escape extremely difficult or impossible." ;
+   owl:annotatedTarget "A method of fishing that involves submerging a three-dimensional wire or wood device which is commonly baited and permits organisms to enter the enclosure, but makes escape extremely difficult or impossible." ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.fisheries.noaa.gov/national/bycatch/fishing-gear-traps-and-pots"
  ] .
 
@@ -768,7 +847,15 @@ https://www.wikidata.org/wiki/Q640082"""
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00164> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:02:25Z"^^xsd:dateTime ;
-                                           rdfs:label "Handpicked or carcass collection"@en .
+                                           rdfs:label "Handpicked or carcass collection"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A method of fishing which involves gathering live or deceased fishes by hand." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00154> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A method of fishing which involves gathering live or deceased fishes by hand." ;
+   <http://purl.org/dc/elements/1.1/source> "http://orcid.org/0000-0002-5300-3075"
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_00155
@@ -793,12 +880,12 @@ https://www.wikidata.org/wiki/Q640082"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:02:33Z"^^xsd:dateTime ;
                                            rdfs:label "Gig"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A multi-pronged spear, typically ranging in length from 8 to 14 feet, used to spear (or \"gig\") fishes for harvest." .
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A method of fishing which uses a multi-pronged spear, typically ranging in length from 8 to 14 feet, to spear (or \"gig\") fishes for harvest." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00156> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "A multi-pronged spear, typically ranging in length from 8 to 14 feet, used to spear (or \"gig\") fishes for harvest." ;
+   owl:annotatedTarget "A method of fishing which uses a multi-pronged spear, typically ranging in length from 8 to 14 feet, to spear (or \"gig\") fishes for harvest." ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Gigging 
 https://www.wikidata.org/wiki/Q4412590"""
  ] .
@@ -832,7 +919,8 @@ https://www.wikidata.org/wiki/Q4412590"""
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00158> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A purse seine is a large wall of netting deployed around an entire area or school of fish. The seine has floats along the top line with a lead line threaded through rings along the bottom. Once a school of fish is located, a skiff encircles the school with the net. The lead line is then pulled in, \"pursing\" the net closed on the bottom, preventing fish from escaping by swimming downward. The catch is harvested by either hauling the net aboard or bringing it alongside the vessel." ;
-   <http://purl.org/dc/elements/1.1/source> "https://www.fisheries.noaa.gov/national/bycatch/fishing-gear-purse-seines"
+   <http://purl.org/dc/elements/1.1/source> "https://www.fisheries.noaa.gov/national/bycatch/fishing-gear-purse-seines" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://vocab.nerc.ac.uk/collection/M13/current/015/"
  ] .
 
 
@@ -859,12 +947,12 @@ https://www.wikidata.org/wiki/Q1249133"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:31:54Z"^^xsd:dateTime ;
                                            rdfs:label "Gillnet"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A wall of netting that hangs in the water column, typically made of monofilament or multifilament nylon. Mesh sizes are designed to allow fish to get only their head through the netting but not their body. The fish's gills then get caught in the mesh as the fish tries to back out of the net. As the fish struggles to free itself, it becomes more and more entangled." .
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A method of fishing which involves using wall of netting that hangs in the water column, typically made of monofilament or multifilament nylon. Mesh sizes are designed to allow fish to get only their head through the netting but not their body. The fish's gills then get caught in the mesh as the fish tries to back out of the net. As the fish struggles to free itself, it becomes more and more entangled." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00160> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "A wall of netting that hangs in the water column, typically made of monofilament or multifilament nylon. Mesh sizes are designed to allow fish to get only their head through the netting but not their body. The fish's gills then get caught in the mesh as the fish tries to back out of the net. As the fish struggles to free itself, it becomes more and more entangled." ;
+   owl:annotatedTarget "A method of fishing which involves using wall of netting that hangs in the water column, typically made of monofilament or multifilament nylon. Mesh sizes are designed to allow fish to get only their head through the netting but not their body. The fish's gills then get caught in the mesh as the fish tries to back out of the net. As the fish struggles to free itself, it becomes more and more entangled." ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.fisheries.noaa.gov/national/bycatch/fishing-gear-gillnets"
  ] .
 
@@ -904,10 +992,18 @@ https://www.wikidata.org/wiki/Q600580"""
 
 ###  http://purl.dataone.org/odo/salmon_00167
 <http://purl.dataone.org/odo/salmon_00167> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00206> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-01T21:37:39Z"^^xsd:dateTime ;
-                                           rdfs:comment "TEMPORARY NOTE: I see a couple options for how to organize 'measurement types' -- we could sort by fish measurements vs environmental measurements etc. (i.e. what I've started to do here) OR we could follow a similar pattern to ECSO. I'm not sure which the better route is just yet..." ;
-                                           rdfs:label "Fish measurement type"@en .
+                                           rdfs:label "Fish measurement type"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A measurement type which pertains to some aspect of a fish or fishes." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00167> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A measurement type which pertains to some aspect of a fish or fishes." ;
+   <http://purl.org/dc/elements/1.1/source> "http://orcid.org/0000-0002-5300-3075"
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_00169
@@ -994,15 +1090,15 @@ https://www.wikidata.org/wiki/Q15615109"""
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00098> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-02T20:22:02Z"^^xsd:dateTime ;
-                                           rdfs:label "Academic organization"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A lawfully recognized organization that confers diplomas, degrees and other forms of recognition of academic achievement." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "http://semanticscience.org/resource/SIO_000285" .
+                                           rdfs:label "University"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "An institution of higher education and research, which grants academic degrees in a variety of subjects, and provides both undergraduate education and postgraduate education." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "http://vivoweb.org/ontology/core#University" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00174> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "A lawfully recognized organization that confers diplomas, degrees and other forms of recognition of academic achievement." ;
-   <http://purl.org/dc/elements/1.1/source> "http://semanticscience.org/resource/SIO_000285"
+   owl:annotatedTarget "An institution of higher education and research, which grants academic degrees in a variety of subjects, and provides both undergraduate education and postgraduate education." ;
+   <http://purl.org/dc/elements/1.1/source> "http://vivoweb.org/ontology/core#University"
  ] .
 
 
@@ -1049,9 +1145,10 @@ Many, but not all, personal use fisheries require a permit issued by the Departm
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-02T22:18:14Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "In Alaska, the aquatic farming industry primarily produces Pacific oysters, littleneck clams, and mussels for commercial food production." ;
-                                           rdfs:label "Aquatic farming"@en ;
+                                           rdfs:label "Aquatic farming (?)"@en ;
                                            <http://www.w3.org/2004/02/skos/core#altLabel> """Aquaculture
 Aquafarming""" ;
+                                           <http://www.w3.org/2004/02/skos/core#closeMatch> "http://vocab.nerc.ac.uk/collection/M13/current/018/" ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "The culturing of fish, shellfish, aquatic plants, and/or other organisms in captivity or under controlled conditions in the near shore environment." .
 
 [ rdf:type owl:Axiom ;
@@ -1066,7 +1163,8 @@ Aquafarming""" ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "The culturing of fish, shellfish, aquatic plants, and/or other organisms in captivity or under controlled conditions in the near shore environment." ;
    <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Aquaculture 
-https://www.wikidata.org/wiki/Q188989"""
+https://www.wikidata.org/wiki/Q188989""" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://vocab.nerc.ac.uk/collection/M13/current/018/"
  ] .
 
 
@@ -1076,7 +1174,8 @@ https://www.wikidata.org/wiki/Q188989"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-05T19:57:33Z"^^xsd:dateTime ;
                                            rdfs:label "Independent research institute"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A research institute which is not part of a university, government, hospital or corporation. An independent research institute may have a close relationship with a larger institution such as a university, but is not part of the larger insitution and operates under its own authority." .
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A research institute which is not part of a university, government, hospital or corporation. An independent research institute may have a close relationship with a larger institution such as a university, but is not part of the larger insitution and operates under its own authority." ;
+                                           <http://www.w3.org/2004/02/skos/core#relatedMatch> "http://vivoweb.org/ontology/core#ResearchOrganization" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00178> ;
@@ -1105,9 +1204,18 @@ https://www.wikidata.org/wiki/Q1752459"""
 
 ###  http://purl.dataone.org/odo/salmon_00182
 <http://purl.dataone.org/odo/salmon_00182> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00205> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-05T21:55:12Z"^^xsd:dateTime ;
-                                           rdfs:label "Data collection method"@en .
+                                           rdfs:label "Fish measurement method"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The manner, procedure or technique by which a morphological or physiological state or property in a single fish or sample or a group of fish(es) or samples is assessed and a quantitative or qualitative value assigned." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00182> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The manner, procedure or technique by which a morphological or physiological state or property in a single fish or sample or a group of fish(es) or samples is assessed and a quantitative or qualitative value assigned." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://purl.obolibrary.org/obo/MMO_0000000"
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_00183
@@ -1124,15 +1232,25 @@ https://www.wikidata.org/wiki/Q1752459"""
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00167> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-06T22:46:36Z"^^xsd:dateTime ;
-                                           rdfs:comment """TEMPORARY NOTE:
-
-**do we want to import `age_measurementType` (http://purl.dataone.org/odo/ECSO_00000656) ?
-
-**ALSO** need to figure out where to include the term `Fish age in European notation` which is defined as \"An age designation notation that includes two number separated by a period. The first number represents the number of years or winters a salmon has spent in freshwater after emergence from the gravel, and the second number represents the number of years spent in the ocean. Added togethr, these numbers provide the total age or age class of a salmon.\" (source: Gillespie DC & Maclellan SE (2015) Chinook salmon (Oncorhynchus tshawytscha) scale age determination procedures. Canadian Technical Report of Fishereis and Aquatic Sciences. 3123.)
-
-^ could include dc:description: \"e.g. 1.3 = 1 year over-wintered in freshwater and 3 in the ocean\"""" ;
                                            rdfs:label "Fish age measurement type"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.dataone.org/odo/ECSO_00000656" .
+                                           <http://www.w3.org/2004/02/skos/core#closeMatch> """http://purl.dataone.org/odo/ECSO_00000656 
+http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25150""" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The duration of time for which a fish has been alive." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00184> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#closeMatch> ;
+   owl:annotatedTarget """http://purl.dataone.org/odo/ECSO_00000656 
+http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25150""" ;
+   rdfs:comment "This URI does not appear to dereference to the term. Including this URL, https://bioportal.bioontology.org/ontologies/NCIT?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C25150, to ensure findability."
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00184> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The duration of time for which a fish has been alive." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25150"
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_00185
@@ -1141,7 +1259,8 @@ https://www.wikidata.org/wiki/Q1752459"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-06T22:49:05Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "There are three basic methods for age and growth determination of fishes: (1) observation of the growth of fishes of known age, (2) study of fish size-frequencies, and (3) study of seasonal ring formation in hard body parts such as scales and bones." ;
-                                           rdfs:label "Fish age determination method"@en ;
+                                           rdfs:comment "possibly delete this later" ;
+                                           rdfs:label "Fish age or growth determination method"@en ;
                                            <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.dataone.org/odo/ECSO_00001602" ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "The way in which age is determined for a given individual." .
 
@@ -1158,7 +1277,6 @@ https://www.wikidata.org/wiki/Q1752459"""
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00182> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-06T22:50:14Z"^^xsd:dateTime ;
-                                           rdfs:comment "TEMPORARY NOTE: **do we want to import `age_measurementType` (http://purl.dataone.org/odo/ECSO_00001601) ?" ;
                                            rdfs:label "Fish sex determination method"@en ;
                                            <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.dataone.org/odo/ECSO_00001601" ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "The way in which sex is determined for a given individual." .
@@ -1211,7 +1329,17 @@ https://www.wikidata.org/wiki/Q1752459"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-07T18:39:18Z"^^xsd:dateTime ;
                                            rdfs:label "River"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A stream which, through permanent or seasonal flow processes, moves from elevated land towards lower elevations through a definite channel and empties either into a sea, lake, or another river or ends on land as bed seepage and evapotranspiration exceed water supply." ;
                                            <http://www.w3.org/2004/02/skos/core#exactMatch> "http://purl.obolibrary.org/obo/ENVO_00000022" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00190> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A stream which, through permanent or seasonal flow processes, moves from elevated land towards lower elevations through a definite channel and empties either into a sea, lake, or another river or ends on land as bed seepage and evapotranspiration exceed water supply." ;
+   <http://purl.org/dc/elements/1.1/source> "http://purl.obolibrary.org/obo/ENVO_00000022" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/River 
+https://www.wikidata.org/wiki/Q4022"""
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_00191
@@ -1220,25 +1348,55 @@ https://www.wikidata.org/wiki/Q1752459"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-07T18:39:22Z"^^xsd:dateTime ;
                                            rdfs:label "Lake"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A body of water or other liquid of considerable size contained in a depression on a landmass." ;
                                            <http://www.w3.org/2004/02/skos/core#exactMatch> "http://purl.obolibrary.org/obo/ENVO_00000020" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00191> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A body of water or other liquid of considerable size contained in a depression on a landmass." ;
+   <http://purl.org/dc/elements/1.1/source> "http://purl.obolibrary.org/obo/ENVO_00000020" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Lake 
+https://www.wikidata.org/wiki/Q23397"""
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_00192
 <http://purl.dataone.org/odo/salmon_00192> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00199> ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00203> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-07T18:39:26Z"^^xsd:dateTime ;
                                            rdfs:label "Ocean"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A marine water body which is constitutes the majority of an astronomical body's hydrosphere." ;
                                            <http://www.w3.org/2004/02/skos/core#exactMatch> "http://purl.obolibrary.org/obo/ENVO_00000015" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00192> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A marine water body which is constitutes the majority of an astronomical body's hydrosphere." ;
+   <http://purl.org/dc/elements/1.1/source> "http://purl.obolibrary.org/obo/ENVO_00000015" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Ocean 
+https://www.wikidata.org/wiki/Q9430"""
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_00194
 <http://purl.dataone.org/odo/salmon_00194> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00196> ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00230> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-07T18:40:11Z"^^xsd:dateTime ;
                                            rdfs:label "Stream"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A watercourse which is linear and flows across the solid portion of a planetary surface." ;
                                            <http://www.w3.org/2004/02/skos/core#exactMatch> "http://purl.obolibrary.org/obo/ENVO_00000023" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00194> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A watercourse which is linear and flows across the solid portion of a planetary surface." ;
+   <http://purl.org/dc/elements/1.1/source> "http://purl.obolibrary.org/obo/ENVO_00000023" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Stream 
+https://www.wikidata.org/wiki/Q47521"""
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_00195
@@ -1247,7 +1405,18 @@ https://www.wikidata.org/wiki/Q1752459"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-07T18:40:15Z"^^xsd:dateTime ;
                                            rdfs:label "Tributary"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "affluent" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A stream or river which flows into another river (a parent river) or body of water but which may not flow directly into the sea." ;
                                            <http://www.w3.org/2004/02/skos/core#exactMatch> "http://purl.obolibrary.org/obo/ENVO_00000495" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00195> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A stream or river which flows into another river (a parent river) or body of water but which may not flow directly into the sea." ;
+   <http://purl.org/dc/elements/1.1/source> "http://purl.obolibrary.org/obo/ENVO_00000495" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Tributary 
+https://www.wikidata.org/wiki/Q159675"""
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_00196
@@ -1256,7 +1425,15 @@ https://www.wikidata.org/wiki/Q1752459"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-07T18:44:17Z"^^xsd:dateTime ;
                                            rdfs:label "Lotic water body"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A water body in which the accumulated water, in its totality, is flowing." ;
                                            <http://www.w3.org/2004/02/skos/core#exactMatch> "http://purl.obolibrary.org/obo/ENVO_01000618" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00196> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A water body in which the accumulated water, in its totality, is flowing." ;
+   <http://purl.org/dc/elements/1.1/source> "http://purl.obolibrary.org/obo/ENVO_01000618"
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_00197
@@ -1265,7 +1442,15 @@ https://www.wikidata.org/wiki/Q1752459"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-07T18:47:13Z"^^xsd:dateTime ;
                                            rdfs:label "Lentic water body"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A water body in which the accumulated water, in its totality, has very little to no directed flow." ;
                                            <http://www.w3.org/2004/02/skos/core#exactMatch> "http://purl.obolibrary.org/obo/ENVO_01000617" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00197> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A water body in which the accumulated water, in its totality, has very little to no directed flow." ;
+   <http://purl.org/dc/elements/1.1/source> "http://purl.obolibrary.org/obo/ENVO_01000617"
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_00198
@@ -1274,16 +1459,726 @@ https://www.wikidata.org/wiki/Q1752459"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-07T18:47:40Z"^^xsd:dateTime ;
                                            rdfs:label "Pond"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A body of water, usually of smaller size than a lake." ;
                                            <http://www.w3.org/2004/02/skos/core#exactMatch> "http://purl.obolibrary.org/obo/ENVO_00000033" .
 
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00198> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A body of water, usually of smaller size than a lake." ;
+   <http://purl.org/dc/elements/1.1/source> "http://purl.obolibrary.org/obo/ENVO_00000033"
+ ] .
 
-###  http://purl.dataone.org/odo/salmon_00199
-<http://purl.dataone.org/odo/salmon_00199> rdf:type owl:Class ;
+
+###  http://purl.dataone.org/odo/salmon_00200
+<http://purl.dataone.org/odo/salmon_00200> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00184> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-09T18:49:30Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "e.g. An age written in European notation as '1.3' is interpreted as 1 year over-wintered in freshwater and 3 years in the ocean. The total age is 4 years (1 + 3 years). The Gilbert-Rich equivalent age is written as '5sub2'." ;
+                                           rdfs:label "Fish age in European notation"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "An age designation notation that includes two number separated by a period. The first number represents the number of years or winters a salmon has spent in freshwater after emergence from the gravel, and the second number represents the number of years spent in the ocean. Added together, these numbers provide the total age or age class of a salmon." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00200> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "e.g. An age written in European notation as '1.3' is interpreted as 1 year over-wintered in freshwater and 3 years in the ocean. The total age is 4 years (1 + 3 years). The Gilbert-Rich equivalent age is written as '5sub2'." ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.researchgate.net/profile/Darlene-Gillespie/publication/281285926_Chinook_Salmon_Oncorhynchus_tshawytscha_Scale_Age_Determination_Procedures/links/55df66d708aede0b572b8de7/Chinook-Salmon-Oncorhynchus-tshawytscha-Scale-Age-Determination-Procedures.pdf"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00200> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "An age designation notation that includes two number separated by a period. The first number represents the number of years or winters a salmon has spent in freshwater after emergence from the gravel, and the second number represents the number of years spent in the ocean. Added together, these numbers provide the total age or age class of a salmon." ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.researchgate.net/profile/Darlene-Gillespie/publication/281285926_Chinook_Salmon_Oncorhynchus_tshawytscha_Scale_Age_Determination_Procedures/links/55df66d708aede0b572b8de7/Chinook-Salmon-Oncorhynchus-tshawytscha-Scale-Age-Determination-Procedures.pdf"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00201
+<http://purl.dataone.org/odo/salmon_00201> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00184> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-09T18:52:00Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "e.g. An age written in Gilbert-Rich notation as '5sub2' (spoken as \"five sub two\") is interpreted as a fish that is in its fifth year of life (i.e. a fish that will be 5 on its next \"birthday\" or the number of winters from its deposition in the gravel as an egg to the time of sampling) and which migrated to the ocean during its second year of life. The European notation equivalent age is written as '1.3'." ;
+                                           rdfs:label "Fish age in Gilbert-Rich notation"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """G-R notation
+G-R""" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "An age designation notation that includes two numbers, of which the second is a subscript. The first numeral indicates the total age of the fish and the subscript indicates the time spent in freshwater prior to saltwater immigration." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00201> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "e.g. An age written in Gilbert-Rich notation as '5sub2' (spoken as \"five sub two\") is interpreted as a fish that is in its fifth year of life (i.e. a fish that will be 5 on its next \"birthday\" or the number of winters from its deposition in the gravel as an egg to the time of sampling) and which migrated to the ocean during its second year of life. The European notation equivalent age is written as '1.3'." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://www.researchgate.net/profile/Darlene-Gillespie/publication/281285926_Chinook_Salmon_Oncorhynchus_tshawytscha_Scale_Age_Determination_Procedures/links/55df66d708aede0b572b8de7/Chinook-Salmon-Oncorhynchus-tshawytscha-Scale-Age-Determination-Procedures.pdf 
+
+https://www.pac.dfo-mpo.gc.ca/fm-gp/fraser/docs/abor-autoc/2010FrasRvrChkInformDoc.htm"""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00201> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "An age designation notation that includes two numbers, of which the second is a subscript. The first numeral indicates the total age of the fish and the subscript indicates the time spent in freshwater prior to saltwater immigration." ;
+   <http://purl.org/dc/elements/1.1/source> """https://www.researchgate.net/profile/Darlene-Gillespie/publication/281285926_Chinook_Salmon_Oncorhynchus_tshawytscha_Scale_Age_Determination_Procedures/links/55df66d708aede0b572b8de7/Chinook-Salmon-Oncorhynchus-tshawytscha-Scale-Age-Determination-Procedures.pdf 
+
+https://pdxscholar.library.pdx.edu/cgi/viewcontent.cgi?article=3220&context=open_access_etds"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00202
+<http://purl.dataone.org/odo/salmon_00202> rdf:type owl:Class ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-12T19:49:29Z"^^xsd:dateTime ;
+                                           rdfs:comment """[ADDRESS THIS COMMENT, THEN DELETE] 
+
+Was going to map to ENVO term 'environmental feature' (http://purl.obolibrary.org/obo/ENVO_00002297) but it is deprecated.""" ;
+                                           rdfs:label "Environmental feature (?)"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A material entity which determines an environmental system." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00202> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A material entity which determines an environmental system." ;
+   <http://purl.org/dc/elements/1.1/source> "http://purl.obolibrary.org/obo/ENVO_00002297 [DEPRECATED]"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00203
+<http://purl.dataone.org/odo/salmon_00203> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00197> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-12T21:36:50Z"^^xsd:dateTime ;
+                                           rdfs:label "Marine water body"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """marine waterbody 
+body of marine water""" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A significant accumulation of saline water which is part of a marine biome." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "http://purl.obolibrary.org/obo/ENVO_00001999" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00203> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A significant accumulation of saline water which is part of a marine biome." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://purl.obolibrary.org/obo/ENVO_00001999"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00203> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#exactMatch> ;
+   owl:annotatedTarget "http://purl.obolibrary.org/obo/ENVO_00001999" ;
+   rdfs:comment "I altered the definition slightly from ENVO to include \"...accumulation of SALINE water...\" but have left this as skos:extactMatch since ENVO axiomatizes 'marine water body' (http://purl.obolibrary.org/obo/ENVO_00000015) as 'composed primarily of some sea water'."
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00204
+<http://purl.dataone.org/odo/salmon_00204> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00203> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-12T21:38:14Z"^^xsd:dateTime ;
+                                           rdfs:label "Sea"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A large expanse of saline water usually connected with an ocean." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00204> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A large expanse of saline water usually connected with an ocean." ;
+   <http://purl.org/dc/elements/1.1/source> "http://purl.obolibrary.org/obo/ENVO_00000016" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Sea 
+https://www.wikidata.org/wiki/Q165"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00205
+<http://purl.dataone.org/odo/salmon_00205> rdf:type owl:Class ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-12T23:21:32Z"^^xsd:dateTime ;
+                                           rdfs:comment """[ADDRESS THIS COMMENT, THEN DELETE]
+
+1. May need to change this definition to also encompass non-morphological/physiological measurement types, such as fish counts (e.g. estimates of escapement)
+
+2. Does it make sense to change this to 'Measurement or collection method' and make 'Fish collection method' a subclass?
+
+3. make measurement methods instances?""" ;
+                                           rdfs:label "Measurement method (?)"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The manner, procedure or technique by which a morphological or physiological state or property in a single individual or sample or a group of individuals or samples is assessed and a quantitative or qualitative value assigned." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00205> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The manner, procedure or technique by which a morphological or physiological state or property in a single individual or sample or a group of individuals or samples is assessed and a quantitative or qualitative value assigned." ;
+   <http://purl.org/dc/elements/1.1/source> "http://purl.obolibrary.org/obo/MMO_0000000"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00206
+<http://purl.dataone.org/odo/salmon_00206> rdf:type owl:Class ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-12T23:40:43Z"^^xsd:dateTime ;
+                                           rdfs:label "Measurement type"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A MeasurementType describes the type of a Measurement in which the Measurement would follow the associated Protocol to record the value of the associated Characteristic of the associated Entity using the associated Standard. Any of these associated properties may be omitted, in which case the MeasurementType is only constrained by the provided associations. A MeasurementType is a hypothetical construct, in that it is not associated with a particular instance of a Measurement." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00206> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A MeasurementType describes the type of a Measurement in which the Measurement would follow the associated Protocol to record the value of the associated Characteristic of the associated Entity using the associated Standard. Any of these associated properties may be omitted, in which case the MeasurementType is only constrained by the provided associations. A MeasurementType is a hypothetical construct, in that it is not associated with a particular instance of a Measurement." ;
+   <http://purl.org/dc/elements/1.1/source> "http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00207
+<http://purl.dataone.org/odo/salmon_00207> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00098> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-12T23:49:48Z"^^xsd:dateTime ;
+                                           rdfs:label "Academic department"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A distinct, usually specialized educational unit within an educational organization." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "http://vivoweb.org/ontology/core#AcademicDepartment" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00207> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A distinct, usually specialized educational unit within an educational organization." ;
+   <http://purl.org/dc/elements/1.1/source> "http://vivoweb.org/ontology/core#AcademicDepartment"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00208
+<http://purl.dataone.org/odo/salmon_00208> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00215> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-13T20:15:44Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "A taxonomic concept describes the allowable phenotypic, genomic, or other variation within a taxon by designating type specimens and describing characters explicitly." ;
+                                           rdfs:comment "MAKE THESE CLASSES (SAME WITH COMMON NAME)" ,
+                                                        """[ADDRESS THIS COMMENT, THEN DELETE]
+
+Review/get feedback on taxon concept instances""" ;
+                                           rdfs:label "Taxon concept (?)"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """taxonomic concept 
+taxon""" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A reference which is made to a taxon name along with a publication which explains how the author intends for the name to be applied." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/dwc/terms/Taxon" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00208> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "A taxonomic concept describes the allowable phenotypic, genomic, or other variation within a taxon by designating type specimens and describing characters explicitly." ;
+   <http://purl.org/dc/elements/1.1/source> "Senderov, V., Simov, K., Franz, N. et al. OpenBiodiv-O: ontology of the OpenBiodiv knowledge management system. J Biomed Semant 9, 5 (2018). https://doi.org/10.1186/s13326-017-0174-5" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "Taxonomic Names and Concepts interest group. 2006. Taxonomic Concept Transfer Schema (TCS), version 1.01. Biodiversity Information Standards (TDWG) http://www.tdwg.org/standards/117"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00208> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A reference which is made to a taxon name along with a publication which explains how the author intends for the name to be applied." ;
+   <http://purl.org/dc/elements/1.1/source> "https://github.com/darwin-sw/dsw/wiki/ClassTaxon#equivalence-of-taxon-and-taxoncon-%20cept-in-the-tdwg-ontology-and-the-darwin-core-standard"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00214
+<http://purl.dataone.org/odo/salmon_00214> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00206> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-14T18:23:43Z"^^xsd:dateTime ;
+                                           rdfs:label "Environmental measurement type"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00215
+<http://purl.dataone.org/odo/salmon_00215> rdf:type owl:Class ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-14T18:47:11Z"^^xsd:dateTime ;
+                                           rdfs:label "Salmon species identification and classification"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00216
+<http://purl.dataone.org/odo/salmon_00216> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00167> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-14T19:59:20Z"^^xsd:dateTime ;
+                                           rdfs:comment "add other potential sex classifications" ;
+                                           rdfs:label "Fish sex measurement type (?)"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#closeMatch> """http://purl.dataone.org/odo/ECSO_00002948 
+http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28421""" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A categorical measurement type which describes the sex of a fish or group of fish(es), where sex is defined as the assemblage of physical properties or qualities of a fish by which male is distinguished from female; the physical difference between male and female; the distinguishing peculiarity of male or female." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00216> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#closeMatch> ;
+   owl:annotatedTarget """http://purl.dataone.org/odo/ECSO_00002948 
+http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28421""" ;
+   rdfs:comment "This URI does not appear to dereference to the term. Including this URL, https://bioportal.bioontology.org/ontologies/NCIT?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C28421, to ensure findability."
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00216> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A categorical measurement type which describes the sex of a fish or group of fish(es), where sex is defined as the assemblage of physical properties or qualities of a fish by which male is distinguished from female; the physical difference between male and female; the distinguishing peculiarity of male or female." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28421"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00217
+<http://purl.dataone.org/odo/salmon_00217> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00214> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-14T22:18:17Z"^^xsd:dateTime ;
+                                           rdfs:label "Temperature measurement type"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00218
+<http://purl.dataone.org/odo/salmon_00218> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00217> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-14T22:18:45Z"^^xsd:dateTime ;
+                                           rdfs:label "Air temperature"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Objective comparative measure of hot or cold of air." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "http://purl.dataone.org/odo/ECSO_00001225" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00218> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Objective comparative measure of hot or cold of air." ;
+   <http://purl.org/dc/elements/1.1/source> "http://purl.dataone.org/odo/ECSO_00001225"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00219
+<http://purl.dataone.org/odo/salmon_00219> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00236> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-14T22:18:53Z"^^xsd:dateTime ;
+                                           rdfs:label "Stream water temperature"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Objective comparative measure of hot or cold of stream water temperature." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00219> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Objective comparative measure of hot or cold of stream water temperature." ;
+   <http://purl.org/dc/elements/1.1/source> "https://orcid.org/0000-0002-5300-3075"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00220
+<http://purl.dataone.org/odo/salmon_00220> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00214> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-14T22:31:36Z"^^xsd:dateTime ;
+                                           rdfs:label "Precipitation measurement type"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Measurement types which pertain to any product of the condensation of atmospheric water vapor that falls under gravity." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00220> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Measurement types which pertain to any product of the condensation of atmospheric water vapor that falls under gravity." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://purl.dataone.org/odo/ECSO_00001237"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00221
+<http://purl.dataone.org/odo/salmon_00221> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00220> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-14T22:33:23Z"^^xsd:dateTime ;
+                                           rdfs:label "Precipitation volume"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Volume of precipitation, which is any product of the condensation of atmospheric water vapor that falls under gravity." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "http://purl.dataone.org/odo/ECSO_00001237" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00221> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Volume of precipitation, which is any product of the condensation of atmospheric water vapor that falls under gravity." ;
+   <http://purl.org/dc/elements/1.1/source> "http://purl.dataone.org/odo/ECSO_00001237"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00222
+<http://purl.dataone.org/odo/salmon_00222> rdf:type owl:Class ;
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00125> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-04-07T18:51:08Z"^^xsd:dateTime ;
-                                           rdfs:label "Saline water body"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "http://purl.obolibrary.org/obo/ENVO_01001319" .
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-15T18:37:33Z"^^xsd:dateTime ;
+                                           rdfs:label "Inlet"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "An opening of the sea into the land, or of a lake into its shore." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "http://purl.obolibrary.org/obo/ENVO_00000475" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00222> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "An opening of the sea into the land, or of a lake into its shore." ;
+   <http://purl.org/dc/elements/1.1/source> "http://purl.obolibrary.org/obo/ENVO_00000475"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00223
+<http://purl.dataone.org/odo/salmon_00223> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00222> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-15T18:39:14Z"^^xsd:dateTime ;
+                                           rdfs:label "Coastal inlet"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "An opening of the sea into the land." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "http://purl.obolibrary.org/obo/ENVO_00000137" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00223> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "An opening of the sea into the land." ;
+   <http://purl.org/dc/elements/1.1/source> "http://purl.obolibrary.org/obo/ENVO_00000137"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00224
+<http://purl.dataone.org/odo/salmon_00224> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00223> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-15T18:39:18Z"^^xsd:dateTime ;
+                                           rdfs:label "Bay"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "An area of water bordered by land on three sides." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "http://purl.obolibrary.org/obo/ENVO_00000032" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00224> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "An area of water bordered by land on three sides." ;
+   <http://purl.org/dc/elements/1.1/source> "http://purl.obolibrary.org/obo/ENVO_00000032"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00225
+<http://purl.dataone.org/odo/salmon_00225> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00223> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-15T18:39:55Z"^^xsd:dateTime ;
+                                           rdfs:label "Cove"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A circular or round inlet with a narrow entrance." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "http://purl.obolibrary.org/obo/ENVO_00000138" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00225> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A circular or round inlet with a narrow entrance." ;
+   <http://purl.org/dc/elements/1.1/source> "http://purl.obolibrary.org/obo/ENVO_00000138"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00226
+<http://purl.dataone.org/odo/salmon_00226> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00223> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-15T18:39:58Z"^^xsd:dateTime ;
+                                           rdfs:label "Sound"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A large sea or ocean inlet larger than a bay, deeper than a bight, wider than a fjord, or it may identify a narrow sea or ocean channel between two bodies of land." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "http://purl.obolibrary.org/obo/ENVO_00000393" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00226> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A large sea or ocean inlet larger than a bay, deeper than a bight, wider than a fjord, or it may identify a narrow sea or ocean channel between two bodies of land." ;
+   <http://purl.org/dc/elements/1.1/source> "http://purl.obolibrary.org/obo/ENVO_00000393"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00227
+<http://purl.dataone.org/odo/salmon_00227> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00223> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-15T18:40:03Z"^^xsd:dateTime ;
+                                           rdfs:label "Fjord"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A long and narrow sea inlet with high steeply sloped walled sides. A fjord is a landform created during a period of glaciation." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "http://purl.obolibrary.org/obo/ENVO_00000039" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00227> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A long and narrow sea inlet with high steeply sloped walled sides. A fjord is a landform created during a period of glaciation." ;
+   <http://purl.org/dc/elements/1.1/source> "http://purl.obolibrary.org/obo/ENVO_00000039"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00228
+<http://purl.dataone.org/odo/salmon_00228> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00222> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-15T18:47:50Z"^^xsd:dateTime ;
+                                           rdfs:label "Lake inlet"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "An opening of a lake into its shore." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "http://purl.obolibrary.org/obo/ENVO_00000476" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00228> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "An opening of a lake into its shore." ;
+   <http://purl.org/dc/elements/1.1/source> "http://purl.obolibrary.org/obo/ENVO_00000476"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00229
+<http://purl.dataone.org/odo/salmon_00229> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00194> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-15T18:50:11Z"^^xsd:dateTime ;
+                                           rdfs:label "Creek"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "Brook" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A stream that is usually smaller than a river." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00229> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A stream that is usually smaller than a river." ;
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Creek 
+https://www.wikidata.org/wiki/Q63565252"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00230
+<http://purl.dataone.org/odo/salmon_00230> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00196> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-15T18:52:49Z"^^xsd:dateTime ;
+                                           rdfs:label "Watercourse"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A flowing body of water." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "http://purl.obolibrary.org/obo/ENVO_00000029" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00230> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A flowing body of water." ;
+   <http://purl.org/dc/elements/1.1/source> "http://purl.obolibrary.org/obo/ENVO_00000029"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00231
+<http://purl.dataone.org/odo/salmon_00231> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00232> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-15T19:25:23Z"^^xsd:dateTime ;
+                                           rdfs:label "Measuring the distance between scale circuli (?)"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00232
+<http://purl.dataone.org/odo/salmon_00232> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00185> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-15T19:27:37Z"^^xsd:dateTime ;
+                                           rdfs:label "Fish growth rate determination method"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00234
+<http://purl.dataone.org/odo/salmon_00234> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00167> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-15T19:38:17Z"^^xsd:dateTime ;
+                                           rdfs:label "Fish growth rate measurement type (?)"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00235
+<http://purl.dataone.org/odo/salmon_00235> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00234> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-15T19:38:49Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "describe method used to determine distance here" ;
+                                           rdfs:comment "[COME BACK TO THIS] attach oboe protocol" ;
+                                           rdfs:label "Distance between scale circuli"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00236
+<http://purl.dataone.org/odo/salmon_00236> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00217> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-15T20:49:21Z"^^xsd:dateTime ;
+                                           rdfs:label "Aquatic temperature"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00237
+<http://purl.dataone.org/odo/salmon_00237> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00216> ;
+                                           owl:disjointWith <http://purl.dataone.org/odo/salmon_00238> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-15T20:51:04Z"^^xsd:dateTime ;
+                                           rdfs:label "Male"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00238
+<http://purl.dataone.org/odo/salmon_00238> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00216> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-15T20:51:08Z"^^xsd:dateTime ;
+                                           rdfs:label "Female"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_00239
+<http://purl.dataone.org/odo/salmon_00239> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00016> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-16T18:10:30Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161980" ;
+                                           rdfs:label "Chin"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """Oncorhynchus tshawytscha
+O. tshawytscha 
+\"king salmon\" @en
+\"Quinnat salmon\" @en
+\"spring salmon\" @en
+\"chrome hog\" @en
+\"Blackmouth\" @en
+\"Tyee salmon\" @en
+\"Sikayujak\" @ipk
+\"Ggaal\" [Denaakk'e, Koyukon Athabaskan]
+\"Gath\" [Benhti Kenaga, Lower Tanana]
+\"Luk Choo\" @gwi
+\"Kiagtaq\" @ypk
+\"Taryaqvak\" @ypk
+\"Aciirturtet\" @ypk
+\"sumgax̂\" @ale [Unangam tunuu variant]
+\"chaguchax̂\" @ale [Unangam tunuu variant])
+\"chavichax̂\" @ale [Unangam tunuu variant]
+\"Aamasuuk\" [Alutiiq/Sugpiaq]
+\"Liliksak\" [Alutiiq/Sugpiaq]
+\"Luk'ece'e\"  [Ahtna]
+\"Kentsinai'i\" [Ahtna]
+\"luq'aka'a\" [Kenai Dena'ina]
+\"nudlaghi\" [Kenai Dena'ina]
+\"te'ya'lee\" @eya
+\"Yee\" @tsi @tli 
+\"t'á\" @tsi @tli""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00239> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161980" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161980#null"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00240
+<http://purl.dataone.org/odo/salmon_00240> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00016> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-16T18:10:52Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161976" ;
+                                           rdfs:label "Chu"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """Oncorhynchus keta
+O. keta
+\"dog salmon\" @en
+\"keta salmon\" @en
+\"silverbrite salmon\" @en
+\"Iqalugruaq\" @ipk
+\"Aqalugruaq\" @ipk
+\"Noolaaghe\" [Denaakk'e, Koyukon Athabaskan]
+\"Nahdlii\" @gwi
+\"Shii\" @gwi
+\"Aluyak\" @ypk
+\"Iqalluk\" @ypk
+\"Kangitneq\" @ypk
+\"Mac'utaq\" @ypk
+\"Teggmaarrluk\" @ypk [Unangam tunuu variant]
+\"x̂aykix̂\" @ale
+\"Alimaq\" [Alutiiq/Sugpiaq]
+\"alima\" [Kenai Dena'ina] 
+\"tiitl'\" @eya 
+\"Gaynii\"@tsi @tli 
+\"téel'\" @tsi @tli""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00240> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161976" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161976#null"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00241
+<http://purl.dataone.org/odo/salmon_00241> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00016> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-16T18:10:57Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161975" ;
+                                           rdfs:label "Pin"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """Oncorhynchus gorbuscha 
+O. gorbuscha
+\"humpback salmon\" @en
+\"humpbacked salmon\" @en
+\"Amaqtuq\" @ipk
+\"Amaqaayak\" @ypk
+\"Amaqsuq\" @ypk
+\"Cuqpeq\" @ypk
+\"Terteq\" @ypk
+\"Qungaayux\" @ale [Unangam tunuu variant]
+\"Amartuq\" [Alutiiq/Sugpiaq]
+\"Amaqaayak\" [Alutiiq/Sugpiaq] 
+\"Dak'aay\" [Ahtna]
+\"Dak'aagi\" [Ahtna]
+\"qughuna\" [Kenai Dena'ina]
+\"giyah sdilahL\" @eyk
+\"kaashk'\" @eyk
+\"Sti'moon\" @tsi @tli 
+\"Cháas'\" @tsi @tli""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00241> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161975" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161975#null"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00242
+<http://purl.dataone.org/odo/salmon_00242> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00016> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-16T18:11:02Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161979" ;
+                                           rdfs:label "Sockey"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """Oncorhynchus nerka
+O. nerka
+\"red salmon\" @en
+\"kokanee salmon\" @en
+\"blueback salmon\" @en
+\"Cayak\" @ypk 
+\"Sayak\" @ypk
+\"Niklliq\" [Alutiiq/Sugpiaq]
+\"Nulaeggi\" [Ahtna]
+\"Sesluugge\"' [Ahtna]
+\"Natael luugge'\" [Ahtna]
+\"k'q'uya\" [Kenai Dena'ina]
+\"tahi'id\" @eyk
+\"cha'ch\" @eyk
+\"Misoo\" @tsi @tli 
+\"g̲aat\" @tsi @tli""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00242> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161979" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161979#null"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00243
+<http://purl.dataone.org/odo/salmon_00243> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00016> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-16T18:11:22Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161977" ;
+                                           rdfs:label "Coh"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """Oncorhynchus kisutch
+O. kisutch
+\"silver salmon\" @en
+\"silvers\" @en
+\"Saanlaaghe\" [Denaakk'e, Koyukon Athabaskan]
+\"Khwyhts'en'\" [Benhti Kenaga, Lower Tanana]
+\"Shii\" @gwi 
+\"Caayuryaq\" @ypk 
+\"Qakiiyaq\" @ypk 
+\"Qavlunaq\" @ypk 
+\"Uqurliq\" @ypk 
+\"Qakiidax̂: @ale [Unangam tunuu variant]
+\"Qakiiyaq\" [Alutiiq/Sugpiaq]
+\"ta'ay\" @eyk
+\"ÜÜx\" @tsi @tli
+\"L'ook\" @tsi @tli""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00243> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161977" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161977#null"
+ ] .
 
 
 #################################################################
@@ -1316,7 +2211,7 @@ North: 57.2997 degrees
 South: 51.1568 degrees
 East: -153.6282 degrees
 West: 179.8567 degrees""" ;
-   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#alaskapeninsulaandaleutianislands
+   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#alaskapeninsulaandaleutianislands 
 https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
  ] .
 
@@ -1394,7 +2289,7 @@ North: 60.9278 degrees
 South: 56.8716 degrees
 East: -152.7319 degrees
 West: -162.2713 degrees""" ;
-   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#bristolbay
+   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#bristolbay 
 https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
  ] .
 
@@ -1434,7 +2329,7 @@ North: 57.142 degrees
 South: 55.5261 degrees
 East: -155.4645 degrees
 West: -159.6479 degrees""" ;
-   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#chignik
+   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#chignik 
 https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
  ] .
 
@@ -1465,7 +2360,7 @@ North: 63.638 degrees
 South: 58.6157 degrees
 East: -146.1503 degrees
 West: -154.7415 degrees""" ;
-   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#cookinlet
+   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#cookinlet 
 https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
  ] .
 
@@ -1504,7 +2399,7 @@ North: 63.3227 degrees
 South: 59.7112 degrees
 East: -139.6942 degrees
 West: -147.8251 degrees""" ;
-   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#copperriver
+   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#copperriver 
 https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
  ] .
 
@@ -1543,7 +2438,7 @@ North: 59.0261 degrees
 South: 56.3492 degrees
 East: -151.6884 degrees
 West: -156.7838 degrees""" ;
-   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#kodiak
+   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#kodiak 
 https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
  ] .
 
@@ -1583,7 +2478,7 @@ North: 68.9178 degrees
 South: 65.3082 degrees
 East: 65.3082 degrees
 West: -169.0513 degrees""" ;
-   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#kotzebue
+   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#kotzebue 
 https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
  ] .
 
@@ -1615,7 +2510,7 @@ North: 64.4166 degrees
 South: 58.6262 degrees
 East: -151.5105 degrees
 West: -173.2164 degrees""" ;
-   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#kuskokwim
+   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#kuskokwim 
 https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
  ] .
 
@@ -1647,7 +2542,7 @@ North: 61.5189  degrees
 South: 59.357  degrees
 East: -145.1013  degrees
 West: -149.1761  degrees""" ;
-   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#princewilliamsound
+   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#princewilliamsound 
 https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
  ] .
 
@@ -1686,7 +2581,7 @@ North: 65.8544 degrees
 South: 62.8268 degrees
 East: -159.1906 degrees
 West: -171.9762 degrees""" ;
-   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#nortonsound
+   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#nortonsound 
 https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
  ] .
 
@@ -1728,7 +2623,7 @@ North: 61.6887 degrees
 South: 54.2508 degrees
 East: -126.7735 degrees
 West: -143.8874 degrees""" ;
-   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#southeast
+   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#southeast 
 https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
  ] .
 
@@ -1766,7 +2661,7 @@ North: 69.0792 degrees
 South: 58.8686 degrees
 East: -129.1775 degrees
 West: -166.281 degrees""" ;
-   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#yukon
+   <http://purl.org/dc/elements/1.1/source> """https://knb.ecoinformatics.org/portals/SASAP/Regions#yukon 
 https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
  ] .
 
@@ -2842,7 +3737,7 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
 
 ###  http://purl.dataone.org/odo/salmon_00106
 <http://purl.dataone.org/odo/salmon_00106> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00174> ;
+                                                    <http://purl.dataone.org/odo/salmon_00207> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T22:57:58Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The USF School of Geosciences webpage is accessible at: http://hennarot.forest.usf.edu/main/depts/geosci/" ;
@@ -2851,7 +3746,7 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
 
 ###  http://purl.dataone.org/odo/salmon_00107
 <http://purl.dataone.org/odo/salmon_00107> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00174> ;
+                                                    <http://purl.dataone.org/odo/salmon_00207> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T22:58:06Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The UW School of Aquatic and Fishery Science webpage is accessible at: https://fish.uw.edu/" ;
@@ -2871,7 +3766,7 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
 
 ###  http://purl.dataone.org/odo/salmon_00109
 <http://purl.dataone.org/odo/salmon_00109> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00174> ;
+                                                    <http://purl.dataone.org/odo/salmon_00207> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T22:59:25Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The Department of Fisheries and Wildlife Quantitative Fisheries Center webpage is accessible at: https://www.canr.msu.edu/qfc/" ;
@@ -2900,7 +3795,7 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
 
 ###  http://purl.dataone.org/odo/salmon_00112
 <http://purl.dataone.org/odo/salmon_00112> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00174> ;
+                                                    <http://purl.dataone.org/odo/salmon_00207> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T22:59:49Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The UAF Alaska Native Studies and Rural Development webpage is accessible at: https://www.uaf.edu/dansrd/" ;
@@ -2910,7 +3805,7 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
 
 ###  http://purl.dataone.org/odo/salmon_00113
 <http://purl.dataone.org/odo/salmon_00113> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00174> ;
+                                                    <http://purl.dataone.org/odo/salmon_00207> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T22:59:55Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The UAF College of Fisheries & Ocean Sciences webpage is accessible at: https://www.uaf.edu/cfos/" ;
@@ -2919,7 +3814,7 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
 
 ###  http://purl.dataone.org/odo/salmon_00114
 <http://purl.dataone.org/odo/salmon_00114> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00174> ;
+                                                    <http://purl.dataone.org/odo/salmon_00207> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T23:00:02Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The UCSC Department of Ecology and Evolutionary Biology webpage is accessible at: https://www.eeb.ucsc.edu/" ;
@@ -2928,7 +3823,7 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
 
 ###  http://purl.dataone.org/odo/salmon_00115
 <http://purl.dataone.org/odo/salmon_00115> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00174> ;
+                                                    <http://purl.dataone.org/odo/salmon_00207> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T23:00:42Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The UAA Department of Anthropology webpage is accessible at: https://www.uaa.alaska.edu/academics/college-of-arts-and-sciences/departments/anthropology/" ;
@@ -2948,7 +3843,7 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
 
 ###  http://purl.dataone.org/odo/salmon_00117
 <http://purl.dataone.org/odo/salmon_00117> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00174> ;
+                                                    <http://purl.dataone.org/odo/salmon_00207> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T23:01:04Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The UAA Institute of Social and Economic Research webpage is accessible at: https://www.uaa.alaska.edu/research/institute-social-economic-research/" ;
@@ -3030,6 +3925,121 @@ SASAP Project""" ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A historical GIS project to create and freely disseminate a database incorporating all available aggregate census information for the United States between 1790 and 2010." ;
    <http://purl.org/dc/elements/1.1/source> "https://en.wikipedia.org/wiki/National_Historical_Geographic_Information_System"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00209
+<http://purl.dataone.org/odo/salmon_00209> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00208> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-13T20:33:17Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/source> """https://www.gbif.org/species/5204039 
+http://www.fishbase.de/summary/243""" ;
+                                           <http://rs.tdwg.org/dwc/terms/originalNameUsage> "Salmo nerka (Walbaum, 1792)" ;
+                                           <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/salmon_00018> ;
+                                           rdfs:label "Oncorhynchus nerka (Walbaum, 1792)"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00209> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/source> ;
+   owl:annotatedTarget """https://www.gbif.org/species/5204039 
+http://www.fishbase.de/summary/243""" ;
+   rdfs:comment "Encyclopedia of Life (eol) webpage for Sockeye salmon returns Internal server error - 500"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00209> ;
+   owl:annotatedProperty <http://rs.tdwg.org/dwc/terms/originalNameUsage> ;
+   owl:annotatedTarget "Salmo nerka (Walbaum, 1792)" ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.gbif.org/species/5204039"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00210
+<http://purl.dataone.org/odo/salmon_00210> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00208> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-13T20:49:31Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/source> """https://www.gbif.org/species/5204024 
+http://www.fishbase.org/summary/244""" ;
+                                           <http://rs.tdwg.org/dwc/terms/originalNameUsage> "Salmo tshawytscha (Walbaum, 1792)" ;
+                                           <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/salmon_00019> ;
+                                           rdfs:label "Oncorhynchus tshawytscha (Walbaum, 1792)"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00210> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/source> ;
+   owl:annotatedTarget """https://www.gbif.org/species/5204024 
+http://www.fishbase.org/summary/244""" ;
+   rdfs:comment "Encyclopedia of Life (eol) webpage for Chinook salmon returns Internal server error - 500"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00210> ;
+   owl:annotatedProperty <http://rs.tdwg.org/dwc/terms/originalNameUsage> ;
+   owl:annotatedTarget "Salmo tshawytscha (Walbaum, 1792)" ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.gbif.org/species/5204024"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00211
+<http://purl.dataone.org/odo/salmon_00211> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00208> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-13T20:49:43Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/source> """https://www.gbif.org/species/5204014 
+http://www.fishbase.org/summary/241
+https://eol.org/pages/46563136/names""" ;
+                                           <http://rs.tdwg.org/dwc/terms/originalNameUsage> "Salmo keta (Walbaum, 1792)" ;
+                                           <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/salmon_00021> ;
+                                           rdfs:label "Oncorhynchus keta (Walbaum, 1792)"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00211> ;
+   owl:annotatedProperty <http://rs.tdwg.org/dwc/terms/originalNameUsage> ;
+   owl:annotatedTarget "Salmo keta (Walbaum, 1792)" ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.gbif.org/species/5204014"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00212
+<http://purl.dataone.org/odo/salmon_00212> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00208> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-13T20:49:56Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/source> """https://www.gbif.org/species/5204034 
+http://www.fishbase.org/summary/245 
+https://eol.org/pages/46563137/names""" ;
+                                           <http://rs.tdwg.org/dwc/terms/originalNameUsage> "Salmo kisutch (Walbaum, 1792)" ;
+                                           <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/salmon_00020> ;
+                                           rdfs:label "Oncorhynchus kisutch (Walbaum, 1792)"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00212> ;
+   owl:annotatedProperty <http://rs.tdwg.org/dwc/terms/originalNameUsage> ;
+   owl:annotatedTarget "Salmo kisutch (Walbaum, 1792)" ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.gbif.org/species/5204034"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_00213
+<http://purl.dataone.org/odo/salmon_00213> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/salmon_00208> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-13T20:50:06Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/source> """https://www.gbif.org/species/5204037 
+http://www.fishbase.org/summary/240 
+https://eol.org/pages/46563135/names""" ;
+                                           <http://rs.tdwg.org/dwc/terms/originalNameUsage> "Salmo gorbuscha (Walbaum, 1792)" ;
+                                           <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/salmon_00022> ;
+                                           rdfs:label "Oncorhynchus gorbuscha (Walbaum, 1792)"@en ;
+                                           owl:sameAs <http://purl.dataone.org/odo/salmon_00022> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00213> ;
+   owl:annotatedProperty <http://rs.tdwg.org/dwc/terms/originalNameUsage> ;
+   owl:annotatedTarget "Salmo gorbuscha (Walbaum, 1792)" ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.gbif.org/species/5204037"
  ] .
 
 
