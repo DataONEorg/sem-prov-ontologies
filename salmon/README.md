@@ -7,7 +7,8 @@ These ontologies were created by [Mark Schildhauer](http://orcid.org/0000-0003-0
 
 The State of Alaska Salmon and People Project (SASAP) seeks to provide a holistic, statewide overview of the status and characteristics of Alaska’s coupled human-salmon system. What has emerged is a deep look into the state of knowledge of the biological, sociocultural, economic, and governance dimensions of Alaska’s salmon and the people who depend upon them.
 
-The SASAP project shares this knowledge with Alaska salmon users through comprehensive watershed-level summaries ([Regions](https://alaskasalmonandpeople.org/regions/)), focused research on specific salmon issues ([Topics](https://alaskasalmonandpeople.org/topics/)), and supported links to SASAP’s free, open-source datasets, accessible through the [Salmon Data Portal](https://knb.ecoinformatics.org/portals/SASAP/Data).
+The SASAP project shares this knowledge with Alaska salmon users through comprehensive watershed-level summaries ([Regions](https://alaskasalmonandpeople.org/regions/)), focused research on specific salmon issues ([Topics](https://alaskasalmonandpeople.org/topics/)), and supported links to SASAP’s free, open-source datasets, accessible through the [Salmon Data Portal](https://knb.ecoinformatics.org/portals/SASAP/Data).  
+
 The main website for the SASAP project as of April 21, 2020 is: https://alaskasalmonandpeople.org/
 
 ## Ontology Design
