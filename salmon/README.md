@@ -1,5 +1,11 @@
 # SASAP & Salmon Ontologies
 
+We are developing two ontologies:
+1. [The Salmon Ontology](https://github.com/DataONEorg/sem-prov-ontologies/blob/initial-salmon-onto/salmon/salmon_ontology_v0.2.owl), an ontology which represents knowledge about salmon, features of their habitats, salmon stakeholders, and related entities
+2. [The SASAP Ontology](https://github.com/DataONEorg/sem-prov-ontologies/blob/initial-salmon-onto/salmon/SASAP_ontology_v0.2.owl), an ontology which represents information about the State of Alaska's Salmon and People (SASAP) project, as well as knowledge about salmon, features of their habitats, salmon stakeholders, and related entities (NOTE: our intent is to *import* the Salmon Ontology into the SASAP Ontology).
+
+A primary goal for developing these ontologies is to better enable semantic search of data holdings within the SASAP Data Portal and for more efficient and effective dataset integration across agencies.
+
 These ontologies were created by [Mark Schildhauer](http://orcid.org/0000-0003-0632-7576) and [Samantha Csik](http://orcid.org/0000-0002-5300-3075), with contributions from [Matthew Jones](https://orcid.org/0000-0003-0077-4738) and [Bryce Mecum](https://orcid.org/0000-0002-0381-3766
 ).
 
