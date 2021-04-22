@@ -8,7 +8,7 @@ We are developing two ontologies:
 
 A primary goal for developing these ontologies is to better enable semantic search of data holdings within the SASAP Data Portal and for more efficient and effective dataset harmonization/integration across agencies.
 
-These ontologies were created by [Samantha Csik](http://orcid.org/0000-0002-5300-3075), [Mark Schildhauer](http://orcid.org/0000-0003-0632-7576), [Matthew Jones](https://orcid.org/0000-0003-0077-4738), and [Bryce Mecum](https://orcid.org/0000-0002-0381-3766
+These ontologies are being created by [Samantha Csik](http://orcid.org/0000-0002-5300-3075), [Mark Schildhauer](http://orcid.org/0000-0003-0632-7576), [Matthew Jones](https://orcid.org/0000-0003-0077-4738), and [Bryce Mecum](https://orcid.org/0000-0002-0381-3766
 ).
 
 ## The State of Alaska's Salmon and People (SASAP) Project
