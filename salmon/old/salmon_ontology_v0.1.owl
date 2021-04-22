@@ -115,8 +115,6 @@ owl:sameAs rdf:type owl:AnnotationProperty .
 ###  http://purl.dataone.org/odo/salmon_00066
 <http://purl.dataone.org/odo/salmon_00066> rdf:type owl:ObjectProperty ;
                                            owl:inverseOf <http://purl.dataone.org/odo/salmon_00069> ;
-                                           rdfs:domain <http://purl.dataone.org/odo/salmon_00064> ;
-                                           rdfs:range <http://purl.dataone.org/odo/salmon_00098> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T19:00:26Z"^^xsd:dateTime ;
                                            rdfs:label "affiliateOf"@en ;
@@ -133,7 +131,6 @@ owl:sameAs rdf:type owl:AnnotationProperty .
 ###  http://purl.dataone.org/odo/salmon_00067
 <http://purl.dataone.org/odo/salmon_00067> rdf:type owl:ObjectProperty ;
                                            owl:inverseOf <http://purl.dataone.org/odo/salmon_00071> ;
-                                           rdfs:domain <http://purl.dataone.org/odo/salmon_00064> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T19:00:44Z"^^xsd:dateTime ;
                                            rdfs:label "participantOf"@en .
@@ -141,8 +138,6 @@ owl:sameAs rdf:type owl:AnnotationProperty .
 
 ###  http://purl.dataone.org/odo/salmon_00069
 <http://purl.dataone.org/odo/salmon_00069> rdf:type owl:ObjectProperty ;
-                                           rdfs:domain <http://purl.dataone.org/odo/salmon_00098> ;
-                                           rdfs:range <http://purl.dataone.org/odo/salmon_00064> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T19:11:36Z"^^xsd:dateTime ;
                                            rdfs:label "hasAffiliate"@en .
@@ -157,7 +152,6 @@ owl:sameAs rdf:type owl:AnnotationProperty .
 
 ###  http://purl.dataone.org/odo/salmon_00120
 <http://purl.dataone.org/odo/salmon_00120> rdf:type owl:ObjectProperty ;
-                                           rdfs:domain <http://purl.dataone.org/odo/salmon_00101> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-30T18:33:13Z"^^xsd:dateTime ;
                                            rdfs:label "containsDataFrom"@en .
@@ -167,25 +161,119 @@ owl:sameAs rdf:type owl:AnnotationProperty .
 #    Classes
 #################################################################
 
-###  http://purl.dataone.org/odo/salmon_00001
-<http://purl.dataone.org/odo/salmon_00001> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00124> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:24:20Z"^^xsd:dateTime ;
-                                           <http://purl.org/dc/elements/1.1/description> """The thirteen SASAP regions were determined based on their geography, and in many cases represent large watersheds where all precipitation melts and flows into the same part of the ocean. Regions tend to also be grouped by Indigenous cultures and languages, evidence of the deep-time ties between Alaska’s salmon and people. Some regions align with current Alaska Department of Fish & Game (ADF&G) statistical areas; some do not. 
+###  http://purl.dataone.org/odo/SASAP_00400
+<http://purl.dataone.org/odo/SASAP_00400> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00216> ;
+                                          <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                          <http://purl.org/dc/elements/1.1/date> "2021-04-21T21:15:55Z"^^xsd:dateTime ;
+                                          rdfs:label "Immature"@en .
 
-The bounding cooridnates and shapefiles for each region are accessible at: https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W""" ;
-                                           rdfs:comment "Populates the SASAP Data Portal (https://knb.ecoinformatics.org/portals/SASAP/Data) faceted search field, 'SASAP Region'" ;
-                                           rdfs:label "SASAP Region"@en .
+
+###  http://purl.dataone.org/odo/SASAP_00401
+<http://purl.dataone.org/odo/SASAP_00401> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00184> ;
+                                          <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                          <http://purl.org/dc/elements/1.1/date> "2021-04-21T23:42:02Z"^^xsd:dateTime ;
+                                          rdfs:label "Age class of fish"@en ;
+                                          owl:equivalentClass "http://rs.tdwg.org/dwc/terms/lifeStage" ;
+                                          <http://www.w3.org/2004/02/skos/core#definition> "The age class or life stage of the biological individual(s) at the time the occurrence was recorded." .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00001> ;
-   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
-   owl:annotatedTarget """The thirteen SASAP regions were determined based on their geography, and in many cases represent large watersheds where all precipitation melts and flows into the same part of the ocean. Regions tend to also be grouped by Indigenous cultures and languages, evidence of the deep-time ties between Alaska’s salmon and people. Some regions align with current Alaska Department of Fish & Game (ADF&G) statistical areas; some do not. 
-
-The bounding cooridnates and shapefiles for each region are accessible at: https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W""" ;
-   <http://purl.org/dc/elements/1.1/source> "https://alaskasalmonandpeople.org/regions/"
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00401> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The age class or life stage of the biological individual(s) at the time the occurrence was recorded." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://rs.tdwg.org/dwc/terms/lifeStage"
  ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_00402
+<http://purl.dataone.org/odo/SASAP_00402> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00401> ;
+                                          <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                          <http://purl.org/dc/elements/1.1/date> "2021-04-21T23:42:09Z"^^xsd:dateTime ;
+                                          rdfs:label "Egg"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_00403
+<http://purl.dataone.org/odo/SASAP_00403> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00401> ;
+                                          <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                          <http://purl.org/dc/elements/1.1/date> "2021-04-21T23:42:13Z"^^xsd:dateTime ;
+                                          rdfs:label "Alevin"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#definition> "Larval salmon that have hatched but have not yet completely absorbed their yolk sacs and usually have not yet emerged from the gravel." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00403> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Larval salmon that have hatched but have not yet completely absorbed their yolk sacs and usually have not yet emerged from the gravel." ;
+   <http://purl.org/dc/elements/1.1/source> "http://www.fishbase.us/glossary/Glossary.php?q=alevin&language=english&sc=is"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_00404
+<http://purl.dataone.org/odo/SASAP_00404> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00401> ;
+                                          <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                          <http://purl.org/dc/elements/1.1/date> "2021-04-21T23:42:21Z"^^xsd:dateTime ;
+                                          rdfs:label "Smolt"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#definition> "1) A young salmonid which has developed silvery coloring on its sides, obscuring the parr marks, and which is about to migrate or has just migrated into the sea, 2) to undergo the transformation from parr to smolt." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00404> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "1) A young salmonid which has developed silvery coloring on its sides, obscuring the parr marks, and which is about to migrate or has just migrated into the sea, 2) to undergo the transformation from parr to smolt." ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.fishbase.in/Glossary/Glossary.php?q=smolt&language=english&sc=is"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_00405
+<http://purl.dataone.org/odo/SASAP_00405> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00401> ;
+                                          <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                          <http://purl.org/dc/elements/1.1/date> "2021-04-21T23:42:38Z"^^xsd:dateTime ;
+                                          rdfs:label "Fry"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#definition> "A young fish at the post-larval stage. May include all fish stages from hatching to fingerling. An advanced fry is any young fish from the start of exogenous feeding after the yolk is absorbed while a sac fry is from hatching to yolk sac absorption. In Salmonidae the stage from end of dependence on the yolk sac as the primary source of nutrition to dispersal from the redd." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00405> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A young fish at the post-larval stage. May include all fish stages from hatching to fingerling. An advanced fry is any young fish from the start of exogenous feeding after the yolk is absorbed while a sac fry is from hatching to yolk sac absorption. In Salmonidae the stage from end of dependence on the yolk sac as the primary source of nutrition to dispersal from the redd." ;
+   <http://purl.org/dc/elements/1.1/source> "http://www.fishbase.us/glossary/Glossary.php?q=fry&language=english&sc=is"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_00406
+<http://purl.dataone.org/odo/SASAP_00406> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00401> ;
+                                          <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                          <http://purl.org/dc/elements/1.1/date> "2021-04-21T23:42:40Z"^^xsd:dateTime ;
+                                          rdfs:label "Adult"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#definition> "Fish that have fully developed morphological and meristic characters and that have attained sexual maturity." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00406> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Fish that have fully developed morphological and meristic characters and that have attained sexual maturity." ;
+   <http://purl.org/dc/elements/1.1/source> "http://www.fishbase.us/glossary/Glossary.php?q=adult&language=english&sc=is"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_00407
+<http://purl.dataone.org/odo/SASAP_00407> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00184> ;
+                                          <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                          <http://purl.org/dc/elements/1.1/date> "2021-04-22T00:00:18Z"^^xsd:dateTime ;
+                                          rdfs:label "Numeric age of fish"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#definition> "Elapsed time, typically expressed in years, (a) since birth or (b) which describes the how long a salmon has spent in a particular environment (e.g. saltwater vs. freshwater)." .
+
+
+###  http://purl.dataone.org/odo/SASAP_00408
+<http://purl.dataone.org/odo/SASAP_00408> rdf:type owl:Class ;
+                                          rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00184> ;
+                                          <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                          <http://purl.org/dc/elements/1.1/date> "2021-04-22T00:00:42Z"^^xsd:dateTime ;
+                                          rdfs:label "Fish age notation"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#definition> "A standardized notation format for describing the age of a salmon." .
 
 
 ###  http://purl.dataone.org/odo/salmon_00016
@@ -213,184 +301,6 @@ https://www.wikidata.org/wiki/Q502895"""
  ] .
 
 
-###  http://purl.dataone.org/odo/salmon_00024
-<http://purl.dataone.org/odo/salmon_00024> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00098> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:01:09Z"^^xsd:dateTime ;
-                                           rdfs:label "State government department or agency"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A permanent or semi-permanent state govenrment organization which is responsible for the oversight and administration of specific functions." ;
-                                           <http://www.w3.org/2004/02/skos/core#relatedMatch> """http://purl.bioontology.org/ontology/MESH/D013219 
-http://vivoweb.org/ontology/core#GovernmentAgency""" .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00024> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "A permanent or semi-permanent state govenrment organization which is responsible for the oversight and administration of specific functions." ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Government_agency 
-https://www.wikidata.org/wiki/Q327333"""
- ] .
-
-
-###  http://purl.dataone.org/odo/salmon_00025
-<http://purl.dataone.org/odo/salmon_00025> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00098> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:01:18Z"^^xsd:dateTime ;
-                                           rdfs:label "Federal government department or agency"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A permanent or semi-permanent federal govenrment organization which is responsible for the oversight and administration of specific functions." ;
-                                           <http://www.w3.org/2004/02/skos/core#relatedMatch> """http://purl.bioontology.org/ontology/MESH/D035082 
-http://vivoweb.org/ontology/core#GovernmentAgency""" .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00025> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "A permanent or semi-permanent federal govenrment organization which is responsible for the oversight and administration of specific functions." ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Government_agency 
-https://www.wikidata.org/wiki/Q327333"""
- ] .
-
-
-###  http://purl.dataone.org/odo/salmon_00026
-<http://purl.dataone.org/odo/salmon_00026> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00098> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:01:44Z"^^xsd:dateTime ;
-                                           rdfs:label "Nonprofit organization"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#altLabel> """Nonprofit
-Non-profit
-Nonprofit organization
-NPO
-Nonprofit group
-Non-profit organization
-Not for profit organization""" ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "An organization whose primary objective is to support some issue or matter of private interest or public concern for non-commercial purposes. Nonprofits generally do not operate to generate profit, and this characteristic is popularly considered to be the defining characterisitic of such organizations. However, a non-profit organization may accept, hold and disburse money and other things of value. It may also legally and ethically trade at a profit. The extent to which it can generate income may be constrained, or the use of those profits may be restricted." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54073" .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00026> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "An organization whose primary objective is to support some issue or matter of private interest or public concern for non-commercial purposes. Nonprofits generally do not operate to generate profit, and this characteristic is popularly considered to be the defining characterisitic of such organizations. However, a non-profit organization may accept, hold and disburse money and other things of value. It may also legally and ethically trade at a profit. The extent to which it can generate income may be constrained, or the use of those profits may be restricted." ;
-   <http://purl.org/dc/elements/1.1/source> "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54073"
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00026> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#exactMatch> ;
-   owl:annotatedTarget "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54073" ;
-   rdfs:comment "This URI does not appear to dereference to the term. Including this URL, https://bioportal.bioontology.org/ontologies/NCIT?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C54073, to ensure findability."
- ] .
-
-
-###  http://purl.dataone.org/odo/salmon_00048
-<http://purl.dataone.org/odo/salmon_00048> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00098> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:06:04Z"^^xsd:dateTime ;
-                                           rdfs:label "Intergovernmental organization"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "An entity created by treaty, involving two or more nations, to work in good faith, on issues of common interest." .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00048> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "An entity created by treaty, involving two or more nations, to work in good faith, on issues of common interest." ;
-   <http://purl.org/dc/elements/1.1/source> "https://hls.harvard.edu/dept/opia/what-is-public-interest-law/public-service-practice-settings/public-international-law/intergovernmental-organizations-igos/" ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Intergovernmental_organization 
-https://www.wikidata.org/wiki/Q245065"""
- ] .
-
-
-###  http://purl.dataone.org/odo/salmon_00054
-<http://purl.dataone.org/odo/salmon_00054> rdf:type owl:Class ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:45:38Z"^^xsd:dateTime ;
-                                           <http://purl.org/dc/elements/1.1/description> """Beginning in 2016, nine SASAP working groups formed – each composed of between 12 and 24 knowledge experts from a range of disciplines, backgrounds, and regions. Each participant brought his or her data and experiences for synthesis and analysis, while NCEAS provided logistical and technical support to facilitate each group’s innovative work.
-
-Each of the nine groups focused on specific issues related to salmon and people in Alaska:
-
-Four SASAP groups were tasked with integrating knowledge across multiple disciplines to understand the fundamental state of knowledge of Alaska’s salmon systems. The work of each group is presented for each of the major watersheds in Alaska in the Region section (https://alaskasalmonandpeople.org/regions/).
-
-An additional five working groups were selected to focus on specific research questions that provide insight into the pressures on salmon and salmon communities, as well as options for response to those pressures. Their work is presented in the Special Topics section (https://alaskasalmonandpeople.org/topics/).""" ;
-                                           rdfs:label "SASAP working group and project support"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#altLabel> "Working Group" .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00054> ;
-   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
-   owl:annotatedTarget """Beginning in 2016, nine SASAP working groups formed – each composed of between 12 and 24 knowledge experts from a range of disciplines, backgrounds, and regions. Each participant brought his or her data and experiences for synthesis and analysis, while NCEAS provided logistical and technical support to facilitate each group’s innovative work.
-
-Each of the nine groups focused on specific issues related to salmon and people in Alaska:
-
-Four SASAP groups were tasked with integrating knowledge across multiple disciplines to understand the fundamental state of knowledge of Alaska’s salmon systems. The work of each group is presented for each of the major watersheds in Alaska in the Region section (https://alaskasalmonandpeople.org/regions/).
-
-An additional five working groups were selected to focus on specific research questions that provide insight into the pressures on salmon and salmon communities, as well as options for response to those pressures. Their work is presented in the Special Topics section (https://alaskasalmonandpeople.org/topics/).""" ;
-   <http://purl.org/dc/elements/1.1/source> "https://alaskasalmonandpeople.org/about/process-people/"
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00054> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
-   owl:annotatedTarget "Working Group" ;
-   rdfs:comment "Populates the SASAP Data Portal (https://knb.ecoinformatics.org/portals/SASAP/Data) faceted search field, 'Working Group'"
- ] .
-
-
-###  http://purl.dataone.org/odo/salmon_00064
-<http://purl.dataone.org/odo/salmon_00064> rdf:type owl:Class ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:48:44Z"^^xsd:dateTime ;
-                                           rdfs:label "Person"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "https://schema.org/Person" .
-
-
-###  http://purl.dataone.org/odo/salmon_00097
-<http://purl.dataone.org/odo/salmon_00097> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00098> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T21:04:36Z"^^xsd:dateTime ;
-                                           rdfs:label "Indigenous organization"@en .
-
-
-###  http://purl.dataone.org/odo/salmon_00098
-<http://purl.dataone.org/odo/salmon_00098> rdf:type owl:Class ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T21:14:05Z"^^xsd:dateTime ;
-                                           rdfs:label "Organization"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "https://schema.org/Organization" .
-
-
-###  http://purl.dataone.org/odo/salmon_00101
-<http://purl.dataone.org/odo/salmon_00101> rdf:type owl:Class ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-03-29T17:33:25Z"^^xsd:dateTime ;
-                                           rdfs:label "Data corpus"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A collection of datasets." ;
-                                           <http://www.w3.org/2004/02/skos/core#relatedMatch> "https://schema.org/Collection" .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00101> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "A collection of datasets." ;
-   <http://purl.org/dc/elements/1.1/source> "http://orcid.org/0000-0002-5300-3075"
- ] .
-
-
-###  http://purl.dataone.org/odo/salmon_00121
-<http://purl.dataone.org/odo/salmon_00121> rdf:type owl:Class ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-03-30T20:31:09Z"^^xsd:dateTime ;
-                                           rdfs:label "Project"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "https://schema.org/Project" .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00121> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim." ;
-   <http://purl.org/dc/elements/1.1/source> "https://schema.org/Project"
- ] .
-
-
 ###  http://purl.dataone.org/odo/salmon_00124
 <http://purl.dataone.org/odo/salmon_00124> rdf:type owl:Class ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
@@ -415,17 +325,17 @@ aquatic feature""" ;
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00125> ;
-   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
-   owl:annotatedTarget "The term body of water most often refers to large accumulations of water, such as oceans, seas, and lakes, but it includes smaller pools of water such as ponds, wetlands, or more rarely, puddles. A body of water does not have to be still or contained; Rivers, streams, canals, and other geographical features where water moves from one place to another are also considered bodies of water." ;
-   <http://purl.org/dc/elements/1.1/source> "https://en.wikipedia.org/wiki/Body_of_water"
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00125> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "An accumulation of water of varying size." ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Body_of_water 
 https://www.wikidata.org/wiki/Q15324"""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00125> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "The term body of water most often refers to large accumulations of water, such as oceans, seas, and lakes, but it includes smaller pools of water such as ponds, wetlands, or more rarely, puddles. A body of water does not have to be still or contained; Rivers, streams, canals, and other geographical features where water moves from one place to another are also considered bodies of water." ;
+   <http://purl.org/dc/elements/1.1/source> "https://en.wikipedia.org/wiki/Body_of_water"
  ] .
 
 
@@ -690,11 +600,7 @@ Fletcher, W.J., Chesson, J. Fisher, M., Sainsbury K.J., Hundloe, T. Smith A.D.M.
                                            <http://purl.org/dc/elements/1.1/description> "Equipment which is used to harvest aquatic resources, and in particular fish(es)." ;
                                            rdfs:comment """[ADDRESS THIS COMMENT, THEN DELETE]
 
-NOTE: was called 'Fish collection method'
-
-1. Could use some input on subclass hierarchy. E.g. 'Hand collection' includes methods which are largely done with tools that can be operated by hand. 'Netting' includes things like gillnets and seines, which, while largely set from fishing vessels (particularly in commercial fisheries), can also be set by hand at smaller scales.
-
-2. update subclass labels + definitions to better suit the new 'Fishing gear type' superclass""" ;
+Could use some input on subclass hierarchy. E.g. 'Hand collection' includes methods which are largely done with tools that can be operated by hand. 'Netting' includes things like gillnets and seines, which, while largely set from fishing vessels (particularly in commercial fisheries), can also be set by hand at smaller scales.""" ;
                                            rdfs:label "Fishing gear type"@en .
 
 [ rdf:type owl:Axiom ;
@@ -1090,23 +996,6 @@ https://www.wikidata.org/wiki/Q15615109"""
  ] .
 
 
-###  http://purl.dataone.org/odo/salmon_00174
-<http://purl.dataone.org/odo/salmon_00174> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00098> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-04-02T20:22:02Z"^^xsd:dateTime ;
-                                           rdfs:label "University"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "An institution of higher education and research, which grants academic degrees in a variety of subjects, and provides both undergraduate education and postgraduate education." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "http://vivoweb.org/ontology/core#University" .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00174> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "An institution of higher education and research, which grants academic degrees in a variety of subjects, and provides both undergraduate education and postgraduate education." ;
-   <http://purl.org/dc/elements/1.1/source> "http://vivoweb.org/ontology/core#University"
- ] .
-
-
 ###  http://purl.dataone.org/odo/salmon_00175
 <http://purl.dataone.org/odo/salmon_00175> rdf:type owl:Class ;
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00137> ;
@@ -1173,40 +1062,6 @@ https://www.wikidata.org/wiki/Q188989""" ;
  ] .
 
 
-###  http://purl.dataone.org/odo/salmon_00178
-<http://purl.dataone.org/odo/salmon_00178> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00098> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-04-05T19:57:33Z"^^xsd:dateTime ;
-                                           rdfs:label "Independent research institute"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A research institute which is not part of a university, government, hospital or corporation. An independent research institute may have a close relationship with a larger institution such as a university, but is not part of the larger insitution and operates under its own authority." ;
-                                           <http://www.w3.org/2004/02/skos/core#relatedMatch> "http://vivoweb.org/ontology/core#ResearchOrganization" .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00178> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "A research institute which is not part of a university, government, hospital or corporation. An independent research institute may have a close relationship with a larger institution such as a university, but is not part of the larger insitution and operates under its own authority." ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Category:Independent_research_institutes#:~:text=From%20Wikipedia%2C%20the%20free%20encyclopedia,operate%20under%20their%20own%20authority."
- ] .
-
-
-###  http://purl.dataone.org/odo/salmon_00179
-<http://purl.dataone.org/odo/salmon_00179> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00098> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-04-05T20:05:34Z"^^xsd:dateTime ;
-                                           rdfs:label "Investing firm"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A financial institution principally engaged in investing in securites (i.e. a tradable financial asset)." .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00179> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "A financial institution principally engaged in investing in securites (i.e. a tradable financial asset)." ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Investment_company 
-https://www.wikidata.org/wiki/Q1752459"""
- ] .
-
-
 ###  http://purl.dataone.org/odo/salmon_00182
 <http://purl.dataone.org/odo/salmon_00182> rdf:type owl:Class ;
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00205> ;
@@ -1221,15 +1076,6 @@ https://www.wikidata.org/wiki/Q1752459"""
    owl:annotatedTarget "The manner, procedure or technique by which a morphological or physiological state or property in a single fish or sample or a group of fish(es) or samples is assessed and a quantitative or qualitative value assigned." ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://purl.obolibrary.org/obo/MMO_0000000"
  ] .
-
-
-###  http://purl.dataone.org/odo/salmon_00183
-<http://purl.dataone.org/odo/salmon_00183> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00098> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-04-06T17:24:47Z"^^xsd:dateTime ;
-                                           rdfs:label "Consultancy (?)"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#altLabel> "Consulting firm" .
 
 
 ###  http://purl.dataone.org/odo/salmon_00184
@@ -1289,7 +1135,7 @@ http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25150""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00187
 <http://purl.dataone.org/odo/salmon_00187> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00184> ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00407> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-06T22:51:22Z"^^xsd:dateTime ;
                                            rdfs:label "Total age"@en ;
@@ -1298,7 +1144,7 @@ http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25150""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00188
 <http://purl.dataone.org/odo/salmon_00188> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00184> ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00407> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-06T23:10:05Z"^^xsd:dateTime ;
                                            rdfs:label "Freshwater age"@en ;
@@ -1314,7 +1160,7 @@ http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25150""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00189
 <http://purl.dataone.org/odo/salmon_00189> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00184> ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00407> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-06T23:14:20Z"^^xsd:dateTime ;
                                            rdfs:label "Saltwater age"@en ;
@@ -1481,7 +1327,7 @@ https://www.wikidata.org/wiki/Q159675"""
 
 ###  http://purl.dataone.org/odo/salmon_00200
 <http://purl.dataone.org/odo/salmon_00200> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00184> ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00408> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-09T18:49:30Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "e.g. An age written in European notation as '1.3' is interpreted as 1 year over-wintered in freshwater and 3 years in the ocean. The total age is 4 years (1 + 3 years). The Gilbert-Rich equivalent age is written as '5sub2'." ;
@@ -1505,7 +1351,7 @@ https://www.wikidata.org/wiki/Q159675"""
 
 ###  http://purl.dataone.org/odo/salmon_00201
 <http://purl.dataone.org/odo/salmon_00201> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00184> ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00408> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-09T18:52:00Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "e.g. An age written in Gilbert-Rich notation as '5sub2' (spoken as \"five sub two\") is interpreted as a fish that is in its fifth year of life (i.e. a fish that will be 5 on its next \"birthday\" or the number of winters from its deposition in the gravel as an egg to the time of sampling) and which migrated to the ocean during its second year of life. The European notation equivalent age is written as '1.3'." ;
@@ -1617,7 +1463,7 @@ body of marine water""" ;
 
 1. delete this entirely? or keep and...
 2. make measurement methods instances?""" ;
-                                           rdfs:label "Measurement method (?)"@en ;
+                                           rdfs:label "Measurement method -- DELETE THIS (?)"@en ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "The manner, procedure or technique by which a morphological or physiological state or property in a single individual or sample or a group of individuals or samples is assessed and a quantitative or qualitative value assigned." .
 
 [ rdf:type owl:Axiom ;
@@ -1642,23 +1488,6 @@ body of marine water""" ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A MeasurementType describes the type of a Measurement in which the Measurement would follow the associated Protocol to record the value of the associated Characteristic of the associated Entity using the associated Standard. Any of these associated properties may be omitted, in which case the MeasurementType is only constrained by the provided associations. A MeasurementType is a hypothetical construct, in that it is not associated with a particular instance of a Measurement." ;
    <http://purl.org/dc/elements/1.1/source> "http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType"
- ] .
-
-
-###  http://purl.dataone.org/odo/salmon_00207
-<http://purl.dataone.org/odo/salmon_00207> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00098> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-04-12T23:49:48Z"^^xsd:dateTime ;
-                                           rdfs:label "Academic department"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A distinct, usually specialized educational unit within an educational organization." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "http://vivoweb.org/ontology/core#AcademicDepartment" .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00207> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "A distinct, usually specialized educational unit within an educational organization." ;
-   <http://purl.org/dc/elements/1.1/source> "http://vivoweb.org/ontology/core#AcademicDepartment"
  ] .
 
 
@@ -1696,10 +1525,15 @@ taxon""" ;
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00206> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-14T18:23:43Z"^^xsd:dateTime ;
-                                           rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
+                                           rdfs:label "Environmental measurement type"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A measurement type which pertains to some non-living chemical or physical component of the environment." .
 
-add definition""" ;
-                                           rdfs:label "Environmental measurement type (?)"@en .
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00214> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A measurement type which pertains to some non-living chemical or physical component of the environment." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Abiotic_component"
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_00215
@@ -1719,7 +1553,7 @@ by setting equivalence classes, common names ended up as subclasses under taxon 
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-14T19:59:20Z"^^xsd:dateTime ;
                                            rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
 
-add other potential sex classifications""" ;
+revisit this definition of 'sex' -- PATO has some potentially better definitions (see biological sex: http://purl.obolibrary.org/obo/PATO_0000047, and phenotypic sex: http://purl.obolibrary.org/obo/PATO_0001894)""" ;
                                            rdfs:label "Fish sex measurement type (?)"@en ;
                                            <http://www.w3.org/2004/02/skos/core#closeMatch> """http://purl.dataone.org/odo/ECSO_00002948 
 http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C28421""" ;
@@ -2021,10 +1855,9 @@ https://www.wikidata.org/wiki/Q63565252"""
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00167> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-15T19:38:17Z"^^xsd:dateTime ;
-                                           rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
-
-add definition""" ;
-                                           rdfs:label "Fish growth rate measurement type (?)"@en .
+                                           <http://purl.org/dc/elements/1.1/description> "Fish growth rates are often estimated using proxy measurements, such as the space or distance between scale circuli. Therefore, growth rate measurement types may not actually be a measured rate, but rather a linear measurement which is used to approximate a rate." ;
+                                           rdfs:label "Fish growth rate measurement type"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The rate, or speed, at which the size of a fish increases." .
 
 
 ###  http://purl.dataone.org/odo/salmon_00235
@@ -2032,11 +1865,26 @@ add definition""" ;
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00234> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-15T19:38:49Z"^^xsd:dateTime ;
-                                           <http://purl.org/dc/elements/1.1/description> "describe method used to determine distance here" ;
+                                           <http://purl.org/dc/elements/1.1/description> "Circuli are more widely spaced in warmer months when food is abundant and growth is rapid, and more narrowly spaced in colder months when food availability is low and growth slows." ;
                                            rdfs:comment """[ADDRESS COMMENT, THEN DELETE] 
 
-attach oboe protocol""" ;
-                                           rdfs:label "Distance between scale circuli (?)"@en .
+may want to attach oboe:Protocol""" ;
+                                           rdfs:label "Distance between scale circuli"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The measured distance between the fine ridges of a scale (i.e. circuli) which are laid down annually in a circular pattern around the focus, or center, of a scale as the growth of the fish proceeds." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00235> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "Circuli are more widely spaced in warmer months when food is abundant and growth is rapid, and more narrowly spaced in colder months when food availability is low and growth slows." ;
+   <http://purl.org/dc/elements/1.1/source> "https://spo.nmfs.noaa.gov/sites/default/files/legacy-pdfs/leaflet488.pdf"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00235> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The measured distance between the fine ridges of a scale (i.e. circuli) which are laid down annually in a circular pattern around the focus, or center, of a scale as the growth of the fish proceeds." ;
+   <http://purl.org/dc/elements/1.1/source> "https://spo.nmfs.noaa.gov/sites/default/files/legacy-pdfs/leaflet488.pdf"
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_00236
@@ -2061,7 +1909,9 @@ attach oboe protocol""" ;
                                            owl:disjointWith <http://purl.dataone.org/odo/salmon_00238> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-15T20:51:04Z"^^xsd:dateTime ;
-                                           rdfs:label "Male"@en .
+                                           rdfs:label "Male"@en ;
+                                           owl:equivalentClass "http://purl.obolibrary.org/obo/PATO_0000384" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A biological sex quality inhering in an individual or a population whose sex organs contain only male gametes." .
 
 
 ###  http://purl.dataone.org/odo/salmon_00238
@@ -2069,7 +1919,9 @@ attach oboe protocol""" ;
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00216> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-15T20:51:08Z"^^xsd:dateTime ;
-                                           rdfs:label "Female"@en .
+                                           rdfs:label "Female"@en ;
+                                           owl:equivalentClass "http://purl.obolibrary.org/obo/PATO_0000383" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A biological sex quality inhering in an individual or a population that only produces gametes that can be fertilised by male gametes." .
 
 
 ###  http://purl.dataone.org/odo/salmon_00239
@@ -2383,8 +2235,7 @@ http://www.fishbase.org/summary/244""" ;
 #################################################################
 
 ###  http://purl.dataone.org/odo/salmon_00002
-<http://purl.dataone.org/odo/salmon_00002> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+<http://purl.dataone.org/odo/salmon_00002> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:27:29Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> """Although relatively small in landmass (4th smallest region) the total expanse of the Alaska Peninsula and Aleutian Island region is enormous, spanning over 1600 km (1000 miles) and 10 degrees of longitude.
@@ -2422,8 +2273,7 @@ https://www.wikidata.org/wiki/Q119285"""
 
 
 ###  http://purl.dataone.org/odo/salmon_00003
-<http://purl.dataone.org/odo/salmon_00003> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+<http://purl.dataone.org/odo/salmon_00003> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:27:43Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> """In the Arctic region of Alaska, connections between salmon and people are in their infancy. Salmon are just one harbinger of change in this region.
@@ -2461,8 +2311,7 @@ https://www.wikidata.org/wiki/Q3245148"""
 
 
 ###  http://purl.dataone.org/odo/salmon_00004
-<http://purl.dataone.org/odo/salmon_00004> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+<http://purl.dataone.org/odo/salmon_00004> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:27:48Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> """Bristol Bay is sockeye salmon country. The region is a land of great inland lakes, ideally suited to the juvenile life of sockeye salmon. The habitats here are virtually pristine and intact with a notable absence of mining and offshore oil and gas exploration in the region. The long proposed Pebble Mine, situated at the intersection between the Nushagak River and Kvichak River watersheds, would unquestionably and permanently change this salmon landscape.
@@ -2500,8 +2349,7 @@ https://www.wikidata.org/wiki/Q917872"""
 
 
 ###  http://purl.dataone.org/odo/salmon_00005
-<http://purl.dataone.org/odo/salmon_00005> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+<http://purl.dataone.org/odo/salmon_00005> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:27:57Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> """Despite being the smallest salmon-people region of Alaska (6,587 km²), Chignik is remarkably rich in habitat diversity–which translates into biological diversity of its salmon. The Chignik region is home to multiple dispersed communities such as Chignik Lake, Chignik Lagoon, Chignik Bay, Perryville, and Ivanof Bay.
@@ -2532,8 +2380,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 
 
 ###  http://purl.dataone.org/odo/salmon_00006
-<http://purl.dataone.org/odo/salmon_00006> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+<http://purl.dataone.org/odo/salmon_00006> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:28:08Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> """Home to over 60% of Alaska’s residents, the Cook Inlet region may provide a glimpse of the future. Issues of urbanization, road building, and the rise of invasive species are increasingly prominent here. These changes are set within a context of a changing climate and increased conflict among user groups for limited salmon resources.
@@ -2571,8 +2418,7 @@ https://www.wikidata.org/wiki/Q5166925"""
 
 
 ###  http://purl.dataone.org/odo/salmon_00007
-<http://purl.dataone.org/odo/salmon_00007> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+<http://purl.dataone.org/odo/salmon_00007> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:28:12Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> """Fewer than 2500 people live permanently in the Copper River region, an area comparable in size to the state of West Virginia. Sockeye salmon are dominant here, given the multiple large lakes available for rearing juvenile salmon. Though less abundant than sockeye, king salmon are deeply important to all salmon-connected people. Kings have declined in number since 2007.
@@ -2610,8 +2456,7 @@ https://www.wikidata.org/wiki/Q1131444"""
 
 
 ###  http://purl.dataone.org/odo/salmon_00008
-<http://purl.dataone.org/odo/salmon_00008> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+<http://purl.dataone.org/odo/salmon_00008> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:28:29Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> """The abundance of salmon returning to the largest island in Alaska remain high, though sociocultural challenges loom as large as the 925 glaciers that cling to the island’s coastal and interior mountains.
@@ -2649,8 +2494,7 @@ https://www.wikidata.org/wiki/Q514093"""
 
 
 ###  http://purl.dataone.org/odo/salmon_00009
-<http://purl.dataone.org/odo/salmon_00009> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+<http://purl.dataone.org/odo/salmon_00009> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:28:35Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> """Straddling the Arctic Circle, the Kotzebue region is twice the size of West Virginia and categorized as among the driest areas of Alaska. Chum salmon is the primary species in this region and is harvested by local users in both subsistence and commercial fisheries.
@@ -2681,8 +2525,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 
 
 ###  http://purl.dataone.org/odo/salmon_00010
-<http://purl.dataone.org/odo/salmon_00010> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+<http://purl.dataone.org/odo/salmon_00010> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:28:48Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> """The Kuskokwim region is the 4th largest of Alaska, and at 154,168 km² is comparable in size to the state of Georgia. The region drains the Kuskokwim – one of the great rivers of the world. The salmon-producing habitat of the Kuskokwim region is diverse and productive. Drier than the neighboring Bristol Bay region, the Kuskokwim region has a larger amount of burn area from forest fires than all other regions but the Yukon.
@@ -2713,8 +2556,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 
 
 ###  http://purl.dataone.org/odo/salmon_00011
-<http://purl.dataone.org/odo/salmon_00011> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+<http://purl.dataone.org/odo/salmon_00011> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:28:55Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> """Prince William Sound is a region of rain, icefields, and glaciers. Only two (Whittier and Valdez) of Prince William Sound’s largest human communities are connected via road. The terminus of the Alaska oil pipeline ends in this region and results in a fairly high footprint of human activity in a relatively small region. Pink salmon, chum salmon, and sockeye salmon fisheries are current mainstays of local communities with hatchery enhancement of these species (particularly pink salmon) a fundamental dynamic in the region.
@@ -2753,8 +2595,7 @@ https://www.wikidata.org/wiki/Q631282"""
 
 
 ###  http://purl.dataone.org/odo/salmon_00012
-<http://purl.dataone.org/odo/salmon_00012> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+<http://purl.dataone.org/odo/salmon_00012> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:28:59Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> """An average of two million pink salmon and 250,000 chum salmon return to the sub-Arctic region of Norton Sound, an area approximately twice the size of Massachusetts.
@@ -2792,8 +2633,7 @@ https://www.wikidata.org/wiki/Q1973692"""
 
 
 ###  http://purl.dataone.org/odo/salmon_00013
-<http://purl.dataone.org/odo/salmon_00013> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+<http://purl.dataone.org/odo/salmon_00013> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:29:03Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> """Approximately the size of the state of Kansas, the Southeast region is categorized by thousands of small coastal watersheds that provide ideal spawning habitat for pink salmon and chum salmon in particular. All five species are caught and return to this region. In terms of total abundance of salmon, Southeast Alaska dominates the state. Managing and conserving salmon populations that move beyond international borders is a key challenge here as many of the Chinook salmon caught in Southeast were hatched outside Alaska.
@@ -2834,8 +2674,7 @@ https://www.wikidata.org/wiki/Q198710"""
 
 
 ###  http://purl.dataone.org/odo/salmon_00014
-<http://purl.dataone.org/odo/salmon_00014> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00001> ;
+<http://purl.dataone.org/odo/salmon_00014> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-24T21:29:06Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> """Larger than the state of Texas and home to the third longest river in the United States, the Yukon region is a governance mosaic of state and federal fisheries management.
@@ -2864,8 +2703,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 
 
 ###  http://purl.dataone.org/odo/salmon_00027
-<http://purl.dataone.org/odo/salmon_00027> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+<http://purl.dataone.org/odo/salmon_00027> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:03:19Z"^^xsd:dateTime ;
                                            rdfs:label "Alaska Department of Commerce, Community, and Economic Development"@en ;
@@ -2881,8 +2719,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 
 
 ###  http://purl.dataone.org/odo/salmon_00028
-<http://purl.dataone.org/odo/salmon_00028> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+<http://purl.dataone.org/odo/salmon_00028> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:03:25Z"^^xsd:dateTime ;
                                            rdfs:label "Alaska Department of Fish and Game (all departments)"@en ;
@@ -2898,8 +2735,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 
 
 ###  http://purl.dataone.org/odo/salmon_00029
-<http://purl.dataone.org/odo/salmon_00029> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+<http://purl.dataone.org/odo/salmon_00029> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:03:30Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The CFEC website is accessible at: https://cfec.state.ak.us/" ;
@@ -2916,8 +2752,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 
 
 ###  http://purl.dataone.org/odo/salmon_00030
-<http://purl.dataone.org/odo/salmon_00030> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+<http://purl.dataone.org/odo/salmon_00030> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:03:36Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The Division of Commercial Fisheries website is accessible at: https://www.adfg.alaska.gov/index.cfm?adfg=fishingcommercial.main" ;
@@ -2933,8 +2768,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 
 
 ###  http://purl.dataone.org/odo/salmon_00031
-<http://purl.dataone.org/odo/salmon_00031> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+<http://purl.dataone.org/odo/salmon_00031> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:03:57Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The Arctic-Yukon-Kuskokwim (AYK) Region encompasses the coastal waters of Alaska and includes the rivers and streams that drain into the Bering, Chukchi, and Beaufort Seas. It stretches from its boundary at Cape Newenham with the Bristol Bay area to the border with Canada on the Arctic Ocean. The Yukon River, with the fifth largest drainage in North America, lies within this management region, as do many other major rivers; the Kuskokwim being second in size next to the Yukon. With the exception of Fairbanks, Bethel, and Nome, this is a region of villages. Salmon and herring are the most important fisheries resources in this region. Large numbers of salmon are taken for subsistence and subsistence harvests can equal or surpass the numbers of fish harvested in commercial fisheries, especially Chinook salmon. King crab is harvested near Nome in both commercial and subsistence fisheries. Whitefish are also important to the residents of this region." ;
@@ -2951,8 +2785,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 
 
 ###  http://purl.dataone.org/odo/salmon_00032
-<http://purl.dataone.org/odo/salmon_00032> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+<http://purl.dataone.org/odo/salmon_00032> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:02Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "Central Region Alaska commercial fisheries are composed of four distinct management areas that include Bristol Bay, Prince William Sound and Copper River, Upper Cook Inlet, and Lower Cook Inlet. Although all 5 species of salmon are harvested in each area, sockeye and pink salmon are the most abundant and most valuable. This area encompasses some of the largest and most valuable salmon fisheries in the world. From Bristol Bay, home of the largest sockeye salmon fishery in the world, to the Copper River where sockeye and Chinook salmon fetch some of the highest prices per pound paid to commercial fishermen. Cook Inlet commercial fisheries occur near the largest population center in Alaska, providing salmon to numerous niche and local markets, as well as fresh salmon to markets in other states. Prince William Sound adds productive healthy pink, chum, and sockeye salmon fisheries to the region. Southcentral groundfish fisheries are small, yet diverse, targeting pollock, Pacific cod, rockfish, sablefish, lingcod, and skate while small shrimp and scallop fisheries in Prince William Sound cater predominately to local markets. Southcentral commercial fisheries are of tremendous importance and an integral part of many communities and local economies in the state." ;
@@ -2968,8 +2801,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 
 
 ###  http://purl.dataone.org/odo/salmon_00033
-<http://purl.dataone.org/odo/salmon_00033> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+<http://purl.dataone.org/odo/salmon_00033> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:07Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The Southeast Alaska/Yakutat Region (Region I) consists of Alaska waters between Cape Suckling on the north and Dixon Entrance on the south. Salmon are commercially harvested in Southeast Alaska with purse seines and drift gillnets; in Yakutat with set gillnets; and in both areas with hand and power troll gear. Herring are harvested in winter bait, sac roe, spawn-on-kelp, and bait pound fisheries. Miscellaneous shellfish (sea cucumber, sea urchins, and geoduck clams) are harvested in dive fisheries in the region. The Alaska Department of Fish and Game (ADF&G) has management jurisdiction over all groundfish resources within state waters in Region I. In addition, the State has management authority for Demersal Shelf Rockfish, ling cod, and black and blue rock fish in both state and federal waters. There are several commercially important shellfish species in Southeast Alaska. They include golden and red king crab, Dungeness crab, Tanner crab, and pandalid shrimp." ;
@@ -2986,8 +2818,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 
 
 ###  http://purl.dataone.org/odo/salmon_00034
-<http://purl.dataone.org/odo/salmon_00034> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+<http://purl.dataone.org/odo/salmon_00034> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:11Z"^^xsd:dateTime ;
                                            rdfs:label "Alaska Department of Fish and Game, Division of Habitat"@en ;
@@ -3002,8 +2833,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 
 
 ###  http://purl.dataone.org/odo/salmon_00035
-<http://purl.dataone.org/odo/salmon_00035> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+<http://purl.dataone.org/odo/salmon_00035> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:16Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The Division of Sport Fisheries provides the following core services: (a) fisheries management, (b) fisheries research, (c) fisheries enhancement, (d) protection and restoration of fish habitats for the ebefit of fish and sport anglers, (e) communication and outreach, and (f) providing leadership and administrative support for the Division's core functions." ;
@@ -3026,8 +2856,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 
 
 ###  http://purl.dataone.org/odo/salmon_00036
-<http://purl.dataone.org/odo/salmon_00036> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+<http://purl.dataone.org/odo/salmon_00036> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:20Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The Subsistence Section provides the following core services: (a) Compile and analyze existing data; conduct research to gather information on the role of hunting and fishing by Alaskans for customary and traditional uses, (b) Disseminate current subsistence use information to the public; appropriate agencies and organizations; and fisheries and wildlife management divisions, (c) Assist the Board of Fisheries, the Board of Game, and the Joint Board of Fisheries and Game to evaluate customary and traditional uses of Alaska's fish and wildlife resources and amounts reasonably necessary for subsistence uses (ANS) of those resources, and (d) Assist fisheries and wildlife managers in preparing management plans to ensure information on customary and traditional uses and fish and wildlife harvests is incorporated." ;
@@ -3050,8 +2879,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 
 
 ###  http://purl.dataone.org/odo/salmon_00037
-<http://purl.dataone.org/odo/salmon_00037> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+<http://purl.dataone.org/odo/salmon_00037> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:24Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The Mark Lab (https://mtalab.adfg.alaska.gov/OTO/Default.aspx) tracks Alaska's salmon populations by deciphering thermal marks induced in fish otoliths. The Tag Lab (https://mtalab.adfg.alaska.gov/CWT/Default.aspx) is the centralized state resoruce for tracking salmon using microsopic coded wire tags. The Age Determination Lab (https://mtalab.adfg.alaska.gov/ADU/Default.aspx) is a statewide age reading service which produces data for fish and invertebrates sampled during commercial, population survey, and research harvests." ;
@@ -3076,8 +2904,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00038
-<http://purl.dataone.org/odo/salmon_00038> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+<http://purl.dataone.org/odo/salmon_00038> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:28Z"^^xsd:dateTime ;
                                            rdfs:label "Alaska Department of Labor and Workforce Development"@en ;
@@ -3094,8 +2921,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00039
-<http://purl.dataone.org/odo/salmon_00039> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+<http://purl.dataone.org/odo/salmon_00039> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:32Z"^^xsd:dateTime ;
                                            rdfs:label "Alaska Department of Natural Resources, Support Services Division, Information Resource Management"@en ;
@@ -3111,8 +2937,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00040
-<http://purl.dataone.org/odo/salmon_00040> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+<http://purl.dataone.org/odo/salmon_00040> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:39Z"^^xsd:dateTime ;
                                            rdfs:label "Alaska Department of Public Safety, Division of Alaska Wildlife Troopers"@en ;
@@ -3128,8 +2953,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00041
-<http://purl.dataone.org/odo/salmon_00041> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+<http://purl.dataone.org/odo/salmon_00041> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:43Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "Visit LFD's webpage at: https://www.legfin.akleg.gov/" ;
@@ -3146,8 +2970,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00042
-<http://purl.dataone.org/odo/salmon_00042> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00026> ;
+<http://purl.dataone.org/odo/salmon_00042> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:51Z"^^xsd:dateTime ;
                                            rdfs:label "Cook Inletkeeper"@en ;
@@ -3162,8 +2985,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00043
-<http://purl.dataone.org/odo/salmon_00043> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00025> ;
+<http://purl.dataone.org/odo/salmon_00043> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:57Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "Visit the National Park Service's website at: https://www.nps.gov/index.htm" ;
@@ -3181,8 +3003,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00044
-<http://purl.dataone.org/odo/salmon_00044> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00025> ;
+<http://purl.dataone.org/odo/salmon_00044> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:05:22Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "Visit the U.S. Census Bureau at: https://www.census.gov/" ;
@@ -3199,8 +3020,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00045
-<http://purl.dataone.org/odo/salmon_00045> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00025> ;
+<http://purl.dataone.org/odo/salmon_00045> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00069> <http://purl.dataone.org/odo/salmon_00068> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:05:30Z"^^xsd:dateTime ;
@@ -3218,8 +3038,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00046
-<http://purl.dataone.org/odo/salmon_00046> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00025> ;
+<http://purl.dataone.org/odo/salmon_00046> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:05:35Z"^^xsd:dateTime ;
                                            rdfs:label "United States Geologic Survey"@en ;
@@ -3236,8 +3055,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00047
-<http://purl.dataone.org/odo/salmon_00047> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00024> ;
+<http://purl.dataone.org/odo/salmon_00047> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:05:41Z"^^xsd:dateTime ;
                                            rdfs:label "Washington Department of Fish and Wildlife"@en ;
@@ -3254,8 +3072,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00049
-<http://purl.dataone.org/odo/salmon_00049> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00048> ;
+<http://purl.dataone.org/odo/salmon_00049> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:06:17Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "Visit the North Pacific Anadrmous Fish Commission's website at: https://npafc.org/" ;
@@ -3272,8 +3089,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00050
-<http://purl.dataone.org/odo/salmon_00050> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00097> ;
+<http://purl.dataone.org/odo/salmon_00050> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:06:45Z"^^xsd:dateTime ;
                                            rdfs:label "Orutsararmiut Traditional Native Council"@en ;
@@ -3289,8 +3105,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00055
-<http://purl.dataone.org/odo/salmon_00055> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00054> ;
+<http://purl.dataone.org/odo/salmon_00055> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:46:55Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The goal of the to Biophysical working group is to compare and contrast the status of Alaska salmon and their habitats across regions." ;
@@ -3305,8 +3120,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00056
-<http://purl.dataone.org/odo/salmon_00056> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00054> ;
+<http://purl.dataone.org/odo/salmon_00056> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00060> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:47:05Z"^^xsd:dateTime ;
@@ -3322,8 +3136,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00057
-<http://purl.dataone.org/odo/salmon_00057> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00054> ;
+<http://purl.dataone.org/odo/salmon_00057> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:47:08Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The goals of the Economic working group are to (1) identify important trends in the historical relationships between salmon and salmon users which may have been overlooked, (2) inform and support evidence-based policy aimed at sustainable and equitable decision making, and (3) compile, archive, and share relevant historical socioeconomic data about Alaska's salmon systems." ;
@@ -3339,56 +3152,49 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00058
-<http://purl.dataone.org/odo/salmon_00058> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00054> ;
+<http://purl.dataone.org/odo/salmon_00058> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:47:12Z"^^xsd:dateTime ;
                                            rdfs:label "Governance working group"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_00059
-<http://purl.dataone.org/odo/salmon_00059> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00054> ;
+<http://purl.dataone.org/odo/salmon_00059> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:47:18Z"^^xsd:dateTime ;
                                            rdfs:label "Salmon size working group"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_00060
-<http://purl.dataone.org/odo/salmon_00060> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00054> ;
+<http://purl.dataone.org/odo/salmon_00060> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:47:23Z"^^xsd:dateTime ;
                                            rdfs:label "Ocean climate working group"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_00061
-<http://purl.dataone.org/odo/salmon_00061> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00054> ;
+<http://purl.dataone.org/odo/salmon_00061> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:47:30Z"^^xsd:dateTime ;
                                            rdfs:label "Community monitoring working group"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_00062
-<http://purl.dataone.org/odo/salmon_00062> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00054> ;
+<http://purl.dataone.org/odo/salmon_00062> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:47:37Z"^^xsd:dateTime ;
                                            rdfs:label "Kenai lowlands working group"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_00063
-<http://purl.dataone.org/odo/salmon_00063> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00054> ;
+<http://purl.dataone.org/odo/salmon_00063> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:47:41Z"^^xsd:dateTime ;
                                            rdfs:label "Well being working group"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_00065
-<http://purl.dataone.org/odo/salmon_00065> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+<http://purl.dataone.org/odo/salmon_00065> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00113> ;
                                            <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00055> ,
                                                                                       <http://purl.dataone.org/odo/salmon_00059> ;
@@ -3398,8 +3204,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00068
-<http://purl.dataone.org/odo/salmon_00068> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+<http://purl.dataone.org/odo/salmon_00068> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00045> ;
                                            <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00055> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
@@ -3408,8 +3213,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00072
-<http://purl.dataone.org/odo/salmon_00072> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+<http://purl.dataone.org/odo/salmon_00072> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00100> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T19:55:01Z"^^xsd:dateTime ;
@@ -3418,8 +3222,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00074
-<http://purl.dataone.org/odo/salmon_00074> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+<http://purl.dataone.org/odo/salmon_00074> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00118> ;
                                            <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00103> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
@@ -3429,8 +3232,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00075
-<http://purl.dataone.org/odo/salmon_00075> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+<http://purl.dataone.org/odo/salmon_00075> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00100> ;
                                            <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00103> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
@@ -3440,8 +3242,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00076
-<http://purl.dataone.org/odo/salmon_00076> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+<http://purl.dataone.org/odo/salmon_00076> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00100> ;
                                            <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00103> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
@@ -3451,8 +3252,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00077
-<http://purl.dataone.org/odo/salmon_00077> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+<http://purl.dataone.org/odo/salmon_00077> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00100> ;
                                            <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00103> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
@@ -3462,8 +3262,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00078
-<http://purl.dataone.org/odo/salmon_00078> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+<http://purl.dataone.org/odo/salmon_00078> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00103> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:08:09Z"^^xsd:dateTime ;
@@ -3472,8 +3271,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00079
-<http://purl.dataone.org/odo/salmon_00079> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+<http://purl.dataone.org/odo/salmon_00079> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00113> ;
                                            <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00056> ,
                                                                                       <http://purl.dataone.org/odo/salmon_00063> ;
@@ -3484,8 +3282,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00080
-<http://purl.dataone.org/odo/salmon_00080> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+<http://purl.dataone.org/odo/salmon_00080> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00112> ;
                                            <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00056> ,
                                                                                       <http://purl.dataone.org/odo/salmon_00063> ;
@@ -3495,8 +3292,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00081
-<http://purl.dataone.org/odo/salmon_00081> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+<http://purl.dataone.org/odo/salmon_00081> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00117> ;
                                            <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00057> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
@@ -3505,8 +3301,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00082
-<http://purl.dataone.org/odo/salmon_00082> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+<http://purl.dataone.org/odo/salmon_00082> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00115> ;
                                            <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00058> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
@@ -3515,8 +3310,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00083
-<http://purl.dataone.org/odo/salmon_00083> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+<http://purl.dataone.org/odo/salmon_00083> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00116> ;
                                            <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00058> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
@@ -3525,8 +3319,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00084
-<http://purl.dataone.org/odo/salmon_00084> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+<http://purl.dataone.org/odo/salmon_00084> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00036> ;
                                            <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00058> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
@@ -3535,8 +3328,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00085
-<http://purl.dataone.org/odo/salmon_00085> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+<http://purl.dataone.org/odo/salmon_00085> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00114> ;
                                            <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00059> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
@@ -3546,8 +3338,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00086
-<http://purl.dataone.org/odo/salmon_00086> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+<http://purl.dataone.org/odo/salmon_00086> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00111> ;
                                            <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00063> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
@@ -3556,8 +3347,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00087
-<http://purl.dataone.org/odo/salmon_00087> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+<http://purl.dataone.org/odo/salmon_00087> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00110> ;
                                            <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00060> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
@@ -3566,8 +3356,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00088
-<http://purl.dataone.org/odo/salmon_00088> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+<http://purl.dataone.org/odo/salmon_00088> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00110> ;
                                            <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00060> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
@@ -3576,8 +3365,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00089
-<http://purl.dataone.org/odo/salmon_00089> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+<http://purl.dataone.org/odo/salmon_00089> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00110> ;
                                            <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00060> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
@@ -3587,8 +3375,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00090
-<http://purl.dataone.org/odo/salmon_00090> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+<http://purl.dataone.org/odo/salmon_00090> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00109> ;
                                            <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00061> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
@@ -3597,8 +3384,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00091
-<http://purl.dataone.org/odo/salmon_00091> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+<http://purl.dataone.org/odo/salmon_00091> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00104> ;
                                            <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00062> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
@@ -3607,8 +3393,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00092
-<http://purl.dataone.org/odo/salmon_00092> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+<http://purl.dataone.org/odo/salmon_00092> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00105> ;
                                            <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00062> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
@@ -3617,8 +3402,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00093
-<http://purl.dataone.org/odo/salmon_00093> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+<http://purl.dataone.org/odo/salmon_00093> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00106> ;
                                            <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00062> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
@@ -3628,8 +3412,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00094
-<http://purl.dataone.org/odo/salmon_00094> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+<http://purl.dataone.org/odo/salmon_00094> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00107> ;
                                            <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00062> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
@@ -3639,8 +3422,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00095
-<http://purl.dataone.org/odo/salmon_00095> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00064> ;
+<http://purl.dataone.org/odo/salmon_00095> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00108> ;
                                            <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00062> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
@@ -3650,8 +3432,7 @@ MTA Lab""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00100
-<http://purl.dataone.org/odo/salmon_00100> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00178> ;
+<http://purl.dataone.org/odo/salmon_00100> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-27T00:18:57Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The NCEAS website is accessible at: https://www.nceas.ucsb.edu/" ;
@@ -3670,8 +3451,7 @@ NCEAS""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00102
-<http://purl.dataone.org/odo/salmon_00102> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00101> ;
+<http://purl.dataone.org/odo/salmon_00102> rdf:type owl:NamedIndividual ;
                                            <http://purl.dataone.org/odo/salmon_00120> <http://purl.dataone.org/odo/salmon_00027> ,
                                                                                       <http://purl.dataone.org/odo/salmon_00028> ,
                                                                                       <http://purl.dataone.org/odo/salmon_00029> ,
@@ -3711,8 +3491,7 @@ NCEAS""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00103
-<http://purl.dataone.org/odo/salmon_00103> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00054> ;
+<http://purl.dataone.org/odo/salmon_00103> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T18:12:03Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> """An essential component of the SASAP working group process is the support each group received from a stellar group of “data wranglers”, a team of geospatial analysis experts from NCEAS known as the Data Task Force.
@@ -3735,8 +3514,7 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
 
 
 ###  http://purl.dataone.org/odo/salmon_00104
-<http://purl.dataone.org/odo/salmon_00104> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00178> ;
+<http://purl.dataone.org/odo/salmon_00104> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T22:57:11Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The KBNERR website is accessbile at: https://accs.uaa.alaska.edu/kbnerr/" ;
@@ -3745,8 +3523,7 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
 
 
 ###  http://purl.dataone.org/odo/salmon_00105
-<http://purl.dataone.org/odo/salmon_00105> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00174> ;
+<http://purl.dataone.org/odo/salmon_00105> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T22:57:21Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The Baylor University website is accessible at: https://www.baylor.edu/" ;
@@ -3754,8 +3531,7 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
 
 
 ###  http://purl.dataone.org/odo/salmon_00106
-<http://purl.dataone.org/odo/salmon_00106> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00207> ;
+<http://purl.dataone.org/odo/salmon_00106> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T22:57:58Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The USF School of Geosciences webpage is accessible at: http://hennarot.forest.usf.edu/main/depts/geosci/" ;
@@ -3763,8 +3539,7 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
 
 
 ###  http://purl.dataone.org/odo/salmon_00107
-<http://purl.dataone.org/odo/salmon_00107> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00207> ;
+<http://purl.dataone.org/odo/salmon_00107> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T22:58:06Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The UW School of Aquatic and Fishery Science webpage is accessible at: https://fish.uw.edu/" ;
@@ -3772,8 +3547,7 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
 
 
 ###  http://purl.dataone.org/odo/salmon_00108
-<http://purl.dataone.org/odo/salmon_00108> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00178> ;
+<http://purl.dataone.org/odo/salmon_00108> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T22:59:15Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The Smithsonian Environmental Research Center website is accessible at: https://serc.si.edu/" ;
@@ -3783,8 +3557,7 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
 
 
 ###  http://purl.dataone.org/odo/salmon_00109
-<http://purl.dataone.org/odo/salmon_00109> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00207> ;
+<http://purl.dataone.org/odo/salmon_00109> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T22:59:25Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The Department of Fisheries and Wildlife Quantitative Fisheries Center webpage is accessible at: https://www.canr.msu.edu/qfc/" ;
@@ -3792,8 +3565,7 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
 
 
 ###  http://purl.dataone.org/odo/salmon_00110
-<http://purl.dataone.org/odo/salmon_00110> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00026> ;
+<http://purl.dataone.org/odo/salmon_00110> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T22:59:33Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The Prince William Sound Center website is accessible at: https://pwssc.org/" ;
@@ -3802,8 +3574,7 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
 
 
 ###  http://purl.dataone.org/odo/salmon_00111
-<http://purl.dataone.org/odo/salmon_00111> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00183> ;
+<http://purl.dataone.org/odo/salmon_00111> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T22:59:44Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The Coastal Cultures Research website is accessible at: https://www.coastalculturesresearch.com/" ;
@@ -3812,8 +3583,7 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
 
 
 ###  http://purl.dataone.org/odo/salmon_00112
-<http://purl.dataone.org/odo/salmon_00112> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00207> ;
+<http://purl.dataone.org/odo/salmon_00112> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T22:59:49Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The UAF Alaska Native Studies and Rural Development webpage is accessible at: https://www.uaf.edu/dansrd/" ;
@@ -3822,8 +3592,7 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
 
 
 ###  http://purl.dataone.org/odo/salmon_00113
-<http://purl.dataone.org/odo/salmon_00113> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00207> ;
+<http://purl.dataone.org/odo/salmon_00113> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T22:59:55Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The UAF College of Fisheries & Ocean Sciences webpage is accessible at: https://www.uaf.edu/cfos/" ;
@@ -3831,8 +3600,7 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
 
 
 ###  http://purl.dataone.org/odo/salmon_00114
-<http://purl.dataone.org/odo/salmon_00114> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00207> ;
+<http://purl.dataone.org/odo/salmon_00114> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T23:00:02Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The UCSC Department of Ecology and Evolutionary Biology webpage is accessible at: https://www.eeb.ucsc.edu/" ;
@@ -3840,8 +3608,7 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
 
 
 ###  http://purl.dataone.org/odo/salmon_00115
-<http://purl.dataone.org/odo/salmon_00115> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00207> ;
+<http://purl.dataone.org/odo/salmon_00115> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T23:00:42Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The UAA Department of Anthropology webpage is accessible at: https://www.uaa.alaska.edu/academics/college-of-arts-and-sciences/departments/anthropology/" ;
@@ -3849,8 +3616,7 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
 
 
 ###  http://purl.dataone.org/odo/salmon_00116
-<http://purl.dataone.org/odo/salmon_00116> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00174> ;
+<http://purl.dataone.org/odo/salmon_00116> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T23:00:51Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The UAA website is accessible at: https://www.uaa.alaska.edu/" ;
@@ -3860,8 +3626,7 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
 
 
 ###  http://purl.dataone.org/odo/salmon_00117
-<http://purl.dataone.org/odo/salmon_00117> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00207> ;
+<http://purl.dataone.org/odo/salmon_00117> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T23:01:04Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The UAA Institute of Social and Economic Research webpage is accessible at: https://www.uaa.alaska.edu/research/institute-social-economic-research/" ;
@@ -3869,16 +3634,14 @@ The graphs, figures, and infograms generated by the Task Force greatly enhanced 
 
 
 ###  http://purl.dataone.org/odo/salmon_00118
-<http://purl.dataone.org/odo/salmon_00118> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00179> ;
+<http://purl.dataone.org/odo/salmon_00118> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T23:05:25Z"^^xsd:dateTime ;
                                            rdfs:label "Nautilus Impact Investing, LLC"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_00122
-<http://purl.dataone.org/odo/salmon_00122> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00121> ;
+<http://purl.dataone.org/odo/salmon_00122> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-30T20:31:38Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The SASAP project is a deep assessment of the state of knowledge of the biological, sociocultural, economic and governance dimensions of Alaska's salmon and the people who depend upon them. The SASAP project shares this knowledge with Alaska salmon users through comprehensive watershed-level summaries (Regions), focused research on specific salmon issues (Topics), and suppported links to SASAP's free, open-source datasets, accessible through the SASAP Data Portal (https://knb.ecoinformatics.org/portals/SASAP/Data)." ;
@@ -3903,8 +3666,7 @@ SASAP Project""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00180
-<http://purl.dataone.org/odo/salmon_00180> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00178> ;
+<http://purl.dataone.org/odo/salmon_00180> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-05T20:06:49Z"^^xsd:dateTime ;
                                            rdfs:comment "**Unsure how to classify this**" ;
@@ -3921,8 +3683,7 @@ SASAP Project""" ;
 
 
 ###  http://purl.dataone.org/odo/salmon_00181
-<http://purl.dataone.org/odo/salmon_00181> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/salmon_00178> ;
+<http://purl.dataone.org/odo/salmon_00181> rdf:type owl:NamedIndividual ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-05T20:19:55Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The National Historical Geographic Information System (NHGIS) provides easy access to summary tables and time series of population, housing, agriculture, and economic data, along with GIS-compatible boundary files, for years from 1790 through the present and for all levels of U.S. census geography, including states, counties, tracts, and blocks." ;
@@ -3944,6 +3705,30 @@ SASAP Project""" ;
    owl:annotatedTarget "A historical GIS project to create and freely disseminate a database incorporating all available aggregate census information for the United States between 1790 and 2010." ;
    <http://purl.org/dc/elements/1.1/source> "https://en.wikipedia.org/wiki/National_Historical_Geographic_Information_System"
  ] .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://purl.dataone.org/odo/salmon_00239>
+                <http://purl.dataone.org/odo/salmon_00240>
+                <http://purl.dataone.org/odo/salmon_00241>
+                <http://purl.dataone.org/odo/salmon_00242>
+                <http://purl.dataone.org/odo/salmon_00243>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://purl.dataone.org/odo/salmon_00244>
+                <http://purl.dataone.org/odo/salmon_00245>
+                <http://purl.dataone.org/odo/salmon_00246>
+                <http://purl.dataone.org/odo/salmon_00247>
+                <http://purl.dataone.org/odo/salmon_00248>
+              )
+] .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
