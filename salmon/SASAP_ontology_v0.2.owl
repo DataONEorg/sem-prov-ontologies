@@ -232,6 +232,25 @@ owl:sameAs rdf:type owl:AnnotationProperty .
                                           rdfs:label "isAdvisorTo"@en .
 
 
+###  http://purl.dataone.org/odo/SASAP_00409
+<http://purl.dataone.org/odo/SASAP_00409> rdf:type owl:ObjectProperty ;
+                                          owl:inverseOf <http://purl.dataone.org/odo/SASAP_00410> ;
+                                          rdfs:domain <http://purl.dataone.org/odo/SASAP_00098> ;
+                                          rdfs:range <http://purl.dataone.org/odo/SASAP_00101> ;
+                                          <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                          <http://purl.org/dc/elements/1.1/date> "2021-04-22T03:47:22Z"^^xsd:dateTime ;
+                                          rdfs:label "contributedDataTo"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_00410
+<http://purl.dataone.org/odo/SASAP_00410> rdf:type owl:ObjectProperty ;
+                                          rdfs:domain <http://purl.dataone.org/odo/SASAP_00101> ;
+                                          rdfs:range <http://purl.dataone.org/odo/SASAP_00098> ;
+                                          <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                          <http://purl.org/dc/elements/1.1/date> "2021-04-22T03:47:36Z"^^xsd:dateTime ;
+                                          rdfs:label "containsDataFrom"@en .
+
+
 ###  https://schema.org/member
 <https://schema.org/member> rdf:type owl:ObjectProperty ;
                             owl:inverseOf <https://schema.org/memberOf> ;
@@ -1128,6 +1147,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 ###  http://purl.dataone.org/odo/SASAP_00027
 <http://purl.dataone.org/odo/SASAP_00027> rdf:type owl:NamedIndividual ,
                                                    <http://purl.dataone.org/odo/SASAP_00024> ;
+                                          <http://purl.dataone.org/odo/SASAP_00409> <http://purl.dataone.org/odo/SASAP_00102> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:03:19Z"^^xsd:dateTime ;
                                           rdfs:label "Alaska Department of Commerce, Community, and Economic Development"@en ;
@@ -1145,6 +1165,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 ###  http://purl.dataone.org/odo/SASAP_00028
 <http://purl.dataone.org/odo/SASAP_00028> rdf:type owl:NamedIndividual ,
                                                    <http://purl.dataone.org/odo/SASAP_00024> ;
+                                          <http://purl.dataone.org/odo/SASAP_00409> <http://purl.dataone.org/odo/SASAP_00102> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:03:25Z"^^xsd:dateTime ;
                                           rdfs:label "Alaska Department of Fish and Game"@en ;
@@ -1162,6 +1183,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 ###  http://purl.dataone.org/odo/SASAP_00029
 <http://purl.dataone.org/odo/SASAP_00029> rdf:type owl:NamedIndividual ,
                                                    <http://purl.dataone.org/odo/SASAP_00024> ;
+                                          <http://purl.dataone.org/odo/SASAP_00409> <http://purl.dataone.org/odo/SASAP_00102> ;
                                           <https://schema.org/memberOf> <http://purl.dataone.org/odo/SASAP_00028> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:03:30Z"^^xsd:dateTime ;
@@ -1181,6 +1203,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 ###  http://purl.dataone.org/odo/SASAP_00030
 <http://purl.dataone.org/odo/SASAP_00030> rdf:type owl:NamedIndividual ,
                                                    <http://purl.dataone.org/odo/SASAP_00024> ;
+                                          <http://purl.dataone.org/odo/SASAP_00409> <http://purl.dataone.org/odo/SASAP_00102> ;
                                           <https://schema.org/memberOf> <http://purl.dataone.org/odo/SASAP_00028> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:03:36Z"^^xsd:dateTime ;
@@ -1199,6 +1222,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 ###  http://purl.dataone.org/odo/SASAP_00031
 <http://purl.dataone.org/odo/SASAP_00031> rdf:type owl:NamedIndividual ,
                                                    <http://purl.dataone.org/odo/SASAP_00024> ;
+                                          <http://purl.dataone.org/odo/SASAP_00409> <http://purl.dataone.org/odo/SASAP_00102> ;
                                           <https://schema.org/memberOf> <http://purl.dataone.org/odo/SASAP_00028> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:03:57Z"^^xsd:dateTime ;
@@ -1218,6 +1242,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 ###  http://purl.dataone.org/odo/SASAP_00032
 <http://purl.dataone.org/odo/SASAP_00032> rdf:type owl:NamedIndividual ,
                                                    <http://purl.dataone.org/odo/SASAP_00024> ;
+                                          <http://purl.dataone.org/odo/SASAP_00409> <http://purl.dataone.org/odo/SASAP_00102> ;
                                           <https://schema.org/memberOf> <http://purl.dataone.org/odo/SASAP_00028> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:02Z"^^xsd:dateTime ;
@@ -1236,6 +1261,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 ###  http://purl.dataone.org/odo/SASAP_00033
 <http://purl.dataone.org/odo/SASAP_00033> rdf:type owl:NamedIndividual ,
                                                    <http://purl.dataone.org/odo/SASAP_00024> ;
+                                          <http://purl.dataone.org/odo/SASAP_00409> <http://purl.dataone.org/odo/SASAP_00102> ;
                                           <https://schema.org/memberOf> <http://purl.dataone.org/odo/SASAP_00028> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:07Z"^^xsd:dateTime ;
@@ -1255,6 +1281,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 ###  http://purl.dataone.org/odo/SASAP_00034
 <http://purl.dataone.org/odo/SASAP_00034> rdf:type owl:NamedIndividual ,
                                                    <http://purl.dataone.org/odo/SASAP_00024> ;
+                                          <http://purl.dataone.org/odo/SASAP_00409> <http://purl.dataone.org/odo/SASAP_00102> ;
                                           <https://schema.org/memberOf> <http://purl.dataone.org/odo/SASAP_00028> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:11Z"^^xsd:dateTime ;
@@ -1272,6 +1299,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 ###  http://purl.dataone.org/odo/SASAP_00035
 <http://purl.dataone.org/odo/SASAP_00035> rdf:type owl:NamedIndividual ,
                                                    <http://purl.dataone.org/odo/SASAP_00024> ;
+                                          <http://purl.dataone.org/odo/SASAP_00409> <http://purl.dataone.org/odo/SASAP_00102> ;
                                           <https://schema.org/memberOf> <http://purl.dataone.org/odo/SASAP_00028> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:16Z"^^xsd:dateTime ;
@@ -1297,6 +1325,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 ###  http://purl.dataone.org/odo/SASAP_00036
 <http://purl.dataone.org/odo/SASAP_00036> rdf:type owl:NamedIndividual ,
                                                    <http://purl.dataone.org/odo/SASAP_00024> ;
+                                          <http://purl.dataone.org/odo/SASAP_00409> <http://purl.dataone.org/odo/SASAP_00102> ;
                                           <https://schema.org/memberOf> <http://purl.dataone.org/odo/SASAP_00028> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:20Z"^^xsd:dateTime ;
@@ -1322,6 +1351,7 @@ https://knb.ecoinformatics.org/view/doi%3A10.5063%2FF1WH2N8W"""
 ###  http://purl.dataone.org/odo/SASAP_00037
 <http://purl.dataone.org/odo/SASAP_00037> rdf:type owl:NamedIndividual ,
                                                    <http://purl.dataone.org/odo/SASAP_00024> ;
+                                          <http://purl.dataone.org/odo/SASAP_00409> <http://purl.dataone.org/odo/SASAP_00102> ;
                                           <https://schema.org/memberOf> <http://purl.dataone.org/odo/SASAP_00028> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:24Z"^^xsd:dateTime ;
@@ -1349,6 +1379,7 @@ MTA Lab""" ;
 ###  http://purl.dataone.org/odo/SASAP_00038
 <http://purl.dataone.org/odo/SASAP_00038> rdf:type owl:NamedIndividual ,
                                                    <http://purl.dataone.org/odo/SASAP_00024> ;
+                                          <http://purl.dataone.org/odo/SASAP_00409> <http://purl.dataone.org/odo/SASAP_00102> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:28Z"^^xsd:dateTime ;
                                           rdfs:label "Alaska Department of Labor and Workforce Development"@en ;
@@ -1367,6 +1398,7 @@ MTA Lab""" ;
 ###  http://purl.dataone.org/odo/SASAP_00039
 <http://purl.dataone.org/odo/SASAP_00039> rdf:type owl:NamedIndividual ,
                                                    <http://purl.dataone.org/odo/SASAP_00024> ;
+                                          <http://purl.dataone.org/odo/SASAP_00409> <http://purl.dataone.org/odo/SASAP_00102> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:32Z"^^xsd:dateTime ;
                                           rdfs:label "Alaska Department of Natural Resources, Support Services Division, Information Resource Management"@en ;
@@ -1384,6 +1416,7 @@ MTA Lab""" ;
 ###  http://purl.dataone.org/odo/SASAP_00040
 <http://purl.dataone.org/odo/SASAP_00040> rdf:type owl:NamedIndividual ,
                                                    <http://purl.dataone.org/odo/SASAP_00024> ;
+                                          <http://purl.dataone.org/odo/SASAP_00409> <http://purl.dataone.org/odo/SASAP_00102> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:39Z"^^xsd:dateTime ;
                                           rdfs:label "Alaska Department of Public Safety, Division of Alaska Wildlife Troopers"@en ;
@@ -1401,6 +1434,7 @@ MTA Lab""" ;
 ###  http://purl.dataone.org/odo/SASAP_00041
 <http://purl.dataone.org/odo/SASAP_00041> rdf:type owl:NamedIndividual ,
                                                    <http://purl.dataone.org/odo/SASAP_00024> ;
+                                          <http://purl.dataone.org/odo/SASAP_00409> <http://purl.dataone.org/odo/SASAP_00102> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:43Z"^^xsd:dateTime ;
                                           <http://purl.org/dc/elements/1.1/description> "LFD's webpage is accessible at: https://www.legfin.akleg.gov/" ;
@@ -1419,6 +1453,7 @@ MTA Lab""" ;
 ###  http://purl.dataone.org/odo/SASAP_00042
 <http://purl.dataone.org/odo/SASAP_00042> rdf:type owl:NamedIndividual ,
                                                    <http://purl.dataone.org/odo/SASAP_00026> ;
+                                          <http://purl.dataone.org/odo/SASAP_00409> <http://purl.dataone.org/odo/SASAP_00102> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:51Z"^^xsd:dateTime ;
                                           <http://purl.org/dc/elements/1.1/description> "The Cook Inletkeeper's website is accessible at: https://inletkeeper.org/" ;
@@ -1436,6 +1471,7 @@ MTA Lab""" ;
 ###  http://purl.dataone.org/odo/SASAP_00043
 <http://purl.dataone.org/odo/SASAP_00043> rdf:type owl:NamedIndividual ,
                                                    <http://purl.dataone.org/odo/SASAP_00025> ;
+                                          <http://purl.dataone.org/odo/SASAP_00409> <http://purl.dataone.org/odo/SASAP_00102> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:04:57Z"^^xsd:dateTime ;
                                           <http://purl.org/dc/elements/1.1/description> "Visit the National Park Service's website at: https://www.nps.gov/index.htm" ;
@@ -1455,6 +1491,7 @@ MTA Lab""" ;
 ###  http://purl.dataone.org/odo/SASAP_00044
 <http://purl.dataone.org/odo/SASAP_00044> rdf:type owl:NamedIndividual ,
                                                    <http://purl.dataone.org/odo/SASAP_00025> ;
+                                          <http://purl.dataone.org/odo/SASAP_00409> <http://purl.dataone.org/odo/SASAP_00102> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:05:22Z"^^xsd:dateTime ;
                                           <http://purl.org/dc/elements/1.1/description> "The U.S. Census Bureau's website is accessible at: https://www.census.gov/" ;
@@ -1474,6 +1511,7 @@ MTA Lab""" ;
 <http://purl.dataone.org/odo/SASAP_00045> rdf:type owl:NamedIndividual ,
                                                    <http://purl.dataone.org/odo/SASAP_00025> ;
                                           <http://purl.dataone.org/odo/SASAP_00069> <http://purl.dataone.org/odo/SASAP_00068> ;
+                                          <http://purl.dataone.org/odo/SASAP_00409> <http://purl.dataone.org/odo/SASAP_00102> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:05:30Z"^^xsd:dateTime ;
                                           rdfs:label "United States Fish and Wildlife Service"@en ;
@@ -1492,6 +1530,7 @@ MTA Lab""" ;
 ###  http://purl.dataone.org/odo/SASAP_00046
 <http://purl.dataone.org/odo/SASAP_00046> rdf:type owl:NamedIndividual ,
                                                    <http://purl.dataone.org/odo/SASAP_00025> ;
+                                          <http://purl.dataone.org/odo/SASAP_00409> <http://purl.dataone.org/odo/SASAP_00102> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:05:35Z"^^xsd:dateTime ;
                                           <http://purl.org/dc/elements/1.1/description> "The USGS website is accessible at: https://www.usgs.gov/" ;
@@ -1511,6 +1550,7 @@ MTA Lab""" ;
 ###  http://purl.dataone.org/odo/SASAP_00047
 <http://purl.dataone.org/odo/SASAP_00047> rdf:type owl:NamedIndividual ,
                                                    <http://purl.dataone.org/odo/SASAP_00024> ;
+                                          <http://purl.dataone.org/odo/SASAP_00409> <http://purl.dataone.org/odo/SASAP_00102> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:05:41Z"^^xsd:dateTime ;
                                           rdfs:label "Washington Department of Fish and Wildlife"@en ;
@@ -1529,6 +1569,7 @@ MTA Lab""" ;
 ###  http://purl.dataone.org/odo/SASAP_00049
 <http://purl.dataone.org/odo/SASAP_00049> rdf:type owl:NamedIndividual ,
                                                    <http://purl.dataone.org/odo/SASAP_00048> ;
+                                          <http://purl.dataone.org/odo/SASAP_00409> <http://purl.dataone.org/odo/SASAP_00102> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:06:17Z"^^xsd:dateTime ;
                                           <http://purl.org/dc/elements/1.1/description> "The North Pacific Anadrmous Fish Commission's website is accessbile at: https://npafc.org/" ;
@@ -1547,6 +1588,7 @@ MTA Lab""" ;
 ###  http://purl.dataone.org/odo/SASAP_00050
 <http://purl.dataone.org/odo/SASAP_00050> rdf:type owl:NamedIndividual ,
                                                    <http://purl.dataone.org/odo/SASAP_00097> ;
+                                          <http://purl.dataone.org/odo/SASAP_00409> <http://purl.dataone.org/odo/SASAP_00102> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:06:45Z"^^xsd:dateTime ;
                                           <http://purl.org/dc/elements/1.1/description> "The ONC website is accessible at: http://nativecouncil.org/welcome/" ;
@@ -2184,6 +2226,7 @@ SASAP Project""" ;
 ###  http://purl.dataone.org/odo/SASAP_00180
 <http://purl.dataone.org/odo/SASAP_00180> rdf:type owl:NamedIndividual ,
                                                    <http://purl.dataone.org/odo/SASAP_00178> ;
+                                          <http://purl.dataone.org/odo/SASAP_00409> <http://purl.dataone.org/odo/SASAP_00102> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-05T20:06:49Z"^^xsd:dateTime ;
                                           <http://purl.org/dc/elements/1.1/description> "The SALMoN website is accessible at: http://www.seakecology.org/" ;
@@ -2203,6 +2246,7 @@ SASAP Project""" ;
 ###  http://purl.dataone.org/odo/SASAP_00181
 <http://purl.dataone.org/odo/SASAP_00181> rdf:type owl:NamedIndividual ,
                                                    <http://purl.dataone.org/odo/SASAP_00178> ;
+                                          <http://purl.dataone.org/odo/SASAP_00409> <http://purl.dataone.org/odo/SASAP_00102> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-05T20:19:55Z"^^xsd:dateTime ;
                                           <http://purl.org/dc/elements/1.1/description> "The National Historical Geographic Information System (NHGIS) provides easy access to summary tables and time series of population, housing, agriculture, and economic data, along with GIS-compatible boundary files, for years from 1790 through the present and for all levels of U.S. census geography, including states, counties, tracts, and blocks." ;
@@ -2894,7 +2938,8 @@ SASAP Project""" ;
 
 
 ###  http://purl.dataone.org/odo/SASAP_00322
-<http://purl.dataone.org/odo/SASAP_00322> rdf:type owl:NamedIndividual ;
+<http://purl.dataone.org/odo/SASAP_00322> rdf:type owl:NamedIndividual ,
+                                                   <http://purl.dataone.org/odo/SASAP_00064> ;
                                           <http://purl.dataone.org/odo/SASAP_00066> <http://purl.dataone.org/odo/SASAP_00370> ;
                                           <http://purl.dataone.org/odo/SASAP_00254> <http://purl.dataone.org/odo/SASAP_00060> ;
                                           <http://purl.dataone.org/odo/SASAP_00257> <http://purl.dataone.org/odo/SASAP_00060> ;
