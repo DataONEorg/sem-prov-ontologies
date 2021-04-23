@@ -239,7 +239,8 @@ owl:sameAs rdf:type owl:AnnotationProperty .
                                           rdfs:range <http://purl.dataone.org/odo/SASAP_00101> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-22T03:47:22Z"^^xsd:dateTime ;
-                                          rdfs:label "contributedDataTo"@en .
+                                          rdfs:label "contributedDataTo"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.org/dc/elements/1.1/contributor> .
 
 
 ###  http://purl.dataone.org/odo/SASAP_00410
@@ -323,8 +324,8 @@ The bounding coordinates and shapefiles for each region are accessible at: https
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:01:09Z"^^xsd:dateTime ;
                                           rdfs:label "State government department, division, or agency"@en ;
                                           <http://www.w3.org/2004/02/skos/core#definition> "A permanent or semi-permanent state govenrment organization which is responsible for the oversight and administration of specific functions." ;
-                                          <http://www.w3.org/2004/02/skos/core#relatedMatch> """http://purl.bioontology.org/ontology/MESH/D013219 
-http://vivoweb.org/ontology/core#GovernmentAgency""" .
+                                          <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.bioontology.org/ontology/MESH/D013219> ,
+                                                                                             <http://vivoweb.org/ontology/core#GovernmentAgency> .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00024> ;
@@ -342,8 +343,8 @@ https://www.wikidata.org/wiki/Q327333"""
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:01:18Z"^^xsd:dateTime ;
                                           rdfs:label "Federal government department, division, or agency"@en ;
                                           <http://www.w3.org/2004/02/skos/core#definition> "A permanent or semi-permanent federal govenrment organization which is responsible for the oversight and administration of specific functions." ;
-                                          <http://www.w3.org/2004/02/skos/core#relatedMatch> """http://purl.bioontology.org/ontology/MESH/D035082 
-http://vivoweb.org/ontology/core#GovernmentAgency""" .
+                                          <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://vivoweb.org/ontology/core#GovernmentAgency> ,
+                                                                                             "http://purl.bioontology.org/ontology/MESH/D035082" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00025> ;
@@ -360,6 +361,7 @@ https://www.wikidata.org/wiki/Q327333"""
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:01:44Z"^^xsd:dateTime ;
                                           rdfs:label "Nonprofit organization"@en ;
+                                          owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54073> ;
                                           <http://www.w3.org/2004/02/skos/core#altLabel> """Nonprofit
 Non-profit
 Nonprofit organization
@@ -368,7 +370,14 @@ Nonprofit group
 Non-profit organization
 Not for profit organization""" ;
                                           <http://www.w3.org/2004/02/skos/core#definition> "An organization whose primary objective is to support some issue or matter of private interest or public concern for non-commercial purposes. Nonprofits generally do not operate to generate profit, and this characteristic is popularly considered to be the defining characterisitic of such organizations. However, a non-profit organization may accept, hold and disburse money and other things of value. It may also legally and ethically trade at a profit. The extent to which it can generate income may be constrained, or the use of those profits may be restricted." ;
-                                          <http://www.w3.org/2004/02/skos/core#exactMatch> "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54073" .
+                                          <http://www.w3.org/2004/02/skos/core#exactMatch> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54073> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00026> ;
+   owl:annotatedProperty owl:equivalentClass ;
+   owl:annotatedTarget <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54073> ;
+   rdfs:comment "This URI does not appear to dereference to the term. Including this URL, https://bioportal.bioontology.org/ontologies/NCIT?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C54073, to ensure findability."
+ ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00026> ;
@@ -380,7 +389,7 @@ Not for profit organization""" ;
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00026> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#exactMatch> ;
-   owl:annotatedTarget "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54073" ;
+   owl:annotatedTarget <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54073> ;
    rdfs:comment "This URI does not appear to dereference to the term. Including this URL, https://bioportal.bioontology.org/ontologies/NCIT?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C54073, to ensure findability."
  ] .
 
@@ -443,7 +452,7 @@ An additional five working groups were selected to focus on specific research qu
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:48:44Z"^^xsd:dateTime ;
                                           rdfs:label "Person"@en ;
-                                          <http://www.w3.org/2004/02/skos/core#exactMatch> "https://schema.org/Person" .
+                                          <http://www.w3.org/2004/02/skos/core#exactMatch> <https://schema.org/Person> .
 
 
 ###  http://purl.dataone.org/odo/SASAP_00097
@@ -459,7 +468,7 @@ An additional five working groups were selected to focus on specific research qu
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T21:14:05Z"^^xsd:dateTime ;
                                           rdfs:label "Organization"@en ;
-                                          <http://www.w3.org/2004/02/skos/core#exactMatch> "https://schema.org/Organization" .
+                                          <http://www.w3.org/2004/02/skos/core#exactMatch> <https://schema.org/Organization> .
 
 
 ###  http://purl.dataone.org/odo/SASAP_00101
@@ -468,7 +477,7 @@ An additional five working groups were selected to focus on specific research qu
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-29T17:33:25Z"^^xsd:dateTime ;
                                           rdfs:label "Data corpus"@en ;
                                           <http://www.w3.org/2004/02/skos/core#definition> "A collection of datasets." ;
-                                          <http://www.w3.org/2004/02/skos/core#relatedMatch> "https://schema.org/Collection" .
+                                          <http://www.w3.org/2004/02/skos/core#relatedMatch> <https://schema.org/Collection> .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00101> ;
@@ -483,9 +492,9 @@ An additional five working groups were selected to focus on specific research qu
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-03-30T20:31:09Z"^^xsd:dateTime ;
                                           rdfs:label "Project"@en ;
-                                          owl:equivalentClass "https://schema.org/Project" ;
+                                          owl:equivalentClass <https://schema.org/Project> ;
                                           <http://www.w3.org/2004/02/skos/core#definition> "An enterprise (potentially individual but typically collaborative), planned to achieve a particular aim." ;
-                                          <http://www.w3.org/2004/02/skos/core#exactMatch> "https://schema.org/Project" .
+                                          <http://www.w3.org/2004/02/skos/core#exactMatch> <https://schema.org/Project> .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00121> ;
@@ -501,8 +510,9 @@ An additional five working groups were selected to focus on specific research qu
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-02T20:22:02Z"^^xsd:dateTime ;
                                           rdfs:label "College or university"@en ;
+                                          owl:equivalentClass <http://vivoweb.org/ontology/core#University> ;
                                           <http://www.w3.org/2004/02/skos/core#definition> "An institution of higher education and research, which grants academic degrees in a variety of subjects, and provides both undergraduate education and postgraduate education." ;
-                                          <http://www.w3.org/2004/02/skos/core#exactMatch> "http://vivoweb.org/ontology/core#University" .
+                                          <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vivoweb.org/ontology/core#University> .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00174> ;
@@ -519,7 +529,7 @@ An additional five working groups were selected to focus on specific research qu
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-05T19:57:33Z"^^xsd:dateTime ;
                                           rdfs:label "Independent research institute"@en ;
                                           <http://www.w3.org/2004/02/skos/core#definition> "A research institute which is not part of a university, government, hospital or corporation. An independent research institute may have a close relationship with a larger institution such as a university, but is not part of the larger insitution and operates under its own authority." ;
-                                          <http://www.w3.org/2004/02/skos/core#relatedMatch> "http://vivoweb.org/ontology/core#ResearchOrganization" .
+                                          <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://vivoweb.org/ontology/core#ResearchOrganization> .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00178> ;
@@ -561,8 +571,9 @@ https://www.wikidata.org/wiki/Q1752459"""
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-12T23:49:48Z"^^xsd:dateTime ;
                                           rdfs:label "Academic department"@en ;
+                                          owl:equivalentClass <http://vivoweb.org/ontology/core#AcademicDepartment> ;
                                           <http://www.w3.org/2004/02/skos/core#definition> "A distinct, usually specialized educational unit within an educational organization." ;
-                                          <http://www.w3.org/2004/02/skos/core#exactMatch> "http://vivoweb.org/ontology/core#AcademicDepartment" .
+                                          <http://www.w3.org/2004/02/skos/core#exactMatch> <http://vivoweb.org/ontology/core#AcademicDepartment> .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00207> ;
@@ -647,8 +658,8 @@ https://www.wikidata.org/wiki/Q7840353"""
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-21T18:08:49Z"^^xsd:dateTime ;
                                           rdfs:label "Academic degree program"@en ;
-                                          owl:equivalentClass "https://schema.org/EducationalOccupationalProgram" ;
-                                          owl:sameAs "https://schema.org/EducationalOccupationalProgram" .
+                                          owl:equivalentClass <https://schema.org/EducationalOccupationalProgram> ;
+                                          <http://www.w3.org/2004/02/skos/core#exactMatch> <https://schema.org/EducationalOccupationalProgram> .
 
 
 ###  http://purl.dataone.org/odo/SASAP_00398
