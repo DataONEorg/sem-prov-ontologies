@@ -109,57 +109,109 @@ owl:sameAs rdf:type owl:AnnotationProperty .
 
 
 #################################################################
-#    Object Properties
+#    Classes
 #################################################################
 
-###  http://purl.dataone.org/odo/salmon_00066
-<http://purl.dataone.org/odo/salmon_00066> rdf:type owl:ObjectProperty ;
-                                           owl:inverseOf <http://purl.dataone.org/odo/salmon_00069> ;
+###  http://purl.dataone.org/odo/SASAP_000474
+<http://purl.dataone.org/odo/SASAP_000474> rdf:type owl:Class ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T19:00:26Z"^^xsd:dateTime ;
-                                           rdfs:label "affiliateOf"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#closeMatch> "https://schema.org/affiliation" .
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T22:06:46Z"^^xsd:dateTime ;
+                                           rdfs:label "Reference"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000476
+<http://purl.dataone.org/odo/SASAP_000476> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00206> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T22:37:24Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "Includes qualities like population size, population growth rate, carrying capacity, immigration rate, emigration rate, fecundity, and death rate. A population quality may depend on the qualities of individual organisms in the population, but cannot be measured or described for a single organism." ;
+                                           rdfs:label "Quality of a population measurement type"@en ;
+                                           owl:equivalentClass <http://purl.obolibrary.org/obo/PCO_0000003> ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A quality that inheres in a population of organisms." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.obolibrary.org/obo/PCO_0000003> .
 
 [ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00066> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#closeMatch> ;
-   owl:annotatedTarget "https://schema.org/affiliation" ;
-   rdfs:comment "Using skos:closeMatch rather than skos:exactMatch because schema.org does not provide an inverse property to https://schema.org/affiliation. We define the inverse of 'affiliateOf' as 'hasAffiliate'."
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000476> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "Includes qualities like population size, population growth rate, carrying capacity, immigration rate, emigration rate, fecundity, and death rate. A population quality may depend on the qualities of individual organisms in the population, but cannot be measured or described for a single organism." ;
+   <http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/PCO_0000003>
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000476> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A quality that inheres in a population of organisms." ;
+   <http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/PCO_0000003>
  ] .
 
 
-###  http://purl.dataone.org/odo/salmon_00067
-<http://purl.dataone.org/odo/salmon_00067> rdf:type owl:ObjectProperty ;
-                                           owl:inverseOf <http://purl.dataone.org/odo/salmon_00071> ;
+###  http://purl.dataone.org/odo/SASAP_000477
+<http://purl.dataone.org/odo/SASAP_000477> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000476> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T19:00:44Z"^^xsd:dateTime ;
-                                           rdfs:label "participantOf"@en .
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T22:46:42Z"^^xsd:dateTime ;
+                                           rdfs:label "Fish abundance measurement type"@en .
 
 
-###  http://purl.dataone.org/odo/salmon_00069
-<http://purl.dataone.org/odo/salmon_00069> rdf:type owl:ObjectProperty ;
+###  http://purl.dataone.org/odo/SASAP_000478
+<http://purl.dataone.org/odo/SASAP_000478> rdf:type owl:Class ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T19:11:36Z"^^xsd:dateTime ;
-                                           rdfs:label "hasAffiliate"@en .
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T23:10:08Z"^^xsd:dateTime ;
+                                           rdfs:label "Notation type"@en ;
+                                           owl:equivalentClass <http://semanticscience.org/resource/SIO_001385> ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A series or system of written symbols used to represent numbers, amounts, or elements." ;
+                                           <http://www.w3.org/2004/02/skos/core#exactMatch> <http://semanticscience.org/resource/SIO_001385> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000478> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A series or system of written symbols used to represent numbers, amounts, or elements." ;
+   <http://purl.org/dc/elements/1.1/source> <http://semanticscience.org/resource/SIO_001385>
+ ] .
 
 
-###  http://purl.dataone.org/odo/salmon_00071
-<http://purl.dataone.org/odo/salmon_00071> rdf:type owl:ObjectProperty ;
+###  http://purl.dataone.org/odo/SASAP_000479
+<http://purl.dataone.org/odo/SASAP_000479> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000477> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-03-25T19:45:52Z"^^xsd:dateTime ;
-                                           rdfs:label "hasParticipant"@en .
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T23:21:35Z"^^xsd:dateTime ;
+                                           rdfs:label "Salmon escapement"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Salmon escapement is the amount of a salmon population that does not get caught by commercial or recreational fisheries and return to their freshwater spawning habitat." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000479> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Salmon escapement is the amount of a salmon population that does not get caught by commercial or recreational fisheries and return to their freshwater spawning habitat." ;
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Salmon_escapement 
+https://www.wikidata.org/wiki/Q23582242"""
+ ] .
 
 
-###  http://purl.dataone.org/odo/salmon_00120
-<http://purl.dataone.org/odo/salmon_00120> rdf:type owl:ObjectProperty ;
+###  http://purl.dataone.org/odo/SASAP_000480
+<http://purl.dataone.org/odo/SASAP_000480> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000479> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-03-30T18:33:13Z"^^xsd:dateTime ;
-                                           rdfs:label "containsDataFrom"@en .
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T23:24:51Z"^^xsd:dateTime ;
+                                           rdfs:label "Annual escapement count"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The number of salmon from a given population that escape the fishery in a year." .
 
 
-#################################################################
-#    Classes
-#################################################################
+###  http://purl.dataone.org/odo/SASAP_000481
+<http://purl.dataone.org/odo/SASAP_000481> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000479> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T23:24:56Z"^^xsd:dateTime ;
+                                           rdfs:label "Daily escapement count"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The number of salmon from a given population that escape the fishery in a day." .
+
+
+###  http://purl.dataone.org/odo/SASAP_000482
+<http://purl.dataone.org/odo/SASAP_000482> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000477> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T23:38:07Z"^^xsd:dateTime ;
+                                           rdfs:label "Commercial fishing bycatch"@en .
+
 
 ###  http://purl.dataone.org/odo/SASAP_00400
 <http://purl.dataone.org/odo/SASAP_00400> rdf:type owl:Class ;
@@ -174,7 +226,7 @@ owl:sameAs rdf:type owl:AnnotationProperty .
                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00184> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-21T23:42:02Z"^^xsd:dateTime ;
-                                          rdfs:label "Age class of fish"@en ;
+                                          rdfs:label "Life history stage of fish"@en ;
                                           owl:equivalentClass "http://rs.tdwg.org/dwc/terms/lifeStage" ;
                                           <http://www.w3.org/2004/02/skos/core#definition> "The age class or life stage of the biological individual(s) at the time the occurrence was recorded." .
 
@@ -269,10 +321,10 @@ owl:sameAs rdf:type owl:AnnotationProperty .
 
 ###  http://purl.dataone.org/odo/SASAP_00408
 <http://purl.dataone.org/odo/SASAP_00408> rdf:type owl:Class ;
-                                          rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00184> ;
+                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000478> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-22T00:00:42Z"^^xsd:dateTime ;
-                                          rdfs:label "Fish age notation"@en ;
+                                          rdfs:label "Fish age notation type"@en ;
                                           <http://www.w3.org/2004/02/skos/core#definition> "A standardized notation format for describing the age of a salmon." .
 
 
@@ -344,6 +396,7 @@ https://www.wikidata.org/wiki/Q11466"""
                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00412> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-22T16:49:49Z"^^xsd:dateTime ;
+                                          rdfs:comment "An Essential Salmon Variable (ESV) from the working list being developed by Graeme Diack et al. at the Atlantic Salmon Trust." ;
                                           rdfs:label "Sea surface temperature"@en ;
                                           owl:equivalentClass "http://purl.dataone.org/odo/ECSO_00001523" ;
                                           <http://www.w3.org/2004/02/skos/core#altLabel> """SST
@@ -382,6 +435,7 @@ Ocean surface temperature""" ;
                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00416> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-22T17:17:30Z"^^xsd:dateTime ;
+                                          rdfs:comment "An Essential Salmon Variable (ESV) from the working list being developed by Graeme Diack et al. at the Atlantic Salmon Trust." ;
                                           rdfs:label "Sea surface salinity"@en ;
                                           <http://www.w3.org/2004/02/skos/core#definition> "Salinity measured at the surface of the sea. The exact meaning of surface varies according to the measurement method used, but it is between 1 millimetre (0.04 in) and 20 metres (70 ft) below the sea surface." .
 
@@ -391,7 +445,8 @@ Ocean surface temperature""" ;
                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00412> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-22T17:20:03Z"^^xsd:dateTime ;
-                                          rdfs:comment "Graeme's ESV spreadsheet includes subsurface marine temperature and salinity. Need to think more about terms can be included to best describe those: https://docs.google.com/spreadsheets/d/1hcUmDX2iUGNesKtkNotJF4Z1hC8vyKQjEvgv4Y20ifQ/edit#gid=0" ;
+                                          rdfs:comment "An Essential Salmon Variable (ESV) from the working list being developed by Graeme Diack et al. at the Atlantic Salmon Trust." ,
+                                                       "Graeme's ESV spreadsheet includes subsurface marine temperature and salinity. Need to think more about terms can be included to best describe those: https://docs.google.com/spreadsheets/d/1hcUmDX2iUGNesKtkNotJF4Z1hC8vyKQjEvgv4Y20ifQ/edit#gid=0" ;
                                           rdfs:label "Ocean water column temperature (?)"@en .
 
 
@@ -417,6 +472,7 @@ https://www.wikidata.org/wiki/Q432016"""
                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00420> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-22T17:45:49Z"^^xsd:dateTime ;
+                                          rdfs:comment "An Essential Salmon Variable (ESV) from the working list being developed by Graeme Diack et al. at the Atlantic Salmon Trust." ;
                                           rdfs:label "Freshwater alkalinity *"@en .
 
 
@@ -433,7 +489,17 @@ https://www.wikidata.org/wiki/Q432016"""
                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00214> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-22T18:12:58Z"^^xsd:dateTime ;
-                                          rdfs:label "Dissolved oxygen measurement type"@en .
+                                          rdfs:comment "An Essential Salmon Variable (ESV) from the working list being developed by Graeme Diack et al. at the Atlantic Salmon Trust." ;
+                                          rdfs:label "Dissolved oxygen measurement type"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "DO" ;
+                                          <http://www.w3.org/2004/02/skos/core#definition> "The amount of gaseous oxygen (O2) dissolved in water." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00424> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The amount of gaseous oxygen (O2) dissolved in water." ;
+   <http://purl.org/dc/elements/1.1/source> <https://arcos.disl.org/main/whatisDO#:~:text=Dissolved%20Oxygen%20is%20the%20amount,can%20affect%20dissolved%20oxygen%20levels.>
+ ] .
 
 
 ###  http://purl.dataone.org/odo/SASAP_00425
@@ -441,7 +507,25 @@ https://www.wikidata.org/wiki/Q432016"""
                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00424> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-22T18:13:22Z"^^xsd:dateTime ;
-                                          rdfs:label "Dissolved oxygen concentration percentage"@en .
+                                          <http://purl.org/dc/elements/1.1/description> "Dissolved oxygen saturation can be measured with a dissolved oxygen probe such as an oxygen sensor or an optode in liquid media, usually water. The standard unit of oxygen saturation is percent (%)." ;
+                                          rdfs:label "Dissolved oxygen saturation"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#definition> "A relative measure of the concentration of oxygen that is dissolved or carried in a given medium as a proportion of the maximal concentration that can be dissolved in that medium." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00425> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "Dissolved oxygen saturation can be measured with a dissolved oxygen probe such as an oxygen sensor or an optode in liquid media, usually water. The standard unit of oxygen saturation is percent (%)." ;
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Oxygen_saturation 
+https://www.wikidata.org/wiki/Q6294669"""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00425> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A relative measure of the concentration of oxygen that is dissolved or carried in a given medium as a proportion of the maximal concentration that can be dissolved in that medium." ;
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Oxygen_saturation 
+https://www.wikidata.org/wiki/Q6294669"""
+ ] .
 
 
 ###  http://purl.dataone.org/odo/SASAP_00426
@@ -449,7 +533,11 @@ https://www.wikidata.org/wiki/Q432016"""
                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00424> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-22T18:13:32Z"^^xsd:dateTime ;
-                                          rdfs:label "Dissolved oxygen concentration"@en .
+                                          rdfs:label "Dissolved oxygen concentration"@en ;
+                                          owl:equivalentClass <http://purl.dataone.org/odo/ECSO_00001669> ;
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "DO concentration" ;
+                                          <http://www.w3.org/2004/02/skos/core#definition> "A concentration of the amount of oxygen present in water." ;
+                                          <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.dataone.org/odo/ECSO_00001669> .
 
 
 ###  http://purl.dataone.org/odo/SASAP_00457
@@ -1920,6 +2008,7 @@ temperature""" ;
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00217> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-14T22:18:45Z"^^xsd:dateTime ;
+                                           rdfs:comment "An Essential Salmon Variable (ESV) from the working list being developed by Graeme Diack et al. at the Atlantic Salmon Trust." ;
                                            rdfs:label "Air temperature"@en ;
                                            owl:equivalentClass "http://purl.dataone.org/odo/ECSO_00001225" ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "Objective comparative measure of hot or cold of air." ;
@@ -2178,7 +2267,8 @@ https://www.wikidata.org/wiki/Q63565252"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-15T19:38:49Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "Circuli are more widely spaced in warmer months when food is abundant and growth is rapid, and more narrowly spaced in colder months when food availability is low and growth slows." ;
-                                           rdfs:comment """[ADDRESS COMMENT, THEN DELETE] 
+                                           rdfs:comment "An Essential Salmon Variable (ESV) from the working list being developed by Graeme Diack et al. at the Atlantic Salmon Trust." ,
+                                                        """[ADDRESS COMMENT, THEN DELETE] 
 
 may want to attach oboe:Protocol""" ;
                                            rdfs:label "Distance between scale circuli"@en ;
@@ -2500,6 +2590,22 @@ http://www.fishbase.org/summary/244""" ;
 #################################################################
 #    Individuals
 #################################################################
+
+###  http://purl.dataone.org/odo/SASAP_000475
+<http://purl.dataone.org/odo/SASAP_000475> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/SASAP_000474> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T22:06:58Z"^^xsd:dateTime ;
+                                           rdfs:comment "Johann Julius Walbaum (30 June 1724, Wolfenbüttel, Brunswick-Wolfenbüttel – 21 August 1799, Lübeck) was a German physician, naturalist and fauna taxonomist." ;
+                                           rdfs:label "Walbaum, 1792"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000475> ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Johann Julius Walbaum (30 June 1724, Wolfenbüttel, Brunswick-Wolfenbüttel – 21 August 1799, Lübeck) was a German physician, naturalist and fauna taxonomist." ;
+   <http://purl.org/dc/elements/1.1/source> "https://en.wikipedia.org/wiki/Johann_Julius_Walbaum"
+ ] .
+
 
 ###  http://purl.dataone.org/odo/salmon_00002
 <http://purl.dataone.org/odo/salmon_00002> rdf:type owl:NamedIndividual ;
@@ -3288,7 +3394,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00045
 <http://purl.dataone.org/odo/salmon_00045> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00069> <http://purl.dataone.org/odo/salmon_00068> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:05:30Z"^^xsd:dateTime ;
                                            rdfs:label "United States Fish and Wildlife Service"@en ;
@@ -3388,7 +3493,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00056
 <http://purl.dataone.org/odo/salmon_00056> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00060> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:47:05Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The topics explored by the Sociocultural working group are (1) social and cultural values and relationships between people and salmon, (2) trends in human populations and communities and uses of salmon, and (3) key threads to salmon-dependent communities" ;
@@ -3462,9 +3566,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00065
 <http://purl.dataone.org/odo/salmon_00065> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00113> ;
-                                           <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00055> ,
-                                                                                      <http://purl.dataone.org/odo/salmon_00059> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T18:58:18Z"^^xsd:dateTime ;
                                            rdfs:label "Peter Westley"@en .
@@ -3472,8 +3573,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00068
 <http://purl.dataone.org/odo/salmon_00068> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00045> ;
-                                           <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00055> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T19:07:18Z"^^xsd:dateTime ;
                                            rdfs:label "Dan Rinella"@en .
@@ -3481,7 +3580,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00072
 <http://purl.dataone.org/odo/salmon_00072> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00100> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T19:55:01Z"^^xsd:dateTime ;
                                            rdfs:label "Frank Davis"@en ;
@@ -3490,8 +3588,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00074
 <http://purl.dataone.org/odo/salmon_00074> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00118> ;
-                                           <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00103> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:07:45Z"^^xsd:dateTime ;
                                            rdfs:label "Ian Dutton"@en ;
@@ -3500,8 +3596,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00075
 <http://purl.dataone.org/odo/salmon_00075> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00100> ;
-                                           <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00103> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:07:50Z"^^xsd:dateTime ;
                                            rdfs:label "Matthew Jones"@en ;
@@ -3510,8 +3604,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00076
 <http://purl.dataone.org/odo/salmon_00076> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00100> ;
-                                           <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00103> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:07:56Z"^^xsd:dateTime ;
                                            rdfs:label "Jared Kibele"@en ;
@@ -3520,8 +3612,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00077
 <http://purl.dataone.org/odo/salmon_00077> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00100> ;
-                                           <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00103> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:08:02Z"^^xsd:dateTime ;
                                            rdfs:label "Jeanette Clark"@en ;
@@ -3530,7 +3620,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00078
 <http://purl.dataone.org/odo/salmon_00078> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00103> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:08:09Z"^^xsd:dateTime ;
                                            rdfs:label "Jorge Cornejo-Donoso"@en ;
@@ -3539,9 +3628,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00079
 <http://purl.dataone.org/odo/salmon_00079> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00113> ;
-                                           <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00056> ,
-                                                                                      <http://purl.dataone.org/odo/salmon_00063> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:08:16Z"^^xsd:dateTime ;
                                            rdfs:label "Courtney Carothers"@en ;
@@ -3550,9 +3636,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00080
 <http://purl.dataone.org/odo/salmon_00080> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00112> ;
-                                           <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00056> ,
-                                                                                      <http://purl.dataone.org/odo/salmon_00063> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:08:20Z"^^xsd:dateTime ;
                                            rdfs:label "Jessica Black"@en .
@@ -3560,8 +3643,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00081
 <http://purl.dataone.org/odo/salmon_00081> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00117> ;
-                                           <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00057> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:08:28Z"^^xsd:dateTime ;
                                            rdfs:label "Tobias Schworer"@en .
@@ -3569,8 +3650,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00082
 <http://purl.dataone.org/odo/salmon_00082> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00115> ;
-                                           <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00058> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:08:34Z"^^xsd:dateTime ;
                                            rdfs:label "Steven J. Langdon"@en .
@@ -3578,8 +3657,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00083
 <http://purl.dataone.org/odo/salmon_00083> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00116> ;
-                                           <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00058> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:08:42Z"^^xsd:dateTime ;
                                            rdfs:label "Taylor Brelsford"@en .
@@ -3587,8 +3664,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00084
 <http://purl.dataone.org/odo/salmon_00084> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00036> ;
-                                           <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00058> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:08:46Z"^^xsd:dateTime ;
                                            rdfs:label "James Fall"@en .
@@ -3596,8 +3671,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00085
 <http://purl.dataone.org/odo/salmon_00085> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00114> ;
-                                           <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00059> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:08:54Z"^^xsd:dateTime ;
                                            rdfs:label "Eric P. Palkovacs"@en ;
@@ -3606,8 +3679,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00086
 <http://purl.dataone.org/odo/salmon_00086> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00111> ;
-                                           <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00063> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:09:04Z"^^xsd:dateTime ;
                                            rdfs:label "Rachel Donkersloot"@en .
@@ -3615,8 +3686,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00087
 <http://purl.dataone.org/odo/salmon_00087> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00110> ;
-                                           <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00060> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:09:09Z"^^xsd:dateTime ;
                                            rdfs:label "Peter S. Rand"@en .
@@ -3624,8 +3693,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00088
 <http://purl.dataone.org/odo/salmon_00088> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00110> ;
-                                           <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00060> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:09:14Z"^^xsd:dateTime ;
                                            rdfs:label "Robert W. Campbell"@en .
@@ -3633,8 +3700,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00089
 <http://purl.dataone.org/odo/salmon_00089> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00110> ;
-                                           <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00060> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:09:26Z"^^xsd:dateTime ;
                                            rdfs:label "Kristen B. Gorman"@en ;
@@ -3643,8 +3708,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00090
 <http://purl.dataone.org/odo/salmon_00090> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00109> ;
-                                           <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00061> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:09:31Z"^^xsd:dateTime ;
                                            rdfs:label "Michael L. Jones"@en .
@@ -3652,8 +3715,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00091
 <http://purl.dataone.org/odo/salmon_00091> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00104> ;
-                                           <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00062> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:09:38Z"^^xsd:dateTime ;
                                            rdfs:label "Coowe Walker"@en .
@@ -3661,8 +3722,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00092
 <http://purl.dataone.org/odo/salmon_00092> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00105> ;
-                                           <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00062> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:09:43Z"^^xsd:dateTime ;
                                            rdfs:label "Ryan King"@en .
@@ -3670,8 +3729,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00093
 <http://purl.dataone.org/odo/salmon_00093> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00106> ;
-                                           <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00062> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:09:48Z"^^xsd:dateTime ;
                                            rdfs:label "Mark Rains"@en ;
@@ -3680,8 +3737,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00094
 <http://purl.dataone.org/odo/salmon_00094> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00107> ;
-                                           <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00062> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:09:56Z"^^xsd:dateTime ;
                                            rdfs:label "Charles A. Simenstad"@en ;
@@ -3690,8 +3745,6 @@ MTA Lab""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00095
 <http://purl.dataone.org/odo/salmon_00095> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00066> <http://purl.dataone.org/odo/salmon_00108> ;
-                                           <http://purl.dataone.org/odo/salmon_00067> <http://purl.dataone.org/odo/salmon_00062> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-25T20:10:04Z"^^xsd:dateTime ;
                                            rdfs:label "Dennis Whigham"@en ;
@@ -3719,29 +3772,6 @@ NCEAS""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00102
 <http://purl.dataone.org/odo/salmon_00102> rdf:type owl:NamedIndividual ;
-                                           <http://purl.dataone.org/odo/salmon_00120> <http://purl.dataone.org/odo/salmon_00027> ,
-                                                                                      <http://purl.dataone.org/odo/salmon_00028> ,
-                                                                                      <http://purl.dataone.org/odo/salmon_00029> ,
-                                                                                      <http://purl.dataone.org/odo/salmon_00030> ,
-                                                                                      <http://purl.dataone.org/odo/salmon_00031> ,
-                                                                                      <http://purl.dataone.org/odo/salmon_00032> ,
-                                                                                      <http://purl.dataone.org/odo/salmon_00033> ,
-                                                                                      <http://purl.dataone.org/odo/salmon_00034> ,
-                                                                                      <http://purl.dataone.org/odo/salmon_00035> ,
-                                                                                      <http://purl.dataone.org/odo/salmon_00036> ,
-                                                                                      <http://purl.dataone.org/odo/salmon_00037> ,
-                                                                                      <http://purl.dataone.org/odo/salmon_00038> ,
-                                                                                      <http://purl.dataone.org/odo/salmon_00039> ,
-                                                                                      <http://purl.dataone.org/odo/salmon_00040> ,
-                                                                                      <http://purl.dataone.org/odo/salmon_00041> ,
-                                                                                      <http://purl.dataone.org/odo/salmon_00042> ,
-                                                                                      <http://purl.dataone.org/odo/salmon_00043> ,
-                                                                                      <http://purl.dataone.org/odo/salmon_00044> ,
-                                                                                      <http://purl.dataone.org/odo/salmon_00045> ,
-                                                                                      <http://purl.dataone.org/odo/salmon_00046> ,
-                                                                                      <http://purl.dataone.org/odo/salmon_00047> ,
-                                                                                      <http://purl.dataone.org/odo/salmon_00049> ,
-                                                                                      <http://purl.dataone.org/odo/salmon_00050> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-29T17:34:06Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The State of Alaska's Salmon and People (SASAP) project is a collaboration of researchers, cultural leaders, and others working to bring together integrated, accurate, and up-to-date information that will help to support better salmon decision-making." ;
