@@ -124,6 +124,28 @@ owl:sameAs rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
+###  http://rs.tdwg.org/dwc/terms/nameAccordingTo
+<http://rs.tdwg.org/dwc/terms/nameAccordingTo> rdf:type owl:ObjectProperty ;
+                                               rdfs:domain <http://purl.dataone.org/odo/SASAP_00458> ;
+                                               rdfs:range <http://purl.dataone.org/odo/SASAP_000474> ;
+                                               <http://www.w3.org/2004/02/skos/core#definition> "The reference to the source in which the specific taxon concept circumscription is defined or implied - traditionally signified by the Latin \"sensu\" or \"sec.\" (from secundum, meaning \"according to\"). For taxa that result from identifications, a reference to the keys, monographs, experts and other sources should be given." .
+
+
+###  http://rs.tdwg.org/dwc/terms/namePublishedInYear
+<http://rs.tdwg.org/dwc/terms/namePublishedInYear> rdf:type owl:ObjectProperty ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "The four-digit year in which the scientificName was published." .
+
+
+###  http://rs.tdwg.org/dwc/terms/scientificName
+<http://rs.tdwg.org/dwc/terms/scientificName> rdf:type owl:ObjectProperty ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "The full scientific name, with authorship and date information if known. When forming part of an Identification, this should be the name in lowest level taxonomic rank that can be determined. This term should not contain identification qualifications, which should instead be supplied in the IdentificationQualifier term." .
+
+
+###  http://rs.tdwg.org/dwc/terms/scientificNameAuthorship
+<http://rs.tdwg.org/dwc/terms/scientificNameAuthorship> rdf:type owl:ObjectProperty ;
+                                                        <http://www.w3.org/2004/02/skos/core#definition> "The authorship information for the scientificName formatted according to the conventions of the applicable nomenclaturalCode." .
+
+
 ###  http://www.w3.org/ns/ssn/isProxyFor
 <http://www.w3.org/ns/ssn/isProxyFor> rdf:type owl:ObjectProperty ;
                                       rdfs:domain <http://purl.dataone.org/odo/SASAP_000484> ;
@@ -375,6 +397,7 @@ http://en.wikipedia.org/wiki/Time""" ;
 
 ###  http://purl.dataone.org/odo/SASAP_000474
 <http://purl.dataone.org/odo/SASAP_000474> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00465> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-26T22:06:46Z"^^xsd:dateTime ;
                                            rdfs:label "Reference"@en .
@@ -410,7 +433,7 @@ http://en.wikipedia.org/wiki/Time""" ;
                                            rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000476> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-26T22:46:42Z"^^xsd:dateTime ;
-                                           rdfs:label "Fish abundance measurement type"@en .
+                                           rdfs:label "Fish count measurement type *"@en .
 
 
 ###  http://purl.dataone.org/odo/SASAP_000478
@@ -434,7 +457,7 @@ http://en.wikipedia.org/wiki/Time""" ;
                                            rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000477> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-26T23:21:35Z"^^xsd:dateTime ;
-                                           rdfs:label "Salmon escapement"@en ;
+                                           rdfs:label "Salmon escapement count"@en ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "Salmon escapement is the amount of a salmon population that does not get caught by commercial or recreational fisheries and return to their freshwater spawning habitat." .
 
 [ rdf:type owl:Axiom ;
@@ -469,7 +492,7 @@ https://www.wikidata.org/wiki/Q23582242"""
                                            rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000477> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-26T23:38:07Z"^^xsd:dateTime ;
-                                           rdfs:label "Commercial fishing bycatch"@en .
+                                           rdfs:label "Salmon bycatch count *"@en .
 
 
 ###  http://purl.dataone.org/odo/SASAP_000483
@@ -563,6 +586,124 @@ There may be subclasses to include here. Need to research further.""" ;
 
 rdfs:label here needs to reflect a method""" ;
                                            rdfs:label "Sexual dimorphic characteristic *"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000491
+<http://purl.dataone.org/odo/SASAP_000491> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000477> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-28T18:15:41Z"^^xsd:dateTime ;
+                                           rdfs:label "Salmon harvest count *"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000492
+<http://purl.dataone.org/odo/SASAP_000492> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000491> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-28T18:15:54Z"^^xsd:dateTime ;
+                                           rdfs:label "Commercial fishing harvest counts"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000493
+<http://purl.dataone.org/odo/SASAP_000493> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00465> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-28T18:42:51Z"^^xsd:dateTime ;
+                                           rdfs:label "Oncorhynchus *"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000494
+<http://purl.dataone.org/odo/SASAP_000494> rdf:type owl:Class ;
+                                           owl:equivalentClass [ owl:intersectionOf ( <http://purl.dataone.org/odo/salmon_00215>
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty <http://rs.tdwg.org/dwc/terms/nameAccordingTo> ;
+                                                                                        owl:someValuesFrom <http://purl.dataone.org/odo/SASAP_000495>
+                                                                                      ]
+                                                                                    ) ;
+                                                                 rdf:type owl:Class
+                                                               ] ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-28T19:23:01Z"^^xsd:dateTime ;
+                                           rdfs:label "Taxon concept"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "taxonomic concept" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A reference which is made to a taxon name along with a publication which explains how the author intends for the name to be applied." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000494> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A reference which is made to a taxon name along with a publication which explains how the author intends for the name to be applied." ;
+   <http://purl.org/dc/elements/1.1/source> <https://github.com/darwin-sw/dsw/wiki/ClassTaxon#equivalence-of-taxon-and-taxoncon-%20cept-in-the-tdwg-ontology-and-the-darwin-core-standard>
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000495
+<http://purl.dataone.org/odo/SASAP_000495> rdf:type owl:Class ;
+                                           owl:equivalentClass [ rdf:type owl:Class ;
+                                                                 owl:oneOf ( <http://purl.dataone.org/odo/SASAP_000475>
+                                                                           )
+                                                               ] ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-28T20:18:16Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "The International Code of Zoological Nomenclature (ICZN), a widely accepted convention in zoology that rules the formal scientific naming of organisms treated as animals, establishes guidelines for author citation. See Chapter 11 of the Fourth Edition." ;
+                                           rdfs:comment "For example, in 1758 Linnaeus gave the Asian elephant the scientific name Elephas maximus, so the name is sometimes written as \"Elephas maximus Linnaeus, 1758\"." ;
+                                           rdfs:label "Author citation"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """taxonomic authority
+authority""" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The name of the scientist or scientists who first validly published the scientific name of a particular organism." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000495> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "The International Code of Zoological Nomenclature (ICZN), a widely accepted convention in zoology that rules the formal scientific naming of organisms treated as animals, establishes guidelines for author citation. See Chapter 11 of the Fourth Edition." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://code.iczn.org/authorship/article-51-citation-of-names-of-authors/?frame=1>
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000495> ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "For example, in 1758 Linnaeus gave the Asian elephant the scientific name Elephas maximus, so the name is sometimes written as \"Elephas maximus Linnaeus, 1758\"." ;
+   <http://purl.org/dc/elements/1.1/source> <https://en.wikipedia.org/wiki/Taxonomy_(biology)>
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000495> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The name of the scientist or scientists who first validly published the scientific name of a particular organism." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Taxonomy_(biology)>
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000496
+<http://purl.dataone.org/odo/SASAP_000496> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00465> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-28T21:06:15Z"^^xsd:dateTime ;
+                                           rdfs:label "Publication year *"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "REVISE THIS LATER: The year a creative work is published." .
+
+
+###  http://purl.dataone.org/odo/SASAP_000497
+<http://purl.dataone.org/odo/SASAP_000497> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000496> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-28T21:13:47Z"^^xsd:dateTime ;
+                                           rdfs:label "1792"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000498
+<http://purl.dataone.org/odo/SASAP_000498> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000474> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-28T21:14:00Z"^^xsd:dateTime ;
+                                           rdfs:label "Walbaum"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000499
+<http://purl.dataone.org/odo/SASAP_000499> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00465> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-28T21:29:53Z"^^xsd:dateTime ;
+                                           rdfs:label "TEMP Walbaum, 1792"@en .
 
 
 ###  http://purl.dataone.org/odo/SASAP_00400
@@ -937,12 +1078,17 @@ Latin name""" ;
 
 ###  http://purl.dataone.org/odo/SASAP_00460
 <http://purl.dataone.org/odo/SASAP_00460> rdf:type owl:Class ;
-                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00458> ;
+                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00458> ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://rs.tdwg.org/dwc/terms/nameAccordingTo> ;
+                                                            owl:hasValue <http://purl.dataone.org/odo/SASAP_000475>
+                                                          ] ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:17:52Z"^^xsd:dateTime ;
                                           <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161975" ;
                                           rdfs:label "Oncorhynchus gorbuscha"@en ;
-                                          <http://www.w3.org/2004/02/skos/core#altLabel> "O. gorbuscha" .
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> """O. gorbuscha
+Oncorhynchus gorbuscha""" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00460> ;
@@ -955,12 +1101,17 @@ Latin name""" ;
 
 ###  http://purl.dataone.org/odo/SASAP_00461
 <http://purl.dataone.org/odo/SASAP_00461> rdf:type owl:Class ;
-                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00458> ;
+                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00458> ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://rs.tdwg.org/dwc/terms/nameAccordingTo> ;
+                                                            owl:hasValue <http://purl.dataone.org/odo/SASAP_000475>
+                                                          ] ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:18:47Z"^^xsd:dateTime ;
                                           <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161976" ;
                                           rdfs:label "Oncorhynchus keta"@en ;
-                                          <http://www.w3.org/2004/02/skos/core#altLabel> "O. keta" .
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> """O. keta
+Oncorhynchus keta""" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00461> ;
@@ -973,12 +1124,17 @@ Latin name""" ;
 
 ###  http://purl.dataone.org/odo/SASAP_00462
 <http://purl.dataone.org/odo/SASAP_00462> rdf:type owl:Class ;
-                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00458> ;
+                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00458> ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://rs.tdwg.org/dwc/terms/nameAccordingTo> ;
+                                                            owl:hasValue <http://purl.dataone.org/odo/SASAP_000475>
+                                                          ] ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:18:52Z"^^xsd:dateTime ;
                                           <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161977" ;
                                           rdfs:label "Oncorhynchus kisutch"@en ;
-                                          <http://www.w3.org/2004/02/skos/core#altLabel> "O. kisutch" .
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> """O. kisutch
+Oncorhynchus kisutch""" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00462> ;
@@ -991,12 +1147,17 @@ Latin name""" ;
 
 ###  http://purl.dataone.org/odo/SASAP_00463
 <http://purl.dataone.org/odo/SASAP_00463> rdf:type owl:Class ;
-                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00458> ;
+                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00458> ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://rs.tdwg.org/dwc/terms/nameAccordingTo> ;
+                                                            owl:hasValue <http://purl.dataone.org/odo/SASAP_000475>
+                                                          ] ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:19:04Z"^^xsd:dateTime ;
                                           <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161979" ;
                                           rdfs:label "Oncorhynchus nerka"@en ;
-                                          <http://www.w3.org/2004/02/skos/core#altLabel> "O. nerka" .
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> """O. nerka
+Oncorhynchus nerka""" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00463> ;
@@ -1009,12 +1170,17 @@ Latin name""" ;
 
 ###  http://purl.dataone.org/odo/SASAP_00464
 <http://purl.dataone.org/odo/SASAP_00464> rdf:type owl:Class ;
-                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00458> ;
+                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00458> ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://rs.tdwg.org/dwc/terms/nameAccordingTo> ;
+                                                            owl:hasValue <http://purl.dataone.org/odo/SASAP_000475>
+                                                          ] ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:19:15Z"^^xsd:dateTime ;
                                           <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161980" ;
                                           rdfs:label "Oncorhynchus tshawytscha"@en ;
-                                          <http://www.w3.org/2004/02/skos/core#altLabel> "O. tshawytscha" .
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> """O. tshawytscha
+Oncorhynchus tshawytscha""" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00464> ;
@@ -2152,16 +2318,16 @@ https://pdxscholar.library.pdx.edu/cgi/viewcontent.cgi?article=3220&context=open
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00202> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "A material entity which determines an environmental system." ;
-   <http://purl.org/dc/elements/1.1/source> "http://purl.obolibrary.org/obo/ENVO_00002297 [DEPRECATED]"
+   owl:annotatedProperty owl:equivalentClass ;
+   owl:annotatedTarget "http://purl.obolibrary.org/obo/ENVO_00002297" ;
+   rdfs:comment "Note that this ENVO term, 'environmental feature' is deprecated"
  ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00202> ;
-   owl:annotatedProperty owl:equivalentClass ;
-   owl:annotatedTarget "http://purl.obolibrary.org/obo/ENVO_00002297" ;
-   rdfs:comment "Note that this ENVO term, 'environmental feature' is deprecated"
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A material entity which determines an environmental system." ;
+   <http://purl.org/dc/elements/1.1/source> "http://purl.obolibrary.org/obo/ENVO_00002297 [DEPRECATED]"
  ] .
 
 
@@ -2251,7 +2417,7 @@ https://www.wikidata.org/wiki/Q184395"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-13T20:15:44Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "A taxonomic concept describes the allowable phenotypic, genomic, or other variation within a taxon by designating type specimens and describing characters explicitly." ;
-                                           rdfs:label "Taxon concept"@en ;
+                                           rdfs:label "TC"@en ;
                                            owl:equivalentClass "http://rs.tdwg.org/dwc/terms/Taxon" ;
                                            <http://www.w3.org/2004/02/skos/core#altLabel> """taxonomic concept 
 taxon""" ;
@@ -2294,10 +2460,7 @@ taxon""" ;
 <http://purl.dataone.org/odo/salmon_00215> rdf:type owl:Class ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-14T18:47:11Z"^^xsd:dateTime ;
-                                           rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
-
-by setting equivalence classes, common names ended up as subclasses under taxon concept and vice versa""" ;
-                                           rdfs:label "Salmon species identification and classification (?)"@en .
+                                           rdfs:label "Salmon species identification and classification"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_00216
@@ -2710,7 +2873,7 @@ O. tshawytscha
 \"Taryaqvak\" @ypk
 \"Aciirturtet\" @ypk
 \"sumgax̂\" @ale [Unangam tunuu variant]
-\"chaguchax̂\" @ale [Unangam tunuu variant])
+\"chaguchax̂\" @ale [Unangam tunuu variant]
 \"chavichax̂\" @ale [Unangam tunuu variant]
 \"Aamasuuk\" [Alutiiq/Sugpiaq]
 \"Liliksak\" [Alutiiq/Sugpiaq]
@@ -2955,7 +3118,7 @@ http://www.fishbase.org/summary/244""" ;
 
 ###  http://purl.dataone.org/odo/SASAP_000475
 <http://purl.dataone.org/odo/SASAP_000475> rdf:type owl:NamedIndividual ,
-                                                    <http://purl.dataone.org/odo/SASAP_000474> ;
+                                                    <http://purl.dataone.org/odo/SASAP_000495> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-26T22:06:58Z"^^xsd:dateTime ;
                                            rdfs:comment "Johann Julius Walbaum (30 June 1724, Wolfenbüttel, Brunswick-Wolfenbüttel – 21 August 1799, Lübeck) was a German physician, naturalist and fauna taxonomist." ;
@@ -2967,6 +3130,13 @@ http://www.fishbase.org/summary/244""" ;
    owl:annotatedTarget "Johann Julius Walbaum (30 June 1724, Wolfenbüttel, Brunswick-Wolfenbüttel – 21 August 1799, Lübeck) was a German physician, naturalist and fauna taxonomist." ;
    <http://purl.org/dc/elements/1.1/source> "https://en.wikipedia.org/wiki/Johann_Julius_Walbaum"
  ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000500
+<http://purl.dataone.org/odo/SASAP_000500> rdf:type owl:NamedIndividual ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-28T22:08:36Z"^^xsd:dateTime ;
+                                           rdfs:label "TEST another author date"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_00002
@@ -4372,7 +4542,10 @@ SASAP Project""" ;
 
 owl:Thing rdfs:comment """- any term that is noted by a \"(?)\" has notes in an rdfs:comment that need to be addressed
 
-- any term that is noted by a \"*\" does not yet have a definition/other annotation properties yet""" .
+- any term that is noted by a \"*\" does not yet have a definition/other annotation properties yet
+
+-WoRMS has LSIDs: https://www.marinespecies.org/aphia.php?p=taxdetails&id=127183""" ;
+          owl:equivalentClass "" .
 
 
 #################################################################
