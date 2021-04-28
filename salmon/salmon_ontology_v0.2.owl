@@ -28,6 +28,10 @@ https://orcid.org/0000-0003-0077-4738""" ;
 <http://purl.obolibrary.org/obo/IAO_0000115> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.obolibrary.org/obo/IAO_0000119
+<http://purl.obolibrary.org/obo/IAO_0000119> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/elements/1.1/creator
 <http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
 
@@ -104,6 +108,14 @@ owl:sameAs rdf:type owl:AnnotationProperty .
 <http://www.w3.org/2004/02/skos/core#exactMatch> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2004/02/skos/core#hiddenLabel
+<http://www.w3.org/2004/02/skos/core#hiddenLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#relatedMatch
 <http://www.w3.org/2004/02/skos/core#relatedMatch> rdf:type owl:AnnotationProperty .
 
@@ -122,6 +134,245 @@ owl:sameAs rdf:type owl:AnnotationProperty .
 #    Classes
 #################################################################
 
+###  http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType
+<http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType> rdf:type owl:Class ;
+                                                                        <http://www.w3.org/2004/02/skos/core#definition> "A MeasurementType describes the type of a Measurement in which the Measurement would follow the associated Protocol to record the value of the associated Characteristic of the associated Entity using the associated Standard. Any of these associated properties may be omitted, in which case the MeasurementType is only constrained by the provided associations. A MeasurementType is a hypothetical construct, in that it is not associated with a particular instance of a Measurement." .
+
+
+###  http://purl.dataone.org/odo/ECSO_00001167
+<http://purl.dataone.org/odo/ECSO_00001167> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType> ;
+                                            rdfs:label "temporal_MeasurementType" ;
+                                            <http://www.w3.org/2004/02/skos/core#hiddenLabel> "temporal_MeasurementType" ;
+                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Temporal Measurement Type" .
+
+
+###  http://purl.dataone.org/odo/ECSO_00001183
+<http://purl.dataone.org/odo/ECSO_00001183> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00001167> ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000115> "Interval of time representing duration of observation" ;
+                                            <http://purl.obolibrary.org/obo/IAO_0000119> """Adapted from
+http://en.wikipedia.org/wiki/Time""" ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5896-7295> ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "duration"^^xsd:string ,
+                                                                                                           "time interval"^^xsd:string ;
+                                            rdfs:label "Time Step" ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "duration"^^xsd:string ,
+                                                                                           "time interval"^^xsd:string ;
+                                            <http://www.w3.org/2004/02/skos/core#hiddenLabel> "Time Step" ;
+                                            <http://www.w3.org/2004/02/skos/core#prefLabel> "Time Step" .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002040
+<http://purl.dataone.org/odo/ECSO_00002040> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002043> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-14T20:43:43Z"^^xsd:dateTime ;
+                                            rdfs:label "time of measurement"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002043
+<http://purl.dataone.org/odo/ECSO_00002043> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00001167> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-14T21:16:02Z"^^xsd:dateTime ;
+                                            rdfs:label "date and time of measurement"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002044
+<http://purl.dataone.org/odo/ECSO_00002044> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002040> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-14T21:55:20Z"^^xsd:dateTime ;
+                                            rdfs:label "measurement start time"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002045
+<http://purl.dataone.org/odo/ECSO_00002045> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002040> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-14T21:55:34Z"^^xsd:dateTime ;
+                                            rdfs:label "measurement end time"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002047
+<http://purl.dataone.org/odo/ECSO_00002047> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002043> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-14T22:26:35Z"^^xsd:dateTime ;
+                                            rdfs:label "month of year"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002048
+<http://purl.dataone.org/odo/ECSO_00002048> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002040> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-14T22:40:52Z"^^xsd:dateTime ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "hour of day"^^xsd:string ;
+                                            rdfs:label "hour of measurement time"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "hour of day"^^xsd:string .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002050
+<http://purl.dataone.org/odo/ECSO_00002050> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002043> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-14T23:23:43Z"^^xsd:dateTime ;
+                                            rdfs:label "year of measurement"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002051
+<http://purl.dataone.org/odo/ECSO_00002051> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002043> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-14T23:28:39Z"^^xsd:dateTime ;
+                                            rdfs:label "date"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002053
+<http://purl.dataone.org/odo/ECSO_00002053> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00001167> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-15T00:16:39Z"^^xsd:dateTime ;
+                                            rdfs:label "part of season measurement made"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002054
+<http://purl.dataone.org/odo/ECSO_00002054> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002068> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-15T01:05:09Z"^^xsd:dateTime ;
+                                            rdfs:label "seconds elapsed"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002058
+<http://purl.dataone.org/odo/ECSO_00002058> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002043> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-15T18:26:54Z"^^xsd:dateTime ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "Julian day"^^xsd:string ;
+                                            rdfs:label "day of year"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "Julian day"^^xsd:string .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002061
+<http://purl.dataone.org/odo/ECSO_00002061> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002058> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-15T18:52:39Z"^^xsd:dateTime ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "Julian day fractional"^^xsd:string ;
+                                            rdfs:label "fractional day of year"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "Julian day fractional"^^xsd:string .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002066
+<http://purl.dataone.org/odo/ECSO_00002066> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002040> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-16T00:19:09Z"^^xsd:dateTime ;
+                                            rdfs:label "hour and minute of measurement time"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002067
+<http://purl.dataone.org/odo/ECSO_00002067> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002068> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-16T00:23:41Z"^^xsd:dateTime ;
+                                            rdfs:label "hours elapsed"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002068
+<http://purl.dataone.org/odo/ECSO_00002068> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00001183> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-16T00:27:36Z"^^xsd:dateTime ;
+                                            rdfs:label "elapsed time"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002069
+<http://purl.dataone.org/odo/ECSO_00002069> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002040> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-16T00:29:17Z"^^xsd:dateTime ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "minute of hour"^^xsd:string ;
+                                            rdfs:label "minute of measurement time"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "minute of hour"^^xsd:string .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002070
+<http://purl.dataone.org/odo/ECSO_00002070> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002040> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-16T00:29:24Z"^^xsd:dateTime ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "second of hour"^^xsd:string ;
+                                            rdfs:label "second of measurement time"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "second of hour"^^xsd:string .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002072
+<http://purl.dataone.org/odo/ECSO_00002072> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002043> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-16T00:44:09Z"^^xsd:dateTime ;
+                                            rdfs:label "year and day of measurement"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002122
+<http://purl.dataone.org/odo/ECSO_00002122> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002043> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-16T21:15:01Z"^^xsd:dateTime ;
+                                            rdfs:label "day of month"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002123
+<http://purl.dataone.org/odo/ECSO_00002123> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002068> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-16T21:22:28Z"^^xsd:dateTime ;
+                                            rdfs:label "days elapsed"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002169
+<http://purl.dataone.org/odo/ECSO_00002169> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00001167> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-22T22:55:13Z"^^xsd:dateTime ;
+                                            rdfs:label "year and season"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002238
+<http://purl.dataone.org/odo/ECSO_00002238> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002068> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-05-04T00:30:14Z"^^xsd:dateTime ;
+                                            rdfs:label "minutes elapsed"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002366
+<http://purl.dataone.org/odo/ECSO_00002366> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002169> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-05-17T22:41:45Z"^^xsd:dateTime ;
+                                            rdfs:label "season"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002627
+<http://purl.dataone.org/odo/ECSO_00002627> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002068> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-07-15T23:41:07Z"^^xsd:dateTime ;
+                                            rdfs:label "years elapsed"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002882
+<http://purl.dataone.org/odo/ECSO_00002882> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002054> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-05-07T21:18:21Z"^^xsd:dateTime ;
+                                            rdfs:label "milliseconds elapsed"@en .
+
+
 ###  http://purl.dataone.org/odo/SASAP_000474
 <http://purl.dataone.org/odo/SASAP_000474> rdf:type owl:Class ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
@@ -131,14 +382,13 @@ owl:sameAs rdf:type owl:AnnotationProperty .
 
 ###  http://purl.dataone.org/odo/SASAP_000476
 <http://purl.dataone.org/odo/SASAP_000476> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00206> ;
+                                           rdfs:subClassOf <http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-26T22:37:24Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "Includes qualities like population size, population growth rate, carrying capacity, immigration rate, emigration rate, fecundity, and death rate. A population quality may depend on the qualities of individual organisms in the population, but cannot be measured or described for a single organism." ;
                                            rdfs:label "Quality of a population measurement type"@en ;
                                            owl:equivalentClass <http://purl.obolibrary.org/obo/PCO_0000003> ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A quality that inheres in a population of organisms." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.obolibrary.org/obo/PCO_0000003> .
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A quality that inheres in a population of organisms." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000476> ;
@@ -169,8 +419,7 @@ owl:sameAs rdf:type owl:AnnotationProperty .
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-26T23:10:08Z"^^xsd:dateTime ;
                                            rdfs:label "Notation type"@en ;
                                            owl:equivalentClass <http://semanticscience.org/resource/SIO_001385> ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A series or system of written symbols used to represent numbers, amounts, or elements." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> <http://semanticscience.org/resource/SIO_001385> .
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A series or system of written symbols used to represent numbers, amounts, or elements." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000478> ;
@@ -673,32 +922,16 @@ https://www.wikidata.org/wiki/Q502895"""
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:17:29Z"^^xsd:dateTime ;
                                           rdfs:label "Scientific name"@en ;
-                                          owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43459> ;
                                           <http://www.w3.org/2004/02/skos/core#altLabel> """Binomial name 
 Binomen 
 Latin name""" ;
-                                          <http://www.w3.org/2004/02/skos/core#definition> "The name applied to a plant, animal, or other organism, according to the Codes of Nomenclature, consisting of a Genus and species." ;
-                                          <http://www.w3.org/2004/02/skos/core#exactMatch> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43459> .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00458> ;
-   owl:annotatedProperty owl:equivalentClass ;
-   owl:annotatedTarget <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43459> ;
-   rdfs:comment "URI doesn't dereference to the term; see here instead: https://bioportal.bioontology.org/ontologies/NCIT?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C43459"
- ] .
+                                          <http://www.w3.org/2004/02/skos/core#definition> "The name applied to a plant, animal, or other organism, according to the Codes of Nomenclature, consisting of a Genus and species." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00458> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "The name applied to a plant, animal, or other organism, according to the Codes of Nomenclature, consisting of a Genus and species." ;
    <http://purl.org/dc/elements/1.1/source> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43459>
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00458> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#exactMatch> ;
-   owl:annotatedTarget <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43459> ;
-   rdfs:comment "URI doesn't dereference to the term; see here instead: https://bioportal.bioontology.org/ontologies/NCIT?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C43459"
  ] .
 
 
@@ -1426,7 +1659,7 @@ https://www.wikidata.org/wiki/Q600580"""
 
 ###  http://purl.dataone.org/odo/salmon_00167
 <http://purl.dataone.org/odo/salmon_00167> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00206> ;
+                                           rdfs:subClassOf <http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-01T21:37:39Z"^^xsd:dateTime ;
                                            rdfs:label "Fish measurement type"@en ;
@@ -1891,20 +2124,20 @@ G-R""" ;
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00201> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "An age designation notation that includes two numbers, of which the second is a subscript. The first numeral indicates the total age of the fish and the subscript indicates the time spent in freshwater prior to saltwater immigration." ;
-   <http://purl.org/dc/elements/1.1/source> """https://www.researchgate.net/profile/Darlene-Gillespie/publication/281285926_Chinook_Salmon_Oncorhynchus_tshawytscha_Scale_Age_Determination_Procedures/links/55df66d708aede0b572b8de7/Chinook-Salmon-Oncorhynchus-tshawytscha-Scale-Age-Determination-Procedures.pdf 
-
-https://pdxscholar.library.pdx.edu/cgi/viewcontent.cgi?article=3220&context=open_access_etds"""
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00201> ;
    owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
    owl:annotatedTarget "e.g. An age written in Gilbert-Rich notation as '5sub2' (spoken as \"five sub two\") is interpreted as a fish that is in its fifth year of life (i.e. a fish that will be 5 on its next \"birthday\" or the number of winters from its deposition in the gravel as an egg to the time of sampling) and which migrated to the ocean during its second year of life. The European notation equivalent age is written as '1.3'." ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://www.researchgate.net/profile/Darlene-Gillespie/publication/281285926_Chinook_Salmon_Oncorhynchus_tshawytscha_Scale_Age_Determination_Procedures/links/55df66d708aede0b572b8de7/Chinook-Salmon-Oncorhynchus-tshawytscha-Scale-Age-Determination-Procedures.pdf 
 
 https://www.pac.dfo-mpo.gc.ca/fm-gp/fraser/docs/abor-autoc/2010FrasRvrChkInformDoc.htm"""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00201> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "An age designation notation that includes two numbers, of which the second is a subscript. The first numeral indicates the total age of the fish and the subscript indicates the time spent in freshwater prior to saltwater immigration." ;
+   <http://purl.org/dc/elements/1.1/source> """https://www.researchgate.net/profile/Darlene-Gillespie/publication/281285926_Chinook_Salmon_Oncorhynchus_tshawytscha_Scale_Age_Determination_Procedures/links/55df66d708aede0b572b8de7/Chinook-Salmon-Oncorhynchus-tshawytscha-Scale-Age-Determination-Procedures.pdf 
+
+https://pdxscholar.library.pdx.edu/cgi/viewcontent.cgi?article=3220&context=open_access_etds"""
  ] .
 
 
@@ -1919,16 +2152,16 @@ https://www.pac.dfo-mpo.gc.ca/fm-gp/fraser/docs/abor-autoc/2010FrasRvrChkInformD
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00202> ;
-   owl:annotatedProperty owl:equivalentClass ;
-   owl:annotatedTarget "http://purl.obolibrary.org/obo/ENVO_00002297" ;
-   rdfs:comment "Note that this ENVO term, 'environmental feature' is deprecated"
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A material entity which determines an environmental system." ;
+   <http://purl.org/dc/elements/1.1/source> "http://purl.obolibrary.org/obo/ENVO_00002297 [DEPRECATED]"
  ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00202> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "A material entity which determines an environmental system." ;
-   <http://purl.org/dc/elements/1.1/source> "http://purl.obolibrary.org/obo/ENVO_00002297 [DEPRECATED]"
+   owl:annotatedProperty owl:equivalentClass ;
+   owl:annotatedTarget "http://purl.obolibrary.org/obo/ENVO_00002297" ;
+   rdfs:comment "Note that this ENVO term, 'environmental feature' is deprecated"
  ] .
 
 
@@ -2012,23 +2245,6 @@ https://www.wikidata.org/wiki/Q184395"""
  ] .
 
 
-###  http://purl.dataone.org/odo/salmon_00206
-<http://purl.dataone.org/odo/salmon_00206> rdf:type owl:Class ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-04-12T23:40:43Z"^^xsd:dateTime ;
-                                           rdfs:label "Measurement type"@en ;
-                                           owl:equivalentClass "http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType" ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A MeasurementType describes the type of a Measurement in which the Measurement would follow the associated Protocol to record the value of the associated Characteristic of the associated Entity using the associated Standard. Any of these associated properties may be omitted, in which case the MeasurementType is only constrained by the provided associations. A MeasurementType is a hypothetical construct, in that it is not associated with a particular instance of a Measurement." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType" .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00206> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "A MeasurementType describes the type of a Measurement in which the Measurement would follow the associated Protocol to record the value of the associated Characteristic of the associated Entity using the associated Standard. Any of these associated properties may be omitted, in which case the MeasurementType is only constrained by the provided associations. A MeasurementType is a hypothetical construct, in that it is not associated with a particular instance of a Measurement." ;
-   <http://purl.org/dc/elements/1.1/source> "http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType"
- ] .
-
-
 ###  http://purl.dataone.org/odo/salmon_00208
 <http://purl.dataone.org/odo/salmon_00208> rdf:type owl:Class ;
                                            rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00465> ;
@@ -2060,7 +2276,7 @@ taxon""" ;
 
 ###  http://purl.dataone.org/odo/salmon_00214
 <http://purl.dataone.org/odo/salmon_00214> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00206> ;
+                                           rdfs:subClassOf <http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-14T18:23:43Z"^^xsd:dateTime ;
                                            rdfs:label "Environmental measurement type"@en ;
