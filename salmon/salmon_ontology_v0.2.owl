@@ -109,6 +109,16 @@ owl:sameAs rdf:type owl:AnnotationProperty .
 
 
 #################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.w3.org/ns/ssn/isProxyFor
+<http://www.w3.org/ns/ssn/isProxyFor> rdf:type owl:ObjectProperty ;
+                                      rdfs:domain <http://purl.dataone.org/odo/SASAP_000484> ;
+                                      rdfs:range <http://purl.dataone.org/odo/salmon_00184> .
+
+
+#################################################################
 #    Classes
 #################################################################
 
@@ -166,7 +176,7 @@ owl:sameAs rdf:type owl:AnnotationProperty .
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000478> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A series or system of written symbols used to represent numbers, amounts, or elements." ;
-   <http://purl.org/dc/elements/1.1/source> <http://semanticscience.org/resource/SIO_001385>
+   rdfs:comment <http://semanticscience.org/resource/SIO_001385>
  ] .
 
 
@@ -213,12 +223,105 @@ https://www.wikidata.org/wiki/Q23582242"""
                                            rdfs:label "Commercial fishing bycatch"@en .
 
 
+###  http://purl.dataone.org/odo/SASAP_000483
+<http://purl.dataone.org/odo/SASAP_000483> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00234> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-27T21:37:46Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "Otoliths, or \"earstones\" (structures formed of calcium in the heads of bony fishes, and which function as organs of balance), grow concentrically from the center origin. Factors, such as watertemperature, that affect fish growth cause seasonal changes in the density of layers laid down in otoliths and in some cases it is possible to determine fish age from the banding that results. When otoliths are viewed under a low-power microscope, the layers making up spring and summer growth appear as a white, opaque band. Layers laid down in the fall, and also in the winter in some fishes, appear as a dark translucent band. A light and a dark band together make up the annual growth, and age in years is determined by counting the number of dark bands." ;
+                                           rdfs:label "Number of otolith annuli"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The number of annuli on a given otolith." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000483> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "Otoliths, or \"earstones\" (structures formed of calcium in the heads of bony fishes, and which function as organs of balance), grow concentrically from the center origin. Factors, such as watertemperature, that affect fish growth cause seasonal changes in the density of layers laid down in otoliths and in some cases it is possible to determine fish age from the banding that results. When otoliths are viewed under a low-power microscope, the layers making up spring and summer growth appear as a white, opaque band. Layers laid down in the fall, and also in the winter in some fishes, appear as a dark translucent band. A light and a dark band together make up the annual growth, and age in years is determined by counting the number of dark bands." ;
+   <http://purl.org/dc/elements/1.1/source> <https://spo.nmfs.noaa.gov/sites/default/files/legacy-pdfs/leaflet488.pdf>
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000483> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The number of annuli on a given otolith." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://spo.nmfs.noaa.gov/sites/default/files/legacy-pdfs/leaflet488.pdf>
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000484
+<http://purl.dataone.org/odo/SASAP_000484> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00167> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-27T22:01:23Z"^^xsd:dateTime ;
+                                           rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
+
+This probably isn't the best place for this, since there may be proxy measures for non-fish measurement types; leaving for now but need input on the best way to model these in general""" ;
+                                           rdfs:label "Proxy measurement types (?)"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A variable that is not in itself directly relevant, but that serves in place of an unobservable or immeasurable variable. In order for a variable to be a good proxy, it must have a close correlation, not necessarily linear, with the variable of interest. This correlation might be either positive or negative." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000484> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A variable that is not in itself directly relevant, but that serves in place of an unobservable or immeasurable variable. In order for a variable to be a good proxy, it must have a close correlation, not necessarily linear, with the variable of interest. This correlation might be either positive or negative." ;
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Proxy_(statistics) 
+https://www.wikidata.org/wiki/Q1432581"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000485
+<http://purl.dataone.org/odo/SASAP_000485> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00186> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-27T23:56:52Z"^^xsd:dateTime ;
+                                           rdfs:label "External sex determination method"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000486
+<http://purl.dataone.org/odo/SASAP_000486> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00186> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-27T23:57:03Z"^^xsd:dateTime ;
+                                           rdfs:label "Internal sex determination method"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000487
+<http://purl.dataone.org/odo/SASAP_000487> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00186> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-27T23:57:56Z"^^xsd:dateTime ;
+                                           rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
+
+This may be a good resource: https://www.fws.gov/r7/fisheries/genetics/pdf/09_rf_2004_OlsenMillerHarperNaglerVanHattenWhittonWenburg_OS.pdf""" ;
+                                           rdfs:label "Genetic sexing *"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000488
+<http://purl.dataone.org/odo/SASAP_000488> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00216> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-27T23:59:24Z"^^xsd:dateTime ;
+                                           rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
+
+There may be subclasses to include here. Need to research further.""" ;
+                                           rdfs:label "Hermaphrodite *"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000489
+<http://purl.dataone.org/odo/SASAP_000489> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000485> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-28T00:02:33Z"^^xsd:dateTime ;
+                                           rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
+
+rdfs:label here needs to reflect a method""" ;
+                                           rdfs:label "Sexual dimorphic characteristic *"@en .
+
+
 ###  http://purl.dataone.org/odo/SASAP_00400
 <http://purl.dataone.org/odo/SASAP_00400> rdf:type owl:Class ;
                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00216> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-21T21:15:55Z"^^xsd:dateTime ;
-                                          rdfs:label "Immature"@en .
+                                          rdfs:label "Immature *"@en .
 
 
 ###  http://purl.dataone.org/odo/SASAP_00401
@@ -534,10 +637,8 @@ https://www.wikidata.org/wiki/Q6294669"""
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-22T18:13:32Z"^^xsd:dateTime ;
                                           rdfs:label "Dissolved oxygen concentration"@en ;
-                                          owl:equivalentClass <http://purl.dataone.org/odo/ECSO_00001669> ;
                                           <http://www.w3.org/2004/02/skos/core#altLabel> "DO concentration" ;
-                                          <http://www.w3.org/2004/02/skos/core#definition> "A concentration of the amount of oxygen present in water." ;
-                                          <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.dataone.org/odo/ECSO_00001669> .
+                                          <http://www.w3.org/2004/02/skos/core#definition> "A concentration of the amount of oxygen present in water." .
 
 
 ###  http://purl.dataone.org/odo/SASAP_00457
@@ -571,7 +672,34 @@ https://www.wikidata.org/wiki/Q502895"""
                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00215> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:17:29Z"^^xsd:dateTime ;
-                                          rdfs:label "Scientific name"@en .
+                                          rdfs:label "Scientific name"@en ;
+                                          owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43459> ;
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> """Binomial name 
+Binomen 
+Latin name""" ;
+                                          <http://www.w3.org/2004/02/skos/core#definition> "The name applied to a plant, animal, or other organism, according to the Codes of Nomenclature, consisting of a Genus and species." ;
+                                          <http://www.w3.org/2004/02/skos/core#exactMatch> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43459> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00458> ;
+   owl:annotatedProperty owl:equivalentClass ;
+   owl:annotatedTarget <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43459> ;
+   rdfs:comment "URI doesn't dereference to the term; see here instead: https://bioportal.bioontology.org/ontologies/NCIT?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C43459"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00458> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The name applied to a plant, animal, or other organism, according to the Codes of Nomenclature, consisting of a Genus and species." ;
+   <http://purl.org/dc/elements/1.1/source> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43459>
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00458> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#exactMatch> ;
+   owl:annotatedTarget <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C43459> ;
+   rdfs:comment "URI doesn't dereference to the term; see here instead: https://bioportal.bioontology.org/ontologies/NCIT?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C43459"
+ ] .
 
 
 ###  http://purl.dataone.org/odo/SASAP_00460
@@ -933,7 +1061,7 @@ https://www.monitoringresources.org/Document/Method/Details/4041"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-31T18:21:18Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "Total length can be measured by two conventions -- by leaving the caudal fin spread in a natural position or by compressing the lobes of the caudal fin dorsoventrally." ;
-                                           rdfs:label "total length"@en ;
+                                           rdfs:label "Total length"@en ;
                                            <http://www.w3.org/2004/02/skos/core#altLabel> "TL" ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "A fish length measurement of the entire length of a fish's body, taken from the most anterior part of the fish to the tip of the longest caudal fin rays." .
 
@@ -1352,10 +1480,18 @@ https://www.wikidata.org/wiki/Q283534"""
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00137> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-02T20:00:36Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "In Alaska, subsistence fisheries may not operate in \"nonsubsistence areas\" as designated by the state (AS 16.05.258(c))." ;
                                            rdfs:label "Subsistence fishery"@en ;
                                            <http://www.w3.org/2004/02/skos/core#altLabel> """artisinal fishery 
 traditional fishery""" ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "A fishery in which fishes or other seafood are harvested for noncommercial, customary and traditional uses. These uses include direct personal or family consumption as food, shelter, fuel, clothing, tools, or transportation, for the making and selling of handicraft articles out of nonedible by-products of fish and wildlife resources taken for personal or family consumption, and for the customary trade, barter, or sharing for personal or family consumption." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00172> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "In Alaska, subsistence fisheries may not operate in \"nonsubsistence areas\" as designated by the state (AS 16.05.258(c))." ;
+   <http://purl.org/dc/elements/1.1/source> <http://www.touchngo.com/lglcntr/akstats/statutes/title16/chapter05/section258.htm>
+ ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00172> ;
@@ -1404,7 +1540,7 @@ It is unlawful to buy, sell, trade or barter personal use finfish, shellfish, aq
 
 Many, but not all, personal use fisheries require a permit issued by the Department of Fish and Game. Personal use fisheries have many different regulations for bag limits, allowable gear, and time and area restrictions. Some personal use fisheries are managed in-season by emergency order, so regulations can change at any time.""" ;
                                            rdfs:label "Personal use fishery"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A regulatory category of Alaskan fishery which is legally defined as, \"the taking, fishing for, or possession of finfish, shellfish, or other fishery resources, by Alaska residents for personal use and not for sale or barter, with gill or dip net, seine, fish wheel, long line, or other means defined by the Board of Fisheries.\"" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A regulatory category of Alaskan fishery which is legally defined as, \"the taking, fishing for, or possession of finfish, shellfish, or other fishery resources, by Alaska residents for personal use and not for sale or barter, with gill or dip net, seine, fish wheel, long line, or other means defined by the Board of Fisheries.\" Personal use fisheries may exist only in \"nonsubsistence areas\" as determined by the state of Alaska (AS 16.05.258(c))." ;
                                            <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.dataone.org/odo/salmon_00172> .
 
 [ rdf:type owl:Axiom ;
@@ -1423,8 +1559,9 @@ Many, but not all, personal use fisheries require a permit issued by the Departm
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00175> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "A regulatory category of Alaskan fishery which is legally defined as, \"the taking, fishing for, or possession of finfish, shellfish, or other fishery resources, by Alaska residents for personal use and not for sale or barter, with gill or dip net, seine, fish wheel, long line, or other means defined by the Board of Fisheries.\"" ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.adfg.alaska.gov/index.cfm?adfg=fishingPersonalUse.main"
+   owl:annotatedTarget "A regulatory category of Alaskan fishery which is legally defined as, \"the taking, fishing for, or possession of finfish, shellfish, or other fishery resources, by Alaska residents for personal use and not for sale or barter, with gill or dip net, seine, fish wheel, long line, or other means defined by the Board of Fisheries.\" Personal use fisheries may exist only in \"nonsubsistence areas\" as determined by the state of Alaska (AS 16.05.258(c))." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://alaskasalmonandpeople.org/working-group/governance-and-subsistence/> ,
+                                                            "http://www.adfg.alaska.gov/index.cfm?adfg=fishingPersonalUse.main"
  ] .
 
 
@@ -1503,8 +1640,7 @@ https://www.wikidata.org/wiki/Q188989""" ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-06T22:49:05Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "There are three basic methods for age and growth determination of fishes: (1) observation of the growth of fishes of known age, (2) study of fish size-frequencies, and (3) study of seasonal ring formation in hard body parts such as scales and bones." ;
-                                           rdfs:comment "possibly delete this later" ;
-                                           rdfs:label "Fish age or growth determination method"@en ;
+                                           rdfs:label "Fish age determination method"@en ;
                                            <http://www.w3.org/2004/02/skos/core#closeMatch> "http://purl.dataone.org/odo/ECSO_00001602" ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "The way in which age is determined for a given individual." .
 
@@ -1755,20 +1891,20 @@ G-R""" ;
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00201> ;
-   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
-   owl:annotatedTarget "e.g. An age written in Gilbert-Rich notation as '5sub2' (spoken as \"five sub two\") is interpreted as a fish that is in its fifth year of life (i.e. a fish that will be 5 on its next \"birthday\" or the number of winters from its deposition in the gravel as an egg to the time of sampling) and which migrated to the ocean during its second year of life. The European notation equivalent age is written as '1.3'." ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://www.researchgate.net/profile/Darlene-Gillespie/publication/281285926_Chinook_Salmon_Oncorhynchus_tshawytscha_Scale_Age_Determination_Procedures/links/55df66d708aede0b572b8de7/Chinook-Salmon-Oncorhynchus-tshawytscha-Scale-Age-Determination-Procedures.pdf 
-
-https://www.pac.dfo-mpo.gc.ca/fm-gp/fraser/docs/abor-autoc/2010FrasRvrChkInformDoc.htm"""
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00201> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "An age designation notation that includes two numbers, of which the second is a subscript. The first numeral indicates the total age of the fish and the subscript indicates the time spent in freshwater prior to saltwater immigration." ;
    <http://purl.org/dc/elements/1.1/source> """https://www.researchgate.net/profile/Darlene-Gillespie/publication/281285926_Chinook_Salmon_Oncorhynchus_tshawytscha_Scale_Age_Determination_Procedures/links/55df66d708aede0b572b8de7/Chinook-Salmon-Oncorhynchus-tshawytscha-Scale-Age-Determination-Procedures.pdf 
 
 https://pdxscholar.library.pdx.edu/cgi/viewcontent.cgi?article=3220&context=open_access_etds"""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00201> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "e.g. An age written in Gilbert-Rich notation as '5sub2' (spoken as \"five sub two\") is interpreted as a fish that is in its fifth year of life (i.e. a fish that will be 5 on its next \"birthday\" or the number of winters from its deposition in the gravel as an egg to the time of sampling) and which migrated to the ocean during its second year of life. The European notation equivalent age is written as '1.3'." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://www.researchgate.net/profile/Darlene-Gillespie/publication/281285926_Chinook_Salmon_Oncorhynchus_tshawytscha_Scale_Age_Determination_Procedures/links/55df66d708aede0b572b8de7/Chinook-Salmon-Oncorhynchus-tshawytscha-Scale-Age-Determination-Procedures.pdf 
+
+https://www.pac.dfo-mpo.gc.ca/fm-gp/fraser/docs/abor-autoc/2010FrasRvrChkInformDoc.htm"""
  ] .
 
 
@@ -1865,7 +2001,7 @@ https://www.wikidata.org/wiki/Q184395"""
 
 1. delete this entirely? or keep and...
 2. make measurement methods instances?""" ;
-                                           rdfs:label "Measurement method -- DELETE THIS (?)"@en ;
+                                           rdfs:label "Measurement method"@en ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "The manner, procedure or technique by which a morphological or physiological state or property in a single individual or sample or a group of individuals or samples is assessed and a quantitative or qualitative value assigned." .
 
 [ rdf:type owl:Axiom ;
@@ -2237,10 +2373,19 @@ https://www.wikidata.org/wiki/Q63565252"""
 
 ###  http://purl.dataone.org/odo/salmon_00231
 <http://purl.dataone.org/odo/salmon_00231> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00232> ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00185> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-15T19:25:23Z"^^xsd:dateTime ;
-                                           rdfs:label "Measuring the distance between scale circuli (?)"@en .
+                                           rdfs:comment "A Basic Guide to Aging & Identification of Pacific Salmon Scales by Alaska Department of Fish & Game is available at: https://www.adfg.alaska.gov/static/education/educators/curricula/pdfs/salmon_scales_guide_aging_identification.pdf" ;
+                                           rdfs:label "Measuring the distance between scale circuli"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A method which is used to approximate the age of a fish, and which generally involves removing and preserving a scale from a fish, then counting the number of annuli (i.e. year marks)." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00231> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A method which is used to approximate the age of a fish, and which generally involves removing and preserving a scale from a fish, then counting the number of annuli (i.e. year marks)." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://spo.nmfs.noaa.gov/sites/default/files/legacy-pdfs/leaflet488.pdf>
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_00232
@@ -2248,17 +2393,18 @@ https://www.wikidata.org/wiki/Q63565252"""
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00185> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-15T19:27:37Z"^^xsd:dateTime ;
-                                           rdfs:label "Fish growth rate determination method"@en .
+                                           rdfs:comment "Alaska Department of Fish & Game, Division of Fisheries Rehabilitation, Enchancement and Development's report on Juvenile Salmonid Otolith Extraction and Preparation Techniques for Microscopic Examination can be accessed at: https://www.adfg.alaska.gov/fedaidpdfs/FRED.132.pdf" ;
+                                           rdfs:label "Counting otolith annuli"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A method which is used to approximate the age of a fish and which generally involves extracting the otoliths from a fish, then counting the number of annuli (i.e. year marks)." .
 
 
 ###  http://purl.dataone.org/odo/salmon_00234
 <http://purl.dataone.org/odo/salmon_00234> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00167> ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000484> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-15T19:38:17Z"^^xsd:dateTime ;
-                                           <http://purl.org/dc/elements/1.1/description> "Fish growth rates are often estimated using proxy measurements, such as the space or distance between scale circuli. Therefore, growth rate measurement types may not actually be a measured rate, but rather a linear measurement which is used to approximate a rate." ;
-                                           rdfs:label "Fish growth rate measurement type"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "The rate, or speed, at which the size of a fish increases." .
+                                           <http://purl.org/dc/elements/1.1/description> "Fish ages are often estimated using proxy measurements, such as the space or distance between scale circuli." ;
+                                           rdfs:label "Fish age proxy measurement type"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_00235
@@ -2270,7 +2416,7 @@ https://www.wikidata.org/wiki/Q63565252"""
                                            rdfs:comment "An Essential Salmon Variable (ESV) from the working list being developed by Graeme Diack et al. at the Atlantic Salmon Trust." ,
                                                         """[ADDRESS COMMENT, THEN DELETE] 
 
-may want to attach oboe:Protocol""" ;
+Jeanette recommended moving this from 'Fish growth rate measurement type' to 'Fish age measurement type' as it's used to approximate age. Need to think more about how to arrage this hierarchically""" ;
                                            rdfs:label "Distance between scale circuli"@en ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "The measured distance between the fine ridges of a scale (i.e. circuli) which are laid down annually in a circular pattern around the focus, or center, of a scale as the growth of the fish proceeds." .
 
@@ -2584,7 +2730,7 @@ http://www.fishbase.org/summary/244""" ;
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00216> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-19T18:26:55Z"^^xsd:dateTime ;
-                                           rdfs:label "Unknown sex"@en .
+                                           rdfs:label "Unknown sex *"@en .
 
 
 #################################################################
@@ -4002,6 +4148,15 @@ SASAP Project""" ;
    owl:annotatedTarget "A historical GIS project to create and freely disseminate a database incorporating all available aggregate census information for the United States between 1790 and 2010." ;
    <http://purl.org/dc/elements/1.1/source> "https://en.wikipedia.org/wiki/National_Historical_Geographic_Information_System"
  ] .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+owl:Thing rdfs:comment """- any term that is noted by a \"(?)\" has notes in an rdfs:comment that need to be addressed
+
+- any term that is noted by a \"*\" does not yet have a definition/other annotation properties yet""" .
 
 
 #################################################################
