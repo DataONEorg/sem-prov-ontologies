@@ -44,6 +44,10 @@ https://orcid.org/0000-0003-0077-4738""" ;
 <http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/elements/1.1/source
 <http://purl.org/dc/elements/1.1/source> rdf:type owl:AnnotationProperty .
 
@@ -127,23 +131,28 @@ owl:sameAs rdf:type owl:AnnotationProperty .
 ###  http://rs.tdwg.org/dwc/terms/nameAccordingTo
 <http://rs.tdwg.org/dwc/terms/nameAccordingTo> rdf:type owl:ObjectProperty ;
                                                rdfs:domain <http://purl.dataone.org/odo/SASAP_00458> ;
-                                               rdfs:range <http://purl.dataone.org/odo/SASAP_000474> ;
+                                               rdfs:range <http://purl.dataone.org/odo/SASAP_000495> ;
+                                               rdfs:comment "As of 30April2021, Darwin Core (DWC) does not specify domains and ranges. Currently, I am considering 'Salmon specimen and occurrence' to be the domain and 'Author citation' to be the range." ;
                                                <http://www.w3.org/2004/02/skos/core#definition> "The reference to the source in which the specific taxon concept circumscription is defined or implied - traditionally signified by the Latin \"sensu\" or \"sec.\" (from secundum, meaning \"according to\"). For taxa that result from identifications, a reference to the keys, monographs, experts and other sources should be given." .
-
-
-###  http://rs.tdwg.org/dwc/terms/namePublishedInYear
-<http://rs.tdwg.org/dwc/terms/namePublishedInYear> rdf:type owl:ObjectProperty ;
-                                                   <http://www.w3.org/2004/02/skos/core#definition> "The four-digit year in which the scientificName was published." .
 
 
 ###  http://rs.tdwg.org/dwc/terms/scientificName
 <http://rs.tdwg.org/dwc/terms/scientificName> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://purl.dataone.org/odo/SASAP_00457> ;
+                                              rdfs:range <http://purl.dataone.org/odo/SASAP_00458> ;
+                                              rdfs:comment "As of 30April2021, Darwin Core (DWC) does not specify domains and ranges. Currently, I am considering 'Vernacular name' to be the domain and 'Salmon specimen and occurrence' to be the range." ;
                                               <http://www.w3.org/2004/02/skos/core#definition> "The full scientific name, with authorship and date information if known. When forming part of an Identification, this should be the name in lowest level taxonomic rank that can be determined. This term should not contain identification qualifications, which should instead be supplied in the IdentificationQualifier term." .
 
 
 ###  http://rs.tdwg.org/dwc/terms/scientificNameAuthorship
 <http://rs.tdwg.org/dwc/terms/scientificNameAuthorship> rdf:type owl:ObjectProperty ;
                                                         <http://www.w3.org/2004/02/skos/core#definition> "The authorship information for the scientificName formatted according to the conventions of the applicable nomenclaturalCode." .
+
+
+###  http://rs.tdwg.org/dwc/terms/vernacularName
+<http://rs.tdwg.org/dwc/terms/vernacularName> rdf:type owl:ObjectProperty ;
+                                              rdfs:domain <http://purl.dataone.org/odo/SASAP_00458> ;
+                                              rdfs:range <http://purl.dataone.org/odo/SASAP_00457> .
 
 
 ###  http://www.w3.org/ns/ssn/isProxyFor
@@ -410,7 +419,6 @@ http://en.wikipedia.org/wiki/Time""" ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-26T22:37:24Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "Includes qualities like population size, population growth rate, carrying capacity, immigration rate, emigration rate, fecundity, and death rate. A population quality may depend on the qualities of individual organisms in the population, but cannot be measured or described for a single organism." ;
                                            rdfs:label "Quality of a population measurement type"@en ;
-                                           owl:equivalentClass <http://purl.obolibrary.org/obo/PCO_0000003> ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "A quality that inheres in a population of organisms." .
 
 [ rdf:type owl:Axiom ;
@@ -441,7 +449,6 @@ http://en.wikipedia.org/wiki/Time""" ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-26T23:10:08Z"^^xsd:dateTime ;
                                            rdfs:label "Notation type"@en ;
-                                           owl:equivalentClass <http://semanticscience.org/resource/SIO_001385> ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "A series or system of written symbols used to represent numbers, amounts, or elements." .
 
 [ rdf:type owl:Axiom ;
@@ -476,7 +483,7 @@ https://www.wikidata.org/wiki/Q23582242"""
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-26T23:24:51Z"^^xsd:dateTime ;
                                            rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
 
-Need to think more about how to model time over which measurement is taken. E.g. do we want to have separate terms for annual escapement counts vs. daily escapement counts, OR have a predicate for something like containsMeasurementsOfAnnualCount, OR something else""" ;
+Need to think more about how to model time over which measurement is taken. E.g. do we want to have separate terms for annual escapement counts vs. daily escapement counts, OR have a predicate which encapsulates the time period over which a measurement occurs, OR something else?""" ;
                                            rdfs:label "Annual escapement count (?)"@en ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "The number of salmon from a given population that escape the fishery in a year." .
 
@@ -486,7 +493,10 @@ Need to think more about how to model time over which measurement is taken. E.g.
                                            rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000479> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-26T23:24:56Z"^^xsd:dateTime ;
-                                           rdfs:label "Daily escapement count"@en ;
+                                           rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
+
+Need to think more about how to model time over which measurement is taken. E.g. do we want to have separate terms for annual escapement counts vs. daily escapement counts, OR have a predicate which encapsulates the time period over which a measurement occurs, OR something else?""" ;
+                                           rdfs:label "Daily escapement count (?)"@en ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "The number of salmon from a given population that escape the fishery in a day." .
 
 
@@ -566,7 +576,7 @@ https://www.wikidata.org/wiki/Q1432581"""
                                            rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
 
 This may be a good resource: https://www.fws.gov/r7/fisheries/genetics/pdf/09_rf_2004_OlsenMillerHarperNaglerVanHattenWhittonWenburg_OS.pdf""" ;
-                                           rdfs:label "Genetic sexing *"@en .
+                                           rdfs:label "Genetic sexing (?)"@en .
 
 
 ###  http://purl.dataone.org/odo/SASAP_000488
@@ -604,7 +614,7 @@ rdfs:label here needs to reflect a method""" ;
                                            rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000491> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-28T18:15:54Z"^^xsd:dateTime ;
-                                           rdfs:label "Commercial fishing harvest count"@en .
+                                           rdfs:label "Commercial fishing harvest count *"@en .
 
 
 ###  http://purl.dataone.org/odo/SASAP_000493
@@ -641,10 +651,6 @@ rdfs:label here needs to reflect a method""" ;
 
 ###  http://purl.dataone.org/odo/SASAP_000495
 <http://purl.dataone.org/odo/SASAP_000495> rdf:type owl:Class ;
-                                           owl:equivalentClass [ rdf:type owl:Class ;
-                                                                 owl:oneOf ( <http://purl.dataone.org/odo/SASAP_000475>
-                                                                           )
-                                                               ] ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-28T20:18:16Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "The International Code of Zoological Nomenclature (ICZN), a widely accepted convention in zoology that rules the formal scientific naming of organisms treated as animals, establishes guidelines for author citation. See Chapter 11 of the Fourth Edition." ;
@@ -665,24 +671,15 @@ authority""" ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000495> ;
    owl:annotatedProperty rdfs:comment ;
    owl:annotatedTarget "For example, in 1758 Linnaeus gave the Asian elephant the scientific name Elephas maximus, so the name is sometimes written as \"Elephas maximus Linnaeus, 1758\"." ;
-   <http://purl.org/dc/elements/1.1/source> <https://en.wikipedia.org/wiki/Taxonomy_(biology)>
+   <http://purl.org/dc/elements/1.1/source> "https://en.wikipedia.org/wiki/Taxonomy_(biology), accessed 28April2021"
  ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000495> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "The name of the scientist or scientists who first validly published the scientific name of a particular organism." ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://en.wikipedia.org/wiki/Taxonomy_(biology)>
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Taxonomy_(biology), accessed 28April2021"
  ] .
-
-
-###  http://purl.dataone.org/odo/SASAP_000496
-<http://purl.dataone.org/odo/SASAP_000496> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00465> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-04-28T21:06:15Z"^^xsd:dateTime ;
-                                           rdfs:label "Publication year *"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "REVISE THIS LATER: The year a creative work is published." .
 
 
 ###  http://purl.dataone.org/odo/SASAP_000497
@@ -731,7 +728,6 @@ authority""" ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-29T18:48:45Z"^^xsd:dateTime ;
                                            rdfs:label "Quality of an ecological community"@en ;
-                                           owl:equivalentClass <http://purl.obolibrary.org/obo/PCO_0000004> ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "A quality that inheres in a community." .
 
 [ rdf:type owl:Axiom ;
@@ -772,6 +768,957 @@ authority""" ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-29T19:11:32Z"^^xsd:dateTime ;
                                            rdfs:label "Juvenile *"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000518
+<http://purl.dataone.org/odo/SASAP_000518> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002050> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-04T17:21:40Z"^^xsd:dateTime ;
+                                           rdfs:label "Year of fish harvest (?)"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000519
+<http://purl.dataone.org/odo/SASAP_000519> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000518> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-04T17:21:48Z"^^xsd:dateTime ;
+                                           rdfs:label "Year of commercial fish harvest *"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.dataone.org/odo/SASAP_000492> .
+
+
+###  http://purl.dataone.org/odo/SASAP_000520
+<http://purl.dataone.org/odo/SASAP_000520> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002050> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-04T17:25:52Z"^^xsd:dateTime ;
+                                           rdfs:label "Brood year"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The parental year for a group of returning salmon, i.e. the calendar year when the majority of parents of these fish spawned." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000520> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The parental year for a group of returning salmon, i.e. the calendar year when the majority of parents of these fish spawned." ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.pac.dfo-mpo.gc.ca/fm-gp/salmon-saumon/gloss-eng.html, accessed 04May2021"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000521
+<http://purl.dataone.org/odo/SASAP_000521> rdf:type owl:Class ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-04T19:40:41Z"^^xsd:dateTime ;
+                                           rdfs:label "Identifier"@en ;
+                                           owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25364> ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "One or more characters used to identify, name, or characterize the nature, properties, or contents of a thing." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000521> ;
+   owl:annotatedProperty owl:equivalentClass ;
+   owl:annotatedTarget <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25364> ;
+   rdfs:comment "This URI does not dereference to the term. Including the URL to BioPortal to ensure findability: https://bioportal.bioontology.org/ontologies/NCIT?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C25364"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000521> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "One or more characters used to identify, name, or characterize the nature, properties, or contents of a thing." ;
+   <http://purl.org/dc/elements/1.1/source> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25364>
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000522
+<http://purl.dataone.org/odo/SASAP_000522> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000560> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-04T19:41:04Z"^^xsd:dateTime ;
+                                           rdfs:label "Left pectoral fin clip"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The left pectoral fin of the fish is removed." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000522> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The left pectoral fin of the fish is removed." ;
+   <http://purl.org/dc/elements/1.1/source> <http://orcid.org/0000-0002-5300-3075>
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000523
+<http://purl.dataone.org/odo/SASAP_000523> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000521> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-04T19:41:18Z"^^xsd:dateTime ;
+                                           rdfs:label "Species code"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A numeric or alphanumeric code, which represents a particular species and may be recorded in place of a formal scientific or vernacular name." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000523> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A numeric or alphanumeric code, which represents a particular species and may be recorded in place of a formal scientific or vernacular name." ;
+   <http://purl.org/dc/elements/1.1/source> <http://orcid.org/0000-0002-5300-3075>
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000524
+<http://purl.dataone.org/odo/SASAP_000524> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000521> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-04T19:41:34Z"^^xsd:dateTime ;
+                                           rdfs:label "Fish tag code or color"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The unique alphanumeric code or marking color(s) of a tagged fish." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000524> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The unique alphanumeric code or marking color(s) of a tagged fish." ;
+   <http://purl.org/dc/elements/1.1/source> <http://orcid.org/0000-0002-5300-3075>
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000525
+<http://purl.dataone.org/odo/SASAP_000525> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000523> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-04T19:44:10Z"^^xsd:dateTime ;
+                                           rdfs:comment """ADF&G salmon species codes:
+
+410 salmon, chinook
+420 salmon, sockeye
+430 salmon, coho
+440 salmon, pink
+450 salmon, chum""" ;
+                                           rdfs:label "ADF&G species code"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "Alaska Department of Fish and Wildlife species code" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The Alaska Department of Fish and Game defines unique three-digit \"Codes for the Commercial Operator's Annual Report\" which represent each of the commercially harvested fishes and shelfishes." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000525> ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget """ADF&G salmon species codes:
+
+410 salmon, chinook
+420 salmon, sockeye
+430 salmon, coho
+440 salmon, pink
+450 salmon, chum""" ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.adfg.alaska.gov/static/license/fishing/pdfs/coar_fish_codes.pdf, accessed 04May2021"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000525> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The Alaska Department of Fish and Game defines unique three-digit \"Codes for the Commercial Operator's Annual Report\" which represent each of the commercially harvested fishes and shelfishes." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.adfg.alaska.gov/static/license/fishing/pdfs/coar_fish_codes.pdf, accessed 04May2021"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000526
+<http://purl.dataone.org/odo/SASAP_000526> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000521> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-04T19:58:20Z"^^xsd:dateTime ;
+                                           rdfs:label "Gear code"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A numeric or alphanumeric code, which represents a particular type of fishing gear or equipment." .
+
+
+###  http://purl.dataone.org/odo/SASAP_000527
+<http://purl.dataone.org/odo/SASAP_000527> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000526> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-04T19:58:32Z"^^xsd:dateTime ;
+                                           rdfs:comment """ADF&G gear codes:
+
+01 purse seine
+02 beach seine
+03 drift gillnet
+04 set gillnet
+05 hand line/jig/troll
+07 non-pelagic/bottom trawl
+08 fish wheel
+10 ring net
+11 diving
+12 handpicked
+13 dip net
+14 weir
+15 power gurdy troll
+17 beam trawl
+18 shovel
+21 pound
+22 dredge
+23 hydro/mechanical dredge
+25 dinglebar
+26 mechanical jigs
+27 double otter trawl
+34 herring gillnet
+37 pair trawl
+41 sunken gillnet
+47 pelagic/mid-water trawl
+61 longline (hook and line)
+77 fish ladder/raceway
+90 trap
+91 pot gear
+99 other (please specify)""" ;
+                                           rdfs:label "ADF&G gear code"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "Alaska Department of Fish and Game gear code" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The Alaska Department of Fish and Game defines unique two-digit \"Codes for the Commercial Operator's Annual Report\" which represent each of the gear types and harvest methods used Alaskan fisheries." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000527> ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget """ADF&G gear codes:
+
+01 purse seine
+02 beach seine
+03 drift gillnet
+04 set gillnet
+05 hand line/jig/troll
+07 non-pelagic/bottom trawl
+08 fish wheel
+10 ring net
+11 diving
+12 handpicked
+13 dip net
+14 weir
+15 power gurdy troll
+17 beam trawl
+18 shovel
+21 pound
+22 dredge
+23 hydro/mechanical dredge
+25 dinglebar
+26 mechanical jigs
+27 double otter trawl
+34 herring gillnet
+37 pair trawl
+41 sunken gillnet
+47 pelagic/mid-water trawl
+61 longline (hook and line)
+77 fish ladder/raceway
+90 trap
+91 pot gear
+99 other (please specify)""" ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.adfg.alaska.gov/static/license/fishing/pdfs/coar_fish_codes.pdf, accessed 04May2021"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000527> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The Alaska Department of Fish and Game defines unique two-digit \"Codes for the Commercial Operator's Annual Report\" which represent each of the gear types and harvest methods used Alaskan fisheries." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.adfg.alaska.gov/static/license/fishing/pdfs/coar_fish_codes.pdf, accessed 04May2021"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000528
+<http://purl.dataone.org/odo/SASAP_000528> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000521> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-04T21:54:57Z"^^xsd:dateTime ;
+                                           rdfs:label "Sample identifier"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "sample id" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A numeric or alphanumeric code which represents a particular sample. A sample is defined as a limited quantity of something (e.g. an individual or set of individuals from a population, or a portion of a substance) to be used for testing, analysis, inspection, investigation, demonstration, or trial use." ;
+                                           <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://semanticscience.org/resource/SIO_001050> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000528> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A numeric or alphanumeric code which represents a particular sample. A sample is defined as a limited quantity of something (e.g. an individual or set of individuals from a population, or a portion of a substance) to be used for testing, analysis, inspection, investigation, demonstration, or trial use." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://semanticscience.org/resource/SIO_001050>
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000529
+<http://purl.dataone.org/odo/SASAP_000529> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000528> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-04T21:55:17Z"^^xsd:dateTime ;
+                                           rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
+
+revist this definition""" ;
+                                           rdfs:label "Fish sample code (?)"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "An identifier, which may be assigned to a physical sample taken from a fish (e.g. tissue, fin, otolith) or an entire fish specimen." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000529> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "An identifier, which may be assigned to a physical sample taken from a fish (e.g. tissue, fin, otolith) or an entire fish specimen." ;
+   <http://purl.org/dc/elements/1.1/source> <http://orcid.org/0000-0002-5300-3075>
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000530
+<http://purl.dataone.org/odo/SASAP_000530> rdf:type owl:Class ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-04T22:55:08Z"^^xsd:dateTime ;
+                                           rdfs:comment "An overview of many popular tag types and methods: https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021" ;
+                                           rdfs:label "Fish tag or identification type"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A marking which is used to differentiate individual fish or groups of fish(es)." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000530> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A marking which is used to differentiate individual fish or groups of fish(es)." ;
+   <http://purl.org/dc/elements/1.1/source> <http://orcid.org/0000-0002-5300-3075>
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000532
+<http://purl.dataone.org/odo/SASAP_000532> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000559> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-04T23:17:44Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "This identification type will often last the entire life of the fish, is primarily used for group marking, and is most suitable for fish at least 2.5cm in length. The fish must be euthanized for reading. The tags are delivered on a spool, and the tagging machine magnetises, cuts and inserts the tag into the fish. While a detector can be used to determine if a fish is marked or not, a fish must be euthanized in order to remove the tag and read the engraved code." ;
+                                           rdfs:comment "https://en.wikipedia.org/wiki/Coded_wire_tag" ;
+                                           rdfs:label "Coded wire tag"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "CWT" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A small metal pin which is inserted into the fish, usually into the cartilage of the snout." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000532> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "This identification type will often last the entire life of the fish, is primarily used for group marking, and is most suitable for fish at least 2.5cm in length. The fish must be euthanized for reading. The tags are delivered on a spool, and the tagging machine magnetises, cuts and inserts the tag into the fish. While a detector can be used to determine if a fish is marked or not, a fish must be euthanized in order to remove the tag and read the engraved code." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000532> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A small metal pin which is inserted into the fish, usually into the cartilage of the snout." ;
+   <http://purl.org/dc/elements/1.1/source> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000533
+<http://purl.dataone.org/odo/SASAP_000533> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000530> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-04T23:17:57Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "There are four main methods for collecting tissue samples for DNA sequencing: (1) collecting a fin sample, (2) swabbing the mucus layer of the fish, (3) collecting a scale sample, and (4) blood sampling. Genetic identification can provide better answers to some questions that are also answered through typical fish marking and tagging, such as effective population size, whether populations differ and the degree of inbreeding. However, genetic identification cannot answer questions about, for example migration patterns, movement in the water and growth." ;
+                                           rdfs:label "Genetic identification"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The use of a DNA sample to identify fish which have known biomarkers." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000533> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "There are four main methods for collecting tissue samples for DNA sequencing: (1) collecting a fin sample, (2) swabbing the mucus layer of the fish, (3) collecting a scale sample, and (4) blood sampling. Genetic identification can provide better answers to some questions that are also answered through typical fish marking and tagging, such as effective population size, whether populations differ and the degree of inbreeding. However, genetic identification cannot answer questions about, for example migration patterns, movement in the water and growth." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000533> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The use of a DNA sample to identify fish which have known biomarkers." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000534
+<http://purl.dataone.org/odo/SASAP_000534> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000558> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T16:20:13Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "This type of identification can remain in a fish for several years, is used for individual tagging, and is most suitable for fish that weigh at least 100g (given current technology). Tags may be inserted several different ways: (a) placed in a fish's stomach using a finger or guide, (b) implanted in the abdominal cavity, or (c) anchored inside the abdomen, usually to the abdominal wall with stiches. Data is transmitted wirelessly, usually through the use of radio waves (in fresh water and air), acoustic signals (in water; the receiver must also be in the water) or via satellite communication (in air; the tag sends data after it releases from the fish and floats up to the surface). Many types of telemetry devices also act as bio-loggers and store information locally on the device. Reading is done using the tag’s associated equipment, often through a computer connection." ;
+                                           rdfs:label "Internal acoustic tag"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A small, electronic, sound-emitting device which is placed inside a fish and collects information on that fish's physiology and/or movement patterns." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000534> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "This type of identification can remain in a fish for several years, is used for individual tagging, and is most suitable for fish that weigh at least 100g (given current technology). Tags may be inserted several different ways: (a) placed in a fish's stomach using a finger or guide, (b) implanted in the abdominal cavity, or (c) anchored inside the abdomen, usually to the abdominal wall with stiches. Data is transmitted wirelessly, usually through the use of radio waves (in fresh water and air), acoustic signals (in water; the receiver must also be in the water) or via satellite communication (in air; the tag sends data after it releases from the fish and floats up to the surface). Many types of telemetry devices also act as bio-loggers and store information locally on the device. Reading is done using the tag’s associated equipment, often through a computer connection." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000534> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A small, electronic, sound-emitting device which is placed inside a fish and collects information on that fish's physiology and/or movement patterns." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000535
+<http://purl.dataone.org/odo/SASAP_000535> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000540> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T16:20:22Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "When done correctly, this identification type will last the entire life of the fish, and is used for group marking." ;
+                                           rdfs:label "Adipose fin clip"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The adipose fin is removed using scissors or a razor blade." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000535> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "When done correctly, this identification type will last the entire life of the fish, and is used for group marking." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000535> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The adipose fin is removed using scissors or a razor blade." ;
+   <http://purl.org/dc/elements/1.1/source> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000536
+<http://purl.dataone.org/odo/SASAP_000536> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000539> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T16:23:36Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "This type of identification can remain on a fish from a couple days up to several weeks, and is used for group marking. and is most suitable for fish" ;
+                                           rdfs:label "Bismarck brown dye"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """Bismarck brown
+Machester brown
+Phenylene brown
+Bismarck brown Y
+C.I. 21000
+C.I. Basic Brown 1
+Basic Brown 1
+Vesuvine BA""" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A dilution of diazo dye in which fish are immersed and which stains the fins a brown/tan color." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000536> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "This type of identification can remain on a fish from a couple days up to several weeks, and is used for group marking. and is most suitable for fish" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://fishbio.com/field-notes/inside-fishbio/spray-on-tan, accessed 05May2021"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000536> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
+   owl:annotatedTarget """Bismarck brown
+Machester brown
+Phenylene brown
+Bismarck brown Y
+C.I. 21000
+C.I. Basic Brown 1
+Basic Brown 1
+Vesuvine BA""" ;
+   <http://purl.org/dc/elements/1.1/source> "https://en.wikipedia.org/wiki/Bismarck_brown_Y, accessed 05May2021"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000536> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A dilution of diazo dye in which fish are immersed and which stains the fins a brown/tan color." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://fishbio.com/field-notes/inside-fishbio/spray-on-tan, accessed 05May2021
+https://en.wikipedia.org/wiki/Bismarck_brown_Y, accessed 05May2021"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000537
+<http://purl.dataone.org/odo/SASAP_000537> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000539> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T16:24:43Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "Though not well studied, this type of identification may last up to 3 years post-immersion, and is used for group marking." ;
+                                           rdfs:label "Calcein dye"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "SE-MARK" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A dilution of fluorochrome dye in which fish are immersed and which binds to bony structures (such as fin rays, jaw bones, and scales), manifesting as a green fluorescence." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000537> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "Though not well studied, this type of identification may last up to 3 years post-immersion, and is used for group marking." ;
+   rdfs:comment "https://doi.org/10.1577/M02-143, accessed 05May2021"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000537> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
+   owl:annotatedTarget "SE-MARK" ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.fws.gov/guidance/sites/default/files/documents/Calcein_%28SE%20Mark%29_Study_Protocol.pdf, accessed 05May2021"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000537> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A dilution of fluorochrome dye in which fish are immersed and which binds to bony structures (such as fin rays, jaw bones, and scales), manifesting as a green fluorescence." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.fws.gov/guidance/sites/default/files/documents/Calcein_%28SE%20Mark%29_Study_Protocol.pdf, accessed 05May2021"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000538
+<http://purl.dataone.org/odo/SASAP_000538> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000557> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T16:25:55Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "This identification type may be clearly visible for several months and can be felt for up to a year, is primarily used for group marking, and is most suitable for salmonids that are at least 7.5cm in length. Freeze branding is done by cooling a metal rod and/or brand in liquid nitrogen, then pressing the rod lightly against the fish for ~3sec. A dark spot is temporarily created and the fish's scales are deformed. The dark spot disappears after about a month, while the deformation of the scales can be seen at certain light angles and felt with fingers for up to a year." ;
+                                           rdfs:label "Freeze brand"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A scar made on the dermal tissue using liquid nitrogen." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000538> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "This identification type may be clearly visible for several months and can be felt for up to a year, is primarily used for group marking, and is most suitable for salmonids that are at least 7.5cm in length. Freeze branding is done by cooling a metal rod and/or brand in liquid nitrogen, then pressing the rod lightly against the fish for ~3sec. A dark spot is temporarily created and the fish's scales are deformed. The dark spot disappears after about a month, while the deformation of the scales can be seen at certain light angles and felt with fingers for up to a year." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000538> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A scar made on the dermal tissue using liquid nitrogen." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://doi.org/10.1186/2050-3385-1-18, accessed 05May2021"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000539
+<http://purl.dataone.org/odo/SASAP_000539> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000530> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T16:26:27Z"^^xsd:dateTime ;
+                                           rdfs:label "Dye"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000540
+<http://purl.dataone.org/odo/SASAP_000540> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000557> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T16:29:24Z"^^xsd:dateTime ;
+                                           rdfs:label "Fin or maxilla clip"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The removal of a portion or entirety of a fin or the maxilla of a fish, for identification purposes." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000540> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The removal of a portion or entirety of a fin or the maxilla of a fish, for identification purposes." ;
+   <http://purl.org/dc/elements/1.1/source> <http://orcid.org/0000-0002-5300-3075>
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000541
+<http://purl.dataone.org/odo/SASAP_000541> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000540> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T16:30:45Z"^^xsd:dateTime ;
+                                           rdfs:label "Lower caudal fin clip"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A portion of the lower caudal fin lobe is removed." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000541> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A portion of the lower caudal fin lobe is removed." ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.solitudelakemanagement.com/blog/know-your-pond-life-fin-clipping-for-fisheries-management-success/, accessed 06May2021"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000542
+<http://purl.dataone.org/odo/SASAP_000542> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000540> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T16:31:23Z"^^xsd:dateTime ;
+                                           rdfs:label "Upper caudal fin clip"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A portion of the upper caudal fin lobe is removed." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000542> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A portion of the upper caudal fin lobe is removed." ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.solitudelakemanagement.com/blog/know-your-pond-life-fin-clipping-for-fisheries-management-success/, accessed 06May2021"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000543
+<http://purl.dataone.org/odo/SASAP_000543> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000540> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T16:35:46Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "This identification type will last the entire lifetime of the fish, is used for group marking, and is most suitable for salmonids that are at least 10cm in length." ;
+                                           rdfs:label "Maxilla clip"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The flap in the corner of the mouth is clipped away (the maxilla - sometimes also the supermaxilla)." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000543> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "This identification type will last the entire lifetime of the fish, is used for group marking, and is most suitable for salmonids that are at least 10cm in length." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000543> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The flap in the corner of the mouth is clipped away (the maxilla - sometimes also the supermaxilla)." ;
+   <http://purl.org/dc/elements/1.1/source> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000544
+<http://purl.dataone.org/odo/SASAP_000544> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000540> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T16:36:17Z"^^xsd:dateTime ;
+                                           rdfs:label "Pelvic fin clip"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "One of the pelvic fins is removed using scissors." ,
+                                                                                            "This identification type will last the lifetime of the fish, is used for group marking, and is most suitable for salmonids that are at least 7cm in length." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000544> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "One of the pelvic fins is removed using scissors." ;
+   <http://purl.org/dc/elements/1.1/source> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000544> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "This identification type will last the lifetime of the fish, is used for group marking, and is most suitable for salmonids that are at least 7cm in length." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000545
+<http://purl.dataone.org/odo/SASAP_000545> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000530> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T16:37:48Z"^^xsd:dateTime ;
+                                           rdfs:label "Electronic tag"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """Biologger
+Biotelemetry tag
+Radio tag""" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A tag which transmits information about a fish via an electronic receiver." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000545> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A tag which transmits information about a fish via an electronic receiver." ;
+   <http://purl.org/dc/elements/1.1/source> <http://orcid.org/0000-0002-5300-3075>
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000546
+<http://purl.dataone.org/odo/SASAP_000546> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000558> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T16:38:49Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "This type of identification can remain on a fish for several years, is used for individual tagging, and is most suitable for fish that weigh at least 100g (given current technology). One or more sutures are typically used to attach the tag to the fish's skin using a needle. Data is transmitted wirelessly, usually through the use of radio waves (in fresh water and air), acoustic signals (in water; the receiver must also be in the water) or via satellite communication (in air; the tag sends data after it releases from the fish and floats up to the surface). Many types of telemetry devices also act as bio-loggers and store information locally on the device. Reading is done using the tag’s associated equipment, often through a computer connection." ;
+                                           rdfs:label "External acoustic tag"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A small, electronic, sound-emitting device which is attached externally to a fish and collects information on fish movement patterns and the physical environment." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000546> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "This type of identification can remain on a fish for several years, is used for individual tagging, and is most suitable for fish that weigh at least 100g (given current technology). One or more sutures are typically used to attach the tag to the fish's skin using a needle. Data is transmitted wirelessly, usually through the use of radio waves (in fresh water and air), acoustic signals (in water; the receiver must also be in the water) or via satellite communication (in air; the tag sends data after it releases from the fish and floats up to the surface). Many types of telemetry devices also act as bio-loggers and store information locally on the device. Reading is done using the tag’s associated equipment, often through a computer connection." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000546> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A small, electronic, sound-emitting device which is attached externally to a fish and collects information on fish movement patterns and the physical environment." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021
+
+https://en.wikipedia.org/wiki/Acoustic_tag, accessed 05May2021"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000547
+<http://purl.dataone.org/odo/SASAP_000547> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000530> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T16:40:28Z"^^xsd:dateTime ;
+                                           rdfs:label "External visual tag"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A static tag, which is attached externally to the body of the fish and visually read or interpreted (as opposed to read with an electronic device e.g. an acoustic tag reader)." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000547> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A static tag, which is attached externally to the body of the fish and visually read or interpreted (as opposed to read with an electronic device e.g. an acoustic tag reader)." ;
+   <http://purl.org/dc/elements/1.1/source> <http://orcid.org/0000-0002-5300-3075>
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000548
+<http://purl.dataone.org/odo/SASAP_000548> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000547> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T16:40:41Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "A metal plate with a unique identifying code, which is attached to a fish below the dorsal fin via two stainless steel wires." ,
+                                                                                         "If performed correctly, this identification type may remain attached for the entire life of the fish, is used for individual tagging, and is most suitable for fish at least 15cm in length and which live in open environments. To attach a Carlin tag, double cannulas are first inserted through the fish at the height of the center of the pterygiophores (the bones that support the dorsal fin). Two stainless steel wires are then pulled through the cannulas and then the cannulas are pulled out of the fish. A small metal plate with an alphanumeric code is atached to the steel wires, which are then twisted tightly against the fish's body to hold the plate in place." ;
+                                           rdfs:label "Carlin tag"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000548> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "A metal plate with a unique identifying code, which is attached to a fish below the dorsal fin via two stainless steel wires." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000548> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "If performed correctly, this identification type may remain attached for the entire life of the fish, is used for individual tagging, and is most suitable for fish at least 15cm in length and which live in open environments. To attach a Carlin tag, double cannulas are first inserted through the fish at the height of the center of the pterygiophores (the bones that support the dorsal fin). Two stainless steel wires are then pulled through the cannulas and then the cannulas are pulled out of the fish. A small metal plate with an alphanumeric code is atached to the steel wires, which are then twisted tightly against the fish's body to hold the plate in place." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000549
+<http://purl.dataone.org/odo/SASAP_000549> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000547> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T16:43:07Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "If performed correctly, this type of identification can remain in place for at least a year, is used for individual tagging, and is suitable for fish at lest 20cm in length and which live in open environments. With the cannula attached to a special tag applicator, a scale is removed just below the base of the dorsal fin and the tag is attached. The barb on the tag must hook securely into the pterygiophores (the bones that supports the dorsal fin), otherwise the tag will come loose. Most of the tag then hangs outside the fish’s body like a stiff, narrow tube. The tag is colour-coded, pre-printed with relevant text and numbered by the manufacturer according to the requests of the end user." ;
+                                           rdfs:label "Dart tag"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A barbed plastic tag which is inserted under the dorsal fin of the fish using a cannula." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000549> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "If performed correctly, this type of identification can remain in place for at least a year, is used for individual tagging, and is suitable for fish at lest 20cm in length and which live in open environments. With the cannula attached to a special tag applicator, a scale is removed just below the base of the dorsal fin and the tag is attached. The barb on the tag must hook securely into the pterygiophores (the bones that supports the dorsal fin), otherwise the tag will come loose. Most of the tag then hangs outside the fish’s body like a stiff, narrow tube. The tag is colour-coded, pre-printed with relevant text and numbered by the manufacturer according to the requests of the end user." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000549> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A barbed plastic tag which is inserted under the dorsal fin of the fish using a cannula." ;
+   <http://purl.org/dc/elements/1.1/source> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000550
+<http://purl.dataone.org/odo/SASAP_000550> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000545> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T16:47:51Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "An RFID system consists of a tiny transponder, a radio receiver, and an transmitter. When triggered by an electromagnetic interrogation pulse from a nearby FRID reader device, the tag transmits digital data, usually an identifying inventory number, back to the reader." ;
+                                           rdfs:label "RFID"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "Radio Frequency Identification" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A system which uses electromagnetic fields to automatically identify and track tags attached to objects." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000550> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "An RFID system consists of a tiny transponder, a radio receiver, and an transmitter. When triggered by an electromagnetic interrogation pulse from a nearby FRID reader device, the tag transmits digital data, usually an identifying inventory number, back to the reader." ;
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Radio-frequency_identification, accessed 05May2021
+https://www.wikidata.org/wiki/Q104954, accessed 05May2021"""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000550> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A system which uses electromagnetic fields to automatically identify and track tags attached to objects." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Radio-frequency_identification, accessed 05May2021
+https://www.wikidata.org/wiki/Q104954, accessed 05May2021"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000551
+<http://purl.dataone.org/odo/SASAP_000551> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000550> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T16:47:58Z"^^xsd:dateTime ;
+                                           rdfs:label "PIT tag"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> """Passive Integrated Transponder tag
+Microchip""" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A small, passive (i.e. does not actively send out a signal and does not require a battery) radio transponder tag which, when in range, is activated by a signal emitted from a tag reader. The tag then emits a unique identification code back to the reader." ,
+                                                                                            "This identification type may last for several years or up to the lifetime of a fish, and is used for individual tagging. The tag is placed in the abdominal cavity or in the muscular tissue. Reading PIT tags can be done (a) automatically by detecting fish as they swim past (this is usually done by building an obstacle so that fish must pass close to the reader), or (b) manually by taking the fish up in the air to be scanned with a reader." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000551> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A small, passive (i.e. does not actively send out a signal and does not require a battery) radio transponder tag which, when in range, is activated by a signal emitted from a tag reader. The tag then emits a unique identification code back to the reader." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://fishbio.com/field-notes/fish-monitoring/pit-tag-the-full-story, accessed 05May2021
+https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000551> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "This identification type may last for several years or up to the lifetime of a fish, and is used for individual tagging. The tag is placed in the abdominal cavity or in the muscular tissue. Reading PIT tags can be done (a) automatically by detecting fish as they swim past (this is usually done by building an obstacle so that fish must pass close to the reader), or (b) manually by taking the fish up in the air to be scanned with a reader." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000552
+<http://purl.dataone.org/odo/SASAP_000552> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000530> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T16:54:30Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "Natural patterns or unique markings are primarily used for identification of individuals. This type of identification does not involve marking a fish in any way, but rather relies on stable and individual differences in appareance, such as color, patterns, and scars. This method is based on the use of still images or videos taken of individual fish, which are then analyzed manually or using digital image processing." ;
+                                           rdfs:label "Natural pattern or unique marking"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "An appearance that varies between individuals." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000552> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "Natural patterns or unique markings are primarily used for identification of individuals. This type of identification does not involve marking a fish in any way, but rather relies on stable and individual differences in appareance, such as color, patterns, and scars. This method is based on the use of still images or videos taken of individual fish, which are then analyzed manually or using digital image processing." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000552> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "An appearance that varies between individuals." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000553
+<http://purl.dataone.org/odo/SASAP_000553> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000557> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T16:55:56Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "This identification type will last the entire life of the fish and is primarily used for group marking, though the fish must be euthanized for reading. Altering the appearance of otoliths may be achieved in a variety of ways, including (a) exposing a fish to variations in water temperature of at least 3 degrees Celsius a number of times to create darker and lighter bands in the otoliths, (b) bathing the fish or eggs in an aqueous solution with fluorescent dye, which is absorbed into the otoliths, or (c)  bathing the fish in strontium chloride solution or feeding the fish food that contains the metallic substance strontium." ;
+                                           rdfs:label "Otolith marking"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The appearance of the otoliths (located in the inner ear of the fish) are changed." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000553> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "This identification type will last the entire life of the fish and is primarily used for group marking, though the fish must be euthanized for reading. Altering the appearance of otoliths may be achieved in a variety of ways, including (a) exposing a fish to variations in water temperature of at least 3 degrees Celsius a number of times to create darker and lighter bands in the otoliths, (b) bathing the fish or eggs in an aqueous solution with fluorescent dye, which is absorbed into the otoliths, or (c)  bathing the fish in strontium chloride solution or feeding the fish food that contains the metallic substance strontium." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000553> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The appearance of the otoliths (located in the inner ear of the fish) are changed." ;
+   <http://purl.org/dc/elements/1.1/source> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000554
+<http://purl.dataone.org/odo/SASAP_000554> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000556> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T16:58:54Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "When done correctly, this identification type will remain visible for the entire lifetime of the fish and can be used for group or individual marking. Neon or fluorescent colors are often used, and best placement is in light areas and fin rays, though even semi-transparent and transparent tissue may be suitable for easy visual reading." ;
+                                           rdfs:label "Visible implant elastomer"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "VIE" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A colored two-component plastic which is injected into the fish's epidermis or fins." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000554> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "When done correctly, this identification type will remain visible for the entire lifetime of the fish and can be used for group or individual marking. Neon or fluorescent colors are often used, and best placement is in light areas and fin rays, though even semi-transparent and transparent tissue may be suitable for easy visual reading." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000554> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A colored two-component plastic which is injected into the fish's epidermis or fins." ;
+   <http://purl.org/dc/elements/1.1/source> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000555
+<http://purl.dataone.org/odo/SASAP_000555> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000556> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T17:00:08Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "This type of identification is usually visible for one year on salmon, is primarily used for group marking, and is suitable for fish that weigh at least 20g. An ink solution (often Alcian blue dissolved in distilled water) is typically injected under the skin using a syringe with a cannula. Marking a fish using the \"square dot system\" with up to 3x3 dots is common. Unlike VIE, tattoos do not require transparent skin to be visible. However, in salmon, the tattoo should be placed in areas in front of the pelvic fins, under the pectoral fins and/or behind the anal fins to enable reading during spawning, when the fish's natural pigmentation may cover up the tattoo." ;
+                                           rdfs:label "Tattoo"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "An ink solution, which is injected into the skin." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000555> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "This type of identification is usually visible for one year on salmon, is primarily used for group marking, and is suitable for fish that weigh at least 20g. An ink solution (often Alcian blue dissolved in distilled water) is typically injected under the skin using a syringe with a cannula. Marking a fish using the \"square dot system\" with up to 3x3 dots is common. Unlike VIE, tattoos do not require transparent skin to be visible. However, in salmon, the tattoo should be placed in areas in front of the pelvic fins, under the pectoral fins and/or behind the anal fins to enable reading during spawning, when the fish's natural pigmentation may cover up the tattoo." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000555> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "An ink solution, which is injected into the skin." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000556
+<http://purl.dataone.org/odo/SASAP_000556> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000559> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T17:00:38Z"^^xsd:dateTime ;
+                                           rdfs:label "Subcutaneous color mark"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A colored marking, which is placed beneath the skin of a fish for identification." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000556> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A colored marking, which is placed beneath the skin of a fish for identification." ;
+   <http://purl.org/dc/elements/1.1/source> <http://orcid.org/0000-0002-5300-3075>
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000557
+<http://purl.dataone.org/odo/SASAP_000557> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000530> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T17:26:06Z"^^xsd:dateTime ;
+                                           rdfs:label "Fish body modification"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The alteration of a physical bodily feature of a fish, either internally or externally, for identification purposes." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000557> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The alteration of a physical bodily feature of a fish, either internally or externally, for identification purposes." ;
+   <http://purl.org/dc/elements/1.1/source> <http://orcid.org/0000-0002-5300-3075>
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000558
+<http://purl.dataone.org/odo/SASAP_000558> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000545> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T23:05:51Z"^^xsd:dateTime ;
+                                           rdfs:label "Acoustic tag"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A small, electronic, sound-emitting device which may be placed inside or attached to a fish and collects information on that fish's physiology, environmentm and/or movement patterns." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000558> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A small, electronic, sound-emitting device which may be placed inside or attached to a fish and collects information on that fish's physiology, environmentm and/or movement patterns." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 05May2021"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000559
+<http://purl.dataone.org/odo/SASAP_000559> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000530> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-05T23:07:11Z"^^xsd:dateTime ;
+                                           <http://purl.org/dc/elements/1.1/description> "A mark or tag which is placed beneath the skin of a fish." ;
+                                           rdfs:label "Subcutaneous tag"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000559> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "A mark or tag which is placed beneath the skin of a fish." ;
+   <http://purl.org/dc/elements/1.1/source> <http://orcid.org/0000-0002-5300-3075>
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000560
+<http://purl.dataone.org/odo/SASAP_000560> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000540> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-06T16:58:02Z"^^xsd:dateTime ;
+                                           rdfs:label "Pectoral fin clip"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A pectoral fin is removed, typically as close to the body as possible, using scissors or a razor blade." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000560> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A pectoral fin is removed, typically as close to the body as possible, using scissors or a razor blade." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://risaa.org/newsletter/0516/0516_09.pdf, accessed 06May2021"
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000561
+<http://purl.dataone.org/odo/SASAP_000561> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000560> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-06T16:58:12Z"^^xsd:dateTime ;
+                                           rdfs:label "Right pectoral fin clip"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The right pectoral fin of the fish is removed." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000561> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The right pectoral fin of the fish is removed." ;
+   <http://purl.org/dc/elements/1.1/source> <http://orcid.org/0000-0002-5300-3075>
+ ] .
 
 
 ###  http://purl.dataone.org/odo/SASAP_00400
@@ -1007,8 +1954,8 @@ Ocean surface temperature""" ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-22T17:20:03Z"^^xsd:dateTime ;
                                           rdfs:comment "An Essential Salmon Variable (ESV) from the working list being developed by Graeme Diack et al. at the Atlantic Salmon Trust." ,
-                                                       "Graeme's ESV spreadsheet includes subsurface marine temperature and salinity. Need to think more about terms can be included to best describe those: https://docs.google.com/spreadsheets/d/1hcUmDX2iUGNesKtkNotJF4Z1hC8vyKQjEvgv4Y20ifQ/edit#gid=0" ;
-                                          rdfs:label "Ocean water column temperature (?)"@en .
+                                                       "Need help coming up with an appropriate definition for this -- this label suggests that it could be a temperature taken anywhere in the water column that's deeper than what's defined as \"sea surface temperature\"" ;
+                                          rdfs:label "Subsurface sea temperature (?)"@en .
 
 
 ###  http://purl.dataone.org/odo/SASAP_00420
@@ -1133,8 +2080,9 @@ https://www.wikidata.org/wiki/Q502895"""
                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00215> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:17:29Z"^^xsd:dateTime ;
-                                          rdfs:label "Salmon specimens and occurrences"@en ;
-                                          <http://www.w3.org/2004/02/skos/core#altLabel> """Binomial name 
+                                          rdfs:label "Salmon specimen and occurrence"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> """Scientific name
+Binomial name 
 Binomen 
 Latin name""" ;
                                           <http://www.w3.org/2004/02/skos/core#definition> "The name applied to a plant, animal, or other organism, according to the Codes of Nomenclature, consisting of a Genus and species." .
@@ -1149,16 +2097,11 @@ Latin name""" ;
 
 ###  http://purl.dataone.org/odo/SASAP_00460
 <http://purl.dataone.org/odo/SASAP_00460> rdf:type owl:Class ;
-                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00458> ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty <http://rs.tdwg.org/dwc/terms/nameAccordingTo> ;
-                                                            owl:hasValue <http://purl.dataone.org/odo/SASAP_000475>
-                                                          ] ;
+                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00458> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:17:52Z"^^xsd:dateTime ;
                                           <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161975" ;
                                           rdfs:label "Oncorhynchus gorbuscha"@en ;
-                                          owl:equivalentClass <http://purl.dataone.org/odo/salmon_00241> ;
                                           <http://www.w3.org/2004/02/skos/core#altLabel> """O. gorbuscha
 Oncorhynchus gorbuscha""" .
 
@@ -1173,16 +2116,11 @@ Oncorhynchus gorbuscha""" .
 
 ###  http://purl.dataone.org/odo/SASAP_00461
 <http://purl.dataone.org/odo/SASAP_00461> rdf:type owl:Class ;
-                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00458> ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty <http://rs.tdwg.org/dwc/terms/nameAccordingTo> ;
-                                                            owl:hasValue <http://purl.dataone.org/odo/SASAP_000475>
-                                                          ] ;
+                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00458> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:18:47Z"^^xsd:dateTime ;
                                           <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161976" ;
                                           rdfs:label "Oncorhynchus keta"@en ;
-                                          owl:equivalentClass <http://purl.dataone.org/odo/salmon_00240> ;
                                           <http://www.w3.org/2004/02/skos/core#altLabel> """O. keta
 Oncorhynchus keta""" .
 
@@ -1197,16 +2135,11 @@ Oncorhynchus keta""" .
 
 ###  http://purl.dataone.org/odo/SASAP_00462
 <http://purl.dataone.org/odo/SASAP_00462> rdf:type owl:Class ;
-                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00458> ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty <http://rs.tdwg.org/dwc/terms/nameAccordingTo> ;
-                                                            owl:hasValue <http://purl.dataone.org/odo/SASAP_000475>
-                                                          ] ;
+                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00458> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:18:52Z"^^xsd:dateTime ;
                                           <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161977" ;
                                           rdfs:label "Oncorhynchus kisutch"@en ;
-                                          owl:equivalentClass <http://purl.dataone.org/odo/salmon_00243> ;
                                           <http://www.w3.org/2004/02/skos/core#altLabel> """O. kisutch
 Oncorhynchus kisutch""" .
 
@@ -1221,16 +2154,11 @@ Oncorhynchus kisutch""" .
 
 ###  http://purl.dataone.org/odo/SASAP_00463
 <http://purl.dataone.org/odo/SASAP_00463> rdf:type owl:Class ;
-                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00458> ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty <http://rs.tdwg.org/dwc/terms/nameAccordingTo> ;
-                                                            owl:hasValue <http://purl.dataone.org/odo/SASAP_000475>
-                                                          ] ;
+                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00458> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:19:04Z"^^xsd:dateTime ;
                                           <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161979" ;
                                           rdfs:label "Oncorhynchus nerka"@en ;
-                                          owl:equivalentClass <http://purl.dataone.org/odo/salmon_00242> ;
                                           <http://www.w3.org/2004/02/skos/core#altLabel> """O. nerka
 Oncorhynchus nerka""" .
 
@@ -1245,16 +2173,11 @@ Oncorhynchus nerka""" .
 
 ###  http://purl.dataone.org/odo/SASAP_00464
 <http://purl.dataone.org/odo/SASAP_00464> rdf:type owl:Class ;
-                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00458> ,
-                                                          [ rdf:type owl:Restriction ;
-                                                            owl:onProperty <http://rs.tdwg.org/dwc/terms/nameAccordingTo> ;
-                                                            owl:hasValue <http://purl.dataone.org/odo/SASAP_000475>
-                                                          ] ;
+                                          rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00458> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:19:15Z"^^xsd:dateTime ;
                                           <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161980" ;
                                           rdfs:label "Oncorhynchus tshawytscha"@en ;
-                                          owl:equivalentClass <http://purl.dataone.org/odo/salmon_00239> ;
                                           <http://www.w3.org/2004/02/skos/core#altLabel> """O. tshawytscha
 Oncorhynchus tshawytscha""" .
 
@@ -1264,38 +2187,6 @@ Oncorhynchus tshawytscha""" .
    owl:annotatedTarget "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161980" ;
    <http://purl.org/dc/elements/1.1/source> <https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161980#null> ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://www.gbif.org/species/5204024>
- ] .
-
-
-###  http://purl.dataone.org/odo/SASAP_00465
-<http://purl.dataone.org/odo/SASAP_00465> rdf:type owl:Class ;
-                                          <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                          <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:47:41Z"^^xsd:dateTime ;
-                                          rdfs:label "DELETE LATER"@en .
-
-
-###  http://purl.dataone.org/odo/salmon_00016
-<http://purl.dataone.org/odo/salmon_00016> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00465> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-03-24T22:09:33Z"^^xsd:dateTime ;
-                                           rdfs:label "Common name"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#altLabel> "Species" ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "The name based on the normal language of everyday life." .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00016> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
-   owl:annotatedTarget "Species" ;
-   rdfs:comment "Populates the SASAP Data Portal (https://knb.ecoinformatics.org/portals/SASAP/Data) faceted search field, 'Species'"
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00016> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "The name based on the normal language of everyday life." ;
-   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Common_name 
-https://www.wikidata.org/wiki/Q502895"""
  ] .
 
 
@@ -1583,9 +2474,9 @@ https://www.monitoringresources.org/Document/Method/Details/4041"""
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00137> ;
    owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
    owl:annotatedTarget "The Food and Agriculture Organization of the United Nations (FAO) defines a fishery as \"...an activity leading to harvesting of fish. It may involve capture of wild fish or raising of fish through aquaculture.\"" ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Fishery
-https://www.wikidata.org/wiki/Q180538
-http://www.fao.org/faoterm/en/?defaultCollId=21 
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Fishery, accessed 01April2021
+https://www.wikidata.org/wiki/Q180538, accessed 01April2021
+http://www.fao.org/faoterm/en/?defaultCollId=21, accessed 01April2021
 
 Fletcher, W.J., Chesson, J. Fisher, M., Sainsbury K.J., Hundloe, T. Smith A.D.M., and B. Whitworth (2002): National ESD reporting framework for Australian fisheries: The \"How To\" guide for wild capture fisheries. FRDC Project 2000/145. Canberra, Australia"""
  ] .
@@ -1622,7 +2513,7 @@ Could use some input on subclass hierarchy. E.g. 'Hand collection' includes meth
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00144> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Fishing by means of an \"angle\" (fish hook). The hook is usually attached to a fishing line and baited with natural bait or artificial lures to attract fish. The line is often attached to a fishing rod." ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Angling"
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Angling, accessed 01April2021"
  ] .
 
 
@@ -1639,8 +2530,8 @@ Could use some input on subclass hierarchy. E.g. 'Hand collection' includes meth
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00145> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A device that is situated in rivers for catching fish which looks and operates like a watermill and is outfitted with wire baskets designed to catch and carry fish from the water and into a nearby holding tank." ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Fish_wheel 
-https://www.wikidata.org/wiki/Q5454688"""
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Fish_wheel, accessed 01April2021
+https://www.wikidata.org/wiki/Q5454688, accessed 01April2021"""
  ] .
 
 
@@ -1656,8 +2547,8 @@ https://www.wikidata.org/wiki/Q5454688"""
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00146> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A type of fishing which involves using a spear to strike and collect a fish." ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Spearfishing 
-https://www.wikidata.org/wiki/Q765706"""
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Spearfishing, accessed 01April2021 
+https://www.wikidata.org/wiki/Q765706, accessed 01April2021"""
  ] .
 
 
@@ -1694,8 +2585,8 @@ kiddle""" ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00148> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "An obstruction placed in tidal waters, or wholly or partially across a river, to direct the passage of, or trap fish." ;
-   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Fishing_weir 
-https://www.wikidata.org/wiki/Q1417573"""
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Fishing_weir, accessed 01April2021 
+https://www.wikidata.org/wiki/Q1417573, accessed 01April2021"""
  ] .
 
 
@@ -1712,7 +2603,7 @@ https://www.wikidata.org/wiki/Q1417573"""
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00150> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A three-dimensional wire or wood device which is submerged and commonly baited. A pot (or \"trap\") permits organisms to enter the enclosure, but makes escape extremely difficult or impossible." ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.fisheries.noaa.gov/national/bycatch/fishing-gear-traps-and-pots"
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.fisheries.noaa.gov/national/bycatch/fishing-gear-traps-and-pots, accessed 01April2021"
  ] .
 
 
@@ -1728,7 +2619,7 @@ https://www.wikidata.org/wiki/Q1417573"""
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00151> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A seine net operated from the shore. The gear is composed of a bunt (bag or lose netting) and long wings often lengthened with long ropes for towing the seine to the beach. The headrope with floats is on the surface, the footrope is in permanent contact with the bottom and the seine is therefore a barrier which prevent the fish from escaping from the area enclosed by the net" ;
-   <http://purl.org/dc/elements/1.1/source> "http://www.fao.org/fishery/geartype/202/en"
+   <http://purl.org/dc/elements/1.1/source> "http://www.fao.org/fishery/geartype/202/en, accessed 01April2021"
  ] .
 
 
@@ -1746,8 +2637,8 @@ scoop net""" ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00152> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A net or mesh basket held open by a hoop which may or may not be on the end of a handle and is used for scopping fish near the surface of the water." ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Hand_net 
-https://www.wikidata.org/wiki/Q640082"""
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Hand_net, accessed 01April2021 
+https://www.wikidata.org/wiki/Q640082, accessed 01April2021"""
  ] .
 
 
@@ -1779,7 +2670,7 @@ https://www.wikidata.org/wiki/Q640082"""
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00155> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A type of fishing in which one or more fishing lines, baited with lures or bait fish, are drawn through the water (often behind a moving vessel) to catch pelagic fishes." ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Trolling_(fishing)"
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Trolling_(fishing), accessed 01April2021"
  ] .
 
 
@@ -1795,8 +2686,8 @@ https://www.wikidata.org/wiki/Q640082"""
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00156> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A multi-pronged spear, typically ranging in length from 8 to 14 feet, which is used to spear (or \"gig\") fishes for harvest." ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Gigging 
-https://www.wikidata.org/wiki/Q4412590"""
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Gigging, accessed 01April2021 
+https://www.wikidata.org/wiki/Q4412590, accessed 01April2021"""
  ] .
 
 
@@ -1828,8 +2719,8 @@ https://www.wikidata.org/wiki/Q4412590"""
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00158> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A large wall of netting deployed around an entire area or school of fish. The seine has floats along the top line with a lead line threaded through rings along the bottom. Once a school of fish is located, a skiff encircles the school with the net. The lead line is then pulled in, \"pursing\" the net closed on the bottom, preventing fish from escaping by swimming downward. The catch is harvested by either hauling the net aboard or bringing it alongside the vessel." ;
-   <http://purl.org/dc/elements/1.1/source> "https://www.fisheries.noaa.gov/national/bycatch/fishing-gear-purse-seines" ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://vocab.nerc.ac.uk/collection/M13/current/015/"
+   <http://purl.org/dc/elements/1.1/source> "https://www.fisheries.noaa.gov/national/bycatch/fishing-gear-purse-seines, accessed 01April2021" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://vocab.nerc.ac.uk/collection/M13/current/015/, accessed 01April2021"
  ] .
 
 
@@ -1845,8 +2736,8 @@ https://www.wikidata.org/wiki/Q4412590"""
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00159> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A type of fishing which uses direct current electricity flowing between a submerged cathod and anode to cause galvanotaxis, or an uncontrolled muscular convulsion, which affects the movement of the fish such that it swims towards the anode, where it is then collected." ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Electrofishing 
-https://www.wikidata.org/wiki/Q1249133"""
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Electrofishing, accessed 01April2021 
+https://www.wikidata.org/wiki/Q1249133, accessed 01April2021"""
  ] .
 
 
@@ -1862,7 +2753,7 @@ https://www.wikidata.org/wiki/Q1249133"""
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00160> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A wall of netting which hangs in the water column, typically made of monofilament or multifilament nylon. Mesh sizes are designed to allow fish to get only their head through the netting but not their body. The fish's gills then get caught in the mesh as the fish tries to back out of the net. As the fish struggles to free itself, it becomes more and more entangled." ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.fisheries.noaa.gov/national/bycatch/fishing-gear-gillnets"
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.fisheries.noaa.gov/national/bycatch/fishing-gear-gillnets, accessed 01April2021"
  ] .
 
 
@@ -1878,8 +2769,8 @@ https://www.wikidata.org/wiki/Q1249133"""
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00162> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A type of net which hangs vertically in the water with its bottom edge held down by weights and its top edge buoyed by floats. Seine nets can be deployed from the shore as a beach seine, or from a boat." ;
-   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Seine_fishing 
-https://www.wikidata.org/wiki/Q600580"""
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Seine_fishing, accessed 01April2021 
+https://www.wikidata.org/wiki/Q600580, accessed 01April2021"""
  ] .
 
 
@@ -1927,8 +2818,8 @@ https://www.wikidata.org/wiki/Q600580"""
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00169> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A fishery in which fishes and other seafood are harvested for commercial profit, mostly from wild fisheries." ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Commercial_fishing 
-https://www.wikidata.org/wiki/Q11202642"""
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Commercial_fishing, accessed 02April2021 
+https://www.wikidata.org/wiki/Q11202642, accessed 02April2021"""
  ] .
 
 
@@ -1945,8 +2836,8 @@ https://www.wikidata.org/wiki/Q11202642"""
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00170> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A fishery in which fishes and other seafood are harvested for pleasure or competition." ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Recreational_fishing 
-https://www.wikidata.org/wiki/Q283534"""
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Recreational_fishing, accessed 02April2021 
+https://www.wikidata.org/wiki/Q283534, accessed 02April2021"""
  ] .
 
 
@@ -1965,14 +2856,14 @@ traditional fishery""" ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00172> ;
    owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
    owl:annotatedTarget "In Alaska, subsistence fisheries may not operate in \"nonsubsistence areas\" as designated by the state (AS 16.05.258(c))." ;
-   <http://purl.org/dc/elements/1.1/source> <http://www.touchngo.com/lglcntr/akstats/statutes/title16/chapter05/section258.htm>
+   <http://purl.org/dc/elements/1.1/source> "http://www.touchngo.com/lglcntr/akstats/statutes/title16/chapter05/section258.htm, accessed 27April2021"
  ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00172> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A fishery in which fishes or other seafood are harvested for noncommercial, customary and traditional uses. These uses include direct personal or family consumption as food, shelter, fuel, clothing, tools, or transportation, for the making and selling of handicraft articles out of nonedible by-products of fish and wildlife resources taken for personal or family consumption, and for the customary trade, barter, or sharing for personal or family consumption." ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.adfg.alaska.gov/index.cfm?adfg=fishingsubsistence.main"
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.adfg.alaska.gov/index.cfm?adfg=fishingsubsistence.main, accessed 02April2021"
  ] .
 
 
@@ -1989,16 +2880,16 @@ traditional fishery""" ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00173> ;
    owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
    owl:annotatedTarget "The Alaska hatchery program was designed to increase salmon abundance and enhace fisheies, while protecting wild stocks. The program was built in response to depressed commercial fisheries, to meet the needs of the people of the state." ;
-   <http://purl.org/dc/elements/1.1/source> "https://www.adfg.alaska.gov/static/fishing/PDFs/hatcheries/2013_ak_hatcheries.pdf" ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.adfg.alaska.gov/index.cfm?adfg=fishingHatcheries.main"
+   <http://purl.org/dc/elements/1.1/source> "https://www.adfg.alaska.gov/static/fishing/PDFs/hatcheries/2013_ak_hatcheries.pdf, accessed 02April2021" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.adfg.alaska.gov/index.cfm?adfg=fishingHatcheries.main, accessed 02April2021"
  ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00173> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A place for artificial breeding, hatching, and rearing through the early life stages of animals -- finfish and shellfish in particular. Hatcheries produce larval and juvenile fish, shellfish, and crustaceans, primarily to support the aquaculture industry where they are transferred to on-growing systems, such as fish farms, to reach harvest size." ;
-   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Fish_hatchery 
-https://www.wikidata.org/wiki/Q15615109"""
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Fish_hatchery, accessed 02April2021 
+https://www.wikidata.org/wiki/Q15615109, accessed 02April2021"""
  ] .
 
 
@@ -2028,15 +2919,15 @@ The bag, possession, and gear limits in personal use fisheries MAY NOT be added 
 It is unlawful to buy, sell, trade or barter personal use finfish, shellfish, aquatic plants, or their parts.
 
 Many, but not all, personal use fisheries require a permit issued by the Department of Fish and Game. Personal use fisheries have many different regulations for bag limits, allowable gear, and time and area restrictions. Some personal use fisheries are managed in-season by emergency order, so regulations can change at any time.""" ;
-   <http://purl.org/dc/elements/1.1/source> "http://www.adfg.alaska.gov/index.cfm?adfg=fishingPersonalUse.main"
+   <http://purl.org/dc/elements/1.1/source> "http://www.adfg.alaska.gov/index.cfm?adfg=fishingPersonalUse.main, accessed 02April2021"
  ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00175> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A regulatory category of Alaskan fishery which is legally defined as, \"the taking, fishing for, or possession of finfish, shellfish, or other fishery resources, by Alaska residents for personal use and not for sale or barter, with gill or dip net, seine, fish wheel, long line, or other means defined by the Board of Fisheries.\" Personal use fisheries may exist only in \"nonsubsistence areas\" as determined by the state of Alaska (AS 16.05.258(c))." ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://alaskasalmonandpeople.org/working-group/governance-and-subsistence/> ,
-                                                            "http://www.adfg.alaska.gov/index.cfm?adfg=fishingPersonalUse.main"
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://www.adfg.alaska.gov/index.cfm?adfg=fishingPersonalUse.main, accessed 02April2021" ,
+                                                            "https://alaskasalmonandpeople.org/working-group/governance-and-subsistence/, accessed 02April2021"
  ] .
 
 
@@ -2063,9 +2954,9 @@ Aquafarming""" ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00176> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "The culturing of fish, shellfish, aquatic plants, and/or other organisms in captivity or under controlled conditions in the near shore environment." ;
-   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Aquaculture 
-https://www.wikidata.org/wiki/Q188989""" ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://vocab.nerc.ac.uk/collection/M13/current/018/"
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Aquaculture, accessed 02April2021
+https://www.wikidata.org/wiki/Q188989, accessed 02April2021""" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "http://vocab.nerc.ac.uk/collection/M13/current/018/, accessed 02April2021"
  ] .
 
 
@@ -2484,35 +3375,6 @@ https://www.wikidata.org/wiki/Q184395"""
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "The manner, procedure or technique by which a morphological or physiological state or property in a single individual or sample or a group of individuals or samples is assessed and a quantitative or qualitative value assigned." ;
    <http://purl.org/dc/elements/1.1/source> "http://purl.obolibrary.org/obo/MMO_0000000"
- ] .
-
-
-###  http://purl.dataone.org/odo/salmon_00208
-<http://purl.dataone.org/odo/salmon_00208> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00465> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-04-13T20:15:44Z"^^xsd:dateTime ;
-                                           <http://purl.org/dc/elements/1.1/description> "A taxonomic concept describes the allowable phenotypic, genomic, or other variation within a taxon by designating type specimens and describing characters explicitly." ;
-                                           rdfs:label "TC"@en ;
-                                           owl:equivalentClass "http://rs.tdwg.org/dwc/terms/Taxon" ;
-                                           <http://www.w3.org/2004/02/skos/core#altLabel> """taxonomic concept 
-taxon""" ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A reference which is made to a taxon name along with a publication which explains how the author intends for the name to be applied." ;
-                                           <http://www.w3.org/2004/02/skos/core#exactMatch> "http://rs.tdwg.org/dwc/terms/Taxon" .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00208> ;
-   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
-   owl:annotatedTarget "A taxonomic concept describes the allowable phenotypic, genomic, or other variation within a taxon by designating type specimens and describing characters explicitly." ;
-   <http://purl.org/dc/elements/1.1/source> "Senderov, V., Simov, K., Franz, N. et al. OpenBiodiv-O: ontology of the OpenBiodiv knowledge management system. J Biomed Semant 9, 5 (2018). https://doi.org/10.1186/s13326-017-0174-5" ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "Taxonomic Names and Concepts interest group. 2006. Taxonomic Concept Transfer Schema (TCS), version 1.01. Biodiversity Information Standards (TDWG) http://www.tdwg.org/standards/117"
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00208> ;
-   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "A reference which is made to a taxon name along with a publication which explains how the author intends for the name to be applied." ;
-   <http://purl.org/dc/elements/1.1/source> "https://github.com/darwin-sw/dsw/wiki/ClassTaxon#equivalence-of-taxon-and-taxoncon-%20cept-in-the-tdwg-ontology-and-the-darwin-core-standard"
  ] .
 
 
@@ -3066,120 +3928,6 @@ O. kisutch
 \"L'ook\" @tsi @tli""" .
 
 
-###  http://purl.dataone.org/odo/salmon_00244
-<http://purl.dataone.org/odo/salmon_00244> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00208> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-04-16T18:24:43Z"^^xsd:dateTime ;
-                                           <http://purl.org/dc/elements/1.1/source> """https://www.gbif.org/species/5204037 
-http://www.fishbase.org/summary/240 
-https://eol.org/pages/46563135/names""" ;
-                                           <http://rs.tdwg.org/dwc/terms/originalNameUsage> "Salmo gorbuscha (Walbaum, 1792)" ;
-                                           <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/salmon_00241> ;
-                                           rdfs:label "Oncorhynchus gorbuscha (Walbaum, 1792)"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00244> ;
-   owl:annotatedProperty <http://rs.tdwg.org/dwc/terms/originalNameUsage> ;
-   owl:annotatedTarget "Salmo gorbuscha (Walbaum, 1792)" ;
-   <http://purl.org/dc/elements/1.1/source> "https://www.gbif.org/species/5204037"
- ] .
-
-
-###  http://purl.dataone.org/odo/salmon_00245
-<http://purl.dataone.org/odo/salmon_00245> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00208> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-04-16T18:25:00Z"^^xsd:dateTime ;
-                                           <http://purl.org/dc/elements/1.1/source> """https://www.gbif.org/species/5204014 
-http://www.fishbase.org/summary/241
-https://eol.org/pages/46563136/names""" ;
-                                           <http://rs.tdwg.org/dwc/terms/originalNameUsage> "Salmo keta (Walbaum, 1792)" ;
-                                           <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/salmon_00240> ;
-                                           rdfs:label "Oncorhynchus keta (Walbaum, 1792)"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00245> ;
-   owl:annotatedProperty <http://rs.tdwg.org/dwc/terms/originalNameUsage> ;
-   owl:annotatedTarget "Salmo keta (Walbaum, 1792)" ;
-   <http://purl.org/dc/elements/1.1/source> "https://www.gbif.org/species/5204014"
- ] .
-
-
-###  http://purl.dataone.org/odo/salmon_00246
-<http://purl.dataone.org/odo/salmon_00246> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00208> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-04-16T18:25:15Z"^^xsd:dateTime ;
-                                           <http://purl.org/dc/elements/1.1/source> """https://www.gbif.org/species/5204034 
-http://www.fishbase.org/summary/245 
-https://eol.org/pages/46563137/names""" ;
-                                           <http://rs.tdwg.org/dwc/terms/originalNameUsage> "Salmo kisutch (Walbaum, 1792)" ;
-                                           <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/salmon_00243> ;
-                                           rdfs:label "Oncorhynchus kisutch (Walbaum, 1792)"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00246> ;
-   owl:annotatedProperty <http://rs.tdwg.org/dwc/terms/originalNameUsage> ;
-   owl:annotatedTarget "Salmo kisutch (Walbaum, 1792)" ;
-   <http://purl.org/dc/elements/1.1/source> "https://www.gbif.org/species/5204034"
- ] .
-
-
-###  http://purl.dataone.org/odo/salmon_00247
-<http://purl.dataone.org/odo/salmon_00247> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00208> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-04-16T18:25:28Z"^^xsd:dateTime ;
-                                           <http://purl.org/dc/elements/1.1/source> """https://www.gbif.org/species/5204039 
-http://www.fishbase.de/summary/243""" ;
-                                           <http://rs.tdwg.org/dwc/terms/originalNameUsage> "Salmo nerka (Walbaum, 1792)" ;
-                                           <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/salmon_00242> ;
-                                           rdfs:label "Oncorhynchus nerka (Walbaum, 1792)"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00247> ;
-   owl:annotatedProperty <http://purl.org/dc/elements/1.1/source> ;
-   owl:annotatedTarget """https://www.gbif.org/species/5204039 
-http://www.fishbase.de/summary/243""" ;
-   rdfs:comment "Encyclopedia of Life (eol) webpage for Sockeye salmon returns Internal server error - 500"
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00247> ;
-   owl:annotatedProperty <http://rs.tdwg.org/dwc/terms/originalNameUsage> ;
-   owl:annotatedTarget "Salmo nerka (Walbaum, 1792)" ;
-   <http://purl.org/dc/elements/1.1/source> "https://www.gbif.org/species/5204039"
- ] .
-
-
-###  http://purl.dataone.org/odo/salmon_00248
-<http://purl.dataone.org/odo/salmon_00248> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00208> ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-04-16T18:29:06Z"^^xsd:dateTime ;
-                                           <http://purl.org/dc/elements/1.1/source> """https://www.gbif.org/species/5204024 
-http://www.fishbase.org/summary/244""" ;
-                                           <http://rs.tdwg.org/dwc/terms/originalNameUsage> "Salmo tshawytscha (Walbaum, 1792)" ;
-                                           <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/salmon_00239> ;
-                                           rdfs:label "Oncorhynchus tshawytscha (Walbaum, 1792)"@en .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00248> ;
-   owl:annotatedProperty <http://purl.org/dc/elements/1.1/source> ;
-   owl:annotatedTarget """https://www.gbif.org/species/5204024 
-http://www.fishbase.org/summary/244""" ;
-   rdfs:comment "Encyclopedia of Life (eol) webpage for Chinook salmon returns Internal server error - 500"
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00248> ;
-   owl:annotatedProperty <http://rs.tdwg.org/dwc/terms/originalNameUsage> ;
-   owl:annotatedTarget "Salmo tshawytscha (Walbaum, 1792)" ;
-   <http://purl.org/dc/elements/1.1/source> "https://www.gbif.org/species/5204024"
- ] .
-
-
 ###  http://purl.dataone.org/odo/salmon_00250
 <http://purl.dataone.org/odo/salmon_00250> rdf:type owl:Class ;
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00216> ;
@@ -3208,9 +3956,108 @@ http://www.fishbase.org/summary/244""" ;
  ] .
 
 
+###  http://purl.dataone.org/odo/SASAP_000508
+<http://purl.dataone.org/odo/SASAP_000508> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/SASAP_00458> ;
+                                           <http://rs.tdwg.org/dwc/terms/nameAccordingTo> <http://purl.dataone.org/odo/SASAP_000475> ;
+                                           <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/SASAP_000516> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-30T17:44:44Z"^^xsd:dateTime ;
+                                           rdfs:label "Oncorhynchus gorbuscha"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000509
+<http://purl.dataone.org/odo/SASAP_000509> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/SASAP_00458> ;
+                                           <http://rs.tdwg.org/dwc/terms/nameAccordingTo> <http://purl.dataone.org/odo/SASAP_000475> ;
+                                           <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/SASAP_000514> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-30T17:44:51Z"^^xsd:dateTime ;
+                                           rdfs:label "Oncorhynchus keta"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000510
+<http://purl.dataone.org/odo/SASAP_000510> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/SASAP_00458> ;
+                                           <http://rs.tdwg.org/dwc/terms/nameAccordingTo> <http://purl.dataone.org/odo/SASAP_000475> ;
+                                           <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/SASAP_000515> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-30T17:44:59Z"^^xsd:dateTime ;
+                                           rdfs:label "Oncorhynchus kisutch"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000511
+<http://purl.dataone.org/odo/SASAP_000511> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/SASAP_00458> ;
+                                           <http://rs.tdwg.org/dwc/terms/nameAccordingTo> <http://purl.dataone.org/odo/SASAP_000475> ;
+                                           <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/SASAP_000517> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-30T17:45:08Z"^^xsd:dateTime ;
+                                           rdfs:label "Oncorhynchus nerka"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000512
+<http://purl.dataone.org/odo/SASAP_000512> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/SASAP_00458> ;
+                                           <http://rs.tdwg.org/dwc/terms/nameAccordingTo> <http://purl.dataone.org/odo/SASAP_000475> ;
+                                           <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/SASAP_000513> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-30T17:45:30Z"^^xsd:dateTime ;
+                                           rdfs:label "Oncorhynchus tshawytscha"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000513
+<http://purl.dataone.org/odo/SASAP_000513> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/SASAP_00457> ;
+                                           <http://rs.tdwg.org/dwc/terms/scientificName> <http://purl.dataone.org/odo/SASAP_000512> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-30T17:45:38Z"^^xsd:dateTime ;
+                                           rdfs:label "Chinook"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000514
+<http://purl.dataone.org/odo/SASAP_000514> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/SASAP_00457> ;
+                                           <http://rs.tdwg.org/dwc/terms/scientificName> <http://purl.dataone.org/odo/SASAP_000509> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-30T17:45:41Z"^^xsd:dateTime ;
+                                           rdfs:label "Chum"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000515
+<http://purl.dataone.org/odo/SASAP_000515> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/SASAP_00457> ;
+                                           <http://rs.tdwg.org/dwc/terms/scientificName> <http://purl.dataone.org/odo/SASAP_000510> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-30T17:45:43Z"^^xsd:dateTime ;
+                                           rdfs:label "Coho"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000516
+<http://purl.dataone.org/odo/SASAP_000516> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/SASAP_00457> ;
+                                           <http://rs.tdwg.org/dwc/terms/scientificName> <http://purl.dataone.org/odo/SASAP_000508> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-30T17:45:46Z"^^xsd:dateTime ;
+                                           rdfs:label "Pink"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000517
+<http://purl.dataone.org/odo/SASAP_000517> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.dataone.org/odo/SASAP_00457> ;
+                                           <http://rs.tdwg.org/dwc/terms/scientificName> <http://purl.dataone.org/odo/SASAP_000511> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-04-30T17:45:49Z"^^xsd:dateTime ;
+                                           rdfs:label "Sockeye"@en .
+
+
 #################################################################
 #    Annotations
 #################################################################
+
+<http://rs.tdwg.org/dwc/terms/vernacularName> rdfs:comment "As of 30April2021, Darwin Core (DWC) does not specify domains and ranges. Currently, I am considering 'Salmon specimen and occurrence' to be the domain and 'Vernacular name' to be the range." ;
+                                              <http://www.w3.org/2004/02/skos/core#definition> "A common or vernacular name." .
+
 
 owl:Thing rdfs:comment """- any term that is noted by a \"(?)\" has notes in an rdfs:comment that need to be addressed
 
@@ -3231,16 +4078,6 @@ owl:Thing rdfs:comment """- any term that is noted by a \"(?)\" has notes in an 
                 <http://purl.dataone.org/odo/salmon_00241>
                 <http://purl.dataone.org/odo/salmon_00242>
                 <http://purl.dataone.org/odo/salmon_00243>
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( <http://purl.dataone.org/odo/salmon_00244>
-                <http://purl.dataone.org/odo/salmon_00245>
-                <http://purl.dataone.org/odo/salmon_00246>
-                <http://purl.dataone.org/odo/salmon_00247>
-                <http://purl.dataone.org/odo/salmon_00248>
               )
 ] .
 
