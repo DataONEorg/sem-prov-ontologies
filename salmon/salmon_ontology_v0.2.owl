@@ -64,8 +64,10 @@ https://orcid.org/0000-0003-0077-4738""" ;
 <http://rs.tdwg.org/dwc/terms/originalNameUsage> rdf:type owl:AnnotationProperty .
 
 
-###  http://rs.tdwg.org/dwc/terms/vernacularName
-<http://rs.tdwg.org/dwc/terms/vernacularName> rdf:type owl:AnnotationProperty .
+###  http://rs.tdwg.org/dwc/terms/taxonID
+<http://rs.tdwg.org/dwc/terms/taxonID> rdf:type owl:AnnotationProperty ;
+                                       rdfs:comment "Unsure if I understand this correctly, but the EOL API looks for the EOL identifier to be containied in dwct:taxonID:  https://eol.org/docs/what-is-eol/classic-apis" ;
+                                       <http://www.w3.org/2004/02/skos/core#definition> "An identifier for the set of taxon information (data associated with the Taxon class). May be a global unique identifier or an identifier specific to the data set." .
 
 
 ###  http://usefulinc.com/ns/doap#GitRepository
@@ -138,8 +140,8 @@ owl:sameAs rdf:type owl:AnnotationProperty .
 
 ###  http://rs.tdwg.org/dwc/terms/scientificName
 <http://rs.tdwg.org/dwc/terms/scientificName> rdf:type owl:ObjectProperty ;
-                                              rdfs:domain <http://purl.dataone.org/odo/SASAP_00457> ;
-                                              rdfs:range <http://purl.dataone.org/odo/SASAP_00458> ;
+                                              rdfs:domain <http://purl.dataone.org/odo/SASAP_00458> ;
+                                              rdfs:range <http://purl.dataone.org/odo/SASAP_000494> ;
                                               rdfs:comment "As of 30April2021, Darwin Core (DWC) does not specify domains and ranges. Currently, I am considering 'Vernacular name' to be the domain and 'Salmon specimen and occurrence' to be the range." ;
                                               <http://www.w3.org/2004/02/skos/core#definition> "The full scientific name, with authorship and date information if known. When forming part of an Identification, this should be the name in lowest level taxonomic rank that can be determined. This term should not contain identification qualifications, which should instead be supplied in the IdentificationQualifier term." .
 
@@ -153,6 +155,21 @@ owl:sameAs rdf:type owl:AnnotationProperty .
 <http://rs.tdwg.org/dwc/terms/vernacularName> rdf:type owl:ObjectProperty ;
                                               rdfs:domain <http://purl.dataone.org/odo/SASAP_00458> ;
                                               rdfs:range <http://purl.dataone.org/odo/SASAP_00457> .
+
+
+###  http://www.w3.org/2006/time#hasBeginning
+<http://www.w3.org/2006/time#hasBeginning> rdf:type owl:ObjectProperty ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Beginning of a temporal entity." .
+
+
+###  http://www.w3.org/2006/time#hasEnd
+<http://www.w3.org/2006/time#hasEnd> rdf:type owl:ObjectProperty ;
+                                     <http://www.w3.org/2004/02/skos/core#definition> "End of a temporal entity." .
+
+
+###  http://www.w3.org/2006/time#hasTemporalDuration
+<http://www.w3.org/2006/time#hasTemporalDuration> rdf:type owl:ObjectProperty ;
+                                                  <http://www.w3.org/2004/02/skos/core#definition> "Duration of a temporal entity." .
 
 
 ###  http://www.w3.org/ns/ssn/isProxyFor
@@ -192,6 +209,22 @@ http://en.wikipedia.org/wiki/Time""" ;
                                                                                            "time interval"^^xsd:string ;
                                             <http://www.w3.org/2004/02/skos/core#hiddenLabel> "Time Step" ;
                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Time Step" .
+
+
+###  http://purl.dataone.org/odo/ECSO_00001719
+<http://purl.dataone.org/odo/ECSO_00001719> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2018-11-30T05:06:00Z"^^xsd:dateTime ;
+                                            rdfs:label "data quality assessment measurement type"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00001720
+<http://purl.dataone.org/odo/ECSO_00001720> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00001719> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2018-11-30T05:06:08Z"^^xsd:dateTime ;
+                                            rdfs:label "data quality flag"@en .
 
 
 ###  http://purl.dataone.org/odo/ECSO_00002040
@@ -348,6 +381,14 @@ http://en.wikipedia.org/wiki/Time""" ;
                                             rdfs:label "year and day of measurement"@en .
 
 
+###  http://purl.dataone.org/odo/ECSO_00002114
+<http://purl.dataone.org/odo/ECSO_00002114> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-17T18:54:57Z"^^xsd:dateTime ;
+                                            rdfs:label "geographic position measurement type"@en .
+
+
 ###  http://purl.dataone.org/odo/ECSO_00002122
 <http://purl.dataone.org/odo/ECSO_00002122> rdf:type owl:Class ;
                                             rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002043> ;
@@ -362,6 +403,38 @@ http://en.wikipedia.org/wiki/Time""" ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
                                             <http://purl.org/dc/elements/1.1/date> "2019-01-16T21:22:28Z"^^xsd:dateTime ;
                                             rdfs:label "days elapsed"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002130
+<http://purl.dataone.org/odo/ECSO_00002130> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002269> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-17T18:57:21Z"^^xsd:dateTime ;
+                                            rdfs:label "latitude coordinate"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002132
+<http://purl.dataone.org/odo/ECSO_00002132> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002269> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-17T18:58:37Z"^^xsd:dateTime ;
+                                            rdfs:label "longitude coordinate"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002137
+<http://purl.dataone.org/odo/ECSO_00002137> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002130> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-17T19:36:39Z"^^xsd:dateTime ;
+                                            rdfs:label "latitude minute component"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002151
+<http://purl.dataone.org/odo/ECSO_00002151> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002132> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-17T22:52:26Z"^^xsd:dateTime ;
+                                            rdfs:label "longitude minute component"@en .
 
 
 ###  http://purl.dataone.org/odo/ECSO_00002169
@@ -380,12 +453,68 @@ http://en.wikipedia.org/wiki/Time""" ;
                                             rdfs:label "minutes elapsed"@en .
 
 
+###  http://purl.dataone.org/odo/ECSO_00002239
+<http://purl.dataone.org/odo/ECSO_00002239> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002132> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-28T21:35:36Z"^^xsd:dateTime ;
+                                            rdfs:label "longitude degree component"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002243
+<http://purl.dataone.org/odo/ECSO_00002243> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002130> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-28T21:37:49Z"^^xsd:dateTime ;
+                                            rdfs:label "latitude second component"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002247
+<http://purl.dataone.org/odo/ECSO_00002247> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002130> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-28T21:57:42Z"^^xsd:dateTime ;
+                                            rdfs:label "latitude degree component"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002250
+<http://purl.dataone.org/odo/ECSO_00002250> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002132> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-28T21:59:23Z"^^xsd:dateTime ;
+                                            rdfs:label "longitude second component"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002269
+<http://purl.dataone.org/odo/ECSO_00002269> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002114> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-01-29T00:50:47Z"^^xsd:dateTime ;
+                                            rdfs:label "latitude and longitude coordinates"@en .
+
+
 ###  http://purl.dataone.org/odo/ECSO_00002366
 <http://purl.dataone.org/odo/ECSO_00002366> rdf:type owl:Class ;
                                             rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002169> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
                                             <http://purl.org/dc/elements/1.1/date> "2019-05-17T22:41:45Z"^^xsd:dateTime ;
                                             rdfs:label "season"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002450
+<http://purl.dataone.org/odo/ECSO_00002450> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00001719> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-03-19T21:55:20Z"^^xsd:dateTime ;
+                                            rdfs:label "observer confidence"@en .
+
+
+###  http://purl.dataone.org/odo/ECSO_00002556
+<http://purl.dataone.org/odo/ECSO_00002556> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00001719> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2019-03-26T17:39:32Z"^^xsd:dateTime ;
+                                            rdfs:label "signal quality"@en .
 
 
 ###  http://purl.dataone.org/odo/ECSO_00002627
@@ -409,7 +538,15 @@ http://en.wikipedia.org/wiki/Time""" ;
                                            rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000503> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-26T22:06:46Z"^^xsd:dateTime ;
-                                           rdfs:label "Species evenness *"@en .
+                                           rdfs:label "Species evenness"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A quality of an ecological community that reflects how close in abundance all species in a community are." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000474> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A quality of an ecological community that reflects how close in abundance all species in a community are." ;
+   <http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/PCO_0000023>
+ ] .
 
 
 ###  http://purl.dataone.org/odo/SASAP_000476
@@ -540,7 +677,7 @@ Need to think more about how to model time over which measurement is taken. E.g.
                                            rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
 
 This probably isn't the best place for this, since there may be proxy measures for non-fish measurement types; leaving for now but need input on the best way to model these in general""" ;
-                                           rdfs:label "Proxy measurement types (?)"@en ;
+                                           rdfs:label "Proxy measurement type (?)"@en ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "A variable that is not in itself directly relevant, but that serves in place of an unobservable or immeasurable variable. In order for a variable to be a good proxy, it must have a close correlation, not necessarily linear, with the variable of interest. This correlation might be either positive or negative." .
 
 [ rdf:type owl:Axiom ;
@@ -645,7 +782,7 @@ rdfs:label here needs to reflect a method""" ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000494> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A reference which is made to a taxon name along with a publication which explains how the author intends for the name to be applied." ;
-   <http://purl.org/dc/elements/1.1/source> <https://github.com/darwin-sw/dsw/wiki/ClassTaxon#equivalence-of-taxon-and-taxoncon-%20cept-in-the-tdwg-ontology-and-the-darwin-core-standard>
+   <http://purl.org/dc/elements/1.1/source> "https://github.com/darwin-sw/dsw/wiki/ClassTaxon#equivalence-of-taxon-and-taxoncon-%20cept-in-the-tdwg-ontology-and-the-darwin-core-standard, accessed 28April2021"
  ] .
 
 
@@ -687,15 +824,32 @@ authority""" ;
                                            rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000503> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-28T21:13:47Z"^^xsd:dateTime ;
-                                           rdfs:label "Species richness *"@en .
+                                           rdfs:label "Species richness"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The number of different species represented in an ecological community." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000497> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The number of different species represented in an ecological community." ;
+   <http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/PCO_0000010>
+ ] .
 
 
 ###  http://purl.dataone.org/odo/SASAP_000498
 <http://purl.dataone.org/odo/SASAP_000498> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000503> ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000562> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-28T21:14:00Z"^^xsd:dateTime ;
-                                           rdfs:label "Species diversity *"@en .
+                                           rdfs:label "Alpha diversity"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "α-diversity" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A community species diversity that is the mean species diversity at a site or within a specific habitat." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000498> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A community species diversity that is the mean species diversity at a site or within a specific habitat." ;
+   <http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/PCO_0000074>
+ ] .
 
 
 ###  http://purl.dataone.org/odo/SASAP_000499
@@ -703,7 +857,10 @@ authority""" ;
                                            rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000476> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-28T21:29:53Z"^^xsd:dateTime ;
-                                           rdfs:label "Fish abundance"@en .
+                                           rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
+
+There are lots of terms in here that need work.""" ;
+                                           rdfs:label "Fish abundance (?)"@en .
 
 
 ###  http://purl.dataone.org/odo/SASAP_000501
@@ -807,16 +964,9 @@ authority""" ;
 <http://purl.dataone.org/odo/SASAP_000521> rdf:type owl:Class ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-05-04T19:40:41Z"^^xsd:dateTime ;
+                                           rdfs:comment "The URI http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25364 does not resolve to the term. Including the URL to BioPortal to ensure findability: https://bioportal.bioontology.org/ontologies/NCIT?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C25364" ;
                                            rdfs:label "Identifier"@en ;
-                                           owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25364> ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "One or more characters used to identify, name, or characterize the nature, properties, or contents of a thing." .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000521> ;
-   owl:annotatedProperty owl:equivalentClass ;
-   owl:annotatedTarget <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25364> ;
-   rdfs:comment "This URI does not dereference to the term. Including the URL to BioPortal to ensure findability: https://bioportal.bioontology.org/ontologies/NCIT?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C25364"
- ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000521> ;
@@ -1266,7 +1416,15 @@ https://en.wikipedia.org/wiki/Bismarck_brown_Y, accessed 05May2021"""
                                            rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000530> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-05-05T16:26:27Z"^^xsd:dateTime ;
-                                           rdfs:label "Dye"@en .
+                                           rdfs:label "Dye"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Agents used to enhance the color or contrast of target materials or samples. Dyes have some affinity for their substrates and are usually applied in a solution." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000539> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Agents used to enhance the color or contrast of target materials or samples. Dyes have some affinity for their substrates and are usually applied in a solution." ;
+   <http://purl.org/dc/elements/1.1/source> <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C461>
+ ] .
 
 
 ###  http://purl.dataone.org/odo/SASAP_000540
@@ -1721,6 +1879,131 @@ https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Ra
  ] .
 
 
+###  http://purl.dataone.org/odo/SASAP_000562
+<http://purl.dataone.org/odo/SASAP_000562> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000503> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-10T22:36:19Z"^^xsd:dateTime ;
+                                           rdfs:label "Species diversity"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The number of different species that are represented in a given community, weighted by their abundance. Community species diversity can be calculated in different ways, but consists of two components: species richness and species evenness." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000562> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The number of different species that are represented in a given community, weighted by their abundance. Community species diversity can be calculated in different ways, but consists of two components: species richness and species evenness." ;
+   <http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/PCO_0000019>
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000563
+<http://purl.dataone.org/odo/SASAP_000563> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000476> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-10T22:51:40Z"^^xsd:dateTime ;
+                                           rdfs:label "Sex ratio"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The ratio of males to females in a population." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000563> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The ratio of males to females in a population." ;
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Sex_ratio, accessed 10May2021
+https://www.wikidata.org/wiki/Q1068155, accessed 10May2021"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000564
+<http://purl.dataone.org/odo/SASAP_000564> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000562> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-10T23:28:17Z"^^xsd:dateTime ;
+                                           rdfs:label "Beta diversity"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "β-diversity" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A community species diversity that is the ratio between regional and local species diversity." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000564> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A community species diversity that is the ratio between regional and local species diversity." ;
+   <http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/PCO_0000075>
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000565
+<http://purl.dataone.org/odo/SASAP_000565> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000562> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-10T23:28:23Z"^^xsd:dateTime ;
+                                           rdfs:label "Gamma diversity"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "γ-diversity" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A community species diversity that is the total species diversity in a landscape. The area or landscape of interest may be of very different sizes in different situations, but it should encompass multiple sites or habitats as measured by alpha diversity." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_000565> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A community species diversity that is the total species diversity in a landscape. The area or landscape of interest may be of very different sizes in different situations, but it should encompass multiple sites or habitats as measured by alpha diversity." ;
+   <http://purl.org/dc/elements/1.1/source> <http://purl.obolibrary.org/obo/PCO_0000076>
+ ] .
+
+
+###  http://purl.dataone.org/odo/SASAP_000566
+<http://purl.dataone.org/odo/SASAP_000566> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000563> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-11T00:01:35Z"^^xsd:dateTime ;
+                                           rdfs:label "Sex ratio of adult spawning stock"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The proportion of males and females in an adult spawning stock." .
+
+
+###  http://purl.dataone.org/odo/SASAP_000567
+<http://purl.dataone.org/odo/SASAP_000567> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000563> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-11T00:01:49Z"^^xsd:dateTime ;
+                                           rdfs:label "Sex ratio of juvenile standing stock"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The ratio of males and females in a juvenile standing stock." .
+
+
+###  http://purl.dataone.org/odo/SASAP_000568
+<http://purl.dataone.org/odo/SASAP_000568> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000563> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-11T00:02:35Z"^^xsd:dateTime ;
+                                           rdfs:label "Sex ratio of smolts"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The proportion of males and females in a smolt population." .
+
+
+###  http://purl.dataone.org/odo/SASAP_000569
+<http://purl.dataone.org/odo/SASAP_000569> rdf:type owl:Class ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-11T17:26:36Z"^^xsd:dateTime ;
+                                           rdfs:label "EXTRA TERM"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000570
+<http://purl.dataone.org/odo/SASAP_000570> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000569> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-11T17:26:46Z"^^xsd:dateTime ;
+                                           rdfs:label "rename me 1"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000571
+<http://purl.dataone.org/odo/SASAP_000571> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000569> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-11T17:26:55Z"^^xsd:dateTime ;
+                                           rdfs:label "rename me 2"@en .
+
+
+###  http://purl.dataone.org/odo/SASAP_000572
+<http://purl.dataone.org/odo/SASAP_000572> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000521> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2021-05-12T17:37:57Z"^^xsd:dateTime ;
+                                           rdfs:label "Region or location identifier *"@en .
+
+
 ###  http://purl.dataone.org/odo/SASAP_00400
 <http://purl.dataone.org/odo/SASAP_00400> rdf:type owl:Class ;
                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00216> ;
@@ -1848,8 +2131,8 @@ https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Ra
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00411> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "The objective measure of hot or cold in freshwater (i.e. non-saline water)." ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Temperature 
-https://www.wikidata.org/wiki/Q11466"""
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Temperature, accessed 22April2021
+https://www.wikidata.org/wiki/Q11466, accessed 22April2021"""
  ] .
 
 
@@ -1876,8 +2159,8 @@ https://www.wikidata.org/wiki/Q11466"""
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00413> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "The objective measure of hot or cold of water in a river." ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Temperature 
-https://www.wikidata.org/wiki/Q11466"""
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Temperature, accessed 22April2021 
+https://www.wikidata.org/wiki/Q11466, accessed 22April2021"""
  ] .
 
 
@@ -1970,8 +2253,8 @@ Ocean surface temperature""" ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00420> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "Alkalinity is the quantitative capacity of an aqueous solution to neutralize an acid." ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Alkalinity 
-https://www.wikidata.org/wiki/Q432016"""
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Alkalinity, accessed 22April2021
+https://www.wikidata.org/wiki/Q432016, accessed 22April2021"""
  ] .
 
 
@@ -2006,7 +2289,7 @@ https://www.wikidata.org/wiki/Q432016"""
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00424> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "The amount of gaseous oxygen (O2) dissolved in water." ;
-   <http://purl.org/dc/elements/1.1/source> <https://arcos.disl.org/main/whatisDO#:~:text=Dissolved%20Oxygen%20is%20the%20amount,can%20affect%20dissolved%20oxygen%20levels.>
+   <http://purl.org/dc/elements/1.1/source> "https://arcos.disl.org/main/whatisDO#:~:text=Dissolved%20Oxygen%20is%20the%20amount,can%20affect%20dissolved%20oxygen%20levels, accessed 22April2021"
  ] .
 
 
@@ -2023,16 +2306,16 @@ https://www.wikidata.org/wiki/Q432016"""
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00425> ;
    owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
    owl:annotatedTarget "Dissolved oxygen saturation can be measured with a dissolved oxygen probe such as an oxygen sensor or an optode in liquid media, usually water. The standard unit of oxygen saturation is percent (%)." ;
-   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Oxygen_saturation 
-https://www.wikidata.org/wiki/Q6294669"""
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Oxygen_saturation, accessed 22April2021
+https://www.wikidata.org/wiki/Q6294669, accessed 22April2021"""
  ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00425> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A relative measure of the concentration of oxygen that is dissolved or carried in a given medium as a proportion of the maximal concentration that can be dissolved in that medium." ;
-   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Oxygen_saturation 
-https://www.wikidata.org/wiki/Q6294669"""
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Oxygen_saturation, accessed 22April2021 
+https://www.wikidata.org/wiki/Q6294669, accessed 22April2021"""
  ] .
 
 
@@ -2051,10 +2334,7 @@ https://www.wikidata.org/wiki/Q6294669"""
                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00215> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:17:21Z"^^xsd:dateTime ;
-                                          rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
-
-maybe just make all these rdfs:altLabels of their corresponding scientific names?""" ;
-                                          rdfs:label "Vernacular name (?)"@en ;
+                                          rdfs:label "Vernacular name"@en ;
                                           <http://www.w3.org/2004/02/skos/core#altLabel> "Common name" ,
                                                                                          "Species" ;
                                           <http://www.w3.org/2004/02/skos/core#definition> "The name based on the normal language of everyday life." .
@@ -2080,7 +2360,10 @@ https://www.wikidata.org/wiki/Q502895"""
                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00215> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:17:29Z"^^xsd:dateTime ;
-                                          rdfs:label "Salmon specimen and occurrence"@en ;
+                                          rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
+
+How do we want to define this? altLabels?""" ;
+                                          rdfs:label "Salmon specimen and occurrence (?)"@en ;
                                           <http://www.w3.org/2004/02/skos/core#altLabel> """Scientific name
 Binomial name 
 Binomen 
@@ -2100,15 +2383,17 @@ Latin name""" ;
                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00458> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:17:52Z"^^xsd:dateTime ;
-                                          <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161975" ;
-                                          rdfs:label "Oncorhynchus gorbuscha"@en ;
-                                          <http://www.w3.org/2004/02/skos/core#altLabel> """O. gorbuscha
-Oncorhynchus gorbuscha""" .
+                                          <http://purl.org/dc/elements/1.1/description> "The class, which contains all instances of Oncorhynchus gorbuscha." ;
+                                          <http://purl.org/dc/elements/1.1/identifier> 161975 ;
+                                          <http://rs.tdwg.org/dwc/terms/taxonID> <https://eol.org/pages/46563135> ;
+                                          rdfs:label "Oncorhynchus gorbuscha type"@en ;
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "O. gorbuscha" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00460> ;
-   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
-   owl:annotatedTarget "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161975" ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/identifier> ;
+   owl:annotatedTarget 161975 ;
+   <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Information System (ITIS) Taxonomic Serial No. (TSN): 161975" ;
    <http://purl.org/dc/elements/1.1/source> <https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161975#null> ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://www.gbif.org/species/5204037>
  ] .
@@ -2119,16 +2404,16 @@ Oncorhynchus gorbuscha""" .
                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00458> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:18:47Z"^^xsd:dateTime ;
-                                          <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161976" ;
+                                          <http://purl.org/dc/elements/1.1/identifier> 161976 ;
+                                          <http://rs.tdwg.org/dwc/terms/taxonID> <https://eol.org/pages/46563136> ;
                                           rdfs:label "Oncorhynchus keta"@en ;
-                                          <http://www.w3.org/2004/02/skos/core#altLabel> """O. keta
-Oncorhynchus keta""" .
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "O. keta" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00461> ;
-   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
-   owl:annotatedTarget "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161976" ;
-   <http://purl.org/dc/elements/1.1/source> <https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161976#null> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/identifier> ;
+   owl:annotatedTarget 161976 ;
+   <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Information System (ITIS) Taxonomic Serial No. (TSN): 161976" ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://www.gbif.org/species/5204014>
  ] .
 
@@ -2138,15 +2423,16 @@ Oncorhynchus keta""" .
                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00458> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:18:52Z"^^xsd:dateTime ;
-                                          <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161977" ;
+                                          <http://purl.org/dc/elements/1.1/identifier> 161977 ;
+                                          <http://rs.tdwg.org/dwc/terms/taxonID> <https://eol.org/pages/46563137> ;
                                           rdfs:label "Oncorhynchus kisutch"@en ;
-                                          <http://www.w3.org/2004/02/skos/core#altLabel> """O. kisutch
-Oncorhynchus kisutch""" .
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "O. kisutch" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00462> ;
-   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
-   owl:annotatedTarget "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161977" ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/identifier> ;
+   owl:annotatedTarget 161977 ;
+   <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Information System (ITIS) Taxonomic Serial No. (TSN): 161977" ;
    <http://purl.org/dc/elements/1.1/source> <https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161977#null> ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://www.gbif.org/species/5204034>
  ] .
@@ -2157,17 +2443,25 @@ Oncorhynchus kisutch""" .
                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00458> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:19:04Z"^^xsd:dateTime ;
-                                          <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161979" ;
+                                          <http://purl.org/dc/elements/1.1/identifier> 161979 ;
+                                          <http://rs.tdwg.org/dwc/terms/taxonID> <https://eol.org/pages/46563140> ;
                                           rdfs:label "Oncorhynchus nerka"@en ;
-                                          <http://www.w3.org/2004/02/skos/core#altLabel> """O. nerka
-Oncorhynchus nerka""" .
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "O. nerka" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00463> ;
-   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
-   owl:annotatedTarget "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161979" ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/identifier> ;
+   owl:annotatedTarget 161979 ;
+   <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No. (TSN): 161979" ;
    <http://purl.org/dc/elements/1.1/source> <https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161979#null> ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://www.gbif.org/species/5204039>
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00463> ;
+   owl:annotatedProperty <http://rs.tdwg.org/dwc/terms/taxonID> ;
+   owl:annotatedTarget <https://eol.org/pages/46563140> ;
+   rdfs:comment "NOTE: EOL currently produces an error 505 (Internal server error)"
  ] .
 
 
@@ -2176,17 +2470,25 @@ Oncorhynchus nerka""" .
                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_00458> ;
                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                           <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:19:15Z"^^xsd:dateTime ;
-                                          <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161980" ;
+                                          <http://purl.org/dc/elements/1.1/identifier> 161980 ;
+                                          <http://rs.tdwg.org/dwc/terms/taxonID> <https://eol.org/pages/46563139> ;
                                           rdfs:label "Oncorhynchus tshawytscha"@en ;
-                                          <http://www.w3.org/2004/02/skos/core#altLabel> """O. tshawytscha
-Oncorhynchus tshawytscha""" .
+                                          <http://www.w3.org/2004/02/skos/core#altLabel> "O. tshawytscha" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00464> ;
-   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
-   owl:annotatedTarget "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No.: 161980" ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/identifier> ;
+   owl:annotatedTarget 161980 ;
+   <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No. (TSN): 161980" ;
    <http://purl.org/dc/elements/1.1/source> <https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161980#null> ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <https://www.gbif.org/species/5204024>
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/SASAP_00464> ;
+   owl:annotatedProperty <http://rs.tdwg.org/dwc/terms/taxonID> ;
+   owl:annotatedTarget <https://eol.org/pages/46563139> ;
+   rdfs:comment "NOTE: EOL currently produces an error 505 (Internal server error)"
  ] .
 
 
@@ -2194,7 +2496,10 @@ Oncorhynchus tshawytscha""" .
 <http://purl.dataone.org/odo/salmon_00124> rdf:type owl:Class ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-30T20:59:48Z"^^xsd:dateTime ;
-                                           rdfs:label "Place or location"@en .
+                                           rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
+
+add community, place, waterbody names etc. from solr query; can also look for unique values in datasets with attributes pertaining to area names/types; for example, see the 'areaname' attribute in dataset 'workerCharacteristics.csv' in datapackage: https://search.dataone.org/view/doi:10.5063/F16M354H""" ;
+                                           rdfs:label "Place or location *"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_00125
@@ -2230,10 +2535,10 @@ https://www.wikidata.org/wiki/Q15324"""
 
 ###  http://purl.dataone.org/odo/salmon_00126
 <http://purl.dataone.org/odo/salmon_00126> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00124> ;
+                                           rdfs:subClassOf <http://purl.dataone.org/odo/SASAP_000569> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-03-30T21:00:02Z"^^xsd:dateTime ;
-                                           rdfs:label "Community"@en .
+                                           rdfs:label "rename me 3"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_00127
@@ -2507,7 +2812,8 @@ Could use some input on subclass hierarchy. E.g. 'Hand collection' includes meth
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:01:18Z"^^xsd:dateTime ;
                                            rdfs:label "Angling"@en ;
                                            <http://www.w3.org/2004/02/skos/core#altLabel> "hook and line" ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "Fishing by means of an \"angle\" (fish hook). The hook is usually attached to a fishing line and baited with natural bait or artificial lures to attract fish. The line is often attached to a fishing rod." .
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Fishing by means of an \"angle\" (fish hook). The hook is usually attached to a fishing line and baited with natural bait or artificial lures to attract fish. The line is often attached to a fishing rod." ;
+                                           <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://vocab.nerc.ac.uk/collection/M13/current/014/> .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00144> ;
@@ -2524,12 +2830,12 @@ Could use some input on subclass hierarchy. E.g. 'Hand collection' includes meth
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:01:23Z"^^xsd:dateTime ;
                                            rdfs:label "Fish wheel"@en ;
                                            <http://www.w3.org/2004/02/skos/core#altLabel> "salmon wheel" ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A device that is situated in rivers for catching fish which looks and operates like a watermill and is outfitted with wire baskets designed to catch and carry fish from the water and into a nearby holding tank." .
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A device which (a) is situated in rivers for catching fish, and (b) looks and operates like a watermill that is outfitted with wire baskets designed to catch and carry fish from the water and into a nearby holding tank." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00145> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "A device that is situated in rivers for catching fish which looks and operates like a watermill and is outfitted with wire baskets designed to catch and carry fish from the water and into a nearby holding tank." ;
+   owl:annotatedTarget "A device which (a) is situated in rivers for catching fish, and (b) looks and operates like a watermill that is outfitted with wire baskets designed to catch and carry fish from the water and into a nearby holding tank." ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Fish_wheel, accessed 01April2021
 https://www.wikidata.org/wiki/Q5454688, accessed 01April2021"""
  ] .
@@ -2541,12 +2847,12 @@ https://www.wikidata.org/wiki/Q5454688, accessed 01April2021"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:01:30Z"^^xsd:dateTime ;
                                            rdfs:label "Spear"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A type of fishing which involves using a spear to strike and collect a fish." .
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A barbed pole, which is used to strike and collect a fish. Spearheads come in a variety of different shapes (e.g. arrow, trident), and can be thrown by hand or deployed using elastic-powered spearguns and slings or compressed gas pneumatic powered spearguns." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00146> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "A type of fishing which involves using a spear to strike and collect a fish." ;
+   owl:annotatedTarget "A barbed pole, which is used to strike and collect a fish. Spearheads come in a variety of different shapes (e.g. arrow, trident), and can be thrown by hand or deployed using elastic-powered spearguns and slings or compressed gas pneumatic powered spearguns." ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Spearfishing, accessed 01April2021 
 https://www.wikidata.org/wiki/Q765706, accessed 01April2021"""
  ] .
@@ -2648,12 +2954,12 @@ https://www.wikidata.org/wiki/Q640082, accessed 01April2021"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:02:25Z"^^xsd:dateTime ;
                                            rdfs:label "Handpicked or carcass collection"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A type of fishing which involves gathering live or deceased fishes by hand." .
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The gathering live or deceased fishes by hand." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00154> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "A type of fishing which involves gathering live or deceased fishes by hand." ;
+   owl:annotatedTarget "The gathering live or deceased fishes by hand." ;
    <http://purl.org/dc/elements/1.1/source> "http://orcid.org/0000-0002-5300-3075"
  ] .
 
@@ -2664,12 +2970,12 @@ https://www.wikidata.org/wiki/Q640082, accessed 01April2021"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:02:30Z"^^xsd:dateTime ;
                                            rdfs:label "Troll"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A type of fishing in which one or more fishing lines, baited with lures or bait fish, are drawn through the water (often behind a moving vessel) to catch pelagic fishes." .
+                                           <http://www.w3.org/2004/02/skos/core#definition> "One or more fishing lines, which are baited with lures or bait fish and drawn through the water (often behind a moving vessel) to catch pelagic fishes." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00155> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "A type of fishing in which one or more fishing lines, baited with lures or bait fish, are drawn through the water (often behind a moving vessel) to catch pelagic fishes." ;
+   owl:annotatedTarget "One or more fishing lines, which are baited with lures or bait fish and drawn through the water (often behind a moving vessel) to catch pelagic fishes." ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://en.wikipedia.org/wiki/Trolling_(fishing), accessed 01April2021"
  ] .
 
@@ -2730,12 +3036,12 @@ https://www.wikidata.org/wiki/Q4412590, accessed 01April2021"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:02:48Z"^^xsd:dateTime ;
                                            rdfs:label "Electrofishing"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A type of fishing which uses direct current electricity flowing between a submerged cathod and anode to cause galvanotaxis, or an uncontrolled muscular convulsion, which affects the movement of the fish such that it swims towards the anode, where it is then collected." .
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A type of fishing gear which uses direct current electricity flowing between a submerged cathod and anode to cause galvanotaxis, or an uncontrolled muscular convulsion, which affects the movement of the fish such that it swims towards the anode, where it is then collected." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00159> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "A type of fishing which uses direct current electricity flowing between a submerged cathod and anode to cause galvanotaxis, or an uncontrolled muscular convulsion, which affects the movement of the fish such that it swims towards the anode, where it is then collected." ;
+   owl:annotatedTarget "A type of fishing gear which uses direct current electricity flowing between a submerged cathod and anode to cause galvanotaxis, or an uncontrolled muscular convulsion, which affects the movement of the fish such that it swims towards the anode, where it is then collected." ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Electrofishing, accessed 01April2021 
 https://www.wikidata.org/wiki/Q1249133, accessed 01April2021"""
  ] .
@@ -2763,6 +3069,7 @@ https://www.wikidata.org/wiki/Q1249133, accessed 01April2021"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:32:41Z"^^xsd:dateTime ;
                                            rdfs:label "Seine"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#closeMatch> <http://vocab.nerc.ac.uk/collection/M13/current/015/> ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "A type of net which hangs vertically in the water with its bottom edge held down by weights and its top edge buoyed by floats. Seine nets can be deployed from the shore as a beach seine, or from a boat." .
 
 [ rdf:type owl:Axiom ;
@@ -2779,7 +3086,7 @@ https://www.wikidata.org/wiki/Q600580, accessed 01April2021"""
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00142> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:46:07Z"^^xsd:dateTime ;
-                                           rdfs:label "Netting"@en .
+                                           rdfs:label "Netting *"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_00164
@@ -2787,7 +3094,15 @@ https://www.wikidata.org/wiki/Q600580, accessed 01April2021"""
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00142> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-01T18:47:27Z"^^xsd:dateTime ;
-                                           rdfs:label "Hand collection"@en .
+                                           rdfs:label "Hand collection"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Fishing gear which can be operated by hand by one or few people." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00164> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Fishing gear which can be operated by hand by one or few people." ;
+   <http://purl.org/dc/elements/1.1/source> <http://orcid.org/0000-0002-5300-3075>
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_00167
@@ -2940,7 +3255,9 @@ Many, but not all, personal use fisheries require a permit issued by the Departm
                                            rdfs:label "Aquatic farming"@en ;
                                            <http://www.w3.org/2004/02/skos/core#altLabel> """Aquaculture
 Aquafarming""" ;
-                                           <http://www.w3.org/2004/02/skos/core#closeMatch> "http://vocab.nerc.ac.uk/collection/M13/current/018/" ;
+                                           <http://www.w3.org/2004/02/skos/core#closeMatch> <http://vocab.nerc.ac.uk/collection/M13/current/019/> ,
+                                                                                            <http://vocab.nerc.ac.uk/collection/M13/current/020/> ,
+                                                                                            "http://vocab.nerc.ac.uk/collection/M13/current/018/" ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "The culturing of fish, shellfish, aquatic plants, and/or other organisms in captivity or under controlled conditions in the near shore environment." .
 
 [ rdf:type owl:Axiom ;
@@ -3936,6 +4253,14 @@ O. kisutch
                                            rdfs:label "Unknown sex *"@en .
 
 
+###  http://vocab.nerc.ac.uk/collection/M13/current/011/
+<http://vocab.nerc.ac.uk/collection/M13/current/011/> rdf:type owl:Class .
+
+
+###  http://vocab.nerc.ac.uk/collection/M13/current/012/
+<http://vocab.nerc.ac.uk/collection/M13/current/012/> rdf:type owl:Class .
+
+
 #################################################################
 #    Individuals
 #################################################################
@@ -4054,10 +4379,6 @@ O. kisutch
 #################################################################
 #    Annotations
 #################################################################
-
-<http://rs.tdwg.org/dwc/terms/vernacularName> rdfs:comment "As of 30April2021, Darwin Core (DWC) does not specify domains and ranges. Currently, I am considering 'Salmon specimen and occurrence' to be the domain and 'Vernacular name' to be the range." ;
-                                              <http://www.w3.org/2004/02/skos/core#definition> "A common or vernacular name." .
-
 
 owl:Thing rdfs:comment """- any term that is noted by a \"(?)\" has notes in an rdfs:comment that need to be addressed
 
