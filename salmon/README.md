@@ -40,9 +40,17 @@ All term URIs begin with the prefix `http://purl.dataone.org/odo/salmon_` and co
 Where appropriate, all terms have been annotated with the following properties:
 
 - `rdfs:label` [http://www.w3.org/2000/01/rdf-schema#label]: The preferred label for the term
-- `dc:creator` [http://purl.org/dc/elements/1.1/creator]: ORCID of the person that created the term
-- `dc:date` [http://purl.org/dc/terms/date]: Date the term was created
--  etc.
+- `dc:creator` [http://purl.org/dc/elements/1.1/creator]: The ORCID of the person that created the term
+- `dc:date` [http://purl.org/dc/terms/date]: The date the term was created
+-  `skos:definition` [http://www.w3.org/2004/02/skos/core#definition]: The definition of the term
+-  `dc:description`[http://purl.org/dc/elements/1.1/description]: Additional text that is more generalized than a definition. It provides context for a term and is not limited to describing what a term actually is.
+-  `dc:source` [http://purl.org/dc/elements/1.1/source]: Used as an annotation property on a `skos:definition` or `dc:description` when the text is copied verbatim from the source.
+-  `hasDbXref` [http://www.geneontology.org/formats/oboInOwl#hasDbXref]: Used as an annotation property on a `skos:definition` or `dc:description` when the text is _not_ copied verbatim from the source.
+-  `owl:equivalentClass` [http://www.w3.org/2002/07/owl#equivalentClass]: Used to align Salmon Ontology classes with classes from external ontologies.
+-  `rdfs:comment` [http://www.w3.org/2000/01/rdf-schema#comment]: For miscellaneous info, or comments to other ontology developers.
+-  `skos:altLabel` [http://www.w3.org/2004/02/skos/core#altLabel]: Used for alternative labels of the same concept. An example is an acronym and its full name (e.g. SST and  sea surface temperature). This property is also used for synonomous terms (e.g. Chinook salmon and King salmon).
+-  `skos:closeMatch` [http://www.w3.org/2004/02/skos/core#closeMatch]: Used to relate classes that are similar, but not exactly synonomous.
+-  `skos:relatedMatch` [http://www.w3.org/2004/02/skos/core#relatedMatch]: Used to relate classes that .... 
 
 ## Contributing
 
