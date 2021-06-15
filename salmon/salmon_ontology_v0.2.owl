@@ -308,11 +308,6 @@ owl:sameAs rdf:type owl:AnnotationProperty .
                                                                         <http://www.w3.org/2004/02/skos/core#definition> "A MeasurementType describes the type of a Measurement in which the Measurement would follow the associated Protocol to record the value of the associated Characteristic of the associated Entity using the associated Standard. Any of these associated properties may be omitted, in which case the MeasurementType is only constrained by the provided associations. A MeasurementType is a hypothetical construct, in that it is not associated with a particular instance of a Measurement." .
 
 
-###  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25364
-<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25364> rdf:type owl:Class ;
-                                                            owl:equivalentClass <http://purl.dataone.org/odo/salmon_000521> .
-
-
 ###  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C461
 <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C461> rdf:type owl:Class ;
                                                           owl:equivalentClass <http://purl.dataone.org/odo/salmon_000539> .
@@ -1136,7 +1131,10 @@ needs definition""" ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-04T19:40:41Z"^^xsd:dateTime ;
                                             rdfs:comment "The URI http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25364 does not resolve to the term. Including the URL to BioPortal to ensure findability: https://bioportal.bioontology.org/ontologies/NCIT?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C25364" ;
                                             rdfs:label "Identifier"@en ;
-                                            <http://www.w3.org/2004/02/skos/core#definition> "One or more characters used to identify, name, or characterize the nature, properties, or contents of a thing." .
+                                            <http://www.w3.org/2004/02/skos/core#definition> "One or more characters used to identify, name, or characterize the nature, properties, or contents of a thing." ;
+                                            <http://www.w3.org/2004/02/skos/core#relatedMatch> """[NEEDS ALIGNMENT]
+
+http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25364""" .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_000521> ;
@@ -2675,7 +2673,15 @@ Total length can be measured by two conventions -- by leaving the caudal fin spr
 <http://purl.dataone.org/odo/salmon_000639> rdf:type owl:Class ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-06-14T23:05:05Z"^^xsd:dateTime ;
-                                            rdfs:label "Fish stock type"@en .
+                                            rdfs:label "Fish stock type"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "Group of individuals of a species which can be regarded as an entity for management or assessment purposes; a separate breeding population of a species; term used to identify a management unit of fishery species. A distinct genetic population, a population defined by movement pattern, part of a population potentially harvestable, or a quantity of fish from a given area. May be a total or a spawning stock." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000639> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Group of individuals of a species which can be regarded as an entity for management or assessment purposes; a separate breeding population of a species; term used to identify a management unit of fishery species. A distinct genetic population, a population defined by movement pattern, part of a population potentially harvestable, or a quantity of fish from a given area. May be a total or a spawning stock." ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.fishbase.se/Glossary/Glossary.php?q=stock&language=english&sc=is, accessed 2021-06-15"
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_000640
@@ -2683,7 +2689,16 @@ Total length can be measured by two conventions -- by leaving the caudal fin spr
                                             rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000639> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-06-14T23:05:21Z"^^xsd:dateTime ;
-                                            rdfs:label "Wild"@en .
+                                            rdfs:label "Wild stock"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "A stock that is sustained by natural spawning and rearing in the natural habitat, regardless of parentage or origin." ;
+                                            <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.obolibrary.org/obo/PCO_0000001> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000640> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A stock that is sustained by natural spawning and rearing in the natural habitat, regardless of parentage or origin." ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.fishbase.se/Glossary/Glossary.php?q=wild+stock&language=english&sc=is, accessed 2021-06-15"
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_00124
@@ -3363,22 +3378,30 @@ traditional fishery""" ;
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000639> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-02T20:00:45Z"^^xsd:dateTime ;
-                                           <http://purl.org/dc/elements/1.1/description> "The Alaska hatchery program was designed to increase salmon abundance and enhace fisheies, while protecting wild stocks. The program was built in response to depressed commercial fisheries, to meet the needs of the people of the state." ;
+                                           <http://purl.org/dc/elements/1.1/description> "The Alaska hatchery program was designed to increase salmon abundance and enhace fisheries, while protecting wild stocks. The program was built in response to depressed commercial fisheries, to meet the needs of the people of the state." ;
+                                           rdfs:comment "Oftentimes, hatchery-reared salmon will have their adipose fins removed (i.e. clipped) to mark that they come from a hatchery (versus a wild stock)." ;
                                            rdfs:label "Hatchery"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#definition> "A place for artificial breeding, hatching, and rearing through the early life stages of animals -- finfish and shellfish in particular. Hatcheries produce larval and juvenile fish, shellfish, and crustaceans, primarily to support the aquaculture industry where they are transferred to on-growing systems, such as fish farms, to reach harvest size." .
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The artificial breeding, hatching, and rearing through the early life stages of animals -- finfish and shellfish in particular. Hatcheries produce larval and juvenile fish, shellfish, and crustaceans, primarily to support the aquaculture industry where they are transferred to on-growing systems, such as fish farms, to reach harvest size." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00173> ;
    owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
-   owl:annotatedTarget "The Alaska hatchery program was designed to increase salmon abundance and enhace fisheies, while protecting wild stocks. The program was built in response to depressed commercial fisheries, to meet the needs of the people of the state." ;
-   <http://purl.org/dc/elements/1.1/source> "https://www.adfg.alaska.gov/static/fishing/PDFs/hatcheries/2013_ak_hatcheries.pdf, accessed 02April2021" ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.adfg.alaska.gov/index.cfm?adfg=fishingHatcheries.main, accessed 02April2021"
+   owl:annotatedTarget "The Alaska hatchery program was designed to increase salmon abundance and enhace fisheries, while protecting wild stocks. The program was built in response to depressed commercial fisheries, to meet the needs of the people of the state." ;
+   <http://purl.org/dc/elements/1.1/source> "https://www.adfg.alaska.gov/static/fishing/PDFs/hatcheries/2013_ak_hatcheries.pdf, accessed 2021-04-02" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.adfg.alaska.gov/index.cfm?adfg=fishingHatcheries.main, accessed 2021-04-02"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00173> ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Oftentimes, hatchery-reared salmon will have their adipose fins removed (i.e. clipped) to mark that they come from a hatchery (versus a wild stock)." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.adfg.alaska.gov/index.cfm?adfg=wildlifenews.view_article&articles_id=693, accessed 2021-06-15"
  ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00173> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "A place for artificial breeding, hatching, and rearing through the early life stages of animals -- finfish and shellfish in particular. Hatcheries produce larval and juvenile fish, shellfish, and crustaceans, primarily to support the aquaculture industry where they are transferred to on-growing systems, such as fish farms, to reach harvest size." ;
+   owl:annotatedTarget "The artificial breeding, hatching, and rearing through the early life stages of animals -- finfish and shellfish in particular. Hatcheries produce larval and juvenile fish, shellfish, and crustaceans, primarily to support the aquaculture industry where they are transferred to on-growing systems, such as fish farms, to reach harvest size." ;
    <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Fish_hatchery, accessed 2021-04-02
 https://www.wikidata.org/wiki/Q15615109, accessed 2021-04-02"""
  ] .
