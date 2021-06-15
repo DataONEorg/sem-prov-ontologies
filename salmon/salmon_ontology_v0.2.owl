@@ -308,11 +308,6 @@ owl:sameAs rdf:type owl:AnnotationProperty .
                                                                         <http://www.w3.org/2004/02/skos/core#definition> "A MeasurementType describes the type of a Measurement in which the Measurement would follow the associated Protocol to record the value of the associated Characteristic of the associated Entity using the associated Standard. Any of these associated properties may be omitted, in which case the MeasurementType is only constrained by the provided associations. A MeasurementType is a hypothetical construct, in that it is not associated with a particular instance of a Measurement." .
 
 
-###  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C461
-<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C461> rdf:type owl:Class ;
-                                                          owl:equivalentClass <http://purl.dataone.org/odo/salmon_000539> .
-
-
 ###  http://purl.dataone.org/odo/ECSO_00001167
 <http://purl.dataone.org/odo/ECSO_00001167> rdf:type owl:Class ;
                                             rdfs:subClassOf <http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType> ;
@@ -337,26 +332,6 @@ http://en.wikipedia.org/wiki/Time""" ;
                                             <http://www.w3.org/2004/02/skos/core#prefLabel> "Time Step" .
 
 
-###  http://purl.dataone.org/odo/ECSO_00001226
-<http://purl.dataone.org/odo/ECSO_00001226> rdf:type owl:Class ;
-                                            owl:equivalentClass <http://purl.dataone.org/odo/salmon_00412> .
-
-
-###  http://purl.dataone.org/odo/ECSO_00001237
-<http://purl.dataone.org/odo/ECSO_00001237> rdf:type owl:Class ;
-                                            owl:equivalentClass <http://purl.dataone.org/odo/salmon_000623> .
-
-
-###  http://purl.dataone.org/odo/ECSO_00001525
-<http://purl.dataone.org/odo/ECSO_00001525> rdf:type owl:Class ;
-                                            owl:equivalentClass <http://purl.dataone.org/odo/salmon_00411> .
-
-
-###  http://purl.dataone.org/odo/ECSO_00001669
-<http://purl.dataone.org/odo/ECSO_00001669> rdf:type owl:Class ;
-                                            owl:equivalentClass <http://purl.dataone.org/odo/salmon_00426> .
-
-
 ###  http://purl.dataone.org/odo/ECSO_00001719
 <http://purl.dataone.org/odo/ECSO_00001719> rdf:type owl:Class ;
                                             rdfs:subClassOf <http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType> ;
@@ -371,11 +346,6 @@ http://en.wikipedia.org/wiki/Time""" ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
                                             <http://purl.org/dc/elements/1.1/date> "2018-11-30T05:06:08Z"^^xsd:dateTime ;
                                             rdfs:label "data quality flag"@en .
-
-
-###  http://purl.dataone.org/odo/ECSO_00001749
-<http://purl.dataone.org/odo/ECSO_00001749> rdf:type owl:Class ;
-                                            owl:equivalentClass <http://purl.dataone.org/odo/salmon_00420> .
 
 
 ###  http://purl.dataone.org/odo/ECSO_00002040
@@ -652,29 +622,12 @@ http://en.wikipedia.org/wiki/Time""" ;
                                             rdfs:label "season"@en .
 
 
-###  http://purl.dataone.org/odo/ECSO_00002386
-<http://purl.dataone.org/odo/ECSO_00002386> rdf:type owl:Class ;
-                                            owl:equivalentClass <http://purl.dataone.org/odo/salmon_00425> .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/ECSO_00002386> ;
-   owl:annotatedProperty owl:equivalentClass ;
-   owl:annotatedTarget <http://purl.dataone.org/odo/salmon_00425> ;
-   rdfs:comment "ECSO also contains the term 'dissolved oxygen saturation percentage' (http://purl.dataone.org/odo/ECSO_00002383). Neither terms are defined, so it is unclear what the intended difference is. From my understanding, 'dissolved oxygen saturation' is always reported as a percentage."
- ] .
-
-
 ###  http://purl.dataone.org/odo/ECSO_00002450
 <http://purl.dataone.org/odo/ECSO_00002450> rdf:type owl:Class ;
                                             rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00001719> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
                                             <http://purl.org/dc/elements/1.1/date> "2019-03-19T21:55:20Z"^^xsd:dateTime ;
                                             rdfs:label "observer confidence"@en .
-
-
-###  http://purl.dataone.org/odo/ECSO_00002490
-<http://purl.dataone.org/odo/ECSO_00002490> rdf:type owl:Class ;
-                                            owl:equivalentClass <http://purl.dataone.org/odo/salmon_000523> .
 
 
 ###  http://purl.dataone.org/odo/ECSO_00002556
@@ -701,18 +654,15 @@ http://en.wikipedia.org/wiki/Time""" ;
                                             rdfs:label "milliseconds elapsed"@en .
 
 
-###  http://purl.dataone.org/odo/ECSO_00002895
-<http://purl.dataone.org/odo/ECSO_00002895> rdf:type owl:Class ;
-                                            owl:equivalentClass <http://purl.dataone.org/odo/salmon_00422> .
-
-
 ###  http://purl.dataone.org/odo/salmon_000476
 <http://purl.dataone.org/odo/salmon_000476> rdf:type owl:Class ;
-                                            owl:equivalentClass <http://purl.obolibrary.org/obo/PCO_0000003> ;
                                             rdfs:subClassOf <http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-04-26T22:37:24Z"^^xsd:dateTime ;
                                             <http://purl.org/dc/elements/1.1/description> "Includes qualities like population size, population growth rate, carrying capacity, immigration rate, emigration rate, fecundity, and death rate. A population quality may depend on the qualities of individual organisms in the population, but cannot be measured or described for a single organism." ;
+                                            rdfs:comment """[NEEDS ALIGNMENT]
+
+http://purl.obolibrary.org/obo/PCO_0000003""" ;
                                             rdfs:label "Quality of a population measurement type"@en ;
                                             <http://www.w3.org/2004/02/skos/core#definition> "A quality that inheres in a population of organisms." .
 
@@ -733,9 +683,11 @@ http://en.wikipedia.org/wiki/Time""" ;
 
 ###  http://purl.dataone.org/odo/salmon_000478
 <http://purl.dataone.org/odo/salmon_000478> rdf:type owl:Class ;
-                                            owl:equivalentClass <http://semanticscience.org/resource/SIO_001385> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-04-26T23:10:08Z"^^xsd:dateTime ;
+                                            rdfs:comment """[NEEDS ALIGNMENT]
+
+http://semanticscience.org/resource/SIO_001385""" ;
                                             rdfs:label "Notation type"@en ;
                                             <http://www.w3.org/2004/02/skos/core#definition> "A series or system of written symbols used to represent numbers, amounts, or elements." .
 
@@ -743,8 +695,8 @@ http://en.wikipedia.org/wiki/Time""" ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_000478> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A series or system of written symbols used to represent numbers, amounts, or elements." ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> <http://semanticscience.org/resource/SIO_001385> ,
-                                                            """https://en.wikipedia.org/wiki/Notation, accessed 2021-06-14
+   <http://purl.org/dc/elements/1.1/source> <http://semanticscience.org/resource/SIO_001385> ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Notation, accessed 2021-06-14
 https://www.wikidata.org/wiki/Q2001982, accessed 2021-06-14"""
  ] .
 
@@ -1031,10 +983,12 @@ needs defintion""" ;
 
 ###  http://purl.dataone.org/odo/salmon_000503
 <http://purl.dataone.org/odo/salmon_000503> rdf:type owl:Class ;
-                                            owl:equivalentClass <http://purl.obolibrary.org/obo/PCO_0000004> ;
                                             rdfs:subClassOf <http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#MeasurementType> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-04-29T18:48:45Z"^^xsd:dateTime ;
+                                            rdfs:comment """[NEEDS ALIGNMENT]
+
+http://purl.obolibrary.org/obo/PCO_0000004""" ;
                                             rdfs:label "Quality of an ecological community"@en ;
                                             <http://www.w3.org/2004/02/skos/core#definition> "A quality that inheres in a community." .
 
@@ -1129,12 +1083,12 @@ needs definition""" ;
 <http://purl.dataone.org/odo/salmon_000521> rdf:type owl:Class ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-04T19:40:41Z"^^xsd:dateTime ;
-                                            rdfs:comment "The URI http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25364 does not resolve to the term. Including the URL to BioPortal to ensure findability: https://bioportal.bioontology.org/ontologies/NCIT?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C25364" ;
-                                            rdfs:label "Identifier"@en ;
-                                            <http://www.w3.org/2004/02/skos/core#definition> "One or more characters used to identify, name, or characterize the nature, properties, or contents of a thing." ;
-                                            <http://www.w3.org/2004/02/skos/core#relatedMatch> """[NEEDS ALIGNMENT]
+                                            rdfs:comment "The URI http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25364 does not resolve to the term. Including the URL to BioPortal to ensure findability: https://bioportal.bioontology.org/ontologies/NCIT?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C25364" ,
+                                                         """[NEEDS ALIGNMENT]
 
-http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25364""" .
+http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25364""" ;
+                                            rdfs:label "Identifier"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "One or more characters used to identify, name, or characterize the nature, properties, or contents of a thing." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_000521> ;
@@ -1165,6 +1119,9 @@ http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C25364""" .
                                             rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000521> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-04T19:41:18Z"^^xsd:dateTime ;
+                                            rdfs:comment """[NEEDS ALIGNMENT]
+
+http://purl.dataone.org/odo/ECSO_00002490""" ;
                                             rdfs:label "Species code"@en ;
                                             <http://www.w3.org/2004/02/skos/core#definition> "A numeric or alphanumeric code, which represents a particular species and may be recorded in place of a formal scientific or vernacular name." .
 
@@ -1584,7 +1541,10 @@ https://en.wikipedia.org/wiki/Bismarck_brown_Y, accessed 2021-05-05"""
                                             rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000530> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-05T16:26:27Z"^^xsd:dateTime ;
-                                            rdfs:comment "The URI http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C461 does not resolve to the term. Including the URL to BioPortal to ensure findability: https://bioportal.bioontology.org/ontologies/NCIT?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C461" ;
+                                            rdfs:comment "The URI http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C461 does not resolve to the term. Including the URL to BioPortal to ensure findability: https://bioportal.bioontology.org/ontologies/NCIT?p=classes&conceptid=http%3A%2F%2Fncicb.nci.nih.gov%2Fxml%2Fowl%2FEVS%2FThesaurus.owl%23C461" ,
+                                                         """[NEEDS ALIGHMENT]
+
+http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C461""" ;
                                             rdfs:label "Dye"@en ;
                                             <http://www.w3.org/2004/02/skos/core#definition> "Agents used to enhance the color or contrast of target materials or samples. Dyes have some affinity for their substrates and are usually applied in a solution." .
 
@@ -1765,14 +1725,14 @@ https://en.wikipedia.org/wiki/Acoustic_tag, accessed 2021-05-05"""
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_000548> ;
    owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
-   owl:annotatedTarget "If performed correctly, this identification type may remain attached for the entire life of the fish, is used for individual tagging, and is most suitable for fish at least 15cm in length and which live in open environments. To attach a Carlin tag, double cannulas are first inserted through the fish at the height of the center of the pterygiophores (the bones that support the dorsal fin). Two stainless steel wires are then pulled through the cannulas and then the cannulas are pulled out of the fish. A small metal plate with an alphanumeric code is atached to the steel wires, which are then twisted tightly against the fish's body to hold the plate in place." ;
+   owl:annotatedTarget "A metal plate with a unique identifying code, which is attached to a fish below the dorsal fin via two stainless steel wires." ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 2021-05-05"
  ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_000548> ;
    owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
-   owl:annotatedTarget "A metal plate with a unique identifying code, which is attached to a fish below the dorsal fin via two stainless steel wires." ;
+   owl:annotatedTarget "If performed correctly, this identification type may remain attached for the entire life of the fish, is used for individual tagging, and is most suitable for fish at least 15cm in length and which live in open environments. To attach a Carlin tag, double cannulas are first inserted through the fish at the height of the center of the pterygiophores (the bones that support the dorsal fin). Two stainless steel wires are then pulled through the cannulas and then the cannulas are pulled out of the fish. A small metal plate with an alphanumeric code is atached to the steel wires, which are then twisted tightly against the fish's body to hold the plate in place." ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 2021-05-05"
  ] .
 
@@ -2321,6 +2281,9 @@ needs definition""" ;
                                             rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00220> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-06-04T21:13:21Z"^^xsd:dateTime ;
+                                            rdfs:comment """[NEEDS ALIGNMENT]
+
+http://purl.dataone.org/odo/ECSO_00001237""" ;
                                             rdfs:label "Precipitation volume"@en ;
                                             <http://www.w3.org/2004/02/skos/core#definition> "Volume of precipitation, which is any product of the condensation of atmospheric water vapor that falls under gravity." .
 
@@ -2334,10 +2297,12 @@ needs definition""" ;
 
 ###  http://purl.dataone.org/odo/salmon_000624
 <http://purl.dataone.org/odo/salmon_000624> rdf:type owl:Class ;
-                                            owl:equivalentClass <http://purl.obolibrary.org/obo/PCO_0000019> ;
                                             rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000503> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-06-04T22:00:50Z"^^xsd:dateTime ;
+                                            rdfs:comment """[NEEDS ALIGNMENT]
+
+http://purl.obolibrary.org/obo/PCO_0000019""" ;
                                             rdfs:label "Species diversity"@en ;
                                             <http://www.w3.org/2004/02/skos/core#definition> "The number of different species that are represented in a given community, weighted by their abundance. Community species diversity can be calculated in different ways, but consists of two components: species richness and species evenness." .
 
@@ -2351,10 +2316,12 @@ needs definition""" ;
 
 ###  http://purl.dataone.org/odo/salmon_000625
 <http://purl.dataone.org/odo/salmon_000625> rdf:type owl:Class ;
-                                            owl:equivalentClass <http://purl.obolibrary.org/obo/PCO_0000074> ;
                                             rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000624> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-06-04T22:00:56Z"^^xsd:dateTime ;
+                                            rdfs:comment """[NEEDS ALIGNMENT]
+
+http://purl.obolibrary.org/obo/PCO_0000074""" ;
                                             rdfs:label "Alpha diversity"@en ;
                                             <http://www.w3.org/2004/02/skos/core#altLabel> "α-diversity" ;
                                             <http://www.w3.org/2004/02/skos/core#definition> "A community species diversity that is the mean species diversity at a site or within a specific habitat." .
@@ -2369,10 +2336,12 @@ needs definition""" ;
 
 ###  http://purl.dataone.org/odo/salmon_000626
 <http://purl.dataone.org/odo/salmon_000626> rdf:type owl:Class ;
-                                            owl:equivalentClass <http://purl.obolibrary.org/obo/PCO_0000075> ;
                                             rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000624> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-06-04T22:00:59Z"^^xsd:dateTime ;
+                                            rdfs:comment """[NEEDS ALIGNMENT]
+
+http://purl.obolibrary.org/obo/PCO_0000075""" ;
                                             rdfs:label "Beta diversity"@en ;
                                             <http://www.w3.org/2004/02/skos/core#altLabel> "β-diversity" ;
                                             <http://www.w3.org/2004/02/skos/core#definition> "A community species diversity that is the ratio between regional and local species diversity." .
@@ -2387,10 +2356,12 @@ needs definition""" ;
 
 ###  http://purl.dataone.org/odo/salmon_000627
 <http://purl.dataone.org/odo/salmon_000627> rdf:type owl:Class ;
-                                            owl:equivalentClass <http://purl.obolibrary.org/obo/PCO_0000076> ;
                                             rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000624> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-06-04T22:01:04Z"^^xsd:dateTime ;
+                                            rdfs:comment """[NEEDS ALIGNMENT]
+
+http://purl.obolibrary.org/obo/PCO_0000076""" ;
                                             rdfs:label "Gamma diversity"@en ;
                                             <http://www.w3.org/2004/02/skos/core#altLabel> "γ-diversity" ;
                                             <http://www.w3.org/2004/02/skos/core#definition> "A community species diversity that is the total species diversity in a landscape. The area or landscape of interest may be of very different sizes in different situations, but it should encompass multiple sites or habitats as measured by alpha diversity." .
@@ -2405,10 +2376,12 @@ needs definition""" ;
 
 ###  http://purl.dataone.org/odo/salmon_000628
 <http://purl.dataone.org/odo/salmon_000628> rdf:type owl:Class ;
-                                            owl:equivalentClass <http://purl.obolibrary.org/obo/PCO_0000023> ;
                                             rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000503> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-06-04T22:05:10Z"^^xsd:dateTime ;
+                                            rdfs:comment """[NEEDS ALIGNMENT]
+
+http://purl.obolibrary.org/obo/PCO_0000023""" ;
                                             rdfs:label "Species evenness"@en ;
                                             <http://www.w3.org/2004/02/skos/core#definition> "A quality of an ecological community that reflects how close in abundance all species in a community are." .
 
@@ -2422,10 +2395,12 @@ needs definition""" ;
 
 ###  http://purl.dataone.org/odo/salmon_000629
 <http://purl.dataone.org/odo/salmon_000629> rdf:type owl:Class ;
-                                            owl:equivalentClass <http://purl.obolibrary.org/obo/PCO_0000010> ;
                                             rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000503> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-06-04T22:06:09Z"^^xsd:dateTime ;
+                                            rdfs:comment """[NEEDS ALIGNMENT]
+
+http://purl.obolibrary.org/obo/PCO_0000010""" ;
                                             rdfs:label "Species richness"@en ;
                                             <http://www.w3.org/2004/02/skos/core#definition> "The number of different species represented in an ecological community." .
 
@@ -2699,6 +2674,15 @@ Total length can be measured by two conventions -- by leaving the caudal fin spr
    owl:annotatedTarget "A stock that is sustained by natural spawning and rearing in the natural habitat, regardless of parentage or origin." ;
    <http://purl.org/dc/elements/1.1/source> "https://www.fishbase.se/Glossary/Glossary.php?q=wild+stock&language=english&sc=is, accessed 2021-06-15"
  ] .
+
+
+###  http://purl.dataone.org/odo/salmon_000641
+<http://purl.dataone.org/odo/salmon_000641> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00408> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-15T19:26:05Z"^^xsd:dateTime ;
+                                            rdfs:label "Fish age expressed as total age"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "An integer, which represents the sum of freshwater and marine annuli plus one to account for time spent in the gravel before hatching." .
 
 
 ###  http://purl.dataone.org/odo/salmon_00124
@@ -3741,7 +3725,7 @@ https://www.wikidata.org/wiki/Q159675, accessed 2021-04-07"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-09T18:49:30Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "e.g. An age written in European notation as '1.3' is interpreted as 1 year over-wintered in freshwater and 3 years in the ocean. The total age is 4 years (1 + 3 years). The Gilbert-Rich equivalent age is written as '5sub2'." ;
-                                           rdfs:label "Fish age in European notation"@en ;
+                                           rdfs:label "Fish age expressed in European notation"@en ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "An age designation notation that includes two number separated by a period. The first number represents the number of years or winters a salmon has spent in freshwater after emergence from the gravel, and the second number represents the number of years spent in the ocean. Added together, these numbers provide the total age or age class of a salmon." .
 
 [ rdf:type owl:Axiom ;
@@ -3765,7 +3749,7 @@ https://www.wikidata.org/wiki/Q159675, accessed 2021-04-07"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-09T18:52:00Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "e.g. An age written in Gilbert-Rich notation as '5sub2' (spoken as \"five sub two\") is interpreted as a fish that is in its fifth year of life (i.e. a fish that will be 5 on its next \"birthday\" or the number of winters from its deposition in the gravel as an egg to the time of sampling) and which migrated to the ocean during its second year of life. The European notation equivalent age is written as '1.3'." ;
-                                           rdfs:label "Fish age in Gilbert-Rich notation"@en ;
+                                           rdfs:label "Fish age expressed in Gilbert-Rich notation"@en ;
                                            <http://www.w3.org/2004/02/skos/core#altLabel> """G-R notation
 G-R""" ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "An age designation notation that includes two numbers, of which the second is a subscript. The first numeral indicates the total age of the fish and the subscript indicates the time spent in freshwater prior to saltwater immigration." .
@@ -4732,6 +4716,9 @@ needs definition""" ;
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00236> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-22T04:05:19Z"^^xsd:dateTime ;
+                                           rdfs:comment """[NEEDS ALIGNMENT]
+
+http://purl.dataone.org/odo/ECSO_00001525""" ;
                                            rdfs:label "Freshwater temperature"@en ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "The objective measure of hot or cold in freshwater (i.e. non-saline water)." .
 
@@ -4749,6 +4736,9 @@ https://www.wikidata.org/wiki/Q11466, accessed 2021-04-22"""
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00236> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-22T04:05:29Z"^^xsd:dateTime ;
+                                           rdfs:comment """[NEEDS ALIGNMENT]
+
+http://purl.dataone.org/odo/ECSO_00001226""" ;
                                            rdfs:label "Seawater temperature"@en ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "An objective measure of hot or cold of water in a marine (i.e. ocean or sea) environment." .
 
@@ -4860,6 +4850,9 @@ Need help coming up with an appropriate definition for this -- this label sugges
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00214> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-22T17:28:15Z"^^xsd:dateTime ;
+                                           rdfs:comment """[NEEDS ALIGNMENT]
+
+http://purl.dataone.org/odo/ECSO_00001749""" ;
                                            rdfs:label "Alkalinity measurement type"@en ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "A measure of the quantitative capacity of an aqueous solution to neutralize an acid." .
 
@@ -4877,7 +4870,10 @@ https://www.wikidata.org/wiki/Q432016, accessed 2021-04-22"""
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00420> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-22T17:45:49Z"^^xsd:dateTime ;
-                                           rdfs:comment "An Essential Salmon Variable (ESV) from the working list being developed by Graeme Diack et al. at the Atlantic Salmon Trust." ;
+                                           rdfs:comment "An Essential Salmon Variable (ESV) from the working list being developed by Graeme Diack et al. at the Atlantic Salmon Trust." ,
+                                                        """[NEEDS ALIGNMENT]
+
+http://purl.dataone.org/odo/ECSO_00002895""" ;
                                            rdfs:label "Freshwater alkalinity"@en ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "Alkalinity which is measured in freshwater." .
 
@@ -4916,6 +4912,9 @@ https://www.wikidata.org/wiki/Q432016, accessed 2021-04-22"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-22T18:13:22Z"^^xsd:dateTime ;
                                            <http://purl.org/dc/elements/1.1/description> "Dissolved oxygen saturation can be measured with a dissolved oxygen probe such as an oxygen sensor or an optode in liquid media, usually water. The standard unit of oxygen saturation is percent (%)." ;
+                                           rdfs:comment """[NEEDS ALIGNMENT]
+
+http://purl.dataone.org/odo/ECSO_00002386""" ;
                                            rdfs:label "Dissolved oxygen saturation"@en ;
                                            <http://www.w3.org/2004/02/skos/core#altLabel> "DOsat" ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "A relative measure of the concentration of oxygen that is dissolved or carried in a given medium as a proportion of the maximal concentration that can be dissolved in that medium." .
@@ -4936,19 +4935,15 @@ https://www.wikidata.org/wiki/Q6294669, accessed 22April2021"""
 https://www.wikidata.org/wiki/Q6294669, accessed 22April2021"""
  ] .
 
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/ECSO_00002386> ;
-   owl:annotatedProperty owl:equivalentClass ;
-   owl:annotatedTarget <http://purl.dataone.org/odo/salmon_00425> ;
-   rdfs:comment "ECSO also contains the term 'dissolved oxygen saturation percentage' (http://purl.dataone.org/odo/ECSO_00002383). Neither terms are defined, so it is unclear what the intended difference is. From my understanding, 'dissolved oxygen saturation' is always reported as a percentage."
- ] .
-
 
 ###  http://purl.dataone.org/odo/salmon_00426
 <http://purl.dataone.org/odo/salmon_00426> rdf:type owl:Class ;
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00424> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-22T18:13:32Z"^^xsd:dateTime ;
+                                           rdfs:comment """[NEEDS ALIGNMENT]
+
+http://purl.dataone.org/odo/ECSO_00001669""" ;
                                            rdfs:label "Dissolved oxygen concentration"@en ;
                                            <http://www.w3.org/2004/02/skos/core#altLabel> "DO concentration" ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "A concentration of the amount of oxygen present in water." .
@@ -5152,42 +5147,6 @@ Wikidata: Q833503 (https://www.wikidata.org/wiki/Q833503)""" ;
  ] .
 
 
-###  http://purl.obolibrary.org/obo/PCO_0000003
-<http://purl.obolibrary.org/obo/PCO_0000003> rdf:type owl:Class .
-
-
-###  http://purl.obolibrary.org/obo/PCO_0000004
-<http://purl.obolibrary.org/obo/PCO_0000004> rdf:type owl:Class .
-
-
-###  http://purl.obolibrary.org/obo/PCO_0000010
-<http://purl.obolibrary.org/obo/PCO_0000010> rdf:type owl:Class .
-
-
-###  http://purl.obolibrary.org/obo/PCO_0000019
-<http://purl.obolibrary.org/obo/PCO_0000019> rdf:type owl:Class .
-
-
-###  http://purl.obolibrary.org/obo/PCO_0000023
-<http://purl.obolibrary.org/obo/PCO_0000023> rdf:type owl:Class .
-
-
-###  http://purl.obolibrary.org/obo/PCO_0000074
-<http://purl.obolibrary.org/obo/PCO_0000074> rdf:type owl:Class .
-
-
-###  http://purl.obolibrary.org/obo/PCO_0000075
-<http://purl.obolibrary.org/obo/PCO_0000075> rdf:type owl:Class .
-
-
-###  http://purl.obolibrary.org/obo/PCO_0000076
-<http://purl.obolibrary.org/obo/PCO_0000076> rdf:type owl:Class .
-
-
-###  http://semanticscience.org/resource/SIO_001385
-<http://semanticscience.org/resource/SIO_001385> rdf:type owl:Class .
-
-
 ###  http://vocab.nerc.ac.uk/collection/M13/current/011/
 <http://vocab.nerc.ac.uk/collection/M13/current/011/> rdf:type owl:Class .
 
@@ -5212,7 +5171,8 @@ Wikidata: Q833503 (https://www.wikidata.org/wiki/Q833503)""" ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_000475> ;
    owl:annotatedProperty rdfs:comment ;
    owl:annotatedTarget "Johann Julius Walbaum (30 June 1724, Wolfenbüttel, Brunswick-Wolfenbüttel – 21 August 1799, Lübeck) was a German physician, naturalist and fauna taxonomist." ;
-   <http://purl.org/dc/elements/1.1/source> "https://en.wikipedia.org/wiki/Johann_Julius_Walbaum"
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Johann_Julius_Walbaum, accessed 2021-04-26
+https://www.wikidata.org/wiki/Q68096, accessed 2021-04-26"""
  ] .
 
 
@@ -5346,7 +5306,19 @@ need to figure out how to distinguish between Steelhead & Rainbow trout""" ;
                                                      <http://purl.dataone.org/odo/salmon_00192> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-26T22:07:09Z"^^xsd:dateTime ;
-                                            rdfs:label "Pacific Ocean"@en .
+                                            rdfs:comment """[NEEDS ALIGNMENT]
+
+http://purl.obolibrary.org/obo/GAZ_00000360 or GNIS""" ;
+                                            rdfs:label "Pacific Ocean"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "An ocean that extends from the Arctic in the north to the Antarctic in the south, bounded by Asia and Australia on the west and the Americas on the east." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000583> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "An ocean that extends from the Arctic in the north to the Antarctic in the south, bounded by Asia and Australia on the west and the Americas on the east." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Pacific_Ocean, accessed 2021-06-15
+https://www.wikidata.org/wiki/Q98, accessed 2021-06-15"""
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_000584
@@ -5354,7 +5326,19 @@ need to figure out how to distinguish between Steelhead & Rainbow trout""" ;
                                                      <http://purl.dataone.org/odo/salmon_00192> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-26T22:07:26Z"^^xsd:dateTime ;
-                                            rdfs:label "Atlantic Ocean"@en .
+                                            rdfs:comment """[NEEDS ALIGNMENT]
+
+http://purl.obolibrary.org/obo/GAZ_00000344 or GNIS""" ;
+                                            rdfs:label "Atlantic Ocean"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "An ocean bounded on the west by North and South America. In the north and northeast, it is separated from the Arctic Ocean by the Canadian Arctic Archipelago, Greenland, Iceland, Svalbard, and mainland Europe. It connects to the Arctic Ocean through the Denmark Strait, Greenland Sea, Norwegian Sea, and Barents Sea. To the east, the boundaries of the ocean proper are Europe, the Strait of Gibraltar (where it connects with the Mediterranean Sea, one of its marginal seas), and Africa. In the southeast, the Atlantic merges into the Indian Ocean, the border being defined by the 20 East meridian, running south from Cape Agulhas to Antarctica." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000584> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "An ocean bounded on the west by North and South America. In the north and northeast, it is separated from the Arctic Ocean by the Canadian Arctic Archipelago, Greenland, Iceland, Svalbard, and mainland Europe. It connects to the Arctic Ocean through the Denmark Strait, Greenland Sea, Norwegian Sea, and Barents Sea. To the east, the boundaries of the ocean proper are Europe, the Strait of Gibraltar (where it connects with the Mediterranean Sea, one of its marginal seas), and Africa. In the southeast, the Atlantic merges into the Indian Ocean, the border being defined by the 20 East meridian, running south from Cape Agulhas to Antarctica." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Atlantic_Ocean, accessed 2021-06-15
+https://www.wikidata.org/wiki/Q97, accessed 2021-06-15"""
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_000588
@@ -5362,7 +5346,16 @@ need to figure out how to distinguish between Steelhead & Rainbow trout""" ;
                                                      <http://purl.dataone.org/odo/salmon_000495> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-26T23:58:33Z"^^xsd:dateTime ;
+                                            <http://purl.org/dc/elements/1.1/description> "The 10th edition of Systema Naturae is a book written by Swedish naturalist Carl Linnaeus and published in two volumes in 1758 and 1759, which marks the starting point of zoological nomenclature. In it, Linnaeus introduced binomial nomenclature for animals, something he had already done for plants in his 1753 publication of Species Plantarum." ;
                                             rdfs:label "Linnaeus, 1758"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000588> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "The 10th edition of Systema Naturae is a book written by Swedish naturalist Carl Linnaeus and published in two volumes in 1758 and 1759, which marks the starting point of zoological nomenclature. In it, Linnaeus introduced binomial nomenclature for animals, something he had already done for plants in his 1753 publication of Species Plantarum." ;
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/10th_edition_of_Systema_Naturae, accessed 2021-06-15
+https://www.wikidata.org/wiki/Q4547210, accessed 2021-06-15"""
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_000595
@@ -5370,7 +5363,16 @@ need to figure out how to distinguish between Steelhead & Rainbow trout""" ;
                                                      <http://purl.dataone.org/odo/salmon_000495> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-27T00:09:04Z"^^xsd:dateTime ;
+                                            rdfs:comment "Sir John Richardson (5 ovember 1787 - 5 June 1865) was a Scottish naval surgeon, naturalist and arctic explorer." ;
                                             rdfs:label "Richardson, 1836"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000595> ;
+   owl:annotatedProperty rdfs:comment ;
+   owl:annotatedTarget "Sir John Richardson (5 ovember 1787 - 5 June 1865) was a Scottish naval surgeon, naturalist and arctic explorer." ;
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/John_Richardson_(naturalist), accessed 2021-06-15
+https://www.wikidata.org/wiki/Q545944, accessed 2021-06-15"""
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_000597
