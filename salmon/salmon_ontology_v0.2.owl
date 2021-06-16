@@ -77,12 +77,6 @@ updated: 2021-06-14""" ;
 <http://rs.tdwg.org/dwc/terms/originalNameUsage> rdf:type owl:AnnotationProperty .
 
 
-###  http://rs.tdwg.org/dwc/terms/taxonID
-<http://rs.tdwg.org/dwc/terms/taxonID> rdf:type owl:AnnotationProperty ;
-                                       rdfs:comment "Unsure if I understand this correctly, but the EOL API looks for the EOL identifier to be containied in dwct:taxonID:  https://eol.org/docs/what-is-eol/classic-apis" ;
-                                       <http://www.w3.org/2004/02/skos/core#definition> "An identifier for the set of taxon information (data associated with the Taxon class). May be a global unique identifier or an identifier specific to the data set." .
-
-
 ###  http://usefulinc.com/ns/doap#GitRepository
 <http://usefulinc.com/ns/doap#GitRepository> rdf:type owl:AnnotationProperty .
 
@@ -1040,10 +1034,15 @@ needs defintion""" ;
                                             rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00401> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-04-29T19:11:32Z"^^xsd:dateTime ;
-                                            rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
+                                            rdfs:label "Juvenile"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "Young fish, mostly similar in form to adult but not yet sexually mature (Hubbs, 1943). In some cases refers to a stage unlike the adult in appearance." .
 
-needs definition""" ;
-                                            rdfs:label "Juvenile"@en .
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000507> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Young fish, mostly similar in form to adult but not yet sexually mature (Hubbs, 1943). In some cases refers to a stage unlike the adult in appearance." ;
+   <http://purl.org/dc/elements/1.1/source> "http://www.fishbase.us/glossary/Glossary.php?q=juvenile&language=english&sc=is, accessed 2021-06-15"
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_000518
@@ -1725,14 +1724,14 @@ https://en.wikipedia.org/wiki/Acoustic_tag, accessed 2021-05-05"""
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_000548> ;
    owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
-   owl:annotatedTarget "A metal plate with a unique identifying code, which is attached to a fish below the dorsal fin via two stainless steel wires." ;
+   owl:annotatedTarget "If performed correctly, this identification type may remain attached for the entire life of the fish, is used for individual tagging, and is most suitable for fish at least 15cm in length and which live in open environments. To attach a Carlin tag, double cannulas are first inserted through the fish at the height of the center of the pterygiophores (the bones that support the dorsal fin). Two stainless steel wires are then pulled through the cannulas and then the cannulas are pulled out of the fish. A small metal plate with an alphanumeric code is atached to the steel wires, which are then twisted tightly against the fish's body to hold the plate in place." ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 2021-05-05"
  ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_000548> ;
    owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
-   owl:annotatedTarget "If performed correctly, this identification type may remain attached for the entire life of the fish, is used for individual tagging, and is most suitable for fish at least 15cm in length and which live in open environments. To attach a Carlin tag, double cannulas are first inserted through the fish at the height of the center of the pterygiophores (the bones that support the dorsal fin). Two stainless steel wires are then pulled through the cannulas and then the cannulas are pulled out of the fish. A small metal plate with an alphanumeric code is atached to the steel wires, which are then twisted tightly against the fish's body to hold the plate in place." ;
+   owl:annotatedTarget "A metal plate with a unique identifying code, which is attached to a fish below the dorsal fin via two stainless steel wires." ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 2021-05-05"
  ] .
 
@@ -2055,12 +2054,25 @@ https://www.wikidata.org/wiki/Q1068155, accessed 10May2021"""
 ###  http://purl.dataone.org/odo/salmon_000569
 <http://purl.dataone.org/odo/salmon_000569> rdf:type owl:Class ;
                                             rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00126> ;
-                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-11T17:26:36Z"^^xsd:dateTime ;
                                             rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
 
 ADF&G says that dolly varden are actually char (http://www.adfg.alaska.gov/index.cfm%3Fadfg=dollyvarden.main), though Wikipedia suggests that they are trout (https://en.wikipedia.org/wiki/Dolly_Varden_trout)""" ;
-                                            rdfs:label "Dolly varden trout"@en .
+                                            rdfs:label "Dolly Varden trout"@en ;
+                                            owl:equivalentClass <http://purl.dataone.org/odo/salmon_000593> ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> """Salvelinus malma
+S. malma
+\"Dolly Varden\" @en""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000569> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
+   owl:annotatedTarget """Salvelinus malma
+S. malma
+\"Dolly Varden\" @en""" ;
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Dolly_Varden_trout, accessed 2021-06-15
+https://www.wikidata.org/wiki/Q327067, accessed 2021-06-15"""
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_000570
@@ -2068,10 +2080,23 @@ ADF&G says that dolly varden are actually char (http://www.adfg.alaska.gov/index
                                             rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00126> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-11T17:26:46Z"^^xsd:dateTime ;
-                                            rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
+                                            rdfs:label "Steelhead trout"@en ;
+                                            owl:equivalentClass <http://purl.dataone.org/odo/salmon_000644> ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> """Oncorhynchus mykiss irideus
+Oncorhynchus m. irideus
+O. m. irideus
+\"steelhead\" @en""" .
 
-how to model Rainbow trout?""" ;
-                                            rdfs:label "Steelhead trout"@en .
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000570> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
+   owl:annotatedTarget """Oncorhynchus mykiss irideus
+Oncorhynchus m. irideus
+O. m. irideus
+\"steelhead\" @en""" ;
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Steelhead_trout, accessed 2021-06-15
+https://www.wikidata.org/wiki/Q64437771, accessed 2021-06-15"""
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_000571
@@ -2105,7 +2130,19 @@ how to model Rainbow trout?""" ;
                                             rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00126> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-26T21:45:56Z"^^xsd:dateTime ;
-                                            rdfs:label "Cutthroat trout"@en .
+                                            rdfs:label "Cutthroat trout"@en ;
+                                            owl:equivalentClass <http://purl.dataone.org/odo/salmon_000594> ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> """Oncorhynchus clarkii
+O. clarkii""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000582> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
+   owl:annotatedTarget """Oncorhynchus clarkii
+O. clarkii""" ;
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Cutthroat_trout, accessed 2021-06-15
+https://www.wikidata.org/wiki/Q2717060, accessed 2021-06-15"""
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_000586
@@ -2115,6 +2152,7 @@ how to model Rainbow trout?""" ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-26T23:51:30Z"^^xsd:dateTime ;
                                             <http://purl.org/dc/elements/1.1/description> "Atlantic salmon are the only anadromous salmonid native to the Atlantic coast of North America." ;
                                             rdfs:label "Atlantic salmon"@en ;
+                                            owl:equivalentClass <http://purl.dataone.org/odo/salmon_000590> ;
                                             <http://www.w3.org/2004/02/skos/core#altLabel> """Salmo salar
 S. salar""" .
 
@@ -2140,7 +2178,16 @@ https://www.wikidata.org/wiki/Q188879, accessed 2021-06-01"""
                                             rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00458> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-26T23:57:17Z"^^xsd:dateTime ;
+                                            <http://purl.org/dc/elements/1.1/description> "Oncorhynchus is a genus of fish in the family Salmonidae; it contains the Pacific salmon and Pacific trout. The name of the genus is derived from the Greek ὄγκος (ónkos, “lump, bend”) + ῥύγχος (rhúnkhos, “snout”), in reference to the hooked jaws of males in the mating season (the \"kype\")." ;
                                             rdfs:label "Oncorhynchus spp."@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000587> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "Oncorhynchus is a genus of fish in the family Salmonidae; it contains the Pacific salmon and Pacific trout. The name of the genus is derived from the Greek ὄγκος (ónkos, “lump, bend”) + ῥύγχος (rhúnkhos, “snout”), in reference to the hooked jaws of males in the mating season (the \"kype\")." ;
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Oncorhynchus, accessed 2021-06-15
+https://www.wikidata.org/wiki/Q133325, accessed 2021-06-15"""
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_000589
@@ -2148,7 +2195,16 @@ https://www.wikidata.org/wiki/Q188879, accessed 2021-06-01"""
                                             rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00458> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-27T00:02:38Z"^^xsd:dateTime ;
+                                            <http://purl.org/dc/elements/1.1/description> "Salmo is a genus of fish in the salmon family Salmonidae that includes the European species of salmon and trout, among them the familiar Atlantic salmon Salmo salar and the brown trout Salmo trutta." ;
                                             rdfs:label "Salmo spp."@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000589> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "Salmo is a genus of fish in the salmon family Salmonidae that includes the European species of salmon and trout, among them the familiar Atlantic salmon Salmo salar and the brown trout Salmo trutta." ;
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Salmo, accessed 2021-06-15
+https://www.wikidata.org/wiki/Q310436, accessed 2021-06-15"""
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_000590
@@ -2156,23 +2212,27 @@ https://www.wikidata.org/wiki/Q188879, accessed 2021-06-01"""
                                             rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000589> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-27T00:02:46Z"^^xsd:dateTime ;
-                                            <http://purl.org/dc/elements/1.1/identifier> 161996 ;
-                                            rdfs:label "Salmo salar"@en ;
-                                            <http://www.w3.org/2004/02/skos/core#altLabel> """List of database cross references and identifiers:
+                                            <http://purl.org/dc/elements/1.1/description> """Salmo salar is the only species of Atlantic salmon.
 
-ITIS: 161996 (https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161996#null)
+Physical Description: Atlantic salmon are the largest species in their genus, Salmo. After two years at sea, the fish average 71 to 76 cm (28 to 30 in) in length and 3.6 to 5.4 kg (7.9 to 11.9 lb) in weight. The colouration of young Atlantic salmon does not resemble the adult stage. While they live in fresh water, they have blue and red spots. At maturity, they take on a silver-blue sheen. The easiest way of identifying them as an adult is by the black spots predominantly above the lateral line, though the caudal fin is usually unspotted. When they reproduce, males take on a slight green or red colouration. The salmon has a fusiform body, and well-developed teeth. All fins, except the adipose fin, are bordered with black.""" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """ITIS: 161996 (https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161996#null)
 GBIF: 7595433 (https://www.gbif.org/species/7595433)
 EOL: 46563143 (https://eol.org/pages/46563143)
 COL: 6XCXT (https://www.catalogueoflife.org/data/taxon/6XCXT)
-Wikidata: Q188879 (https://www.wikidata.org/wiki/Q188879)""" ,
-                                                                                           "S. salar" .
+Wikidata: Q188879 (https://www.wikidata.org/wiki/Q188879)""" ;
+                                            rdfs:label "Salmo salar"@en ;
+                                            owl:equivalentClass <http://purl.dataone.org/odo/salmon_000586> ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "S. salar" ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "The class which contains all instances of Salmo salar." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_000590> ;
-   owl:annotatedProperty <http://purl.org/dc/elements/1.1/identifier> ;
-   owl:annotatedTarget 161996 ;
-   <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Information System (ITIS) Taxonomic Serial No. (TSN): 161996" ;
-   <http://purl.org/dc/elements/1.1/source> "https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161996#null"
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """Salmo salar is the only species of Atlantic salmon.
+
+Physical Description: Atlantic salmon are the largest species in their genus, Salmo. After two years at sea, the fish average 71 to 76 cm (28 to 30 in) in length and 3.6 to 5.4 kg (7.9 to 11.9 lb) in weight. The colouration of young Atlantic salmon does not resemble the adult stage. While they live in fresh water, they have blue and red spots. At maturity, they take on a silver-blue sheen. The easiest way of identifying them as an adult is by the black spots predominantly above the lateral line, though the caudal fin is usually unspotted. When they reproduce, males take on a slight green or red colouration. The salmon has a fusiform body, and well-developed teeth. All fins, except the adipose fin, are bordered with black.""" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Atlantic_salmon, accessed 2021-06-15
+https://www.wikidata.org/wiki/Q188879, accessed 2021-06-15"""
  ] .
 
 
@@ -2181,15 +2241,52 @@ Wikidata: Q188879 (https://www.wikidata.org/wiki/Q188879)""" ,
                                             rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000587> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-27T00:06:44Z"^^xsd:dateTime ;
-                                            rdfs:comment """List of database cross references and identifiers:
+                                            <http://purl.org/dc/elements/1.1/description> """Oncorhynchus mykiss (i.e. rainbow trout) is a species of Pacific trout.
 
-ITIS: 161989 (https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161989#null)
+Physical Description: Resident freshwater rainbow trout adults average between 1 and 5 lb (0.5 and 2.3 kg) in riverine environments, while lake-dwelling and anadromous forms may reach 20 lb (9 kg). Coloration varies widely between regions and subspecies. Adult freshwater forms are generally blue-green or olive green with heavy black spotting over the length of the body. Adult fish have a broad reddish stripe along the lateral line, from gills to the tail, which is most pronounced in breeding males. The caudal fin is squarish and only mildly forked. Lake-dwelling and anadromous forms are usually more silvery in color with the reddish stripe almost completely gone. Juvenile rainbow trout display parr marks (dark vertical bars) typical of most salmonid juveniles. In some redband and golden trout forms parr marks are typically retained into adulthood. Some coastal rainbow trout (O. m. irideus) and Columbia River redband trout (O. m. gairdneri) populations and cutbow hybrids may also display reddish or pink throat markings similar to cutthroat trout. In many regions, hatchery-bred trout can be distinguished from native trout via fin clips. Fin clipping the adipose fin is a management tool used to identify hatchery-reared fish.
+
+Range: The native range of Oncorhynchus mykiss is in the coastal waters and tributary streams of the Pacific basin, from the Kamchatka Peninsula in Russia, east along the Aleutian Islands, throughout southwest Alaska, the Pacific coast of British Columbia and southeast Alaska, and south along the west coast of the U.S. to northern Mexico. It is claimed that the Mexican forms of Oncorhynchus mykiss represent the southernmost native range of any trout or salmon (Salmonidae), though the Formosan landlocked salmon (O. masou formosanus) in Asia inhabits a similar latitude. The range of coastal rainbow trout (O. m. irideus) extends north from the Pacific basin into tributaries of the Bering Sea in northwest Alaska, while forms of the Columbia River redband trout (O. m. gairdneri) extend east into the upper Mackenzie River and Peace River watersheds in British Columbia and Alberta, Canada, which eventually drain into the Beaufort Sea, part of the Arctic Ocean. Since 1875, the rainbow trout has been widely introduced into suitable lacustrine and riverine environments throughout the United States and around the world. Many of these introductions have established wild, self-sustaining populations.""" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """ITIS: 161989  (https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161989#null)
+GBIF: 5204019 (https://www.gbif.org/species/5204019)
+EOL: 46563138 (https://eol.org/pages/46563138)
+COL: 49JFF (https://www.catalogueoflife.org/data/taxon/49JFF)
+Wikidata: Q187986 (https://www.wikidata.org/wiki/Q187986)""" ,
+                                                                                                     """ITIS: 161989 (https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161989#null)
 GBIF: 5204019 (https://www.gbif.org/species/5204019)
 EOL: 46563138 (https://eol.org/pages/46563138, NOTE: refers to 'rainbow trout')
 COL: 49JFF (https://www.catalogueoflife.org/data/taxon/49JFF)
 Wikidata: Q64437771 (https://www.wikidata.org/wiki/Q64437771)""" ;
                                             rdfs:label "Oncorhynchus mykiss"@en ;
-                                            <http://www.w3.org/2004/02/skos/core#altLabel> "O. mykiss" .
+                                            rdfs:seeAlso <http://purl.dataone.org/odo/salmon_000570> ,
+                                                         <http://purl.dataone.org/odo/salmon_000642> ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "O. mykiss" ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "The class which contains all instances of Oncorhynchus mykiss." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000591> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """Oncorhynchus mykiss (i.e. rainbow trout) is a species of Pacific trout.
+
+Physical Description: Resident freshwater rainbow trout adults average between 1 and 5 lb (0.5 and 2.3 kg) in riverine environments, while lake-dwelling and anadromous forms may reach 20 lb (9 kg). Coloration varies widely between regions and subspecies. Adult freshwater forms are generally blue-green or olive green with heavy black spotting over the length of the body. Adult fish have a broad reddish stripe along the lateral line, from gills to the tail, which is most pronounced in breeding males. The caudal fin is squarish and only mildly forked. Lake-dwelling and anadromous forms are usually more silvery in color with the reddish stripe almost completely gone. Juvenile rainbow trout display parr marks (dark vertical bars) typical of most salmonid juveniles. In some redband and golden trout forms parr marks are typically retained into adulthood. Some coastal rainbow trout (O. m. irideus) and Columbia River redband trout (O. m. gairdneri) populations and cutbow hybrids may also display reddish or pink throat markings similar to cutthroat trout. In many regions, hatchery-bred trout can be distinguished from native trout via fin clips. Fin clipping the adipose fin is a management tool used to identify hatchery-reared fish.
+
+Range: The native range of Oncorhynchus mykiss is in the coastal waters and tributary streams of the Pacific basin, from the Kamchatka Peninsula in Russia, east along the Aleutian Islands, throughout southwest Alaska, the Pacific coast of British Columbia and southeast Alaska, and south along the west coast of the U.S. to northern Mexico. It is claimed that the Mexican forms of Oncorhynchus mykiss represent the southernmost native range of any trout or salmon (Salmonidae), though the Formosan landlocked salmon (O. masou formosanus) in Asia inhabits a similar latitude. The range of coastal rainbow trout (O. m. irideus) extends north from the Pacific basin into tributaries of the Bering Sea in northwest Alaska, while forms of the Columbia River redband trout (O. m. gairdneri) extend east into the upper Mackenzie River and Peace River watersheds in British Columbia and Alberta, Canada, which eventually drain into the Beaufort Sea, part of the Arctic Ocean. Since 1875, the rainbow trout has been widely introduced into suitable lacustrine and riverine environments throughout the United States and around the world. Many of these introductions have established wild, self-sustaining populations.""" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Rainbow_trout, accessed 2021-06-15
+https://www.wikidata.org/wiki/Q187986, accessed 2021-06-15"""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000591> ;
+   owl:annotatedProperty rdfs:seeAlso ;
+   owl:annotatedTarget <http://purl.dataone.org/odo/salmon_000570> ;
+   rdfs:comment "Chose not to assert owl:equivalentClass here, because all Steelhead trout are Oncorhynchus mykiss, but not all Oncorhynchus mykiss are considered Steelhead trout."
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000591> ;
+   owl:annotatedProperty rdfs:seeAlso ;
+   owl:annotatedTarget <http://purl.dataone.org/odo/salmon_000642> ;
+   rdfs:comment "Chose not to assert owl:equivalentClass here, because all Rainbow trout are Oncorhynchus mykiss, but not all Oncorhynchus mykiss are considered Rainbow trout."
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_000592
@@ -2197,7 +2294,16 @@ Wikidata: Q64437771 (https://www.wikidata.org/wiki/Q64437771)""" ;
                                             rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00458> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-27T00:07:24Z"^^xsd:dateTime ;
+                                            <http://purl.org/dc/elements/1.1/description> "Salvelinus is a genus of salmonid fish often called char or charr; some species are called \"trout\". Salvelinus is a member of the subfamily Salmoninae within the family Salmonidae." ;
                                             rdfs:label "Salvelinus spp."@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000592> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "Salvelinus is a genus of salmonid fish often called char or charr; some species are called \"trout\". Salvelinus is a member of the subfamily Salmoninae within the family Salmonidae." ;
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Salvelinus, accessed 2021-06-15
+https://www.wikidata.org/wiki/Q548682, accessed 2021-06-15"""
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_000593
@@ -2205,15 +2311,32 @@ Wikidata: Q64437771 (https://www.wikidata.org/wiki/Q64437771)""" ;
                                             rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000592> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-27T00:07:31Z"^^xsd:dateTime ;
-                                            rdfs:comment """List of database cross references and identifiers:
+                                            <http://purl.org/dc/elements/1.1/description> """Salvelinus malma (i.e. the dolly varden trout) is a species of Pacific trout, belonging to the genus Salvelinus of true chars.
 
-ITIS: 162000 (https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=162000#null)
+Physical Description: The back and sides are olive green or muddy gray, shading to white on the belly. The body has scattered pale yellow or pinkish-yellow spots. There are no black spots or wavy lines on the body or fins. Small red spots are present on the lower sides. These are frequently indistinct. The fins are plain and unmarked except for a few light spots on the base of the caudal fin rays. S. malma is extremely similar in appearance to the bull trout (S. confluentus) and Arctic char (S. alpinus), so much so that they are sometimes referred to as \"native char\" without a distinction.
+
+Range: The Dolly Varden trout is found in coastal waters of the North Pacific from Puget Sound north along the British Columbia Coast to the Alaska Peninsula and into the eastern Aleutian Islands, along the Bering Sea and the Arctic Sea to the Mackenzie River. The range in Asia extends south through the Kamchatka Peninsula into northern Japan.""" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """ITIS: 162000 (https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=162000#null)
 GBIF: 4284020 (https://www.gbif.org/species/4284020)
 EOL:  225241 (https://eol.org/pages/225241)
 COL: 79FQR (https://www.catalogueoflife.org/data/taxon/79FQR)
 Wikidata: Q327067 (https://www.wikidata.org/wiki/Q327067)""" ;
                                             rdfs:label "Salvelinus malma"@en ;
-                                            <http://www.w3.org/2004/02/skos/core#altLabel> "S. malma" .
+                                            owl:equivalentClass <http://purl.dataone.org/odo/salmon_000569> ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "S. malma" ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "The class which contains all instances of Salvelinus malma." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000593> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """Salvelinus malma (i.e. the dolly varden trout) is a species of Pacific trout, belonging to the genus Salvelinus of true chars.
+
+Physical Description: The back and sides are olive green or muddy gray, shading to white on the belly. The body has scattered pale yellow or pinkish-yellow spots. There are no black spots or wavy lines on the body or fins. Small red spots are present on the lower sides. These are frequently indistinct. The fins are plain and unmarked except for a few light spots on the base of the caudal fin rays. S. malma is extremely similar in appearance to the bull trout (S. confluentus) and Arctic char (S. alpinus), so much so that they are sometimes referred to as \"native char\" without a distinction.
+
+Range: The Dolly Varden trout is found in coastal waters of the North Pacific from Puget Sound north along the British Columbia Coast to the Alaska Peninsula and into the eastern Aleutian Islands, along the Bering Sea and the Arctic Sea to the Mackenzie River. The range in Asia extends south through the Kamchatka Peninsula into northern Japan.""" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Dolly_Varden_trout, accessed 2021-06-15
+https://www.wikidata.org/wiki/Q327067, accessed 2021-06-15"""
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_000594
@@ -2221,15 +2344,44 @@ Wikidata: Q327067 (https://www.wikidata.org/wiki/Q327067)""" ;
                                             rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000587> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-27T00:08:33Z"^^xsd:dateTime ;
-                                            rdfs:comment """List of database cross references and identifiers: 
+                                            <http://purl.org/dc/elements/1.1/description> """Oncorhynchus clarkii (i.e. cutthroat trout) is a species of Pacific trout.
 
-ITIS: 161983 (https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161983#null) 
+Physical Description: Throughout their native and introduced ranges, cutthroat trout vary widely in size, coloration and habitat selection. Their coloration can range from golden to gray to green on the back. Cutthroat trout can generally be distinguished from rainbow trout by the presence of basibranchial teeth at the base of tongue and a maxillary that extends beyond the posterior edge of the eye. Depending on subspecies, strain and habitat, most have distinctive red, pink, or orange linear marks along the underside of their mandibles in the lower folds of the gill plates.
+
+At maturity, different populations and subspecies of cutthroat trout can range from 6 to 40 inches (15 to 102 cm) in length, depending on habitat and food availability. Sea-run forms of coastal cutthroat trout average 2 to 5 pounds (0.9 to 2.3 kg). The length and weights of mature inland forms vary widely depending on their particular environment and availability of food. Stream-resident fish are much smaller, 0.4 to 3.2 ounces (11 to 91 g), while lacustrine populations have attained weights ranging from 12 to 17 lb (5.4 to 7.7 kg) in ideal conditions. The largest cutthroat trout subspecies is the Lahontan cutthroat trout (O. c. henshawi). These fish average 8 to 9 in (20 to 23 cm) in small streams and 8 to 22 in (20 to 56 cm) in larger rivers and lakes. In ideal environments, the Lahontan cutthroat trout attains typical weights of 0.25 to 8 lb (0.11 to 3.63 kg). The world record cutthroat trout is a Lahontan at 39 in (99 cm) and 41 lb (19 kg).
+
+Range: Cutthroat trout are native to western North America and have evolved through geographic isolation into 14 subspecies, each native to a different major drainage basin. Native cutthroat trout species are found along the Pacific Northwest coast from Alaska through British Columbia into northern California, in the Cascade Range, the Great Basin and throughout the Rocky Mountains including southern Alberta. Some coastal populations of the coastal cutthroat trout (O. c. clarkii) are semianadromous, spending a few months in marine environments to feed as adults and returning to fresh water from fall through early spring to feed on insects and spawn. Cutthroat trout have the second-largest historic native range of North American trout; the lake trout (Salvelinus namaycush) having the largest. Ranges of some subspecies, particularly the westslope cutthroat trout (O. c. lewisi), have been reduced to less than 10 percent of their historic range due to habitat loss and introduction of non-native species.
+
+Although members of Oncorhynchus, the Pacific trout/salmon species, three subspecies—the westslope (O. c. lewisi), the greenback (O. c. stomias) and Yellowstone cutthroat trout (O. c. bouvierii)—evolved populations east of the Continental Divide in the upper Missouri River basin, upper Arkansas and Platte River basins and upper Yellowstone River basin, each which drain into the Atlantic basin via the Mississippi River. Scientists believe that the climatic and geologic conditions 3-5 million years ago allowed cutthroat trout from the Snake River to migrate over the divide into the Yellowstone plateau via Two Ocean Pass. There is also evidence that Yellowstone Lake once drained south into the Snake River drainage. Evidence suggests that the westslope cutthroat trout was able to establish populations east of the divide via Summit Lake at Marias Pass which at one time connected the Flathead River drainage with the upper Missouri River drainage. Scientists speculate that there are several mountain passes associated with the headwaters of the Colorado River drainage and Arkansas/Platte River drainages that would have allowed migration of cutthroat trout east of the divide.
+
+Cutthroat trout have been introduced into non-native waters outside their historic native range, but not to the extent of the rainbow trout (O. mykiss). Within the native range of the Yellowstone cutthroat trout, U.S. Fisheries Bureau and National Park Service authorities introduced Yellowstone cutthroat trout into many fishless lakes in Yellowstone National Park. Cutthroat trout were introduced into Lake Michigan tributaries in the 1890s and sporadically in the early 20th century, but never established wild populations. A population of Yellowstone cutthroat trout purportedly has been established in Lake Huron. Although cutthroat trout are not native to Arizona, they are routinely introduced by the Arizona Game and Fish Department into high mountain lakes in the White Mountains in the northeastern region of that state.""" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """ITIS: 161983 (https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161983#null) 
 GBIF: 5711980 (https://www.gbif.org/species/5711980)
 EOL: 212910 (https://eol.org/pages/212910)
 COL: 6SN65 (https://www.catalogueoflife.org/data/taxon/6SN65)
 Wikidata: Q2717060 (https://www.wikidata.org/wiki/Q2717060)""" ;
                                             rdfs:label "Oncorhynchus clarkii"@en ;
-                                            <http://www.w3.org/2004/02/skos/core#altLabel> "O. clarkii" .
+                                            owl:equivalentClass <http://purl.dataone.org/odo/salmon_000582> ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "O. clarkii" ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "The class which contains all instances of Oncorhynchus clarkii." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000594> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """Oncorhynchus clarkii (i.e. cutthroat trout) is a species of Pacific trout.
+
+Physical Description: Throughout their native and introduced ranges, cutthroat trout vary widely in size, coloration and habitat selection. Their coloration can range from golden to gray to green on the back. Cutthroat trout can generally be distinguished from rainbow trout by the presence of basibranchial teeth at the base of tongue and a maxillary that extends beyond the posterior edge of the eye. Depending on subspecies, strain and habitat, most have distinctive red, pink, or orange linear marks along the underside of their mandibles in the lower folds of the gill plates.
+
+At maturity, different populations and subspecies of cutthroat trout can range from 6 to 40 inches (15 to 102 cm) in length, depending on habitat and food availability. Sea-run forms of coastal cutthroat trout average 2 to 5 pounds (0.9 to 2.3 kg). The length and weights of mature inland forms vary widely depending on their particular environment and availability of food. Stream-resident fish are much smaller, 0.4 to 3.2 ounces (11 to 91 g), while lacustrine populations have attained weights ranging from 12 to 17 lb (5.4 to 7.7 kg) in ideal conditions. The largest cutthroat trout subspecies is the Lahontan cutthroat trout (O. c. henshawi). These fish average 8 to 9 in (20 to 23 cm) in small streams and 8 to 22 in (20 to 56 cm) in larger rivers and lakes. In ideal environments, the Lahontan cutthroat trout attains typical weights of 0.25 to 8 lb (0.11 to 3.63 kg). The world record cutthroat trout is a Lahontan at 39 in (99 cm) and 41 lb (19 kg).
+
+Range: Cutthroat trout are native to western North America and have evolved through geographic isolation into 14 subspecies, each native to a different major drainage basin. Native cutthroat trout species are found along the Pacific Northwest coast from Alaska through British Columbia into northern California, in the Cascade Range, the Great Basin and throughout the Rocky Mountains including southern Alberta. Some coastal populations of the coastal cutthroat trout (O. c. clarkii) are semianadromous, spending a few months in marine environments to feed as adults and returning to fresh water from fall through early spring to feed on insects and spawn. Cutthroat trout have the second-largest historic native range of North American trout; the lake trout (Salvelinus namaycush) having the largest. Ranges of some subspecies, particularly the westslope cutthroat trout (O. c. lewisi), have been reduced to less than 10 percent of their historic range due to habitat loss and introduction of non-native species.
+
+Although members of Oncorhynchus, the Pacific trout/salmon species, three subspecies—the westslope (O. c. lewisi), the greenback (O. c. stomias) and Yellowstone cutthroat trout (O. c. bouvierii)—evolved populations east of the Continental Divide in the upper Missouri River basin, upper Arkansas and Platte River basins and upper Yellowstone River basin, each which drain into the Atlantic basin via the Mississippi River. Scientists believe that the climatic and geologic conditions 3-5 million years ago allowed cutthroat trout from the Snake River to migrate over the divide into the Yellowstone plateau via Two Ocean Pass. There is also evidence that Yellowstone Lake once drained south into the Snake River drainage. Evidence suggests that the westslope cutthroat trout was able to establish populations east of the divide via Summit Lake at Marias Pass which at one time connected the Flathead River drainage with the upper Missouri River drainage. Scientists speculate that there are several mountain passes associated with the headwaters of the Colorado River drainage and Arkansas/Platte River drainages that would have allowed migration of cutthroat trout east of the divide.
+
+Cutthroat trout have been introduced into non-native waters outside their historic native range, but not to the extent of the rainbow trout (O. mykiss). Within the native range of the Yellowstone cutthroat trout, U.S. Fisheries Bureau and National Park Service authorities introduced Yellowstone cutthroat trout into many fishless lakes in Yellowstone National Park. Cutthroat trout were introduced into Lake Michigan tributaries in the 1890s and sporadically in the early 20th century, but never established wild populations. A population of Yellowstone cutthroat trout purportedly has been established in Lake Huron. Although cutthroat trout are not native to Arizona, they are routinely introduced by the Arizona Game and Fish Department into high mountain lakes in the White Mountains in the northeastern region of that state.""" ;
+   rdfs:comment """https://en.wikipedia.org/wiki/Cutthroat_trout, accessed 2021-06-15
+https://www.wikidata.org/wiki/Q2717060, accessed 2021-06-15"""
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_000611
@@ -2683,6 +2835,166 @@ Total length can be measured by two conventions -- by leaving the caudal fin spr
                                             <http://purl.org/dc/elements/1.1/date> "2021-06-15T19:26:05Z"^^xsd:dateTime ;
                                             rdfs:label "Fish age expressed as total age"@en ;
                                             <http://www.w3.org/2004/02/skos/core#definition> "An integer, which represents the sum of freshwater and marine annuli plus one to account for time spent in the gravel before hatching." .
+
+
+###  http://purl.dataone.org/odo/salmon_000642
+<http://purl.dataone.org/odo/salmon_000642> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00126> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-15T20:05:01Z"^^xsd:dateTime ;
+                                            rdfs:label "Rainbow trout"@en ;
+                                            owl:equivalentClass <http://purl.dataone.org/odo/salmon_000591> ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> """Oncorhychus mykiss
+O. mykiss
+\"lake trout\" @en
+\"rainbow\" @en
+\"silver trout\" @en
+\"steelhead\" @en
+\"brook trout\" @en""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000642> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
+   owl:annotatedTarget """Oncorhychus mykiss
+O. mykiss
+\"lake trout\" @en
+\"rainbow\" @en
+\"silver trout\" @en
+\"steelhead\" @en
+\"brook trout\" @en""" ;
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Rainbow_trout, accessed 2021-06-15
+https://www.wikidata.org/wiki/Q187986, accessed 2021-06-15"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_000644
+<http://purl.dataone.org/odo/salmon_000644> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000591> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-15T21:55:30Z"^^xsd:dateTime ;
+                                            <http://purl.org/dc/elements/1.1/description> """Oncorhynchus mykiss irideus (i.e. coastal rainbow trout or steelhead trout) is a subspecies of Oncorhynchus mykiss and one of the Pacific trout species. Steelhead trout is the name given to the anadramous (sea-run) form of the coastal rainbow trout (Oncorhynchus m. irideus), which remain in freshwater throughout their life. 
+
+A number of distinct population segments of steelhead trout are endangered or threatened across the United States, mostly caused by the blocking of waterways by the construction of dams. Human interaction has had considerable consequences on reducing the population of steelhead trout.
+
+Physical Description: Coastal Rainbow trout are incredibly adaptable to different environments and are capable of exhibiting a wide range of coloration. Trout from small streams may be dark olive on the back with a yellowish belly and orange tips on the fins, while lake-dwelling fish tend to be more silver in color. Most Coastal Rainbow trout have heavy, irregular spotting, and spots that radiate outward in lines on the tail and a white belly. The pink to deep red band on their flanks gives the fish its namesake.
+
+Steelhead trout are larger and less colorful than rainbow trout, weighing up to 55 pounds (26 kg) and reaching 45 inches (114 cm) in length. They can live up to 11 years and spawn multiple times. The body of the steelhead trout is silvery and streamlined with a rounder head. There are black dots and a red or pink stripe running down the side of the fish horizontally.
+
+Range: In North America, coastal rainbow trout are native to Pacific coast streams, from the Kuskokwim River in Alaska south to Baja California. In California, coastal rainbow trout are the most widely-distributed native trout form and are found on the western slopes of the Sierra Nevada in waters draining to the Pacific Ocean.""" ;
+                                            <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """ITIS: 553422 (https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=553422#null)
+GBIF: 5711995 (https://www.gbif.org/species/5711995)
+EOL: 2777859 (https://eol.org/pages/2777859)
+Wikidata: Q21011163 (https://www.wikidata.org/wiki/Q21011163)""" ;
+                                            rdfs:label "Oncorhynchus mykiss irideus"@en ;
+                                            rdfs:seeAlso <http://purl.dataone.org/odo/salmon_000645> ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> <http://purl.dataone.org/odo/salmon_000570> ,
+                                                                                           """Oncorhynchus m. irideus
+O. m. irideus""" ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "The class which contains all instances of Oncorhynchus mykiss irideus." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000644> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """Oncorhynchus mykiss irideus (i.e. coastal rainbow trout or steelhead trout) is a subspecies of Oncorhynchus mykiss and one of the Pacific trout species. Steelhead trout is the name given to the anadramous (sea-run) form of the coastal rainbow trout (Oncorhynchus m. irideus), which remain in freshwater throughout their life. 
+
+A number of distinct population segments of steelhead trout are endangered or threatened across the United States, mostly caused by the blocking of waterways by the construction of dams. Human interaction has had considerable consequences on reducing the population of steelhead trout.
+
+Physical Description: Coastal Rainbow trout are incredibly adaptable to different environments and are capable of exhibiting a wide range of coloration. Trout from small streams may be dark olive on the back with a yellowish belly and orange tips on the fins, while lake-dwelling fish tend to be more silver in color. Most Coastal Rainbow trout have heavy, irregular spotting, and spots that radiate outward in lines on the tail and a white belly. The pink to deep red band on their flanks gives the fish its namesake.
+
+Steelhead trout are larger and less colorful than rainbow trout, weighing up to 55 pounds (26 kg) and reaching 45 inches (114 cm) in length. They can live up to 11 years and spawn multiple times. The body of the steelhead trout is silvery and streamlined with a rounder head. There are black dots and a red or pink stripe running down the side of the fish horizontally.
+
+Range: In North America, coastal rainbow trout are native to Pacific coast streams, from the Kuskokwim River in Alaska south to Baja California. In California, coastal rainbow trout are the most widely-distributed native trout form and are found on the western slopes of the Sierra Nevada in waters draining to the Pacific Ocean.""" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://wildlife.ca.gov/Conservation/Fishes/Coastal-Rainbow-Trout-Steelhead, accessed 2021-06-15
+https://caltrout.org/sos/species-accounts/trout/coastal-rainbow-trout, accessed 2021-06-15
+https://en.wikipedia.org/wiki/Steelhead_trout, accessed 2021-06-15
+https://www.wikidata.org/wiki/Q64437771, accessed 2021-06-15"""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000644> ;
+   owl:annotatedProperty rdfs:seeAlso ;
+   owl:annotatedTarget <http://purl.dataone.org/odo/salmon_000645> ;
+   rdfs:comment "Chose not to assert owl:equivalentClass here, because while all coastal rainbow trout are Oncorhynchus mykiss irideus, not all Oncorhynchus mykiss irideus are considered coastal rainbow trout (e.g. the anadromous form is called 'steelhead trout')."
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000644> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
+   owl:annotatedTarget <http://purl.dataone.org/odo/salmon_000570> ;
+   rdfs:comment "Chose not to assert owl:equivalentClass here, because while all steelhead trout are Oncorhynchus mykiss irideus, not all Oncorhynchus mykiss irideus are considered steelhead trout (e.g. the freshwater form is called 'coastal rainbow trout')."
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_000645
+<http://purl.dataone.org/odo/salmon_000645> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000642> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-15T21:56:11Z"^^xsd:dateTime ;
+                                            rdfs:label "Coastal rainbow trout"@en ;
+                                            owl:equivalentClass <http://purl.dataone.org/odo/salmon_000644> ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> """Oncorhynchus mykiss irideus
+Oncorhynchus m. irideus
+O. m. irideus""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000645> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
+   owl:annotatedTarget """Oncorhynchus mykiss irideus
+Oncorhynchus m. irideus
+O. m. irideus""" ;
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Rainbow_trout, accessed 2021-06-15
+https://www.wikidata.org/wiki/Q187986, accessed 2021-06-15"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_000649
+<http://purl.dataone.org/odo/salmon_000649> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00401> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-16T04:18:20Z"^^xsd:dateTime ;
+                                            rdfs:label "Parr"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "A young salmonid (salmon or trout) with parr-marks before migration to the sea and after dispersal from the redd." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000649> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A young salmonid (salmon or trout) with parr-marks before migration to the sea and after dispersal from the redd." ;
+   <http://purl.org/dc/elements/1.1/source> "http://www.fishbase.us/glossary/Glossary.php?q=parr&language=english&sc=is, accessed 2021-06-15"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_000651
+<http://purl.dataone.org/odo/salmon_000651> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000582> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-16T16:09:57Z"^^xsd:dateTime ;
+                                            rdfs:label "Coastal cutthroat trout"@en ;
+                                            owl:equivalentClass <http://purl.dataone.org/odo/salmon_000653> ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> """Oncorhynchus clarkii clarkii
+Oncorhynchus c. clarkii
+O. c. clarkii""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000651> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#altLabel> ;
+   owl:annotatedTarget """Oncorhynchus clarkii clarkii
+Oncorhynchus c. clarkii
+O. c. clarkii""" ;
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Coastal_cutthroat_trout, accessed 2021-06-15
+https://www.wikidata.org/wiki/Q5138345, accessed 2021-06-15"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_000653
+<http://purl.dataone.org/odo/salmon_000653> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000594> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-16T16:26:35Z"^^xsd:dateTime ;
+                                            rdfs:label "Oncorhynchus clarkii clarkii"@en ;
+                                            owl:equivalentClass <http://purl.dataone.org/odo/salmon_000651> ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> """O. c. clarkii
+Onchorhynchus c. clarkii""" ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "The class which contains all instances of Oncorhynchus clarkii clarkii." .
 
 
 ###  http://purl.dataone.org/odo/salmon_00124
@@ -3884,7 +4196,7 @@ https://www.wikidata.org/wiki/Q461335, accessed 2021-06-14"""
 <http://purl.dataone.org/odo/salmon_00215> rdf:type owl:Class ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-14T18:47:11Z"^^xsd:dateTime ;
-                                           rdfs:label "Salmon species identification and classification"@en .
+                                           rdfs:label "Salmonid species identification and classification"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_00216
@@ -4257,6 +4569,7 @@ https://www.wikidata.org/wiki/Q63565252, accessed 2021-04-15"""
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-16T18:10:30Z"^^xsd:dateTime ;
                                            rdfs:label "Chinook salmon"@en ;
+                                           owl:equivalentClass <http://purl.dataone.org/odo/salmon_00464> ;
                                            <http://www.w3.org/2004/02/skos/core#altLabel> """\"Sikayujak\" @ipk
 \"Ggaal\" [Denaakk'e, Koyukon Athabaskan]
 \"Gath\" [Benhti Kenaga, Lower Tanana]
@@ -4333,6 +4646,7 @@ O. tshawytscha
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-16T18:10:52Z"^^xsd:dateTime ;
                                            rdfs:label "Chum salmon"@en ;
+                                           owl:equivalentClass <http://purl.dataone.org/odo/salmon_00461> ;
                                            <http://www.w3.org/2004/02/skos/core#altLabel> """\"Iqalugruaq\" @ipk
 \"Aqalugruaq\" @ipk
 \"Noolaaghe\" [Denaakk'e, Koyukon Athabaskan]
@@ -4397,6 +4711,7 @@ O. keta
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-16T18:10:57Z"^^xsd:dateTime ;
                                            rdfs:label "Pink salmon"@en ;
+                                           owl:equivalentClass <http://purl.dataone.org/odo/salmon_00460> ;
                                            <http://www.w3.org/2004/02/skos/core#altLabel> """\"Amaqtuq\" @ipk
 \"Amaqaayak\" @ypk
 \"Amaqsuq\" @ypk
@@ -4457,6 +4772,7 @@ O. gorbuscha
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-16T18:11:02Z"^^xsd:dateTime ;
                                            rdfs:label "Sockeye salmon"@en ;
+                                           owl:equivalentClass <http://purl.dataone.org/odo/salmon_00463> ;
                                            <http://www.w3.org/2004/02/skos/core#altLabel> """\"Cayak\" @ypk 
 \"Sayak\" @ypk
 \"Niklliq\" [Alutiiq/Sugpiaq]
@@ -4523,6 +4839,7 @@ O. nerka
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-16T18:11:22Z"^^xsd:dateTime ;
                                            rdfs:label "Coho salmon"@en ;
+                                           owl:equivalentClass <http://purl.dataone.org/odo/salmon_00462> ;
                                            <http://www.w3.org/2004/02/skos/core#altLabel> """\"Saanlaaghe\" [Denaakk'e, Koyukon Athabaskan]
 \"Khwyhts'en'\" [Benhti Kenaga, Lower Tanana]
 \"Shii\" @gwi 
@@ -4609,10 +4926,15 @@ O. kisutch
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00401> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-21T23:42:09Z"^^xsd:dateTime ;
-                                           rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
+                                           rdfs:label "Egg"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "In fish, the term egg usually refers to female haploid gametes." .
 
-needs definition""" ;
-                                           rdfs:label "Egg"@en .
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00402> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "In fish, the term egg usually refers to female haploid gametes." ;
+   <http://purl.org/dc/elements/1.1/source> "http://www.fishbase.us/glossary/Glossary.php?q=egg&language=english&sc=is, accessed 2021-06-15"
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_00403
@@ -4982,8 +5304,8 @@ https://www.wikidata.org/wiki/Q502895, accessed 2021-04-26"""
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:17:29Z"^^xsd:dateTime ;
                                            rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
 
-How do we want to define this? altLabels?""" ;
-                                           rdfs:label "Salmon specimen and occurrence"@en ;
+How do we want to define this? update altLabels; are we going to add other non-salmonid species (some SASAP datasets contain other species)?""" ;
+                                           rdfs:label "Salmonid specimen and occurrence"@en ;
                                            <http://www.w3.org/2004/02/skos/core#altLabel> """Scientific name
 Binomial name 
 Binomen 
@@ -5003,25 +5325,31 @@ Latin name""" ;
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000587> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:17:52Z"^^xsd:dateTime ;
-                                           <http://purl.org/dc/elements/1.1/description> "The class which contains all instances of Oncorhynchus gorbuscha." ;
-                                           <http://purl.org/dc/elements/1.1/identifier> 161975 ;
-                                           <http://rs.tdwg.org/dwc/terms/taxonID> <https://eol.org/pages/46563135> ;
-                                           rdfs:comment """List of database cross references and identifiers:
+                                           <http://purl.org/dc/elements/1.1/description> """Oncorhynchus gorbuscha (i.e. pink salmon) is the smallest and most abundant of the five species of Pacific salmon.
 
-ITIS: 161975 (https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161975#null)
+Physical Description: In the ocean, pink salmon are bright silver fish. After returning to their spawning streams, their coloring changes to pale grey on the back with yellowish-white belly (although some turn an overall dull green color). As with all salmon, in addition to the dorsal fin, they also have an adipose fin. The fish is characterized by a white mouth with black gums, no teeth on the tongue, large oval-shaped black spots on the back, a v-shaped tail, and an anal fin with 13-17 soft rays. During their spawning migration, males develop a pronounced humped back, hence their nickname \"humpies\". Pink salmon average 4.8 pounds (2.2 kg) in weight. The maximum recorded size was 30 inches (76 cm) and 15 pounds (6.8 kg).
+
+Range: The native range of the species is in the Pacific and Arctic coastal waters and rivers, from the Sacramento River in northern California to the Mackenzie River in Canada; and in the west from the Lena River in Siberia to Korea and Honshu in Japan. In North America pink salmon spawn from the Mackenzie River in the Arctic to as far south as tributaries of Puget Sound, Washington, although they were also reported in the San Lorenzo River near Santa Cruz, California in 1915 and the Sacramento River in northern California in the 1950s. In 2013 a new record for the southernmost extent of spawning pink salmon was published for the Salinas River. In the fall of 2017 a dozen pink salmon were counted in Lagunitas Creek about 25 miles (40 km) north of San Francisco, California.""" ;
+                                           <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """ITIS: 161975 (https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161975#null)
 GBIF: 5204037 (https://www.gbif.org/species/5204037)
 EOL: 46563135 (https://eol.org/pages/46563135)
 COL: 74N5S (https://www.catalogueoflife.org/data/taxon/74N5S)
 Wikidata: Q673380 (https://www.wikidata.org/wiki/Q673380)""" ;
                                            rdfs:label "Oncorhynchus gorbuscha"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#altLabel> "O. gorbuscha" .
+                                           owl:equivalentClass <http://purl.dataone.org/odo/salmon_00241> ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "O. gorbuscha" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The class which contains all instances of Oncorhynchus gorbuscha." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00460> ;
-   owl:annotatedProperty <http://purl.org/dc/elements/1.1/identifier> ;
-   owl:annotatedTarget 161975 ;
-   <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Information System (ITIS) Taxonomic Serial No. (TSN): 161975" ;
-   <http://purl.org/dc/elements/1.1/source> <https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161975#null>
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """Oncorhynchus gorbuscha (i.e. pink salmon) is the smallest and most abundant of the five species of Pacific salmon.
+
+Physical Description: In the ocean, pink salmon are bright silver fish. After returning to their spawning streams, their coloring changes to pale grey on the back with yellowish-white belly (although some turn an overall dull green color). As with all salmon, in addition to the dorsal fin, they also have an adipose fin. The fish is characterized by a white mouth with black gums, no teeth on the tongue, large oval-shaped black spots on the back, a v-shaped tail, and an anal fin with 13-17 soft rays. During their spawning migration, males develop a pronounced humped back, hence their nickname \"humpies\". Pink salmon average 4.8 pounds (2.2 kg) in weight. The maximum recorded size was 30 inches (76 cm) and 15 pounds (6.8 kg).
+
+Range: The native range of the species is in the Pacific and Arctic coastal waters and rivers, from the Sacramento River in northern California to the Mackenzie River in Canada; and in the west from the Lena River in Siberia to Korea and Honshu in Japan. In North America pink salmon spawn from the Mackenzie River in the Arctic to as far south as tributaries of Puget Sound, Washington, although they were also reported in the San Lorenzo River near Santa Cruz, California in 1915 and the Sacramento River in northern California in the 1950s. In 2013 a new record for the southernmost extent of spawning pink salmon was published for the Salinas River. In the fall of 2017 a dozen pink salmon were counted in Lagunitas Creek about 25 miles (40 km) north of San Francisco, California.""" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Pink_salmon, accessed 2021-06-15
+https://www.wikidata.org/wiki/Q673380, accessed 2021-06-15"""
  ] .
 
 
@@ -5030,25 +5358,31 @@ Wikidata: Q673380 (https://www.wikidata.org/wiki/Q673380)""" ;
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000587> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:18:47Z"^^xsd:dateTime ;
-                                           <http://purl.org/dc/elements/1.1/description> "The class which contains all instances of Oncorhynchus keta." ;
-                                           <http://purl.org/dc/elements/1.1/identifier> 161976 ;
-                                           <http://rs.tdwg.org/dwc/terms/taxonID> <https://eol.org/pages/46563136> ;
-                                           rdfs:comment """List of database cross references and identifiers:
+                                           <http://purl.org/dc/elements/1.1/description> """Oncorhynchus keta (i.e. chum salmon) is one of the five species of Pacific salmon.
 
-ITIS: 161976 (https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161976#null)
+Physical Description: The body of the chum salmon is deeper than most salmonid species. In common with other species found in the Pacific, the anal fin has 12 to 20 rays, compared with a maximum of 12 in European species. Chum have an ocean coloration of silvery blue green with some indistinct spotting in a darker shade, and a rather paler belly. When they move into fresh water the color changes to dark olive green and the belly color deepens. When adults are near spawning, they have purple blotchy streaks near the caudal peduncle, darker towards the tail. Spawning males typically grow an elongated snout or kype, their lower fins become tipped with white and they have enlarged teeth. Some researchers speculate these characteristics are used to compete for mates.
+
+Range: Chum salmon have the largest natural range of any Pacific salmon, and undergo the longest migrations within the genus Oncorhynchus, far up the Yukon River and deep into the Amur River basin in Asia. In lesser numbers they migrate thousands of kilometres up the Mackenzie River. Chum are found around the north Pacific, in the waters of Korea, Japan, and the Okhotsk and Bering seas (Kamchatka, Chukotka, Kuril Islands, Sakhalin, Khabarovsk Krai, Primorsky Krai), British Columbia in Canada, and from Alaska to California in the United States. In the Arctic Ocean they are found in limited numbers from the Laptev Sea to the Beaufort Sea. In North America chum salmon spawn from the Mackenzie River in the Arctic to as far south as Tillamook Bay, Oregon, although they were also reported in the San Lorenzo River near Santa Cruz, California in 1915 and the Sacramento River in northern California in the 1950s. In fall 2017 a half dozen chum salmon were counted in Lagunitas Creek about 25 miles (40 km) north of San Francisco, California.""" ;
+                                           <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """ITIS: 161976 (https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161976#null)
 GBIF: 5204014 (https://www.gbif.org/species/5204014)
 EOL: 46563136 (https://eol.org/pages/46563136)
 COL: 49JF6 (https://www.catalogueoflife.org/data/taxon/49JF6)
 Wikidata: Q475211 (https://www.wikidata.org/wiki/Q475211)""" ;
                                            rdfs:label "Oncorhynchus keta"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#altLabel> "O. keta" .
+                                           owl:equivalentClass <http://purl.dataone.org/odo/salmon_00240> ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "O. keta" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The class which contains all instances of Oncorhynchus keta." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00461> ;
-   owl:annotatedProperty <http://purl.org/dc/elements/1.1/identifier> ;
-   owl:annotatedTarget 161976 ;
-   <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Information System (ITIS) Taxonomic Serial No. (TSN): 161976" ;
-   <http://purl.org/dc/elements/1.1/source> <https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161976#null>
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """Oncorhynchus keta (i.e. chum salmon) is one of the five species of Pacific salmon.
+
+Physical Description: The body of the chum salmon is deeper than most salmonid species. In common with other species found in the Pacific, the anal fin has 12 to 20 rays, compared with a maximum of 12 in European species. Chum have an ocean coloration of silvery blue green with some indistinct spotting in a darker shade, and a rather paler belly. When they move into fresh water the color changes to dark olive green and the belly color deepens. When adults are near spawning, they have purple blotchy streaks near the caudal peduncle, darker towards the tail. Spawning males typically grow an elongated snout or kype, their lower fins become tipped with white and they have enlarged teeth. Some researchers speculate these characteristics are used to compete for mates.
+
+Range: Chum salmon have the largest natural range of any Pacific salmon, and undergo the longest migrations within the genus Oncorhynchus, far up the Yukon River and deep into the Amur River basin in Asia. In lesser numbers they migrate thousands of kilometres up the Mackenzie River. Chum are found around the north Pacific, in the waters of Korea, Japan, and the Okhotsk and Bering seas (Kamchatka, Chukotka, Kuril Islands, Sakhalin, Khabarovsk Krai, Primorsky Krai), British Columbia in Canada, and from Alaska to California in the United States. In the Arctic Ocean they are found in limited numbers from the Laptev Sea to the Beaufort Sea. In North America chum salmon spawn from the Mackenzie River in the Arctic to as far south as Tillamook Bay, Oregon, although they were also reported in the San Lorenzo River near Santa Cruz, California in 1915 and the Sacramento River in northern California in the 1950s. In fall 2017 a half dozen chum salmon were counted in Lagunitas Creek about 25 miles (40 km) north of San Francisco, California.""" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Chum_salmon, accessed 2021-06-15
+https://www.wikidata.org/wiki/Q475211, accessed 2021-06-15"""
  ] .
 
 
@@ -5057,25 +5391,31 @@ Wikidata: Q475211 (https://www.wikidata.org/wiki/Q475211)""" ;
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000587> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:18:52Z"^^xsd:dateTime ;
-                                           <http://purl.org/dc/elements/1.1/description> "The class which contains all instances of Oncorhynchus kisutch." ;
-                                           <http://purl.org/dc/elements/1.1/identifier> 161977 ;
-                                           <http://rs.tdwg.org/dwc/terms/taxonID> <https://eol.org/pages/46563137> ;
-                                           rdfs:comment """List of database cross references and identifiers: 
+                                           <http://purl.org/dc/elements/1.1/description> """Oncorhynchus kisutch (i.e. coho salmon) is one of the five species of Pacific salmon.
 
-ITIS: 161977 (https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161977#null)
+Physical Description: During their ocean phase, coho salmon have silver sides and dark-blue backs. During their spawning phase, their jaws and teeth become hooked. After entering fresh water, they develop bright-red sides, bluish-green heads and backs, dark bellies and dark spots on their backs. Sexually maturing fish develop a light-pink or rose shading along the belly, and the males may show a slight arching of the back. Mature adults have a pronounced red skin color with darker backs and average 28 inches (71 cm) and 7 to 11 pounds (3.2 to 5.0 kg), occasionally reaching up to 36 pounds (16 kg). They also develop a large kype (hooked beak) during spawning. Mature females may be darker than males, with both showing a pronounced hook on the nose.
+
+Range: The traditional range of the coho salmon runs along both sides of the North Pacific Ocean, from Hokkaidō, Japan and eastern Russia, around the Bering Sea to mainland Alaska, and south to Monterey Bay, California. Coho salmon have also been introduced in all the Great Lakes, as well as many landlocked reservoirs throughout the United States. A number of specimens, (more than 20), were caught in waters surrounding Denmark and Norway in 2017. Their source is currently unknown, but the salmon species is farmed at several locations in Europe, making it probable that the animal has slipped the net at such a farm.""" ;
+                                           <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """ITIS: 161977 (https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161977#null)
 GBIF: 5204034 (https://www.gbif.org/species/5204034)
 EOL: 46563137 (https://eol.org/pages/46563137)
 COL: 49JF8 (https://www.catalogueoflife.org/data/taxon/49JF8)
 Wikidata: Q934874 (https://www.wikidata.org/wiki/Q934874)""" ;
                                            rdfs:label "Oncorhynchus kisutch"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#altLabel> "O. kisutch" .
+                                           owl:equivalentClass <http://purl.dataone.org/odo/salmon_00243> ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "O. kisutch" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The class which contains all instances of Oncorhynchus kisutch." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00462> ;
-   owl:annotatedProperty <http://purl.org/dc/elements/1.1/identifier> ;
-   owl:annotatedTarget 161977 ;
-   <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Information System (ITIS) Taxonomic Serial No. (TSN): 161977" ;
-   <http://purl.org/dc/elements/1.1/source> <https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161977#null>
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """Oncorhynchus kisutch (i.e. coho salmon) is one of the five species of Pacific salmon.
+
+Physical Description: During their ocean phase, coho salmon have silver sides and dark-blue backs. During their spawning phase, their jaws and teeth become hooked. After entering fresh water, they develop bright-red sides, bluish-green heads and backs, dark bellies and dark spots on their backs. Sexually maturing fish develop a light-pink or rose shading along the belly, and the males may show a slight arching of the back. Mature adults have a pronounced red skin color with darker backs and average 28 inches (71 cm) and 7 to 11 pounds (3.2 to 5.0 kg), occasionally reaching up to 36 pounds (16 kg). They also develop a large kype (hooked beak) during spawning. Mature females may be darker than males, with both showing a pronounced hook on the nose.
+
+Range: The traditional range of the coho salmon runs along both sides of the North Pacific Ocean, from Hokkaidō, Japan and eastern Russia, around the Bering Sea to mainland Alaska, and south to Monterey Bay, California. Coho salmon have also been introduced in all the Great Lakes, as well as many landlocked reservoirs throughout the United States. A number of specimens, (more than 20), were caught in waters surrounding Denmark and Norway in 2017. Their source is currently unknown, but the salmon species is farmed at several locations in Europe, making it probable that the animal has slipped the net at such a farm.""" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Coho_salmon, accessed 2021-06-15
+https://www.wikidata.org/wiki/Q934874, accessed 2021-06-15"""
  ] .
 
 
@@ -5084,32 +5424,31 @@ Wikidata: Q934874 (https://www.wikidata.org/wiki/Q934874)""" ;
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000587> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:19:04Z"^^xsd:dateTime ;
-                                           <http://purl.org/dc/elements/1.1/description> "The class which contains all instances of Oncorhynchus nerka." ;
-                                           <http://purl.org/dc/elements/1.1/identifier> 161979 ;
-                                           <http://rs.tdwg.org/dwc/terms/taxonID> <https://eol.org/pages/46563140> ;
-                                           rdfs:comment """List of database cross references and identifiers: 
+                                           <http://purl.org/dc/elements/1.1/description> """Oncorhynchus nerka (i.e. sockeye salmon) is one of the five species of Pacific salmon.
 
-ITIS: 161979 (https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161979#null)
+Physical Description: The sockeye salmon is sometimes called red or blueback salmon, due to its color. Sockeye are blue tinged with silver in color while living in the ocean. When they return to spawning grounds, their bodies become red and their heads turn green. Sockeye can be anywhere from 60 to 84 cm (2 ft 0 in–2 ft 9 in) in length and weigh from 2.3 to 7 kg (5–15 lb). Two distinguishing features are their long, serrated gill rakers that range from 30 to 40 in number, and their lack of a spot on their tail or back.
+
+Range: Sockeye salmon range as far south as the Columbia River in the eastern Pacific (although individuals have been spotted as far south as the 10 Mile River on the Mendocino Coast of California) and in northern Hokkaidō Island in Japan in the western Pacific. They range as far north as the Bathurst Inlet in the Canadian Arctic in the east and the Anadyr River in Siberia in the west. The farthest inland sockeye salmon travel is to Redfish Lake, Idaho, over 1,400 km (900 mi) from the ocean and 2,000 m (6,500 ft) in elevation. In the United States, populations of sockeye salmon have been extirpated from Idaho and Oregon.""" ;
+                                           <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """ITIS: 161979 (https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161979#null)
 GBIF: 5204039 (https://www.gbif.org/species/5204039)
 EOL: 46563140 (https://eol.org/pages/46563140, currently produces an error 505)
 COL: 49JFH (https://www.catalogueoflife.org/data/taxon/49JFH)
 Wikidata: Q44064 (https://www.wikidata.org/wiki/Q44064)""" ;
                                            rdfs:label "Oncorhynchus nerka"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#altLabel> "O. nerka" .
+                                           owl:equivalentClass <http://purl.dataone.org/odo/salmon_00242> ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "O. nerka" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The class which contains all instances of Oncorhynchus nerka." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00463> ;
-   owl:annotatedProperty <http://purl.org/dc/elements/1.1/identifier> ;
-   owl:annotatedTarget 161979 ;
-   <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No. (TSN): 161979" ;
-   <http://purl.org/dc/elements/1.1/source> <https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161979#null>
- ] .
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """Oncorhynchus nerka (i.e. sockeye salmon) is one of the five species of Pacific salmon.
 
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00463> ;
-   owl:annotatedProperty <http://rs.tdwg.org/dwc/terms/taxonID> ;
-   owl:annotatedTarget <https://eol.org/pages/46563140> ;
-   rdfs:comment "NOTE: EOL currently produces an error 505 (Internal server error)"
+Physical Description: The sockeye salmon is sometimes called red or blueback salmon, due to its color. Sockeye are blue tinged with silver in color while living in the ocean. When they return to spawning grounds, their bodies become red and their heads turn green. Sockeye can be anywhere from 60 to 84 cm (2 ft 0 in–2 ft 9 in) in length and weigh from 2.3 to 7 kg (5–15 lb). Two distinguishing features are their long, serrated gill rakers that range from 30 to 40 in number, and their lack of a spot on their tail or back.
+
+Range: Sockeye salmon range as far south as the Columbia River in the eastern Pacific (although individuals have been spotted as far south as the 10 Mile River on the Mendocino Coast of California) and in northern Hokkaidō Island in Japan in the western Pacific. They range as far north as the Bathurst Inlet in the Canadian Arctic in the east and the Anadyr River in Siberia in the west. The farthest inland sockeye salmon travel is to Redfish Lake, Idaho, over 1,400 km (900 mi) from the ocean and 2,000 m (6,500 ft) in elevation. In the United States, populations of sockeye salmon have been extirpated from Idaho and Oregon.""" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Sockeye_salmon, accessed 2021-06-15
+https://www.wikidata.org/wiki/Q44064, accessed 2021-06-15"""
  ] .
 
 
@@ -5118,41 +5457,32 @@ Wikidata: Q44064 (https://www.wikidata.org/wiki/Q44064)""" ;
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000587> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-26T20:19:15Z"^^xsd:dateTime ;
-                                           <http://purl.org/dc/elements/1.1/description> "The class which contains all instances of Oncorhynchus tshawytscha." ;
-                                           <http://purl.org/dc/elements/1.1/identifier> 161980 ;
-                                           <http://rs.tdwg.org/dwc/terms/taxonID> <https://eol.org/pages/46563139> ;
-                                           rdfs:comment """List of database cross references and identifiers:
+                                           <http://purl.org/dc/elements/1.1/description> """Oncorhynchus tshawytscha (i.e. Chinook salmon) is the largest of the five species of Pacific salmon.
 
-ITIS: 161980 (https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161980#null)
+Physical Description: The Chinook is blue-green, red, or purple on the back and top of the head, with silvery sides and white ventral surfaces. It has black spots on its tail and the upper half of its body. Although spots are seen on the tail in pink salmon, and silver on the tail in coho and chum salmon, Chinook are unique among the Pacific salmon in combining black spots and silver on the tail. Another distinctive feature is a black gum line that is present in both salt and freshwater. Adult fish range in size from 24 to 36 in (61 to 91 cm), but may be up to 58 in (150 cm) in length; they average 10 to 50 lb (4.5 to 22.7 kg), but may reach 130 lb (59 kg). The meat can be either pink or white in color, depending on what the salmon have been feeding on.
+
+Range: Chinook are anadromous fish native to the North Pacific Ocean and the river systems of western North America, ranging from California to Alaska, as well as Asian rivers ranging from northern Japan to the Palyavaam River in the Arctic northeast Siberia. They have been introduced to other parts of the world, including New Zealand, thriving in Lake Michigan Great Lakes of North America and Michigan's western rivers, and Patagonia.""" ;
+                                           <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """ITIS: 161980 (https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161980#null)
 GBIF: 5204024 (https://www.gbif.org/species/5204024)
 EOL: 46563139 (https://eol.org/pages/46563139, currently produces and error 505)
 COL: 49JFR (https://www.catalogueoflife.org/data/taxon/49JFR)
 Wikidata: Q833503 (https://www.wikidata.org/wiki/Q833503)""" ;
                                            rdfs:label "Oncorhynchus tshawytscha"@en ;
-                                           <http://www.w3.org/2004/02/skos/core#altLabel> "O. tshawytscha" .
+                                           owl:equivalentClass <http://purl.dataone.org/odo/salmon_00239> ;
+                                           <http://www.w3.org/2004/02/skos/core#altLabel> "O. tshawytscha" ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "The class which contains all instances of Oncorhynchus tshawytscha." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_00464> ;
-   owl:annotatedProperty <http://purl.org/dc/elements/1.1/identifier> ;
-   owl:annotatedTarget 161980 ;
-   <http://purl.org/dc/elements/1.1/description> "Integrated Taxonomic Integration System (ITIS) Taxonomic Serial No. (TSN): 161980" ;
-   <http://purl.org/dc/elements/1.1/source> <https://itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161980#null>
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget """Oncorhynchus tshawytscha (i.e. Chinook salmon) is the largest of the five species of Pacific salmon.
+
+Physical Description: The Chinook is blue-green, red, or purple on the back and top of the head, with silvery sides and white ventral surfaces. It has black spots on its tail and the upper half of its body. Although spots are seen on the tail in pink salmon, and silver on the tail in coho and chum salmon, Chinook are unique among the Pacific salmon in combining black spots and silver on the tail. Another distinctive feature is a black gum line that is present in both salt and freshwater. Adult fish range in size from 24 to 36 in (61 to 91 cm), but may be up to 58 in (150 cm) in length; they average 10 to 50 lb (4.5 to 22.7 kg), but may reach 130 lb (59 kg). The meat can be either pink or white in color, depending on what the salmon have been feeding on.
+
+Range: Chinook are anadromous fish native to the North Pacific Ocean and the river systems of western North America, ranging from California to Alaska, as well as Asian rivers ranging from northern Japan to the Palyavaam River in the Arctic northeast Siberia. They have been introduced to other parts of the world, including New Zealand, thriving in Lake Michigan Great Lakes of North America and Michigan's western rivers, and Patagonia.""" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Chinook_salmon, accessed 2021-06-15
+https://www.wikidata.org/wiki/Q833503, accessed 2021-06-15"""
  ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00464> ;
-   owl:annotatedProperty <http://rs.tdwg.org/dwc/terms/taxonID> ;
-   owl:annotatedTarget <https://eol.org/pages/46563139> ;
-   rdfs:comment "NOTE: EOL currently produces an error 505 (Internal server error)"
- ] .
-
-
-###  http://vocab.nerc.ac.uk/collection/M13/current/011/
-<http://vocab.nerc.ac.uk/collection/M13/current/011/> rdf:type owl:Class .
-
-
-###  http://vocab.nerc.ac.uk/collection/M13/current/012/
-<http://vocab.nerc.ac.uk/collection/M13/current/012/> rdf:type owl:Class .
 
 
 #################################################################
@@ -5378,7 +5708,7 @@ https://www.wikidata.org/wiki/Q545944, accessed 2021-06-15"""
 ###  http://purl.dataone.org/odo/salmon_000597
 <http://purl.dataone.org/odo/salmon_000597> rdf:type owl:NamedIndividual ,
                                                      <http://purl.dataone.org/odo/salmon_00126> ;
-                                            <http://rs.tdwg.org/dwc/terms/scientificName> <http://purl.dataone.org/odo/salmon_000580> ;
+                                            <http://rs.tdwg.org/dwc/terms/scientificName> <http://purl.dataone.org/odo/salmon_000647> ;
                                             <http://purl.dataone.org/odo/salmon_000596> 540 ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-27T18:19:00Z"^^xsd:dateTime ;
@@ -5395,13 +5725,14 @@ https://www.wikidata.org/wiki/Q545944, accessed 2021-06-15"""
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-27T19:40:11Z"^^xsd:dateTime ;
                                             rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
 
-has subspecies https://en.wikipedia.org/wiki/Coastal_cutthroat_trout""" ;
+Unsure of migration pattern (e.g. semi-anadromous?) to include as object property""" ;
                                             rdfs:label "Oncorhynchus clarkii"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_000599
 <http://purl.dataone.org/odo/salmon_000599> rdf:type owl:NamedIndividual ,
                                                      <http://purl.dataone.org/odo/salmon_000589> ;
+                                            <http://purl.dataone.org/odo/salmon_000617> <http://purl.dataone.org/odo/salmon_000615> ;
                                             <http://purl.dataone.org/odo/salmon_000618> <http://purl.dataone.org/odo/salmon_000612> ;
                                             <http://rs.tdwg.org/dwc/terms/nameAccordingTo> <http://purl.dataone.org/odo/salmon_000588> ;
                                             <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/salmon_000601> ;
@@ -5418,12 +5749,16 @@ has subspecies https://en.wikipedia.org/wiki/Coastal_cutthroat_trout""" ;
                                             <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/salmon_000602> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-27T19:45:59Z"^^xsd:dateTime ;
+                                            rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
+
+Unsure of migration pattern to include as object proprty.""" ;
                                             rdfs:label "Salvelinus malma"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_000601
 <http://purl.dataone.org/odo/salmon_000601> rdf:type owl:NamedIndividual ,
                                                      <http://purl.dataone.org/odo/salmon_000586> ;
+                                            <http://rs.tdwg.org/dwc/terms/scientificName> <http://purl.dataone.org/odo/salmon_000599> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-27T19:58:37Z"^^xsd:dateTime ;
                                             rdfs:label "Atlantic salmon"@en .
@@ -5432,14 +5767,17 @@ has subspecies https://en.wikipedia.org/wiki/Coastal_cutthroat_trout""" ;
 ###  http://purl.dataone.org/odo/salmon_000602
 <http://purl.dataone.org/odo/salmon_000602> rdf:type owl:NamedIndividual ,
                                                      <http://purl.dataone.org/odo/salmon_00126> ;
+                                            <http://rs.tdwg.org/dwc/terms/scientificName> <http://purl.dataone.org/odo/salmon_000600> ;
+                                            <http://purl.dataone.org/odo/salmon_000596> 531 ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-27T19:58:43Z"^^xsd:dateTime ;
-                                            rdfs:label "Dolly varden trout"@en .
+                                            rdfs:label "Dolly Varden trout"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_000603
 <http://purl.dataone.org/odo/salmon_000603> rdf:type owl:NamedIndividual ,
                                                      <http://purl.dataone.org/odo/salmon_00126> ;
+                                            <http://rs.tdwg.org/dwc/terms/scientificName> <http://purl.dataone.org/odo/salmon_000598> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-27T19:58:56Z"^^xsd:dateTime ;
                                             rdfs:label "Cutthroat trout"@en .
@@ -5552,11 +5890,97 @@ https://www.wikidata.org/wiki/Q852569, accessed 01June2021"""
  ] .
 
 
+###  http://purl.dataone.org/odo/salmon_000643
+<http://purl.dataone.org/odo/salmon_000643> rdf:type owl:NamedIndividual ,
+                                                     <http://purl.dataone.org/odo/salmon_00126> ;
+                                            <http://rs.tdwg.org/dwc/terms/scientificName> <http://purl.dataone.org/odo/salmon_000580> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-15T20:05:20Z"^^xsd:dateTime ;
+                                            rdfs:label "Rainbow trout"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_000646
+<http://purl.dataone.org/odo/salmon_000646> rdf:type owl:NamedIndividual ,
+                                                     <http://purl.dataone.org/odo/salmon_000495> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-15T23:33:16Z"^^xsd:dateTime ;
+                                            <http://purl.org/dc/elements/1.1/description> "In 1855, William P. Gibbons, the curator of Geology and Mineralogy at the California Academy of Sciences, found a population and named it Salmo iridia (Latin: rainbow), later corrected to Salmo irideus. These names faded once it was determined that Walbaum's description of type specimens was conspecific and therefore had precedence. In 1989, morphological and genetic studies indicated that trout of the Pacific Basin were genetically closer to Pacific salmon (Oncorhynchus species) than to the Salmos – brown trout (Salmo trutta) or Atlantic salmon (Salmo salar) of the Atlantic Basin. Thus, in 1989, taxonomic authorities moved the rainbow, cutthroat, and other Pacific Basin trout into the genus Oncorhynchus. Walbaum's name had precedence, so the species name Oncorhynchus mykiss became the scientific name of the rainbow trout. The previous species names irideus and gairdneri were adopted as subspecies names for the coastal rainbow and Columbia River redband trout, respectively." ;
+                                            rdfs:label "Gibbons, 1855"@en .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000646> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "In 1855, William P. Gibbons, the curator of Geology and Mineralogy at the California Academy of Sciences, found a population and named it Salmo iridia (Latin: rainbow), later corrected to Salmo irideus. These names faded once it was determined that Walbaum's description of type specimens was conspecific and therefore had precedence. In 1989, morphological and genetic studies indicated that trout of the Pacific Basin were genetically closer to Pacific salmon (Oncorhynchus species) than to the Salmos – brown trout (Salmo trutta) or Atlantic salmon (Salmo salar) of the Atlantic Basin. Thus, in 1989, taxonomic authorities moved the rainbow, cutthroat, and other Pacific Basin trout into the genus Oncorhynchus. Walbaum's name had precedence, so the species name Oncorhynchus mykiss became the scientific name of the rainbow trout. The previous species names irideus and gairdneri were adopted as subspecies names for the coastal rainbow and Columbia River redband trout, respectively." ;
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Rainbow_trout, accessed 2021-06-16
+https://www.wikidata.org/wiki/Q187986, accessed 20212-06-16"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_000647
+<http://purl.dataone.org/odo/salmon_000647> rdf:type owl:NamedIndividual ,
+                                                     <http://purl.dataone.org/odo/salmon_000587> ;
+                                            <http://rs.tdwg.org/dwc/terms/nameAccordingTo> <http://purl.dataone.org/odo/salmon_000646> ;
+                                            <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/salmon_000597> ,
+                                                                                          <http://purl.dataone.org/odo/salmon_000648> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-15T23:34:02Z"^^xsd:dateTime ;
+                                            rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
+
+Unsure of migration pattern to include as object property""" ;
+                                            rdfs:label "Oncorhynchus mykiss irideus"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_000648
+<http://purl.dataone.org/odo/salmon_000648> rdf:type owl:NamedIndividual ,
+                                                     <http://purl.dataone.org/odo/salmon_00126> ;
+                                            <http://rs.tdwg.org/dwc/terms/scientificName> <http://purl.dataone.org/odo/salmon_000647> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-15T23:43:41Z"^^xsd:dateTime ;
+                                            rdfs:label "Coastal rainbow trout"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_000650
+<http://purl.dataone.org/odo/salmon_000650> rdf:type owl:NamedIndividual ,
+                                                     <http://purl.dataone.org/odo/salmon_000614> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-16T16:03:41Z"^^xsd:dateTime ;
+                                            rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
+
+needs definition; could use input from others""" ;
+                                            rdfs:label "Semi-anadromous"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_000652
+<http://purl.dataone.org/odo/salmon_000652> rdf:type owl:NamedIndividual ,
+                                                     <http://purl.dataone.org/odo/salmon_00126> ;
+                                            <http://rs.tdwg.org/dwc/terms/scientificName> <http://purl.dataone.org/odo/salmon_000654> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-16T16:10:16Z"^^xsd:dateTime ;
+                                            rdfs:label "Coastal cutthroat trout"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_000654
+<http://purl.dataone.org/odo/salmon_000654> rdf:type owl:NamedIndividual ,
+                                                     <http://purl.dataone.org/odo/salmon_000587> ;
+                                            <http://purl.dataone.org/odo/salmon_000618> <http://purl.dataone.org/odo/salmon_000612> ;
+                                            <http://rs.tdwg.org/dwc/terms/nameAccordingTo> <http://purl.dataone.org/odo/salmon_000595> ;
+                                            <http://rs.tdwg.org/dwc/terms/vernacularName> <http://purl.dataone.org/odo/salmon_000652> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-16T17:31:20Z"^^xsd:dateTime ;
+                                            rdfs:comment """[ADDRESS COMMENT, THEN DELELTE]
+
+Unsure how to model the following, since semi-anadromy doesn't necessarily apply to all O. c. clarkii:
+
+Some populations of the coastal cutthroat trout (O. c. clarkii) are semi-anadromous. (source: https://en.wikipedia.org/wiki/Cutthroat_trout)""" ;
+                                            rdfs:label "Oncorhynchus clarkii clarkii"@en .
+
+
 #################################################################
 #    Annotations
 #################################################################
 
-owl:Thing rdfs:comment "- search for '[ADDRESS COMMENT, THEN DELETE]' to find terms that need further review" .
+owl:Thing rdfs:comment "search for '[ADDRESS COMMENT, THEN DELETE]' to find terms that need further review" ,
+                       "search for '[NEEDS ALIGNMENT]' to find terms that should have owl:equivalentClass assertions (but were removed for now b/c Protege was having issues)" .
 
 
 #################################################################
