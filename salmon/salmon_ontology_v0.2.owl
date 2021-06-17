@@ -530,7 +530,7 @@ http://en.wikipedia.org/wiki/Time""" ;
 
 ###  http://purl.dataone.org/odo/ECSO_00002132
 <http://purl.dataone.org/odo/ECSO_00002132> rdf:type owl:Class ;
-                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002269> ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002130> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0003-1264-1166> ;
                                             <http://purl.org/dc/elements/1.1/date> "2019-01-17T18:58:37Z"^^xsd:dateTime ;
                                             rdfs:label "longitude coordinate"@en .
@@ -697,17 +697,17 @@ https://www.wikidata.org/wiki/Q2001982, accessed 2021-06-14"""
 
 ###  http://purl.dataone.org/odo/salmon_000479
 <http://purl.dataone.org/odo/salmon_000479> rdf:type owl:Class ;
-                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000499> ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000504> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-04-26T23:21:35Z"^^xsd:dateTime ;
                                             rdfs:label "Salmon escapement count"@en ;
-                                            <http://www.w3.org/2004/02/skos/core#definition> "Salmon escapement is the amount of a salmon population that does not get caught by commercial or recreational fisheries and return to their freshwater spawning habitat." .
+                                            <http://www.w3.org/2004/02/skos/core#definition> "The number of salmon which do not get caught by commercial or recreational fisheries and return to their freshwater spawning habitat." .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_000479> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
-   owl:annotatedTarget "Salmon escapement is the amount of a salmon population that does not get caught by commercial or recreational fisheries and return to their freshwater spawning habitat." ;
-   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Salmon_escapement, accessed 2021-04-26
+   owl:annotatedTarget "The number of salmon which do not get caught by commercial or recreational fisheries and return to their freshwater spawning habitat." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://en.wikipedia.org/wiki/Salmon_escapement, accessed 2021-04-26
 https://www.wikidata.org/wiki/Q23582242, accessed 2021-04-26"""
  ] .
 
@@ -832,7 +832,7 @@ This may be a good resource: https://www.fws.gov/r7/fisheries/genetics/pdf/09_rf
                                             rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
 
 There may be subclasses to include here. Need to research further.""" ;
-                                            rdfs:label "Hermaphrodite *"@en .
+                                            rdfs:label "Hermaphrodite"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_000489
@@ -848,13 +848,18 @@ rdfs:label here needs to reflect a method""" ;
 
 ###  http://purl.dataone.org/odo/salmon_000491
 <http://purl.dataone.org/odo/salmon_000491> rdf:type owl:Class ;
-                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000499> ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000504> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-04-28T18:15:41Z"^^xsd:dateTime ;
-                                            rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
+                                            rdfs:label "Salmon harvest count"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "The number of recruits which survive to a legal age and/or size and are captured by a fishery." .
 
-needs defintion; should also include other fishery harvest counts as subclasses? e.g. in addition to 'Commercial harvest count', include 'Subsistence harvest count' etc.""" ;
-                                            rdfs:label "Salmon harvest count"@en .
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000491> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The number of recruits which survive to a legal age and/or size and are captured by a fishery." ;
+   <http://purl.org/dc/elements/1.1/source> <http://orcid.org/0000-0002-5300-3075>
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_000492
@@ -954,7 +959,7 @@ There are lots of subclasses in here that need work.""" ;
 
 ###  http://purl.dataone.org/odo/salmon_000501
 <http://purl.dataone.org/odo/salmon_000501> rdf:type owl:Class ;
-                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000499> ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000504> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-04-29T18:39:15Z"^^xsd:dateTime ;
                                             rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
@@ -1002,7 +1007,7 @@ http://purl.obolibrary.org/obo/PCO_0000004""" ;
                                             rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
 
 needs defintion""" ;
-                                            rdfs:label "Salmon stock abundance"@en .
+                                            rdfs:label "Salmon abundance"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_000505
@@ -1010,11 +1015,21 @@ needs defintion""" ;
                                             rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000504> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-04-29T19:02:08Z"^^xsd:dateTime ;
-                                            rdfs:comment "An Essential Salmon Variable (ESV) from the working list being developed by Graeme Diack et al. at the Atlantic Salmon Trust." ,
+                                            rdfs:comment "An Essential Salmon Variable (ESV) from the working list being developed by Graeme Diack et al. at the Atlantic Salmon Trust. The ESV list uses the label 'Adult spawning stock abundance' rather than 'Spawner abundance.'" ,
                                                          """[ADDRESS COMMENT, THEN DELETE]
 
-needs defintion""" ;
-                                            rdfs:label "Adult spawning stock abundance"@en .
+verify this definition""" ;
+                                            rdfs:label "Spawner abundance"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> """adult spawning stock abundance
+adult spawning stock""" ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "The total number of recruits which successfully return to spawn in freshwater habitats for a given brood year." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000505> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The total number of recruits which successfully return to spawn in freshwater habitats for a given brood year." ;
+   <http://purl.org/dc/elements/1.1/source> <http://orcid.org/0000-0002-5300-3075>
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_000506
@@ -1050,7 +1065,10 @@ needs defintion""" ;
                                             rdfs:subClassOf <http://purl.dataone.org/odo/ECSO_00002050> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-04T17:21:40Z"^^xsd:dateTime ;
-                                            rdfs:label "Year of fish harvest (?)"@en .
+                                            rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
+
+needs definition""" ;
+                                            rdfs:label "Year of fish harvest"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_000519
@@ -1058,7 +1076,10 @@ needs defintion""" ;
                                             rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000518> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-05-04T17:21:48Z"^^xsd:dateTime ;
-                                            rdfs:label "Year of commercial fish harvest *"@en ;
+                                            rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
+
+needs definition""" ;
+                                            rdfs:label "Year of commercial fish harvest"@en ;
                                             <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://purl.dataone.org/odo/salmon_000492> .
 
 
@@ -1074,7 +1095,7 @@ needs defintion""" ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_000520> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "The parental year for a group of returning salmon, i.e. the calendar year when the majority of parents of these fish spawned." ;
-   <http://purl.org/dc/elements/1.1/source> "https://www.pac.dfo-mpo.gc.ca/fm-gp/salmon-saumon/gloss-eng.html, accessed 04May2021"
+   <http://purl.org/dc/elements/1.1/source> "https://www.pac.dfo-mpo.gc.ca/fm-gp/salmon-saumon/gloss-eng.html, accessed 2021-05-04"
  ] .
 
 
@@ -1724,14 +1745,14 @@ https://en.wikipedia.org/wiki/Acoustic_tag, accessed 2021-05-05"""
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_000548> ;
    owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
-   owl:annotatedTarget "If performed correctly, this identification type may remain attached for the entire life of the fish, is used for individual tagging, and is most suitable for fish at least 15cm in length and which live in open environments. To attach a Carlin tag, double cannulas are first inserted through the fish at the height of the center of the pterygiophores (the bones that support the dorsal fin). Two stainless steel wires are then pulled through the cannulas and then the cannulas are pulled out of the fish. A small metal plate with an alphanumeric code is atached to the steel wires, which are then twisted tightly against the fish's body to hold the plate in place." ;
+   owl:annotatedTarget "A metal plate with a unique identifying code, which is attached to a fish below the dorsal fin via two stainless steel wires." ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 2021-05-05"
  ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_000548> ;
    owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
-   owl:annotatedTarget "A metal plate with a unique identifying code, which is attached to a fish below the dorsal fin via two stainless steel wires." ;
+   owl:annotatedTarget "If performed correctly, this identification type may remain attached for the entire life of the fish, is used for individual tagging, and is most suitable for fish at least 15cm in length and which live in open environments. To attach a Carlin tag, double cannulas are first inserted through the fish at the height of the center of the pterygiophores (the bones that support the dorsal fin). Two stainless steel wires are then pulled through the cannulas and then the cannulas are pulled out of the fish. A small metal plate with an alphanumeric code is atached to the steel wires, which are then twisted tightly against the fish's body to hold the plate in place." ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 2021-05-05"
  ] .
 
@@ -2995,6 +3016,199 @@ https://www.wikidata.org/wiki/Q5138345, accessed 2021-06-15"""
                                             <http://www.w3.org/2004/02/skos/core#altLabel> """O. c. clarkii
 Onchorhynchus c. clarkii""" ;
                                             <http://www.w3.org/2004/02/skos/core#definition> "The class which contains all instances of Oncorhynchus clarkii clarkii." .
+
+
+###  http://purl.dataone.org/odo/salmon_000656
+<http://purl.dataone.org/odo/salmon_000656> rdf:type owl:Class ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-16T22:33:55Z"^^xsd:dateTime ;
+                                            rdfs:label "Dataset type"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> """[ADDRESS COMMENT, THEN DELETE]
+
+needs definition; also, I created this because I didn't know where to put 'Brood table' but could use input""" .
+
+
+###  http://purl.dataone.org/odo/salmon_000657
+<http://purl.dataone.org/odo/salmon_000657> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000656> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-16T22:33:58Z"^^xsd:dateTime ;
+                                            rdfs:label "Brood table"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> "run reconstruction" ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "Brood tables, also called run reconstructions, utilize annual estimates of the total run (commercial catch plus escapement), and samples of ages, to estimate the number of recruits per age class. These data are useful for salmon biologists to understand salmon productivity and salmon life histories." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000657> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Brood tables, also called run reconstructions, utilize annual estimates of the total run (commercial catch plus escapement), and samples of ages, to estimate the number of recruits per age class. These data are useful for salmon biologists to understand salmon productivity and salmon life histories." ;
+   <http://purl.org/dc/elements/1.1/source> "https://nceas.github.io/sasap-training/materials/reproducible_research_in_r_fairbanks/example-brood-table-analysis.html, accessed 2021-06-16"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_000658
+<http://purl.dataone.org/odo/salmon_000658> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00167> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-16T22:45:21Z"^^xsd:dateTime ;
+                                            rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
+
+needs definition""" ;
+                                            rdfs:label "Fish weight measurement type"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> """fish weight
+weight of fish
+fish mass
+mass of fish""" .
+
+
+###  http://purl.dataone.org/odo/salmon_000659
+<http://purl.dataone.org/odo/salmon_000659> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000658> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-16T22:53:55Z"^^xsd:dateTime ;
+                                            rdfs:label "Wet weight"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "The weight of a fish, typically taken when the specimen is still alive or freshly deceased, but before being frozen or further processed." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000659> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The weight of a fish, typically taken when the specimen is still alive or freshly deceased, but before being frozen or further processed." ;
+   <http://purl.org/dc/elements/1.1/source> <http://orcid.org/0000-0002-5300-3075>
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_000660
+<http://purl.dataone.org/odo/salmon_000660> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000658> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-16T22:54:03Z"^^xsd:dateTime ;
+                                            rdfs:label "Frozen weight"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "The weight of a fish, taken after the specimen has been frozen." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000660> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The weight of a fish, taken after the specimen has been frozen." ;
+   <http://purl.org/dc/elements/1.1/source> <http://orcid.org/0000-0002-5300-3075>
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_000661
+<http://purl.dataone.org/odo/salmon_000661> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000658> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-16T22:57:49Z"^^xsd:dateTime ;
+                                            rdfs:label "Standard weight"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "The typical or expected weight at a given total length for a specific species of fish. Most standard weight equations are for freshwater fish species." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000661> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The typical or expected weight at a given total length for a specific species of fish. Most standard weight equations are for freshwater fish species." ;
+   <http://purl.org/dc/elements/1.1/source> """https://en.wikipedia.org/wiki/Standard_weight_in_fish, accessed 2021-06-16
+https://www.wikidata.org/wiki/Q7598325, accessed 2021-06-16"""
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_000662
+<http://purl.dataone.org/odo/salmon_000662> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00187> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-17T16:11:34Z"^^xsd:dateTime ;
+                                            <http://purl.org/dc/elements/1.1/description> "For example, salmon of age class 2 include all individuals in a population of interest that are two years old." ;
+                                            rdfs:label "Age class"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "A group of individuals of the same species that have the same age." .
+
+
+###  http://purl.dataone.org/odo/salmon_000663
+<http://purl.dataone.org/odo/salmon_000663> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000504> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-17T16:16:10Z"^^xsd:dateTime ;
+                                            <http://purl.org/dc/elements/1.1/description> "Recruits do not include individuals lost to predation." ;
+                                            <http://purl.org/dc/elements/1.1/source> """[ADDRESS COMMENT, THEN DELETE]
+
+verify definition""" ;
+                                            rdfs:label "Total recruit abundance"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "The number of salmon which survive to reach legal age and/or size for harvest. Recruits include both individuals that are captured by a fishery and individuals that escape the fishery -- total recruitment is calculated as catch plus escapement." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000663> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "The number of salmon which survive to reach legal age and/or size for harvest. Recruits include both individuals that are captured by a fishery and individuals that escape the fishery -- total recruitment is calculated as catch plus escapement." ;
+   <http://purl.org/dc/elements/1.1/source> <http://orcid.org/0000-0002-5300-3075>
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_000664
+<http://purl.dataone.org/odo/salmon_000664> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000663> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-17T16:30:26Z"^^xsd:dateTime ;
+                                            rdfs:label "Age class 0 recruits"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "Total number of recruits of age class zero." .
+
+
+###  http://purl.dataone.org/odo/salmon_000665
+<http://purl.dataone.org/odo/salmon_000665> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000663> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-17T16:30:32Z"^^xsd:dateTime ;
+                                            rdfs:label "Age class 1 recruits"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "Total number of recruits of age class one." .
+
+
+###  http://purl.dataone.org/odo/salmon_000666
+<http://purl.dataone.org/odo/salmon_000666> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000663> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-17T16:30:43Z"^^xsd:dateTime ;
+                                            rdfs:label "Age class 2 recruits"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "Total number of recruits of age class two." .
+
+
+###  http://purl.dataone.org/odo/salmon_000667
+<http://purl.dataone.org/odo/salmon_000667> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000663> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-17T16:30:49Z"^^xsd:dateTime ;
+                                            rdfs:label "Age class 3 recruits"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "Total number of recruits of age class three." .
+
+
+###  http://purl.dataone.org/odo/salmon_000668
+<http://purl.dataone.org/odo/salmon_000668> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000663> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-17T16:31:03Z"^^xsd:dateTime ;
+                                            rdfs:label "Age class 4 recruits"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "Total number of recruits of age class four." .
+
+
+###  http://purl.dataone.org/odo/salmon_000669
+<http://purl.dataone.org/odo/salmon_000669> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000663> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-17T16:31:10Z"^^xsd:dateTime ;
+                                            rdfs:label "Age class 5 recruits"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "Total number of recruits of age class five." .
+
+
+###  http://purl.dataone.org/odo/salmon_000670
+<http://purl.dataone.org/odo/salmon_000670> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000663> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-17T16:31:20Z"^^xsd:dateTime ;
+                                            rdfs:label "Age class 6 recruits"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "Total number of recruits of age class six." .
+
+
+###  http://purl.dataone.org/odo/salmon_000671
+<http://purl.dataone.org/odo/salmon_000671> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000521> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-06-17T17:12:48Z"^^xsd:dateTime ;
+                                            <http://purl.org/dc/elements/1.1/description> "A numeric or alphanumeric code, which represents a particular salmon stock and may be recorded in place of a formal scientific or vernacular name." ;
+                                            rdfs:label "Fish stock identifier"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_00124
@@ -4893,7 +5107,7 @@ O. kisutch
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00216> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-19T18:26:55Z"^^xsd:dateTime ;
-                                           rdfs:label "Unknown sex *"@en .
+                                           rdfs:label "Unknown sex"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_00400
@@ -4901,7 +5115,7 @@ O. kisutch
                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00216> ;
                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                            <http://purl.org/dc/elements/1.1/date> "2021-04-21T21:15:55Z"^^xsd:dateTime ;
-                                           rdfs:label "Immature *"@en .
+                                           rdfs:label "Immature"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_00401
