@@ -3,10 +3,10 @@
 Community developed and maintained ontologies for concepts needed for earth observations data and workflow processes. The repositorry contains the following ontologies:
 
 * ProvONE: Workflow provenance model extending W3C PROV
-* ECSO
-* SALMO
-* Arctic Report Card
-* MOSAIC
+* ECSO: The Ecosystems Ontology
+* SALMO: Salmon Concepts Ontology
+* Arctic Report Card: Concepts for the NOAA Arctic Report Card
+* MOSAIC: An ontology for annotating data from the MOSAiC Expedition
 
 These were originally developed by the Semantics and Provenance Working Group from [DataONE](https://dataone.org), but now are open for community contributions and maintenance.
 
