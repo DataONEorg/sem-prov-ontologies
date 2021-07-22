@@ -958,10 +958,16 @@ needs defintion""" ;
                                             rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000476> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-04-28T18:42:51Z"^^xsd:dateTime ;
-                                            rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
+                                            rdfs:label "Fish biomass"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#closeMatch> <http://purl.bioontology.org/ontology/MESH/D018533> ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "Total mass of all fish of a given type and/or in a given area." .
 
-needs defintion""" ;
-                                            rdfs:label "Fish biomass"@en .
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000493> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "Total mass of all fish of a given type and/or in a given area." ;
+   <http://purl.org/dc/elements/1.1/source> <http://purl.bioontology.org/ontology/MESH/D018533>
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_000494
@@ -1784,18 +1790,18 @@ Radio tag""" ;
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.dataone.org/odo/salmon_000546> ;
-   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
-   owl:annotatedTarget "This type of identification can remain on a fish for several years, is used for individual tagging, and is most suitable for fish that weigh at least 100g (given current technology). One or more sutures are typically used to attach the tag to the fish's skin using a needle. Data is transmitted wirelessly, usually through the use of radio waves (in fresh water and air), acoustic signals (in water; the receiver must also be in the water) or via satellite communication (in air; the tag sends data after it releases from the fish and floats up to the surface). Many types of telemetry devices also act as bio-loggers and store information locally on the device. Reading is done using the tag’s associated equipment, often through a computer connection." ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 2021-05-05"
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000546> ;
    owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
    owl:annotatedTarget "A small, electronic, sound-emitting device which is attached externally to a fish and collects information on fish movement patterns and the physical environment." ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> """https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 2021-05-05
 
 https://en.wikipedia.org/wiki/Acoustic_tag, accessed 2021-05-05"""
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000546> ;
+   owl:annotatedProperty <http://purl.org/dc/elements/1.1/description> ;
+   owl:annotatedTarget "This type of identification can remain on a fish for several years, is used for individual tagging, and is most suitable for fish that weigh at least 100g (given current technology). One or more sutures are typically used to attach the tag to the fish's skin using a needle. Data is transmitted wirelessly, usually through the use of radio waves (in fresh water and air), acoustic signals (in water; the receiver must also be in the water) or via satellite communication (in air; the tag sends data after it releases from the fish and floats up to the surface). Many types of telemetry devices also act as bio-loggers and store information locally on the device. Reading is done using the tag’s associated equipment, often through a computer connection." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://jordbruksverket.se/download/18.38d764e9177375620998e232/1611738582157/Rapport-Fish-identification-marking-and-tagging-methods.pdf, accessed 2021-05-05"
  ] .
 
 
@@ -3240,7 +3246,7 @@ https://www.wikidata.org/wiki/Q7598325, accessed 2021-06-16"""
 
 ###  http://purl.dataone.org/odo/salmon_000663
 <http://purl.dataone.org/odo/salmon_000663> rdf:type owl:Class ;
-                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000504> ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000781> ;
                                             <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
                                             <http://purl.org/dc/elements/1.1/date> "2021-06-17T16:16:10Z"^^xsd:dateTime ;
                                             <http://purl.org/dc/elements/1.1/description> "Recruits do not include individuals lost to predation." ;
@@ -4321,14 +4327,77 @@ https://www.wikidata.org/wiki/Q3808922, accessed 2021-06-23"""
                                             <http://www.w3.org/2004/02/skos/core#definition> "Total number of recruits of age class 8.9." .
 
 
-###  http://purl.dataone.org/odo/salmon_00124
-<http://purl.dataone.org/odo/salmon_00124> rdf:type owl:Class ;
-                                           <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
-                                           <http://purl.org/dc/elements/1.1/date> "2021-03-30T20:59:48Z"^^xsd:dateTime ;
-                                           rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
+###  http://purl.dataone.org/odo/salmon_000776
+<http://purl.dataone.org/odo/salmon_000776> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000484> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-07-16T19:32:02Z"^^xsd:dateTime ;
+                                            rdfs:label "Fish weight proxy measurement type"@en .
 
-add community, place, waterbody names etc. from solr query; can also look for unique values in datasets with attributes pertaining to area names/types; for example, see the 'areaname' attribute in dataset 'workerCharacteristics.csv' in datapackage: https://search.dataone.org/view/doi:10.5063/F16M354H""" ;
-                                           rdfs:label "Place or location"@en .
+
+###  http://purl.dataone.org/odo/salmon_000777
+<http://purl.dataone.org/odo/salmon_000777> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000776> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-07-16T19:32:26Z"^^xsd:dateTime ;
+                                            rdfs:label "Girth of fish"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "A measurement taken around the thickest portion of the midsection of a fish." .
+
+
+###  http://purl.dataone.org/odo/salmon_000778
+<http://purl.dataone.org/odo/salmon_000778> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_00182> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-07-16T19:37:18Z"^^xsd:dateTime ;
+                                            rdfs:label "Fish weight determination method"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_000779
+<http://purl.dataone.org/odo/salmon_000779> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000778> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-07-16T19:37:41Z"^^xsd:dateTime ;
+                                            rdfs:label "Measuring the girth of a fish"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#definition> "A method which is used to approximate the total weight of a fish and which involves wrapping a cloth tape measure perpendicular to the longitudinal axis of the fish to measure its circumference at the thickest point." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_000779> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A method which is used to approximate the total weight of a fish and which involves wrapping a cloth tape measure perpendicular to the longitudinal axis of the fish to measure its circumference at the thickest point." ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "https://www.adfg.alaska.gov/FedAidPDFs/fds06-70.pdf, accessed 2021-07-16"
+ ] .
+
+
+###  http://purl.dataone.org/odo/salmon_000780
+<http://purl.dataone.org/odo/salmon_000780> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000572> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-07-19T20:55:57Z"^^xsd:dateTime ;
+                                            rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
+
+need help with rdfs:label and skos:altLabels here""" ;
+                                            rdfs:label "AWC water body code"@en ;
+                                            <http://www.w3.org/2004/02/skos/core#altLabel> """Anadromous Waters Catalog water body code
+State of Alaska's Anadromous Waters Stream Catalog""" .
+
+
+###  http://purl.dataone.org/odo/salmon_000781
+<http://purl.dataone.org/odo/salmon_000781> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000504> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-07-20T21:55:15Z"^^xsd:dateTime ;
+                                            rdfs:label "Recruit abundance"@en .
+
+
+###  http://purl.dataone.org/odo/salmon_000782
+<http://purl.dataone.org/odo/salmon_000782> rdf:type owl:Class ;
+                                            rdfs:subClassOf <http://purl.dataone.org/odo/salmon_000781> ;
+                                            <http://purl.org/dc/elements/1.1/creator> <http://orcid.org/0000-0002-5300-3075> ;
+                                            <http://purl.org/dc/elements/1.1/date> "2021-07-20T21:55:30Z"^^xsd:dateTime ;
+                                            rdfs:comment """[ADDRESS COMMENT, THEN DELETE]
+
+needs definition""" ;
+                                            rdfs:label "Recruits per spawner"@en .
 
 
 ###  http://purl.dataone.org/odo/salmon_00125
@@ -6593,6 +6662,13 @@ http://purl.dataone.org/odo/ECSO_00001669""" ;
                                            rdfs:label "Dissolved oxygen concentration"@en ;
                                            <http://www.w3.org/2004/02/skos/core#altLabel> "DO concentration" ;
                                            <http://www.w3.org/2004/02/skos/core#definition> "A concentration of the amount of oxygen present in water." .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.dataone.org/odo/salmon_00426> ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A concentration of the amount of oxygen present in water." ;
+   <http://purl.org/dc/elements/1.1/source> <http://purl.dataone.org/odo/ECSO_00001669>
+ ] .
 
 
 ###  http://purl.dataone.org/odo/salmon_00457
