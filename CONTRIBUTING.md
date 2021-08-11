@@ -54,7 +54,7 @@ into several branches, each with a specific purpose.
 reflects the current releases for each ontology. Changes should not occur
 directly on the main branch, but rather be merged from `develop` using a Pull
 Request once a new release has been fully vetted. Thus, the `main` branch is
-locked and requires formal review and approval from two project members before
+locked and requires formal review and approval from one project member before
 the release pull request can be merged.  Once a PR from `develop` has been
 merged, a tag should be immediately created reflecting the version released.
 These tags should be of the form `NAME-version`, where NAME is the abbreviated
