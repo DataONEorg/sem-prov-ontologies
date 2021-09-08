@@ -9,7 +9,7 @@ def get_ontology_campaigns_list():
     logging.info("Getting campaigns list from ontology...")
 
     graph = rdflib.Graph()
-    graph.parse("../../MOSAiC.owl")
+    graph.parse("./MOSAiC/MOSAiC.owl")
 
     q = """
         PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
