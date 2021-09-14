@@ -1,0 +1,21 @@
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix mosaic: <https://purl.dataone.org/odo/MOSAIC_> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+
+mosaic:CampaignShape
+    a sh:NodeShape ;
+    sh:targetClass mosaic:00000001;
+    # Every Campaign has at least one sosa:hosts triple
+    sh:property [
+        sh:path sosa:hosts ;
+        sh:minCount 1 ;
+    ] ;
+    # Every Campaign has at least one mosaic:hasBasis triple
+    sh:property [
+        sh:path mosaic:00000034 ;
+        sh:minCount 1 ;
+    ] .
