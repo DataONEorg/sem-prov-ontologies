@@ -15,8 +15,8 @@ jobs:
         with:
           distribution: 'adopt'
           java-version: '11'
-      - run: curl -O https://mirror.nodesdirect.com/apache/jena/binaries/apache-jena-4.1.0.tar.gz
-      - run: tar xzf apache-jena-4.1.0.tar.gz
+      - run: curl -O https://dlcdn.apache.org/jena/binaries/apache-jena-4.2.0.tar.gz
+      - run: tar xzf apache-jena-4.2.0.tar.gz
       - run: sh ./.github/validate.sh
 
   website:
