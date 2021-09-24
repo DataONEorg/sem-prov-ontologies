@@ -25,7 +25,7 @@ def create_build_dir():
 def get_ontologies():
     with open(ONTOLOGIES_FILE) as onto_file:
         files = [tuple(line.rstrip("\n").split(",")) for line in onto_file.readlines()]
-        return [{"name": file[0], "title": file[1], "path": file[2]} for file in files]
+        return [{"name": file[0], "title": file[1], "path": file[2], "basename": os.path.basename(file[2])} for file in files]
 
 
 def parse_ontology(path):
