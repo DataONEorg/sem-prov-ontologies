@@ -11,7 +11,7 @@ Overview TO BE WRITTEN...
 
 ### URIs
 
-All term URIs begin with the prefix `http://purl.dataone.org/odo/SENSO_` and conform to the [printf](https://en.wikipedia.org/wiki/Printf_format_string) format of `http://purl.dataone.org/odo/SENS)_%08d`.
+All term URIs begin with the prefix `http://purl.dataone.org/odo/SENSO_` and conform to the [printf](https://en.wikipedia.org/wiki/Printf_format_string) format of `http://purl.dataone.org/odo/SENSO_%08d`.
 
 ### Imports
 
