@@ -12,18 +12,18 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
-@base <http://purl.dataone.org/odo/SENSO> .
+@base <http://purl.dataone.org/odo/SENSO_> .
 
 <http://purl.dataone.org/odo/SENSO_> rdf:type owl:Ontology ;
-                                     owl:versionIRI <http://purl.dataone.org/odo/SENSO/0.1.0> ;
-                                     owl:versionInfo "Version 0.1.0" ;
-                                     owl:imports <http://purl.obofoundry.org/obo/DUO.owl> ,
-                                                 <http://purl.obofoundry.org/obo/ICO.owl> ;
-                                     terms:creator <https://orcid.org/0000-0003-0077-4738> ;
-                                     terms:created "2021-09-28"^^xsd:date ;
-                                     terms:license <https://creativecommons.org/licenses/by/4.0/> ;
-                                     terms:title "Sensitive Data Ontology (SENSO)"@en ;
-                                     terms:description "Ontology to support sensitive data annotation of datasets housed at the Arctic Data Center (https://arcticdata.io)"@en .
+                                      owl:versionIRI <http://purl.dataone.org/odo/SENSO/0.1.0> ;
+                                      owl:imports <http://purl.obofoundry.org/obo/DUO.owl> ,
+                                                  <http://purl.obofoundry.org/obo/ICO.owl> ;
+                                      terms:created "2021-09-28"^^xsd:date ;
+                                      terms:creator <https://orcid.org/0000-0003-0077-4738> ;
+                                      terms:description "Ontology to support sensitive data annotation of datasets housed at the Arctic Data Center (https://arcticdata.io)"@en ;
+                                      terms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                      terms:title "Sensitive Data Ontology (SENSO)"@en ;
+                                      owl:versionInfo "Version 0.1.0" .
 
 #################################################################
 #    Annotation properties
@@ -34,6 +34,10 @@ obo:IAO_0000115 rdf:type owl:AnnotationProperty ;
                 dc:creator <http://orcid.org/0000-0002-5300-3075> ;
                 dc:date "2021-09-28T19:46:54Z"^^xsd:dateTime ;
                 rdfs:label "definition"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000118
+obo:IAO_0000118 rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.obolibrary.org/odo/IAO_0000119
@@ -55,8 +59,32 @@ dc:date rdf:type owl:AnnotationProperty .
 dc:description rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/created
+terms:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+terms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+terms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+terms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+terms:title rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.geneontology.org/formats/oboInOwl#id
 oboInOwl:id rdf:type owl:AnnotationProperty .
+
+
+###  http://www.geneontology.org/formats/oboInOwl#shorthand
+oboInOwl:shorthand rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2000/01/rdf-schema#comment
@@ -72,188 +100,266 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 
 
 #################################################################
-#    Object Properties
+#    Datatypes
 #################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-### http://purl.obolibrary.org/obo/DUO_0000001
-obo:DUO_0000001
-    obo:IAO_0000115 "A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used."@en ;
-    obo:IAO_0000118 "consent code"^^xsd:string ;
-    oboInOwl:id "DUO:0000001"^^xsd:string ;
-    a owl:Class ;
-    rdfs:label "data use permission"@en ;
-    rdfs:subClassOf obo:IAO_0000027 .
+###  http://purl.obolibrary.org/obo/DUO_0000001
+obo:DUO_0000001 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000027 ;
+                obo:IAO_0000115 "A data item that is used to indicate consent permissions for datasets and/or materials, and relates to the purposes for which datasets and/or material might be removed, stored or used."@en ;
+                obo:IAO_0000118 "consent code"^^xsd:string ;
+                oboInOwl:id "DUO:0000001"^^xsd:string ;
+                rdfs:label "data use permission"@en .
 
-### http://purl.obolibrary.org/obo/DUO_0000004
-obo:DUO_0000004
-    obo:IAO_0000115 "This data use permission indicates there is no restriction on use."@en ;
-    oboInOwl:id "DUO:0000004"^^xsd:string ;
-    oboInOwl:shorthand "NRES"^^xsd:string ;
-    a owl:Class ;
-    rdfs:comment "20180907, Meeting Moran Melanie: This is to be thought about more carefully - what is the intent when using 'no restriction' as usually users still need to be researchers.", "Note: the NRES alternative term may be confusing as in the UK it also stands for National Research Ethics Service"^^xsd:string ;
-    rdfs:label "no restriction"@en ;
-    rdfs:subClassOf obo:DUO_0000001 .
 
-### http://purl.obolibrary.org/obo/DUO_0000011
-obo:DUO_0000011
-    obo:IAO_0000115 "This data use permission indicates that use of the data is limited to the study of population origins or ancestry."@en ;
-    obo:IAO_0000118 "population origins/ancestry research"^^xsd:string ;
-    oboInOwl:id "DUO:0000011"^^xsd:string ;
-    oboInOwl:shorthand "POA"^^xsd:string ;
-    a owl:Class ;
-    rdfs:label "population origins or ancestry research only"@en ;
-    rdfs:subClassOf obo:DUO_0000001 .
+###  http://purl.obolibrary.org/obo/DUO_0000004
+obo:DUO_0000004 rdf:type owl:Class ;
+                rdfs:subClassOf obo:DUO_0000001 ;
+                obo:IAO_0000115 "This data use permission indicates there is no restriction on use."@en ;
+                oboInOwl:id "DUO:0000004"^^xsd:string ;
+                oboInOwl:shorthand "NRES"^^xsd:string ;
+                rdfs:comment "20180907, Meeting Moran Melanie: This is to be thought about more carefully - what is the intent when using 'no restriction' as usually users still need to be researchers." ,
+                             "Note: the NRES alternative term may be confusing as in the UK it also stands for National Research Ethics Service"^^xsd:string ;
+                rdfs:label "no restriction"@en .
 
-### http://purl.obolibrary.org/obo/DUO_0000017
-obo:DUO_0000017
-    obo:IAO_0000115 "Data use modifiers indicate additional conditions for use."@en ;
-    oboInOwl:id "DUO:0000017"^^xsd:string ;
-    a owl:Class ;
-    rdfs:label "data use modifier"@en ;
-    rdfs:subClassOf obo:IAO_0000027 .
 
-### http://purl.obolibrary.org/obo/DUO_0000018
-obo:DUO_0000018
-    obo:IAO_0000115 "This data use modifier indicates that use of the data is limited to not-for-profit organizations and not-for-profit use, non-commercial use."@en ;
-    oboInOwl:id "DUO:0000018"^^xsd:string ;
-    oboInOwl:shorthand "NPUNCU"^^xsd:string ;
-    a owl:Class ;
-    rdfs:label "not for profit, non commercial use only"@en ;
-    rdfs:subClassOf obo:DUO_0000017 .
+###  http://purl.obolibrary.org/obo/DUO_0000011
+obo:DUO_0000011 rdf:type owl:Class ;
+                rdfs:subClassOf obo:DUO_0000001 ;
+                obo:IAO_0000115 "This data use permission indicates that use of the data is limited to the study of population origins or ancestry."@en ;
+                obo:IAO_0000118 "population origins/ancestry research"^^xsd:string ;
+                oboInOwl:id "DUO:0000011"^^xsd:string ;
+                oboInOwl:shorthand "POA"^^xsd:string ;
+                rdfs:label "population origins or ancestry research only"@en .
 
-### http://purl.obolibrary.org/obo/DUO_0000019
-obo:DUO_0000019
-    obo:IAO_0000115 "This data use modifier indicates that requestor agrees to make results of studies using the data available to the larger scientific community."@en ;
-    oboInOwl:id "DUO:0000019"^^xsd:string ;
-    oboInOwl:shorthand "PUB"^^xsd:string ;
-    a owl:Class ;
-    rdfs:label "publication required"@en ;
-    rdfs:subClassOf obo:DUO_0000017 .
 
-### http://purl.obolibrary.org/obo/DUO_0000020
-obo:DUO_0000020
-    obo:IAO_0000115 "This data use modifier indicates that the requestor must agree to collaboration with the primary study investigator(s)."@en ;
-    oboInOwl:id "DUO:0000020"^^xsd:string ;
-    oboInOwl:shorthand "COL"^^xsd:string ;
-    a owl:Class ;
-    rdfs:comment "This could be coupled with a string describing the primary study investigator(s)."@en ;
-    rdfs:label "collaboration required"@en ;
-    rdfs:subClassOf obo:DUO_0000017 .
+###  http://purl.obolibrary.org/obo/DUO_0000017
+obo:DUO_0000017 rdf:type owl:Class ;
+                rdfs:subClassOf obo:IAO_0000027 ;
+                obo:IAO_0000115 "Data use modifiers indicate additional conditions for use."@en ;
+                oboInOwl:id "DUO:0000017"^^xsd:string ;
+                rdfs:label "data use modifier"@en .
 
-### http://purl.obolibrary.org/obo/DUO_0000021
-obo:DUO_0000021
-    obo:IAO_0000115 "This data use modifier indicates that the requestor must provide documentation of local IRB/ERB approval."@en ;
-    oboInOwl:id "DUO:0000021"^^xsd:string ;
-    oboInOwl:shorthand "IRB"^^xsd:string ;
-    a owl:Class ;
-    rdfs:label "ethics approval required"@en ;
-    rdfs:subClassOf obo:DUO_0000017 .
 
-### http://purl.obolibrary.org/obo/DUO_0000026
-obo:DUO_0000026
-    obo:IAO_0000115 "This data use modifier indicates that use is limited to use by approved users."@en ;
-    oboInOwl:id "DUO:0000026"^^xsd:string ;
-    oboInOwl:shorthand "US"^^xsd:string ;
-    a owl:Class ;
-    rdfs:label "user specific restriction"@en ;
-    rdfs:subClassOf obo:DUO_0000017 .
+###  http://purl.obolibrary.org/obo/DUO_0000018
+obo:DUO_0000018 rdf:type owl:Class ;
+                rdfs:subClassOf obo:DUO_0000017 ;
+                obo:IAO_0000115 "This data use modifier indicates that use of the data is limited to not-for-profit organizations and not-for-profit use, non-commercial use."@en ;
+                oboInOwl:id "DUO:0000018"^^xsd:string ;
+                oboInOwl:shorthand "NPUNCU"^^xsd:string ;
+                rdfs:label "not for profit, non commercial use only"@en .
 
-### http://purl.obolibrary.org/obo/DUO_0000027
-obo:DUO_0000027
-    obo:IAO_0000115 "This data use modifier indicates that use is limited to use within an approved project."@en ;
-    oboInOwl:id "DUO:0000027"^^xsd:string ;
-    oboInOwl:shorthand "PS"^^xsd:string ;
-    a owl:Class ;
-    rdfs:label "project specific restriction"@en ;
-    rdfs:subClassOf obo:DUO_0000017 .
 
-### http://purl.obolibrary.org/obo/DUO_0000028
-obo:DUO_0000028
-    obo:IAO_0000115 "This data use modifier indicates that use is limited to use within an approved institution."@en ;
-    oboInOwl:id "DUO:0000028"^^xsd:string ;
-    oboInOwl:shorthand "IS"^^xsd:string ;
-    a owl:Class ;
-    rdfs:label "institution specific restriction"@en ;
-    rdfs:subClassOf obo:DUO_0000017 .
+###  http://purl.obolibrary.org/obo/DUO_0000019
+obo:DUO_0000019 rdf:type owl:Class ;
+                rdfs:subClassOf obo:DUO_0000017 ;
+                obo:IAO_0000115 "This data use modifier indicates that requestor agrees to make results of studies using the data available to the larger scientific community."@en ;
+                oboInOwl:id "DUO:0000019"^^xsd:string ;
+                oboInOwl:shorthand "PUB"^^xsd:string ;
+                rdfs:label "publication required"@en .
 
-### http://purl.obolibrary.org/obo/DUO_0000042
-obo:DUO_0000042
-    obo:IAO_0000115 "This data use permission indicates that use is allowed for general research use for any research purpose."@en ;
-    oboInOwl:id "DUO:0000042"^^xsd:string ;
-    oboInOwl:shorthand "GRU"^^xsd:string ;
-    a owl:Class ;
-    rdfs:comment "This includes but is not limited to: health/medical/biomedical purposes, fundamental biology research, the study of population origins or ancestry, statistical methods and algorithms development, and social-sciences research."@en ;
-    rdfs:label "general research use"@en ;
-    rdfs:subClassOf obo:DUO_0000001 .
 
-### http://purl.obolibrary.org/obo/DUO_0000043
-obo:DUO_0000043
-    obo:IAO_0000115 "This data use modifier indicates that use is allowed for clinical use and care."@en ;
-    oboInOwl:id "DUO:0000043"^^xsd:string ;
-    oboInOwl:shorthand "CC"^^xsd:string ;
-    a owl:Class ;
-    rdfs:comment "Clinical Care is defined as Health care or services provided at home, in a healthcare facility or hospital. Data may be used for clinical decision making."@en ;
-    rdfs:label "clinical care use"@en ;
-    rdfs:subClassOf obo:DUO_0000017 .
+###  http://purl.obolibrary.org/obo/DUO_0000020
+obo:DUO_0000020 rdf:type owl:Class ;
+                rdfs:subClassOf obo:DUO_0000017 ;
+                obo:IAO_0000115 "This data use modifier indicates that the requestor must agree to collaboration with the primary study investigator(s)."@en ;
+                oboInOwl:id "DUO:0000020"^^xsd:string ;
+                oboInOwl:shorthand "COL"^^xsd:string ;
+                rdfs:comment "This could be coupled with a string describing the primary study investigator(s)."@en ;
+                rdfs:label "collaboration required"@en .
 
-### http://purl.obolibrary.org/obo/DUO_0000045
-obo:DUO_0000045
-    obo:IAO_0000115 "This data use modifier indicates that use of the data is limited to not-for-profit organizations."@en ;
-    oboInOwl:id "DUO:0000045"^^xsd:string ;
-    oboInOwl:shorthand "NPU"^^xsd:string ;
-    a owl:Class ;
-    rdfs:label "not for profit organisation use only"@en ;
-    rdfs:subClassOf obo:DUO_0000018 .
 
-### http://purl.obolibrary.org/obo/DUO_0000046
-obo:DUO_0000046
-    obo:IAO_0000115 "This data use modifier indicates that use of the data is limited to not-for-profit use."@en ;
-    oboInOwl:id "DUO:0000046"^^xsd:string ;
-    oboInOwl:shorthand "NCU"^^xsd:string ;
-    a owl:Class ;
-    rdfs:comment "This indicates that data can be used by commercial organisations for research purposes, but not commercial purposes."@en ;
-    rdfs:label "non-commercial use only"@en ;
-    rdfs:subClassOf obo:DUO_0000018 .
+###  http://purl.obolibrary.org/obo/DUO_0000021
+obo:DUO_0000021 rdf:type owl:Class ;
+                rdfs:subClassOf obo:DUO_0000017 ;
+                obo:IAO_0000115 "This data use modifier indicates that the requestor must provide documentation of local IRB/ERB approval."@en ;
+                oboInOwl:id "DUO:0000021"^^xsd:string ;
+                oboInOwl:shorthand "IRB"^^xsd:string ;
+                rdfs:label "ethics approval required"@en .
 
-###  http://purl.dataone.org/odo/SENSO_00000001
-odo:SENSO_00000001 
-    rdf:type owl:Class ;
-    obo:IAO_0000115 "Data sensitivity categories assign a level of sensitivity for datasets and provide guidelines for acceptable distribution and use." ;
-    dc:creator <http://orcid.org/0000-0003-0077-4738> ;
-    dc:date "2021-09-28"^^xsd:date ;
-    rdfs:label "Data Sensitivity Category"@en .
 
-###  http://purl.dataone.org/odo/SENSO_00000002
-odo:SENSO_00000002
-    rdf:type owl:Class ;
-    obo:IAO_0000115 "Non-sensitive data"@en ;
-    dc:creator <http://orcid.org/0000-0003-0077-4738> ;
-    dc:date "2021-09-28"^^xsd:date ;
-    dc:description "None of the data includes sensitive or protected information."@en ;
-    rdfs:label "Non-sensitive data"@en ;
-    rdfs:subClassOf odo:SENSO_00000001 .
+###  http://purl.obolibrary.org/obo/DUO_0000026
+obo:DUO_0000026 rdf:type owl:Class ;
+                rdfs:subClassOf obo:DUO_0000017 ;
+                obo:IAO_0000115 "This data use modifier indicates that use is limited to use by approved users."@en ;
+                oboInOwl:id "DUO:0000026"^^xsd:string ;
+                oboInOwl:shorthand "US"^^xsd:string ;
+                rdfs:label "user specific restriction"@en .
 
-###  http://purl.dataone.org/odo/SENSO_00000003
-odo:SENSO_00000003
-    rdf:type owl:Class ;
-    obo:IAO_0000115 "Some or all data is sensitive but has been made safe for open distribution"@en ;
-    dc:creator <http://orcid.org/0000-0003-0077-4738> ;
-    dc:date "2021-09-28"^^xsd:date ;
-    dc:description "Sensitive data has been de-identified, anonymized, aggregated, or summarized to remove sensitivities and enable safe data distribution. Examples include ensuring that human subjects data, protected species data, archaeological site locations and personally identifiable information have been properly anonymized, aggregated and summarized."@en ;
-    rdfs:label "De-identified data"@en ;
-    rdfs:subClassOf odo:SENSO_00000001 .
 
-###  http://purl.dataone.org/odo/SENSO_00000004
-odo:SENSO_00000004
-    rdf:type owl:Class ;
-    obo:IAO_0000115 "Some or all data is sensitive and should not be distributed"@en ;
-    dc:creator <http://orcid.org/0000-0003-0077-4738> ;
-    dc:date "2021-09-28"^^xsd:date ;
-    dc:description "The data contains human subjects data or other sensitive data. Release of the data could cause harm or violate statutes, and must remain confidential following restrictions from an Institutional Review Board (IRB) or similar body."@en ;
-    rdfs:label "Sensitive data"@en ;
-    rdfs:subClassOf odo:SENSO_00000001 .
+###  http://purl.obolibrary.org/obo/DUO_0000027
+obo:DUO_0000027 rdf:type owl:Class ;
+                rdfs:subClassOf obo:DUO_0000017 ;
+                obo:IAO_0000115 "This data use modifier indicates that use is limited to use within an approved project."@en ;
+                oboInOwl:id "DUO:0000027"^^xsd:string ;
+                oboInOwl:shorthand "PS"^^xsd:string ;
+                rdfs:label "project specific restriction"@en .
+
+
+###  http://purl.obolibrary.org/obo/DUO_0000028
+obo:DUO_0000028 rdf:type owl:Class ;
+                rdfs:subClassOf obo:DUO_0000017 ;
+                obo:IAO_0000115 "This data use modifier indicates that use is limited to use within an approved institution."@en ;
+                oboInOwl:id "DUO:0000028"^^xsd:string ;
+                oboInOwl:shorthand "IS"^^xsd:string ;
+                rdfs:label "institution specific restriction"@en .
+
+
+###  http://purl.obolibrary.org/obo/DUO_0000042
+obo:DUO_0000042 rdf:type owl:Class ;
+                rdfs:subClassOf obo:DUO_0000001 ;
+                obo:IAO_0000115 "This data use permission indicates that use is allowed for general research use for any research purpose."@en ;
+                oboInOwl:id "DUO:0000042"^^xsd:string ;
+                oboInOwl:shorthand "GRU"^^xsd:string ;
+                rdfs:comment "This includes but is not limited to: health/medical/biomedical purposes, fundamental biology research, the study of population origins or ancestry, statistical methods and algorithms development, and social-sciences research."@en ;
+                rdfs:label "general research use"@en .
+
+
+###  http://purl.obolibrary.org/obo/DUO_0000043
+obo:DUO_0000043 rdf:type owl:Class ;
+                rdfs:subClassOf obo:DUO_0000017 ;
+                obo:IAO_0000115 "This data use modifier indicates that use is allowed for clinical use and care."@en ;
+                oboInOwl:id "DUO:0000043"^^xsd:string ;
+                oboInOwl:shorthand "CC"^^xsd:string ;
+                rdfs:comment "Clinical Care is defined as Health care or services provided at home, in a healthcare facility or hospital. Data may be used for clinical decision making."@en ;
+                rdfs:label "clinical care use"@en .
+
+
+###  http://purl.obolibrary.org/obo/DUO_0000045
+obo:DUO_0000045 rdf:type owl:Class ;
+                rdfs:subClassOf obo:DUO_0000018 ;
+                obo:IAO_0000115 "This data use modifier indicates that use of the data is limited to not-for-profit organizations."@en ;
+                oboInOwl:id "DUO:0000045"^^xsd:string ;
+                oboInOwl:shorthand "NPU"^^xsd:string ;
+                rdfs:label "not for profit organisation use only"@en .
+
+
+###  http://purl.obolibrary.org/obo/DUO_0000046
+obo:DUO_0000046 rdf:type owl:Class ;
+                rdfs:subClassOf obo:DUO_0000018 ;
+                obo:IAO_0000115 "This data use modifier indicates that use of the data is limited to not-for-profit use."@en ;
+                oboInOwl:id "DUO:0000046"^^xsd:string ;
+                oboInOwl:shorthand "NCU"^^xsd:string ;
+                rdfs:comment "This indicates that data can be used by commercial organisations for research purposes, but not commercial purposes."@en ;
+                rdfs:label "non-commercial use only"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000027
+obo:IAO_0000027 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/odo/SENSO_00000001
+odo:SENSO_00000001 rdf:type owl:Class ;
+                   obo:IAO_0000115 "Data sensitivity categories assign a level of sensitivity for datasets and provide guidelines for acceptable distribution and use." ;
+                   dc:creator <http://orcid.org/0000-0003-0077-4738> ;
+                   dc:date "2021-09-28"^^xsd:date ;
+                   rdfs:label "Data Sensitivity Category"@en .
+
+
+###  http://purl.obolibrary.org/odo/SENSO_00000002
+odo:SENSO_00000002 rdf:type owl:Class ;
+                   owl:equivalentClass odo:SENSO_00000006 ;
+                   rdfs:subClassOf odo:SENSO_00000001 ;
+                   obo:IAO_0000115 "Non-sensitive data"@en ;
+                   dc:creator <http://orcid.org/0000-0003-0077-4738> ;
+                   dc:date "2021-09-28"^^xsd:date ;
+                   dc:description "None of the data includes sensitive or protected information."@en ;
+                   rdfs:label "Non-sensitive data"@en ;
+                   owl:sameAs odo:SENSO_00000006 .
+
+
+###  http://purl.obolibrary.org/odo/SENSO_00000003
+odo:SENSO_00000003 rdf:type owl:Class ;
+                   owl:equivalentClass odo:SENSO_00000007 ;
+                   rdfs:subClassOf odo:SENSO_00000001 ;
+                   obo:IAO_0000115 "Some or all data is sensitive but has been made safe for open distribution"@en ;
+                   dc:creator <http://orcid.org/0000-0003-0077-4738> ;
+                   dc:date "2021-09-28"^^xsd:date ;
+                   dc:description "Sensitive data has been de-identified, anonymized, aggregated, or summarized to remove sensitivities and enable safe data distribution. Examples include ensuring that human subjects data, protected species data, archaeological site locations and personally identifiable information have been properly anonymized, aggregated and summarized."@en ;
+                   rdfs:label "De-identified data"@en ;
+                   owl:sameAs odo:SENSO_00000007 .
+
+
+###  http://purl.obolibrary.org/odo/SENSO_00000004
+odo:SENSO_00000004 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:SENSO_00000001 ;
+                   obo:IAO_0000115 "Some or all data is sensitive and should not be distributed"@en ;
+                   dc:creator <http://orcid.org/0000-0003-0077-4738> ;
+                   dc:date "2021-09-28"^^xsd:date ;
+                   dc:description "The data contains human subjects data or other sensitive data. Release of the data could cause harm or violate statutes, and must remain confidential following restrictions from an Institutional Review Board (IRB) or similar body."@en ;
+                   rdfs:label "Sensitive data"@en .
+
+
+###  http://purl.obolibrary.org/odo/SENSO_00000005
+odo:SENSO_00000005 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:SENSO_00000001 ;
+                   dc:creator <http://orcid.org/0000-0003-0077-4738> ;
+                   dc:date "2021-09-28"^^xsd:date ;
+                   obo:IAO_0000115 "The DataTags sensitive data categories"@en ;
+                   dc:description "The DataTags categories enable classification of data along an axis of sensitivity or confidentiality ranging from completely non-confidential to highly sensitive. Each DataTag is referred to with a color. The system was created through the Harvard IQSS DataTags project (https://datatags.org).."@en ;
+                   rdfs:label "DataTag" .
+
+
+###  http://purl.obolibrary.org/odo/SENSO_00000006
+odo:SENSO_00000006 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:SENSO_00000005 ;
+                   dc:creator <http://orcid.org/0000-0003-0077-4738> ;
+                   dc:date "2021-09-28"^^xsd:date ;
+                   obo:IAO_0000115 "Non-confidential information"@en ;
+                   rdfs:label "DataTag Blue" .
+
+
+###  http://purl.obolibrary.org/odo/SENSO_00000007
+odo:SENSO_00000007 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:SENSO_00000005 ;
+                   dc:creator <http://orcid.org/0000-0003-0077-4738> ;
+                   dc:date "2021-09-28"^^xsd:date ;
+                   obo:IAO_0000115 "Non-confidential information"@en ;
+                   rdfs:label "DataTag Green" .
+
+
+###  http://purl.obolibrary.org/odo/SENSO_00000008
+odo:SENSO_00000008 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:SENSO_00000005 ;
+                   dc:creator <http://orcid.org/0000-0003-0077-4738> ;
+                   dc:date "2021-09-28"^^xsd:date ;
+                   obo:IAO_0000115 "Potentially harmful personal information"@en ;
+                   rdfs:label "DataTag Yellow" .
+
+
+###  http://purl.obolibrary.org/odo/SENSO_00000009
+odo:SENSO_00000009 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:SENSO_00000005 ;
+                   dc:creator <http://orcid.org/0000-0003-0077-4738> ;
+                   dc:date "2021-09-28"^^xsd:date ;
+                   obo:IAO_0000115 "Sensitive personal information"@en ;
+                   rdfs:label "DataTag Orange" .
+
+
+###  http://purl.obolibrary.org/odo/SENSO_00000010
+odo:SENSO_00000010 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:SENSO_00000005 ;
+                   dc:creator <http://orcid.org/0000-0003-0077-4738> ;
+                   dc:date "2021-09-28"^^xsd:date ;
+                   obo:IAO_0000115 "Very sensitive personal information"@en ;
+                   rdfs:label "DataTag Red" .
+
+
+###  http://purl.obolibrary.org/odo/SENSO_00000011
+odo:SENSO_00000011 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:SENSO_00000005 ;
+                   dc:creator <http://orcid.org/0000-0003-0077-4738> ;
+                   dc:date "2021-09-28"^^xsd:date ;
+                   obo:IAO_0000115 "Maximum sensitive personal information"@en ;
+                   rdfs:label "DataTag Crimson" .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
