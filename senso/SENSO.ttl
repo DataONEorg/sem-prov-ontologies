@@ -23,7 +23,7 @@
                                      terms:created "2021-09-28"^^xsd:date ;
                                      terms:license <https://creativecommons.org/licenses/by/4.0/> ;
                                      terms:title "Sensitive Data Ontology (SENSO)"@en ;
-                                     terms:description Ontology to support annotation of datasets housed at the Arctic Data Center (https://arcticdata.io)"@en .
+                                     terms:description "Ontology to support sensitive data annotation of datasets housed at the Arctic Data Center (https://arcticdata.io)"@en .
 
 #################################################################
 #    Annotation properties
@@ -74,13 +74,6 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 #################################################################
 #    Object Properties
 #################################################################
-
-###  http://purl.dataone.org/odo/ARCRC_00000011
-<http://purl.dataone.org/odo/ARCRC_00000011> rdf:type owl:ObjectProperty ;
-                                             dc:creator <http://orcid.org/0000-0002-5300-3075> ;
-                                             dc:date "2020-11-04T22:51:54Z"^^xsd:dateTime ;
-                                             rdfs:comment "might want to delete before we import ECSO so that there are no conflict issues (usesProtocol already exists in ECSO)" ;
-                                             rdfs:label "usesProtocol"@en .
 
 
 #################################################################
@@ -227,8 +220,6 @@ obo:DUO_0000046
     rdfs:label "non-commercial use only"@en ;
     rdfs:subClassOf obo:DUO_0000018 .
 
-    odo:IAO_0000119 "inferred from https://arctic.noaa.gov/Report-Card" ;
-    
 ###  http://purl.dataone.org/odo/SENSO_00000001
 odo:SENSO_00000001 
     rdf:type owl:Class ;
@@ -244,8 +235,8 @@ odo:SENSO_00000002
     dc:creator <http://orcid.org/0000-0003-0077-4738> ;
     dc:date "2021-09-28"^^xsd:date ;
     dc:description "None of the data includes sensitive or protected information."@en ;
-    rdfs:label "Non-sensitive data"@en .
-    rdfs:subClassOf obo:SENSO_00000001 .
+    rdfs:label "Non-sensitive data"@en ;
+    rdfs:subClassOf odo:SENSO_00000001 .
 
 ###  http://purl.dataone.org/odo/SENSO_00000003
 odo:SENSO_00000003
@@ -254,8 +245,8 @@ odo:SENSO_00000003
     dc:creator <http://orcid.org/0000-0003-0077-4738> ;
     dc:date "2021-09-28"^^xsd:date ;
     dc:description "Sensitive data has been de-identified, anonymized, aggregated, or summarized to remove sensitivities and enable safe data distribution. Examples include ensuring that human subjects data, protected species data, archaeological site locations and personally identifiable information have been properly anonymized, aggregated and summarized."@en ;
-    rdfs:label "De-sensitized data"@en .
-    rdfs:subClassOf obo:SENSO_00000001 .
+    rdfs:label "De-identified data"@en ;
+    rdfs:subClassOf odo:SENSO_00000001 .
 
 ###  http://purl.dataone.org/odo/SENSO_00000004
 odo:SENSO_00000004
@@ -264,5 +255,5 @@ odo:SENSO_00000004
     dc:creator <http://orcid.org/0000-0003-0077-4738> ;
     dc:date "2021-09-28"^^xsd:date ;
     dc:description "The data contains human subjects data or other sensitive data. Release of the data could cause harm or violate statutes, and must remain confidential following restrictions from an Institutional Review Board (IRB) or similar body."@en ;
-    rdfs:label "Sensitive data"@en .
-    rdfs:subClassOf obo:SENSO_00000001 .
+    rdfs:label "Sensitive data"@en ;
+    rdfs:subClassOf odo:SENSO_00000001 .
