@@ -271,6 +271,7 @@ odo:SENSO_00000002 rdf:type owl:Class ;
                    dc:creator <http://orcid.org/0000-0003-0077-4738> ;
                    dc:date "2021-09-28"^^xsd:date ;
                    dc:description "None of the data includes sensitive or protected information."@en ;
+                   owl:equivalentClass odo:SENSO_00000006 ;
                    rdfs:label "Non-sensitive data"@en .
 
 
@@ -281,6 +282,7 @@ odo:SENSO_00000003 rdf:type owl:Class ;
                    dc:creator <http://orcid.org/0000-0003-0077-4738> ;
                    dc:date "2021-09-28"^^xsd:date ;
                    dc:description "Sensitive data has been de-identified, anonymized, aggregated, or summarized to remove sensitivities and enable safe data distribution. Examples include ensuring that human subjects data, protected species data, archaeological site locations and personally identifiable information have been properly anonymized, aggregated and summarized."@en ;
+                   owl:equivalentClass odo:SENSO_00000007 ;
                    rdfs:label "De-identified data"@en .
 
 
@@ -291,6 +293,14 @@ odo:SENSO_00000004 rdf:type owl:Class ;
                    dc:creator <http://orcid.org/0000-0003-0077-4738> ;
                    dc:date "2021-09-28"^^xsd:date ;
                    dc:description "The data contains human subjects data or other sensitive data. Release of the data could cause harm or violate statutes, and must remain confidential following restrictions from an Institutional Review Board (IRB) or similar body."@en ;
+                   owl:equivalentClass [
+                       a owl:Class ;
+                       owl:unionOf ( 
+                        odo:SENSO_00000008
+                        odo:SENSO_00000009
+                        odo:SENSO_00000010
+                        odo:SENSO_00000011)
+                   ] ;
                    rdfs:label "Sensitive data"@en .
 
 
@@ -310,7 +320,6 @@ odo:SENSO_00000006 rdf:type owl:Class ;
                    dc:creator <http://orcid.org/0000-0003-0077-4738> ;
                    dc:date "2021-09-28"^^xsd:date ;
                    obo:IAO_0000115 "Non-confidential information"@en ;
-                   owl:equivalentClass odo:SENSO_00000002 ;
                    rdfs:label "DataTag Blue" .
 
 
@@ -320,7 +329,6 @@ odo:SENSO_00000007 rdf:type owl:Class ;
                    dc:creator <http://orcid.org/0000-0003-0077-4738> ;
                    dc:date "2021-09-28"^^xsd:date ;
                    obo:IAO_0000115 "Non-confidential information"@en ;
-                   owl:equivalentClass odo:SENSO_00000003 ;
                    rdfs:label "DataTag Green" .
 
 
