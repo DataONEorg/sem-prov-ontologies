@@ -18,7 +18,9 @@
                                       owl:versionIRI <http://purl.dataone.org/odo/SENSO/0.1.0> ;
                                       owl:imports <http://purl.obolibrary.org/obo/duo.owl> ;
                                       terms:created "2021-09-28"^^xsd:date ;
-                                      terms:creator <https://orcid.org/0000-0003-0077-4738> ;
+                                      terms:creator <https://orcid.org/0000-0003-0077-4738> ;     # Matt Jones
+                                      terms:contributor <https://orcid.org/0000-0002-0381-3766> ; # Bryce Mecum
+                                      terms:contributor <https://orcid.org/0000-0003-0632-7576> ; # Mark Schildhauer
                                       terms:description "Ontology to support sensitive data annotation of datasets housed at the Arctic Data Center (https://arcticdata.io)"@en ;
                                       terms:license <https://creativecommons.org/licenses/by/4.0/> ;
                                       terms:title "Sensitive Data Ontology (SENSO)"@en ;
@@ -88,10 +90,6 @@ oboInOwl:shorthand rdf:type owl:AnnotationProperty .
 
 ###  http://www.w3.org/2000/01/rdf-schema#comment
 rdfs:comment rdf:type owl:AnnotationProperty .
-
-
-###  http://www.w3.org/2002/07/owl#sameAs
-owl:sameAs rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#altLabel
@@ -273,8 +271,7 @@ odo:SENSO_00000002 rdf:type owl:Class ;
                    dc:creator <http://orcid.org/0000-0003-0077-4738> ;
                    dc:date "2021-09-28"^^xsd:date ;
                    dc:description "None of the data includes sensitive or protected information."@en ;
-                   rdfs:label "Non-sensitive data"@en ;
-                   owl:sameAs odo:SENSO_00000006 .
+                   rdfs:label "Non-sensitive data"@en .
 
 
 ###  http://purl.obolibrary.org/odo/SENSO_00000003
@@ -284,8 +281,7 @@ odo:SENSO_00000003 rdf:type owl:Class ;
                    dc:creator <http://orcid.org/0000-0003-0077-4738> ;
                    dc:date "2021-09-28"^^xsd:date ;
                    dc:description "Sensitive data has been de-identified, anonymized, aggregated, or summarized to remove sensitivities and enable safe data distribution. Examples include ensuring that human subjects data, protected species data, archaeological site locations and personally identifiable information have been properly anonymized, aggregated and summarized."@en ;
-                   rdfs:label "De-identified data"@en ;
-                   owl:sameAs odo:SENSO_00000007 .
+                   rdfs:label "De-identified data"@en .
 
 
 ###  http://purl.obolibrary.org/odo/SENSO_00000004
@@ -314,6 +310,7 @@ odo:SENSO_00000006 rdf:type owl:Class ;
                    dc:creator <http://orcid.org/0000-0003-0077-4738> ;
                    dc:date "2021-09-28"^^xsd:date ;
                    obo:IAO_0000115 "Non-confidential information"@en ;
+                   owl:equivalentClass odo:SENSO_00000002 ;
                    rdfs:label "DataTag Blue" .
 
 
@@ -323,6 +320,7 @@ odo:SENSO_00000007 rdf:type owl:Class ;
                    dc:creator <http://orcid.org/0000-0003-0077-4738> ;
                    dc:date "2021-09-28"^^xsd:date ;
                    obo:IAO_0000115 "Non-confidential information"@en ;
+                   owl:equivalentClass odo:SENSO_00000003 ;
                    rdfs:label "DataTag Green" .
 
 
