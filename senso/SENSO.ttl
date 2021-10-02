@@ -1,7 +1,7 @@
 @prefix : <http://purl.dataone.org/odo/SENSO_> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
-@prefix odo: <http://purl.obolibrary.org/odo/> .
+@prefix odo: <http://purl.dataone.org/odo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -15,15 +15,15 @@
 @base <http://purl.dataone.org/odo/SENSO_> .
 
 <http://purl.dataone.org/odo/SENSO_> rdf:type owl:Ontology ;
-                                      owl:versionIRI <http://purl.dataone.org/odo/SENSO/0.1.0> ;
-                                      terms:contributor <https://orcid.org/0000-0002-0381-3766> ,
+                                     owl:versionIRI <http://purl.dataone.org/odo/SENSO/0.1.0> ;
+                                     terms:contributor <https://orcid.org/0000-0002-0381-3766> ,
                                                         <https://orcid.org/0000-0003-0632-7576> ;
-                                      terms:created "2021-09-28"^^xsd:date ;
-                                      terms:creator <https://orcid.org/0000-0003-0077-4738> ;
-                                      terms:description "Ontology to support sensitive data annotation of datasets housed at the Arctic Data Center (https://arcticdata.io)"@en ;
-                                      terms:license <https://creativecommons.org/licenses/by/4.0/> ;
-                                      terms:title "Sensitive Data Ontology (SENSO)"@en ;
-                                      owl:versionInfo "Version 0.1.0" .
+                                     terms:created "2021-09-28"^^xsd:date ;
+                                     terms:creator <https://orcid.org/0000-0003-0077-4738> ;
+                                     terms:description "Ontology to support sensitive data annotation of datasets housed at the Arctic Data Center (https://arcticdata.io)"@en ;
+                                     terms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                     terms:title "Sensitive Data Ontology (SENSO)"@en ;
+                                     owl:versionInfo "Version 0.1.0" .
 
 #################################################################
 #    Annotation properties
@@ -40,8 +40,8 @@ obo:IAO_0000115 rdf:type owl:AnnotationProperty ;
 obo:IAO_0000118 rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.obolibrary.org/odo/IAO_0000119
-odo:IAO_0000119 rdf:type owl:AnnotationProperty ;
+###  http://purl.obolibrary.org/obo/IAO_0000119
+obo:IAO_0000119 rdf:type owl:AnnotationProperty ;
                 dc:creator <http://orcid.org/0000-0002-5300-3075> ;
                 dc:date "2020-11-04T19:47:37Z"^^xsd:dateTime ;
                 rdfs:label "definition source"@en .
@@ -112,12 +112,12 @@ xsd:date rdf:type rdfs:Datatype .
 #################################################################
 
 ###  http://purl.dataone.org/odo/SENSO_00000005
-<http://purl.dataone.org/odo/SENSO_00000005> rdf:type owl:ObjectProperty ;
-                                             rdfs:range <http://purl.dataone.org/odo/SENSO_00000001> ;
-                                             obo:IAO_0000115 "the sensitivity of the given data"@en ;
-                                             dc:date "2021-09-30"^^xsd:date ;
-                                             terms:creator <https://orcid.org/0000-0002-0381-3766> ;
-                                             rdfs:label "data sensitivity"@en .
+odo:SENSO_00000005 rdf:type owl:ObjectProperty ;
+                   rdfs:range odo:SENSO_00000001 ;
+                   obo:IAO_0000115 "the sensitivity of the given data"@en ;
+                   dc:date "2021-09-30"^^xsd:date ;
+                   terms:creator <https://orcid.org/0000-0002-0381-3766> ;
+                   rdfs:label "data sensitivity"@en .
 
 
 #################################################################
@@ -125,41 +125,41 @@ xsd:date rdf:type rdfs:Datatype .
 #################################################################
 
 ###  http://purl.dataone.org/odo/SENSO_00000001
-<http://purl.dataone.org/odo/SENSO_00000001> rdf:type owl:Class ;
-                                             obo:IAO_0000115 "Data sensitivity categories assign a level of sensitivity for datasets and provide guidelines for acceptable distribution and use." ;
-                                             dc:creator <http://orcid.org/0000-0003-0077-4738> ;
-                                             dc:date "2021-09-28"^^xsd:date ;
-                                             rdfs:label "Data Sensitivity Category"@en .
+odo:SENSO_00000001 rdf:type owl:Class ;
+                   obo:IAO_0000115 "Data sensitivity categories assign a level of sensitivity for datasets and provide guidelines for acceptable distribution and use." ;
+                   dc:creator <http://orcid.org/0000-0003-0077-4738> ;
+                   dc:date "2021-09-28"^^xsd:date ;
+                   rdfs:label "Data Sensitivity Category"@en .
 
 
 ###  http://purl.dataone.org/odo/SENSO_00000002
-<http://purl.dataone.org/odo/SENSO_00000002> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.dataone.org/odo/SENSO_00000001> ;
-                                             obo:IAO_0000115 "Non-sensitive data"@en ;
-                                             dc:creator <http://orcid.org/0000-0003-0077-4738> ;
-                                             dc:date "2021-09-28"^^xsd:date ;
-                                             dc:description "None of the data includes sensitive or protected information."@en ;
-                                             rdfs:label "Non-sensitive data"@en .
+odo:SENSO_00000002 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:SENSO_00000001 ;
+                   obo:IAO_0000115 "Non-sensitive data"@en ;
+                   dc:creator <http://orcid.org/0000-0003-0077-4738> ;
+                   dc:date "2021-09-28"^^xsd:date ;
+                   dc:description "None of the data includes sensitive or protected information."@en ;
+                   rdfs:label "Non-sensitive data"@en .
 
 
 ###  http://purl.dataone.org/odo/SENSO_00000003
-<http://purl.dataone.org/odo/SENSO_00000003> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.dataone.org/odo/SENSO_00000001> ;
-                                             obo:IAO_0000115 "Some or all data is sensitive but has been made safe for open distribution"@en ;
-                                             dc:creator <http://orcid.org/0000-0003-0077-4738> ;
-                                             dc:date "2021-09-28"^^xsd:date ;
-                                             dc:description "Sensitive data has been de-identified, anonymized, aggregated, or summarized to remove sensitivities and enable safe data distribution. Examples include ensuring that human subjects data, protected species data, archaeological site locations and personally identifiable information have been properly anonymized, aggregated and summarized."@en ;
-                                             rdfs:label "De-identified data"@en .
+odo:SENSO_00000003 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:SENSO_00000001 ;
+                   obo:IAO_0000115 "Some or all data is sensitive but has been made safe for open distribution"@en ;
+                   dc:creator <http://orcid.org/0000-0003-0077-4738> ;
+                   dc:date "2021-09-28"^^xsd:date ;
+                   dc:description "Sensitive data has been de-identified, anonymized, aggregated, or summarized to remove sensitivities and enable safe data distribution. Examples include ensuring that human subjects data, protected species data, archaeological site locations and personally identifiable information have been properly anonymized, aggregated and summarized."@en ;
+                   rdfs:label "De-identified data"@en .
 
 
 ###  http://purl.dataone.org/odo/SENSO_00000004
-<http://purl.dataone.org/odo/SENSO_00000004> rdf:type owl:Class ;
-                                             rdfs:subClassOf <http://purl.dataone.org/odo/SENSO_00000001> ;
-                                             obo:IAO_0000115 "Some or all data is sensitive and should not be distributed"@en ;
-                                             dc:creator <http://orcid.org/0000-0003-0077-4738> ;
-                                             dc:date "2021-09-28"^^xsd:date ;
-                                             dc:description "The data contains human subjects data or other sensitive data. Release of the data could cause harm or violate statutes, and must remain confidential following restrictions from an Institutional Review Board (IRB) or similar body."@en ;
-                                             rdfs:label "Sensitive data"@en .
+odo:SENSO_00000004 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:SENSO_00000001 ;
+                   obo:IAO_0000115 "Some or all data is sensitive and should not be distributed"@en ;
+                   dc:creator <http://orcid.org/0000-0003-0077-4738> ;
+                   dc:date "2021-09-28"^^xsd:date ;
+                   dc:description "The data contains human subjects data or other sensitive data. Release of the data could cause harm or violate statutes, and must remain confidential following restrictions from an Institutional Review Board (IRB) or similar body."@en ;
+                   rdfs:label "Sensitive data"@en .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
