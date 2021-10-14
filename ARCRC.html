@@ -1,0 +1,2331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{no title found}</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC40lEQVRYhe2UT0hUQRzHp6Iss1B3VZKIDbbdfW9mnoi4f3zzjkJQeOgS0SEIb1EWBGGlLLu460zQPQM1unUIIjA6rfpm6ZAhHjoIRVQUFUlEbG+euTsdXG1d3VL3bVD4g+9h+L35fT/8fvN7ADgY9aHY5fpIvK82HO9ysu66wxWOzbkjcekKx0a2ALYA/n2AGi3a6ArFezcidziecQygNhhrcUficjP6PwBqtGijKxy/thnVBePHywYoDsFhl53GV8SEcsTx4usCMLUewTVpc23BNvEzm6Neyf1+KcG2vwqwUjgrOJq2JmHftwmkVBRGTvncFodnbI7vChO/FRznCmHsNM7aHM9Yk7Df5iqsLMw9sMNOK2g+jS4IEz0UJv4iuJZb2RltWnB4UZqH6ioGAgAAGe5vtiZhtzDx7OoRadLmeM7m6IRjhnLMW2Vx1bA5GhAmnhIcz6/xNj4Ujsky8UspwfayjDPjsF2Y6L7N8Vzx/BfP+KPg6LbgSqd8DnfJW2CnbaLhfH5ephpqygJYvQU4Z3P82TLRsDDhUTnmrSq+Y3N0Mg+Xldy/zwEAnLMWZ3pHpNExmfLs/t0dOdVcbT0JeKxUwFP2VljjqiE47Jp53LTXNxhsUZjerTByXWX6VZWRs/4bIQ2ACv+UAomgDzLCISNZxAxZKMhIDjLy1JfsaK+I+eGBUBNk5E2x8RogX/PdcDZUqieWTSh5D6nOVKqfhoycUmlHFFIyu5RXqf7AcQDISCpv/tqbMBqK883RtmpISRoxQyJKPgGn3wNk5NEigDFa6hslqV/Kj+FdBQD0bshIDlKSLlVcoWQo36UhR80BAMB73lulMn0EMpJTqD6qJiOt3mho/8GbkT2BZNgDB/V+RI0fkOrT3kRIVQbaDizJm2hdNbINBxwk5xAj3yEjuV9rZ1iIkgxixkLBA83mz8uCjLwoGwAx0vOnFSy5mtR4VTaAQvVORMnwZgSpzkrV/QmdE2tKe46+MQAAAABJRU5ErkJggg==">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhklEQVQ4jbWPzStEURjG3yQLirlGKUnKFO45Z+SjmXvnnmthQcpCoVhYmD/AwmJiI3OvZuZc2U3UlKU0/gAslMw9JgvhHxAr2fko7r0jHSsl+TgbTz2Lt5731/MASEiJW9ONml2QyX6rsGalmnT74v8BDf12hxJfpV8d1uwNKUBYszabdFv84L8B9X0rESVmmUup2fme0cVhJWaZHw4NWL1Sew
+EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ9Hn31OgoATL+CkLDGB5H1OKj4nFd/FBxUXJ0UZNb4edw/6nLyJXaj5FeCVyPLNIVmYK8TG1IwWb16L1gEACAFV90ftoT8bdOX0EeyY99gxBXZMgRz6qGb1KantAACI0UvE6F5XJqEjpsdURouI0Vt5gGOUkUNnPu7ObGIIMfNaGqDmjDRi9FZldF1lRgYzeqUyeoiY4ag5Iy3RgOYRM8+/M2bG8efsO4hGrpmJseyMAAAAAElFTkSuQmCC">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <style>
+        #pylode {
+            position: fixed;
+            top: 130px;
+            left: -60px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
+        #pylode a {
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #005A9C;
+        }
+        #pylode a:hover {
+            color: #333;
+        }
+
+        .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
+
+        dt {
+            font-weight: bold;
+            padding: 5px 0 5px 0;
+        }
+
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
+
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
+
+
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
+
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
+
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
+
+        .entity table th {
+            text-align: left;
+        }
+
+        section#overview img {
+            max-width: 1000px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left
+        }
+        h1, h2, h3 {
+            color: #005A9C; background: white
+        }
+        h1 {
+            font: 170% sans-serif;
+            line-height: 110%;
+        }
+        h2 {
+            font: 140% sans-serif;
+            margin-top:40px;
+        }
+        h3 {
+            font: 120% sans-serif;
+            margin-top: 3px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid navy;
+        }
+        h4 { font: bold 100% sans-serif }
+        h5 { font: italic 100% sans-serif }
+        h6 { font: small-caps 100% sans-serif }
+
+
+        body {
+            padding: 2em 70px 2em 70px;
+            margin: 0;
+            font-family: sans-serif;
+            color: black;
+            background: white;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: justify;
+        }
+
+        section {
+            max-width: 1500px;
+        }
+
+        .figure {
+            margin-bottom: 20px;
+        }
+
+        :link { color: #00C; background: transparent }
+        :visited { color: #609; background: transparent }
+        a:active { color: #C00; background: transparent }
+
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-con,
+        .sup-col {
+            cursor:help;
+            margin-left: 3px;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-con {
+            color:orange;
+        }
+
+        .sup-col {
+            color:darkred;
+        }
+
+        code {
+            font-size: large;
+            color: darkred;
+        }
+
+        /* less prominent links for properties */
+        .proplink {
+            color: #336;
+            text-decoration: none;
+        }
+    </style>
+    
+    <script type="application/ld+json">
+      [
+  {
+    "@id": "http://purl.dataone.org/odo/ARCRC",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "{no title found}"
+      }
+    ]
+  }
+]
+    </script>
+</head>
+<body>
+  <div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">
+    <span style="color:#329545;">p</span><span style="color:#f9cb33;">y</span>LODE</a>
+    <span style="font-size:smaller;">2.10.0</span>
+  </div>
+  <h1>{no title found}</h1>
+<section id="metadata">
+    <h2 style="display:none;">Metadata</h2>
+    <dl>
+        <dt>URI</dt>
+        <dd><code>http://purl.dataone.org/odo/ARCRC</code></dd>
+        <dt>Version URI</dt>
+        <dd><a href="http://purl.dataone.org/odo/ARCRC.owl/0.10">http://purl.dataone.org/odo/ARCRC.owl/0.10</a></dd>
+        <dt>Imports</dt>
+        <dd>
+            <a href="http://purl.dataone.org/odo/ECSO8.owl">http://purl.dataone.org/odo/ECSO8.owl</a><br/>
+            <a href="http://www.opengis.net/ont/geosparql">http://www.opengis.net/ont/geosparql</a><br/>
+        </dd>
+        <dt>Ontology RDF</dt>
+        <dd><a href="ARCRC.ttl">RDF (turtle)</a></dd>
+    </dl>
+</section>
+<section id="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#objectproperties">Object Properties</a></li>
+        <li><a href="#annotationproperties">Annotation Properties</a></li>
+        <li><a href="#namedindividuals">Named Individuals</a></li>
+        <li><a href="#namespaces">Namespaces</a></li>
+        <li><a href="#legend">Legend</a></li>
+    </ol>
+</section>
+<section id="overview">
+    <h2>Overview</h2>
+    <div class="figure">
+        <div style="width:500px; height:50px; background-color: lightgrey; border:solid 2px grey; padding:10px;margin-bottom:5px; text-align:center;">Pictures say 1,000 words</div>
+        <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
+    </div>
+</section>
+  <section id="classes">
+    <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000000">Arctic Essays 2020</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000001">Terrestrial Snow Cover Indicator</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000002">Tundra Greenness Indicator</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000003">Surface Air Temperature Indicator</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000004">Greenland Ice Sheet Indicator</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000005">Arctic Ocean Primary Productivity Indicator</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000006">Sea Surface Temperature Indicator</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000007">Sea Ice Indicator</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000009">snow water equivalent</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000010">Arctic Report Card Supporting Dataset</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000013">Arctic Vital Signs</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000014">Arctic Report Card Supporting Dataset for the 2020 Report</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000040">Arctic Key Variable</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000041">Arctic Key Variables 2020</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000042">Normalized Difference Vegetation Index</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000043">geopotential height</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000044">Summer Warmth Index</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000045">surface air temperature</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000046">near-surface air temperature</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000047">sea surface temperature</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000048">chlorophyll-a concentration</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000049">snow cover extent</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000050">snow cover duration</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000051">snow depth</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000053">sea ice concentration</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000054">sea ice extent</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000055">sea ice volume</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000056">sea ice thickness</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000057">age of sea ice</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000058">solid ice discharge</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000059">surface albedo</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000060">Arctic land air temperature anomaly</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000061">global land air temperature anomaly</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000062">seasonal/annual anomaly patterns for air temperatures</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000063">surface melt</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000064">total mass balance</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000065">surface mass balance</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000066">ice ablation</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000067">marine terminating glacier front annual area change</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000068">atmospheric wind circulation</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000500">Arctic Report Card Component</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000501">sea ice key variable</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000502">snow key variable</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000503">surface-based key variable</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000504">Arctic Report Card 2020 Component</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000505">Geographic Named Place</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000506">Place</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000510">Arctic Report Card Essay</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000512">Other Indicators</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000513">Frostbites</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000514">MaxNDVI</a></li>
+      <li><a href="#http://purl.dataone.org/odo/ARCRC_00000515">TI-NDVI</a></li>
+    </ul>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000000">
+        <h3>
+          Arctic Essays 2020<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000000" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000000"><code>http://purl.dataone.org/odo/ARCRC_00000000</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Issued annually since 2006, the Arctic Report Card (ARC) is a timely and peer-reviewed source for clear, reliable and concise environmental information on the current state of different components of the Arctic environmental system relative to historical records. The Report Card is intended for a wide audience, including scientists, teachers, students, decision-makers and the general public interested in the Arctic environment and science.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000504">Arctic Report Card 2020 Component</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000001">
+        <h3>
+          Terrestrial Snow Cover Indicator<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000001" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000001"><code>http://purl.dataone.org/odo/ARCRC_00000001</code></a></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000013">Arctic Vital Signs</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000002">
+        <h3>
+          Tundra Greenness Indicator<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000002" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000002"><code>http://purl.dataone.org/odo/ARCRC_00000002</code></a></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000013">Arctic Vital Signs</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000003">
+        <h3>
+          Surface Air Temperature Indicator<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000003" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000003"><code>http://purl.dataone.org/odo/ARCRC_00000003</code></a></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000013">Arctic Vital Signs</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000004">
+        <h3>
+          Greenland Ice Sheet Indicator<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000004" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000004"><code>http://purl.dataone.org/odo/ARCRC_00000004</code></a></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000013">Arctic Vital Signs</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000005">
+        <h3>
+          Arctic Ocean Primary Productivity Indicator<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000005" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000005"><code>http://purl.dataone.org/odo/ARCRC_00000005</code></a></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000013">Arctic Vital Signs</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000006">
+        <h3>
+          Sea Surface Temperature Indicator<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000006" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000006"><code>http://purl.dataone.org/odo/ARCRC_00000006</code></a></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000013">Arctic Vital Signs</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000007">
+        <h3>
+          Sea Ice Indicator<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000007" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000007"><code>http://purl.dataone.org/odo/ARCRC_00000007</code></a></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000013">Arctic Vital Signs</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000009">
+        <h3>
+          snow water equivalent<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000009" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000009"><code>http://purl.dataone.org/odo/ARCRC_00000009</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable is used to inform Vital Sign 'Terrestrial Snow Cover.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/843/Terrestrial-Snow-Cover</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000040">Arctic Key Variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000010">
+        <h3>
+          Arctic Report Card Supporting Dataset<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000010" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000010"><code>http://purl.dataone.org/odo/ARCRC_00000010</code></a></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000500">Arctic Report Card Component</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000014">Arctic Report Card Supporting Dataset for the 2020 Report</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000013">
+        <h3>
+          Arctic Vital Signs<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000013" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000013"><code>http://purl.dataone.org/odo/ARCRC_00000013</code></a></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000510">Arctic Report Card Essay</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000001">Terrestrial Snow Cover Indicator</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000004">Greenland Ice Sheet Indicator</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000003">Surface Air Temperature Indicator</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000005">Arctic Ocean Primary Productivity Indicator</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000007">Sea Ice Indicator</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000002">Tundra Greenness Indicator</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000006">Sea Surface Temperature Indicator</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000014">
+        <h3>
+          Arctic Report Card Supporting Dataset for the 2020 Report<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000014" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000014"><code>http://purl.dataone.org/odo/ARCRC_00000014</code></a></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000010">Arctic Report Card Supporting Dataset</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000040">
+        <h3>
+          Arctic Key Variable<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000040" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000040"><code>http://purl.dataone.org/odo/ARCRC_00000040</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Measurements and/or proxies used in the assessments of Arctic Report Card Essays.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000500">Arctic Report Card Component</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000048">chlorophyll-a concentration</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000062">seasonal/annual anomaly patterns for air temperatures</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000501">sea ice key variable</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000046">near-surface air temperature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000503">surface-based key variable</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000066">ice ablation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000502">snow key variable</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000060">Arctic land air temperature anomaly</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000058">solid ice discharge</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000042">Normalized Difference Vegetation Index</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000068">atmospheric wind circulation</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000064">total mass balance</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000009">snow water equivalent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000044">Summer Warmth Index</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000061">global land air temperature anomaly</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000043">geopotential height</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000067">marine terminating glacier front annual area change</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000041">
+        <h3>
+          Arctic Key Variables 2020<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000041" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000041"><code>http://purl.dataone.org/odo/ARCRC_00000041</code></a></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000504">Arctic Report Card 2020 Component</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000042">
+        <h3>
+          Normalized Difference Vegetation Index<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000042" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000042"><code>http://purl.dataone.org/odo/ARCRC_00000042</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable is used to inform Vital Sign 'Tundra Greenness.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/838/Tundra-Greenness</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000040">Arctic Key Variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000515">TI-NDVI</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000514">MaxNDVI</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000043">
+        <h3>
+          geopotential height<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000043" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000043"><code>http://purl.dataone.org/odo/ARCRC_00000043</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable is used to inform Vital Sign 'Surface Air Temperature.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/835/Surface-Air-Temperature</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000040">Arctic Key Variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000044">
+        <h3>
+          Summer Warmth Index<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000044" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000044"><code>http://purl.dataone.org/odo/ARCRC_00000044</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable is used to inform Vital Sign 'Tundra Greenness.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/838/Tundra-Greenness</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000040">Arctic Key Variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000045">
+        <h3>
+          surface air temperature<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000045" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000045"><code>http://purl.dataone.org/odo/ARCRC_00000045</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable is used to inform Vital Sign 'Surface Air Temperature.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/835/Surface-Air-Temperature</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000503">surface-based key variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000046">
+        <h3>
+          near-surface air temperature<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000046" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000046"><code>http://purl.dataone.org/odo/ARCRC_00000046</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable is used to inform Vital Sign 'Surface Air Temperature.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/835/Surface-Air-Temperature</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000040">Arctic Key Variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000047">
+        <h3>
+          sea surface temperature<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000047" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000047"><code>http://purl.dataone.org/odo/ARCRC_00000047</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable is used to inform Vital Sign 'Sea Surface Temperature.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/840/Sea-Surface-Temperature</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000503">surface-based key variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000048">
+        <h3>
+          chlorophyll-a concentration<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000048" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000048"><code>http://purl.dataone.org/odo/ARCRC_00000048</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable is used to inform Vital Sign 'Arctic Ocean Primary Productivity.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/839/Arctic-Ocean-Primary-Productivity-The-Response-of-Marine-Algae-to-Climate-Warming-and-Sea-Ice-Decline</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000040">Arctic Key Variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000049">
+        <h3>
+          snow cover extent<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000049" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000049"><code>http://purl.dataone.org/odo/ARCRC_00000049</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable is used to inform Vital Sign 'Terrestrial Snow Cover.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/843/Terrestrial-Snow-Cover</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000502">snow key variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000050">
+        <h3>
+          snow cover duration<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000050" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000050"><code>http://purl.dataone.org/odo/ARCRC_00000050</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable is used to inform Vital Sign 'Terrestrial Snow Cover.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/843/Terrestrial-Snow-Cover</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000502">snow key variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000051">
+        <h3>
+          snow depth<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000051" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000051"><code>http://purl.dataone.org/odo/ARCRC_00000051</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable is used to inform Vital Sign 'Terrestrial Snow Cover.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/843/Terrestrial-Snow-Cover</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000502">snow key variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000053">
+        <h3>
+          sea ice concentration<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000053" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000053"><code>http://purl.dataone.org/odo/ARCRC_00000053</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable is used to inform Vital Sign 'Sea Ice.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/841/Sea-Ice</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000501">sea ice key variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000054">
+        <h3>
+          sea ice extent<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000054" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000054"><code>http://purl.dataone.org/odo/ARCRC_00000054</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable is used to inform Vital Sign 'Sea Ice.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/841/Sea-Ice</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000501">sea ice key variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000055">
+        <h3>
+          sea ice volume<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000055" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000055"><code>http://purl.dataone.org/odo/ARCRC_00000055</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable is used to inform Vital Sign 'Sea Ice.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/841/Sea-Ice</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000501">sea ice key variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000056">
+        <h3>
+          sea ice thickness<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000056" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000056"><code>http://purl.dataone.org/odo/ARCRC_00000056</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable is used to inform Vital Sign 'Sea Ice.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/841/Sea-Ice</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000501">sea ice key variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000057">
+        <h3>
+          age of sea ice<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000057" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000057"><code>http://purl.dataone.org/odo/ARCRC_00000057</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Target Variable is used to inform Vital Sign 'Sea Ice.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/841/Sea-Ice</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000501">sea ice key variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000058">
+        <h3>
+          solid ice discharge<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000058" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000058"><code>http://purl.dataone.org/odo/ARCRC_00000058</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable is used to inform Vital Sign 'Greenland Ice Sheet.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/842/Greenland-Ice-Sheet</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000040">Arctic Key Variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000059">
+        <h3>
+          surface albedo<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000059" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000059"><code>http://purl.dataone.org/odo/ARCRC_00000059</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable is used to inform Vital Sign, 'Greenland Ice Sheet.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/842/Greenland-Ice-Sheet</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000503">surface-based key variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000060">
+        <h3>
+          Arctic land air temperature anomaly<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000060" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000060"><code>http://purl.dataone.org/odo/ARCRC_00000060</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable is used to inform Vital Sign 'Surface Air Temperature.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/835/Surface-Air-Temperature</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000040">Arctic Key Variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000061">
+        <h3>
+          global land air temperature anomaly<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000061" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000061"><code>http://purl.dataone.org/odo/ARCRC_00000061</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable is used to inform Vital Sign 'Surface Air Temperature.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/835/Surface-Air-Temperature</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000040">Arctic Key Variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000062">
+        <h3>
+          seasonal/annual anomaly patterns for air temperatures<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000062" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000062"><code>http://purl.dataone.org/odo/ARCRC_00000062</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable is used to inform Vital Sign 'Surface Air Temperature.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/835/Surface-Air-Temperature</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000040">Arctic Key Variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000063">
+        <h3>
+          surface melt<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000063" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000063"><code>http://purl.dataone.org/odo/ARCRC_00000063</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable is used to inform Vital Sign 'Greenland Ice Sheet.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/842/Greenland-Ice-Sheet</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000503">surface-based key variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000064">
+        <h3>
+          total mass balance<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000064" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000064"><code>http://purl.dataone.org/odo/ARCRC_00000064</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable is used to inform Vital Sign 'Greenland Ice Sheet.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/842/Greenland-Ice-Sheet</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000040">Arctic Key Variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000065">
+        <h3>
+          surface mass balance<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000065" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000065"><code>http://purl.dataone.org/odo/ARCRC_00000065</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable is used to inform Vital Sign 'Greenland Ice Sheet.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/842/Greenland-Ice-Sheet</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000503">surface-based key variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000066">
+        <h3>
+          ice ablation<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000066" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000066"><code>http://purl.dataone.org/odo/ARCRC_00000066</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable was used to inform the Vital Sign, 'Greenland Ice Sheet.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/842/Greenland-Ice-Sheet</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000040">Arctic Key Variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000067">
+        <h3>
+          marine terminating glacier front annual area change<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000067" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000067"><code>http://purl.dataone.org/odo/ARCRC_00000067</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable is used to inform Vital Sign, 'Greenland Ice Sheet.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/842/Greenland-Ice-Sheet</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000040">Arctic Key Variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000068">
+        <h3>
+          atmospheric wind circulation<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000068" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000068"><code>http://purl.dataone.org/odo/ARCRC_00000068</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>This Key Variable is used to inform Vital Sign 'Surface Air Temperature.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/835/Surface-Air-Temperature</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000040">Arctic Key Variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000500">
+        <h3>
+          Arctic Report Card Component<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000500" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000500"><code>http://purl.dataone.org/odo/ARCRC_00000500</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Issued annually since 2006, the Arctic Report Card is a timely and peer-reviewed source for clear, reliable and concise environmental information on the current state of different components of the Arctic environmental system relative to historical records. The Report Card is intended for a wide audience, including scientists, teachers, students, decision-makers and the general public interested in the Arctic environment and science.</p>
+<p>The main website for the Arctic Report Card as of Nov 1, 2020 is: https://arctic.noaa.gov/Report-Card</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000040">Arctic Key Variable</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000504">Arctic Report Card 2020 Component</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000510">Arctic Report Card Essay</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000506">Place</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000010">Arctic Report Card Supporting Dataset</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000501">
+        <h3>
+          sea ice key variable<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000501" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000501"><code>http://purl.dataone.org/odo/ARCRC_00000501</code></a></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000040">Arctic Key Variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000055">sea ice volume</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000054">sea ice extent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000056">sea ice thickness</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000057">age of sea ice</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000053">sea ice concentration</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000502">
+        <h3>
+          snow key variable<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000502" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000502"><code>http://purl.dataone.org/odo/ARCRC_00000502</code></a></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000040">Arctic Key Variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000051">snow depth</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000049">snow cover extent</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000050">snow cover duration</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000503">
+        <h3>
+          surface-based key variable<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000503" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000503"><code>http://purl.dataone.org/odo/ARCRC_00000503</code></a></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000040">Arctic Key Variable</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000063">surface melt</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000065">surface mass balance</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000047">sea surface temperature</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000059">surface albedo</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000045">surface air temperature</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000504">
+        <h3>
+          Arctic Report Card 2020 Component<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000504" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000504"><code>http://purl.dataone.org/odo/ARCRC_00000504</code></a></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000500">Arctic Report Card Component</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000041">Arctic Key Variables 2020</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000000">Arctic Essays 2020</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000505">
+        <h3>
+          Geographic Named Place<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000505" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000505"><code>http://purl.dataone.org/odo/ARCRC_00000505</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>General class for containing places and locations referenced in the Arctic Report Card</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000506">Place</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Members</th>
+                <td>
+                    <a href="http://purl.dataone.org/odo/ARCRC_00000507">http://purl.dataone.org/odo/ARCRC_00000507</a><br/>
+                    <a href="http://purl.dataone.org/odo/ARCRC_00000509">http://purl.dataone.org/odo/ARCRC_00000509</a><br/>
+                    <a href="http://purl.dataone.org/odo/ARCRC_00000508">http://purl.dataone.org/odo/ARCRC_00000508</a><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000506">
+        <h3>
+          Place<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000506" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000506"><code>http://purl.dataone.org/odo/ARCRC_00000506</code></a></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000500">Arctic Report Card Component</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000505">Geographic Named Place</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000510">
+        <h3>
+          Arctic Report Card Essay<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000510" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000510"><code>http://purl.dataone.org/odo/ARCRC_00000510</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Essays are indicators of the state of the Arctic environmental system. They are assessed using measurements of and/or proxies for Key Variables. Essays are classified under one of three categories: Vital Signs, Other Indicators, and Frostbites.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000500">Arctic Report Card Component</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000013">Arctic Vital Signs</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000513">Frostbites</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000512">Other Indicators</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000512">
+        <h3>
+          Other Indicators<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000512" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000512"><code>http://purl.dataone.org/odo/ARCRC_00000512</code></a></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000510">Arctic Report Card Essay</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000513">
+        <h3>
+          Frostbites<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000513" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000513"><code>http://purl.dataone.org/odo/ARCRC_00000513</code></a></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000510">Arctic Report Card Essay</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000514">
+        <h3>
+          MaxNDVI<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000514" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000514"><code>http://purl.dataone.org/odo/ARCRC_00000514</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>MaxNDVI is the peak NDVI value for the year and is related to the annual maximum biomass of aboveground vegetation that is reached in midsummer (typically late July or early August).</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000042">Normalized Difference Vegetation Index</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="http://purl.dataone.org/odo/ARCRC_00000515">
+        <h3>
+          TI-NDVI<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#http://purl.dataone.org/odo/ARCRC_00000515" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><a href="http://purl.dataone.org/odo/ARCRC_00000515"><code>http://purl.dataone.org/odo/ARCRC_00000515</code></a></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>TI (time-integrated) NDVI is the sum of the biweekly NDVI values for the growing season and is correlated with the total aboveground vegetation productivity.</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="#http://purl.dataone.org/odo/ARCRC_00000042">Normalized Difference Vegetation Index</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+<section id="objectproperties">
+    <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#http://purl.dataone.org/odo/ARCRC_00000011">usesProtocol</a></li>
+        <li><a href="#http://purl.dataone.org/odo/ARCRC_00000012">calculatedUsing</a></li>
+        <li><a href="#http://purl.dataone.org/odo/ARCRC_00000518">wasInfluencedBy</a></li>
+    </ul>
+    <div class="entity property" id="http://purl.dataone.org/odo/ARCRC_00000011">
+        <h3>usesProtocol<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#http://purl.dataone.org/odo/ARCRC_00000011" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.dataone.org/odo/ARCRC_00000011</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>might want to delete before we import ECSO so that there are no conflict issues (usesProtocol already exists in ECSO)</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="http://purl.dataone.org/odo/ARCRC_00000012">
+        <h3>calculatedUsing<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#http://purl.dataone.org/odo/ARCRC_00000012" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.dataone.org/odo/ARCRC_00000012</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>adding this object property, but can delete later if not appropriate</p>
+<p>e.g. of usage for NSIDC sea ice index (a target variable) that is calculated using both ice extent and ice concentration data:</p>
+<p>axiom = calculatedUsing only (Sea Ice Extent and Sea Ice Concentration)</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="http://purl.dataone.org/odo/ARCRC_00000518">
+        <h3>wasInfluencedBy<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#http://purl.dataone.org/odo/ARCRC_00000518" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.dataone.org/odo/ARCRC_00000518</code></td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="annotationproperties">
+    <h2>Annotation Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#http://purl.obolibrary.org/obo/IAO_0000115">definition</a></li>
+        <li><a href="#http://purl.obolibrary.org/odo/IAO_0000119">definition source</a></li>
+        <li><a href="#http://purl.org/dc/elements/1.1/creator">creator</a></li>
+        <li><a href="#http://purl.org/dc/elements/1.1/date">date</a></li>
+        <li><a href="#http://purl.org/dc/elements/1.1/description">description</a></li>
+        <li><a href="#http://www.geneontology.org/formats/oboInOwl#id">id</a></li>
+        <li><a href="#http://www.w3.org/2000/01/rdf-schema#comment">comment</a></li>
+        <li><a href="#http://www.w3.org/2002/07/owl#sameAs">sameAs</a></li>
+        <li><a href="#http://www.w3.org/2004/02/skos/core#altLabel">altLabel</a></li>
+    </ul>
+    <div class="entity property" id="http://purl.obolibrary.org/obo/IAO_0000115">
+        <h3>definition<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#http://purl.obolibrary.org/obo/IAO_0000115" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.obolibrary.org/obo/IAO_0000115</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="http://purl.obolibrary.org/odo/IAO_0000119">
+        <h3>definition source<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#http://purl.obolibrary.org/odo/IAO_0000119" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.obolibrary.org/odo/IAO_0000119</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="http://purl.org/dc/elements/1.1/creator">
+        <h3>creator<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#http://purl.org/dc/elements/1.1/creator" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/elements/1.1/creator</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="http://purl.org/dc/elements/1.1/date">
+        <h3>date<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#http://purl.org/dc/elements/1.1/date" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/elements/1.1/date</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="http://purl.org/dc/elements/1.1/description">
+        <h3>description<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#http://purl.org/dc/elements/1.1/description" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://purl.org/dc/elements/1.1/description</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="http://www.geneontology.org/formats/oboInOwl#id">
+        <h3>id<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#http://www.geneontology.org/formats/oboInOwl#id" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.geneontology.org/formats/oboInOwl#id</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="http://www.w3.org/2000/01/rdf-schema#comment">
+        <h3>comment<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#http://www.w3.org/2000/01/rdf-schema#comment" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2000/01/rdf-schema#comment</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="http://www.w3.org/2002/07/owl#sameAs">
+        <h3>sameAs<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#http://www.w3.org/2002/07/owl#sameAs" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2002/07/owl#sameAs</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="http://www.w3.org/2004/02/skos/core#altLabel">
+        <h3>altLabel<sup title="annotation property" class="sup-ap">ap</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#http://www.w3.org/2004/02/skos/core#altLabel" title="fragment link to here">#</a>&nbsp;<a href="#annotationproperties" title="Annotation Properties Index">APs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://www.w3.org/2004/02/skos/core#altLabel</code></td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+  
+    <section id="namedindividuals">
+        <h2>Named Individuals <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+        <ul class="hlist">
+            <li><a href="#http://purl.dataone.org/odo/ARCRC_00000509">Arctic Ocean</a></li>
+            <li><a href="#http://purl.dataone.org/odo/ECSO_00000516">ECSO_00000516</a></li>
+            <li><a href="#http://purl.dataone.org/odo/ECSO_00001205">ECSO_00001205</a></li>
+            <li><a href="#http://purl.dataone.org/odo/ECSO_00001523">ECSO_00001523</a></li>
+            <li><a href="#http://purl.dataone.org/odo/ECSO_00001747">ECSO_00001747</a></li>
+            <li><a href="#http://purl.dataone.org/odo/ECSO_00002654">ECSO_00002654</a></li>
+            <li><a href="#http://www.purl.dataone.org/odo/ECSO_00010076">ECSO_00010076</a></li>
+            <li><a href="#http://purl.obolibrary.org/obo/ENVO_04000013">ENVO_04000013</a></li>
+            <li><a href="#http://purl.obolibrary.org/obo/GAZ_00000323">GAZ_00000323</a></li>
+            <li><a href="#http://purl.obolibrary.org/obo/GAZ_00001507">GAZ_00001507</a></li>
+            <li><a href="#http://purl.obolibrary.org/obo/GAZ_00011748">GAZ_00011748</a></li>
+            <li><a href="#http://purl.dataone.org/odo/ARCRC_00000505">Geographic Named Place</a></li>
+            <li><a href="#http://purl.dataone.org/odo/ARCRC_00000507">Greenland</a></li>
+            <li><a href="#http://purl.dataone.org/odo/ARCRC_00000508">Greenland Ice Sheet</a></li>
+            <li><a href="#http://purl.dataone.org/odo/ARCRC_00000042">Normalized Difference Vegetation Index</a></li>
+            <li><a href="#http://purl.dataone.org/odo/ECSO_00000324">Particulate Organic Carbon</a></li>
+            <li><a href="#https://schema.org/Place">Place</a></li>
+            <li><a href="#http://purl.dataone.org/odo/ARCRC_00000048">chlorophyll-a concentration</a></li>
+            <li><a href="#http://purl.dataone.org/odo/ARCRC_00000054">sea ice extent</a></li>
+            <li><a href="#http://purl.dataone.org/odo/ARCRC_00000047">sea surface temperature</a></li>
+            <li><a href="#http://purl.dataone.org/odo/ARCRC_00000051">snow depth</a></li>
+            <li><a href="#http://purl.dataone.org/odo/ARCRC_00000009">snow water equivalent</a></li>
+            <li><a href="#http://purl.dataone.org/odo/ARCRC_00000518">wasInfluencedBy</a></li>
+            <li><a href="#http://www.w3.org/ns/prov#wasInfluencedBy">wasInfluencedBy</a></li>
+        </ul>
+            <div class="entity named_individual" id="http://purl.dataone.org/odo/ARCRC_00000009">
+        <h3>snow water equivalent<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://purl.dataone.org/odo/ARCRC_00000009
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
+                <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This Key Variable is used to inform Vital Sign 'Terrestrial Snow Cover.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/843/Terrestrial-Snow-Cover
+                </td>
+            </tr>
+            <tr>
+                <th>See Also</th>
+                <td>
+                    <a href="https://nsidc.org/cryosphere/glossary/">https://nsidc.org/cryosphere/glossary/</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Same As</th>
+                <td>
+                    <a href="http://purl.dataone.org/odo/ECSO_00001747">http://purl.dataone.org/odo/ECSO_00001747</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="http://purl.dataone.org/odo/ARCRC_00000042">
+        <h3>Normalized Difference Vegetation Index<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://purl.dataone.org/odo/ARCRC_00000042
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
+                <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This Key Variable is used to inform Vital Sign 'Tundra Greenness.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/838/Tundra-Greenness
+                </td>
+            </tr>
+            <tr>
+                <th>Same As</th>
+                <td>
+                    <a href="http://www.purl.dataone.org/odo/ECSO_00010076">http://www.purl.dataone.org/odo/ECSO_00010076</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="http://purl.dataone.org/odo/ARCRC_00000047">
+        <h3>sea surface temperature<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://purl.dataone.org/odo/ARCRC_00000047
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
+                <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This Key Variable is used to inform Vital Sign 'Sea Surface Temperature.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/840/Sea-Surface-Temperature
+                </td>
+            </tr>
+            <tr>
+                <th>Same As</th>
+                <td>
+                    <a href="http://purl.dataone.org/odo/ECSO_00001523">http://purl.dataone.org/odo/ECSO_00001523</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="http://purl.dataone.org/odo/ARCRC_00000048">
+        <h3>chlorophyll-a concentration<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://purl.dataone.org/odo/ARCRC_00000048
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
+                <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This Key Variable is used to inform Vital Sign 'Arctic Ocean Primary Productivity.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/839/Arctic-Ocean-Primary-Productivity-The-Response-of-Marine-Algae-to-Climate-Warming-and-Sea-Ice-Decline
+                </td>
+            </tr>
+            <tr>
+                <th>Same As</th>
+                <td>
+                    <a href="http://purl.dataone.org/odo/ECSO_00000516">http://purl.dataone.org/odo/ECSO_00000516</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="http://purl.dataone.org/odo/ARCRC_00000051">
+        <h3>snow depth<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://purl.dataone.org/odo/ARCRC_00000051
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
+                <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This Key Variable is used to inform Vital Sign 'Terrestrial Snow Cover.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/843/Terrestrial-Snow-Cover
+                </td>
+            </tr>
+            <tr>
+                <th>Same As</th>
+                <td>
+                    <a href="http://purl.dataone.org/odo/ECSO_00001205">http://purl.dataone.org/odo/ECSO_00001205</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="http://purl.dataone.org/odo/ARCRC_00000054">
+        <h3>sea ice extent<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://purl.dataone.org/odo/ARCRC_00000054
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
+                <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    This Key Variable is used to inform Vital Sign 'Sea Ice.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/841/Sea-Ice
+                </td>
+            </tr>
+            <tr>
+                <th>See Also</th>
+                <td>
+                    <a href="http://purl.dataone.org/odo/ECSO_00002654">http://purl.dataone.org/odo/ECSO_00002654</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Same As</th>
+                <td>
+                    <a href="http://purl.dataone.org/odo/ECSO_00002654">http://purl.dataone.org/odo/ECSO_00002654</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="http://purl.dataone.org/odo/ARCRC_00000505">
+        <h3>Geographic Named Place<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://purl.dataone.org/odo/ARCRC_00000505
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://www.w3.org/2002/07/owl#Class">owl:Class</a><br/>
+                <a href="http://www.w3.org/2000/01/rdf-schema#Class">rdfs:Class</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    General class for containing places and locations referenced in the Arctic Report Card
+                </td>
+            </tr>
+            <tr>
+                <th>Same As</th>
+                <td>
+                    <a href="https://schema.org/Place">https://schema.org/Place</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="http://purl.dataone.org/odo/ARCRC_00000507">
+        <h3>Greenland<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://purl.dataone.org/odo/ARCRC_00000507
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://purl.dataone.org/odo/ARCRC_00000505">http://purl.dataone.org/odo/ARCRC_00000505</a><br/>
+            </dd>
+            <tr>
+                <th>See Also</th>
+                <td>
+                    <a href="http://purl.obolibrary.org/obo/GAZ_00001507">obo:GAZ_00001507</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Same As</th>
+                <td>
+                    <a href="http://purl.obolibrary.org/obo/GAZ_00001507">obo:GAZ_00001507</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="http://purl.dataone.org/odo/ARCRC_00000508">
+        <h3>Greenland Ice Sheet<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://purl.dataone.org/odo/ARCRC_00000508
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://purl.dataone.org/odo/ARCRC_00000505">http://purl.dataone.org/odo/ARCRC_00000505</a><br/>
+            </dd>
+            <tr>
+                <th>See Also</th>
+                <td>
+                    <a href="http://purl.obolibrary.org/obo/GAZ_00011748">obo:GAZ_00011748</a>
+                </td>
+            </tr>
+            <tr>
+                <th>Same As</th>
+                <td>
+                    <a href="http://purl.obolibrary.org/obo/GAZ_00011748">obo:GAZ_00011748</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="http://purl.dataone.org/odo/ARCRC_00000509">
+        <h3>Arctic Ocean<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://purl.dataone.org/odo/ARCRC_00000509
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://purl.dataone.org/odo/ARCRC_00000505">http://purl.dataone.org/odo/ARCRC_00000505</a><br/>
+            </dd>
+            <tr>
+                <th>Same As</th>
+                <td>
+                    <a href="http://purl.obolibrary.org/obo/GAZ_00000323">obo:GAZ_00000323</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="http://purl.dataone.org/odo/ARCRC_00000518">
+        <h3>wasInfluencedBy<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://purl.dataone.org/odo/ARCRC_00000518
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://www.w3.org/2002/07/owl#ObjectProperty">owl:ObjectProperty</a><br/>
+                <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">rdf:Property</a><br/>
+            </dd>
+            <tr>
+                <th>Same As</th>
+                <td>
+                    <a href="http://www.w3.org/ns/prov#wasInfluencedBy">prov:wasInfluencedBy</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="http://purl.dataone.org/odo/ECSO_00000324">
+        <h3>Particulate Organic Carbon<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://purl.dataone.org/odo/ECSO_00000324
+                  
+                  </code>
+                </td>
+            </tr>
+            <tr>
+                <th>Same As</th>
+                <td>
+                    <a href="http://purl.obolibrary.org/obo/ENVO_04000013">obo:ENVO_04000013</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="http://purl.dataone.org/odo/ECSO_00000516">
+        <h3>ECSO_00000516<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://purl.dataone.org/odo/ECSO_00000516
+                  
+                  </code>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="http://purl.dataone.org/odo/ECSO_00001205">
+        <h3>ECSO_00001205<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://purl.dataone.org/odo/ECSO_00001205
+                  
+                  </code>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="http://purl.dataone.org/odo/ECSO_00001523">
+        <h3>ECSO_00001523<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://purl.dataone.org/odo/ECSO_00001523
+                  
+                  </code>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="http://purl.dataone.org/odo/ECSO_00001747">
+        <h3>ECSO_00001747<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://purl.dataone.org/odo/ECSO_00001747
+                  
+                  </code>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="http://purl.dataone.org/odo/ECSO_00002654">
+        <h3>ECSO_00002654<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://purl.dataone.org/odo/ECSO_00002654
+                  
+                  </code>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="http://purl.obolibrary.org/obo/ENVO_04000013">
+        <h3>ENVO_04000013<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://purl.obolibrary.org/obo/ENVO_04000013
+                  
+                  </code>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="http://purl.obolibrary.org/obo/GAZ_00000323">
+        <h3>GAZ_00000323<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://purl.obolibrary.org/obo/GAZ_00000323
+                  
+                  </code>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="http://purl.obolibrary.org/obo/GAZ_00001507">
+        <h3>GAZ_00001507<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://purl.obolibrary.org/obo/GAZ_00001507
+                  
+                  </code>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="http://purl.obolibrary.org/obo/GAZ_00011748">
+        <h3>GAZ_00011748<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://purl.obolibrary.org/obo/GAZ_00011748
+                  
+                  </code>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="http://www.purl.dataone.org/odo/ECSO_00010076">
+        <h3>ECSO_00010076<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://www.purl.dataone.org/odo/ECSO_00010076
+                  
+                  </code>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="http://www.w3.org/ns/prov#wasInfluencedBy">
+        <h3>wasInfluencedBy<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://www.w3.org/ns/prov#wasInfluencedBy
+                  
+                  </code>
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="https://schema.org/Place">
+        <h3>Place<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      https://schema.org/Place
+                  
+                  </code>
+                </td>
+            </tr>
+        </table>
+    </div>
+    </section>
+
+  <section id="namespaces">
+    <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <dl>
+        <dt>default (:)</dt>
+        <dd><code>http://purl.dataone.org/odo/ARCRC</code></dd>
+        <dt>dc</dt>
+        <dd><code>http://purl.org/dc/elements/1.1/</code></dd>
+        <dt>envo</dt>
+        <dd><code>http://purl.obolibrary.org/obo/envo#</code></dd>
+        <dt>foaf</dt>
+        <dd><code>http://xmlns.com/foaf/0.1/</code></dd>
+        <dt>obo</dt>
+        <dd><code>http://purl.obolibrary.org/obo/</code></dd>
+        <dt>oboInOwl</dt>
+        <dd><code>http://www.geneontology.org/formats/oboInOwl#</code></dd>
+        <dt>odo</dt>
+        <dd><code>http://purl.obolibrary.org/odo/</code></dd>
+        <dt>orcid</dt>
+        <dd><code>http://orcid.org/</code></dd>
+        <dt>owl</dt>
+        <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
+        <dt>prov</dt>
+        <dd><code>http://www.w3.org/ns/prov#</code></dd>
+        <dt>rdf</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt>rdfs</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt>sdo</dt>
+        <dd><code>http://schema.org/</code></dd>
+        <dt>skos</dt>
+        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>terms</dt>
+        <dd><code>http://purl.org/dc/terms/</code></dd>
+        <dt>xsd</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+    </dl>
+</section>
+  <section id="legend">
+      <h2>Legend</h2>
+      <table class="entity">
+          <tr><td><sup class="sup-c" title="Classes">c</sup></td><td>Classes</td></tr>
+          <tr><td><sup class="sup-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
+          <tr><td><sup class="sup-fp" title="Functional Properties">fp</sup></td><td>Functional Properties</td></tr>
+          <tr><td><sup class="sup-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
+          <tr><td><sup class="sup-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
+          <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
+          <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
+      </table>
+  </section>
+</body>
+</html>
