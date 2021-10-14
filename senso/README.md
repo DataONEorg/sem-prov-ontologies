@@ -1,21 +1,13 @@
 # SENSO
 
-The SENSO ontology is designed to provide classification terms for labeling sensitive data for data archival and sharing. It will be [hosted on BioPortal](http://bioportal.bioontology.org/ontologies/ARCRC).
-The ontology was created by [Matt Jones](https://orcid.org/0000-0003-0077-4738) and ...
-
-## The Sensitive Data Ontology
-
-Overview TO BE WRITTEN...
+The SENSO ontology is designed to provide classification terms for labeling sensitive data for data archival and sharing. It will be [hosted on BioPortal](http://bioportal.bioontology.org/ontologies/SENSO).
+The ontology was created by [Matt Jones](https://orcid.org/0000-0003-0077-4738).
 
 ## Ontology Design
 
 ### URIs
 
 All term URIs begin with the prefix `http://purl.dataone.org/odo/SENSO_` and conform to the [printf](https://en.wikipedia.org/wiki/Printf_format_string) format of `http://purl.dataone.org/odo/SENSO_%08d`.
-
-### Imports
-
-- Data Use Ontology (DUO)
 
 ### Annotation Properties
 
