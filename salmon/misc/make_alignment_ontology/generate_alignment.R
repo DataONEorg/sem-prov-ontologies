@@ -5,18 +5,19 @@
 library(rdflib)
 library(tibble)
 
-# Prep: Load ontology and list of deprecated IRIs
+### Prep: Load ontology and list of deprecated IRIs
 onto <- rdflib::rdf_parse("../../SALMON.owl", format = "turtle")
 dep_iris <- readLines("../find-deprecated-iris/deprecated_iris.txt")
+onto_iri <- "http://purl.dataone.org/odo/salmon_alignment_"
 
-# Step 1: Load deprecated IRIs and transpose them
+### Step 1: Load deprecated IRIs and transpose them
 fixed_iris <- gsub("http://purl.dataone.org/odo/salmon_", "http://purl.dataone.org/odo/salmon_00", dep_iris)
 
 # Step 2: Change 00000647 to 00000674
 fixed_iris[which(fixed_iris == "http://purl.dataone.org/odo/salmon_00000647")] <- "http://purl.dataone.org/odo/salmon_00000674"
 
-#' Step 3: Add in labels
-#' Get an rdfs:label for the given IRI from the given RDF dataset
+### Step 3: Add in labels
+### Get an rdfs:label for the given IRI from the given RDF dataset
 get_label <- function(rdf, iri) {
   query <- paste0("select ?label where { <", iri, "> <http://www.w3.org/2000/01/rdf-schema#label> ?label} limit 1")
   result <- rdflib::rdf_query(onto, query)
@@ -31,7 +32,7 @@ get_label <- function(rdf, iri) {
 
 labels <- vapply(fixed_iris, function(iri) { get_label(onto, iri)}, "")
 
-# Step 4: Start building out a data.frame
+### Step 4: Start building out a data.frame
 term_df <- data.frame(
   old_iri = dep_iris,
   equiv_iri = fixed_iris,
@@ -39,27 +40,38 @@ term_df <- data.frame(
   row.names = NULL
 )
 
-# Step 5: Make alignment ontology
+### Step 5: Make alignment ontology
 
-onto_iri <- "http://purl.dataone.org/odo/salmon_alignment_"
-
+# preamble
 preamble <- tibble::tribble(
-  ~subject, ~predicate, ~object,
-  onto_iri, "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "http://www.w3.org/2002/07/owl#Ontology"
+  ~subject, ~predicate, ~object, ~dataTypeIRI,
+  onto_iri, "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "http://www.w3.org/2002/07/owl#Ontology", NA,
+  onto_iri, "http://www.w3.org/2000/01/rdf-schema#label", "Alignment ontology for The Salmon Ontology (SALMON)", NA,
+  onto_iri, "http://purl.org/dc/elements/1.1/description", "This ontology contains a set of classes (and their alignments) for deprecated terms from The Salmon Ontology (SALMON). While patterns for deprecating term(s) in ontologies commonly involves retaining the deprecated term(s) in the main ontology, we've opted to move the deprecated terms into this alignment ontology. Our main justification for this choice is (1) that all publicly-accessible instances of deprecated terms were created before the first published release of SALMON and (2) we have sufficient authorship access to update these instanaces to use published terms.", NA,
+  onto_iri, "http://purl.org/dc/terms/license", "https://creativecommons.org/publicdomain/zero/1.0/", NA,
+  onto_iri, "http://purl.org/dc/elements/1.1/date", "2022-07-18", "http://www.w3.org/2001/XMLSchema#date",
+  onto_iri, "http://purl.org/dc/terms/creator", "https://orcid.org/0000-0002-0381-3766", NA,
+  onto_iri, "http://usefulinc.com/ns/doap#GitRepository", "https://github.com/DataONEorg/sem-prov-ontologies", NA,
+  onto_iri, "http://www.w3.org/2002/07/owl#versionInfo", "0.1", NA,
 )
 
 align_onto <- rdflib::rdf()
 
-# preamble
 for (i in seq_len(nrow(preamble))) {
-  rdflib::rdf_add(align_onto, preamble[i, "subject"][[1]], preamble[i, "predicate"][[1]], preamble[i, "object"][[1]])
+  rdflib::rdf_add(
+    align_onto,
+    preamble[i, "subject"][[1]],
+    preamble[i, "predicate"][[1]],
+    preamble[i, "object"][[1]],
+    datatype_uri = preamble[i, "dataTypeIRI"][[1]])
 }
 
 # terms
 for (i in seq_len(nrow(term_df))) {
   rdflib::rdf_add(align_onto, term_df[i, "old_iri"][[1]], "http://www.w3.org/1999/02/22-rdf-syntax-ns#type", "http://www.w3.org/2002/07/owl#Class")
   rdflib::rdf_add(align_onto, term_df[i, "old_iri"][[1]], "http://www.w3.org/2002/07/owl#equivalentClass", term_df[i, "equiv_iri"])
-  rdflib::rdf_add(align_onto, term_df[i, "old_iri"][[1]], "http://www.w3.org/1999/02/22-rdf-syntax-ns#label", term_df[i, "label"])
+  rdflib::rdf_add(align_onto, term_df[i, "old_iri"][[1]], "http://www.w3.org/2000/01/rdf-schema#label", term_df[i, "label"])
 }
 
+### Step 6: Serialize
 rdflib::rdf_serialize(align_onto, doc = "alignment.ttl", format = "turtle")
