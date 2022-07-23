@@ -8,13 +8,13 @@ library(tibble)
 ### Prep: Load ontology and list of deprecated IRIs
 onto <- rdflib::rdf_parse("../../SALMON.owl", format = "turtle")
 dep_iris <- readLines("../find_deprecated_iris//deprecated_iris.txt")
-onto_iri <- "http://purl.dataone.org/odo/salmon_alignment_"
+onto_iri <- "http://purl.dataone.org/odo/SALMON_alignment_"
 
 ### Step 1: Load deprecated IRIs and transpose them
-fixed_iris <- gsub("http://purl.dataone.org/odo/salmon_", "http://purl.dataone.org/odo/salmon_00", dep_iris)
+fixed_iris <- gsub("http://purl.dataone.org/odo/salmon_", "http://purl.dataone.org/odo/SALMON_00", dep_iris)
 
 # Step 2: Change 00000647 to 00000674
-fixed_iris[which(fixed_iris == "http://purl.dataone.org/odo/salmon_00000647")] <- "http://purl.dataone.org/odo/salmon_00000674"
+fixed_iris[which(fixed_iris == "http://purl.dataone.org/odo/salmon_00000647")] <- "http://purl.dataone.org/odo/SALMON_00000674"
 
 ### Step 3: Add in labels
 ### Get an rdfs:label for the given IRI from the given RDF dataset
