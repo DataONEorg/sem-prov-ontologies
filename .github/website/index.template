@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>sem-prov-ontologies</title>
+    <title>DataONE Ontologies</title>
     <style>
       body {
         font-size: 16px;
@@ -59,11 +59,14 @@
         <a href="https://www.dataone.org/">DataONE</a> maintains and develops a family of both general-purpose and domain-specific <a href="https://www.w3.org/OWL/">OWL</a> ontologies:
       </p>
       <ul>
-        <li><a href="https://purl.dataone.org/provone-v1-dev">ProvONE</a></li>
-        <li><a href="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl">OBOE</a> [<a href="https://github.com/NCEAS/oboe/">GitHub</a>]</li>
-        <li><a href="https://purl.dataone.org/odo/ECSO_">ECSO</a></li>
+        <li><a href="https://purl.dataone.org/provone-v1-dev">ProvONE</a>: A PROV Extension Data Model for Scientific Workflow Provenance</li>
+        <li><a href="http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl">OBOE</a> [<a href="https://github.com/NCEAS/oboe/">GitHub</a>]: Extensible Observation Ontology</li>
+        <li><a href="https://purl.dataone.org/odo/ECSO_">ECSO</a>: The Ecosystem Ontology</li>
+        <li><a href="https://purl.dataone.org/odo/ADCAD_">ADCAD</a> [<a href="https://github.com/NCEAS/adc-disciplines">GitHub</a>]: A simplified disciplinary taxonomy for classification at the Arctic Data Center.
+
+</li>
       {% for ontology in ontologies %}
-        <li><a href="./{{ontology.name}}.html">{{ontology.title}}</a> [<a href="{{ontology.basename}}">OWL</a>]</li>
+        <li><a href="./{{ontology.name}}.html">{{ontology.name}}</a> [<a href="{{ontology.basename}}">OWL</a>]: {{ontology.title}}</li>
       {% endfor %}
       </ul>
       <p>
