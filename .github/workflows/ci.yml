@@ -29,9 +29,7 @@ jobs:
         with:
           python-version: "3.9"
           cache: 'pip'
-      - run: python -m pip install -r https://raw.githubusercontent.com/amoeba/pyLODE/master/requirements.txt
-      - run: python -m pip install git+https://github.com/amoeba/pylode.git
-      - run: python -m pip install jinja2
+      - run: python -m pip install -r ./.github/website/requirements.txt
       - run: python ./.github/website/build.py
       - name: ghpages
         uses: JamesIves/github-pages-deploy-action@v4
