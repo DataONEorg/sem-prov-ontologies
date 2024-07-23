@@ -2,7 +2,7 @@ import os
 import shutil
 from pathlib import Path
 import xml
-import pylode
+from pylode import OntPub
 from jinja2 import Template
 
 
@@ -59,12 +59,7 @@ def run_pylode(path):
     out_path = out_path.replace(".owl", "")
 
     print(f"Running PyLODE on {path} with output path of {out_path}")
-    html = pylode.MakeDocco(
-        input_data_file=str(path), outputformat="html", profile="dataone"
-    ).document()
-
-    with open(out_path, "w") as html_file:
-        html_file.write(str(html))
+    OntPub(str(path)).make_html(destination=out_path)
 
     return out_path
 
