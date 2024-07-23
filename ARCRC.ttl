@@ -1,7 +1,7 @@
-@prefix : <http://www.semanticweb.org/samanthacsik/ontologies/2020/10/untitled-ontology-48#> .
+@prefix : <http://purl.dataone.org/odo/ARCRC> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
-@prefix odo: <http://purl.obolibrary.org/odo/> .
+@prefix odo: <http://purl.dataone.org/odo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -15,9 +15,15 @@
 @base <http://purl.dataone.org/odo/ARCRC> .
 
 <http://purl.dataone.org/odo/ARCRC> rdf:type owl:Ontology ;
-                                     owl:versionIRI <http://purl.dataone.org/odo/ARCRC.owl/0.10> ;
-                                     owl:imports <http://purl.dataone.org/odo/ECSO8.owl> ,
-                                                 <http://www.opengis.net/ont/geosparql> .
+                                    owl:versionIRI <http://purl.dataone.org/odo/ARCRC.owl/0.10.1> ;
+                                    owl:versionInfo "Version 0.10.1" ;
+                                    terms:title "Arctic Report Card Ontology"@en ;
+                                    terms:creator <https://orcid.org/0000-0002-0381-3766> ,
+                                                  <https://orcid.org/0000-0003-0632-7576> ,
+                                                  <https://orcid.org/0000-0003-0077-4738> ;
+                                    terms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                    owl:imports <http://purl.dataone.org/odo/ECSO8.owl> ,
+                                                <http://www.opengis.net/ont/geosparql> .
 
 #################################################################
 #    Annotation properties
@@ -30,8 +36,8 @@ obo:IAO_0000115 rdf:type owl:AnnotationProperty ;
                 rdfs:label "definition"@en .
 
 
-###  http://purl.obolibrary.org/odo/IAO_0000119
-odo:IAO_0000119 rdf:type owl:AnnotationProperty ;
+###  http://purl.obolibrary.org/obo/IAO_0000119
+obo:IAO_0000119 rdf:type owl:AnnotationProperty ;
                 dc:creator <http://orcid.org/0000-0002-5300-3075> ;
                 dc:date "2020-11-04T19:47:37Z"^^xsd:dateTime ;
                 rdfs:label "definition source"@en .
