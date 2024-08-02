@@ -20,8 +20,8 @@
                                                  <http://www.opengis.net/ont/geosparql> ;
                                      terms:creator <https://orcid.org/0000-0002-0381-3766> ,
                                                    <https://orcid.org/0000-0003-0077-4738> ,
-                                                   <https://orcid.org/0000-0003-0632-7576> ;
-                                     terms:contributor <http://orcid.org/0009-0007-8384-5074> ;
+                                                   <https://orcid.org/0000-0003-0632-7576> ,
+                                                   <http://orcid.org/0009-0007-8384-5074>;
                                      terms:description "Ontology to support NOAA Arctic Report Card essays and their corresponding datasets organized in the Arctic Data Center's data portal (https://arcticdata.io/catalog/portals/reportcard)" ;
                                      terms:license <https://creativecommons.org/licenses/by/4.0/> ;
                                      terms:title "Arctic Report Card Ontology"@en ;
@@ -226,7 +226,7 @@ odo:ARCRC_00000008 rdf:type owl:Class ;
                    dc:creator <http://orcid.org/0009-0007-8384-5074> ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
                    rdfs:label "Precipitation Indicator"@en ;
-                   owl:sameAs "http://purl.obolibrary.org/obo/ENVO_01000703" .
+                   owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_01000703" .
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000009
@@ -690,7 +690,7 @@ odo:ARCRC_00000017 rdf:type owl:Class ;
                    dc:creator <http://orcid.org/0009-0007-8384-5074> ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
                    rdfs:label "Western Alaska Salmon"@en ;
-                   skos:relatedMatch "http://purl.dataone.org/odo/SALMON_00000215" .
+                   skos:narrowMatch "http://purl.dataone.org/odo/SALMON_00000571" .
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000018
@@ -701,7 +701,7 @@ odo:ARCRC_00000018 rdf:type owl:Class ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Vital Sign, 'Precipitation.'" ;
                    rdfs:label "precipitation"@en ;
-                   owl:sameAs "http://purl.obolibrary.org/obo/ENVO_01000703" .
+                   owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_01000703" .
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000019
@@ -712,7 +712,7 @@ odo:ARCRC_00000019 rdf:type owl:Class ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Other Indicator, 'Subsea Permafrost'" ;
                    rdfs:label "total ice content"@en ;
-                   skos:relatedMatch "http://purl.dataone.org/odo/ECSO_00002173" .
+                   skos:narrowMatch "http://purl.dataone.org/odo/ECSO_00002173" .
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000020
@@ -722,7 +722,7 @@ odo:ARCRC_00000020 rdf:type owl:Class ;
                    dc:creator <http://orcid.org/0009-0007-8384-5074> ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Frostbite, 'Working with Communities to Observe the Arctic'" ;
-                   rdfs:label "indigenous observations"@en .
+                   rdfs:label "Indigenous observations"@en .
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000021
@@ -733,7 +733,7 @@ odo:ARCRC_00000021 rdf:type owl:Class ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Frostbite, 'Western Alaska Salmon'" ;
                    rdfs:label "salmon abundance"@en ;
-                   owl:sameAs "http://purl.dataone.org/odo/SALMON_00000504" .
+                   owl:equivalentClass "http://purl.dataone.org/odo/SALMON_00000504" .
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000022
@@ -743,7 +743,8 @@ odo:ARCRC_00000022 rdf:type owl:Class ;
                    dc:creator <http://orcid.org/0009-0007-8384-5074> ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Frostbite, 'Western Alaska Salmon'" ;
-                   rdfs:label "salmon run size"@en .
+                   rdfs:label "salmon run size"@en ;
+                   owl:equivalentClass "http://purl.dataone.org/odo/SALMON_00000479.
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000023
@@ -754,7 +755,7 @@ odo:ARCRC_00000023 rdf:type owl:Class ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Frostbite, 'Western Alaska Salmon'" ;
                    rdfs:label "salmon harvest count"@en ;
-                   owl:sameAs "http://purl.dataone.org/odo/SALMON_00000491" .
+                   owl:equivalentClass "http://purl.dataone.org/odo/SALMON_00000491" .
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000024
@@ -765,7 +766,8 @@ odo:ARCRC_00000024 rdf:type owl:Class ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Frostbite, 'Western Alaska Salmon'" ;
                    rdfs:label "salmon fecundity"@en ;
-                   skos:relatedMatch "http://purl.dataone.org/odo/SALMON_00000622" .
+                   skos:relatedMatch "http://purl.dataone.org/odo/SALMON_00000622" ;
+                   skos:narrowMatch "http://purl.dataone.org/odo/SALMON_00000476".
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000025
@@ -776,7 +778,7 @@ odo:ARCRC_00000025 rdf:type owl:Class ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Frostbite, 'Western Alaska Salmon'" ;
                    rdfs:label "salmon body length"@en ;
-                   skos:relatedMatch "http://purl.dataone.org/odo/SALMON_00000134" .
+                   skos:equivalentClass "http://purl.dataone.org/odo/SALMON_00000127" .
 
 
 #################################################################
