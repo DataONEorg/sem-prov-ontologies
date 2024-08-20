@@ -12,22 +12,57 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix sdo: <http://schema.org/> .
 @base <http://purl.dataone.org/odo/ARCRC> .
 
 <http://purl.dataone.org/odo/ARCRC> rdf:type owl:Ontology ;
-                                     owl:versionIRI <http://purl.dataone.org/odo/ARCRC.owl/0.10.1> ;
-                                     owl:imports odo:ECSO8.owl ,
+                                    owl:versionIRI <http://purl.dataone.org/odo/ARCRC.owl/0.11.0> ;
+                                    owl:versionInfo "0.11.0" ;
+                                    dc:date "2024-08-12T11:02:10-07:00"^^xsd:dateTimeStamp ;
+                                    owl:imports odo:ECSO8.owl ,
                                                  <http://www.opengis.net/ont/geosparql> ;
-                                     terms:creator <https://orcid.org/0000-0002-0381-3766> ,
-                                                   <https://orcid.org/0000-0003-0077-4738> ,
-                                                   <https://orcid.org/0000-0003-0632-7576> ,
-                                                   <http://orcid.org/0009-0007-8384-5074>;
+                                    terms:creator [
+                                                      sdo:name "Bryce Mecum" ;
+                                                      sdo:identifier <http://orcid.org/0000-0002-0381-3766> ;
+                                                      sdo:affiliation [
+                                                         sdo:name "National Center for Ecological Analysis and Synthesis" ;
+                                                         sdo:url "https://www.nceas.ucsb.edu/"^^xsd:anyURI ;
+                                                         sdo:identifier <https://ror.org/0146z4r19> ;
+                                                      ] ;
+                                                   ] ,
+                                                   [
+                                                      sdo:name "Matthew B. Jones" ;
+                                                      sdo:identifier <http://orcid.org/0000-0003-0077-4738> ;
+                                                      sdo:affiliation [
+                                                         sdo:name "National Center for Ecological Analysis and Synthesis" ;
+                                                         sdo:url "https://www.nceas.ucsb.edu/"^^xsd:anyURI ;
+                                                         sdo:identifier <https://ror.org/0146z4r19> ;
+                                                      ] ;
+                                                   ] ,
+                                                   [
+                                                      sdo:name "Mark Schildhauer" ;
+                                                      sdo:identifier <http://orcid.org/0000-0003-0632-7576> ;
+                                                      sdo:affiliation [
+                                                         sdo:name "National Center for Ecological Analysis and Synthesis" ;
+                                                         sdo:url "https://www.nceas.ucsb.edu/"^^xsd:anyURI ;
+                                                         sdo:identifier <https://ror.org/0146z4r19> ;
+                                                      ] ;
+                                                   ] ,
+                                                   [
+                                                      sdo:name "Justin A. Kadi" ;
+                                                      sdo:identifier <http://orcid.org/0009-0007-8384-5074> ;
+                                                      sdo:affiliation [
+                                                         sdo:name "National Center for Ecological Analysis and Synthesis" ;
+                                                         sdo:url "https://www.nceas.ucsb.edu/"^^xsd:anyURI ;
+                                                         sdo:identifier <https://ror.org/0146z4r19> ;
+                                                      ] ;
+                                                   ] ;
                                      terms:description "Ontology to support NOAA Arctic Report Card essays and their corresponding datasets organized in the Arctic Data Center's data portal (https://arcticdata.io/catalog/portals/reportcard)" ;
                                      terms:license <https://creativecommons.org/licenses/by/4.0/> ;
                                      terms:title "Arctic Report Card Ontology"@en ;
-                                     <http://usefulinc.com/ns/doap#GitRepository> "https://github.com/DataONEorg/sem-prov-ontologies" ;
-                                     <http://usefulinc.com/ns/doap#bug-database> "https://github.com/DataONEorg/sem-prov-ontologies/issues" ;
-                                     owl:versionInfo "Version 0.10.1" .
+                                     doap:GitRepository "https://github.com/DataONEorg/sem-prov-ontologies" ;
+                                     doap:bug-database "https://github.com/DataONEorg/sem-prov-ontologies/issues" .
 
 #################################################################
 #    Annotation properties
@@ -223,6 +258,7 @@ odo:ARCRC_00000007 rdf:type owl:Class ;
 odo:ARCRC_00000008 rdf:type owl:Class ;
                    rdfs:subClassOf odo:ARCRC_00000013 ;
                    obo:IAO_0000115 "Any product of the condensation of atmospheric water vapor that falls under gravity" ;
+                   obo:IAO_0000119 "http://purl.obolibrary.org/obo/ENVO_01000703" ;
                    dc:creator <http://orcid.org/0009-0007-8384-5074> ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
                    rdfs:label "Precipitation Indicator"@en ;
@@ -678,6 +714,7 @@ odo:ARCRC_00000015 rdf:type owl:Class ;
 odo:ARCRC_00000016 rdf:type owl:Class ;
                    rdfs:subClassOf odo:ARCRC_00000513 ;
                    obo:IAO_0000115 "Applying and centering Indigenous perspectives and observations of Arctic change" ;
+                   obo:IAO_0000119 "Defined in the Arctic Report Card 2023 Essay at https://arctic.noaa.gov/report-card/report-card-2023/nunaaqqit-savaqatigivlugich-working-with-communities-to-observe-the-arctic/" ;
                    dc:creator <http://orcid.org/0009-0007-8384-5074> ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
                    rdfs:label "Working with Communities to Observe the Arctic"@en .
@@ -687,6 +724,7 @@ odo:ARCRC_00000016 rdf:type owl:Class ;
 odo:ARCRC_00000017 rdf:type owl:Class ;
                    rdfs:subClassOf odo:ARCRC_00000513 ;
                    obo:IAO_0000115 "Here, we refer to “western Alaska” salmon as those spawning in watersheds that drain into the eastern Bering Sea." ;
+                   obo:IAO_0000119 "Western Alaska Salmon as defined in the Arctic Report Card 2023 Essay at https://arctic.noaa.gov/report-card/report-card-2023/divergent-responses-of-western-alaska-salmon-to-a-changing-climate/" ;
                    dc:creator <http://orcid.org/0009-0007-8384-5074> ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
                    rdfs:label "Western Alaska Salmon"@en ;
@@ -697,6 +735,7 @@ odo:ARCRC_00000017 rdf:type owl:Class ;
 odo:ARCRC_00000018 rdf:type owl:Class ;
                    rdfs:subClassOf odo:ARCRC_00000040 ;
                    obo:IAO_0000115 "Any product of the condensation of atmospheric water vapor that falls under gravity" ;
+                   obo:IAO_0000119 "http://purl.obolibrary.org/obo/ENVO_01000703" ;
                    dc:creator <http://orcid.org/0009-0007-8384-5074> ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Vital Sign, 'Precipitation.'" ;
@@ -708,6 +747,7 @@ odo:ARCRC_00000018 rdf:type owl:Class ;
 odo:ARCRC_00000019 rdf:type owl:Class ;
                    rdfs:subClassOf odo:ARCRC_00000040 ;
                    obo:IAO_0000115 "Estimated total amount of ice in the sediment column and represents total ice content" ;
+                   obo:IAO_0000119 "Total ice content as defined in the Arctic Report Card 2023 Essay at https://arctic.noaa.gov/report-card/report-card-2023/permafrost-beneath-arctic-ocean-margins-2023/" ;
                    dc:creator <http://orcid.org/0009-0007-8384-5074> ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Other Indicator, 'Subsea Permafrost'" ;
@@ -719,17 +759,18 @@ odo:ARCRC_00000019 rdf:type owl:Class ;
 odo:ARCRC_00000020 rdf:type owl:Class ;
                    rdfs:subClassOf odo:ARCRC_00000040 ;
                    obo:IAO_0000115 "Long-term documentation of weather, ocean, sea ice, and landscape conditions and context to wildlife, harvesting, and cultural and community activities" ;
+                   obo:IAO_0000119 "Indigenous observations as defined in the Arctic Report Card 2023 Essay at https://arctic.noaa.gov/report-card/report-card-2023/nunaaqqit-savaqatigivlugich-working-with-communities-to-observe-the-arctic/" ;
                    dc:creator <http://orcid.org/0009-0007-8384-5074> ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Frostbite, 'Working with Communities to Observe the Arctic'" ;
-                   rdfs:label "Indigenous observations"@en 
-                   obo:IAO_0000119 "Indigenous observations as defined in the Arctic Report Card 2023 Essay at https://arctic.noaa.gov/report-card/report-card-2023/nunaaqqit-savaqatigivlugich-working-with-communities-to-observe-the-arctic/" .
+                   rdfs:label "Indigenous observations"@en .
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000021
 odo:ARCRC_00000021 rdf:type owl:Class ;
                    rdfs:subClassOf odo:ARCRC_00000040 ;
                    obo:IAO_0000115 "A measurement or estimate of the number of salmon, based on counts, densities, weights, or other methods." ;
+                   obo:IAO_0000119 "http://purl.dataone.org/odo/SALMON_00000504" ;
                    dc:creator <http://orcid.org/0009-0007-8384-5074> ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Frostbite, 'Western Alaska Salmon'" ;
@@ -752,6 +793,7 @@ odo:ARCRC_00000022 rdf:type owl:Class ;
 odo:ARCRC_00000023 rdf:type owl:Class ;
                    rdfs:subClassOf odo:ARCRC_00000040 ;
                    obo:IAO_0000115 "The number of recruits which survive to a legal age and/or size and are captured by a fishery." ;
+                   obo:IAO_0000119 "http://purl.dataone.org/odo/SALMON_00000491" ;
                    dc:creator <http://orcid.org/0009-0007-8384-5074> ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Frostbite, 'Western Alaska Salmon'" ;
@@ -762,7 +804,8 @@ odo:ARCRC_00000023 rdf:type owl:Class ;
 ###  http://purl.dataone.org/odo/ARCRC_00000024
 odo:ARCRC_00000024 rdf:type owl:Class ;
                    rdfs:subClassOf odo:ARCRC_00000040 ;
-                   obo:IAO_0000115 "The number of eggs a female salmon produces during a breeding season" ;
+                   obo:IAO_0000115 "The number of eggs in the ovaries that are mature or will mature. A common measure of reproductive potential." ;
+                   obo:IAO_0000119 "https://wildsalmoncenter.org/wp-content/uploads/2008/07/SFPH-Glossary.pdf" ;
                    dc:creator <http://orcid.org/0009-0007-8384-5074> ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Frostbite, 'Western Alaska Salmon'" ;
