@@ -11,6 +11,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sdo: <http://schema.org/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
 @base <http://purl.dataone.org/odo/SALMON_> .
 
 <http://purl.dataone.org/odo/SALMON_> rdf:type owl:Ontology ;
@@ -21,14 +23,45 @@
                                                    <http://www.opengis.net/ont/geosparql> ;
                                        dc:date "2021-04-12T11:02:10-07:00"^^xsd:dateTimeStamp ;
                                        dc:description "An ontology representing knowledge about salmon, features of their habitats, salmon stakeholders, and related entities. This ontology is considered to be in the early stages of development, though it is based upon considerable previous work. Contributions of all kinds are welcome and encouraged, including alignments, updates to existing terms, and new terms."^^xsd:string ;
-                                       dcterms:creator """https://orcid.org/0000-0002-5300-3075
-https://orcid.org/0000-0002-0381-3766
-https://orcid.org/0000-0003-0632-7576
-https://orcid.org/0000-0003-0077-4738""" ;
+                                       dcterms:creator [ sdo:affiliation [ sdo:identifier <https://ror.org/0146z4r19> ;
+                                                                       sdo:name "National Center for Ecological Analysis and Synthesis" ;
+                                                                       sdo:url "https://www.nceas.ucsb.edu/"^^xsd:anyURI
+                                                                     ] ;
+                                                     sdo:identifier <http://orcid.org/0009-0007-8384-5074> ;
+                                                     sdo:name "Justin A. Kadi"
+                                                   ] ,
+                                                   [ sdo:affiliation [ sdo:identifier <https://ror.org/0146z4r19> ;
+                                                                       sdo:name "National Center for Ecological Analysis and Synthesis" ;
+                                                                       sdo:url "https://www.nceas.ucsb.edu/"^^xsd:anyURI
+                                                                     ] ;
+                                                     sdo:identifier <http://orcid.org/0000-0002-5300-3075> ;
+                                                     sdo:name "Samantha Csik"
+                                                   ] ,
+                                                   [ sdo:affiliation [ sdo:identifier <https://ror.org/0146z4r19> ;
+                                                                       sdo:name "National Center for Ecological Analysis and Synthesis" ;
+                                                                       sdo:url "https://www.nceas.ucsb.edu/"^^xsd:anyURI
+                                                                     ] ;
+                                                     sdo:identifier <http://orcid.org/0000-0002-0381-3766> ;
+                                                     sdo:name "Bryce Mecum"
+                                                   ] ,
+                                                   [ sdo:affiliation [ sdo:identifier <https://ror.org/0146z4r19> ;
+                                                                       sdo:name "National Center for Ecological Analysis and Synthesis" ;
+                                                                       sdo:url "https://www.nceas.ucsb.edu/"^^xsd:anyURI
+                                                                     ] ;
+                                                     sdo:identifier <http://orcid.org/0000-0003-0632-7576> ;
+                                                     sdo:name "Mark Schildhauer"
+                                                   ] ,
+                                                   [ sdo:affiliation [ sdo:identifier <https://ror.org/0146z4r19> ;
+                                                                       sdo:name "National Center for Ecological Analysis and Synthesis" ;
+                                                                       sdo:url "https://www.nceas.ucsb.edu/"^^xsd:anyURI
+                                                                     ] ;
+                                                     sdo:identifier <https://orcid.org/0000-0003-0077-4738> ;
+                                                     sdo:name "Matthew B. Jones"
+                                                   ] ;
                                        dcterms:license "https://creativecommons.org/publicdomain/zero/1.0/" ;
-                                       <http://usefulinc.com/ns/doap#GitRepository> "https://github.com/DataONEorg/sem-prov-ontologies" ;
-                                       <http://usefulinc.com/ns/doap#bug-database> "https://github.com/DataONEorg/sem-prov-ontologies/issues" ;
-                                       <http://www.geneontology.org/formats/oboInOwl#default-namespace> "SALMON" ;
+                                       doap:GitRepository "https://github.com/DataONEorg/sem-prov-ontologies" ;
+                                       doap:bug-database "https://github.com/DataONEorg/sem-prov-ontologies/issues" ;
+                                       oboInOwl:default-namespace "SALMON" ;
                                        rdfs:comment """Draft ontology to support Semantic Annotation of SASAP and salmon-related datasets housed in the SASAP Data Portal (https://knb.ecoinformatics.org/portals/SASAP/About).
 
 April 7, 2022 UPDATE (Mark Schildhauer; schild@nceas.ucsb.edu)
