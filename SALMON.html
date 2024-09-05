@@ -289,7 +289,19 @@ td {
     ],
     "https://schema.org/creator": [
       {
-        "@value": "https://orcid.org/0000-0002-5300-3075\nhttps://orcid.org/0000-0002-0381-3766\nhttps://orcid.org/0000-0003-0632-7576\nhttps://orcid.org/0000-0003-0077-4738"
+        "@id": "_:ncef63871c0eb4a6cad0cb2cda75e46d7b1"
+      },
+      {
+        "@id": "_:ncef63871c0eb4a6cad0cb2cda75e46d7b3"
+      },
+      {
+        "@id": "_:ncef63871c0eb4a6cad0cb2cda75e46d7b5"
+      },
+      {
+        "@id": "_:ncef63871c0eb4a6cad0cb2cda75e46d7b7"
+      },
+      {
+        "@id": "_:ncef63871c0eb4a6cad0cb2cda75e46d7b9"
       }
     ],
     "https://schema.org/description": [
@@ -310,6 +322,21 @@ td {
         "@value": "Salmon Ontology"
       }
     ]
+  },
+  {
+    "@id": "_:ncef63871c0eb4a6cad0cb2cda75e46d7b1"
+  },
+  {
+    "@id": "_:ncef63871c0eb4a6cad0cb2cda75e46d7b3"
+  },
+  {
+    "@id": "_:ncef63871c0eb4a6cad0cb2cda75e46d7b5"
+  },
+  {
+    "@id": "_:ncef63871c0eb4a6cad0cb2cda75e46d7b7"
+  },
+  {
+    "@id": "_:ncef63871c0eb4a6cad0cb2cda75e46d7b9"
   }
 ]
 	</script>
@@ -339,10 +366,13 @@ td {
               <a class="hover_property" href="http://purl.org/dc/terms/creator" title="An entity responsible for making the resource. Defined in DCMI Metadata Terms">Creator</a>
             </dt>
             <dd>
-              <span>https://orcid.org/0000-0002-5300-3075
-https://orcid.org/0000-0002-0381-3766
-https://orcid.org/0000-0003-0632-7576
-https://orcid.org/0000-0003-0077-4738</span>
+              <ul>
+                <li>ncef63871c0eb4a6cad0cb2cda75e46d7b1</li>
+                <li>ncef63871c0eb4a6cad0cb2cda75e46d7b3</li>
+                <li>ncef63871c0eb4a6cad0cb2cda75e46d7b5</li>
+                <li>ncef63871c0eb4a6cad0cb2cda75e46d7b7</li>
+                <li>ncef63871c0eb4a6cad0cb2cda75e46d7b9</li>
+              </ul>
             </dd>
           </div>
           <div>
@@ -358,14 +388,14 @@ https://orcid.org/0000-0003-0077-4738</span>
               <a class="hover_property" href="http://www.w3.org/2002/07/owl#versionIRI" title="The property that identifies the version IRI of an ontology. Defined in The OWL 2 Schema vocabulary (OWL 2)">Version Iri</a>
             </dt>
             <dd>
-              <a href="http://purl.dataone.org/odo/SALMON/0.3.2">http://purl.dataone.org/odo/SALMON/0.3.2</a>
+              <a href="http://purl.dataone.org/odo/SALMON/0.4.0">http://purl.dataone.org/odo/SALMON/0.4.0</a>
             </dd>
           </div>
           <div>
             <dt>
               <a class="hover_property" href="http://www.w3.org/2002/07/owl#versionInfo" title="The annotation property that provides version information for an ontology or another OWL construct. Defined in The OWL 2 Schema vocabulary (OWL 2)">Version Info</a>
             </dt>
-            <dd><p>0.3.2</p></dd>
+            <dd><p>0.4.0</p></dd>
           </div>
           <div>
             <dt>
@@ -2167,16 +2197,22 @@ removed some test Classes 2021-12-21 mps
               <th>
                 <a class="hover_property" href="http://www.w3.org/2002/07/owl#equivalentClass" title="The property that determines that two given classes are equivalent, and that is used to specify datatype definitions. Defined in The OWL 2 Schema vocabulary (OWL 2)">Equivalentclass</a>
               </th>
-              <td><span>
-  <a href="#SALMON_00000678">Region</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#SALMON_00000677">Place</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#SALMON_00000676">Location</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span></td>
+              <td>
+                <span>
+                  <a href="#SALMON_00000677">Place</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="#SALMON_00000678">Region</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="#SALMON_00000676">Location</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
             </tr>
           </table>
         </div>
@@ -3811,7 +3847,7 @@ removed some test Classes 2021-12-21 mps
               </th>
               <td>
                 <span>
-                  <a href="http://www.w3.org/ns/ssn/isProxyFor">ssn:isProxyFor</a>
+                  <a href="http://www.w3.org/ns/ssn/isProxyFor">w3ssn:isProxyFor</a>
                   <sup class="sup-op" title="OWL Object Property">op</sup>
                 </span>
               </td>
@@ -5771,7 +5807,7 @@ phenotypic sex: http://purl.obolibrary.org/obo/PATO_0001894</p></li>
                 <a class="hover_property" href="http://www.w3.org/2002/07/owl#equivalentClass" title="The property that determines that two given classes are equivalent, and that is used to specify datatype definitions. Defined in The OWL 2 Schema vocabulary (OWL 2)">Equivalentclass</a>
               </th>
               <td>
-                <a href="http://rs.tdwg.org/dwc/terms/lifeStage">http://rs.tdwg.org/dwc/terms/lifeStage</a>
+                <a href="http://rs.tdwg.org/dwc/terms/lifeStage">dwcterms:lifeStage</a>
               </td>
             </tr>
             <tr>
@@ -6692,7 +6728,7 @@ phenotypic sex: http://purl.obolibrary.org/obo/PATO_0001894</p></li>
               </th>
               <td>
                 <span>
-                  <a href="http://rs.tdwg.org/dwc/terms/scientificName">http://rs.tdwg.org/dwc/terms/scientificName</a>
+                  <a href="http://rs.tdwg.org/dwc/terms/scientificName">dwcterms:scientificName</a>
                   <sup class="sup-op" title="OWL Object Property">op</sup>
                 </span>
               </td>
@@ -6805,21 +6841,43 @@ phenotypic sex: http://purl.obolibrary.org/obo/PATO_0001894</p></li>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
-                  <li><span>
-  <span>
-    <span>
-      <a href="http://rs.tdwg.org/dwc/terms/scientificName">http://rs.tdwg.org/dwc/terms/scientificName</a>
-      <sup class="sup-op" title="OWL Object Property">op</sup>
-    </span>some<br>
-  </span>
-</span> <span class="cardinality">and</span> <span>
-  <span>
-    <span>
-      <a href="http://rs.tdwg.org/dwc/terms/nameAccordingTo">http://rs.tdwg.org/dwc/terms/nameAccordingTo</a>
-      <sup class="sup-op" title="OWL Object Property">op</sup>
-    </span>some<br>
-  </span>
-</span></li>
+                  <li>
+                    <span>
+                      <span>
+                        <span>
+                          <a href="http://rs.tdwg.org/dwc/terms/scientificName">dwcterms:scientificName</a>
+                          <sup class="sup-op" title="OWL Object Property">op</sup>
+                        </span>
+                        <span>
+                          <span class="cardinality">some</span>
+                          <span>
+                            <span>
+                              <a href="#SALMON_00000884">Taxon (name)</a>
+                              <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                            </span>
+                          </span>
+                        </span><br>
+                      </span>
+                    </span>
+                    <span class="cardinality">and</span>
+                    <span>
+                      <span>
+                        <span>
+                          <a href="http://rs.tdwg.org/dwc/terms/nameAccordingTo">dwcterms:nameAccordingTo</a>
+                          <sup class="sup-op" title="OWL Object Property">op</sup>
+                        </span>
+                        <span>
+                          <span class="cardinality">some</span>
+                          <span>
+                            <span>
+                              <a href="#SALMON_00000495">Author citation</a>
+                              <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                            </span>
+                          </span>
+                        </span><br>
+                      </span>
+                    </span>
+                  </li>
                 </ul>
               </td>
             </tr>
@@ -7263,7 +7321,7 @@ phenotypic sex: http://purl.obolibrary.org/obo/PATO_0001894</p></li>
               </th>
               <td>
                 <span>
-                  <a href="http://www.w3.org/ns/ssn/isProxyFor">ssn:isProxyFor</a>
+                  <a href="http://www.w3.org/ns/ssn/isProxyFor">w3ssn:isProxyFor</a>
                   <sup class="sup-op" title="OWL Object Property">op</sup>
                 </span>
               </td>
@@ -7623,21 +7681,43 @@ phenotypic sex: http://purl.obolibrary.org/obo/PATO_0001894</p></li>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2002/07/owl#equivalentClass" title="The property that determines that two given classes are equivalent, and that is used to specify datatype definitions. Defined in The OWL 2 Schema vocabulary (OWL 2)">Equivalentclass</a>
               </th>
-              <td><span>
-  <span>
-    <span>
-      <a href="http://rs.tdwg.org/dwc/terms/nameAccordingTo">http://rs.tdwg.org/dwc/terms/nameAccordingTo</a>
-      <sup class="sup-op" title="OWL Object Property">op</sup>
-    </span>some<br>
-  </span>
-</span> <span class="cardinality">and</span> <span>
-  <span>
-    <span>
-      <a href="http://rs.tdwg.org/dwc/terms/scientificName">http://rs.tdwg.org/dwc/terms/scientificName</a>
-      <sup class="sup-op" title="OWL Object Property">op</sup>
-    </span>some<br>
-  </span>
-</span></td>
+              <td>
+                <span>
+                  <span>
+                    <span>
+                      <a href="http://rs.tdwg.org/dwc/terms/scientificName">dwcterms:scientificName</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                    <span>
+                      <span class="cardinality">some</span>
+                      <span>
+                        <span>
+                          <a href="#SALMON_00000884">Taxon (name)</a>
+                          <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                        </span>
+                      </span>
+                    </span><br>
+                  </span>
+                </span>
+                <span class="cardinality">and</span>
+                <span>
+                  <span>
+                    <span>
+                      <a href="http://rs.tdwg.org/dwc/terms/nameAccordingTo">dwcterms:nameAccordingTo</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                    <span>
+                      <span class="cardinality">some</span>
+                      <span>
+                        <span>
+                          <a href="#SALMON_00000495">Author citation</a>
+                          <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                        </span>
+                      </span>
+                    </span><br>
+                  </span>
+                </span>
+              </td>
             </tr>
             <tr>
               <th>
@@ -7645,14 +7725,14 @@ phenotypic sex: http://purl.obolibrary.org/obo/PATO_0001894</p></li>
               </th>
               <td>
                 <span>
-                  <a href="http://rs.tdwg.org/dwc/terms/scientificName">http://rs.tdwg.org/dwc/terms/scientificName</a>
+                  <a href="http://rs.tdwg.org/dwc/terms/scientificName">dwcterms:scientificName</a>
                   <sup class="sup-op" title="OWL Object Property">op</sup>
                 </span>
               </td>
             </tr>
           </table>
         </div>
-        <div class="property entity" id="Authorcitation">
+        <div class="property entity" id="SALMON_00000495">
           <h3>Author citation
             <sup class="sup-c" title="OWL/RDFS Class">c</sup>
           </h3>
@@ -7681,7 +7761,7 @@ phenotypic sex: http://purl.obolibrary.org/obo/PATO_0001894</p></li>
               </th>
               <td>
                 <span>
-                  <a href="http://rs.tdwg.org/dwc/terms/nameAccordingTo">http://rs.tdwg.org/dwc/terms/nameAccordingTo</a>
+                  <a href="http://rs.tdwg.org/dwc/terms/nameAccordingTo">dwcterms:nameAccordingTo</a>
                   <sup class="sup-op" title="OWL Object Property">op</sup>
                 </span>
               </td>
@@ -7934,6 +8014,12 @@ phenotypic sex: http://purl.obolibrary.org/obo/PATO_0001894</p></li>
                   <li>
                     <span>
                       <a href="#SALMON_00000506">Juvenile standing stock abundance</a>
+                      <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
+                      <a href="#SALMON_00000573">run size</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -10145,6 +10231,30 @@ phenotypic sex: http://purl.obolibrary.org/obo/PATO_0001894</p></li>
                     </span>
                   </li>
                 </ul>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="SALMON_00000573">
+          <h3>run size
+            <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://purl.dataone.org/odo/SALMON_00000573</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subClassOf" title="The subject is a subclass of a class. Defined in The RDF Schema vocabulary (RDFS)">Sub Class Of</a>
+              </th>
+              <td>
+                <span>
+                  <a href="#SALMON_00000504">Salmon abundance</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
               </td>
             </tr>
           </table>
@@ -16293,7 +16403,16 @@ Total length can be measured by two conventions -- by leaving the caudal fin spr
                     <span>
                       <a href="#SALMON_00000828">contains occurrence data about</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
-                    </span>some<br>
+                    </span>
+                    <span>
+                      <span class="cardinality">some</span>
+                      <span>
+                        <span>
+                          <a href="#SALMON_00000829">Organism name or identifier</a>
+                          <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                        </span>
+                      </span>
+                    </span><br>
                   </span>
                 </span>
               </td>
@@ -16780,50 +16899,6 @@ Total length can be measured by two conventions -- by leaving the caudal fin spr
           </table>
         </div>
       </div>
-      <span>
-        <a href="#SALMON_00000676">Location</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="#SALMON_00000677">Place</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="#SALMON_00000678">Region</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <span>
-          <span>
-            <a href="http://rs.tdwg.org/dwc/terms/nameAccordingTo">http://rs.tdwg.org/dwc/terms/nameAccordingTo</a>
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </span>some<br>
-        </span>
-      </span>
-      <span>
-        <span>
-          <span>
-            <a href="http://rs.tdwg.org/dwc/terms/scientificName">http://rs.tdwg.org/dwc/terms/scientificName</a>
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </span>some<br>
-        </span>
-      </span>
-      <span>
-        <span>
-          <span>
-            <a href="http://rs.tdwg.org/dwc/terms/nameAccordingTo">http://rs.tdwg.org/dwc/terms/nameAccordingTo</a>
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </span>some<br>
-        </span>
-      </span>
-      <span>
-        <span>
-          <span>
-            <a href="http://rs.tdwg.org/dwc/terms/scientificName">http://rs.tdwg.org/dwc/terms/scientificName</a>
-            <sup class="sup-op" title="OWL Object Property">op</sup>
-          </span>some<br>
-        </span>
-      </span>
       <div class="section" id="objectproperties">
         <h2>Object Properties</h2>
         <div class="property entity" id="SALMON_00000581">
@@ -17052,7 +17127,7 @@ Total length can be measured by two conventions -- by leaving the caudal fin spr
               </th>
               <td>
                 <span>
-                  <a href="#Authorcitation">Author citation</a>
+                  <a href="#SALMON_00000495">Author citation</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -17234,13 +17309,17 @@ Total length can be measured by two conventions -- by leaving the caudal fin spr
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
-              <td><span>
-  <a href="#SALMON_00000571">Pacific salmon</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#Pacifictroutandchar">Pacific trout and char</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span></td>
+              <td>
+                <span>
+                  <a href="#SALMON_00000571">Pacific salmon</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="#Pacifictroutandchar">Pacific trout and char</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
             </tr>
             <tr>
               <th>
@@ -17253,14 +17332,6 @@ Total length can be measured by two conventions -- by leaving the caudal fin spr
           </table>
         </div>
       </div>
-      <span>
-        <a href="#Pacifictroutandchar">Pacific trout and char</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="#SALMON_00000571">Pacific salmon</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
       <div class="section" id="annotationproperties">
         <h2>Annotation Properties</h2>
         <div class="property entity" id="IAO_0000112">
@@ -17402,6 +17473,58 @@ Total length can be measured by two conventions -- by leaving the caudal fin spr
               <th>IRI</th>
               <td>
                 <code>http://rs.tdwg.org/dwc/terms/originalNameUsage</code>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="affiliation">
+          <h3>affiliation
+            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://schema.org/affiliation</code>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="identifier1">
+          <h3>identifier
+            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://schema.org/identifier</code>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="name">
+          <h3>name
+            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://schema.org/name</code>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="url">
+          <h3>url
+            <sup class="sup-ap" title="OWL Annotation Property">ap</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://schema.org/url</code>
               </td>
             </tr>
           </table>
@@ -17617,6 +17740,10 @@ Total length can be measured by two conventions -- by leaving the caudal fin spr
           <dd>
             <code>http://usefulinc.com/ns/doap#</code>
           </dd>
+          <dt id="dwcterms">dwcterms</dt>
+          <dd>
+            <code>http://rs.tdwg.org/dwc/terms/</code>
+          </dd>
           <dt id="obo">obo</dt>
           <dd>
             <code>http://purl.obolibrary.org/obo/</code>
@@ -17641,10 +17768,6 @@ Total length can be measured by two conventions -- by leaving the caudal fin spr
           <dd>
             <code>http://www.w3.org/2002/07/owl#</code>
           </dd>
-          <dt id="prov">prov</dt>
-          <dd>
-            <code>http://www.w3.org/ns/prov#</code>
-          </dd>
           <dt id="rdf">rdf</dt>
           <dd>
             <code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code>
@@ -17653,19 +17776,19 @@ Total length can be measured by two conventions -- by leaving the caudal fin spr
           <dd>
             <code>http://www.w3.org/2000/01/rdf-schema#</code>
           </dd>
-          <dt id="schema">schema</dt>
+          <dt id="sdo">sdo</dt>
           <dd>
-            <code>https://schema.org/</code>
+            <code>http://schema.org/</code>
           </dd>
           <dt id="skos">skos</dt>
           <dd>
             <code>http://www.w3.org/2004/02/skos/core#</code>
           </dd>
-          <dt id="ssn">ssn</dt>
+          <dt id="w3ssn">w3ssn</dt>
           <dd>
             <code>http://www.w3.org/ns/ssn/</code>
           </dd>
-          <dt id="time">time</dt>
+          <dt id="w3time">w3time</dt>
           <dd>
             <code>http://www.w3.org/2006/time#</code>
           </dd>
@@ -18293,7 +18416,7 @@ Total length can be measured by two conventions -- by leaving the caudal fin spr
               <a href="#Taxonconcept">Taxon concept</a>
             </li>
             <li>
-              <a href="#Authorcitation">Author citation</a>
+              <a href="#SALMON_00000495">Author citation</a>
             </li>
             <li>
               <a href="#SALMON_00000499">Fish abundance</a>
@@ -18468,6 +18591,9 @@ Total length can be measured by two conventions -- by leaving the caudal fin spr
             </li>
             <li>
               <a href="#SALMON_00000572">Region or location code</a>
+            </li>
+            <li>
+              <a href="#SALMON_00000573">run size</a>
             </li>
             <li>
               <a href="#SALMON_00000582">Cutthroat trout</a>
@@ -19127,6 +19253,18 @@ Total length can be measured by two conventions -- by leaving the caudal fin spr
               <a href="#originalNameUsage">original name usage</a>
             </li>
             <li>
+              <a href="#affiliation">affiliation</a>
+            </li>
+            <li>
+              <a href="#identifier1">identifier</a>
+            </li>
+            <li>
+              <a href="#name">name</a>
+            </li>
+            <li>
+              <a href="#url">url</a>
+            </li>
+            <li>
               <a href="#GitRepository">Git Repository</a>
             </li>
             <li>
@@ -19188,6 +19326,9 @@ Total length can be measured by two conventions -- by leaving the caudal fin spr
               <a href="#doap">doap</a>
             </li>
             <li>
+              <a href="#dwcterms">dwcterms</a>
+            </li>
+            <li>
               <a href="#obo">obo</a>
             </li>
             <li>
@@ -19206,25 +19347,22 @@ Total length can be measured by two conventions -- by leaving the caudal fin spr
               <a href="#owl">owl</a>
             </li>
             <li>
-              <a href="#prov">prov</a>
-            </li>
-            <li>
               <a href="#rdf">rdf</a>
             </li>
             <li>
               <a href="#rdfs">rdfs</a>
             </li>
             <li>
-              <a href="#schema">schema</a>
+              <a href="#sdo">sdo</a>
             </li>
             <li>
               <a href="#skos">skos</a>
             </li>
             <li>
-              <a href="#ssn">ssn</a>
+              <a href="#w3ssn">w3ssn</a>
             </li>
             <li>
-              <a href="#time">time</a>
+              <a href="#w3time">w3time</a>
             </li>
             <li>
               <a href="#xsd">xsd</a>

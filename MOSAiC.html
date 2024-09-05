@@ -731,13 +731,17 @@ Updated 2021-07-02: Added "_MOSAiC Specific Term" class that includes a descript
               <th>
                 <a class="hover_property" href="http://www.w3.org/2002/07/owl#equivalentClass" title="The property that determines that two given classes are equivalent, and that is used to specify datatype definitions. Defined in The OWL 2 Schema vocabulary (OWL 2)">Equivalentclass</a>
               </th>
-              <td><span>
-  <a href="http://www.w3.org/2006/time#Instant">Time instant</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="http://www.w3.org/2006/time#Interval">time:Interval</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span></td>
+              <td>
+                <span>
+                  <a href="http://www.w3.org/2006/time#Instant">Time instant</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="http://www.w3.org/2006/time#Interval">http://www.w3.org/2006/time#Interval</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
             </tr>
             <tr>
               <th>
@@ -791,7 +795,7 @@ Updated 2021-07-02: Added "_MOSAiC Specific Term" class that includes a descript
                   </li>
                   <li>
                     <span>
-                      <a href="http://www.w3.org/2006/time#Interval">time:Interval</a>
+                      <a href="http://www.w3.org/2006/time#Interval">http://www.w3.org/2006/time#Interval</a>
                       <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                     </span>
                   </li>
@@ -8057,14 +8061,6 @@ Sample labels</p></li>
           </table>
         </div>
       </div>
-      <span>
-        <a href="http://www.w3.org/2006/time#Instant">Time instant</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="http://www.w3.org/2006/time#Interval">time:Interval</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
       <div class="section" id="objectproperties">
         <h2>Object Properties</h2>
         <div class="property entity" id="hasbeginning">
@@ -8208,13 +8204,17 @@ Sample labels</p></li>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
-              <td><span>
-  <a href="http://www.w3.org/2006/time#TemporalPosition">time:TemporalPosition</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="http://www.w3.org/2006/time#GeneralDurationDescription">time:GeneralDurationDescription</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span></td>
+              <td>
+                <span>
+                  <a href="http://www.w3.org/2006/time#GeneralDurationDescription">http://www.w3.org/2006/time#GeneralDurationDescription</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="http://www.w3.org/2006/time#TemporalPosition">http://www.w3.org/2006/time#TemporalPosition</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
             </tr>
             <tr>
               <th>
@@ -8222,7 +8222,7 @@ Sample labels</p></li>
               </th>
               <td>
                 <span>
-                  <a href="http://www.w3.org/2006/time#TRS">time:TRS</a>
+                  <a href="http://www.w3.org/2006/time#TRS">http://www.w3.org/2006/time#TRS</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -8475,19 +8475,27 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
-              <td><span>
-  <a href="https://schema.org/Event">schema:Event</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#Campaign">Campaign</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="https://schema.org/Action">schema:Action</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="https://schema.org/Organization">schema:Organization</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span></td>
+              <td>
+                <span>
+                  <a href="https://schema.org/Organization">schema:Organization</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="#Campaign">Campaign</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/Event">schema:Event</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/Action">schema:Action</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
             </tr>
             <tr>
               <th>
@@ -8541,13 +8549,17 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
-              <td><span>
-  <a href="https://schema.org/Event">schema:Event</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="https://schema.org/Dataset">Dataset</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span></td>
+              <td>
+                <span>
+                  <a href="https://schema.org/Event">schema:Event</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/Dataset">Dataset</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
             </tr>
             <tr>
               <th>
@@ -8917,28 +8929,38 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
-              <td><span>
-  <a href="https://schema.org/CreativeWork">schema:CreativeWork</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span></td>
+              <td>
+                <span>
+                  <a href="https://schema.org/CreativeWork">schema:CreativeWork</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
             </tr>
             <tr>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
-              <td><span>
-  <a href="https://schema.org/Text">schema:Text</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="https://schema.org/URL">schema:URL</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="https://schema.org/Place">Place</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="https://schema.org/Role">schema:Role</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span></td>
+              <td>
+                <span>
+                  <a href="https://schema.org/URL">schema:URL</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/Role">schema:Role</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/Text">schema:Text</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/Place">Place</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
             </tr>
           </table>
         </div>
@@ -8985,19 +9007,27 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
-              <td><span>
-  <a href="https://schema.org/Action">schema:Action</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="https://schema.org/Event">schema:Event</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#Campaign">Campaign</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="https://schema.org/Organization">schema:Organization</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span></td>
+              <td>
+                <span>
+                  <a href="#Campaign">Campaign</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/Action">schema:Action</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/Event">schema:Event</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/Organization">schema:Organization</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
             </tr>
             <tr>
               <th>
@@ -9065,28 +9095,38 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
-              <td><span>
-  <a href="https://schema.org/CreativeWork">schema:CreativeWork</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span></td>
+              <td>
+                <span>
+                  <a href="https://schema.org/CreativeWork">schema:CreativeWork</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
             </tr>
             <tr>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
-              <td><span>
-  <a href="https://schema.org/CreativeWork">schema:CreativeWork</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="https://schema.org/Text">schema:Text</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="https://schema.org/URL">schema:URL</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="https://schema.org/Role">schema:Role</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span></td>
+              <td>
+                <span>
+                  <a href="https://schema.org/Text">schema:Text</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/URL">schema:URL</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/CreativeWork">schema:CreativeWork</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/Role">schema:Role</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
             </tr>
           </table>
         </div>
@@ -9143,28 +9183,38 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
-              <td><span>
-  <a href="https://schema.org/CreativeWork">schema:CreativeWork</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span></td>
+              <td>
+                <span>
+                  <a href="https://schema.org/CreativeWork">schema:CreativeWork</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
             </tr>
             <tr>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
-              <td><span>
-  <a href="https://schema.org/Role">schema:Role</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="https://schema.org/CreativeWork">schema:CreativeWork</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="https://schema.org/URL">schema:URL</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="https://schema.org/Text">schema:Text</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span></td>
+              <td>
+                <span>
+                  <a href="https://schema.org/CreativeWork">schema:CreativeWork</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/URL">schema:URL</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/Role">schema:Role</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/Text">schema:Text</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
             </tr>
           </table>
         </div>
@@ -9221,19 +9271,27 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
-              <td><span>
-  <a href="https://schema.org/Event">schema:Event</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="https://schema.org/Organization">schema:Organization</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="https://schema.org/Action">schema:Action</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#Campaign">Campaign</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span></td>
+              <td>
+                <span>
+                  <a href="https://schema.org/Event">schema:Event</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/Action">schema:Action</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/Organization">schema:Organization</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="#Campaign">Campaign</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
             </tr>
             <tr>
               <th>
@@ -9291,10 +9349,12 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
-              <td><span>
-  <a href="https://schema.org/CreativeWork">schema:CreativeWork</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span></td>
+              <td>
+                <span>
+                  <a href="https://schema.org/CreativeWork">schema:CreativeWork</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
             </tr>
           </table>
         </div>
@@ -9389,19 +9449,27 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
-              <td><span>
-  <a href="#Campaign">Campaign</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="https://schema.org/Action">schema:Action</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="https://schema.org/Event">schema:Event</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="https://schema.org/Organization">schema:Organization</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span></td>
+              <td>
+                <span>
+                  <a href="https://schema.org/Event">schema:Event</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="#Campaign">Campaign</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/Organization">schema:Organization</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/Action">schema:Action</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
             </tr>
             <tr>
               <th>
@@ -9445,196 +9513,47 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
-              <td><span>
-  <a href="https://schema.org/Dataset">Dataset</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span></td>
+              <td>
+                <span>
+                  <a href="https://schema.org/Dataset">Dataset</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
             </tr>
             <tr>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range" title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Range</a>
               </th>
-              <td><span>
-  <a href="https://schema.org/URL">schema:URL</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="https://schema.org/Text">schema:Text</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="https://schema.org/Role">schema:Role</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="https://schema.org/PropertyValue">schema:PropertyValue</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span></td>
+              <td>
+                <span>
+                  <a href="https://schema.org/PropertyValue">schema:PropertyValue</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/Text">schema:Text</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/Role">schema:Role</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/URL">schema:URL</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
             </tr>
           </table>
         </div>
       </div>
-      <span>
-        <a href="http://www.w3.org/2006/time#GeneralDurationDescription">time:GeneralDurationDescription</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="http://www.w3.org/2006/time#TemporalPosition">time:TemporalPosition</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="#Campaign">Campaign</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/Action">schema:Action</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/Event">schema:Event</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/Organization">schema:Organization</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/Dataset">Dataset</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/Event">schema:Event</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/CreativeWork">schema:CreativeWork</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/Place">Place</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/Role">schema:Role</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/Text">schema:Text</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/URL">schema:URL</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="#Campaign">Campaign</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/Action">schema:Action</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/Event">schema:Event</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/Organization">schema:Organization</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/CreativeWork">schema:CreativeWork</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/CreativeWork">schema:CreativeWork</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/Role">schema:Role</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/Text">schema:Text</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/URL">schema:URL</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/CreativeWork">schema:CreativeWork</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/CreativeWork">schema:CreativeWork</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/Role">schema:Role</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/Text">schema:Text</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/URL">schema:URL</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="#Campaign">Campaign</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/Action">schema:Action</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/Event">schema:Event</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/Organization">schema:Organization</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/CreativeWork">schema:CreativeWork</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="#Campaign">Campaign</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/Action">schema:Action</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/Event">schema:Event</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/Organization">schema:Organization</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/Dataset">Dataset</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/PropertyValue">schema:PropertyValue</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/Role">schema:Role</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/Text">schema:Text</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="https://schema.org/URL">schema:URL</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
+      <span class="cardinality">or</span>
+      <span class="cardinality">or</span>
+      <span class="cardinality">or</span>
+      <span class="cardinality">or</span>
+      <span class="cardinality">or</span>
       <div class="section" id="datatypeproperties">
         <h2>Datatype Properties</h2>
         <div class="property entity" id="hasXSDduration">
@@ -9770,13 +9689,17 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
-              <td><span>
-  <a href="#DeviceShortName">Device Short Name</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="#DeviceLongName">Device Long Name</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span></td>
+              <td>
+                <span>
+                  <a href="#DeviceLongName">Device Long Name</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="#DeviceShortName">Device Short Name</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
             </tr>
             <tr>
               <th>
@@ -9849,14 +9772,6 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
           </table>
         </div>
       </div>
-      <span>
-        <a href="#DeviceLongName">Device Long Name</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="#DeviceShortName">Device Short Name</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
       <div class="section" id="annotationproperties">
         <h2>Annotation Properties</h2>
         <div class="property entity" id="creator">
@@ -10083,13 +9998,17 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
               <th>
                 <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain" title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)">Domain</a>
               </th>
-              <td><span>
-  <a href="http://www.w3.org/2006/time#TemporalPosition">time:TemporalPosition</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span> <span class="cardinality">or</span> <span>
-  <a href="http://www.w3.org/2006/time#GeneralDurationDescription">time:GeneralDurationDescription</a>
-  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-</span></td>
+              <td>
+                <span>
+                  <a href="http://www.w3.org/2006/time#GeneralDurationDescription">http://www.w3.org/2006/time#GeneralDurationDescription</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="http://www.w3.org/2006/time#TemporalPosition">http://www.w3.org/2006/time#TemporalPosition</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
             </tr>
             <tr>
               <th>
@@ -10097,7 +10016,7 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
               </th>
               <td>
                 <span>
-                  <a href="http://www.w3.org/2006/time#TRS">time:TRS</a>
+                  <a href="http://www.w3.org/2006/time#TRS">http://www.w3.org/2006/time#TRS</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -10105,14 +10024,6 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
           </table>
         </div>
       </div>
-      <span>
-        <a href="http://www.w3.org/2006/time#GeneralDurationDescription">time:GeneralDurationDescription</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
-      <span>
-        <a href="http://www.w3.org/2006/time#TemporalPosition">time:TemporalPosition</a>
-        <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-      </span>
       <div id="namespaces">
         <h2>Namespaces</h2>
         <dl>
@@ -10124,10 +10035,6 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
           <dd>
             <code>http://purl.org/dc/elements/1.1/</code>
           </dd>
-          <dt id="dcterms">dcterms</dt>
-          <dd>
-            <code>http://purl.org/dc/terms/</code>
-          </dd>
           <dt id="odo">odo</dt>
           <dd>
             <code>https://purl.dataone.org/odo/</code>
@@ -10135,10 +10042,6 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
           <dt id="owl">owl</dt>
           <dd>
             <code>http://www.w3.org/2002/07/owl#</code>
-          </dd>
-          <dt id="prov">prov</dt>
-          <dd>
-            <code>http://www.w3.org/ns/prov#</code>
           </dd>
           <dt id="rdf">rdf</dt>
           <dd>
@@ -10164,9 +10067,9 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
           <dd>
             <code>http://www.w3.org/ns/ssn/</code>
           </dd>
-          <dt id="time">time</dt>
+          <dt id="terms">terms</dt>
           <dd>
-            <code>http://www.w3.org/2006/time#</code>
+            <code>http://purl.org/dc/terms/</code>
           </dd>
           <dt id="vann">vann</dt>
           <dd>
@@ -11176,16 +11079,10 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
               <a href="#dc">dc</a>
             </li>
             <li>
-              <a href="#dcterms">dcterms</a>
-            </li>
-            <li>
               <a href="#odo">odo</a>
             </li>
             <li>
               <a href="#owl">owl</a>
-            </li>
-            <li>
-              <a href="#prov">prov</a>
             </li>
             <li>
               <a href="#rdf">rdf</a>
@@ -11206,7 +11103,7 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
               <a href="#ssn">ssn</a>
             </li>
             <li>
-              <a href="#time">time</a>
+              <a href="#terms">terms</a>
             </li>
             <li>
               <a href="#vann">vann</a>
