@@ -489,7 +489,8 @@ odo:ARCRC_00000027 rdf:type owl:Class ;
                    dc:creator <http://orcid.org/0009-0007-8384-5074> ;
                    dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Other Indicator, 'Satellite Record of Pan-Arctic Maritime Ship Traffic'" ;
-                   rdfs:label "ship type"@en .
+                   rdfs:label "ship type"@en ;
+                   skos:narrowMatch "http://snomed.info/id/224673002" .
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000028
@@ -500,7 +501,8 @@ odo:ARCRC_00000028 rdf:type owl:Class ;
                    dc:creator <http://orcid.org/0009-0007-8384-5074> ;
                    dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Other Indicator, 'Satellite Record of Pan-Arctic Maritime Ship Traffic'" ;
-                   rdfs:label "ship flag"@en .
+                   rdfs:label "ship flag"@en ;
+                   skos:relatedMatch "http://snomed.info/id/224673002" .
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000029
@@ -511,7 +513,8 @@ odo:ARCRC_00000029 rdf:type owl:Class ;
                    dc:creator <http://orcid.org/0009-0007-8384-5074> ;
                    dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Other Indicator, 'Satellite Record of Pan-Arctic Maritime Ship Traffic'" ;
-                   rdfs:label "ship size"@en .         
+                   rdfs:label "ship size"@en ;
+                   skos:relatedMatch "http://snomed.info/id/224673002" .         
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000030
@@ -522,7 +525,9 @@ odo:ARCRC_00000030 rdf:type owl:Class ;
                    dc:creator <http://orcid.org/0009-0007-8384-5074> ;
                    dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Other Indicator, 'Satellite Record of Pan-Arctic Maritime Ship Traffic'" ;
-                   rdfs:label "black carbon emissions"@en .    
+                   rdfs:label "black carbon emissions"@en ;
+                   skos:broadMatch "http://purl.dataone.org/odo/ECSO_00000536" ;
+                   skos:broadMatch "http://purl.dataone.org/odo/ECSO_00000614" .    
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000031
@@ -979,7 +984,7 @@ odo:ARCRC_00000072 rdf:type owl:Class ;
                    dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Vital Sign, 'Surface Air Temperature'" ;
                    rdfs:label "mean sea level pressure"@en ;
-                   skos:narrowMatch "http://purl.dataone.org/odo/ECSO_00001650" .
+                   skos:equivalentClass "http://purl.dataone.org/odo/ECSO_00001650" .
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000073
@@ -1019,7 +1024,7 @@ odo:ARCRC_00000076 rdf:type owl:Class ;
                    obo:IAO_0000119 "Arctic Pollinators as defined in the Arctic Report Card 2022 Essay at https://arctic.noaa.gov/report-card/report-card-2022/arctic-pollinators/" ;
                    dc:creator <http://orcid.org/0009-0007-8384-5074> ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
-                   rdfs:label "Arctic Pollinators"@en .
+                   rdfs:label "Arctic Pollinators Indicator"@en .
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000077
@@ -1049,7 +1054,7 @@ odo:ARCRC_00000079 rdf:type owl:Class ;
                    obo:IAO_0000119 "Glacier and Permafrost Hazards frostbite as defined in the Arctic Report Card 2021 Essay at https://arctic.noaa.gov/report-card/report-card-2021/glacier-and-permafrost-hazards/" ;
                    dc:creator <http://orcid.org/0009-0007-8384-5074> ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
-                   rdfs:label "Glacier and Permafrost Hazards"@en .
+                   rdfs:label "Glacier and Permafrost Hazards Indicator"@en .
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000080
@@ -1080,6 +1085,30 @@ odo:ARCRC_00000082 rdf:type owl:Class ;
                    dc:creator <http://orcid.org/0009-0007-8384-5074> ;
                    dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
                    rdfs:label "Ice Seals Indicator"@en . 
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000083
+odo:ARCRC_00000083 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "An area characterized by deposits of charcoal and ash, removal of vegetation, and alteration of the vegetation structure due to wildfire." ;
+                   obo:IAO_0000119 "burned area as defined at https://www.earthdata.nasa.gov/topics/human-dimensions/burned-area#" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Other Indicator, 'Arctic Carbon Cycling'" ;
+                   rdfs:label "burned area"@en ;
+                   skos:narrowMatch "http://purl.dataone.org/odo/ECSO_00001117" .
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000084
+odo:ARCRC_00000084 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "Wildfires release carbon dioxide (CO2) emissions and other greenhouse gases (GHG) that contribute to climate change." ;
+                   obo:IAO_0000119 "fire carbon emissions as defined at https://ww2.arb.ca.gov/resources/documents/frequently-asked-questions-wildfire-emissions" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Other Indicator, 'Arctic Carbon Cycling'" ;
+                   rdfs:label "fire carbon emissions"@en ;
+                   skos:equivalentClass "http://purl.dataone.org/odo/ECSO_00000013" .
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000500
