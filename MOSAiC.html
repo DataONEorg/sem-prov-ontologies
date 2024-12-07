@@ -314,6 +314,7 @@ td {
         "@value": "Ontology to support Semantic Annotation of MOSAiC datasets housed in the Arctic Data Center (https://arcticdata.io)."
       },
       {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
         "@value": "Developed with Protege 5.5.0\nInferences using Pellet 2.2.0"
       },
       {
@@ -323,6 +324,7 @@ td {
         "@value": "The MOSAiC ontology is licensed under CC BY 4.0. You are free to share (copy and redistribute the material in any medium or format) and adapt (remix, transform, and build upon the material) for any purpose, even commercially. for anypurpose, even commercially. The licensor cannot revoke these freedoms as long as you follow the license terms. You must give appropriate credit (by using the original ontology IRI for the whole ontology and original term IRIs for individual terms), provide a link to the license, and indicate if any changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use."
       },
       {
+        "@type": "http://www.w3.org/2001/XMLSchema#string",
         "@value": "Updated 2021-09-02: New term isBasisFor (inverse hasBasis). Added missing hasChiefScientist and hasBasis triples.\nUpdated 2021-07-02: Added \"_MOSAiC Specific Term\" class that includes a description of overall ontology structure"
       }
     ],
@@ -733,12 +735,12 @@ Updated 2021-07-02: Added "_MOSAiC Specific Term" class that includes a descript
               </th>
               <td>
                 <span>
-                  <a href="http://www.w3.org/2006/time#Interval">http://www.w3.org/2006/time#Interval</a>
+                  <a href="http://www.w3.org/2006/time#Instant">Time instant</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
                 <span class="cardinality">or</span>
                 <span>
-                  <a href="http://www.w3.org/2006/time#Instant">Time instant</a>
+                  <a href="http://www.w3.org/2006/time#Interval">http://www.w3.org/2006/time#Interval</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -8551,12 +8553,12 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
               </th>
               <td>
                 <span>
-                  <a href="https://schema.org/Event">schema:Event</a>
+                  <a href="https://schema.org/Dataset">Dataset</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
                 <span class="cardinality">or</span>
                 <span>
-                  <a href="https://schema.org/Dataset">Dataset</a>
+                  <a href="https://schema.org/Event">schema:Event</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -8947,17 +8949,17 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
                 </span>
                 <span class="cardinality">or</span>
                 <span>
+                  <a href="https://schema.org/URL">schema:URL</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
                   <a href="https://schema.org/Role">schema:Role</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
                 <span class="cardinality">or</span>
                 <span>
                   <a href="https://schema.org/Text">schema:Text</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-                <span class="cardinality">or</span>
-                <span>
-                  <a href="https://schema.org/URL">schema:URL</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -9009,11 +9011,6 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
               </th>
               <td>
                 <span>
-                  <a href="https://schema.org/Action">schema:Action</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-                <span class="cardinality">or</span>
-                <span>
                   <a href="#Campaign">Campaign</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
@@ -9025,6 +9022,11 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
                 <span class="cardinality">or</span>
                 <span>
                   <a href="https://schema.org/Event">schema:Event</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/Action">schema:Action</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -9113,17 +9115,17 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
                 </span>
                 <span class="cardinality">or</span>
                 <span>
+                  <a href="https://schema.org/Text">schema:Text</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
                   <a href="https://schema.org/URL">schema:URL</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
                 <span class="cardinality">or</span>
                 <span>
                   <a href="https://schema.org/CreativeWork">schema:CreativeWork</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-                <span class="cardinality">or</span>
-                <span>
-                  <a href="https://schema.org/Text">schema:Text</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -9196,17 +9198,17 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
               </th>
               <td>
                 <span>
+                  <a href="https://schema.org/Text">schema:Text</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
                   <a href="https://schema.org/Role">schema:Role</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
                 <span class="cardinality">or</span>
                 <span>
                   <a href="https://schema.org/URL">schema:URL</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-                <span class="cardinality">or</span>
-                <span>
-                  <a href="https://schema.org/Text">schema:Text</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
                 <span class="cardinality">or</span>
@@ -9273,22 +9275,22 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
               </th>
               <td>
                 <span>
-                  <a href="https://schema.org/Organization">schema:Organization</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-                <span class="cardinality">or</span>
-                <span>
-                  <a href="https://schema.org/Event">schema:Event</a>
-                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
-                </span>
-                <span class="cardinality">or</span>
-                <span>
                   <a href="#Campaign">Campaign</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
                 <span class="cardinality">or</span>
                 <span>
                   <a href="https://schema.org/Action">schema:Action</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/Organization">schema:Organization</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+                <span class="cardinality">or</span>
+                <span>
+                  <a href="https://schema.org/Event">schema:Event</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -9451,7 +9453,7 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
               </th>
               <td>
                 <span>
-                  <a href="https://schema.org/Organization">schema:Organization</a>
+                  <a href="https://schema.org/Event">schema:Event</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
                 <span class="cardinality">or</span>
@@ -9466,7 +9468,7 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
                 </span>
                 <span class="cardinality">or</span>
                 <span>
-                  <a href="https://schema.org/Event">schema:Event</a>
+                  <a href="https://schema.org/Organization">schema:Organization</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -9526,12 +9528,12 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
               </th>
               <td>
                 <span>
-                  <a href="https://schema.org/Role">schema:Role</a>
+                  <a href="https://schema.org/URL">schema:URL</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
                 <span class="cardinality">or</span>
                 <span>
-                  <a href="https://schema.org/URL">schema:URL</a>
+                  <a href="https://schema.org/Role">schema:Role</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
                 <span class="cardinality">or</span>
@@ -10000,12 +10002,12 @@ Range: prov:Entity (http://www.w3.org/ns/prov#Entity)</p></li>
               </th>
               <td>
                 <span>
-                  <a href="http://www.w3.org/2006/time#GeneralDurationDescription">http://www.w3.org/2006/time#GeneralDurationDescription</a>
+                  <a href="http://www.w3.org/2006/time#TemporalPosition">http://www.w3.org/2006/time#TemporalPosition</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
                 <span class="cardinality">or</span>
                 <span>
-                  <a href="http://www.w3.org/2006/time#TemporalPosition">http://www.w3.org/2006/time#TemporalPosition</a>
+                  <a href="http://www.w3.org/2006/time#GeneralDurationDescription">http://www.w3.org/2006/time#GeneralDurationDescription</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>

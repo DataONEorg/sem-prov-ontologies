@@ -17,10 +17,10 @@
 @base <http://purl.dataone.org/odo/ARCRC> .
 
 <http://purl.dataone.org/odo/ARCRC> rdf:type owl:Ontology ;
-                                     owl:versionIRI <http://purl.dataone.org/odo/ARCRC.owl/0.11.0> ;
+                                     owl:versionIRI <http://purl.dataone.org/odo/ARCRC.owl/0.12.0> ;
                                      owl:imports odo:ECSO8.owl ,
                                                  <http://www.opengis.net/ont/geosparql> ;
-                                     dc:date "2024-08-12T11:02:10-07:00"^^xsd:dateTimeStamp ;
+                                     dc:date "2024-12-05T11:02:10-07:00"^^xsd:dateTimeStamp ;
                                      terms:creator [ sdo:affiliation [ sdo:identifier <https://ror.org/0146z4r19> ;
                                                                        sdo:name "National Center for Ecological Analysis and Synthesis" ;
                                                                        sdo:url "https://www.nceas.ucsb.edu/"^^xsd:anyURI
@@ -54,7 +54,7 @@
                                      terms:title "Arctic Report Card Ontology"@en ;
                                      doap:GitRepository "https://github.com/DataONEorg/sem-prov-ontologies" ;
                                      doap:bug-database "https://github.com/DataONEorg/sem-prov-ontologies/issues" ;
-                                     owl:versionInfo "0.11.0" .
+                                     owl:versionInfo "0.12.0" .
 
 #################################################################
 #    Annotation properties
@@ -470,6 +470,168 @@ odo:ARCRC_00000025 rdf:type owl:Class ;
                    skos:equivalentClass "http://purl.dataone.org/odo/SALMON_00000127" .
 
 
+###  http://purl.dataone.org/odo/ARCRC_00000026
+odo:ARCRC_00000026 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "total number of unique ships based on daily observation" ;
+                   obo:IAO_0000119 "Unique ship days as defined in the Arctic Report Card 2022 Essay at https://arctic.noaa.gov/report-card/report-card-2022/satellite-record-of-pan-arctic-maritime-ship-traffic/" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Other Indicator, 'Satellite Record of Pan-Arctic Maritime Ship Traffic'" ;
+                   rdfs:label "unique ship days"@en .
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000027
+odo:ARCRC_00000027 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "model or type of ship/vessel observed" ;
+                   obo:IAO_0000119 "ship type as defined in the Arctic Report Card 2022 Essay at https://arctic.noaa.gov/report-card/report-card-2022/satellite-record-of-pan-arctic-maritime-ship-traffic/" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Other Indicator, 'Satellite Record of Pan-Arctic Maritime Ship Traffic'" ;
+                   rdfs:label "ship type"@en ;
+                   skos:narrowMatch "http://snomed.info/id/224673002" .
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000028
+odo:ARCRC_00000028 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "flag of state for national identification" ;
+                   obo:IAO_0000119 "ship flag as defined in the Arctic Report Card 2022 Essay at https://arctic.noaa.gov/report-card/report-card-2022/satellite-record-of-pan-arctic-maritime-ship-traffic/" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Other Indicator, 'Satellite Record of Pan-Arctic Maritime Ship Traffic'" ;
+                   rdfs:label "ship flag"@en ;
+                   skos:relatedMatch "http://snomed.info/id/224673002" .
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000029
+odo:ARCRC_00000029 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "measurement of maximum tonnage of ships" ;
+                   obo:IAO_0000119 "ship size as defined in the Arctic Report Card 2022 Essay at https://arctic.noaa.gov/report-card/report-card-2022/satellite-record-of-pan-arctic-maritime-ship-traffic/" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Other Indicator, 'Satellite Record of Pan-Arctic Maritime Ship Traffic'" ;
+                   rdfs:label "ship size"@en ;
+                   skos:relatedMatch "http://snomed.info/id/224673002" .         
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000030
+odo:ARCRC_00000030 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "measurement of black carbon emissions from heavy fuel-oil burning" ;
+                   obo:IAO_0000119 "black carbon emissions as defined in the Arctic Report Card 2022 Essay at https://arctic.noaa.gov/report-card/report-card-2022/satellite-record-of-pan-arctic-maritime-ship-traffic/" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Other Indicator, 'Satellite Record of Pan-Arctic Maritime Ship Traffic'" ;
+                   rdfs:label "black carbon emissions"@en ;
+                   skos:broadMatch "http://purl.dataone.org/odo/ECSO_00000536" ;
+                   skos:broadMatch "http://purl.dataone.org/odo/ECSO_00000614" .    
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000031
+odo:ARCRC_00000031 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "the date when ice cover is detected for the rest of the winter season" ;
+                   obo:IAO_0000119 "ice-on as defined in the Arctic Report Card 2022 Essay at https://arctic.noaa.gov/report-card/report-card-2022/lake-ice/" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Other Indicator, 'Lake Ice'" ;
+                   rdfs:label "lake ice-on"@en . 
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000032
+odo:ARCRC_00000032 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "the date when ice is no longer detected at the end of the season" ;
+                   obo:IAO_0000119 "ice-off as defined in the Arctic Report Card 2022 Essay at https://arctic.noaa.gov/report-card/report-card-2022/lake-ice/" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Other Indicator, 'Lake Ice'" ;
+                   rdfs:label "lake ice-off"@en . 
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000033
+odo:ARCRC_00000033 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "the number of days between the ice-on and ice-off dates" ;
+                   obo:IAO_0000119 "ice duration as defined in the Arctic Report Card 2022 Essay at https://arctic.noaa.gov/report-card/report-card-2022/lake-ice/" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Other Indicator, 'Lake Ice'" ;
+                   rdfs:label "ice duration"@en . 
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000034
+odo:ARCRC_00000034 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "the sum total of individuals from a given species within a given area" ;
+                   obo:IAO_0000119 "species abundance as defined in https://www.britannica.com/science/species-abundance" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Other Indicator, 'Arctic Geese of North America'" ;
+                   rdfs:label "species abundance"@en ;
+                   skos:equivalentClass "http://purl.dataone.org/odo/ECSO_00001688" .
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000035
+odo:ARCRC_00000035 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "the count, or total number, of unique species within a given biological community, ecosystem, biome, or other defined area" ;
+                   obo:IAO_0000119 "species richness as defined in https://www.britannica.com/science/species-richness" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Frostbite, 'Arctic Pollinators'" ;
+                   rdfs:label "species richness"@en . 
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000036
+odo:ARCRC_00000036 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "the spatial arrangement of the population of a biological taxon" ;
+                   obo:IAO_0000119 "species distribution as defined in https://www.collinsdictionary.com/us/dictionary/english/species-distribution" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Frostbite, 'Arctic Pollinators'" ;
+                   rdfs:label "species distribution"@en . 
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000037
+odo:ARCRC_00000037 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "The number (abundance) of organisms of a particular kind which is present in a sample or community, relative to the total number of organisms in that sample or community." ;
+                   obo:IAO_0000119 "relative abundance as defined in https://www.oxfordreference.com/display/10.1093/oi/authority.20110803100412583" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Frostbite, 'Arctic Pollinators'" ;
+                   rdfs:label "relative abundance"@en ;
+                   skos:equivalentClass "http://purl.dataone.org/odo/ECSO_00001688" .
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000038
+odo:ARCRC_00000038 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "A measurement of the number of ponds beavers have colonized" ;
+                   obo:IAO_0000119 "beaver pond density as defined in the Arctic Report Card 2021 Essay at https://arctic.noaa.gov/report-card/report-card-2021/beaver-engineering-tracking-a-new-disturbance-in-the-arctic/" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Other Indicator, 'Beaver Engineering: Tracking a New Disturbance in the Arctic'" ;
+                   rdfs:label "beaver pond density"@en . 
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000039
+odo:ARCRC_00000039 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "Volume of water flowing through a river (or channel) cross-section per unit time." ;
+                   obo:IAO_0000119 "discharge as defined in WMO international glossary of hydrology at https://unesdoc.unesco.org/ark:/48223/pf0000221862.locale=en" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Other Indicator, 'River Discharge'" ;
+                   rdfs:label "river discharge rate"@en ;
+                   skos:narrowMatch "http://purl.dataone.org/odo/ECSO_00002410" .
+
+
 ###  http://purl.dataone.org/odo/ARCRC_00000040
 odo:ARCRC_00000040 rdf:type owl:Class ;
                    rdfs:subClassOf odo:ARCRC_00000500 ;
@@ -573,6 +735,17 @@ odo:ARCRC_00000050 rdf:type owl:Class ;
 ###  http://purl.dataone.org/odo/ARCRC_00000051
 odo:ARCRC_00000051 rdf:type owl:Class ;
                    rdfs:subClassOf odo:ARCRC_00000502 .
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000052
+odo:ARCRC_00000052 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "The underwater ambient sound field consists of sound produced by biological (e.g., marine mammals, snapping shrimp), anthropogenic (e.g., shipping), and geophysical (e.g., rainfall, near surface bubbles from breaking waves) processes." ;
+                   obo:IAO_0000119 "ambient ocean noise as defined at https://doi.org/10.1121/10.0017349, Yang, J., Nystuen, J. A., Riser, S. C., and Thorsos, E. I. (2023). 'Open ocean ambient noise data in the frequency band of 100 Hz–50 kHz from the Pacific Ocean,' JASA Express Lett. 3(3), 036001. https://doi.org/10.1121/10.0017349" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Frostbite, 'The Changing Arctic Marine Soundscape'" ;
+                   rdfs:label "ambient ocean noise"@en . 
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000053
@@ -679,7 +852,8 @@ odo:ARCRC_00000061 rdf:type owl:Class ;
 ###  http://purl.dataone.org/odo/ARCRC_00000062
 odo:ARCRC_00000062 rdf:type owl:Class ;
                    rdfs:subClassOf odo:ARCRC_00000040 ;
-                   obo:IAO_0000115 "Difference in seasonal or annual air temperatures from the 1981-2010 mean (a positive anomaly is a higher temperature; a negative anomaly is a lower temperature)." ;
+                   obo:IAO_0000115 "Difference in seasonal or annual air temperatures from a reference value or long-term average (a positive anomaly is a higher temperature; a negative anomaly is a lower temperature)." ;
+                   obo:IAO_0000119 "seasonal/annual anomaly patterns for air temperature as defined in https://www.ncei.noaa.gov/access/monitoring/global-temperature-anomalies" ;
                    dc:creator <http://orcid.org/0000-0002-5300-3075> ;
                    dc:date "2020-11-05T23:14:06Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Vital Sign 'Surface Air Temperature.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/835/Surface-Air-Temperature" ;
@@ -764,6 +938,176 @@ odo:ARCRC_00000068 rdf:type owl:Class ;
                    dc:description "This Key Variable is used to inform Vital Sign 'Surface Air Temperature.' See the 2019 Essay here: https://arctic.noaa.gov/Report-Card/Report-Card-2019/ArtMID/7916/ArticleID/835/Surface-Air-Temperature" ;
                    rdfs:label "atmospheric wind circulation"@en ;
                    rdfs:seeAlso "https://glossary.ametsoc.org/wiki/Wind" .
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000069
+odo:ARCRC_00000069 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "The potential occurrence of a natural physical process that may adversely impact human or ecological systems (IPCC 2019)" ;
+                   obo:IAO_0000119 "glacier and permafrost related hazards as defined in the Arctic Report Card 2021 Essay at https://arctic.noaa.gov/report-card/report-card-2021/glacier-and-permafrost-hazards/" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Frostbite, 'Glacier and Permafrost Hazards'" ;
+                   rdfs:label "glacier and permafrost hazards"@en . 
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000070
+odo:ARCRC_00000070 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "A carbon flux refers to the amount of carbon exchanged between carbon stocks over a specified time. In simple terms, it is the movement of carbon between land, oceans, atmosphere, and living things." ;
+                   obo:IAO_0000119 "carbon balance as defined at https://www.canr.msu.edu/news/carbon-fluxes-and-carbon-stocks#" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Other Indicator, 'Arctic Carbon Cycling'" ;
+                   rdfs:label "carbon flux"@en ;
+                   skos:equivalentClass "http://purl.dataone.org/odo/ECSO_00001105" .
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000071
+odo:ARCRC_00000071 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "Data for each seal included collection date, species, sex, standard length, and blubber thickness." ;
+                   obo:IAO_0000119 "ice seal vital rates as defined in the Arctic Report Card 2024 Essay Ice Seals" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Other Indicator, 'Ice Seals'" ;
+                   rdfs:label "ice seal vital rates"@en . 
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000072
+odo:ARCRC_00000072 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "The atmospheric pressure at mean sea level, either directly measured or, most commonly, empirically determined from the observed station pressure." ;
+                   obo:IAO_0000119 "mean sea level pressure as defined at https://glossary.ametsoc.org/wiki/Sea_level_pressure" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Vital Sign, 'Surface Air Temperature'" ;
+                   rdfs:label "mean sea level pressure"@en ;
+                   skos:equivalentClass "http://purl.dataone.org/odo/ECSO_00001650" .
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000073
+odo:ARCRC_00000073 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000512 ;
+                   obo:IAO_0000115 "A prominent socioeconomic development in recent years has been an increase in maritime ship traffic (characterized in view of ship movements and attributes of type, size, and flag state) in the Arctic Ocean as the sea ice diminishes with climate warming." ;
+                   obo:IAO_0000119 "ship traffic indicator as defined in the Arctic Report Card 2022 Essay at https://arctic.noaa.gov/report-card/report-card-2022/satellite-record-of-pan-arctic-maritime-ship-traffic/" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   rdfs:label "Satellite Record of Ship Traffic Indicator"@en .
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000074
+odo:ARCRC_00000074 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000512 ;
+                   obo:IAO_0000115 "Lake ice cover is an important component of the cryosphere and changes to the timing of ice freeze-up, break-up, duration, and thickness can have substantial impacts on weather and climate, transportation, and ecology (e.g., Brown and Duguay 2010; Arp et al. 2019)." ;
+                   obo:IAO_0000119 "lake ice indicator as defined in the Arctic Report Card 2022 Essay at https://arctic.noaa.gov/report-card/report-card-2022/lake-ice/" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   rdfs:label "Lake Ice Indicator"@en .
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000075
+odo:ARCRC_00000075 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000512 ;
+                   obo:IAO_0000115 "Arctic geese are keystone herbivores and their numbers and distributions are influenced by summer and winter environmental conditions and changes in forage quality and quantity." ;
+                   obo:IAO_0000119 "Arctic geese indicator as defined in the Arctic Report Card 2022 Essay at https://arctic.noaa.gov/report-card/report-card-2022/arctic-geese-of-north-america/" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   rdfs:label "Arctic Geese Indicator"@en .
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000076
+odo:ARCRC_00000076 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000513 ;
+                   obo:IAO_0000115 "Arctic insects are sensitive indicators of ecological responses to climate change." ;
+                   obo:IAO_0000119 "Arctic Pollinators as defined in the Arctic Report Card 2022 Essay at https://arctic.noaa.gov/report-card/report-card-2022/arctic-pollinators/" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
+                   rdfs:label "Arctic Pollinators Indicator"@en .
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000077
+odo:ARCRC_00000077 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000512 ;
+                   obo:IAO_0000115 "Over the last several decades, people in remote Alaska communities have observed an influx of beavers (ADF&G Reports 1965-2017). We quantified this trend by using satellite imagery to detect beaver pond formation in Alaska tundra regions, mapping approximately 12,000 beaver ponds" ;
+                   obo:IAO_0000119 "beaver engineering indicator as defined in the Arctic Report Card 2021 Essay at https://arctic.noaa.gov/report-card/report-card-2021/beaver-engineering-tracking-a-new-disturbance-in-the-arctic/" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   rdfs:label "Beaver Engineering Indicator"@en .
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000078
+odo:ARCRC_00000078 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000512 ;
+                   obo:IAO_0000115 "Arctic river discharge is a key indicator reflecting changes in the hydrologic cycle associated with widespread environmental change in the Arctic." ;
+                   obo:IAO_0000119 "River Discharge indicator as defined in the Arctic Report Card 2021 Essay at https://arctic.noaa.gov/report-card/report-card-2021/river-discharge/" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   rdfs:label "River Discharge Indicator"@en .
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000079
+odo:ARCRC_00000079 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000513 ;
+                   obo:IAO_0000115 "Here, we focus on hazards related to glaciers and permafrost and define hazard as the potential occurrence of a natural physical process that may adversely impact human or ecological systems (IPCC 2019)." ;
+                   obo:IAO_0000119 "Glacier and Permafrost Hazards frostbite as defined in the Arctic Report Card 2021 Essay at https://arctic.noaa.gov/report-card/report-card-2021/glacier-and-permafrost-hazards/" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
+                   rdfs:label "Glacier and Permafrost Hazards Indicator"@en .
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000080
+odo:ARCRC_00000080 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000512 ;
+                   obo:IAO_0000115 "Climate influences almost every aspect of caribou ecology, which means the Arctic’s rapid warming will have far-reaching, cascading, and complex impacts." ;
+                   obo:IAO_0000119 "Western Arctic Caribou indicator as defined in the Arctic Report Card 2024 Essay" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   rdfs:label "Western Arctic Caribou Indicator"@en .     
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000081
+odo:ARCRC_00000081 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000512 ;
+                   obo:IAO_0000115 "The terrestrial Arctic region has been a carbon sink for thousands of years, meaning that there has been a net removal of carbon dioxide (CO2) from the atmosphere by plants and storage as organic carbon in soils and permafrost (perennially frozen ground)." ;
+                   obo:IAO_0000119 "Arctic Carbon Cycling indicator as defined in the Arctic Report Card 2024 Essay" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   rdfs:label "Arctic Carbon Cycling Indicator"@en .     
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000082
+odo:ARCRC_00000082 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000512 ;
+                   obo:IAO_0000115 "Climate change in the Arctic is expected to affect sea ice-associated seal populations, or “ice seals,” by reducing sea ice extent and the length of time sea ice is available for resting, pupping, pup rearing, and molting" ;
+                   obo:IAO_0000119 "Ice Seals indicator as defined in the Arctic Report Card 2024 Essay" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   rdfs:label "Ice Seals Indicator"@en . 
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000083
+odo:ARCRC_00000083 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "An area characterized by deposits of charcoal and ash, removal of vegetation, and alteration of the vegetation structure due to wildfire." ;
+                   obo:IAO_0000119 "burned area as defined at https://www.earthdata.nasa.gov/topics/human-dimensions/burned-area#" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Other Indicator, 'Arctic Carbon Cycling'" ;
+                   rdfs:label "burned area"@en ;
+                   skos:narrowMatch "http://purl.dataone.org/odo/ECSO_00001117" .
+
+
+###  http://purl.dataone.org/odo/ARCRC_00000084
+odo:ARCRC_00000084 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "Wildfires release carbon dioxide (CO2) emissions and other greenhouse gases (GHG) that contribute to climate change." ;
+                   obo:IAO_0000119 "fire carbon emissions as defined at https://ww2.arb.ca.gov/resources/documents/frequently-asked-questions-wildfire-emissions" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Other Indicator, 'Arctic Carbon Cycling'" ;
+                   rdfs:label "fire carbon emissions"@en ;
+                   skos:equivalentClass "http://purl.dataone.org/odo/ECSO_00000013" .
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000500
