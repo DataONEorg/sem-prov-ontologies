@@ -154,6 +154,10 @@ skos:altLabel rdf:type owl:AnnotationProperty .
 skos:broadMatch rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2004/02/skos/core#closeMatch
+skos:closeMatch rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#equivalentClass
 skos:equivalentClass rdf:type owl:AnnotationProperty .
 
@@ -1230,6 +1234,60 @@ odo:ARCRC_00000097 rdf:type owl:Class ;
                    dc:creator <http://orcid.org/0009-0007-8384-5074> ;
                    dc:date "2026-11-25T00:00:00Z"^^xsd:dateTime ;
                    rdfs:label "Shorefast Ice Indicator"@en .
+
+###  http://purl.dataone.org/odo/ARCRC_00000098
+odo:ARCRC_00000098 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "A system which is composed of carbon-based chemical entities dissolved in or otherwise part of an ocean or sea and the atmosphere adjacent to it, undergoing constant exchange through biogeochemical cycling. To measure the state and dynamics of the ocean's carbonate system, at least two of the following qualities must be measured: Dissolved Inorganic Carbon (DIC), Total Alkalinity (TA), Partial pressure of carbon dioxide (pCO2), and pH." ;
+                   obo:IAO_0000119 "carbonate system of ocean water as defined in the Environment Ontology (ENVO) at http://purl.obolibrary.org/obo/ENVO_01001497" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2026-11-25T00:00:00Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Frostbite, 'Ocean Acidification'" ;
+                   rdfs:label "marine carbonate chemistry"@en ;
+                   skos:closeMatch obo:ENVO_01001497 .
+
+###  http://purl.dataone.org/odo/ARCRC_00000099
+odo:ARCRC_00000099 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "The presence of fast ice (also known as shorefast ice), which is sea ice which forms and remains fast along the coast, where it is attached to the shore, to an ice wall, to an ice front, between shoals or grounded icebergs." ;
+                   obo:IAO_0000119 "adapted from fast ice as defined in World Meteorological Organization (2015) WMO Sea-Ice Nomenclature, Volumes I, II and III, WMO-No. 259" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2026-11-25T00:00:00Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Frostbite, 'Shorefast Ice'" ;
+                   rdfs:label "shorefast ice presence"@en ;
+                   skos:broadMatch odo:ECSO_00002525 .
+
+###  http://purl.dataone.org/odo/ARCRC_00000100
+odo:ARCRC_00000100 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "The vertical distance of a point on the surface of a glacier or ice sheet above a datum, which is usually an estimate of mean sea level." ;
+                   obo:IAO_0000119 "adapted from altitude as defined in Cogley, J.G. et al. (2011) Glossary of Glacier Mass Balance and Related Terms, IHP-VII Technical Documents in Hydrology No. 86, IACS Contribution No. 2, UNESCO-IHP, Paris, p. 23, https://wgms.ch/downloads/Cogley_etal_2011.pdf" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2026-11-25T00:00:00Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Vital Sign, 'Greenland Ice Sheet'" ;
+                   rdfs:label "ice surface elevation"@en ;
+                   skos:broadMatch odo:ECSO_00001567 .
+
+###  http://purl.dataone.org/odo/ARCRC_00000101
+odo:ARCRC_00000101 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "The change in the mass of an ice sheet, or part of an ice sheet, over a stated span of time, where an ice sheet is an ice body that covers an area of continental size, generally defined as covering 50 000 km2 or more." ;
+                   obo:IAO_0000119 "adapted from mass balance and ice sheet as defined in Cogley, J.G. et al. (2011) Glossary of Glacier Mass Balance and Related Terms, IHP-VII Technical Documents in Hydrology No. 86, IACS Contribution No. 2, UNESCO-IHP, Paris, pp. 53 and 61, https://wgms.ch/downloads/Cogley_etal_2011.pdf" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2026-11-25T00:00:00Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Vital Sign, 'Greenland Ice Sheet'" ;
+                   rdfs:label "ice sheet mass change"@en ;
+                   skos:broadMatch <http://vocab.nerc.ac.uk/standard_name/change_in_land_ice_mass/> .
+
+###  http://purl.dataone.org/odo/ARCRC_00000102
+odo:ARCRC_00000102 rdf:type owl:Class ;
+                   rdfs:subClassOf odo:ARCRC_00000040 ;
+                   obo:IAO_0000115 "The spatial extent of melting (wet) snow on the surface of a glacier or ice sheet, which can be measured by microwave remote sensing of the brightness temperature with a passive-microwave sensor, or equivalent analysis of radar or scatterometer imagery." ;
+                   obo:IAO_0000119 "adapted from melt extent as defined in Cogley, J.G. et al. (2011) Glossary of Glacier Mass Balance and Related Terms, IHP-VII Technical Documents in Hydrology No. 86, IACS Contribution No. 2, UNESCO-IHP, Paris, p. 67, https://wgms.ch/downloads/Cogley_etal_2011.pdf" ;
+                   dc:creator <http://orcid.org/0009-0007-8384-5074> ;
+                   dc:date "2026-11-25T00:00:00Z"^^xsd:dateTime ;
+                   dc:description "This Key Variable is used to inform Vital Sign, 'Greenland Ice Sheet'" ;
+                   rdfs:label "wet snow extent"@en .
 
 ###  http://purl.dataone.org/odo/ARCRC_00000500
 odo:ARCRC_00000500 rdf:type owl:Class ;
