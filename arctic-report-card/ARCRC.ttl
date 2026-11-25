@@ -138,10 +138,6 @@ oboInOwl:id rdf:type owl:AnnotationProperty .
 rdfs:comment rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/2002/07/owl#equivalentClass
-owl:equivalentClass rdf:type owl:AnnotationProperty .
-
-
 ###  http://www.w3.org/2002/07/owl#sameAs
 owl:sameAs rdf:type owl:AnnotationProperty .
 
@@ -158,8 +154,8 @@ skos:broadMatch rdf:type owl:AnnotationProperty .
 skos:closeMatch rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/2004/02/skos/core#equivalentClass
-skos:equivalentClass rdf:type owl:AnnotationProperty .
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#narrowMatch
@@ -306,7 +302,7 @@ odo:ARCRC_00000008 rdf:type owl:Class ;
                    dc:creator <http://orcid.org/0009-0007-8384-5074> ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
                    rdfs:label "Precipitation Indicator"@en ;
-                   owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_01000703" .
+                   skos:relatedMatch <http://purl.obolibrary.org/obo/ENVO_01000703> .
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000009
@@ -389,7 +385,7 @@ odo:ARCRC_00000018 rdf:type owl:Class ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Vital Sign, 'Precipitation.'" ;
                    rdfs:label "precipitation"@en ;
-                   owl:equivalentClass "http://purl.obolibrary.org/obo/ENVO_01000703" .
+                   skos:exactMatch <http://purl.obolibrary.org/obo/ENVO_01000703> .
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000019
@@ -424,7 +420,7 @@ odo:ARCRC_00000021 rdf:type owl:Class ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Frostbite, 'Western Alaska Salmon'" ;
                    rdfs:label "salmon abundance"@en ;
-                   owl:equivalentClass "http://purl.dataone.org/odo/SALMON_00000504" .
+                   skos:exactMatch <http://purl.dataone.org/odo/SALMON_00000504> .
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000022
@@ -435,7 +431,7 @@ odo:ARCRC_00000022 rdf:type owl:Class ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Frostbite, 'Western Alaska Salmon'" ;
                    rdfs:label "salmon run size"@en ;
-                   owl:equivalentClass "http://purl.dataone.org/odo/SALMON_00000573" .
+                   skos:exactMatch <http://purl.dataone.org/odo/SALMON_00000573> .
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000023
@@ -447,7 +443,7 @@ odo:ARCRC_00000023 rdf:type owl:Class ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Frostbite, 'Western Alaska Salmon'" ;
                    rdfs:label "salmon harvest count"@en ;
-                   owl:equivalentClass "http://purl.dataone.org/odo/SALMON_00000491" .
+                   skos:exactMatch <http://purl.dataone.org/odo/SALMON_00000491> .
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000024
@@ -471,7 +467,7 @@ odo:ARCRC_00000025 rdf:type owl:Class ;
                    dc:date "2024-07-30T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Frostbite, 'Western Alaska Salmon'" ;
                    rdfs:label "salmon body length"@en ;
-                   skos:equivalentClass <http://purl.dataone.org/odo/SALMON_00000127> .
+                   skos:exactMatch <http://purl.dataone.org/odo/SALMON_00000127> .
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000026
@@ -576,7 +572,7 @@ odo:ARCRC_00000034 rdf:type owl:Class ;
                    dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Other Indicator, 'Arctic Geese of North America'" ;
                    rdfs:label "species abundance"@en ;
-                   skos:equivalentClass <http://purl.dataone.org/odo/ECSO_00001688> .
+                   skos:exactMatch <http://purl.dataone.org/odo/ECSO_00001688> .
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000035
@@ -610,7 +606,7 @@ odo:ARCRC_00000037 rdf:type owl:Class ;
                    dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Frostbite, 'Arctic Pollinators'" ;
                    rdfs:label "relative abundance"@en ;
-                   skos:equivalentClass <http://purl.dataone.org/odo/ECSO_00001688> .
+                   skos:closeMatch <http://purl.dataone.org/odo/ECSO_00001688> .
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000038
@@ -964,7 +960,7 @@ odo:ARCRC_00000070 rdf:type owl:Class ;
                    dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Other Indicator, 'Arctic Carbon Cycling'" ;
                    rdfs:label "carbon flux"@en ;
-                   skos:equivalentClass <http://purl.dataone.org/odo/ECSO_00001105> .
+                   skos:exactMatch <http://purl.dataone.org/odo/ECSO_00001105> .
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000071
@@ -987,7 +983,7 @@ odo:ARCRC_00000072 rdf:type owl:Class ;
                    dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Vital Sign, 'Surface Air Temperature'" ;
                    rdfs:label "mean sea level pressure"@en ;
-                   skos:equivalentClass <http://purl.dataone.org/odo/ECSO_00001650> .
+                   skos:exactMatch <http://purl.dataone.org/odo/ECSO_00001650> .
 
 
 ###  http://purl.dataone.org/odo/ARCRC_00000073
@@ -1111,7 +1107,7 @@ odo:ARCRC_00000084 rdf:type owl:Class ;
                    dc:date "2024-11-21T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Other Indicator, 'Arctic Carbon Cycling'" ;
                    rdfs:label "fire carbon emissions"@en ;
-                   skos:equivalentClass <http://purl.dataone.org/odo/ECSO_00000013> .
+                   skos:exactMatch <http://purl.dataone.org/odo/ECSO_00000013> .
 
 ###  http://purl.dataone.org/odo/ARCRC_00000085
 odo:ARCRC_00000085 rdf:type owl:Class ;
@@ -1177,7 +1173,7 @@ odo:ARCRC_00000091 rdf:type owl:Class ;
                    dc:date "2025-12-08T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Other Indicator, 'Atlantification of the Arctic Ocean'" ;
                    rdfs:label "conductivity"@en ;
-                   skos:equivalentClass <http://purl.dataone.org/odo/ECSO_00001534> .
+                   skos:exactMatch <http://purl.dataone.org/odo/ECSO_00001534> .
 
 ###  http://purl.dataone.org/odo/ARCRC_00000092
 odo:ARCRC_00000092 rdf:type owl:Class ;
@@ -1187,7 +1183,7 @@ odo:ARCRC_00000092 rdf:type owl:Class ;
                    dc:date "2025-12-08T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Other Indicator, 'Atlantification of the Arctic Ocean' and 'Warming Waters and Borealization'" ;
                    rdfs:label "water temperature"@en ;
-                   skos:equivalentClass <http://purl.dataone.org/odo/ECSO_00001227> .
+                   skos:exactMatch <http://purl.dataone.org/odo/ECSO_00001227> .
 
 ###  http://purl.dataone.org/odo/ARCRC_00000093
 odo:ARCRC_00000093 rdf:type owl:Class ;
@@ -1197,7 +1193,7 @@ odo:ARCRC_00000093 rdf:type owl:Class ;
                    dc:date "2025-12-08T19:43:23Z"^^xsd:dateTime ;
                    dc:description "This Key Variable is used to inform Other Indicator, 'Atlantification of the Arctic Ocean'" ;
                    rdfs:label "water depth"@en ;
-                   skos:equivalentClass <http://purl.dataone.org/odo/ECSO_00001203> .
+                   skos:exactMatch <http://purl.dataone.org/odo/ECSO_00001203> .
 
 ###  http://purl.dataone.org/odo/ARCRC_00000094
 odo:ARCRC_00000094 rdf:type owl:Class ;
